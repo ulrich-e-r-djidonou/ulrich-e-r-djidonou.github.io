@@ -193,6 +193,26 @@
     line-height: 1.6;
   }
 
+  .reason-card.featured {
+    border: 2px solid var(--teal);
+    background: linear-gradient(135deg, rgba(0,201,167,0.12), rgba(10,143,220,0.08));
+    grid-column: 1 / -1;
+    position: relative;
+  }
+
+  .featured-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--navy);
+    background: var(--teal);
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
   /* QR SECTION */
   .qr-section {
     text-align: center;
@@ -227,6 +247,36 @@
     color: var(--muted);
   }
 
+  /* VOTE CONDITIONS */
+  .vote-conditions {
+    text-align: center;
+    padding: 28px 24px;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .vote-conditions h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+    color: var(--teal);
+  }
+
+  .vote-conditions ul {
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+    font-size: 14px;
+    color: var(--light);
+    line-height: 1.8;
+  }
+
+  .vote-conditions ul li::before {
+    content: "✓ ";
+    color: var(--teal);
+    font-weight: 700;
+  }
+
   /* FOOTER */
   footer {
     text-align: center;
@@ -259,15 +309,16 @@
 <div class="content">
   <div class="section-label">Pourquoi voter pour moi</div>
   <div class="reasons">
-    <div class="reason-card">
+    <div class="reason-card featured">
+      <span class="featured-badge">Compétence recherchée par la Caisse</span>
       <span class="reason-icon">🎓</span>
       <div class="reason-title">Expertise en éducation</div>
-      <p class="reason-text">La compétence que votre Caisse recherche cette année. J'ai enseigné l'économie à l'université — j'explique les sujets complexes pour tout le monde.</p>
+      <p class="reason-text">La compétence que votre Caisse recherche cette année. J'enseigne l'économie et les statistiques à l'université — je rends les enjeux financiers accessibles à tous, y compris aux décideurs.</p>
     </div>
     <div class="reason-card">
       <span class="reason-icon">📊</span>
-      <div class="reason-title">Économiste et analyste</div>
-      <p class="reason-text">Dans mon travail, j'aide des décideurs à voir les choses clairement avant de prendre des décisions importantes. La rigueur analytique au service des membres.</p>
+      <div class="reason-title">Économiste</div>
+      <p class="reason-text">Je coordonne la recherche stratégique et j'éclaire des décideurs avant leurs choix importants. Cette rigueur d'analyse, je la mettrai au service des membres.</p>
     </div>
     <div class="reason-card">
       <span class="reason-icon">🤝</span>
@@ -276,8 +327,8 @@
     </div>
     <div class="reason-card">
       <span class="reason-icon">🏛️</span>
-      <div class="reason-title">Proche de la gouvernance</div>
-      <p class="reason-text">Je prépare et présente des dossiers stratégiques devant des conseils d'administration. Je connais ce rôle — de l'intérieur.</p>
+      <div class="reason-title">Imprégné de la gouvernance</div>
+      <p class="reason-text">Je prépare et présente des dossiers stratégiques devant des conseils d'administration et la haute direction. Gouvernance, gestion des risques, prise de décision : je connais ce rôle — de l'intérieur.</p>
     </div>
   </div>
 
@@ -289,6 +340,14 @@
   <p>Du 2 au 4 avril 2026 · Caisse Desjardins de Charlesbourg</p>
   <div id="qrcode"></div>
   <p class="qr-label">Scannez pour accéder à AccèsD</p>
+</div>
+
+<div class="vote-conditions">
+  <h3>Pour voter, vous devez :</h3>
+  <ul>
+    <li>Être membre de la Caisse Desjardins de Charlesbourg au plus tard le 1er janvier 2026 (90 jours avant l'assemblée)</li>
+    <li>Avoir 18 ans et plus</li>
+  </ul>
 </div>
 
 <footer>
