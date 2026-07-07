@@ -175,7 +175,8 @@ h1 {
   width: 100%;
   min-height: 420px;
   max-height: 680px;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--paper);
   border-radius: 6px;
   box-shadow: 0 26px 60px var(--shadow);
 }
