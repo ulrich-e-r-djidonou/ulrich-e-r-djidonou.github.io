@@ -1,0 +1,64 @@
+# Sources de collecte pour La Frontiere.
+# actif: false desactive une source sans toucher au code de collect.py.
+# fenetre_jours: age maximal (en jours) des entrees a conserver pour cette source.
+
+sources:
+  - id: arxiv-econ
+    nom: "arXiv econ.EM / econ.GN"
+    type: arxiv
+    categories: ["econ.EM", "econ.GN"]
+    requiert_mot_cle_ia: false
+    max_resultats: 40
+    fenetre_jours: 30
+    actif: true
+
+  - id: arxiv-ml-econ
+    nom: "arXiv cs.LG / cs.CL / stat.ML (filtre economie)"
+    type: arxiv
+    categories: ["cs.LG", "cs.CL", "stat.ML"]
+    requiert_mot_cle_ia: false
+    requiert_mot_cle_eco: true
+    max_resultats: 60
+    fenetre_jours: 30
+    actif: true
+
+  - id: nber
+    nom: "NBER, nouveaux working papers"
+    type: rss
+    url: "https://www.nber.org/rss/new.xml"
+    requiert_mot_cle_ia: true
+    fenetre_jours: 30
+    actif: false  # renvoie 403 (protection anti-bot cote serveur, verifie 2026-07-10) ; a reessayer periodiquement
+
+  - id: voxeu
+    nom: "VoxEU / CEPR"
+    type: rss
+    url: "https://cepr.org/rss/vox-content"
+    requiert_mot_cle_ia: true
+    fenetre_jours: 30
+    actif: true
+
+  - id: banque-canada
+    nom: "Banque du Canada, publications"
+    type: rss
+    url: "https://www.bankofcanada.ca/content_type/publications/feed/"
+    requiert_mot_cle_ia: true
+    fenetre_jours: 30
+    actif: true
+
+  - id: huggingface-papers
+    nom: "Hugging Face, daily papers"
+    type: rss
+    url: "https://huggingface.co/papers/rss.xml"
+    requiert_mot_cle_ia: false
+    requiert_mot_cle_eco: true
+    fenetre_jours: 14
+    actif: false  # pas de flux RSS officiel ; seuls des miroirs tiers non officiels existent, ecartes par prudence
+
+  - id: awesome-ai-economists
+    nom: "Commits sur awesome-ai-for-economists"
+    type: github_commits
+    repo: "hanlulong/awesome-ai-for-economists"
+    fichier: "README.md"
+    fenetre_jours: 30
+    actif: true
