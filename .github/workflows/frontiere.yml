@@ -26,11 +26,15 @@ jobs:
 
       - name: Demarrer Ollama et telecharger le modele
         run: |
-          ollama serve &
-          for i in $(seq 1 30); do
-            curl -sf http://localhost:11434/ >/dev/null && break
-            sleep 1
-          done
+          # Le script d'installation demarre deja un service systemd Ollama ;
+          # ne relancer "ollama serve" que s'il n'ecoute pas encore.
+          if ! curl -sf http://localhost:11434/ >/dev/null; then
+            ollama serve &
+            for i in $(seq 1 30); do
+              curl -sf http://localhost:11434/ >/dev/null && break
+              sleep 1
+            done
+          fi
           ollama pull qwen2.5:3b
 
       - name: Executer le pipeline
