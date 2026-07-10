@@ -28,6 +28,10 @@
 
   /* Liseré signature "ligne de frontiere" : motif recurrent du site. */
   --frontier-line: linear-gradient(90deg, var(--teal) 0%, var(--green) 55%, var(--amber) 100%);
+
+  /* Fond du header : theme-aware, pour que --heading/--muted (utilises pour
+     le nom et la navigation) restent lisibles dessus dans les deux themes. */
+  --header-bg: rgba(247, 244, 238, 0.94);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,6 +45,7 @@
     --shadow: rgba(0, 0, 0, 0.45);
     --card-shadow: rgba(0, 0, 0, 0.35);
     --heading: #8fe0d6;
+    --header-bg: rgba(16, 23, 22, 0.92);
   }
 }
 
@@ -74,7 +79,7 @@ a {
   justify-content: space-between;
   gap: 2rem;
   padding: 1rem 4rem;
-  background: rgba(247, 244, 238, 0.94);
+  background: var(--header-bg);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(14px);
 }
@@ -644,6 +649,11 @@ h1 {
   stroke-width: 1.8;
 }
 
+.social-icon svg.icon-plein {
+  fill: currentColor;
+  stroke: none;
+}
+
 .social-icon:hover,
 .social-icon:focus-visible {
   transform: translateY(-2px);
@@ -673,7 +683,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1.25rem;
   padding: 2rem 4rem;
   border-top: 3px solid transparent;
@@ -684,14 +694,8 @@ h1 {
   font-size: 0.82rem;
 }
 
-.site-footer-meta {
-  margin: 0;
-}
-
 @media (max-width: 980px) {
   .site-footer {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 2rem 1.25rem;
   }
 }
