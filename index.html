@@ -21,12 +21,14 @@
     <meta name="keywords" content="Ulrich Djidonou, économiste, économétrie, évaluation de politiques publiques, machine learning, intelligence artificielle, Québec, inférence causale">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://djidonou.com/">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="La Frontière, flux RSS" href="/frontiere/feed.xml">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ulrich Djidonou | Économiste quantitatif">
     <meta name="twitter:description" content="Économétrie, évaluation de politiques publiques, machine learning et IA appliquée pour la décision.">
     <meta name="twitter:image" content="https://djidonou.com/assets/ulrich-djidonou-portrait.png">
-    <meta name="twitter:creator" content="@ulrichdjidonou">
+    <meta name="twitter:creator" content="@UDjidonou">
 
     <script type="application/ld+json">
     {
@@ -54,7 +56,8 @@
           "knowsLanguage": ["fr", "en"],
           "sameAs": [
             "https://www.linkedin.com/in/ulrichdjidonou",
-            "https://github.com/ulrich-e-r-djidonou"
+            "https://github.com/ulrich-e-r-djidonou",
+            "https://x.com/UDjidonou"
           ]
         },
         {
@@ -71,25 +74,35 @@
     }
     </script>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
+    <script>
+      // Anciennes ancres de la version une-page : redirection vers la page dediee.
+      (function () {
+        var redirections = {
+          "#experience": "/parcours.html#experience",
+          "#methode": "/parcours.html#methode",
+          "#projets": "/projets.html#projets",
+          "#contact": "/contact.html",
+        };
+        var cible = redirections[window.location.hash];
+        if (cible) {
+          window.location.replace(cible);
+        }
+      })();
+    </script>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Retour en haut">
-        <img
-          class="brand-photo"
-          src="assets/ulrich-djidonou-portrait.png"
-          alt="Ulrich Djidonou"
-        >
+      <a class="brand" href="/" aria-label="Retour a l'accueil">
+        <img class="brand-photo" src="/assets/ulrich-djidonou-portrait.png" alt="Ulrich Djidonou">
         Ulrich Djidonou
       </a>
       <nav aria-label="Navigation principale">
-        <a href="#positionnement">Positionnement</a>
-        <a href="#experience">Expérience</a>
-        <a href="#projets">Projets</a>
-        <a href="#methode">Méthode</a>
-        <a href="#contact">Contact</a>
-        <a href="frontiere/">La Frontière</a>
+        <a href="/" aria-current="page">Accueil</a>
+        <a href="/projets.html">Projets</a>
+        <a href="/parcours.html">Parcours</a>
+        <a href="/frontiere/">La Frontière</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </header>
 
@@ -97,15 +110,19 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">Économiste</p>
+          <div class="signature-line" aria-hidden="true"></div>
           <h1 id="hero-title">Des questions économiques, des réponses vérifiables.</h1>
           <p class="lead">
             Économétrie, évaluation de politiques publiques, machine learning
             et IA appliquée, au service de décisions mieux fondées.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#projets">Voir les projets</a>
-            <a class="button secondary" href="https://www.linkedin.com/in/ulrichdjidonou">LinkedIn</a>
+            <a class="button primary" href="/projets.html">Voir les projets</a>
+            <a class="button secondary" href="https://www.linkedin.com/in/ulrichdjidonou" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
+        </div>
+        <div class="hero-portrait">
+          <img src="/assets/ulrich-djidonou-portrait.png" alt="Ulrich Djidonou">
         </div>
       </section>
 
@@ -130,41 +147,9 @@
         </div>
       </section>
 
-      <section id="experience" class="experience" aria-labelledby="experience-title">
-        <div class="section-kicker">Expérience institutionnelle</div>
-        <h2 id="experience-title">Recherche et analyse au service de la décision publique</h2>
-        <div class="experience-list">
-          <article class="experience-item">
-            <h3>Conseil de gestion de l'assurance parentale (CGAP)</h3>
-            <p class="role-dates">Chargé de recherche | avril 2024 à avril 2026</p>
-            <ul>
-              <li>Trois rapports de recherche quantitative (données administratives et de sondage) sur le Régime québécois d'assurance parentale, reconnus par le conseil d'administration comme base de décision pour l'évolution du régime.</li>
-              <li>Coordination de trois sondages avec LEGER et rédaction de notes stratégiques pour la haute direction.</li>
-              <li>Co-rédaction du rapport d'application de la Loi visant à améliorer la flexibilité de la conciliation famille-travail, déposé à l'Assemblée nationale du Québec.</li>
-            </ul>
-          </article>
-          <article class="experience-item">
-            <h3>Ministère des Finances du Québec (MFQ)</h3>
-            <p class="role-dates">Économiste, doctorant | mai 2020 à mars 2024</p>
-            <ul>
-              <li>Recherche économique appliquée et analyse de données sur plusieurs mandats.</li>
-              <li>Prévision, inférence causale et évaluation de programmes combinant machine learning et méthodes économétriques.</li>
-              <li>Contribution au développement d'un projet d'intelligence artificielle après preuve de concept.</li>
-            </ul>
-          </article>
-          <article class="experience-item">
-            <h3>École nationale d'administration publique (ENAP)</h3>
-            <p class="role-dates">Auxiliaire d'enseignement, cycle supérieur | septembre 2023 à avril 2024</p>
-            <ul>
-              <li>Enseignement de la statistique et de l'économétrie au niveau maîtrise (M.P.A.), incluant les stratégies d'identification causale et l'estimation structurale.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
       <section id="projets" class="projects" aria-labelledby="projects-title">
-        <div class="section-kicker">Projets publics</div>
-        <h2 id="projects-title">Preuves démontrables</h2>
+        <div class="section-kicker">Projets vedettes</div>
+        <h2 id="projects-title">Trois preuves démontrables</h2>
         <div class="project-grid">
           <article class="project-card featured">
             <p class="project-type">Indice et dashboard</p>
@@ -176,7 +161,7 @@
             <a href="https://ulrich-e-r-djidonou.github.io/icie-dashboard/">Ouvrir le dashboard</a>
           </article>
 
-          <article class="project-card featured">
+          <article class="project-card featured" id="carte-frontiere">
             <p class="project-type">Veille automatisée</p>
             <h3>La Frontière</h3>
             <p>
@@ -184,10 +169,11 @@
               à jour automatiquement par un pipeline Python, avec bibliothèque
               de ressources durables et flux RSS.
             </p>
-            <a href="frontiere/">Ouvrir la veille</a>
+            <p class="frontiere-signal-teaser" data-frontiere-signal-teaser hidden></p>
+            <a href="/frontiere/">Ouvrir la veille</a>
           </article>
 
-          <article class="project-card">
+          <article class="project-card featured">
             <p class="project-type">Intelligence économique</p>
             <h3>Geoecon Pulse</h3>
             <p>
@@ -196,144 +182,34 @@
             </p>
             <a href="https://github.com/ulrich-e-r-djidonou/geoecon-pulse">Voir sur GitHub</a>
           </article>
-
-          <article class="project-card">
-            <p class="project-type">Recherche augmentée</p>
-            <h3>Scopus Treatment</h3>
-            <p>
-              Pipeline Python pour trier un corpus Scopus de 1407 articles avec
-              agents IA, validation, DOI, et livrables Excel, Word et Markdown.
-            </p>
-            <a href="https://github.com/ulrich-e-r-djidonou/scopus-treatment">Voir sur GitHub</a>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">NLP économique</p>
-            <h3>BDC Fedspeak</h3>
-            <p>
-              Indice de ton hawkish ou dovish des communiqués de la Banque du
-              Canada, 2009-2026, avec étude d'événement.
-            </p>
-            <a href="https://github.com/ulrich-e-r-djidonou/bdc-fedspeak">Voir sur GitHub</a>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">IA publique</p>
-            <h3>IA Québec Dashboard</h3>
-            <p>
-              Visualisation interactive de l'adoption de l'IA dans
-              l'administration publique québécoise, comparaison 2024 vs 2025.
-            </p>
-            <a href="https://djidonou.com/ia-quebec-dashboard/">Ouvrir le dashboard</a>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">IA publique</p>
-            <h3>Guide L'IA pour tous Canada</h3>
-            <p>
-              Guide interactif bilingue sur la stratégie nationale d'IA du
-              Canada, six piliers, simulateur de trajectoire d'adoption
-              jusqu'à 60 %.
-            </p>
-            <a href="https://djidonou.com/AI-CA/">Ouvrir le guide</a>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Économétrie appliquée</p>
-            <h3>Gravity Model Canada</h3>
-            <p>
-              Modèle gravitaire des exportations canadiennes avec estimation
-              PPML pour identifier le potentiel commercial inexploité.
-            </p>
-            <a href="https://github.com/ulrich-e-r-djidonou/gravity-model-canada">Voir sur GitHub</a>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Mobilité urbaine</p>
-            <h3>Mobilité cyclable, Parc Jean-Drapeau</h3>
-            <p>
-              Dashboard interactif d'analyse de la mobilité cycliste vers le
-              Parc Jean-Drapeau, à partir des données ouvertes de la Ville de
-              Montréal, 2023-2024.
-            </p>
-            <a href="https://djidonou.com/PJD-mobilite-cycliste/">Ouvrir le dashboard</a>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Géoéconomie, vulgarisation</p>
-            <h3>Chokepoints</h3>
-            <p>
-              Jeu de cartes interactif bilingue sur les goulets d'étranglement
-              géoéconomiques mondiaux, maritimes, énergétiques,
-              technologiques et financiers.
-            </p>
-            <a href="https://chokepoints-game.netlify.app">Jouer en ligne</a>
-          </article>
         </div>
-      </section>
-
-      <section class="secondary-projects" aria-labelledby="secondary-title">
-        <h2 id="secondary-title">Autres preuves utiles</h2>
-        <div class="evidence-list">
-          <a href="https://github.com/ulrich-e-r-djidonou/forecasting-chomage-canada">
-            Forecasting Chômage Canada
-          </a>
-          <a href="https://rtc-equite-d-gxp7cgsccbnh89maezhnya.streamlit.app/">
-            RTC Équité Dashboard
-          </a>
-          <a href="https://djidonou.com/leave-network-explorer/">
-            Leave Network Explorer
-          </a>
-        </div>
-      </section>
-
-      <section id="methode" class="method" aria-labelledby="method-title">
-        <div class="section-kicker">Méthode</div>
-        <h2 id="method-title">Une logique de travail en quatre temps</h2>
-        <ol>
-          <li>
-            <strong>Formuler la question.</strong>
-            Clarifier le problème économique, institutionnel ou stratégique.
-          </li>
-          <li>
-            <strong>Construire la preuve.</strong>
-            Choisir les données, la méthode et les validations adaptées.
-          </li>
-          <li>
-            <strong>Rendre l'analyse utilisable.</strong>
-            Produire dashboard, modèle, note, pipeline ou outil interactif.
-          </li>
-          <li>
-            <strong>Expliquer les limites.</strong>
-            Communiquer ce que le résultat montre, ce qu'il ne montre pas, et ce qu'il permet de décider.
-          </li>
-        </ol>
+        <p class="projects-more">
+          <a class="button secondary" href="/projets.html">Voir tous les projets</a>
+        </p>
       </section>
 
       <section id="contact" class="contact" aria-labelledby="contact-title">
         <div>
           <div class="section-kicker">Contact</div>
           <h2 id="contact-title">N'hésitez pas à me contacter pour échanger sur une idée, une recherche ou une collaboration.</h2>
-          <div class="contact-profile">
-            <img
-              class="contact-photo"
-              src="assets/ulrich-djidonou-portrait.png"
-              alt="Ulrich Djidonou"
-            >
-            <div>
-              <p class="contact-name">Ulrich Djidonou</p>
-              <p class="contact-tagline">
-                Économiste | 6+ ans à conseiller des dirigeants avec une
-                approche fondée sur les données | Inférence causale · ML · IA
-              </p>
-            </div>
-          </div>
         </div>
         <div class="contact-actions">
-          <a class="button primary" href="https://www.linkedin.com/in/ulrichdjidonou">LinkedIn</a>
-          <a class="button secondary" href="https://github.com/ulrich-e-r-djidonou">GitHub</a>
+          <button class="button primary mail-button" type="button" data-mail-button hidden>M'écrire</button>
+          <a class="button secondary" href="/contact.html">Toutes les coordonnées</a>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <p class="site-footer-meta">Site statique fait main. La Frontière se met à jour automatiquement.</p>
+      <div class="social-icons" data-social-icons>
+        <button class="social-icon" type="button" data-mail-button hidden aria-label="Envoyer un courriel">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 6.5l8 6.5 8-6.5"/></svg>
+        </button>
+      </div>
+    </footer>
+
+    <script src="/assets/social-links.js" defer></script>
+    <script src="/assets/home-frontiere-signal.js" defer></script>
   </body>
 </html>

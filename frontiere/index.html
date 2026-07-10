@@ -15,6 +15,7 @@
     <meta property="og:locale" content="fr_CA">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://djidonou.com/frontiere/">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="alternate" type="application/rss+xml" title="La Frontière, flux RSS" href="https://djidonou.com/frontiere/feed.xml">
 
     <script type="application/ld+json">
@@ -31,22 +32,21 @@
     }
     </script>
 
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="frontiere.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/frontiere/frontiere.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="../#top" aria-label="Retour a l'accueil">
-        <img class="brand-photo" src="../assets/ulrich-djidonou-portrait.png" alt="Ulrich Djidonou">
+      <a class="brand" href="/" aria-label="Retour a l'accueil">
+        <img class="brand-photo" src="/assets/ulrich-djidonou-portrait.png" alt="Ulrich Djidonou">
         Ulrich Djidonou
       </a>
       <nav aria-label="Navigation principale">
-        <a href="../#positionnement">Positionnement</a>
-        <a href="../#experience">Expérience</a>
-        <a href="../#projets">Projets</a>
-        <a href="../#methode">Méthode</a>
-        <a href="../#contact">Contact</a>
-        <a href="./" aria-current="page">La Frontière</a>
+        <a href="/">Accueil</a>
+        <a href="/projets.html">Projets</a>
+        <a href="/parcours.html">Parcours</a>
+        <a href="/frontiere/" aria-current="page">La Frontière</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </header>
 
@@ -111,6 +111,16 @@
       </section>
     </main>
 
+    <footer class="site-footer">
+      <p class="site-footer-meta">Site statique fait main. La Frontière se met à jour automatiquement.</p>
+      <div class="social-icons" data-social-icons>
+        <button class="social-icon" type="button" data-mail-button hidden aria-label="Envoyer un courriel">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 6.5l8 6.5 8-6.5"/></svg>
+        </button>
+      </div>
+    </footer>
+
+    <script src="/assets/social-links.js" defer></script>
     <script src="frontiere.js"></script>
   </body>
 </html>
