@@ -363,6 +363,7 @@ h1 {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
   gap: 1rem;
   margin-top: 1.8rem;
 }
@@ -390,6 +391,16 @@ h1 {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 220ms ease;
+  z-index: 1;
+}
+
+.project-thumb {
+  display: block;
+  width: calc(100% + 2.7rem);
+  margin: -1.35rem -1.35rem 1rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--soft-bg);
 }
 
 .project-card:hover {
