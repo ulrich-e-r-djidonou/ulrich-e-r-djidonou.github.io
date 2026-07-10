@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>La Frontière | Veille IA, économie et machine learning | Ulrich Djidonou</title>
+    <meta
+      name="description"
+      content="La Frontière : veille curatée sur l'intersection entre l'intelligence artificielle, l'économie et le machine learning, mise à jour automatiquement par Ulrich Djidonou, économiste quantitatif."
+    >
+    <meta property="og:title" content="La Frontière | Veille IA, économie et machine learning">
+    <meta property="og:description" content="Veille curatée sur l'intersection entre l'IA, l'économie et le machine learning, mise à jour automatiquement.">
+    <meta property="og:url" content="https://djidonou.com/frontiere/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_CA">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://djidonou.com/frontiere/">
+    <link rel="alternate" type="application/rss+xml" title="La Frontière, flux RSS" href="https://djidonou.com/frontiere/feed.xml">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": "https://djidonou.com/frontiere/#page",
+      "url": "https://djidonou.com/frontiere/",
+      "name": "La Frontière",
+      "description": "Veille curatee sur l'intersection entre l'intelligence artificielle, l'economie et le machine learning.",
+      "inLanguage": "fr",
+      "isPartOf": { "@id": "https://djidonou.com/#website" },
+      "about": { "@id": "https://djidonou.com/#person" }
+    }
+    </script>
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="frontiere.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../#top" aria-label="Retour a l'accueil">
+        <img class="brand-photo" src="../assets/ulrich-djidonou-portrait.png" alt="Ulrich Djidonou">
+        Ulrich Djidonou
+      </a>
+      <nav aria-label="Navigation principale">
+        <a href="../#positionnement">Positionnement</a>
+        <a href="../#experience">Expérience</a>
+        <a href="../#projets">Projets</a>
+        <a href="../#methode">Méthode</a>
+        <a href="../#contact">Contact</a>
+        <a href="./" aria-current="page">La Frontière</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="frontiere-hero">
+        <p class="eyebrow">Veille curatée</p>
+        <h1>La Frontière</h1>
+        <p class="lead">
+          Ce qui se passe à l'intersection de l'intelligence artificielle, de
+          l'économie et du machine learning, recensé automatiquement et
+          filtré par un économiste.
+        </p>
+        <p class="frontiere-meta" id="derniere-maj">Chargement…</p>
+        <div class="frontiere-liens">
+          <a href="feed.xml">Flux RSS</a>
+          <a href="data/flux.json">Données du flux (JSON)</a>
+          <a href="data/bibliotheque.json">Bibliothèque (JSON)</a>
+        </div>
+      </section>
+
+      <section class="frontiere-signal" id="signal-semaine" aria-labelledby="signal-titre" hidden>
+        <div class="section-kicker">Signal de la semaine</div>
+        <h2 id="signal-titre"></h2>
+      </section>
+
+      <section class="frontiere-stats" aria-label="Répartition thématique du flux">
+        <div class="section-kicker">Répartition thématique, 90 derniers jours</div>
+        <div id="barres-themes" class="barres-themes"></div>
+      </section>
+
+      <section class="frontiere-controles" aria-label="Filtres du flux">
+        <input
+          type="search"
+          id="recherche"
+          class="frontiere-recherche"
+          placeholder="Rechercher dans le flux..."
+          aria-label="Rechercher dans le flux"
+        >
+        <div class="frontiere-chips" id="chips-themes" role="group" aria-label="Filtrer par thème"></div>
+        <div class="frontiere-chips" id="chips-types" role="group" aria-label="Filtrer par type"></div>
+      </section>
+
+      <section class="frontiere-flux" aria-labelledby="flux-titre">
+        <h2 id="flux-titre" class="sr-only">Le flux</h2>
+        <div id="liste-flux"></div>
+      </section>
+
+      <section id="bibliotheque" class="frontiere-bibliotheque" aria-labelledby="bibliotheque-titre">
+        <div class="section-kicker">Bibliothèque</div>
+        <h2 id="bibliotheque-titre">Ressources durables</h2>
+        <p class="frontiere-bibliotheque-intro">
+          Outils, librairies, papiers fondateurs, cours et données choisis à
+          la main, pas mis à jour automatiquement.
+        </p>
+        <div id="accordeons-bibliotheque"></div>
+      </section>
+
+      <section class="frontiere-archives" aria-labelledby="archives-titre">
+        <div class="section-kicker">Archives</div>
+        <h2 id="archives-titre">Mois précédents</h2>
+        <div id="liste-archives" class="frontiere-archives-liste"></div>
+      </section>
+    </main>
+
+    <script src="frontiere.js"></script>
+  </body>
+</html>
