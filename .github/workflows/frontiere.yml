@@ -21,7 +21,22 @@ jobs:
       - name: Installer les dependances
         run: pip install -r pipeline/requirements.txt
 
+      - name: Installer Ollama
+        run: curl -fsSL https://ollama.com/install.sh | sh
+
+      - name: Demarrer Ollama et telecharger le modele
+        run: |
+          ollama serve &
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:11434/ >/dev/null && break
+            sleep 1
+          done
+          ollama pull qwen2.5:3b
+
       - name: Executer le pipeline
+        env:
+          FRONTIERE_LLM: ollama
+          OLLAMA_MODEL: qwen2.5:3b
         run: |
           python pipeline/collect.py
           python pipeline/curate.py

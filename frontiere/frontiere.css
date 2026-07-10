@@ -224,6 +224,13 @@
   font-style: italic;
 }
 
+.note-llm {
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-style: italic;
+}
+
 .carte-tags {
   display: flex;
   flex-wrap: wrap;

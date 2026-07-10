@@ -92,6 +92,13 @@
       carte.appendChild(angle);
     }
 
+    if (entree.llm) {
+      const note = document.createElement("p");
+      note.className = "note-llm";
+      note.textContent = "Résumé assisté par IA locale.";
+      carte.appendChild(note);
+    }
+
     if (entree.themes && entree.themes.length) {
       const tags = document.createElement("div");
       tags.className = "carte-tags";
