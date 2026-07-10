@@ -12,9 +12,11 @@ const SOCIAL_LINKS = {
 };
 
 // Adresse courriel jamais ecrite en clair dans le HTML : assemblee au clic.
-// Obfuscation legere anti-scraping, pas un chiffrement.
-const MAIL_USER = "romariche";
-const MAIL_DOMAIN = "gmail.com";
+// Obfuscation legere anti-scraping, pas un chiffrement : le nom d'usager est
+// lui-meme fragmente pour qu'aucun scraper de code source ne trouve la
+// chaine "romariche" en un seul morceau.
+const MAIL_USER = ["romar", "iche"].join("");
+const MAIL_DOMAIN = ["gmail", "com"].join(".");
 
 const SOCIAL_ICON_DEFS = [
   {
