@@ -32,6 +32,30 @@
   /* Fond du header : theme-aware, pour que --heading/--muted (utilises pour
      le nom et la navigation) restent lisibles dessus dans les deux themes. */
   --header-bg: rgba(247, 244, 238, 0.94);
+
+  /* Echelle typographique. La feuille empilait 15 tailles litterales, dont
+     plusieurs indiscernables a l'oeil (0.85 / 0.88 / 0.9rem). Elles sont
+     regroupees en steps nommes : toute nouvelle taille doit reutiliser un step
+     existant, ou en ajouter un ici et le documenter dans DESIGN.md. */
+  --fs-3xs: 0.75rem;      /* pastilles sociales */
+  --fs-2xs: 0.8rem;       /* etiquettes de section, puces de filtre, pied de page */
+  --fs-xs: 0.88rem;       /* navigation, dates de poste, puces de competence */
+  --fs-sm: 0.95rem;       /* boutons, nom dans l'en-tete, ligne de contact */
+  --fs-base: 1.16rem;     /* texte courant */
+  --fs-lead: 1.28rem;     /* chapeau du hero */
+  --fs-lead-sm: 1.08rem;  /* chapeau du hero, mobile */
+  --fs-title-sm: 1.35rem; /* titre d'entree de parcours */
+  --fs-title: 1.45rem;    /* titre de carte projet */
+  --fs-h2: 2.35rem;       /* titre de section */
+  --fs-h1-page: 2.9rem;   /* titre des pages interieures */
+  --fs-h1-sm: 2.65rem;    /* titre du hero, mobile */
+  --fs-h1: 4.25rem;       /* titre du hero */
+
+  /* Ajoutes lors de l'alignement de frontiere.css : le hero de La Frontiere
+     est un titre de sous-site, entre --fs-h2 et --fs-h1, sans equivalent
+     existant. */
+  --fs-h1-frontiere: 3.4rem;
+  --fs-h1-frontiere-sm: 2.4rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -90,7 +114,7 @@ a {
   gap: 0.6rem;
   color: var(--heading);
   font-family: "Trebuchet MS", Verdana, sans-serif;
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   letter-spacing: 0;
   text-decoration: none;
@@ -110,7 +134,7 @@ nav {
   gap: 1.25rem;
   color: var(--muted);
   font-family: "Trebuchet MS", Verdana, sans-serif;
-  font-size: 0.88rem;
+  font-size: var(--fs-xs);
 }
 
 nav a {
@@ -184,7 +208,7 @@ nav a:focus-visible,
   margin: 0 0 0.8rem;
   color: var(--teal);
   font-family: "Trebuchet MS", Verdana, sans-serif;
-  font-size: 0.78rem;
+  font-size: var(--fs-2xs);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -212,7 +236,7 @@ h1 {
   max-width: 11ch;
   margin-bottom: 1.25rem;
   color: var(--heading);
-  font-size: 4.25rem;
+  font-size: var(--fs-h1);
   line-height: 0.98;
   letter-spacing: 0;
 }
@@ -220,7 +244,7 @@ h1 {
 .lead {
   max-width: 34rem;
   color: var(--muted);
-  font-size: 1.28rem;
+  font-size: var(--fs-lead);
 }
 
 .signature-line {
@@ -248,7 +272,7 @@ h1 {
   border: 1px solid var(--teal);
   border-radius: 4px;
   font-family: "Trebuchet MS", Verdana, sans-serif;
-  font-size: 0.92rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   text-decoration: none;
   transition: transform 180ms ease, background 180ms ease, color 180ms ease;
@@ -296,7 +320,7 @@ h1 {
 .contact h2 {
   max-width: 56rem;
   color: var(--heading);
-  font-size: 2.35rem;
+  font-size: var(--fs-h2);
   line-height: 1.12;
   letter-spacing: 0;
 }
@@ -304,7 +328,7 @@ h1 {
 .positioning p {
   max-width: 55rem;
   color: var(--muted);
-  font-size: 1.16rem;
+  font-size: var(--fs-base);
 }
 
 .proof-strip {
@@ -321,24 +345,40 @@ h1 {
   border-radius: 4px;
   color: var(--soft-text);
   font-family: "Trebuchet MS", Verdana, sans-serif;
-  font-size: 0.88rem;
+  font-size: var(--fs-xs);
 }
 
+/* Ligne de temps : un filet de 1px porte la serie, une pastille marque chaque
+   poste. Remplace l'ancienne bordure laterale epaisse (3px), qui se lisait
+   comme un accent decoratif plutot que comme une structure. */
 .experience-list {
   display: grid;
-  gap: 1.75rem;
+  gap: 2.25rem;
   margin-top: 2rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--line);
 }
 
 .experience-item {
-  padding-left: 1.25rem;
-  border-left: 3px solid var(--green);
+  position: relative;
+}
+
+.experience-item::before {
+  content: "";
+  position: absolute;
+  top: 0.6rem;
+  left: calc(-1.5rem - 1px);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--teal);
+  transform: translateX(-50%);
 }
 
 .experience-item h3 {
   margin-bottom: 0.3rem;
   color: var(--heading);
-  font-size: 1.35rem;
+  font-size: var(--fs-title-sm);
   line-height: 1.2;
 }
 
@@ -346,7 +386,7 @@ h1 {
   margin-bottom: 0.7rem;
   color: var(--teal);
   font-family: "Trebuchet MS", Verdana, sans-serif;
-  font-size: 0.85rem;
+  font-size: var(--fs-xs);
   font-weight: 700;
 }
 
@@ -424,7 +464,7 @@ h1 {
 .project-card h3 {
   margin-bottom: 0.6rem;
   color: var(--heading);
-  font-size: 1.45rem;
+  font-size: var(--fs-title);
   line-height: 1.15;
 }
 
@@ -456,7 +496,7 @@ h1 {
 }
 
 .frontiere-signal-teaser {
-  font-size: 0.85rem;
+  font-size: var(--fs-xs);
   font-style: italic;
 }
 
@@ -487,7 +527,7 @@ h1 {
 
 .page-hero h1 {
   max-width: 26ch;
-  font-size: 2.9rem;
+  font-size: var(--fs-h1-page);
 }
 
 .page-hero .lead {
@@ -507,7 +547,7 @@ h1 {
   background: var(--white);
   color: var(--muted);
   font-family: "Trebuchet MS", Verdana, sans-serif;
-  font-size: 0.8rem;
+  font-size: var(--fs-2xs);
   font-weight: 700;
   cursor: pointer;
 }
@@ -628,7 +668,7 @@ h1 {
   margin: 0;
   max-width: 32rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
 }
 
 /* Icones sociales : badges circulaires monogrammes, sans logo de marque
@@ -650,7 +690,7 @@ h1 {
   background: var(--white);
   color: var(--heading);
   font-family: "Trebuchet MS", Verdana, sans-serif;
-  font-size: 0.72rem;
+  font-size: var(--fs-3xs);
   font-weight: 700;
   text-decoration: none;
   letter-spacing: 0.01em;
@@ -707,7 +747,7 @@ h1 {
   background: var(--paper);
   color: var(--muted);
   font-family: "Trebuchet MS", Verdana, sans-serif;
-  font-size: 0.82rem;
+  font-size: var(--fs-2xs);
 }
 
 @media (max-width: 980px) {
@@ -736,12 +776,12 @@ h1 {
 
   h1 {
     max-width: 12ch;
-    font-size: 2.65rem;
+    font-size: var(--fs-h1-sm);
   }
 
   .lead {
     max-width: 20rem;
-    font-size: 1.08rem;
+    font-size: var(--fs-lead-sm);
     overflow-wrap: break-word;
   }
 
@@ -797,7 +837,7 @@ h1 {
 .distinction-figure figcaption {
   max-width: 34ch;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: var(--fs-xs);
   font-style: italic;
 }
 
