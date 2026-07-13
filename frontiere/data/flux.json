@@ -1,5 +1,209 @@
 [
   {
+    "id": "arxiv-2607.09568v1",
+    "titre": "Perturbed utility Markovian traffic equilibrium: theory and computation",
+    "url": "https://arxiv.org/abs/2607.09568v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "Ce papier développe une approche de Nash équilibre perturbé (PUME), conçue pour maintenir la flexibilité et l'efficacité computable des modèles basés sur les liens Markoviens, tout en s'étendant à différents scénarios. La PUME est basée sur un modèle de choix markovien perturbé (PUMCM), qui permet non seulement aux probabilités de choix internes mais aussi aux probabilités externes d'être comprises, sans restriction préalable des options de choix.",
+    "angle_eco": "Ce papier compte pour un economiste en proposant une nouvelle théorie de la répartition des flux de trafic qui combine éléments d'équilibre comportemental et mathématiques avancés.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 4,
+    "auteurs": "Rui Yao, Kenan Zhang",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.09461v1",
+    "titre": "Deep Learning for Dynamic Programming with Recursive Utility Using First-order Conditions",
+    "url": "https://arxiv.org/abs/2607.09461v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "Cette étude propose une méthode appelée CEFOL, un algorithme d'apprentissage profond pour résoudre des problèmes de programmation dynamique discrète avec utilité récursive. CEFOL utilise deux réseaux neuronaux différents : l'un pour représenter l'équivalent certain et l'autre pour apprendre les fonctions valeurs, les fonctions politiques et les multiplicateurs de Lagrange en utilisant des conditions d'optimisation spécifiques du modèle.",
+    "angle_eco": "Ce papier compte pour un economiste en proposant une nouvelle approche fondée sur la deep learning pour résoudre des problèmes de programmation dynamique avec utilité récursive.",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 8,
+    "auteurs": "Xianhua Peng, Wu Guo, Songyan Wang, Jianfei Zhu",
+    "signal": true,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.09641v1",
+    "titre": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+    "url": "https://arxiv.org/abs/2607.09641v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "Le modèle Semantic Pareto-DQN surmonte l'imbalance des classes dans les anomalies financières sans rééchantillonnage des données, offrant une représentation de l'état robuste et invariant à la taille des données. Il optimise un vecteur de récompense qui sépare clairement efficacité financière, friction opérationnelle et découverte sémantique, permettant ainsi un meilleur contrôle des coûts d'omission versus faux positifs.",
+    "angle_eco": "Ce papier compte pour un economiste car il présente une approche innovante de détection d'anomalies financières qui minimise les imbalances des classes en utilisant l'apprentissage par réseaux de neurones et la génération textuelle, offrant ainsi une solution équilibrée entre efficacité opérationnelle et fiabilité.",
+    "themes": [
+      "llm",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "auteurs": "Cláudio Lúcio do Val Lopes, Lucca Machado da Silva",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.09616v1",
+    "titre": "LLM for EDA in Front-End Design: Challenges and Opportunities",
+    "url": "https://arxiv.org/abs/2607.09616v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "Dans le contexte croissante de la complexité des composants électroniques et des délais de commercialisation plus importants, la conception front-end devient un frein majeur dans la phase de développement. Les Modèles de Langage Large (LLM), en particulier lorsqu'ils sont utilisés comme interfaces d'intelligence artificielle agentic, telles que OpenClaw, montrent une grande promesse pour transformer les méthodes d'EDA, passant de l'aide locale à des exécutions autonomes.",
+    "angle_eco": "Ce papier compte pour un économiste en explorant comment les grandes models linguistiques peuvent révolutionner l'automatisation de la conception électronique.",
+    "themes": [
+      "llm"
+    ],
+    "score": 3,
+    "auteurs": "Kangwei Xu, Bing Li, Ulf Schlichtmann",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.09600v1",
+    "titre": "Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation",
+    "url": "https://arxiv.org/abs/2607.09600v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "Cette recherche propose une approche innovante nommée Agora pour améliorer les capacités de raisonnement des agents LLM en introduisant un mécanisme d'enchères inconditionnellement compatible. En traitant les étapes de raisonnement comme des biens pouvant être achetés, Agora permet aux agents de négocier sur la base de leur compétence rectifiée, garantissant que la logique critique est toujours attribuée au modèle le plus apte plutôt qu'au modèle le plus confiant. Les tests ont montré que cette méthode améliore significativement les résultats par rapport à des approches traditionnelles basées sur un seul modèle, une simple routage ou un cascadeur, tout en permettant de contrôler la relation coût-performance via un paramètre d'enchères unique.",
+    "angle_eco": "Agora expose un controllable trade-off entre qualité et coût en introduisant une mécanique d'enchères incitatives pour allouer dynamiquement des tâches aux modèles experts, ce qui améliore les performances des agents LLM.",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "auteurs": "Kaiji Zhou, Ales Leonardis, Yue Feng",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.09528v1",
+    "titre": "TSAI-MetaFraud: A Benchmark Dataset for Financial Fraud Transaction and Behavioral Risk Detection in Metaverse Ecosystems",
+    "url": "https://arxiv.org/abs/2607.09528v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "La présentation de TSAI-MetaFraud apporte une solution pour la détection du fraude dans les économies virtuelles de l'univers métavers, grâce à un ensemble de données multimodale intégrant des informations comportementales, transactionnelles et graphiques. Les tâches de benchmark incluses couvrent différentes facettes de la détection de fraude, allant de la détection de fraude dans les transactions jusqu'à l'apprentissage supervisé faible et à la classification d'indicateurs node à travers des modèles machine et réseaux neuronaux graphiques.",
+    "angle_eco": "TSAI-MetaFraud fournit une base de données benchmark multimodale pour les analyses en detection de fraude dans les économies virtuelles, intégrant informations comportementales, transactionnelles et structurées de graphes.",
+    "themes": [
+      "prevision",
+      "donnees"
+    ],
+    "score": 2,
+    "auteurs": "Refat Ishrak Hemel, Ehsan Hallaji, Roozbeh Razavi-Far",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.09502v1",
+    "titre": "All Explanations are Wrong, But Many Are Useful: Exploring the Rashomon Explanation Set with Large Language Models",
+    "url": "https://arxiv.org/abs/2607.09502v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "Cette recherche propose une approche novatrice appelée Rashomon Explanation, qui permet de générer un ensemble complet d'explications fidèles plutôt qu'une seule explication, améliorant ainsi l'exactitude des modèles tout en préservant leur précision. Cette méthode a démontré des performances supérieures à celles des techniques de base dans divers domaines industriels et de santé sur les indicateurs d'accuracy et de qualité des explications.",
+    "angle_eco": "Un papier sur ce modèle introduit la théorie de l'Explication-Rashomon, montrant comment augmenter le pouvoir d'exposition d'un modèle peut améliorer sa précision tout en enrichissant son ensemble d'explications, valorisant ainsi la confiance du consommateur.",
+    "themes": [
+      "llm",
+      "prevision",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "auteurs": "Pan Li",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.09438v1",
+    "titre": "Test-Time Scaling for Small VLMs on Multilingual Visual MCQ",
+    "url": "https://arxiv.org/abs/2607.09438v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "La mise à l'échelle temporelle au cours de la phase de tests améliore les performances raisonnantes dans les grands modèles linguistiques, mais son transfert vers des petits modèles vision-langue ouverts reste incertain. Les résultats montrent que le format préprompt est crucial pour améliorer la parseabilité, permettant aux chaînes de raisonner correctement sans commettre d'aucune réponse finale. Une augmentation du budget de décodage réduit encore plus ces performances en augmentant le nombre de tokens alloués à chaque chaîne.",
+    "angle_eco": "Ce papier compte pour un économiste car il analyse comment la taille des modèles peut influencer leur efficacité dans l'interprétation de données multimodales et multilingues.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 2,
+    "auteurs": "Spiros Baxevanakis, Peng-Jian Yang",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.09402v1",
+    "titre": "Data-Efficient Deep Learning: Empirical Guidelines for Training Set Size Estimation in Inertial Sensor Classification",
+    "url": "https://arxiv.org/abs/2607.09402v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "Dans ce domaine, la collecte de données nécessite des campagnes de relevés massives qui sont complexes, coûteuses et difficiles à mettre sur une grande échelle. Cette étude présente une analyse empirique détaillée du taux de convergence des courbes d'apprentissage en classification inertielles, mettant ainsi en avant un formulaire factice pour estimer la performance par rapport au nombre total de données.",
+    "angle_eco": "Ce papier compte pour un économiste car il propose une méthode empirique précise pour estimer la taille minimale de l'ensemble de données nécessaire à une classification basée sur les capteurs inertels, relevant des enjeux méthodologiques importants pour le secteur.",
+    "themes": [
+      "outils-recherche",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 2,
+    "auteurs": "Ofir Kruzel, Itzik Klien",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.09348v1",
+    "titre": "DKCD: Domain Knowledge-Enhanced Causal Discovery from Unstructured Data",
+    "url": "https://arxiv.org/abs/2607.09348v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "Dans les domaines d'expertise élevés comme la santé, la finance et l'éducation, le détection de causalités à partir des données non structurées reste un défi sans être largement exploité. La méthodologie introduite ici, DKCD, comporte trois composants interconnectés pour surmonter les défis majeurs de cette tâche : la recherche de connaissances spécifiques au domaine et la réflexion causal guidée par ces connaissances, qui permettent d'améliorer l'identification des facteurs cachés essentiels et la précision des annotations, contribuant ainsi à une meilleure construction des graphes causaux.",
+    "angle_eco": "Ce papier compte pour un économiste car il propose une approche dédiée aux domaines d'expertise, telles que la santé ou le secteur financier, avec des méthodes censées identifier correctement les causes cachées dans des données non structurées.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 4,
+    "auteurs": "Xin Li, Jin Li, Shoujin Wang, Kun Yu, Fang Chen",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.09316v1",
+    "titre": "Automatic Thematic Indexing of Large Literary Corpora: A Machine Learning Approach to Voltaire's Complete Works",
+    "url": "https://arxiv.org/abs/2607.09316v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "Ce travail examine l'application de la machine learning à l'indexation thématique automatique, utilisant deux sous-corpus importants du Complexe des Oeuvres de Voltaire comme cas d'étude : l’Essai sur les mœurs et l'esprit des nations et les Questions sur l'Encyclopédie. Les meilleures performances sont obtenues avec un modèle Mistral quantifié à 4 bits, réalisant des scores F1 jusqu'à 0,67.",
+    "angle_eco": "Ce papier compte pour un economiste en tant qu'il met en avant des approches d'apprentissage automatique pour l'indexation thématique de grands corpus littéraires, domaine pertinent pour les études éditoriales et historiques.",
+    "themes": [
+      "llm",
+      "prevision",
+      "travail-emploi"
+    ],
+    "score": 3,
+    "auteurs": "Miguel Arana-Catania, Gillian Pink, Glenn Roe",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
     "id": "arxiv-2607.08610v1",
     "titre": "Sharing economy in the era of full automation: Evidence from autonomous vehicle on-demand mobility services",
     "url": "https://arxiv.org/abs/2607.08610v1",
@@ -28,7 +232,7 @@
     ],
     "score": 4,
     "auteurs": "Teng-Ruei Chen",
-    "signal": true
+    "signal": false
   },
   {
     "id": "arxiv-2607.08662v1",
@@ -81,6 +285,44 @@
     "score": 2,
     "auteurs": "Puji Wang, Yingchen Zhang, Ruqing Zhang, Jiafeng Guo, Xueqi Cheng",
     "signal": false
+  },
+  {
+    "id": "arxiv-2607.08920v1",
+    "titre": "AI Adoption in S&P 500 Firms",
+    "url": "https://arxiv.org/abs/2607.08920v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-09",
+    "resume_fr": "Dans les entreprises S&P 500 étudiées entre 2016 et 2025, plus de la moitié ont intégré AI profondément dans leurs processus, avec une augmentation rapide au sein du secteur technologique qui absorbe à lui seul la moitié des adoptions profondes. Les profits des entreprises connaissent une courbe J lorsqu'il s'agit d'intégrer l'AI de manière profonde, sans cependant démontrer de différences significatives en termes de dépenses en capitales ou de productivité.",
+    "angle_eco": "Ce papier compte pour un économiste car il analyse l'adoption d'intelligence artificielle dans les grandes entreprises américaines et ses implications sur la productivité et le marché du travail.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 6,
+    "auteurs": "Yang Yu, Martin Fleming, Lucy Hampton, Christophe Combemale, Neil Thompson",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.08681v1",
+    "titre": "SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets",
+    "url": "https://arxiv.org/abs/2607.08681v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-09",
+    "resume_fr": "Dans les marchés de l'énergie décentralisée, le système SolarChain-Eval met en évidence une réduction des risques d'exploitation invalidante du phénomène physique et de la production d'un apport fictif. Il souligne également comment la couche Planneur/Inspecteur basée sur un langage à grande portée améliore l'évaluation et le contrôle des actions potentiellement dangereuses.",
+    "angle_eco": "Ce papier compte pour un économiste car il propose une évaluation physique contrainte d'un cadre de benchmark pour des agents économiques fiables dans les marchés décentralisés de l'énergie.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 4,
+    "auteurs": "Shilin Ou, Yifan Xu, Luyao Zhang",
+    "signal": false,
+    "llm": "qwen2.5:3b"
   },
   {
     "id": "arxiv-2607.05792v1",

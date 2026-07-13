@@ -6,6 +6,83 @@
     <description>Veille IA, economie et machine learning, curatee par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Perturbed utility Markovian traffic equilibrium: theory and computation</title>
+      <link>https://arxiv.org/abs/2607.09568v1</link>
+      <guid isPermaLink="false">arxiv-2607.09568v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Ce papier développe une approche de Nash équilibre perturbé (PUME), conçue pour maintenir la flexibilité et l'efficacité computable des modèles basés sur les liens Markoviens, tout en s'étendant à différents scénarios. La PUME est basée sur un modèle de choix markovien perturbé (PUMCM), qui permet non seulement aux probabilités de choix internes mais aussi aux probabilités externes d'être comprises, sans restriction préalable des options de choix.</description>
+    </item>
+    <item>
+      <title>Deep Learning for Dynamic Programming with Recursive Utility Using First-order Conditions</title>
+      <link>https://arxiv.org/abs/2607.09461v1</link>
+      <guid isPermaLink="false">arxiv-2607.09461v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Cette étude propose une méthode appelée CEFOL, un algorithme d'apprentissage profond pour résoudre des problèmes de programmation dynamique discrète avec utilité récursive. CEFOL utilise deux réseaux neuronaux différents : l'un pour représenter l'équivalent certain et l'autre pour apprendre les fonctions valeurs, les fonctions politiques et les multiplicateurs de Lagrange en utilisant des conditions d'optimisation spécifiques du modèle.</description>
+    </item>
+    <item>
+      <title>Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection</title>
+      <link>https://arxiv.org/abs/2607.09641v1</link>
+      <guid isPermaLink="false">arxiv-2607.09641v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Le modèle Semantic Pareto-DQN surmonte l'imbalance des classes dans les anomalies financières sans rééchantillonnage des données, offrant une représentation de l'état robuste et invariant à la taille des données. Il optimise un vecteur de récompense qui sépare clairement efficacité financière, friction opérationnelle et découverte sémantique, permettant ainsi un meilleur contrôle des coûts d'omission versus faux positifs.</description>
+    </item>
+    <item>
+      <title>LLM for EDA in Front-End Design: Challenges and Opportunities</title>
+      <link>https://arxiv.org/abs/2607.09616v1</link>
+      <guid isPermaLink="false">arxiv-2607.09616v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Dans le contexte croissante de la complexité des composants électroniques et des délais de commercialisation plus importants, la conception front-end devient un frein majeur dans la phase de développement. Les Modèles de Langage Large (LLM), en particulier lorsqu'ils sont utilisés comme interfaces d'intelligence artificielle agentic, telles que OpenClaw, montrent une grande promesse pour transformer les méthodes d'EDA, passant de l'aide locale à des exécutions autonomes.</description>
+    </item>
+    <item>
+      <title>Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation</title>
+      <link>https://arxiv.org/abs/2607.09600v1</link>
+      <guid isPermaLink="false">arxiv-2607.09600v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Cette recherche propose une approche innovante nommée Agora pour améliorer les capacités de raisonnement des agents LLM en introduisant un mécanisme d'enchères inconditionnellement compatible. En traitant les étapes de raisonnement comme des biens pouvant être achetés, Agora permet aux agents de négocier sur la base de leur compétence rectifiée, garantissant que la logique critique est toujours attribuée au modèle le plus apte plutôt qu'au modèle le plus confiant. Les tests ont montré que cette méthode améliore significativement les résultats par rapport à des approches traditionnelles basées sur un seul modèle, une simple routage ou un cascadeur, tout en permettant de contrôler la relation coût-performance via un paramètre d'enchères unique.</description>
+    </item>
+    <item>
+      <title>TSAI-MetaFraud: A Benchmark Dataset for Financial Fraud Transaction and Behavioral Risk Detection in Metaverse Ecosystems</title>
+      <link>https://arxiv.org/abs/2607.09528v1</link>
+      <guid isPermaLink="false">arxiv-2607.09528v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>La présentation de TSAI-MetaFraud apporte une solution pour la détection du fraude dans les économies virtuelles de l'univers métavers, grâce à un ensemble de données multimodale intégrant des informations comportementales, transactionnelles et graphiques. Les tâches de benchmark incluses couvrent différentes facettes de la détection de fraude, allant de la détection de fraude dans les transactions jusqu'à l'apprentissage supervisé faible et à la classification d'indicateurs node à travers des modèles machine et réseaux neuronaux graphiques.</description>
+    </item>
+    <item>
+      <title>All Explanations are Wrong, But Many Are Useful: Exploring the Rashomon Explanation Set with Large Language Models</title>
+      <link>https://arxiv.org/abs/2607.09502v1</link>
+      <guid isPermaLink="false">arxiv-2607.09502v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Cette recherche propose une approche novatrice appelée Rashomon Explanation, qui permet de générer un ensemble complet d'explications fidèles plutôt qu'une seule explication, améliorant ainsi l'exactitude des modèles tout en préservant leur précision. Cette méthode a démontré des performances supérieures à celles des techniques de base dans divers domaines industriels et de santé sur les indicateurs d'accuracy et de qualité des explications.</description>
+    </item>
+    <item>
+      <title>Test-Time Scaling for Small VLMs on Multilingual Visual MCQ</title>
+      <link>https://arxiv.org/abs/2607.09438v1</link>
+      <guid isPermaLink="false">arxiv-2607.09438v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>La mise à l'échelle temporelle au cours de la phase de tests améliore les performances raisonnantes dans les grands modèles linguistiques, mais son transfert vers des petits modèles vision-langue ouverts reste incertain. Les résultats montrent que le format préprompt est crucial pour améliorer la parseabilité, permettant aux chaînes de raisonner correctement sans commettre d'aucune réponse finale. Une augmentation du budget de décodage réduit encore plus ces performances en augmentant le nombre de tokens alloués à chaque chaîne.</description>
+    </item>
+    <item>
+      <title>Data-Efficient Deep Learning: Empirical Guidelines for Training Set Size Estimation in Inertial Sensor Classification</title>
+      <link>https://arxiv.org/abs/2607.09402v1</link>
+      <guid isPermaLink="false">arxiv-2607.09402v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Dans ce domaine, la collecte de données nécessite des campagnes de relevés massives qui sont complexes, coûteuses et difficiles à mettre sur une grande échelle. Cette étude présente une analyse empirique détaillée du taux de convergence des courbes d'apprentissage en classification inertielles, mettant ainsi en avant un formulaire factice pour estimer la performance par rapport au nombre total de données.</description>
+    </item>
+    <item>
+      <title>DKCD: Domain Knowledge-Enhanced Causal Discovery from Unstructured Data</title>
+      <link>https://arxiv.org/abs/2607.09348v1</link>
+      <guid isPermaLink="false">arxiv-2607.09348v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Dans les domaines d'expertise élevés comme la santé, la finance et l'éducation, le détection de causalités à partir des données non structurées reste un défi sans être largement exploité. La méthodologie introduite ici, DKCD, comporte trois composants interconnectés pour surmonter les défis majeurs de cette tâche : la recherche de connaissances spécifiques au domaine et la réflexion causal guidée par ces connaissances, qui permettent d'améliorer l'identification des facteurs cachés essentiels et la précision des annotations, contribuant ainsi à une meilleure construction des graphes causaux.</description>
+    </item>
+    <item>
+      <title>Automatic Thematic Indexing of Large Literary Corpora: A Machine Learning Approach to Voltaire's Complete Works</title>
+      <link>https://arxiv.org/abs/2607.09316v1</link>
+      <guid isPermaLink="false">arxiv-2607.09316v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Ce travail examine l'application de la machine learning à l'indexation thématique automatique, utilisant deux sous-corpus importants du Complexe des Oeuvres de Voltaire comme cas d'étude : l’Essai sur les mœurs et l'esprit des nations et les Questions sur l'Encyclopédie. Les meilleures performances sont obtenues avec un modèle Mistral quantifié à 4 bits, réalisant des scores F1 jusqu'à 0,67.</description>
+    </item>
+    <item>
       <title>Sharing economy in the era of full automation: Evidence from autonomous vehicle on-demand mobility services</title>
       <link>https://arxiv.org/abs/2607.08610v1</link>
       <guid isPermaLink="false">arxiv-2607.08610v1</guid>
@@ -39,6 +116,20 @@
       <guid isPermaLink="false">arxiv-2607.08395v1</guid>
       <pubDate>2026-07-09</pubDate>
       <description>[Extrait original, traduction non disponible] Persistent AI agents extend large language models (LLMs) beyond single-turn interaction into long-lived software systems.</description>
+    </item>
+    <item>
+      <title>AI Adoption in S&amp;P 500 Firms</title>
+      <link>https://arxiv.org/abs/2607.08920v1</link>
+      <guid isPermaLink="false">arxiv-2607.08920v1</guid>
+      <pubDate>2026-07-09</pubDate>
+      <description>Dans les entreprises S&amp;P 500 étudiées entre 2016 et 2025, plus de la moitié ont intégré AI profondément dans leurs processus, avec une augmentation rapide au sein du secteur technologique qui absorbe à lui seul la moitié des adoptions profondes. Les profits des entreprises connaissent une courbe J lorsqu'il s'agit d'intégrer l'AI de manière profonde, sans cependant démontrer de différences significatives en termes de dépenses en capitales ou de productivité.</description>
+    </item>
+    <item>
+      <title>SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets</title>
+      <link>https://arxiv.org/abs/2607.08681v1</link>
+      <guid isPermaLink="false">arxiv-2607.08681v1</guid>
+      <pubDate>2026-07-09</pubDate>
+      <description>Dans les marchés de l'énergie décentralisée, le système SolarChain-Eval met en évidence une réduction des risques d'exploitation invalidante du phénomène physique et de la production d'un apport fictif. Il souligne également comment la couche Planneur/Inspecteur basée sur un langage à grande portée améliore l'évaluation et le contrôle des actions potentiellement dangereuses.</description>
     </item>
     <item>
       <title>Estimating Causal Effects from Data Generated by Stochastic Algorithms</title>
