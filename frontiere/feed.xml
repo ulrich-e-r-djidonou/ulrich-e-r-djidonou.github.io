@@ -6,6 +6,34 @@
     <description>Veille IA, economie et machine learning, curatee par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Linear Independent Component Analysis via Optimal Transport</title>
+      <link>https://arxiv.org/abs/2607.14081v1</link>
+      <guid isPermaLink="false">arxiv-2607.14081v1</guid>
+      <pubDate>2026-07-15</pubDate>
+      <description>La Linear Independent Component Analysis via Optimal Transport propose d'utiliser la distance de Wasserstein au carré pour mesurer l'ingénieusement des signaux source indépendants, maximisée lorsque ces signaux sont projetés pour reconstruire un composant indépendant. Cette approche permet de surpasser les méthodes basées sur des contrastes proxy, et a été confirmée par des évaluations expérimentales sur des données simulées.</description>
+    </item>
+    <item>
+      <title>Higher utilisation explains the recent surge in productivity growth</title>
+      <link>https://cepr.org/voxeu/columns/higher-utilisation-explains-recent-surge-productivity-growth</link>
+      <guid isPermaLink="false">voxeu-higher-utilisation-explains-recent-surge-productivity-growth</guid>
+      <pubDate>2026-07-15</pubDate>
+      <description>La croissance de la productivité américaine s'est accélérée depuis 2022, avec une augmentation annuelle moyenne de l'output par heure de près de 2,5% entre fin 2022 et début 2026. Cependant, le rendement a dépassé son rythme pré-pandémique de 1 point de pourcentage grâce à la plus grande utilisation des ressources déjà en place plutôt qu'à la performance technologique d'IA.</description>
+    </item>
+    <item>
+      <title>Bivariate Isotonic Regression by Dynamic Programming</title>
+      <link>https://arxiv.org/abs/2607.12629v1</link>
+      <guid isPermaLink="false">arxiv-2607.12629v1</guid>
+      <pubDate>2026-07-14</pubDate>
+      <description>Ce papier étend le cadre de programmation dynamique introduit par Rote (2019) pour résoudre le problème isotonique bivarié, utilisant une procédure de traînée anti-diagonale. L'outil proposé est appliqué au jeu de données bien connu des baseballs qui décrit l'association entre les salaires et une collection d'propriétés du joueur, dont le nombre de points à battre et les hits.</description>
+    </item>
+    <item>
+      <title>Forecasting Inflation with Microdata: An Adaptive Machine Learning Approach</title>
+      <link>https://arxiv.org/abs/2607.12345v1</link>
+      <guid isPermaLink="false">arxiv-2607.12345v1</guid>
+      <pubDate>2026-07-14</pubDate>
+      <description>La microéconomie présente des avantages pour prévoir l'inflation totale dans un environnement non-stationnaire, ce qui est détecté par une méthode appelée scan test. La combinaison de cette micro-prédiction avec d'autres modèles suggère qu'elle améliore les prédictons à partir de 2020.</description>
+    </item>
+    <item>
       <title>Perturbed utility Markovian traffic equilibrium: theory and computation</title>
       <link>https://arxiv.org/abs/2607.09568v1</link>
       <guid isPermaLink="false">arxiv-2607.09568v1</guid>

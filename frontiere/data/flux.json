@@ -1,5 +1,79 @@
 [
   {
+    "id": "arxiv-2607.14081v1",
+    "titre": "Linear Independent Component Analysis via Optimal Transport",
+    "url": "https://arxiv.org/abs/2607.14081v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-15",
+    "resume_fr": "La Linear Independent Component Analysis via Optimal Transport propose d'utiliser la distance de Wasserstein au carré pour mesurer l'ingénieusement des signaux source indépendants, maximisée lorsque ces signaux sont projetés pour reconstruire un composant indépendant. Cette approche permet de surpasser les méthodes basées sur des contrastes proxy, et a été confirmée par des évaluations expérimentales sur des données simulées.",
+    "angle_eco": "OT-ICA, un algorithme d'Analyse en Composantes Indépendantes basé sur la Transport Optimal, améliore les méthodes classiques pour des données à lois différentes sans nécessiter de distributionnal assumptions.",
+    "themes": [
+      "donnees"
+    ],
+    "score": 2,
+    "auteurs": "Ashutosh Jha, Michel Besserve, Simon Buchholz",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "voxeu-higher-utilisation-explains-recent-surge-productivity-growth",
+    "titre": "Higher utilisation explains the recent surge in productivity growth",
+    "url": "https://cepr.org/voxeu/columns/higher-utilisation-explains-recent-surge-productivity-growth",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-07-15",
+    "resume_fr": "La croissance de la productivité américaine s'est accélérée depuis 2022, avec une augmentation annuelle moyenne de l'output par heure de près de 2,5% entre fin 2022 et début 2026. Cependant, le rendement a dépassé son rythme pré-pandémique de 1 point de pourcentage grâce à la plus grande utilisation des ressources déjà en place plutôt qu'à la performance technologique d'IA.",
+    "angle_eco": "Le papier souligne que la hausse récente du taux de productivité aux États-Unis s'explique principalement par l'utilisation plus intensive des ressources déjà disponibles plutôt qu'une amélioration de leur efficacité.",
+    "themes": [
+      "travail-emploi",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 3,
+    "auteurs": "",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.12629v1",
+    "titre": "Bivariate Isotonic Regression by Dynamic Programming",
+    "url": "https://arxiv.org/abs/2607.12629v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-14",
+    "resume_fr": "Ce papier étend le cadre de programmation dynamique introduit par Rote (2019) pour résoudre le problème isotonique bivarié, utilisant une procédure de traînée anti-diagonale. L'outil proposé est appliqué au jeu de données bien connu des baseballs qui décrit l'association entre les salaires et une collection d'propriétés du joueur, dont le nombre de points à battre et les hits.",
+    "angle_eco": "Ce papier compte pour un économiste en étant appliqué à des données de baseball, illustrant la pertinence du rétro-traversal dynamique dans diverses théories économiques comme le problème des épargnes, la croissance économique, les recherches d'emploi, les cycles économiques, l'équilibre oligopolistique et les contrats récursifs.",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "auteurs": "Pedro Afonso Fernandes",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.12345v1",
+    "titre": "Forecasting Inflation with Microdata: An Adaptive Machine Learning Approach",
+    "url": "https://arxiv.org/abs/2607.12345v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-14",
+    "resume_fr": "La microéconomie présente des avantages pour prévoir l'inflation totale dans un environnement non-stationnaire, ce qui est détecté par une méthode appelée scan test. La combinaison de cette micro-prédiction avec d'autres modèles suggère qu'elle améliore les prédictons à partir de 2020.",
+    "angle_eco": "Ce papier montre comment les données microéconomiques peuvent améliorer la prévision de l'inflation dans un environnement non stationnaire, surtout après des crises économiques majeures.",
+    "themes": [
+      "prevision",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 2,
+    "auteurs": "Catherine Chen, Chen Gao, Jonathon Hazell, Lihua Lei, Chen Lian",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
     "id": "arxiv-2607.09568v1",
     "titre": "Perturbed utility Markovian traffic equilibrium: theory and computation",
     "url": "https://arxiv.org/abs/2607.09568v1",
