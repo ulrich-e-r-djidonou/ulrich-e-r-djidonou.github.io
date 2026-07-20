@@ -1,5 +1,150 @@
 [
   {
+    "id": "arxiv-2607.16184v1",
+    "titre": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+    "url": "https://arxiv.org/abs/2607.16184v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-17",
+    "resume_fr": "Dans le cadre de la gestion des modèles LLM basés sur des Experts Mixtes (MoE), PagedWeight propose une méthode qui quantifie dynamiquement les poids du modèle pendant l'exécution et maintient un équilibre entre la précision des poids experts et la taille des caches KV. Cette approche améliore significativement le compromis qualité-mémoire par rapport à diverses méthodes de quantification existantes, en garantissant une performance élevée avec une utilisation réduite du GPU.",
+    "angle_eco": "PagedWeight expose efficacement l'intrication entre la précision des poids experts et le stockage de cache KV dans les serveurs MoE, offrant une amélioration significative du compromis qualité-mémoire par rapport à plusieurs méthodes de quantification existantes.",
+    "themes": [
+      "llm"
+    ],
+    "score": 2,
+    "auteurs": "Yuchen Yang, Yifan Zhao, Anisha Dasgupta, Sasa Misailovic",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.16177v1",
+    "titre": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
+    "url": "https://arxiv.org/abs/2607.16177v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-17",
+    "resume_fr": "La méthode PEARL améliore la performance des algorithmes de RL en réduisant les interactions avec l'environnement et en exploitant efficacement le caractère différentiable des systèmes dynamiques paramétriques. De plus, elle permet une généralisation跨过multiple scénarios et une échelle de RL à des systèmes complexes.",
+    "angle_eco": "Ce papier compte pour un économiste en raison de sa exploration innovante du contrôle optimal appliqué à systèmes dynamiques complexes grâce aux techniques de reinforcement learning améliorées par la physique.",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 2,
+    "auteurs": "Matteo Tomasetto, Nicolò Botteghi, Gabriele Bruni, Andrea Manzoni",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.16097v1",
+    "titre": "Understanding Reasoning from Pretraining to Post-Training",
+    "url": "https://arxiv.org/abs/2607.16097v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-17",
+    "resume_fr": "La post-entraînement par renforcement a montré des effets bien prédictibles sur la performance basée sur l'entraînement préalable, avec le rendement final déterminé de manière approximativement linéaire à partir du nombre de jetons d'entraînement. La post-entraînement par renforcement a également révélé des effets non triviaux selon la difficulté des énigmes testées.",
+    "angle_eco": "Ce papier compte pour un économiste car il analyse les décisions prises pendant la pré-entraînement et leur impact sur l'efficacité de l'apprentissage par renforcement post-entraînement dans une tâche spécifique.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "auteurs": "Jingyan Shen, Ang Li, Salman Rahman, Yifan Sun, Micah Goldblum, Matus Telgarsky, Pavel Izmailov",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.16057v1",
+    "titre": "Frontier AI performance across the business disciplines: a case-grounded benchmark of knowledge work and analytical reasoning",
+    "url": "https://arxiv.org/abs/2607.16057v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-17",
+    "resume_fr": "Les benchmarks actuels des langages de grande taille mettent principalement l'accent sur des compétences techniques telles que la rétention de faits et les problèmes résolus, tandis que le travail analytique effectué quotidiennement par les professionnels du travail blanc reste mal mesuré. Les performances des modèles d'intelligence artificielle sur cette forme de travail analytique sont déjà élevées et se sont notablement améliorées en deux ans.",
+    "angle_eco": "Ce papier compte pour un économiste car il propose une évaluation novatrice des compétences analytiques et stratégiques de modèles AI utilisés dans le travail professionnel.",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "auteurs": "Ajay Patel, Kartik Hosanagar, Ramayya Krishnan, Chris Callison-Burch, Karim Lakhani, Mitch Weiss",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.16028v1",
+    "titre": "CLaC@FinMMEval 2026 Task 3: Sentiment-Augmented Deep Reinforcement Learning for Active Trading -- An Alpha-Reward Approach",
+    "url": "https://arxiv.org/abs/2607.16028v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-17",
+    "resume_fr": "Cette étude présente un système pour la tâche 3 du CLEF 2026 FinMMEval Lab, impliquant des décisions de trading quotidiennes basées sur les nouvelles et l'historique des données marchandes pour Bitcoin (BTC) et Tesla (TSLA). Les algorithmes de renforcement réinforcement profond examinés incluent Policy Gradient (PG), Proximal Policy Optimization (PPO), Deep Q-Learning (DQL), et Deep Deterministic Policy Gradient (DDPG).",
+    "angle_eco": "Ce papier compte pour un economiste en présentant une approche innovante de trading automatisé utilisant la machine learning et les indicateurs économiques.",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 2,
+    "auteurs": "Andrei Neagu, Eeham Khan, Leila Kosseim",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.15506v1",
+    "titre": "Helping People Choose Careers in the Age of AI",
+    "url": "https://arxiv.org/abs/2607.15506v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-16",
+    "resume_fr": "Les études examinent divers modèles de prévision sur l'exposition aux tâches automatisables par l'IA, soulignant la variabilité entre les projections. Dans un modèle empirique basé sur des données récentes, l'étude évalue les tensions entre salaires et exposition à l'IA dans différents secteurs d'activité.",
+    "angle_eco": "Ce papier s'impose comme une référence pour l'économie de la décision professionnelle dans un environnement marqué par l'automatisation d'emploi grâce à l'intelligence artificielle.",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 2,
+    "auteurs": "Jennifer L. Steele, Isabella Cruz",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.15385v1",
+    "titre": "Algorithmic Intermediation and the International Transmission of U.S. Monetary Policy",
+    "url": "https://arxiv.org/abs/2607.15385v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-16",
+    "resume_fr": "Ce papier étudie comment l'intermédiation algorithmique et AI dans le gestion des fonds affecte la transmission internationale de la politique monétaire américaine vers les marchés émergents. Il souligne que la similarité des modèles entre les fonds est la principale source d'instabilité, tandis que l'ajustement rapide des modèles diversifiés permettrait une réduction des mouvements de capitaux en cas de volatilité élevée aux États-Unis.",
+    "angle_eco": "Ce papier explique comment la centralisation algorithmique et l'utilisation d'IA dans le management de fonds affecte la transmission internationale des politiques monétaires américaines aux marchés émergents.",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 4,
+    "auteurs": "Fernando Toledo, Luis Dimotta Bré, Gabriel Montes-Rojas",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.14585v1",
+    "titre": "Governing Artificial Intelligence: Public Preferences and Regulatory Options",
+    "url": "https://arxiv.org/abs/2607.14585v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-16",
+    "resume_fr": "Les citoyens suggèrent une régulation stricte des technologies d'IA, accordant priorité à la sécurité plutôt qu'à l'inovation et préférant un contrôle public ou international aux solutions de régulation privée. Les risques perçus par les citoyens affectent leur forte inclination pour la réglementation de l'IA.",
+    "angle_eco": "Ce papier illustre comment les citoyens apprécient la réglementation de l'intelligence artificielle et influencent ainsi la décision des décideurs politiques.",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 2,
+    "auteurs": "Magnus Lundgren, Jonas Tallberg",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
     "id": "arxiv-2607.14081v1",
     "titre": "Linear Independent Component Analysis via Optimal Transport",
     "url": "https://arxiv.org/abs/2607.14081v1",
@@ -32,6 +177,23 @@
     ],
     "score": 3,
     "auteurs": "",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.14418v1",
+    "titre": "Adaptive Ad Load Design for Sponsored Search Markets: Evidence, Theory, and Deployment",
+    "url": "https://arxiv.org/abs/2607.14418v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-15",
+    "resume_fr": "Ad-load design est étudié comme une décision clé du côté de la supply dans les marchés d'annonces sponsorisées. Une expérience expérimentale a montré que l'augmentation de l'ad-load peut améliorer le revenu de 43% en moyenne, mais il entraîne également une réduction des conversions totales de 5% et la diminution de l'engagement quotidien de 2.2%.",
+    "angle_eco": "Ce papier compte pour un économiste car il exploite les concepts fondamentaux de l'économie du marché et des décisions de supply-side dans le domaine des publicités ciblées.",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 3,
+    "auteurs": "Mohammad Rashid, Hema Yoganarasimhan",
     "signal": false,
     "llm": "qwen2.5:3b"
   },

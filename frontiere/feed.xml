@@ -6,6 +6,62 @@
     <description>Veille IA, economie et machine learning, curatee par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization</title>
+      <link>https://arxiv.org/abs/2607.16184v1</link>
+      <guid isPermaLink="false">arxiv-2607.16184v1</guid>
+      <pubDate>2026-07-17</pubDate>
+      <description>Dans le cadre de la gestion des modèles LLM basés sur des Experts Mixtes (MoE), PagedWeight propose une méthode qui quantifie dynamiquement les poids du modèle pendant l'exécution et maintient un équilibre entre la précision des poids experts et la taille des caches KV. Cette approche améliore significativement le compromis qualité-mémoire par rapport à diverses méthodes de quantification existantes, en garantissant une performance élevée avec une utilisation réduite du GPU.</description>
+    </item>
+    <item>
+      <title>Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems</title>
+      <link>https://arxiv.org/abs/2607.16177v1</link>
+      <guid isPermaLink="false">arxiv-2607.16177v1</guid>
+      <pubDate>2026-07-17</pubDate>
+      <description>La méthode PEARL améliore la performance des algorithmes de RL en réduisant les interactions avec l'environnement et en exploitant efficacement le caractère différentiable des systèmes dynamiques paramétriques. De plus, elle permet une généralisation跨过multiple scénarios et une échelle de RL à des systèmes complexes.</description>
+    </item>
+    <item>
+      <title>Understanding Reasoning from Pretraining to Post-Training</title>
+      <link>https://arxiv.org/abs/2607.16097v1</link>
+      <guid isPermaLink="false">arxiv-2607.16097v1</guid>
+      <pubDate>2026-07-17</pubDate>
+      <description>La post-entraînement par renforcement a montré des effets bien prédictibles sur la performance basée sur l'entraînement préalable, avec le rendement final déterminé de manière approximativement linéaire à partir du nombre de jetons d'entraînement. La post-entraînement par renforcement a également révélé des effets non triviaux selon la difficulté des énigmes testées.</description>
+    </item>
+    <item>
+      <title>Frontier AI performance across the business disciplines: a case-grounded benchmark of knowledge work and analytical reasoning</title>
+      <link>https://arxiv.org/abs/2607.16057v1</link>
+      <guid isPermaLink="false">arxiv-2607.16057v1</guid>
+      <pubDate>2026-07-17</pubDate>
+      <description>Les benchmarks actuels des langages de grande taille mettent principalement l'accent sur des compétences techniques telles que la rétention de faits et les problèmes résolus, tandis que le travail analytique effectué quotidiennement par les professionnels du travail blanc reste mal mesuré. Les performances des modèles d'intelligence artificielle sur cette forme de travail analytique sont déjà élevées et se sont notablement améliorées en deux ans.</description>
+    </item>
+    <item>
+      <title>CLaC@FinMMEval 2026 Task 3: Sentiment-Augmented Deep Reinforcement Learning for Active Trading -- An Alpha-Reward Approach</title>
+      <link>https://arxiv.org/abs/2607.16028v1</link>
+      <guid isPermaLink="false">arxiv-2607.16028v1</guid>
+      <pubDate>2026-07-17</pubDate>
+      <description>Cette étude présente un système pour la tâche 3 du CLEF 2026 FinMMEval Lab, impliquant des décisions de trading quotidiennes basées sur les nouvelles et l'historique des données marchandes pour Bitcoin (BTC) et Tesla (TSLA). Les algorithmes de renforcement réinforcement profond examinés incluent Policy Gradient (PG), Proximal Policy Optimization (PPO), Deep Q-Learning (DQL), et Deep Deterministic Policy Gradient (DDPG).</description>
+    </item>
+    <item>
+      <title>Helping People Choose Careers in the Age of AI</title>
+      <link>https://arxiv.org/abs/2607.15506v1</link>
+      <guid isPermaLink="false">arxiv-2607.15506v1</guid>
+      <pubDate>2026-07-16</pubDate>
+      <description>Les études examinent divers modèles de prévision sur l'exposition aux tâches automatisables par l'IA, soulignant la variabilité entre les projections. Dans un modèle empirique basé sur des données récentes, l'étude évalue les tensions entre salaires et exposition à l'IA dans différents secteurs d'activité.</description>
+    </item>
+    <item>
+      <title>Algorithmic Intermediation and the International Transmission of U.S. Monetary Policy</title>
+      <link>https://arxiv.org/abs/2607.15385v1</link>
+      <guid isPermaLink="false">arxiv-2607.15385v1</guid>
+      <pubDate>2026-07-16</pubDate>
+      <description>Ce papier étudie comment l'intermédiation algorithmique et AI dans le gestion des fonds affecte la transmission internationale de la politique monétaire américaine vers les marchés émergents. Il souligne que la similarité des modèles entre les fonds est la principale source d'instabilité, tandis que l'ajustement rapide des modèles diversifiés permettrait une réduction des mouvements de capitaux en cas de volatilité élevée aux États-Unis.</description>
+    </item>
+    <item>
+      <title>Governing Artificial Intelligence: Public Preferences and Regulatory Options</title>
+      <link>https://arxiv.org/abs/2607.14585v1</link>
+      <guid isPermaLink="false">arxiv-2607.14585v1</guid>
+      <pubDate>2026-07-16</pubDate>
+      <description>Les citoyens suggèrent une régulation stricte des technologies d'IA, accordant priorité à la sécurité plutôt qu'à l'inovation et préférant un contrôle public ou international aux solutions de régulation privée. Les risques perçus par les citoyens affectent leur forte inclination pour la réglementation de l'IA.</description>
+    </item>
+    <item>
       <title>Linear Independent Component Analysis via Optimal Transport</title>
       <link>https://arxiv.org/abs/2607.14081v1</link>
       <guid isPermaLink="false">arxiv-2607.14081v1</guid>
@@ -18,6 +74,13 @@
       <guid isPermaLink="false">voxeu-higher-utilisation-explains-recent-surge-productivity-growth</guid>
       <pubDate>2026-07-15</pubDate>
       <description>La croissance de la productivité américaine s'est accélérée depuis 2022, avec une augmentation annuelle moyenne de l'output par heure de près de 2,5% entre fin 2022 et début 2026. Cependant, le rendement a dépassé son rythme pré-pandémique de 1 point de pourcentage grâce à la plus grande utilisation des ressources déjà en place plutôt qu'à la performance technologique d'IA.</description>
+    </item>
+    <item>
+      <title>Adaptive Ad Load Design for Sponsored Search Markets: Evidence, Theory, and Deployment</title>
+      <link>https://arxiv.org/abs/2607.14418v1</link>
+      <guid isPermaLink="false">arxiv-2607.14418v1</guid>
+      <pubDate>2026-07-15</pubDate>
+      <description>Ad-load design est étudié comme une décision clé du côté de la supply dans les marchés d'annonces sponsorisées. Une expérience expérimentale a montré que l'augmentation de l'ad-load peut améliorer le revenu de 43% en moyenne, mais il entraîne également une réduction des conversions totales de 5% et la diminution de l'engagement quotidien de 2.2%.</description>
     </item>
     <item>
       <title>Bivariate Isotonic Regression by Dynamic Programming</title>
@@ -151,41 +214,6 @@
       <guid isPermaLink="false">arxiv-2607.08920v1</guid>
       <pubDate>2026-07-09</pubDate>
       <description>Dans les entreprises S&amp;P 500 étudiées entre 2016 et 2025, plus de la moitié ont intégré AI profondément dans leurs processus, avec une augmentation rapide au sein du secteur technologique qui absorbe à lui seul la moitié des adoptions profondes. Les profits des entreprises connaissent une courbe J lorsqu'il s'agit d'intégrer l'AI de manière profonde, sans cependant démontrer de différences significatives en termes de dépenses en capitales ou de productivité.</description>
-    </item>
-    <item>
-      <title>SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets</title>
-      <link>https://arxiv.org/abs/2607.08681v1</link>
-      <guid isPermaLink="false">arxiv-2607.08681v1</guid>
-      <pubDate>2026-07-09</pubDate>
-      <description>Dans les marchés de l'énergie décentralisée, le système SolarChain-Eval met en évidence une réduction des risques d'exploitation invalidante du phénomène physique et de la production d'un apport fictif. Il souligne également comment la couche Planneur/Inspecteur basée sur un langage à grande portée améliore l'évaluation et le contrôle des actions potentiellement dangereuses.</description>
-    </item>
-    <item>
-      <title>Estimating Causal Effects from Data Generated by Stochastic Algorithms</title>
-      <link>https://arxiv.org/abs/2607.05792v1</link>
-      <guid isPermaLink="false">arxiv-2607.05792v1</guid>
-      <pubDate>2026-07-07</pubDate>
-      <description>[Extrait original, traduction non disponible] Recommendation systems and chatbots present content to users, typically using stochastic algorithms that select the content based on user characteristics or context. Examples of content include chat responses, videos, or items available for purchase.</description>
-    </item>
-    <item>
-      <title>Forecasting Realized Volatility with Time Series Foundation Models: A Comparison with Econometric Benchmarks</title>
-      <link>https://arxiv.org/abs/2607.05291v1</link>
-      <guid isPermaLink="false">arxiv-2607.05291v1</guid>
-      <pubDate>2026-07-06</pubDate>
-      <description>[Extrait original, traduction non disponible] We ask whether pretrained time series foundation models (TSFMs) improve on established econometric benchmarks for forecasting realized volatility.</description>
-    </item>
-    <item>
-      <title>ChatGPT’s financial advice: Supply, demand, and the life cycle</title>
-      <link>https://cepr.org/voxeu/columns/chatgpts-financial-advice-supply-demand-and-life-cycle</link>
-      <guid isPermaLink="false">voxeu-lumns-chatgpts-financial-advice-supply-demand-and-life-cycle</guid>
-      <pubDate>2026-06-29</pubDate>
-      <description>[Extrait original, traduction non disponible] The rise of generative AI has raised hopes that high-quality, personalised financial advice might finally become cheap and universally accessible. This column develops a method to quantify the impact of following AI financial advice over a lifetime.</description>
-    </item>
-    <item>
-      <title>AI, productivity, and work: Evidence from US firms</title>
-      <link>https://cepr.org/voxeu/columns/ai-productivity-and-work-evidence-us-firms</link>
-      <guid isPermaLink="false">voxeu-org-voxeu-columns-ai-productivity-and-work-evidence-us-firms</guid>
-      <pubDate>2026-06-26</pubDate>
-      <description>[Extrait original, traduction non disponible] Real-time evidence from users can inform the current policy debates around artificial intelligence. This column reports on a survey of executives at typical US firms to reveal that AI adoption is already widespread but shallow.</description>
     </item>
   </channel>
 </rss>
