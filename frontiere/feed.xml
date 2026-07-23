@@ -6,6 +6,62 @@
     <description>Veille IA, economie et machine learning, curatee par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Licensing and Innovation Regimes in Pharmaceutical R&amp;D</title>
+      <link>https://arxiv.org/abs/2607.20365v1</link>
+      <guid isPermaLink="false">arxiv-2607.20365v1</guid>
+      <pubDate>2026-07-22</pubDate>
+      <description>Nous étudions comment la licence affecte l'allocation de l'innovation dans les R&amp;D pharmaceutiques. Notre modèle différencie entre innovations incrémentales et novatrices, indiquant des dynamiques d'équilibre différentes dans le marché des technologies selon leur qualité. Les résultats suggèrent que la license maintient une sélection positive et un égalisation des rendements concurrentiels pour les projets incrémentaux, tandis que les innovations novatrices peuvent présenter des fractures de friction informatives distinctes.</description>
+    </item>
+    <item>
+      <title>PyroDash: Cost-Efficient Token-Level Small-Large Language Model Collaborative Inference</title>
+      <link>https://arxiv.org/abs/2607.20327v1</link>
+      <guid isPermaLink="false">arxiv-2607.20327v1</guid>
+      <pubDate>2026-07-22</pubDate>
+      <description>PyroDash introduit une méthodologie de collaboration entre modèles SLM et LLM au niveau des tokens, qui permet d'optimiser la fiabilité et l'efficacité financière. Les résultats montrent que PyroDash peut atteindre des taux d'exactitude supérieurs à ceux des modèles LLM standards tout en réduisant significativement les coûts de traitement.</description>
+    </item>
+    <item>
+      <title>PoTRE: Test-Time Reasoning inspired by Cognitive Heterogeneity</title>
+      <link>https://arxiv.org/abs/2607.20268v1</link>
+      <guid isPermaLink="false">arxiv-2607.20268v1</guid>
+      <pubDate>2026-07-22</pubDate>
+      <description>PoTRE introduit une approche hétérogène qui découpe l'inference en quatre agents distincts pour résoudre des problèmes complexes nécessitant longue-horizon et révision itérative. Evalué sur trois benchmarks frontières, PoTRE affiche une performance d'exactitude de 49,92% sur le benchmark HLE, battant ainsi la meilleure note officielle précédemment établie.</description>
+    </item>
+    <item>
+      <title>Understanding the Impact of Linguistic Realization Choices on LLM Stance with Causal Tracing</title>
+      <link>https://arxiv.org/abs/2607.20115v1</link>
+      <guid isPermaLink="false">arxiv-2607.20115v1</guid>
+      <pubDate>2026-07-22</pubDate>
+      <description>Ce papier étudie comment les choix de construction linguistique influencent l'évaluation de sens des grandes langues modèles en changeant systématiquement les décisions du modèle. Les résultats montrent que le décodage à la fois moyen et final joue un rôle crucial dans cette transformation, tandis qu'il n'est pas clair où ces changements précis se produisent au sein de l'architecture du modèle.</description>
+    </item>
+    <item>
+      <title>Optimizing Regret</title>
+      <link>https://arxiv.org/abs/2607.18866v1</link>
+      <guid isPermaLink="false">arxiv-2607.18866v1</guid>
+      <pubDate>2026-07-21</pubDate>
+      <description>Cette recherche développe une théorie complète de la fonctionnelle du regret de covariance, reliant le regret attendu à la covariancée entre coûts et décisions. Elle explore également les stratégies optimales pour linéaires et sous contraintes, ainsi que l'application aux stratégies d'allocation de portefeuille et aux stratégies basées sur des LLMs.</description>
+    </item>
+    <item>
+      <title>Measuring AI innovation with trademark data</title>
+      <link>https://arxiv.org/abs/2607.18795v1</link>
+      <guid isPermaLink="false">arxiv-2607.18795v1</guid>
+      <pubDate>2026-07-21</pubDate>
+      <description>Les chercheurs, gestionnaires et décideurs politiques examinent différentes approches et sources de données pour cartographier la progression et l'épanouissement de l'Intelligence Artificielle. Cette note illustre les opportunités que constituent les marques commerciales en ce qui concerne l'Intelligence Artificielle, affirmant qu'elles peuvent compléter les brevets d'IA pour recueillir des aspects variés de l'innovation en matière d'IA. Les données de marque commerciale offrent un outil fiable et disponible à un niveau mondial, couvrant tous les secteurs économiques, ce qui aide à explorer les questions émergentes liées au développement et à la diffusion de l'IA.</description>
+    </item>
+    <item>
+      <title>The Price of Quietness: How a Pandemic Affects City Dwellers' Response to Road Traffic Noise</title>
+      <link>https://arxiv.org/abs/2607.18677v1</link>
+      <guid isPermaLink="false">arxiv-2607.18677v1</guid>
+      <pubDate>2026-07-21</pubDate>
+      <description>Dans un contexte d'épidémie de COVID-19 à Singapour, les loyers de locations ont diminué significativement après l'arrivée du virus, avec une baisse supplémentaire pour le deuxième année consécutive. Une analyse textuelle des annonces immobilières a également montré que la préférence des locataires pour un environnement silencieux s'est accrue notament en 2020.</description>
+    </item>
+    <item>
+      <title>Econometrics with Pre-Trained Embeddings for Unstructured Data</title>
+      <link>https://arxiv.org/abs/2607.17378v1</link>
+      <guid isPermaLink="false">arxiv-2607.17378v1</guid>
+      <pubDate>2026-07-19</pubDate>
+      <description>Ce papier propose des conditions suffisantes pour surmonter les difficultés posées par l'utilisation de modèles pré-entraînés pour extraire des embeddings à partir de données non structurées, et détermine la vitesse de convergence des modèles de machine learning avec ces embeddings. Il illustre théoriquement ses résultats en application double machine-learning pour estimer les paramètres d'intérêt.</description>
+    </item>
+    <item>
       <title>PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization</title>
       <link>https://arxiv.org/abs/2607.16184v1</link>
       <guid isPermaLink="false">arxiv-2607.16184v1</guid>
@@ -158,62 +214,6 @@
       <guid isPermaLink="false">arxiv-2607.09402v1</guid>
       <pubDate>2026-07-10</pubDate>
       <description>Dans ce domaine, la collecte de données nécessite des campagnes de relevés massives qui sont complexes, coûteuses et difficiles à mettre sur une grande échelle. Cette étude présente une analyse empirique détaillée du taux de convergence des courbes d'apprentissage en classification inertielles, mettant ainsi en avant un formulaire factice pour estimer la performance par rapport au nombre total de données.</description>
-    </item>
-    <item>
-      <title>DKCD: Domain Knowledge-Enhanced Causal Discovery from Unstructured Data</title>
-      <link>https://arxiv.org/abs/2607.09348v1</link>
-      <guid isPermaLink="false">arxiv-2607.09348v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>Dans les domaines d'expertise élevés comme la santé, la finance et l'éducation, le détection de causalités à partir des données non structurées reste un défi sans être largement exploité. La méthodologie introduite ici, DKCD, comporte trois composants interconnectés pour surmonter les défis majeurs de cette tâche : la recherche de connaissances spécifiques au domaine et la réflexion causal guidée par ces connaissances, qui permettent d'améliorer l'identification des facteurs cachés essentiels et la précision des annotations, contribuant ainsi à une meilleure construction des graphes causaux.</description>
-    </item>
-    <item>
-      <title>Automatic Thematic Indexing of Large Literary Corpora: A Machine Learning Approach to Voltaire's Complete Works</title>
-      <link>https://arxiv.org/abs/2607.09316v1</link>
-      <guid isPermaLink="false">arxiv-2607.09316v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>Ce travail examine l'application de la machine learning à l'indexation thématique automatique, utilisant deux sous-corpus importants du Complexe des Oeuvres de Voltaire comme cas d'étude : l’Essai sur les mœurs et l'esprit des nations et les Questions sur l'Encyclopédie. Les meilleures performances sont obtenues avec un modèle Mistral quantifié à 4 bits, réalisant des scores F1 jusqu'à 0,67.</description>
-    </item>
-    <item>
-      <title>Sharing economy in the era of full automation: Evidence from autonomous vehicle on-demand mobility services</title>
-      <link>https://arxiv.org/abs/2607.08610v1</link>
-      <guid isPermaLink="false">arxiv-2607.08610v1</guid>
-      <pubDate>2026-07-09</pubDate>
-      <description>[Extrait original, traduction non disponible] The digital age has facilitated the sharing of underutilized assets. This paper focuses on privately owned autonomous vehicles (AVs), a unique class of robots that can move independently and provide transportation services.</description>
-    </item>
-    <item>
-      <title>Resample or Reroute? Budget-Aware Test-Time Model Selection for Large Language Models</title>
-      <link>https://arxiv.org/abs/2607.08665v1</link>
-      <guid isPermaLink="false">arxiv-2607.08665v1</guid>
-      <pubDate>2026-07-09</pubDate>
-      <description>[Extrait original, traduction non disponible] Routing among large language models (LLMs) trades response quality against serving cost, motivated by the reported gap between deployed routers and a per-instance oracle.</description>
-    </item>
-    <item>
-      <title>WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search</title>
-      <link>https://arxiv.org/abs/2607.08662v1</link>
-      <guid isPermaLink="false">arxiv-2607.08662v1</guid>
-      <pubDate>2026-07-09</pubDate>
-      <description>[Extrait original, traduction non disponible] Large language model (LLM)-based web search agents are transforming information seeking from simple factoid question answering into complex, deep-and-wide search and research-oriented tasks.</description>
-    </item>
-    <item>
-      <title>Predicting Male Fertility Using Machine Learning: A Semen Parameters Based Analysis with the VISEM Dataset</title>
-      <link>https://arxiv.org/abs/2607.08429v1</link>
-      <guid isPermaLink="false">arxiv-2607.08429v1</guid>
-      <pubDate>2026-07-09</pubDate>
-      <description>[Extrait original, traduction non disponible] Male infertility is a significant yet often underdiagnosed aspect of reproductive health, with semen analysis serving as the cornerstone of clinical evaluation.</description>
-    </item>
-    <item>
-      <title>Token-Flow Firewall: Semantic Runtime Auditing for Persistent AI Agents</title>
-      <link>https://arxiv.org/abs/2607.08395v1</link>
-      <guid isPermaLink="false">arxiv-2607.08395v1</guid>
-      <pubDate>2026-07-09</pubDate>
-      <description>[Extrait original, traduction non disponible] Persistent AI agents extend large language models (LLMs) beyond single-turn interaction into long-lived software systems.</description>
-    </item>
-    <item>
-      <title>AI Adoption in S&amp;P 500 Firms</title>
-      <link>https://arxiv.org/abs/2607.08920v1</link>
-      <guid isPermaLink="false">arxiv-2607.08920v1</guid>
-      <pubDate>2026-07-09</pubDate>
-      <description>Dans les entreprises S&amp;P 500 étudiées entre 2016 et 2025, plus de la moitié ont intégré AI profondément dans leurs processus, avec une augmentation rapide au sein du secteur technologique qui absorbe à lui seul la moitié des adoptions profondes. Les profits des entreprises connaissent une courbe J lorsqu'il s'agit d'intégrer l'AI de manière profonde, sans cependant démontrer de différences significatives en termes de dépenses en capitales ou de productivité.</description>
     </item>
   </channel>
 </rss>

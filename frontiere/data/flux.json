@@ -1,5 +1,153 @@
 [
   {
+    "id": "arxiv-2607.20365v1",
+    "titre": "Licensing and Innovation Regimes in Pharmaceutical R&D",
+    "url": "https://arxiv.org/abs/2607.20365v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-22",
+    "resume_fr": "Nous étudions comment la licence affecte l'allocation de l'innovation dans les R&D pharmaceutiques. Notre modèle différencie entre innovations incrémentales et novatrices, indiquant des dynamiques d'équilibre différentes dans le marché des technologies selon leur qualité. Les résultats suggèrent que la license maintient une sélection positive et un égalisation des rendements concurrentiels pour les projets incrémentaux, tandis que les innovations novatrices peuvent présenter des fractures de friction informatives distinctes.",
+    "angle_eco": "Ce papier explique comment le système de licence affecte la répartition des investissements en recherche et développement dans les médicaments, mettant l'accent sur les différences entre innovations plus anciennes et nouvelles.",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "donnees"
+    ],
+    "score": 4,
+    "auteurs": "Michele Liberatore, Massimo Riccaboni",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.20327v1",
+    "titre": "PyroDash: Cost-Efficient Token-Level Small-Large Language Model Collaborative Inference",
+    "url": "https://arxiv.org/abs/2607.20327v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-22",
+    "resume_fr": "PyroDash introduit une méthodologie de collaboration entre modèles SLM et LLM au niveau des tokens, qui permet d'optimiser la fiabilité et l'efficacité financière. Les résultats montrent que PyroDash peut atteindre des taux d'exactitude supérieurs à ceux des modèles LLM standards tout en réduisant significativement les coûts de traitement.",
+    "angle_eco": "Ce papier illustre comment un modèle de langage petit à l'échelle des tokens peut collaborer efficacement avec un grand modèle pour réduire les coûts tout en maintenant une fiabilité raisonnable sur des tâches complexes.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 4,
+    "auteurs": "Niqi Lyu, Pengtao Shi, Wei Qiu, Jianlin Zhong, Sicong Xia, Jianyao Ma, Yicheng Ding",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.20268v1",
+    "titre": "PoTRE: Test-Time Reasoning inspired by Cognitive Heterogeneity",
+    "url": "https://arxiv.org/abs/2607.20268v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-22",
+    "resume_fr": "PoTRE introduit une approche hétérogène qui découpe l'inference en quatre agents distincts pour résoudre des problèmes complexes nécessitant longue-horizon et révision itérative. Evalué sur trois benchmarks frontières, PoTRE affiche une performance d'exactitude de 49,92% sur le benchmark HLE, battant ainsi la meilleure note officielle précédemment établie.",
+    "angle_eco": "Ce papier compte pour un économiste en tant qu'il explore des concepts de raisonnement à long terme et d'auto-correction dans les modèles de langage, ainsi que leur application à des benchmarks éducatifs complexes.",
+    "themes": [
+      "llm",
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 2,
+    "auteurs": "Anmol Kankariya, Sercan Ö. Arık",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.20115v1",
+    "titre": "Understanding the Impact of Linguistic Realization Choices on LLM Stance with Causal Tracing",
+    "url": "https://arxiv.org/abs/2607.20115v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-22",
+    "resume_fr": "Ce papier étudie comment les choix de construction linguistique influencent l'évaluation de sens des grandes langues modèles en changeant systématiquement les décisions du modèle. Les résultats montrent que le décodage à la fois moyen et final joue un rôle crucial dans cette transformation, tandis qu'il n'est pas clair où ces changements précis se produisent au sein de l'architecture du modèle.",
+    "angle_eco": "Ce papier montre comment les choix linguistiques dans l'écriture peuvent systématiquement influencer les décisions des modèles de langage et où ces changements peuvent être localisés au sein du modèle.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "donnees"
+    ],
+    "score": 2,
+    "auteurs": "Langchen Huang, Sebastian Padó, Franziska Weeber",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.18866v1",
+    "titre": "Optimizing Regret",
+    "url": "https://arxiv.org/abs/2607.18866v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-21",
+    "resume_fr": "Cette recherche développe une théorie complète de la fonctionnelle du regret de covariance, reliant le regret attendu à la covariancée entre coûts et décisions. Elle explore également les stratégies optimales pour linéaires et sous contraintes, ainsi que l'application aux stratégies d'allocation de portefeuille et aux stratégies basées sur des LLMs.",
+    "angle_eco": "Ce papier compte pour un économiste car il développe une théorie complète de la fonction de regret de covariance en utilisant l'identité qui établit que le regret attendu est équivalent à la covariance entre les coûts et les décisions.",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 2,
+    "auteurs": "Irene Aldridge",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.18795v1",
+    "titre": "Measuring AI innovation with trademark data",
+    "url": "https://arxiv.org/abs/2607.18795v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-21",
+    "resume_fr": "Les chercheurs, gestionnaires et décideurs politiques examinent différentes approches et sources de données pour cartographier la progression et l'épanouissement de l'Intelligence Artificielle. Cette note illustre les opportunités que constituent les marques commerciales en ce qui concerne l'Intelligence Artificielle, affirmant qu'elles peuvent compléter les brevets d'IA pour recueillir des aspects variés de l'innovation en matière d'IA. Les données de marque commerciale offrent un outil fiable et disponible à un niveau mondial, couvrant tous les secteurs économiques, ce qui aide à explorer les questions émergentes liées au développement et à la diffusion de l'IA.",
+    "angle_eco": "Ce papier compte pour un économiste car il explore de nouvelles opportunités en utilisant les données des marques déposées pour comprendre l'innovation dans le domaine de l'intelligence artificielle.",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 3,
+    "auteurs": "C. Castaldi, F. Castellacci, A. Fronzetti Colladon, L. Segneri, F. Venturini",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.18677v1",
+    "titre": "The Price of Quietness: How a Pandemic Affects City Dwellers' Response to Road Traffic Noise",
+    "url": "https://arxiv.org/abs/2607.18677v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-21",
+    "resume_fr": "Dans un contexte d'épidémie de COVID-19 à Singapour, les loyers de locations ont diminué significativement après l'arrivée du virus, avec une baisse supplémentaire pour le deuxième année consécutive. Une analyse textuelle des annonces immobilières a également montré que la préférence des locataires pour un environnement silencieux s'est accrue notament en 2020.",
+    "angle_eco": "Ce papier compte pour un économiste en explorant comment la pandémie de COVID-19 a modifié les citadins leur réceptivité aux bruits du trafic routier, quantifiant ainsi leur volonté d'apprécier le calme dans l'environnement urbain.",
+    "themes": [
+      "inference-causale",
+      "politique-publique"
+    ],
+    "score": 2,
+    "auteurs": "Yao-pei Wang, Yong Tu, Yi Fan",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.17378v1",
+    "titre": "Econometrics with Pre-Trained Embeddings for Unstructured Data",
+    "url": "https://arxiv.org/abs/2607.17378v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-19",
+    "resume_fr": "Ce papier propose des conditions suffisantes pour surmonter les difficultés posées par l'utilisation de modèles pré-entraînés pour extraire des embeddings à partir de données non structurées, et détermine la vitesse de convergence des modèles de machine learning avec ces embeddings. Il illustre théoriquement ses résultats en application double machine-learning pour estimer les paramètres d'intérêt.",
+    "angle_eco": "Ce papier explique comment les modèles de machine-learning pré-entraînés peuvent être utilisés théoriquement et pratiquement en économie pour analyser des données non structurées.",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 4,
+    "auteurs": "Yuya Shimizu",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
     "id": "arxiv-2607.16184v1",
     "titre": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
     "url": "https://arxiv.org/abs/2607.16184v1",
