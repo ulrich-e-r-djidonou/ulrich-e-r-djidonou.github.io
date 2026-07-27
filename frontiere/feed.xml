@@ -6,6 +6,76 @@
     <description>Veille IA, economie et machine learning, curatee par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference</title>
+      <link>https://arxiv.org/abs/2607.22511v1</link>
+      <guid isPermaLink="false">arxiv-2607.22511v1</guid>
+      <pubDate>2026-07-24</pubDate>
+      <description>CausalForge est une nouvelle approche pour automatiser la recherche théorique dans l'inferieur causale, basée sur l'assistant Lean de preuves. Elle combine Causalean, un ensemble de déclarations mathématiquement vérifiées par machine, avec CausalSmith, un pipeline auto-optimisé capable de sélectionner des sujets de recherche, d'énoncer des résultats formels, de construire des preuves et de présenter ces artefacts pour validation humaine.</description>
+    </item>
+    <item>
+      <title>TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI</title>
+      <link>https://arxiv.org/abs/2607.22465v1</link>
+      <guid isPermaLink="false">arxiv-2607.22465v1</guid>
+      <pubDate>2026-07-24</pubDate>
+      <description>TRACE-Router propose une approche de routage basée sur la tâche qui aligne les décisions de routage avec le unité d'encadrement, améliorant ainsi la correspondance entre l'évaluation des modèles et leurs décisions. Cette méthode permet à TRACE-Router d'apprendre des politiques de routage adaptatives sans nécessiter une estimation explicite du niveau de complexité des tâches.</description>
+    </item>
+    <item>
+      <title>Efficient Recommendations via Graph Coarsening and Label Propagation</title>
+      <link>https://arxiv.org/abs/2607.22287v1</link>
+      <guid isPermaLink="false">arxiv-2607.22287v1</guid>
+      <pubDate>2026-07-24</pubDate>
+      <description>Dans le domaine de la télécommunications, cette étude propose une méthodologie multifroteur combinant l'agrandissement cohaussé et les propagnations de labels pour résoudre efficacement les défis d'échelle des graphes dans un environnement industriel. Les résultats suggèrent une amélioration significative du score NDCG@5, atteignant jusqu'à +24% par rapport au benchmark basé sur le graphe complet lors de la première phase d'application du Label Propagation Algorithm (LPA).</description>
+    </item>
+    <item>
+      <title>Why Large Language Models and Humans Converge and Diverge in Evaluating Creativity</title>
+      <link>https://arxiv.org/abs/2607.22218v1</link>
+      <guid isPermaLink="false">arxiv-2607.22218v1</guid>
+      <pubDate>2026-07-24</pubDate>
+      <description>Les grandes langues de modèle (LLM) ont tendance à se baser sur un sous-ensemble plus restreint des critères d'évaluation de la créativité humaine, avec une convergence notoire dans le domaine du novelty et une divergence nette dans celui de la contextualisation.</description>
+    </item>
+    <item>
+      <title>Trajectory-Regularized Stochastic Optimal Control via KL Divergence</title>
+      <link>https://arxiv.org/abs/2607.22201v1</link>
+      <guid isPermaLink="false">arxiv-2607.22201v1</guid>
+      <pubDate>2026-07-24</pubDate>
+      <description>Nous introduisons le contrôle optimal stochastique régularisé par trajectoire (TRSOC), qui enrichit le contrôle optimal stochastique standard (SOC) avec une divergence de Kullback-Leibler entre les distributions des trajectoires contrôlées et réfèrentielles. Dans un cadre linéaire-quadratique, la formulation permet une solution explicite avec un coût de contrôle augmenté.</description>
+    </item>
+    <item>
+      <title>DBA-Bench: A Production-Fidelity Benchmark for LLM-Based Database Operations Agents</title>
+      <link>https://arxiv.org/abs/2607.22165v1</link>
+      <guid isPermaLink="false">arxiv-2607.22165v1</guid>
+      <pubDate>2026-07-24</pubDate>
+      <description>Les agents basés sur l'IA dans les bases de données montrent des promesses, mais diverses lacunes dans les évaluations testent et les environnements de travail rendent difficile leur comparaison. Le benchmark DBA-Bench propose une approche résolue en mettant l’accent sur la fiabilité de production, l'évaluation basée sur les résultats et la réplicabilité contrôlée des scénarios.</description>
+    </item>
+    <item>
+      <title>Are cryptocurrencies real financial bubbles? Evidence from quantitative analyses</title>
+      <link>https://arxiv.org/abs/2607.21826v1</link>
+      <guid isPermaLink="false">arxiv-2607.21826v1</guid>
+      <pubDate>2026-07-23</pubDate>
+      <description>La détection de bulles a montré que Bitcoin montre des signes typiques d'un phase de bulle à mi-décembre 2017 et au premier semestre de janvier 2018, avant les crashes majeurs observés après. De même, l'évolution du prix de l'Ethereum révèle des indices de bulles en juin 2017 et une faible indication autour de début janvier 2018, anticipant le crash observé sur la même date.</description>
+    </item>
+    <item>
+      <title>The Evolution of Digital Search: From Blue Links to Delegated Decision-Making</title>
+      <link>https://arxiv.org/abs/2607.21459v1</link>
+      <guid isPermaLink="false">arxiv-2607.21459v1</guid>
+      <pubDate>2026-07-23</pubDate>
+      <description>La recherche sur l'évolution de la recherche numérique suggère que le modèle traditionnel basé sur les mots-clés est progressivement remplacé par un système d'agents qui prennent des décisions pour leurs utilisateurs, engendrant une réorganisation du parcours utilisateur et des enjeux nouveaux dans les domaines de l'équité, la concurrence et le bien-être.</description>
+    </item>
+    <item>
+      <title>pAI-Econ-claude: A Gated Human-in-the-Loop Multi-Agent Architecture for AI-Assisted Economic Theory Development</title>
+      <link>https://arxiv.org/abs/2607.21268v1</link>
+      <guid isPermaLink="false">arxiv-2607.21268v1</guid>
+      <pubDate>2026-07-23</pubDate>
+      <description>Dans de nombreux travaux de recherche en sciences sociales, comme l'économie, les agents basés sur LLM produisent des sorties pour lesquelles il n'existe pas de signal de correctivité machine-readable et complet. Cette absence crée une problématique distinctive de fiabilité dans les systèmes multi-agents : comment organiser le processus de génération, de critique, de coordination et de jugement humain lorsque aucun composant ne peut certifier la résultat final ?</description>
+    </item>
+    <item>
+      <title>Execution and Evaluation: A New Occupational Measure and Long-Run Employment Gradients</title>
+      <link>https://arxiv.org/abs/2607.20807v1</link>
+      <guid isPermaLink="false">arxiv-2607.20807v1</guid>
+      <pubDate>2026-07-23</pubDate>
+      <description>La mesure d'exécution, basée sur l'évaluation de $19{,}265$ sous-étiquettes O*NET, est stable et distincte des capacités d'IA et de l'intensité des tâches répétitives. L'évolution de la progression d'emploi dans les métiers chargés d'exécution montre une tendance séculaire plutôt qu'un événement à l'époque de l'IA.</description>
+    </item>
+    <item>
       <title>Licensing and Innovation Regimes in Pharmaceutical R&amp;D</title>
       <link>https://arxiv.org/abs/2607.20365v1</link>
       <guid isPermaLink="false">arxiv-2607.20365v1</guid>
@@ -32,6 +102,13 @@
       <guid isPermaLink="false">arxiv-2607.20115v1</guid>
       <pubDate>2026-07-22</pubDate>
       <description>Ce papier étudie comment les choix de construction linguistique influencent l'évaluation de sens des grandes langues modèles en changeant systématiquement les décisions du modèle. Les résultats montrent que le décodage à la fois moyen et final joue un rôle crucial dans cette transformation, tandis qu'il n'est pas clair où ces changements précis se produisent au sein de l'architecture du modèle.</description>
+    </item>
+    <item>
+      <title>The Human-AI Substitution Principle: When will you be replaced by AI in your organization?</title>
+      <link>https://arxiv.org/abs/2607.20781v1</link>
+      <guid isPermaLink="false">arxiv-2607.20781v1</guid>
+      <pubDate>2026-07-22</pubDate>
+      <description>Le modèle HAT formalise la disparité économique entre l'apprentissage de compétences par les humains et le développement progressif des capacités d'IA. Il permet de déterminer quand, où, pourquoi et sous quelles conditions structurantes la substitution humain-AI peut se produire.</description>
     </item>
     <item>
       <title>Optimizing Regret</title>
@@ -137,83 +214,6 @@
       <guid isPermaLink="false">arxiv-2607.14418v1</guid>
       <pubDate>2026-07-15</pubDate>
       <description>Ad-load design est étudié comme une décision clé du côté de la supply dans les marchés d'annonces sponsorisées. Une expérience expérimentale a montré que l'augmentation de l'ad-load peut améliorer le revenu de 43% en moyenne, mais il entraîne également une réduction des conversions totales de 5% et la diminution de l'engagement quotidien de 2.2%.</description>
-    </item>
-    <item>
-      <title>Bivariate Isotonic Regression by Dynamic Programming</title>
-      <link>https://arxiv.org/abs/2607.12629v1</link>
-      <guid isPermaLink="false">arxiv-2607.12629v1</guid>
-      <pubDate>2026-07-14</pubDate>
-      <description>Ce papier étend le cadre de programmation dynamique introduit par Rote (2019) pour résoudre le problème isotonique bivarié, utilisant une procédure de traînée anti-diagonale. L'outil proposé est appliqué au jeu de données bien connu des baseballs qui décrit l'association entre les salaires et une collection d'propriétés du joueur, dont le nombre de points à battre et les hits.</description>
-    </item>
-    <item>
-      <title>Forecasting Inflation with Microdata: An Adaptive Machine Learning Approach</title>
-      <link>https://arxiv.org/abs/2607.12345v1</link>
-      <guid isPermaLink="false">arxiv-2607.12345v1</guid>
-      <pubDate>2026-07-14</pubDate>
-      <description>La microéconomie présente des avantages pour prévoir l'inflation totale dans un environnement non-stationnaire, ce qui est détecté par une méthode appelée scan test. La combinaison de cette micro-prédiction avec d'autres modèles suggère qu'elle améliore les prédictons à partir de 2020.</description>
-    </item>
-    <item>
-      <title>Perturbed utility Markovian traffic equilibrium: theory and computation</title>
-      <link>https://arxiv.org/abs/2607.09568v1</link>
-      <guid isPermaLink="false">arxiv-2607.09568v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>Ce papier développe une approche de Nash équilibre perturbé (PUME), conçue pour maintenir la flexibilité et l'efficacité computable des modèles basés sur les liens Markoviens, tout en s'étendant à différents scénarios. La PUME est basée sur un modèle de choix markovien perturbé (PUMCM), qui permet non seulement aux probabilités de choix internes mais aussi aux probabilités externes d'être comprises, sans restriction préalable des options de choix.</description>
-    </item>
-    <item>
-      <title>Deep Learning for Dynamic Programming with Recursive Utility Using First-order Conditions</title>
-      <link>https://arxiv.org/abs/2607.09461v1</link>
-      <guid isPermaLink="false">arxiv-2607.09461v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>Cette étude propose une méthode appelée CEFOL, un algorithme d'apprentissage profond pour résoudre des problèmes de programmation dynamique discrète avec utilité récursive. CEFOL utilise deux réseaux neuronaux différents : l'un pour représenter l'équivalent certain et l'autre pour apprendre les fonctions valeurs, les fonctions politiques et les multiplicateurs de Lagrange en utilisant des conditions d'optimisation spécifiques du modèle.</description>
-    </item>
-    <item>
-      <title>Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection</title>
-      <link>https://arxiv.org/abs/2607.09641v1</link>
-      <guid isPermaLink="false">arxiv-2607.09641v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>Le modèle Semantic Pareto-DQN surmonte l'imbalance des classes dans les anomalies financières sans rééchantillonnage des données, offrant une représentation de l'état robuste et invariant à la taille des données. Il optimise un vecteur de récompense qui sépare clairement efficacité financière, friction opérationnelle et découverte sémantique, permettant ainsi un meilleur contrôle des coûts d'omission versus faux positifs.</description>
-    </item>
-    <item>
-      <title>LLM for EDA in Front-End Design: Challenges and Opportunities</title>
-      <link>https://arxiv.org/abs/2607.09616v1</link>
-      <guid isPermaLink="false">arxiv-2607.09616v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>Dans le contexte croissante de la complexité des composants électroniques et des délais de commercialisation plus importants, la conception front-end devient un frein majeur dans la phase de développement. Les Modèles de Langage Large (LLM), en particulier lorsqu'ils sont utilisés comme interfaces d'intelligence artificielle agentic, telles que OpenClaw, montrent une grande promesse pour transformer les méthodes d'EDA, passant de l'aide locale à des exécutions autonomes.</description>
-    </item>
-    <item>
-      <title>Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation</title>
-      <link>https://arxiv.org/abs/2607.09600v1</link>
-      <guid isPermaLink="false">arxiv-2607.09600v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>Cette recherche propose une approche innovante nommée Agora pour améliorer les capacités de raisonnement des agents LLM en introduisant un mécanisme d'enchères inconditionnellement compatible. En traitant les étapes de raisonnement comme des biens pouvant être achetés, Agora permet aux agents de négocier sur la base de leur compétence rectifiée, garantissant que la logique critique est toujours attribuée au modèle le plus apte plutôt qu'au modèle le plus confiant. Les tests ont montré que cette méthode améliore significativement les résultats par rapport à des approches traditionnelles basées sur un seul modèle, une simple routage ou un cascadeur, tout en permettant de contrôler la relation coût-performance via un paramètre d'enchères unique.</description>
-    </item>
-    <item>
-      <title>TSAI-MetaFraud: A Benchmark Dataset for Financial Fraud Transaction and Behavioral Risk Detection in Metaverse Ecosystems</title>
-      <link>https://arxiv.org/abs/2607.09528v1</link>
-      <guid isPermaLink="false">arxiv-2607.09528v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>La présentation de TSAI-MetaFraud apporte une solution pour la détection du fraude dans les économies virtuelles de l'univers métavers, grâce à un ensemble de données multimodale intégrant des informations comportementales, transactionnelles et graphiques. Les tâches de benchmark incluses couvrent différentes facettes de la détection de fraude, allant de la détection de fraude dans les transactions jusqu'à l'apprentissage supervisé faible et à la classification d'indicateurs node à travers des modèles machine et réseaux neuronaux graphiques.</description>
-    </item>
-    <item>
-      <title>All Explanations are Wrong, But Many Are Useful: Exploring the Rashomon Explanation Set with Large Language Models</title>
-      <link>https://arxiv.org/abs/2607.09502v1</link>
-      <guid isPermaLink="false">arxiv-2607.09502v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>Cette recherche propose une approche novatrice appelée Rashomon Explanation, qui permet de générer un ensemble complet d'explications fidèles plutôt qu'une seule explication, améliorant ainsi l'exactitude des modèles tout en préservant leur précision. Cette méthode a démontré des performances supérieures à celles des techniques de base dans divers domaines industriels et de santé sur les indicateurs d'accuracy et de qualité des explications.</description>
-    </item>
-    <item>
-      <title>Test-Time Scaling for Small VLMs on Multilingual Visual MCQ</title>
-      <link>https://arxiv.org/abs/2607.09438v1</link>
-      <guid isPermaLink="false">arxiv-2607.09438v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>La mise à l'échelle temporelle au cours de la phase de tests améliore les performances raisonnantes dans les grands modèles linguistiques, mais son transfert vers des petits modèles vision-langue ouverts reste incertain. Les résultats montrent que le format préprompt est crucial pour améliorer la parseabilité, permettant aux chaînes de raisonner correctement sans commettre d'aucune réponse finale. Une augmentation du budget de décodage réduit encore plus ces performances en augmentant le nombre de tokens alloués à chaque chaîne.</description>
-    </item>
-    <item>
-      <title>Data-Efficient Deep Learning: Empirical Guidelines for Training Set Size Estimation in Inertial Sensor Classification</title>
-      <link>https://arxiv.org/abs/2607.09402v1</link>
-      <guid isPermaLink="false">arxiv-2607.09402v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>Dans ce domaine, la collecte de données nécessite des campagnes de relevés massives qui sont complexes, coûteuses et difficiles à mettre sur une grande échelle. Cette étude présente une analyse empirique détaillée du taux de convergence des courbes d'apprentissage en classification inertielles, mettant ainsi en avant un formulaire factice pour estimer la performance par rapport au nombre total de données.</description>
     </item>
   </channel>
 </rss>

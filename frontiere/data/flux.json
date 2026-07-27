@@ -1,5 +1,187 @@
 [
   {
+    "id": "arxiv-2607.22511v1",
+    "titre": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
+    "url": "https://arxiv.org/abs/2607.22511v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-24",
+    "resume_fr": "CausalForge est une nouvelle approche pour automatiser la recherche théorique dans l'inferieur causale, basée sur l'assistant Lean de preuves. Elle combine Causalean, un ensemble de déclarations mathématiquement vérifiées par machine, avec CausalSmith, un pipeline auto-optimisé capable de sélectionner des sujets de recherche, d'énoncer des résultats formels, de construire des preuves et de présenter ces artefacts pour validation humaine.",
+    "angle_eco": "Ce papier compte pour un économiste car il présente une approche innovante de la recherche théorique automatisée en causalité, basée sur le Lean et couverte par des preuves machine-checkables, ce qui permet d'assurer la fiabilité des résultats scientifiques.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "auteurs": "Jiyuan Tan, Vasilis Syrgkanis",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.22465v1",
+    "titre": "TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI",
+    "url": "https://arxiv.org/abs/2607.22465v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-24",
+    "resume_fr": "TRACE-Router propose une approche de routage basée sur la tâche qui aligne les décisions de routage avec le unité d'encadrement, améliorant ainsi la correspondance entre l'évaluation des modèles et leurs décisions. Cette méthode permet à TRACE-Router d'apprendre des politiques de routage adaptatives sans nécessiter une estimation explicite du niveau de complexité des tâches.",
+    "angle_eco": "Ce papier compte pour un economiste car il propose une approche innovante de gestion des ressources en AI, mettant l'accent sur la cohérence entre les décisions de routage et le feedback à long terme.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 4,
+    "auteurs": "Ritik Raj, Souvik Kundu, Sarbartha Banerjee, Dheemanth Joshi, Ishita Vohra, Tushar Krishna",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.22287v1",
+    "titre": "Efficient Recommendations via Graph Coarsening and Label Propagation",
+    "url": "https://arxiv.org/abs/2607.22287v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-24",
+    "resume_fr": "Dans le domaine de la télécommunications, cette étude propose une méthodologie multifroteur combinant l'agrandissement cohaussé et les propagnations de labels pour résoudre efficacement les défis d'échelle des graphes dans un environnement industriel. Les résultats suggèrent une amélioration significative du score NDCG@5, atteignant jusqu'à +24% par rapport au benchmark basé sur le graphe complet lors de la première phase d'application du Label Propagation Algorithm (LPA).",
+    "angle_eco": "Ce papier compte pour un économiste en son approche de résolution des grands graphes pour les recommandations basées sur le réseau, tout en minimisant les coûts informatiques.",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "auteurs": "Alessandro Sbandi, Federico Siciliano, Fabrizio Silvestri",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.22218v1",
+    "titre": "Why Large Language Models and Humans Converge and Diverge in Evaluating Creativity",
+    "url": "https://arxiv.org/abs/2607.22218v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-24",
+    "resume_fr": "Les grandes langues de modèle (LLM) ont tendance à se baser sur un sous-ensemble plus restreint des critères d'évaluation de la créativité humaine, avec une convergence notoire dans le domaine du novelty et une divergence nette dans celui de la contextualisation.",
+    "angle_eco": "Ce papier compte pour un economiste car il analyse comment les modèles de langage grand modèle convergent ou divergent avec les évaluations humaines en matière de créativité.",
+    "themes": [
+      "llm"
+    ],
+    "score": 2,
+    "auteurs": "Pengzhao Lyu, Yeun Joon Kim, Hanlin Xiao, Yingyue Luna Luan",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.22201v1",
+    "titre": "Trajectory-Regularized Stochastic Optimal Control via KL Divergence",
+    "url": "https://arxiv.org/abs/2607.22201v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-24",
+    "resume_fr": "Nous introduisons le contrôle optimal stochastique régularisé par trajectoire (TRSOC), qui enrichit le contrôle optimal stochastique standard (SOC) avec une divergence de Kullback-Leibler entre les distributions des trajectoires contrôlées et réfèrentielles. Dans un cadre linéaire-quadratique, la formulation permet une solution explicite avec un coût de contrôle augmenté.",
+    "angle_eco": "Ce papier compte pour un économiste en expliquant comment il modélise et optimise des trajectoires à partir d'une divergence de Kullback-Leibler entre une trajectoire contrôlée et une référence, tout en préservant la structure dynamique programmation.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 2,
+    "auteurs": "Mintae Kim, Koushil Sreenath",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.22165v1",
+    "titre": "DBA-Bench: A Production-Fidelity Benchmark for LLM-Based Database Operations Agents",
+    "url": "https://arxiv.org/abs/2607.22165v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-24",
+    "resume_fr": "Les agents basés sur l'IA dans les bases de données montrent des promesses, mais diverses lacunes dans les évaluations testent et les environnements de travail rendent difficile leur comparaison. Le benchmark DBA-Bench propose une approche résolue en mettant l’accent sur la fiabilité de production, l'évaluation basée sur les résultats et la réplicabilité contrôlée des scénarios.",
+    "angle_eco": "Ce papier compte pour un économiste car il présente une échelle de test détaillée pour comparer les agents de base de données basés sur la LLM, en mettant l'accent sur la fiabilité de production.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "politique-publique"
+    ],
+    "score": 4,
+    "auteurs": "Junming Chen, Junyang Jiang, Xu Chen, Zibo Liang, Kai Zheng",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.21826v1",
+    "titre": "Are cryptocurrencies real financial bubbles? Evidence from quantitative analyses",
+    "url": "https://arxiv.org/abs/2607.21826v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-23",
+    "resume_fr": "La détection de bulles a montré que Bitcoin montre des signes typiques d'un phase de bulle à mi-décembre 2017 et au premier semestre de janvier 2018, avant les crashes majeurs observés après. De même, l'évolution du prix de l'Ethereum révèle des indices de bulles en juin 2017 et une faible indication autour de début janvier 2018, anticipant le crash observé sur la même date.",
+    "angle_eco": "Ce papier compte pour un économiste en raison de sa critique quantitative approfondie des cryptomonnaies comme potentielles bulles financières, appliquant modèles et tests statistiques à Bitcoin et Ether.",
+    "themes": [
+      "llm",
+      "macro-finance"
+    ],
+    "score": 3,
+    "auteurs": "Marco Bianchetti, Camilla Ricci, Marco Scaringi",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.21459v1",
+    "titre": "The Evolution of Digital Search: From Blue Links to Delegated Decision-Making",
+    "url": "https://arxiv.org/abs/2607.21459v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-23",
+    "resume_fr": "La recherche sur l'évolution de la recherche numérique suggère que le modèle traditionnel basé sur les mots-clés est progressivement remplacé par un système d'agents qui prennent des décisions pour leurs utilisateurs, engendrant une réorganisation du parcours utilisateur et des enjeux nouveaux dans les domaines de l'équité, la concurrence et le bien-être.",
+    "angle_eco": "Ce papier compte pour un économiste en raison de sa réflexion approfondie sur les implications économiques d'un changement majeur dans le système de recherche numérique.",
+    "themes": [],
+    "score": 3,
+    "auteurs": "David M. Rothschild, Nicole Immorlica, Brendan Lucier, Markus Mobius, Aleksandrs Slivkins",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.21268v1",
+    "titre": "pAI-Econ-claude: A Gated Human-in-the-Loop Multi-Agent Architecture for AI-Assisted Economic Theory Development",
+    "url": "https://arxiv.org/abs/2607.21268v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-23",
+    "resume_fr": "Dans de nombreux travaux de recherche en sciences sociales, comme l'économie, les agents basés sur LLM produisent des sorties pour lesquelles il n'existe pas de signal de correctivité machine-readable et complet. Cette absence crée une problématique distinctive de fiabilité dans les systèmes multi-agents : comment organiser le processus de génération, de critique, de coordination et de jugement humain lorsque aucun composant ne peut certifier la résultat final ?",
+    "angle_eco": "Ce papier compte pour un economiste en proposant une architecture multi-agent gérée par l'homme, optimisée pour la développement de théories économiques avec assistance d'IA.",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 3,
+    "auteurs": "Chen Zhu, Xiaolu Wang, Weilong Zhang",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.20807v1",
+    "titre": "Execution and Evaluation: A New Occupational Measure and Long-Run Employment Gradients",
+    "url": "https://arxiv.org/abs/2607.20807v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-23",
+    "resume_fr": "La mesure d'exécution, basée sur l'évaluation de $19{,}265$ sous-étiquettes O*NET, est stable et distincte des capacités d'IA et de l'intensité des tâches répétitives. L'évolution de la progression d'emploi dans les métiers chargés d'exécution montre une tendance séculaire plutôt qu'un événement à l'époque de l'IA.",
+    "angle_eco": "Ce papier démontre comment une mesure d'exécution peut influencer les tendances de croissance de l'emploi dans les catégories professionnelles, soulignant sa valeur pour l'économie.",
+    "themes": [
+      "inference-causale",
+      "travail-emploi",
+      "macro-finance"
+    ],
+    "score": 2,
+    "auteurs": "Li Gan",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
     "id": "arxiv-2607.20365v1",
     "titre": "Licensing and Innovation Regimes in Pharmaceutical R&D",
     "url": "https://arxiv.org/abs/2607.20365v1",
@@ -72,6 +254,23 @@
     ],
     "score": 2,
     "auteurs": "Langchen Huang, Sebastian Padó, Franziska Weeber",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.20781v1",
+    "titre": "The Human-AI Substitution Principle: When will you be replaced by AI in your organization?",
+    "url": "https://arxiv.org/abs/2607.20781v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-22",
+    "resume_fr": "Le modèle HAT formalise la disparité économique entre l'apprentissage de compétences par les humains et le développement progressif des capacités d'IA. Il permet de déterminer quand, où, pourquoi et sous quelles conditions structurantes la substitution humain-AI peut se produire.",
+    "angle_eco": "Ce papier compte pour un économiste en tant qu'il développe une principale théorie économique décrivant les conditions sous lesquelles l'IA remplace le travail humain dans les organisations hiérarchiques.",
+    "themes": [
+      "travail-emploi"
+    ],
+    "score": 4,
+    "auteurs": "Bonny Banerjee, Shreya Singh",
     "signal": false,
     "llm": "qwen2.5:3b"
   },
