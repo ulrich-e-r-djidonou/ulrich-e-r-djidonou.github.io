@@ -1,5 +1,135 @@
 [
   {
+    "id": "arxiv-2607.27155v1",
+    "titre": "OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding",
+    "url": "https://arxiv.org/abs/2607.27155v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-29",
+    "resume_fr": "Le benchmark OmegaUse-OfficeVal évalue les agents LLM sur des tâches de bureau à long terme avec un soutien économique au niveau des tâches. Il comprend 100 tâches tirées d'invocations pratiques du logiciel et adaptées via une procédure privée, nécessitant en moyenne deux heures et trois quarts d'intervention humaine pour être complétées.",
+    "angle_eco": "Ce papier compte pour un économiste car il introduit une échelle de test appelée OmegaUse-OfficeVal pour évaluer les agents modèles de langage en utilisant des références économiques sur la tâche, mettant l'accent sur le coût humain et le temps requis.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 4,
+    "auteurs": "Jingbo Zhou, Yusai Zhao, Qi Bao, Jingjia Cao, Zhenghai Chen, Chang Gao, Kaiqi Guo, Muxin Guo, Mingxuan Li, Xinjiang Lu, Yanru Ma, Yixiong Xiao, Zenghui Zhang, Le Zhang, Hua Wu",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.27081v1",
+    "titre": "On-Policy Distillation for LLM Safety: A Routing Approach to Template-Robust Realignment",
+    "url": "https://arxiv.org/abs/2607.27081v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-29",
+    "resume_fr": "Ce travail propose une méthode appelée Routing-based On-Policy Distillation (ROPD), un cadre de réalignement novateur qui modélise la divergence entre les distributions de probabilité des sorties alignées et compromises plutôt que de s'adapter aux templates spécifiques des plausibles attaquants. Les résultats montrent que ROPD améliore significativement l'efficacité et la robustesse du réalignement par rapport à quatre méthodes de base, en particulier dans le cas où les défenses se heurtent aux incohérences des plausibles attaquants.",
+    "angle_eco": "Ce papier compte pour un économiste en tant qu'il explore des approches innovantes de sécurité pour les modèles de langage large (LLMs), mettant l'accent sur la gestion de vulnérabilités potentielles liées à leur apprentissage fini.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "auteurs": "Yongjian Guo, Wanlun Ma, Lingyu Shen, Xi Xiao, Sheng Wen",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.27022v1",
+    "titre": "Evaluating Regional Bias in LLMs From Abstract Stereotype to Concrete Social Decision-Making",
+    "url": "https://arxiv.org/abs/2607.27022v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-29",
+    "resume_fr": "Le cadre S2D systématique évalue la présence de préjugés régionaux dans six modèles de langage linguistique grandeur, allant d'opinions abstraites sur les groupes régionaux aux décisions sociales concrètes. Les résultats montrent des différences significatives entre les régions, avec une bonne correspondance entre les modèles, particulièrement pour les décisions concernant la compétence et l'occupation.",
+    "angle_eco": "Ce papier montre comment les modèles de langage large peuvent refléter et influencer des décisions sociales basées sur des stéréotypes régionaux.",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "auteurs": "Jiayuan Di, Haoyi Yang, Yufei Luo, Jiahui Qu, Yiming Wang",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.26998v1",
+    "titre": "AgentSnare: Learning to Delay, Divert, and Defuse Autonomous Penetration Agents",
+    "url": "https://arxiv.org/abs/2607.26998v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-29",
+    "resume_fr": "AgentSnare est une système de déception dynamique qui construit et valide des artefacts dans un environnement découpé pour détourner l'agent d'intrusion. Il absorbe jusqu'à 46,8% des appels des outils du téléguidage agent dans le découpé et garde près de 55,9% des actions post-entrée là-bas, avec environ 90% des tentatives de terminaison basées sur des preuves du découpé.",
+    "angle_eco": "Ce papier compte pour un économiste en suggérant une approche stratégique de la déception dynamique pour anticiper et neutraliser les menaces autonomes, qu'il s'agisse d'une compréhension profonde des comportements d'apprentissage automatique ou d'un plan stratégique efficace.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "auteurs": "Ruoyu Wang, Heng Zhao, Renjie Wu, Mengnan Zhao, Zhixuan Chu, Wanyu Lin, Tianhang Zheng",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.26928v1",
+    "titre": "Latent-IM: Latent Interaction Management for Speech LLMs",
+    "url": "https://arxiv.org/abs/2607.26928v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-29",
+    "resume_fr": "Classiques des systèmes de dialogue parlé séparent généralement la gestion du dialogue des composants qui réalisent les réponses. Dans le cadre des langages par modèles, ce découpage a disparu dans les représentations cachées du modèle. Nous proposons une structure intérieure de gestion de dialogue appelée Latent-IM, qui permet de reproduire des choix de mouvements conversationnels humains tout en restant comparable à la fine-tuning.",
+    "angle_eco": "Latent-IM permet aux LLMs de reconstituer une forme d'estimation de l'état et de contrôle d'action intérieurs, crucial pour la gestion de dialogue en économie de la conversation.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "politique-publique"
+    ],
+    "score": 2,
+    "auteurs": "Adar Avsian, Atahan Dokme, Tony Woo, Larry Heck",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "voxeu-https-cepr-org-voxeu-columns-ai-premium",
+    "titre": "The AI premium",
+    "url": "https://cepr.org/voxeu/columns/ai-premium",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-07-28",
+    "resume_fr": "L'analyse démontre comment l'IA modifie les marchés boursiers et affecte la productivité des entreprises grâce à une quantité massive de données d'utilisation, révélant un avantage équilibré entre les marchés développés et les frontières. Les marchés boursiers perçoivent positivement le passage à l'IA pour les tâches impliquant implémentations, communication et coordination, en comparaison avec celles nécessitant une analyse ou des tâches scientifiques.",
+    "angle_eco": "Ce papier montre comment l'IA impacte les entreprises, les marchés et le travail, grâce à une analyse détaillée de plus de 380 trillions d'utilisations réelles d'IA.",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 3,
+    "auteurs": "",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
+    "id": "arxiv-2607.23313v1",
+    "titre": "Agentic AI Orchestration of Heterogeneous Economic Models for Rapid, Multi-scenario Analysis of Energy Crises",
+    "url": "https://arxiv.org/abs/2607.23313v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-25",
+    "resume_fr": "Les modèles économiques existants sont souvent trop détaillés et ont des restrictions techniques qui les rendent inefficaces pour traiter rapidement les crises énergétiques. Les grandes ordinateurs de langage peuvent aider à combiner ces modèles en temps réel, offrant une synthèse précise des scénarios possibles sans produire d'interprétations quantitatives directes.",
+    "angle_eco": "Un papier sur l'orchestration agente d'économiques hétérogènes pour une analyse rapide de scénarios multi-cas de crise énergétiques compte pour un économiste car il présente une solution innovante aux défis des modèles rigoureux trop longs à construire, adaptés aux crises de l'energie qui nécessitent des décisions rapides.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 6,
+    "auteurs": "Dana Golden, Brett Indelicato, Lav R. Varshney, Carlos D. Messina, Suzanne Thornsbury",
+    "signal": false,
+    "llm": "qwen2.5:3b"
+  },
+  {
     "id": "arxiv-2607.22511v1",
     "titre": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
     "url": "https://arxiv.org/abs/2607.22511v1",

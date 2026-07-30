@@ -6,6 +6,55 @@
     <description>Veille IA, economie et machine learning, curatee par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding</title>
+      <link>https://arxiv.org/abs/2607.27155v1</link>
+      <guid isPermaLink="false">arxiv-2607.27155v1</guid>
+      <pubDate>2026-07-29</pubDate>
+      <description>Le benchmark OmegaUse-OfficeVal évalue les agents LLM sur des tâches de bureau à long terme avec un soutien économique au niveau des tâches. Il comprend 100 tâches tirées d'invocations pratiques du logiciel et adaptées via une procédure privée, nécessitant en moyenne deux heures et trois quarts d'intervention humaine pour être complétées.</description>
+    </item>
+    <item>
+      <title>On-Policy Distillation for LLM Safety: A Routing Approach to Template-Robust Realignment</title>
+      <link>https://arxiv.org/abs/2607.27081v1</link>
+      <guid isPermaLink="false">arxiv-2607.27081v1</guid>
+      <pubDate>2026-07-29</pubDate>
+      <description>Ce travail propose une méthode appelée Routing-based On-Policy Distillation (ROPD), un cadre de réalignement novateur qui modélise la divergence entre les distributions de probabilité des sorties alignées et compromises plutôt que de s'adapter aux templates spécifiques des plausibles attaquants. Les résultats montrent que ROPD améliore significativement l'efficacité et la robustesse du réalignement par rapport à quatre méthodes de base, en particulier dans le cas où les défenses se heurtent aux incohérences des plausibles attaquants.</description>
+    </item>
+    <item>
+      <title>Evaluating Regional Bias in LLMs From Abstract Stereotype to Concrete Social Decision-Making</title>
+      <link>https://arxiv.org/abs/2607.27022v1</link>
+      <guid isPermaLink="false">arxiv-2607.27022v1</guid>
+      <pubDate>2026-07-29</pubDate>
+      <description>Le cadre S2D systématique évalue la présence de préjugés régionaux dans six modèles de langage linguistique grandeur, allant d'opinions abstraites sur les groupes régionaux aux décisions sociales concrètes. Les résultats montrent des différences significatives entre les régions, avec une bonne correspondance entre les modèles, particulièrement pour les décisions concernant la compétence et l'occupation.</description>
+    </item>
+    <item>
+      <title>AgentSnare: Learning to Delay, Divert, and Defuse Autonomous Penetration Agents</title>
+      <link>https://arxiv.org/abs/2607.26998v1</link>
+      <guid isPermaLink="false">arxiv-2607.26998v1</guid>
+      <pubDate>2026-07-29</pubDate>
+      <description>AgentSnare est une système de déception dynamique qui construit et valide des artefacts dans un environnement découpé pour détourner l'agent d'intrusion. Il absorbe jusqu'à 46,8% des appels des outils du téléguidage agent dans le découpé et garde près de 55,9% des actions post-entrée là-bas, avec environ 90% des tentatives de terminaison basées sur des preuves du découpé.</description>
+    </item>
+    <item>
+      <title>Latent-IM: Latent Interaction Management for Speech LLMs</title>
+      <link>https://arxiv.org/abs/2607.26928v1</link>
+      <guid isPermaLink="false">arxiv-2607.26928v1</guid>
+      <pubDate>2026-07-29</pubDate>
+      <description>Classiques des systèmes de dialogue parlé séparent généralement la gestion du dialogue des composants qui réalisent les réponses. Dans le cadre des langages par modèles, ce découpage a disparu dans les représentations cachées du modèle. Nous proposons une structure intérieure de gestion de dialogue appelée Latent-IM, qui permet de reproduire des choix de mouvements conversationnels humains tout en restant comparable à la fine-tuning.</description>
+    </item>
+    <item>
+      <title>The AI premium</title>
+      <link>https://cepr.org/voxeu/columns/ai-premium</link>
+      <guid isPermaLink="false">voxeu-https-cepr-org-voxeu-columns-ai-premium</guid>
+      <pubDate>2026-07-28</pubDate>
+      <description>L'analyse démontre comment l'IA modifie les marchés boursiers et affecte la productivité des entreprises grâce à une quantité massive de données d'utilisation, révélant un avantage équilibré entre les marchés développés et les frontières. Les marchés boursiers perçoivent positivement le passage à l'IA pour les tâches impliquant implémentations, communication et coordination, en comparaison avec celles nécessitant une analyse ou des tâches scientifiques.</description>
+    </item>
+    <item>
+      <title>Agentic AI Orchestration of Heterogeneous Economic Models for Rapid, Multi-scenario Analysis of Energy Crises</title>
+      <link>https://arxiv.org/abs/2607.23313v1</link>
+      <guid isPermaLink="false">arxiv-2607.23313v1</guid>
+      <pubDate>2026-07-25</pubDate>
+      <description>Les modèles économiques existants sont souvent trop détaillés et ont des restrictions techniques qui les rendent inefficaces pour traiter rapidement les crises énergétiques. Les grandes ordinateurs de langage peuvent aider à combiner ces modèles en temps réel, offrant une synthèse précise des scénarios possibles sans produire d'interprétations quantitatives directes.</description>
+    </item>
+    <item>
       <title>CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference</title>
       <link>https://arxiv.org/abs/2607.22511v1</link>
       <guid isPermaLink="false">arxiv-2607.22511v1</guid>
@@ -165,55 +214,6 @@
       <guid isPermaLink="false">arxiv-2607.16057v1</guid>
       <pubDate>2026-07-17</pubDate>
       <description>Les benchmarks actuels des langages de grande taille mettent principalement l'accent sur des compétences techniques telles que la rétention de faits et les problèmes résolus, tandis que le travail analytique effectué quotidiennement par les professionnels du travail blanc reste mal mesuré. Les performances des modèles d'intelligence artificielle sur cette forme de travail analytique sont déjà élevées et se sont notablement améliorées en deux ans.</description>
-    </item>
-    <item>
-      <title>CLaC@FinMMEval 2026 Task 3: Sentiment-Augmented Deep Reinforcement Learning for Active Trading -- An Alpha-Reward Approach</title>
-      <link>https://arxiv.org/abs/2607.16028v1</link>
-      <guid isPermaLink="false">arxiv-2607.16028v1</guid>
-      <pubDate>2026-07-17</pubDate>
-      <description>Cette étude présente un système pour la tâche 3 du CLEF 2026 FinMMEval Lab, impliquant des décisions de trading quotidiennes basées sur les nouvelles et l'historique des données marchandes pour Bitcoin (BTC) et Tesla (TSLA). Les algorithmes de renforcement réinforcement profond examinés incluent Policy Gradient (PG), Proximal Policy Optimization (PPO), Deep Q-Learning (DQL), et Deep Deterministic Policy Gradient (DDPG).</description>
-    </item>
-    <item>
-      <title>Helping People Choose Careers in the Age of AI</title>
-      <link>https://arxiv.org/abs/2607.15506v1</link>
-      <guid isPermaLink="false">arxiv-2607.15506v1</guid>
-      <pubDate>2026-07-16</pubDate>
-      <description>Les études examinent divers modèles de prévision sur l'exposition aux tâches automatisables par l'IA, soulignant la variabilité entre les projections. Dans un modèle empirique basé sur des données récentes, l'étude évalue les tensions entre salaires et exposition à l'IA dans différents secteurs d'activité.</description>
-    </item>
-    <item>
-      <title>Algorithmic Intermediation and the International Transmission of U.S. Monetary Policy</title>
-      <link>https://arxiv.org/abs/2607.15385v1</link>
-      <guid isPermaLink="false">arxiv-2607.15385v1</guid>
-      <pubDate>2026-07-16</pubDate>
-      <description>Ce papier étudie comment l'intermédiation algorithmique et AI dans le gestion des fonds affecte la transmission internationale de la politique monétaire américaine vers les marchés émergents. Il souligne que la similarité des modèles entre les fonds est la principale source d'instabilité, tandis que l'ajustement rapide des modèles diversifiés permettrait une réduction des mouvements de capitaux en cas de volatilité élevée aux États-Unis.</description>
-    </item>
-    <item>
-      <title>Governing Artificial Intelligence: Public Preferences and Regulatory Options</title>
-      <link>https://arxiv.org/abs/2607.14585v1</link>
-      <guid isPermaLink="false">arxiv-2607.14585v1</guid>
-      <pubDate>2026-07-16</pubDate>
-      <description>Les citoyens suggèrent une régulation stricte des technologies d'IA, accordant priorité à la sécurité plutôt qu'à l'inovation et préférant un contrôle public ou international aux solutions de régulation privée. Les risques perçus par les citoyens affectent leur forte inclination pour la réglementation de l'IA.</description>
-    </item>
-    <item>
-      <title>Linear Independent Component Analysis via Optimal Transport</title>
-      <link>https://arxiv.org/abs/2607.14081v1</link>
-      <guid isPermaLink="false">arxiv-2607.14081v1</guid>
-      <pubDate>2026-07-15</pubDate>
-      <description>La Linear Independent Component Analysis via Optimal Transport propose d'utiliser la distance de Wasserstein au carré pour mesurer l'ingénieusement des signaux source indépendants, maximisée lorsque ces signaux sont projetés pour reconstruire un composant indépendant. Cette approche permet de surpasser les méthodes basées sur des contrastes proxy, et a été confirmée par des évaluations expérimentales sur des données simulées.</description>
-    </item>
-    <item>
-      <title>Higher utilisation explains the recent surge in productivity growth</title>
-      <link>https://cepr.org/voxeu/columns/higher-utilisation-explains-recent-surge-productivity-growth</link>
-      <guid isPermaLink="false">voxeu-higher-utilisation-explains-recent-surge-productivity-growth</guid>
-      <pubDate>2026-07-15</pubDate>
-      <description>La croissance de la productivité américaine s'est accélérée depuis 2022, avec une augmentation annuelle moyenne de l'output par heure de près de 2,5% entre fin 2022 et début 2026. Cependant, le rendement a dépassé son rythme pré-pandémique de 1 point de pourcentage grâce à la plus grande utilisation des ressources déjà en place plutôt qu'à la performance technologique d'IA.</description>
-    </item>
-    <item>
-      <title>Adaptive Ad Load Design for Sponsored Search Markets: Evidence, Theory, and Deployment</title>
-      <link>https://arxiv.org/abs/2607.14418v1</link>
-      <guid isPermaLink="false">arxiv-2607.14418v1</guid>
-      <pubDate>2026-07-15</pubDate>
-      <description>Ad-load design est étudié comme une décision clé du côté de la supply dans les marchés d'annonces sponsorisées. Une expérience expérimentale a montré que l'augmentation de l'ad-load peut améliorer le revenu de 43% en moyenne, mais il entraîne également une réduction des conversions totales de 5% et la diminution de l'engagement quotidien de 2.2%.</description>
     </item>
   </channel>
 </rss>
