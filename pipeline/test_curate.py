@@ -1,6 +1,9 @@
 import json
+import sys
 import tempfile
+import types
 import unittest
+from contextlib import ExitStack
 from pathlib import Path
 from unittest.mock import patch
 
@@ -144,6 +147,85 @@ class PolitiquePublicationTests(unittest.TestCase):
             self.assertNotIn("resume_fr", archives[0])
             resume.assert_not_called()
             angle.assert_not_called()
+
+
+class PanneServiceTests(unittest.TestCase):
+    """Une panne du service de redaction ne doit consommer aucun article."""
+
+    CANDIDAT = {
+        "id": "test-panne",
+        "titre": "Economic policy with machine learning",
+        "url": "https://example.com/test-panne",
+        "source": "test",
+        "type": "papier",
+        "date_publication": "2026-08-01",
+        "abstract": "Economic policy and market analysis using machine learning.",
+        "auteurs": "Auteur Test",
+    }
+
+    def _executer(self, dossier, **remplacements):
+        racine = Path(dossier)
+        chemins = {
+            "ENTREE": racine / "candidats.json",
+            "SORTIE": racine / "cures.json",
+            "SORTIE_ARCHIVE": racine / "archives.json",
+            "SEEN": racine / "seen.json",
+        }
+        chemins["ENTREE"].write_text(json.dumps([self.CANDIDAT]), encoding="utf-8")
+        chemins["SEEN"].write_text("{}", encoding="utf-8")
+
+        with ExitStack() as pile:
+            for nom, chemin in chemins.items():
+                pile.enter_context(patch.object(curate, nom, chemin))
+            for nom, valeur in remplacements.items():
+                pile.enter_context(patch.object(curate, nom, valeur))
+            curate.main()
+        return chemins
+
+    def test_indisponibilite_n_ecrit_rien_et_ne_marque_personne(self):
+        def tombe_en_panne(*args, **kwargs):
+            raise curate.OllamaIndisponible("connexion refusee")
+
+        with tempfile.TemporaryDirectory() as dossier:
+            with self.assertRaises(curate.OllamaIndisponible):
+                self._executer(
+                    dossier,
+                    LLM_ACTIF=True,
+                    resume_ollama=tombe_en_panne,
+                )
+
+            racine = Path(dossier)
+            self.assertEqual(racine.joinpath("seen.json").read_text(encoding="utf-8"), "{}")
+            self.assertFalse(racine.joinpath("cures.json").exists())
+
+    def test_sans_llm_actif_l_item_eligible_reste_non_vu(self):
+        with tempfile.TemporaryDirectory() as dossier:
+            chemins = self._executer(dossier, LLM_ACTIF=False)
+
+            self.assertEqual(json.loads(chemins["SORTIE"].read_text(encoding="utf-8")), [])
+            self.assertEqual(json.loads(chemins["SEEN"].read_text(encoding="utf-8")), {})
+
+    def test_appel_ollama_reessaie_une_fois_puis_leve(self):
+        appels = []
+
+        class ReponseImpossible(Exception):
+            pass
+
+        def poster(*args, **kwargs):
+            appels.append(1)
+            raise ReponseImpossible("service arrete")
+
+        faux_requests = types.ModuleType("requests")
+        faux_requests.post = poster
+
+        with (
+            patch.dict(sys.modules, {"requests": faux_requests}),
+            patch.object(curate, "PAUSE_AVANT_REPRISE", 0),
+        ):
+            with self.assertRaises(curate.OllamaIndisponible):
+                curate._appel_ollama("prompt")
+
+        self.assertEqual(len(appels), 2)
 
 
 if __name__ == "__main__":

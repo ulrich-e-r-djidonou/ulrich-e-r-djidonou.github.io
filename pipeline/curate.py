@@ -15,12 +15,20 @@ resume en francais et une ligne d'analyse economique. Chaque sortie est
 validee separement. Une sortie invalide est relancee une fois, puis l'item
 n'est pas publie si le second essai echoue. Aucun extrait anglais n'est publie
 en repli.
+
+Deux echecs sont distingues, parce qu'ils n'appellent pas la meme reaction :
+  - echec de validation : le modele a repondu, mal. L'item est marque vu et
+    ne sera pas repeche. C'est la politique arretee.
+  - service indisponible : le modele n'a pas repondu. Rien n'est ecrit, aucun
+    item n'est marque vu, le script sort en erreur. Une panne ne doit jamais
+    consommer definitivement des articles.
 """
 
 import json
 import os
 import re
 import sys
+import time
 import unicodedata
 from pathlib import Path
 
@@ -39,6 +47,11 @@ LLM_ACTIF = os.environ.get("FRONTIERE_LLM") == "ollama"
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/generate")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:3b")
 OLLAMA_TIMEOUT = 60
+PAUSE_AVANT_REPRISE = 2
+
+
+class OllamaIndisponible(RuntimeError):
+    """Le service de redaction ne repond pas. Panne, pas defaut de redaction."""
 
 FORMULES_ANGLE_INTERDITES = (
     "ce papier compte pour un",
@@ -166,20 +179,29 @@ def _generer_avec_reprise(generateur, validateur):
 
 
 def _appel_ollama(prompt):
-    """Retourne le texte genere par Ollama, ou None si indisponible/invalide."""
+    """Retourne le texte genere par Ollama.
+
+    Leve OllamaIndisponible si le service ne repond pas apres deux tentatives.
+    Une panne de transport n'est pas un echec de redaction : elle ne doit pas
+    faire marquer l'item comme vu, sinon il ne serait jamais repeche.
+    """
     import requests
 
-    try:
-        reponse = requests.post(
-            OLLAMA_URL,
-            json={"model": OLLAMA_MODEL, "prompt": prompt, "stream": False},
-            timeout=OLLAMA_TIMEOUT,
-        )
-        reponse.raise_for_status()
-        texte = reponse.json().get("response", "").strip()
-        return texte or None
-    except Exception:
-        return None
+    derniere_erreur = None
+    for tentative in range(2):
+        try:
+            reponse = requests.post(
+                OLLAMA_URL,
+                json={"model": OLLAMA_MODEL, "prompt": prompt, "stream": False},
+                timeout=OLLAMA_TIMEOUT,
+            )
+            reponse.raise_for_status()
+            return reponse.json().get("response", "").strip() or None
+        except Exception as erreur:
+            derniere_erreur = erreur
+            if tentative == 0:
+                time.sleep(PAUSE_AVANT_REPRISE)
+    raise OllamaIndisponible(derniere_erreur)
 
 
 def resume_ollama(titre, abstract):
@@ -230,6 +252,7 @@ def main():
     nb_deja_vus = 0
     nb_eligibles = 0
     nb_non_publies_validation = 0
+    nb_reportes = 0
 
     for candidat in candidats:
         if candidat["id"] in deja_vus:
@@ -238,9 +261,9 @@ def main():
 
         texte_complet = f"{candidat['titre']} {candidat.get('abstract', '')}"
         score = score_heuristique(texte_complet)
-        nouveaux_vus[candidat["id"]] = {"score": score, "traite": True}
 
         if score < SEUIL_PUBLICATION:
+            nouveaux_vus[candidat["id"]] = {"score": score, "traite": True}
             candidats_archives.append({
                 "id": candidat["id"],
                 "titre": candidat["titre"],
@@ -257,7 +280,9 @@ def main():
         nb_eligibles += 1
 
         if not LLM_ACTIF:
-            nb_non_publies_validation += 1
+            # Sans service de redaction, l'item n'est ni publiable ni juge :
+            # il reste non vu pour etre repris quand le LLM sera disponible.
+            nb_reportes += 1
             continue
 
         resume_fr = _generer_avec_reprise(
@@ -267,6 +292,7 @@ def main():
             lambda texte: not erreurs_resume(texte),
         )
         if not resume_fr:
+            nouveaux_vus[candidat["id"]] = {"score": score, "traite": True}
             nb_non_publies_validation += 1
             continue
 
@@ -277,9 +303,11 @@ def main():
             lambda texte: not erreurs_angle(texte),
         )
         if not angle_eco:
+            nouveaux_vus[candidat["id"]] = {"score": score, "traite": True}
             nb_non_publies_validation += 1
             continue
 
+        nouveaux_vus[candidat["id"]] = {"score": score, "traite": True}
         entree = {
             "id": candidat["id"],
             "titre": candidat["titre"],
@@ -315,12 +343,26 @@ def main():
     if LLM_ACTIF:
         print(f"Resumes rediges et valides par Ollama : {nb_llm}/{len(cures)}")
     print(
-        "Items non publies apres echec ou absence de validation LLM : "
+        "Items non publies apres deux echecs de validation : "
         f"{nb_non_publies_validation}"
     )
+    print(f"Items reportes au prochain run (non marques vus) : {nb_reportes}")
     print(f"Ecrits dans {SORTIE}")
     print(f"Ecrits dans {SORTIE_ARCHIVE}")
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except OllamaIndisponible as erreur:
+        # Arret atomique : main() n'ecrit qu'a la toute fin, donc ni seen.json
+        # ni les fichiers de sortie ne sont touches. Le prochain run reprend
+        # les memes candidats. Le code de sortie 1 fait echouer le workflow,
+        # ce qui rend la panne visible au lieu de la laisser passer en silence.
+        print(
+            "Service de redaction indisponible : "
+            f"{OLLAMA_URL} ({erreur}). Aucun fichier ecrit, aucun item marque "
+            "vu. Le run est interrompu, les candidats seront repris tels quels.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
