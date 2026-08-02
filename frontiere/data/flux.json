@@ -494,23 +494,6 @@
     "llm": "qwen2.5:3b"
   },
   {
-    "id": "arxiv-2607.16177v1",
-    "titre": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-    "url": "https://arxiv.org/abs/2607.16177v1",
-    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
-    "type": "papier",
-    "date_publication": "2026-07-17",
-    "resume_fr": "La méthode PEARL améliore la performance des algorithmes de RL en réduisant les interactions avec l'environnement et en exploitant efficacement le caractère différentiable des systèmes dynamiques paramétriques. De plus, elle permet une généralisation跨过multiple scénarios et une échelle de RL à des systèmes complexes.",
-    "angle_eco": "Ce papier compte pour un économiste en raison de sa exploration innovante du contrôle optimal appliqué à systèmes dynamiques complexes grâce aux techniques de reinforcement learning améliorées par la physique.",
-    "themes": [
-      "politique-publique"
-    ],
-    "score": 2,
-    "auteurs": "Matteo Tomasetto, Nicolò Botteghi, Gabriele Bruni, Andrea Manzoni",
-    "signal": false,
-    "llm": "qwen2.5:3b"
-  },
-  {
     "id": "arxiv-2607.16097v1",
     "titre": "Understanding Reasoning from Pretraining to Post-Training",
     "url": "https://arxiv.org/abs/2607.16097v1",

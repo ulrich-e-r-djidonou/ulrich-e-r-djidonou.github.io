@@ -1,6 +1,6 @@
 {
   "derniere_mise_a_jour": "2026-07-30",
-  "nb_entrees_flux": 61,
+  "nb_entrees_flux": 60,
   "compte_par_theme": {
     "inference-causale": 10,
     "llm": 36,
