@@ -15,7 +15,6 @@ alors que l'entree ne l'etait pas, le script s'arrete sans rien ecrire
 (la page garde l'etat precedent plutot que de casser).
 """
 
-import io
 import json
 import re
 import sys
@@ -23,8 +22,10 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 RACINE = Path(__file__).parent.parent
 DONNEES = RACINE / "frontiere" / "data"
