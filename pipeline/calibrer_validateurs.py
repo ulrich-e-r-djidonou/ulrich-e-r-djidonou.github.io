@@ -62,6 +62,15 @@ def main():
     )
     analyseur.add_argument("--git-ref")
     analyseur.add_argument("--seuil-alerte", type=float, default=20.0)
+    analyseur.add_argument(
+        "--rapport-seul",
+        action="store_true",
+        help=(
+            "mesure sans faire echouer la commande. Utile sur un flux qui "
+            "contient encore des textes rediges avant les validateurs actuels : "
+            "leur taux de rejet ne dit rien de la calibration."
+        ),
+    )
     arguments = analyseur.parse_args()
 
     total, controles = mesurer(charger_flux(arguments.chemin, arguments.git_ref))
@@ -77,7 +86,7 @@ def main():
         print(
             f"ALERTE : le taux hors formule dépasse {arguments.seuil_alerte:.1f} %."
         )
-        return 2
+        return 0 if arguments.rapport_seul else 2
     print(
         f"Seuil respecté : le taux hors formule reste sous {arguments.seuil_alerte:.1f} %."
     )

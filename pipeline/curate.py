@@ -72,9 +72,12 @@ SYMBOLES_TEXTE_AUTORISES = {"%", "‰", "€", "$", "£", "°", "+", "=", "×"}
 # quel que soit le modele. Un modele plus gros ne la corrige pas, un validateur
 # si. Le taux d'echec par champ etant faible, la reprise unique absorbe presque
 # tous les cas et le volume du flux n'en souffre pas.
-_VOYELLES = "aàâeéèêëiîïoôuùûyAÀÂEÉÈÊËIÎÏOÔUÙÛY"
+# Le y est exclu : "le yoga", "du yen" et "de yaourt" sont corrects, l'inclure
+# produirait des faux positifs. Le h muet est exclu aussi, faute de pouvoir le
+# distinguer du h aspire de "le heros" sans dictionnaire.
+_VOYELLES = "aàâeéèêëiîïoôuùûAÀÂEÉÈÊËIÎÏOÔUÙÛ"
 ELISION_MANQUANTE = re.compile(
-    rf"\b(?:le|la|de|ne|que|je|me|te|se)\s+[{_VOYELLES}][\w'-]+", re.IGNORECASE
+    rf"\b(?:le|la|du|de|ne|que|je|me|te|se)\s+[{_VOYELLES}][\w'-]+", re.IGNORECASE
 )
 DEMONSTRATIF_INCORRECT = re.compile(rf"\bce\s+[{_VOYELLES}][\w'-]+", re.IGNORECASE)
 MOT_DOUBLE = re.compile(r"\b(\w+)\s+\1\b", re.IGNORECASE)

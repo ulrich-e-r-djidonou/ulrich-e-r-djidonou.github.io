@@ -776,11 +776,9 @@ h1 {
   .site-header nav {
     min-width: 0;
     flex: 1 1 auto;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 0.8rem;
-    overflow-x: auto;
     padding-bottom: 0.15rem;
-    scrollbar-width: thin;
   }
 
   .site-header nav a {
@@ -829,6 +827,24 @@ h1 {
   .contact {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+/* Sous 620 px, la marque et les cinq liens ne tiennent plus sur une meme
+   ligne. Les empiler garde les cinq liens visibles ; un defilement horizontal
+   en cacherait deux derriere une barre que rien n'annonce. */
+@media (max-width: 620px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem 0.5rem;
+  }
+
+  .site-header nav {
+    width: 100%;
+    gap: 0.7rem;
+    font-size: var(--fs-2xs);
   }
 }
 

@@ -32,6 +32,56 @@ RACINE = Path(__file__).parent.parent
 FLUX = RACINE / "frontiere" / "data" / "flux.json"
 CORPUS = Path(__file__).parent / "benchmark" / "corpus.json"
 RELECTURE = Path(__file__).parent / "_regeneration.json"
+RELECTURE_LISIBLE = Path(__file__).parent / "_regeneration.md"
+
+
+def ecrire_relecture_lisible(releve, modele, duree):
+    """Rend l'avant/apres lisible, le JSON etant fait pour la machine."""
+    valides = [ligne for ligne in releve if ligne.get("etat") == "valide"]
+    rejetes = [ligne for ligne in releve if ligne.get("etat") == "rejete"]
+
+    lignes = [
+        "# Relecture de la redaction rejouee",
+        "",
+        f"Modele : `{modele}`. {len(valides)} items valides, {len(rejetes)} rejetes, "
+        f"en {duree / 60:.1f} min.",
+        "",
+        "Les items rejetes gardent leur texte actuel. Ils sont listes en fin de",
+        "document avec le motif de rejet.",
+        "",
+    ]
+
+    for ligne in valides:
+        lignes += [
+            f"## {ligne['titre']}",
+            "",
+            "**Angle, avant**  ",
+            ligne["avant"]["angle_eco"] or "_vide_",
+            "",
+            "**Angle, apres**  ",
+            ligne["apres"]["angle_eco"],
+            "",
+            "**Resume, avant**  ",
+            ligne["avant"]["resume_fr"] or "_vide_",
+            "",
+            "**Resume, apres**  ",
+            ligne["apres"]["resume_fr"],
+            "",
+        ]
+
+    if rejetes:
+        lignes += ["## Items rejetes", ""]
+        for ligne in rejetes:
+            motifs = sorted({
+                erreur
+                for essais in ligne["essais"].values()
+                for essai in essais
+                for erreur in essai["erreurs"]
+            })
+            lignes.append(f"- **{ligne['titre']}** : {', '.join(motifs)}")
+        lignes.append("")
+
+    RELECTURE_LISIBLE.write_text("\n".join(lignes), encoding="utf-8")
 
 
 def charger_corpus():
@@ -133,11 +183,14 @@ def main():
         encoding="utf-8",
     )
 
+    ecrire_relecture_lisible(releve, curate.OLLAMA_MODEL, duree)
+
     print(
         f"\n{nb_valides}/{len(flux)} items rediges et valides en "
         f"{duree / 60:.1f} min avec {curate.OLLAMA_MODEL}."
     )
-    print(f"Relecture avant/apres : {RELECTURE}")
+    print(f"Relecture avant/apres : {RELECTURE_LISIBLE}")
+    print(f"Detail des essais : {RELECTURE}")
 
     if not arguments.appliquer:
         print("Rien n'a ete ecrit dans le flux. Relire, puis relancer avec --appliquer.")

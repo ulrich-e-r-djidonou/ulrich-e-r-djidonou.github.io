@@ -158,6 +158,7 @@ class LangueFrancaiseTests(unittest.TestCase):
         "Le modèle de langage traite mille milliards de jetons. Il reste rapide.",
         "Cet article mesure un effet. La méthode est simple.",
         "Les données de 2026 montrent une baisse. Le résultat tient.",
+        "Le yoga du yen progresse. Le héros de yaourt reste une exception.",
     ]
 
     def test_n_alerte_pas_sur_du_francais_correct(self):
@@ -169,6 +170,12 @@ class LangueFrancaiseTests(unittest.TestCase):
         self.assertIn(
             "elision_manquante",
             curate.erreurs_langue("Le routage aligne les décisions avec le unité."),
+        )
+
+    def test_detecte_une_contraction_devant_voyelle(self):
+        self.assertIn(
+            "elision_manquante",
+            curate.erreurs_langue("DBA-Bench mesure l'ouverture du espace de solutions."),
         )
 
     def test_detecte_un_demonstratif_incorrect(self):
