@@ -119,6 +119,52 @@ def rediger(titre, abstract):
     return resume, angle, {"resume": essais_resume, "angle": essais_angle}
 
 
+def ecrire_flux(flux, releve, modele):
+    """Remplace les textes des items valides et ecrit le flux.
+
+    Un item dont le texte courant ne correspond plus a celui qui figurait
+    dans la relecture n'est pas touche : entre la relecture et l'application,
+    le bot ou une correction manuelle a pu le modifier, et l'ecraser
+    reviendrait a annuler ce changement sans le dire.
+    """
+    par_id = {ligne["id"]: ligne for ligne in releve if ligne.get("etat") == "valide"}
+    nb_remplaces = 0
+    ignores = []
+    for entree in flux:
+        ligne = par_id.get(entree["id"])
+        if not ligne:
+            continue
+        if entree.get("angle_eco", "") != ligne["avant"]["angle_eco"]:
+            ignores.append(entree["titre"])
+            continue
+        entree["resume_fr"] = ligne["apres"]["resume_fr"]
+        entree["angle_eco"] = ligne["apres"]["angle_eco"]
+        entree["llm"] = modele
+        nb_remplaces += 1
+
+    FLUX.write_text(json.dumps(flux, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"{nb_remplaces} items remplaces dans {FLUX}.")
+    print("Les items rejetes gardent leur texte precedent.")
+    for titre in ignores:
+        print(f"Ignore, modifie depuis la relecture : {titre}")
+    return nb_remplaces
+
+
+def appliquer_relecture():
+    """Applique une relecture deja produite, sans rien regenerer."""
+    if not RELECTURE.exists():
+        print(
+            f"{RELECTURE} est absent. Lancer d'abord la regeneration.",
+            file=sys.stderr,
+        )
+        return 1
+    relecture = json.loads(RELECTURE.read_text(encoding="utf-8"))
+    flux = json.loads(FLUX.read_text(encoding="utf-8"))
+    print(f"Application de la relecture produite avec {relecture['modele']}.")
+    ecrire_flux(flux, relecture["items"], relecture["modele"])
+    return 0
+
+
 def main():
     analyseur = argparse.ArgumentParser()
     analyseur.add_argument(
@@ -126,7 +172,19 @@ def main():
         action="store_true",
         help="ecrit les textes valides dans frontiere/data/flux.json",
     )
+    analyseur.add_argument(
+        "--depuis-relecture",
+        action="store_true",
+        help=(
+            "applique le contenu de _regeneration.json sans rien regenerer. "
+            "C'est ce qui garantit que le texte publie est celui qui a ete relu, "
+            "le modele ne produisant pas deux fois la meme sortie."
+        ),
+    )
     arguments = analyseur.parse_args()
+
+    if arguments.depuis_relecture:
+        return appliquer_relecture()
 
     if not curate.LLM_ACTIF:
         print(
@@ -196,24 +254,7 @@ def main():
         print("Rien n'a ete ecrit dans le flux. Relire, puis relancer avec --appliquer.")
         return 0
 
-    par_id = {
-        ligne["id"]: ligne
-        for ligne in releve
-        if ligne.get("etat") == "valide"
-    }
-    nb_remplaces = 0
-    for entree in flux:
-        ligne = par_id.get(entree["id"])
-        if not ligne:
-            continue
-        entree["resume_fr"] = ligne["apres"]["resume_fr"]
-        entree["angle_eco"] = ligne["apres"]["angle_eco"]
-        entree["llm"] = curate.OLLAMA_MODEL
-        nb_remplaces += 1
-
-    FLUX.write_text(json.dumps(flux, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"{nb_remplaces} items remplaces dans {FLUX}.")
-    print("Les items rejetes gardent leur texte precedent.")
+    ecrire_flux(flux, releve, curate.OLLAMA_MODEL)
     return 0
 
 

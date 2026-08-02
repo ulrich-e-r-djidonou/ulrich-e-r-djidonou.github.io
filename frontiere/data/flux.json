@@ -6,8 +6,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-29",
-    "resume_fr": "Le benchmark OmegaUse-OfficeVal évalue les agents LLM sur des tâches de bureau à long terme avec un soutien économique au niveau des tâches. Il comprend 100 tâches tirées d'invocations pratiques du logiciel et adaptées via une procédure privée, nécessitant en moyenne deux heures et trois quarts d'intervention humaine pour être complétées.",
-    "angle_eco": "Ce papier compte pour un économiste car il introduit une échelle de test appelée OmegaUse-OfficeVal pour évaluer les agents modèles de langage en utilisant des références économiques sur la tâche, mettant l'accent sur le coût humain et le temps requis.",
+    "resume_fr": "Le benchmark OmegaUse-OfficeVal évalue les agents de modèle de langue grand(e)s sur des tâches longue(s)-durée de l'environnement office-suite, avec une prise en compte économique des coûts humains. Sur la moyenne, ces tâches nécessitent environ 2,32 heures de travail humain pour être terminées.",
+    "angle_eco": "Le mécanisme crucial de l'OmegaUse-OfficeVal benchmark réside dans son intégration d’indicateurs économiques à chaque tâche de workflow longue échéance de gestion de bureau, permettant ainsi des comparaisons précises entre les coûts humains et ceux liés aux inferences des modèles langage-moderne.",
     "themes": [
       "llm",
       "travail-emploi",
@@ -42,8 +42,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-25",
-    "resume_fr": "Les modèles économiques existants sont souvent trop détaillés et ont des restrictions techniques qui les rendent inefficaces pour traiter rapidement les crises énergétiques. Les grandes ordinateurs de langage peuvent aider à combiner ces modèles en temps réel, offrant une synthèse précise des scénarios possibles sans produire d'interprétations quantitatives directes.",
-    "angle_eco": "Un papier sur l'orchestration agente d'économiques hétérogènes pour une analyse rapide de scénarios multi-cas de crise énergétiques compte pour un économiste car il présente une solution innovante aux défis des modèles rigoureux trop longs à construire, adaptés aux crises de l'energie qui nécessitent des décisions rapides.",
+    "resume_fr": "Les modèles économiques existants sont souvent limités et dispersés, nécessitant des heures ou des jours pour intégrer plusieurs systèmes liés. Les langues de grande portée peuvent automatiser cette intégration, générant des scénarios cohérents tout en reproduisant tous les résultats d'un modèle sous-jacent.",
+    "angle_eco": "Le mécanisme crucial du papier est l'intégration automatique de modèles économiques existants pour fournir des scénarios cohérents à court terme, tandis que le principal enjeu concerne les décisions urgentes prises par les policymakers face aux disruptions rapides dans les marchés énergétiques.",
     "themes": [
       "llm",
       "politique-publique",
@@ -61,8 +61,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-24",
-    "resume_fr": "TRACE-Router propose une approche de routage basée sur la tâche qui aligne les décisions de routage avec le unité d'encadrement, améliorant ainsi la correspondance entre l'évaluation des modèles et leurs décisions. Cette méthode permet à TRACE-Router d'apprendre des politiques de routage adaptatives sans nécessiter une estimation explicite du niveau de complexité des tâches.",
-    "angle_eco": "Ce papier compte pour un economiste car il propose une approche innovante de gestion des ressources en AI, mettant l'accent sur la cohérence entre les décisions de routage et le feedback à long terme.",
+    "resume_fr": "TRACE-Router présente une approche de routage à la tâche qui corrige le décalage entre les décisions individuelles de routage et l'efficacité globale des applications agentic, en améliorant significativement la prise en compte de la précision et de la latence. Sur deux benchmarks agentic, TRACE-Router améliore la balance précision-latence par rapport aux méthodes d'interpolation existantes.",
+    "angle_eco": "TRACE-Router résout le décalage entre les décisions de routage per-call et la qualité globale des workflows longue-horizon en alignant les décisions de routage au niveau du tâche, grâce à un apprentissage avec feedback décalé.",
     "themes": [
       "llm",
       "politique-publique",
@@ -80,8 +80,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-24",
-    "resume_fr": "Les agents basés sur l'IA dans les bases de données montrent des promesses, mais diverses lacunes dans les évaluations testent et les environnements de travail rendent difficile leur comparaison. Le benchmark DBA-Bench propose une approche résolue en mettant l’accent sur la fiabilité de production, l'évaluation basée sur les résultats et la réplicabilité contrôlée des scénarios.",
-    "angle_eco": "Ce papier compte pour un économiste car il présente une échelle de test détaillée pour comparer les agents de base de données basés sur la LLM, en mettant l'accent sur la fiabilité de production.",
+    "resume_fr": "Les LLM basés sur les bases de données montrent une promesse, mais des lacunes dans l'évaluation et l'environnement de production rendent difficile leur comparaison. La banque de démonstration DBA-Bench vise à combler ces écarts en mettant l'accent sur la fiabilité opérationnelle, l'évaluation basée sur les résultats et la reproduction contrôlée des scénarios complexes.",
+    "angle_eco": "La production fidélité est un enjeu crucial du DBA-Bench, une nouvelle échelle de benchmark pour les agents d'agents de gestion de base de données basés sur LLM, qui met l'accent sur la fiabilité des environnements multi-environnement en ligne et la reproduction contrôlée des scénarios complexes.",
     "themes": [
       "inference-causale",
       "llm",
@@ -99,8 +99,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-23",
-    "resume_fr": "La détection de bulles a montré que Bitcoin montre des signes typiques d'un phase de bulle à mi-décembre 2017 et au premier semestre de janvier 2018, avant les crashes majeurs observés après. De même, l'évolution du prix de l'Ethereum révèle des indices de bulles en juin 2017 et une faible indication autour de début janvier 2018, anticipant le crash observé sur la même date.",
-    "angle_eco": "Ce papier compte pour un économiste en raison de sa critique quantitative approfondie des cryptomonnaies comme potentielles bulles financières, appliquant modèles et tests statistiques à Bitcoin et Ether.",
+    "resume_fr": "Dans cet essai, nous avons appliqué des modèles quantitatifs à Bitcoin et Ethereum, deux cryptomonnaies populaires. Notre méthode de détection des bulles combinait le modèle Power Law créé par Johansen, Ledoit et Sornette avec un modèle statistique développé par Phillips, Shi et Yu.",
+    "angle_eco": "Le mécanisme de ce papier porte sur l'utilisation de modèles quantitatifs pour détecter les bulles dans Bitcoin et Ether, deux principales cryptomonnaies, en combinant le modèle Log Periodic Power Law (LPPL) avec des tests statistiques.",
     "themes": [
       "llm",
       "macro-finance"
@@ -117,8 +117,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-23",
-    "resume_fr": "La recherche sur l'évolution de la recherche numérique suggère que le modèle traditionnel basé sur les mots-clés est progressivement remplacé par un système d'agents qui prennent des décisions pour leurs utilisateurs, engendrant une réorganisation du parcours utilisateur et des enjeux nouveaux dans les domaines de l'équité, la concurrence et le bien-être.",
-    "angle_eco": "Ce papier compte pour un économiste en raison de sa réflexion approfondie sur les implications économiques d'un changement majeur dans le système de recherche numérique.",
+    "resume_fr": "Digital search est passant d'un processus humain de découverte à un système agent-assisté de prise de décision. Ce changement transforme la nature du contrat entre les utilisateurs et l'interface de recherche, modifiant ainsi les principes du marché et des mécanismes économiques associés.",
+    "angle_eco": "La transformation du processus de décisions douteux vers une approche agent-native modifie l'interface traditionnelle basée sur les liens pour en faire un composant intégré, entraînant des questions fondamentales sur la qualité et l'accès à l'information, la confiance, l'allègement de moteur d'équilibre et la structure du marché.",
     "themes": [],
     "score": 3,
     "auteurs": "David M. Rothschild, Nicole Immorlica, Brendan Lucier, Markus Mobius, Aleksandrs Slivkins",
@@ -132,8 +132,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-23",
-    "resume_fr": "Dans de nombreux travaux de recherche en sciences sociales, comme l'économie, les agents basés sur LLM produisent des sorties pour lesquelles il n'existe pas de signal de correctivité machine-readable et complet. Cette absence crée une problématique distinctive de fiabilité dans les systèmes multi-agents : comment organiser le processus de génération, de critique, de coordination et de jugement humain lorsque aucun composant ne peut certifier la résultat final ?",
-    "angle_eco": "Ce papier compte pour un economiste en proposant une architecture multi-agent gérée par l'homme, optimisée pour la développement de théories économiques avec assistance d'IA.",
+    "resume_fr": "Dans plusieurs tâches de recherche en économie, les agents basés sur des LLM produisent des sorties sans signal de vérification machine-readable adéquat. Notre architecture pAI-Econ-claude gère cette incomplétude par un déploiement multi-agents contrôlé par l'humain, permettant une coordination efficace et une prise en compte de la jugation humaine dans les décisions critiques.",
+    "angle_eco": "La principale problématique traitée par ce papier dans le cadre de l'analyse économique concerne comment organiser la génération, la critique, la coordination et les décisions humaines lorsque aucun composant ne peut certifier la validité finale du résultat.",
     "themes": [
       "llm",
       "politique-publique"
@@ -150,8 +150,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-22",
-    "resume_fr": "Nous étudions comment la licence affecte l'allocation de l'innovation dans les R&D pharmaceutiques. Notre modèle différencie entre innovations incrémentales et novatrices, indiquant des dynamiques d'équilibre différentes dans le marché des technologies selon leur qualité. Les résultats suggèrent que la license maintient une sélection positive et un égalisation des rendements concurrentiels pour les projets incrémentaux, tandis que les innovations novatrices peuvent présenter des fractures de friction informatives distinctes.",
-    "angle_eco": "Ce papier explique comment le système de licence affecte la répartition des investissements en recherche et développement dans les médicaments, mettant l'accent sur les différences entre innovations plus anciennes et nouvelles.",
+    "resume_fr": "Nous avons développé un modèle dans lequel les projets de recherche et développement pharmaceutique varient en qualité ainsi que par leur régime d'innovation, distinguant entre innovations incrémentales et nouvelles. Notre analyse suggère que la couverture contractuelle maintient une sélection positive et égalisation des rendements compétitifs pour les innovations incrémentales, tandis que les projets novateurs pourraient rencontrer des friction de marché plus prononcées.",
+    "angle_eco": "Licensing affects positive selection and competitive return equalization for incremental innovation while potentially exhibiting weaker screening for novel projects, leading to residual market imperfections.",
     "themes": [
       "inference-causale",
       "prevision",
@@ -169,8 +169,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-22",
-    "resume_fr": "PyroDash introduit une méthodologie de collaboration entre modèles SLM et LLM au niveau des tokens, qui permet d'optimiser la fiabilité et l'efficacité financière. Les résultats montrent que PyroDash peut atteindre des taux d'exactitude supérieurs à ceux des modèles LLM standards tout en réduisant significativement les coûts de traitement.",
-    "angle_eco": "Ce papier illustre comment un modèle de langage petit à l'échelle des tokens peut collaborer efficacement avec un grand modèle pour réduire les coûts tout en maintenant une fiabilité raisonnable sur des tâches complexes.",
+    "resume_fr": "PyroDash propose une méthode pour combiner modèles de langue grands et petits au niveau des tokens, offrant un rendement élevé tout en réduisant considérablement les coûts par rapport aux modèles de langue grands uniquement. Les résultats montrent que PyroDash peut atteindre des niveaux d'exactitude allant jusqu'à 64,04 % avec une réduction significative du coût, atteignant ainsi un équilibre entre performance et efficacité économique.",
+    "angle_eco": "PyroDash met en avant la collaboration entre SLM et LLM à l'échelle des tokens pour réduire les coûts tout en préservant les performances de raisonnement.",
     "themes": [
       "llm",
       "travail-emploi",
@@ -188,8 +188,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-22",
-    "resume_fr": "Le modèle HAT formalise la disparité économique entre l'apprentissage de compétences par les humains et le développement progressif des capacités d'IA. Il permet de déterminer quand, où, pourquoi et sous quelles conditions structurantes la substitution humain-AI peut se produire.",
-    "angle_eco": "Ce papier compte pour un économiste en tant qu'il développe une principale théorie économique décrivant les conditions sous lesquelles l'IA remplace le travail humain dans les organisations hiérarchiques.",
+    "resume_fr": "La modélisation HAT nous permet d'analyser comment les coûts équilibrés et les compétences, ainsi que la profondeur organisationnelle, l'étendue de déploiement et l'adaptabilité stratégique influencent le processus de remplacement par l’IA. Elle souligne une principale conclusion : lorsque les coûts équivalents et les différences en efficacité entre humains et IA sont surpassés, l'IA peut remplacer la main-d'œuvre humaine.",
+    "angle_eco": "L'enjeu du modèle HAT est la formalisation de l'asymétrie économique entre l'apprentissage des compétences humaines et le développement des capacités d'AI.",
     "themes": [
       "travail-emploi"
     ],
@@ -205,8 +205,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-21",
-    "resume_fr": "Les chercheurs, gestionnaires et décideurs politiques examinent différentes approches et sources de données pour cartographier la progression et l'épanouissement de l'Intelligence Artificielle. Cette note illustre les opportunités que constituent les marques commerciales en ce qui concerne l'Intelligence Artificielle, affirmant qu'elles peuvent compléter les brevets d'IA pour recueillir des aspects variés de l'innovation en matière d'IA. Les données de marque commerciale offrent un outil fiable et disponible à un niveau mondial, couvrant tous les secteurs économiques, ce qui aide à explorer les questions émergentes liées au développement et à la diffusion de l'IA.",
-    "angle_eco": "Ce papier compte pour un économiste car il explore de nouvelles opportunités en utilisant les données des marques déposées pour comprendre l'innovation dans le domaine de l'intelligence artificielle.",
+    "resume_fr": "Les chercheurs, les gestionnaires et les décideurs politiques explorent différentes approches et sources de données pour cartographier le développement et la diffusion des technologies d'intelligence artificielle. Nous montrons comment les marques déposés sur l'IA peuvent compléter les brevets d'IA pour recueillir divers aspects de l'innovation IA, révélant ainsi l'étendue et les façons dont les entreprises explorent les technologies d'intelligence artificielle.",
+    "angle_eco": "Le mécanisme offert par ce papier est l'utilisation des brevets de marque pour capturer différents aspects de l'innovation en intelligence artificielle, allant au-delà des brevets d'invention.",
     "themes": [
       "politique-publique",
       "donnees"
@@ -223,8 +223,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-19",
-    "resume_fr": "Ce papier propose des conditions suffisantes pour surmonter les difficultés posées par l'utilisation de modèles pré-entraînés pour extraire des embeddings à partir de données non structurées, et détermine la vitesse de convergence des modèles de machine learning avec ces embeddings. Il illustre théoriquement ses résultats en application double machine-learning pour estimer les paramètres d'intérêt.",
-    "angle_eco": "Ce papier explique comment les modèles de machine-learning pré-entraînés peuvent être utilisés théoriquement et pratiquement en économie pour analyser des données non structurées.",
+    "resume_fr": "Dans cet article, nous proposons des conditions suffisantes pour surmonter les deux principales difficultés liées à l'utilisation de modèles pré-entraînés dans l'analyse d'univers data non structurée. Nous déterminons également la vitesse de convergence des modèles de machine learning équipés de tels embeddings, illustrant nos résultats à travers des applications de double machine learning pour l'estimation de paramètres tels que les régressions partiellement linéaires avec des contrôles non structurés.",
+    "angle_eco": "Ce papier fournit des conditions suffisantes pour surmonter ces difficultés et dérive la vitesse de convergence des modèles d'apprentissage automatique avec des embeddings pré-entraînés, illustrant la théorie par l'application double du machine learning pour estimer les paramètres d'intérêt.",
     "themes": [
       "inference-causale",
       "donnees"
@@ -241,8 +241,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-16",
-    "resume_fr": "Ce papier étudie comment l'intermédiation algorithmique et AI dans le gestion des fonds affecte la transmission internationale de la politique monétaire américaine vers les marchés émergents. Il souligne que la similarité des modèles entre les fonds est la principale source d'instabilité, tandis que l'ajustement rapide des modèles diversifiés permettrait une réduction des mouvements de capitaux en cas de volatilité élevée aux États-Unis.",
-    "angle_eco": "Ce papier explique comment la centralisation algorithmique et l'utilisation d'IA dans le management de fonds affecte la transmission internationale des politiques monétaires américaines aux marchés émergents.",
+    "resume_fr": "Ce travail étudie comment l'intermédiation et le management algorithmique affectent la transmission internationale de la politique monétaire américaine aux marchés émergents. Il souligne que les erreurs similaires des modèles utilisés par divers fonds, plutôt que l'intermédiation en soi, sont à l'origine principale du déséquilibre.",
+    "angle_eco": "La stabilité des flux de capitaux international est perturbée par l'herding algorithmique lorsque les modèles utilisés dans les fonds sont similaires, tandis que la diversité des modèles permet d'éliminer ces effets.",
     "themes": [
       "prevision",
       "politique-publique",
@@ -260,8 +260,8 @@
     "source": "VoxEU / CEPR",
     "type": "article",
     "date_publication": "2026-07-15",
-    "resume_fr": "La croissance de la productivité américaine s'est accélérée depuis 2022, avec une augmentation annuelle moyenne de l'output par heure de près de 2,5% entre fin 2022 et début 2026. Cependant, le rendement a dépassé son rythme pré-pandémique de 1 point de pourcentage grâce à la plus grande utilisation des ressources déjà en place plutôt qu'à la performance technologique d'IA.",
-    "angle_eco": "Le papier souligne que la hausse récente du taux de productivité aux États-Unis s'explique principalement par l'utilisation plus intensive des ressources déjà disponibles plutôt qu'une amélioration de leur efficacité.",
+    "resume_fr": "L'accélération de la productivité aux États-Unis depuis 2022 est principalement due à une utilisation accrue des ressources existantes, plutôt qu'à l'amélioration de l'efficacité. Quelque soit son rôle potentiel, l'intelligence artificielle semble avoir contribué à cette augmentation via la demande forte et les incertitudes accrues plutôt que par une amélioration de l'efficacité.",
+    "angle_eco": "Le mécanisme de l'augmentation des taux d'utilisation explique la récente accélération du taux de croissance de la productivité.",
     "themes": [
       "travail-emploi",
       "donnees",
@@ -279,8 +279,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-15",
-    "resume_fr": "Ad-load design est étudié comme une décision clé du côté de la supply dans les marchés d'annonces sponsorisées. Une expérience expérimentale a montré que l'augmentation de l'ad-load peut améliorer le revenu de 43% en moyenne, mais il entraîne également une réduction des conversions totales de 5% et la diminution de l'engagement quotidien de 2.2%.",
-    "angle_eco": "Ce papier compte pour un économiste car il exploite les concepts fondamentaux de l'économie du marché et des décisions de supply-side dans le domaine des publicités ciblées.",
+    "resume_fr": "Dans un expérimentation à grande échelle sur l'application Android, Amazon a observé que la réduction du nombre de slots publicitaires pouvait augmenter significativement les revenus, tout en diminuant paradoxalement le taux d'engagement et de conversions. Les gains en revenus varient néanmoins selon la fréquence des requêtes ciblées, avec une réduction limitée ou négative pour les requêtes moins convertissantes.",
+    "angle_eco": "Le mécanisme central est l'adaptation de la charge d'affichages pour maximiser les revenus tout en minimisant le désengagement des utilisateurs, avec un ajustement stratifié selon les niveaux de conversion des requêtes.",
     "themes": [
       "politique-publique"
     ],
@@ -296,8 +296,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-10",
-    "resume_fr": "Ce papier développe une approche de Nash équilibre perturbé (PUME), conçue pour maintenir la flexibilité et l'efficacité computable des modèles basés sur les liens Markoviens, tout en s'étendant à différents scénarios. La PUME est basée sur un modèle de choix markovien perturbé (PUMCM), qui permet non seulement aux probabilités de choix internes mais aussi aux probabilités externes d'être comprises, sans restriction préalable des options de choix.",
-    "angle_eco": "Ce papier compte pour un economiste en proposant une nouvelle théorie de la répartition des flux de trafic qui combine éléments d'équilibre comportemental et mathématiques avancés.",
+    "resume_fr": "Ce papier développe une approche PUME pour les équilibres de circulation à grande échelle qui combine la scalabilité des modèles basés sur liens Markoviens avec leur capacité d'appliquer aux contextes comportant des probabilités de choix frontières, un chargement non-déduit et interactions liées aux liens généralisées. La formulation VI du PUME permet de gérer les structures de coûts non séparables et asymétriques, offrant ainsi une approche plus flexible que celle des modèles d'équilibre de circulation Markoviens traditionnels.",
+    "angle_eco": "Perturbed utility Markovian choice model (PUMCM) est la base théorique de PUME, qui définit l'opérateur d'optimalité du Bellman à travers une fonction de surplus convexe dont le gradient fournit le schéma d'action optimal.",
     "themes": [
       "llm",
       "politique-publique",
@@ -315,8 +315,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-10",
-    "resume_fr": "Cette étude propose une méthode appelée CEFOL, un algorithme d'apprentissage profond pour résoudre des problèmes de programmation dynamique discrète avec utilité récursive. CEFOL utilise deux réseaux neuronaux différents : l'un pour représenter l'équivalent certain et l'autre pour apprendre les fonctions valeurs, les fonctions politiques et les multiplicateurs de Lagrange en utilisant des conditions d'optimisation spécifiques du modèle.",
-    "angle_eco": "Ce papier compte pour un economiste en proposant une nouvelle approche fondée sur la deep learning pour résoudre des problèmes de programmation dynamique avec utilité récursive.",
+    "resume_fr": "Cette recherche propose un algorithme appelé CEFOL pour résoudre des problèmes de programmation dynamique discrète avec une utilité récursive grâce à l'apprentissage profond. L'algorithme exploite les conditions optimales spécifiques du modèle et la fonction de certitude équivalente séparément représentée par un réseau neuronal, ce qui permet d'atteindre des résultats précis dans plusieurs problèmes testés.",
+    "angle_eco": "CEFOL intègre une représentation séparée de l'équivalent certain pour résoudre efficacement les problèmes d'optimisation dynamique avec récurrence et utilité récursive.",
     "themes": [
       "llm",
       "politique-publique"
@@ -333,8 +333,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-10",
-    "resume_fr": "Dans le contexte croissante de la complexité des composants électroniques et des délais de commercialisation plus importants, la conception front-end devient un frein majeur dans la phase de développement. Les Modèles de Langage Large (LLM), en particulier lorsqu'ils sont utilisés comme interfaces d'intelligence artificielle agentic, telles que OpenClaw, montrent une grande promesse pour transformer les méthodes d'EDA, passant de l'aide locale à des exécutions autonomes.",
-    "angle_eco": "Ce papier compte pour un économiste en explorant comment les grandes models linguistiques peuvent révolutionner l'automatisation de la conception électronique.",
+    "resume_fr": "Dans le domaine de la conception front-end des circuits électroniques, l'automatisation reste un défi critique face aux pressions du temps-to-market. Cependant, les Grandes Langues Linguistiques Modèles ont révélé une potentialité significative dans l'aide à la conception et peuvent servir d'interfaces intelligentes pour plusieurs tâches clés en front-end, comme le génération de spécifications HDL et la construction de bancs de tests.",
+    "angle_eco": "Le mécanisme de ce papier porte sur l'évolution du rôle des Large Language Models en tant qu'interfaces intelligentes unifiées pour les tâches clés de la génération de spécification et de testbench dans la phase front-end de la conception électronique, ainsi que leur potentiel d'amélioration qualitatives des workflows traditionnels comme la synthèse haute niveau.",
     "themes": [
       "llm"
     ],
@@ -350,8 +350,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-10",
-    "resume_fr": "Dans les domaines d'expertise élevés comme la santé, la finance et l'éducation, le détection de causalités à partir des données non structurées reste un défi sans être largement exploité. La méthodologie introduite ici, DKCD, comporte trois composants interconnectés pour surmonter les défis majeurs de cette tâche : la recherche de connaissances spécifiques au domaine et la réflexion causal guidée par ces connaissances, qui permettent d'améliorer l'identification des facteurs cachés essentiels et la précision des annotations, contribuant ainsi à une meilleure construction des graphes causaux.",
-    "angle_eco": "Ce papier compte pour un économiste car il propose une approche dédiée aux domaines d'expertise, telles que la santé ou le secteur financier, avec des méthodes censées identifier correctement les causes cachées dans des données non structurées.",
+    "resume_fr": "DKCD, une nouvelle approche proposée pour la détection causale dans les données non structurées dans des domaines hautement spécialisés, met en évidence des facteurs causaux latents essentiels grâce à l'intégration de connaissances spécifiques au domaine. Elle améliore significativement le développement de graphes causaux en utilisant annotations précises et guidées par la raison causale.",
+    "angle_eco": "DKCD surmonte les défis de non-identification des facteurs latents et d'annotation fiable des facteurs dans la détection causale de données sans structure dans des domaines experts à travers l'intégration de connaissances spécifiques.",
     "themes": [
       "inference-causale",
       "llm",
@@ -369,8 +369,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-10",
-    "resume_fr": "Ce travail examine l'application de la machine learning à l'indexation thématique automatique, utilisant deux sous-corpus importants du Complexe des Oeuvres de Voltaire comme cas d'étude : l’Essai sur les mœurs et l'esprit des nations et les Questions sur l'Encyclopédie. Les meilleures performances sont obtenues avec un modèle Mistral quantifié à 4 bits, réalisant des scores F1 jusqu'à 0,67.",
-    "angle_eco": "Ce papier compte pour un economiste en tant qu'il met en avant des approches d'apprentissage automatique pour l'indexation thématique de grands corpus littéraires, domaine pertinent pour les études éditoriales et historiques.",
+    "resume_fr": "Les auteurs présentent une étude sur l'utilisation de méthodes de machine learning pour l'indexation thématique automatique dans deux sous-corpora importants du Complet des Œuvres de Voltaire, ce qui pourrait permettre d'automatiser un processus traditionnellement manuel et coûteux. Notre modèle le mieux performant atteint des scores F1 de 0,67, soulignant cependant la complexité de l'évaluation en raison du jugement subjectif des indexateurs professionnels.",
+    "angle_eco": "La principale innovation du papier réside dans l'application de méthodes d'apprentissage automatique pour automatiser le processus de thématisation, un cadre multi-label classification basé sur des modèles de grands langages ajustés via Low-Rank Adaptation (LoRA), allant des configurations de quantification 4-bit jusqu'à des modèles très larges.",
     "themes": [
       "llm",
       "prevision",
@@ -388,15 +388,16 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-09",
-    "resume_fr": "[Extrait original, traduction non disponible] Routing among large language models (LLMs) trades response quality against serving cost, motivated by the reported gap between deployed routers and a per-instance oracle.",
-    "angle_eco": "",
+    "resume_fr": "Cette recherche propose une stratégie de sélection de modèle de grand langage à temps de test, optimisant le compromis entre qualité des réponses et coûts de service, en suggérant d'allouer chaque unité du budget entre la resampling du modèle engagé et le routage vers un autre modèle alternative. Les expériences montrent que cette approche RoR améliore notamment les performances parmi les pools de modèles les plus diversifiés.",
+    "angle_eco": "La phrase sur le mécanisme ou l'enjeu du papier est : Le papier met en avant la nécessité de sélectionner entre lesquelles des grandes langues modèles utiliser lors de l'exécution (resampling) et celle à qui rediriger lors d'un raté (rerouting), tout cela dans un cadre budgétaire limité, ce qui a des implications sur la qualité du rendement attendue.",
     "themes": [
       "llm",
       "politique-publique"
     ],
     "score": 4,
     "auteurs": "Teng-Ruei Chen",
-    "signal": false
+    "signal": false,
+    "llm": "qwen2.5:3b"
   },
   {
     "id": "arxiv-2607.08920v1",
@@ -424,8 +425,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-09",
-    "resume_fr": "Dans les marchés de l'énergie décentralisée, le système SolarChain-Eval met en évidence une réduction des risques d'exploitation invalidante du phénomène physique et de la production d'un apport fictif. Il souligne également comment la couche Planneur/Inspecteur basée sur un langage à grande portée améliore l'évaluation et le contrôle des actions potentiellement dangereuses.",
-    "angle_eco": "Ce papier compte pour un économiste car il propose une évaluation physique contrainte d'un cadre de benchmark pour des agents économiques fiables dans les marchés décentralisés de l'énergie.",
+    "resume_fr": "Dans des marchés énergétiques décentralisés, SolarChain-Eval est une benchmark physique contrainte proposant de mesurer la fiabilité des agents économiques. L'étude révèle un compromis entre utilité et sécurité dans l'évaluation d'agents par RL, tandis que le système intégrant une planificateur-auditeur linguistique améliore considérablement l'auditabilité et réduit certains risques.",
+    "angle_eco": "SolarChain-Eval propose une approche physique contrainte pour évaluer de manière fiable les acteurs économiques autonomes dans les marchés d'énergie distribués, en formulant la gouvernance du marché comme un Processus Decisions Markovien compatible Gymnasium où les agents prennent des décisions horaires.",
     "themes": [
       "llm",
       "politique-publique",
@@ -443,8 +444,8 @@
     "source": "VoxEU / CEPR",
     "type": "article",
     "date_publication": "2026-06-26",
-    "resume_fr": "[Extrait original, traduction non disponible] Real-time evidence from users can inform the current policy debates around artificial intelligence. This column reports on a survey of executives at typical US firms to reveal that AI adoption is already widespread but shallow.",
-    "angle_eco": "",
+    "resume_fr": "Nous utilisons des données de sondage d'un groupe de plus de 750 dirigeants de sociétés pour étudier les effets de l'intelligence artificielle sur la productivité et le marché du travail. Les gains de productivité liés à l'IA sont positifs, mais varient selon les secteurs, avec des augmentations prédites en 2026, surtout dans les services et la finance de haute compétence.",
+    "angle_eco": "AI adoption varies significantly among firms, with half having already invested, despite many smaller firms only beginning their journey, contributing to heterogeneous labor productivity gains across sectors.",
     "themes": [
       "travail-emploi",
       "politique-publique",
@@ -452,6 +453,7 @@
     ],
     "score": 3,
     "auteurs": "",
-    "signal": false
+    "signal": false,
+    "llm": "qwen2.5:3b"
   }
 ]
