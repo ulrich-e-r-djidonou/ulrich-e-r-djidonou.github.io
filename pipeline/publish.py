@@ -74,7 +74,7 @@ def generer_feed_rss(entrees):
   <channel>
     <title>La Frontiere - Ulrich Djidonou</title>
     <link>https://djidonou.com/frontiere/</link>
-    <description>Veille IA, economie et machine learning, curatee par un economiste.</description>
+    <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
 {corps}
   </channel>

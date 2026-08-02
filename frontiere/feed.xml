@@ -3,7 +3,7 @@
   <channel>
     <title>La Frontiere - Ulrich Djidonou</title>
     <link>https://djidonou.com/frontiere/</link>
-    <description>Veille IA, economie et machine learning, curatee par un economiste.</description>
+    <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
       <title>OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding</title>
