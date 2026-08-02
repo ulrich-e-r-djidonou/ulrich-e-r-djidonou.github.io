@@ -92,18 +92,49 @@ const DONNEES = {"E01": {"titre": "Agora: Enhancing LLM Agent Reasoning Via Auct
 const CLE_STOCKAGE = "frontiere-evaluation-aveugle";
 const items = Object.keys(DONNEES);
 let rang = 0;
-let notes = JSON.parse(localStorage.getItem(CLE_STOCKAGE) || "{}");
+
+// Ouverte par double-clic, la page a une origine file:// et le navigateur peut
+// refuser le stockage local. Les notes restent alors en memoire : la page
+// fonctionne, mais il faut exporter avant de la fermer.
+let stockageDisponible = true;
+try {
+  localStorage.setItem(CLE_STOCKAGE + "-test", "1");
+  localStorage.removeItem(CLE_STOCKAGE + "-test");
+} catch (erreur) {
+  stockageDisponible = false;
+}
+
+let notes = {};
+if (stockageDisponible) {
+  try {
+    notes = JSON.parse(localStorage.getItem(CLE_STOCKAGE) || "{}");
+  } catch (erreur) {
+    notes = {};
+  }
+}
+
+function ecrireStockage() {
+  if (!stockageDisponible) return;
+  try {
+    localStorage.setItem(CLE_STOCKAGE, JSON.stringify(notes));
+  } catch (erreur) {
+    stockageDisponible = false;
+  }
+}
 
 function sauvegarder() {
-  localStorage.setItem(CLE_STOCKAGE, JSON.stringify(notes));
+  ecrireStockage();
   majAvancement();
 }
 
 function majAvancement() {
   const attendu = items.length * 3;
   const faites = Object.values(notes).filter((n) => n && n.note).length;
+  const alerte = stockageDisponible
+    ? ""
+    : " — notes en memoire seulement, exporter avant de fermer";
   document.getElementById("avancement").textContent =
-    `Item ${rang + 1} sur ${items.length}, ${faites} version(s) notee(s) sur ${attendu}`;
+    `Item ${rang + 1} sur ${items.length}, ${faites} version(s) notee(s) sur ${attendu}${alerte}`;
 }
 
 function rendre() {
@@ -156,7 +187,7 @@ function rendre() {
     commentaire.value = enregistre.commentaire || "";
     commentaire.addEventListener("input", (evenement) => {
       notes[clef] = { ...(notes[clef] || {}), commentaire: evenement.target.value };
-      localStorage.setItem(CLE_STOCKAGE, JSON.stringify(notes));
+      ecrireStockage();
     });
     carte.appendChild(commentaire);
 
