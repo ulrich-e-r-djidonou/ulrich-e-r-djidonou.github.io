@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evaluation a l'aveugle des modeles</title>
+<style>
+  :root {
+    --encre: #16181d;
+    --papier: #fbfaf8;
+    --trait: #d9d5cd;
+    --appui: #7a736a;
+    --accent: #1f4b63;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2rem 1.25rem 5rem;
+    background: var(--papier);
+    color: var(--encre);
+    font: 16px/1.6 Georgia, "Times New Roman", serif;
+  }
+  main { max-width: 1180px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; margin: 0 0 0.25rem; }
+  .consigne { color: var(--appui); font-size: 0.9rem; max-width: 62ch; }
+  .barre {
+    position: sticky; top: 0; z-index: 2;
+    display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+    margin: 1.5rem 0; padding: 0.75rem 0;
+    background: var(--papier); border-bottom: 1px solid var(--trait);
+    font-family: system-ui, sans-serif; font-size: 0.85rem;
+  }
+  button {
+    font: inherit; padding: 0.4rem 0.9rem; cursor: pointer;
+    background: #fff; color: var(--encre);
+    border: 1px solid var(--trait); border-radius: 3px;
+  }
+  button:hover { border-color: var(--accent); color: var(--accent); }
+  button.primaire { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .avancement { margin-left: auto; color: var(--appui); }
+  .titre-item {
+    font-size: 1.05rem; font-weight: normal; font-style: italic;
+    margin: 0 0 1.25rem; padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--trait);
+  }
+  .versions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  @media (max-width: 900px) { .versions { grid-template-columns: 1fr; } }
+  .version { border: 1px solid var(--trait); border-radius: 4px; padding: 1rem; background: #fff; }
+  .version.notee { border-color: var(--accent); }
+  .etiquette {
+    font-family: system-ui, sans-serif; font-size: 0.7rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--appui); margin-bottom: 0.6rem;
+  }
+  .resume { margin: 0 0 0.85rem; }
+  .angle { margin: 0 0 1rem; padding-left: 0.75rem; border-left: 2px solid var(--trait); color: #3c4048; }
+  .notes { display: flex; gap: 0.35rem; margin-bottom: 0.6rem; }
+  .notes button { flex: 1; padding: 0.35rem 0; font-family: system-ui, sans-serif; }
+  .notes button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  textarea {
+    width: 100%; min-height: 3.5rem; padding: 0.5rem; resize: vertical;
+    font: 0.85rem/1.5 system-ui, sans-serif;
+    border: 1px solid var(--trait); border-radius: 3px; background: var(--papier);
+  }
+  .fin { margin-top: 2rem; font-family: system-ui, sans-serif; font-size: 0.85rem; color: var(--appui); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Evaluation a l'aveugle des modeles</h1>
+  <p class="consigne">
+    Trois redactions du meme article, produites par trois modeles differents,
+    dans un ordre tire au sort a chaque item. Notez de 1 a 5 la qualite du
+    francais et l'interet de l'analyse. La cle des modeles n'est pas dans
+    cette page. Les notes restent dans ce navigateur jusqu'a l'export.
+  </p>
+
+  <div class="barre">
+    <button id="precedent">Precedent</button>
+    <button id="suivant" class="primaire">Suivant</button>
+    <button id="exporter">Exporter les notes</button>
+    <button id="effacer">Effacer</button>
+    <span class="avancement" id="avancement"></span>
+  </div>
+
+  <h2 class="titre-item" id="titre"></h2>
+  <div class="versions" id="versions"></div>
+  <p class="fin" id="fin"></p>
+</main>
+
+<script>
+const DONNEES = {"E01": {"titre": "Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation", "versions": [{"option": "A", "resume_fr": "Agora propose une mechanisme d'aution pour allouer les tâches aux modèles experts et outils de manière efficace. L'approche permet aux agents de négocier sur la base de leur compétence rectifiée, garantissant ainsi que les étapes logiques soient routées vers le résolvant le plus capable.", "angle_eco": "L'auction mécanique permet aux agents de LLM d'attribuer efficacement les tâches à des modèles experts et outils en fonction de leur compétence révisée."}, {"option": "B", "resume_fr": "Agora introduit un mécanisme d'auction compatible avec l'incentive pour allouer dynamiquement les tâches aux modèles experts et outils. Cette approche permet de mieux exploiter la variabilité de performance et l'efficacité en coûts par rapport à des approches basées sur des correspondances grossières entre les tâches et les fonctions des modèles ou outils experts.", "angle_eco": "Agora introduit un mécanisme d'auction compatible avec l'incitation pour la répartition dynamique des tâches entre différents modèles et outils experts, en traitant les étapes de raisonnement comme des biens négociables afin que les agents puissent miser selon leur compétence corrigée."}, {"option": "C", "resume_fr": "La recherche propose une nouvelle approche pour organiser les expertes modèles et outils de manière à maximiser leur efficacité, en introduisant un mécanisme d'enchères inconditionnellement compatible. Cette méthode permet aux agents de choisir le modèle ou l'outil le plus compétent pour chaque étape de raisonnement plutôt que celui qui est le plus confiant.", "angle_eco": "Agora introduit un mécanisme d'enchères non-coercif pour allouer dynamiquement les tâches aux modèles et outils experts, valorisant ainsi la capacité rectifiée des agents plutôt que leur confiance excessive."}]}, "E02": {"titre": "Why Large Language Models and Humans Converge and Diverge in Evaluating Creativity", "versions": [{"option": "A", "resume_fr": "Les grandes modèles de langage et les humains convergent sur la base d'un ensemble limité de critères d'évaluation de la créativité. Les différences entre les évaluations des LLMs et celles des humains sont particulièrement marquées dans le dimension contextual, qui capture l'information sociale, marchande et réputatoire.", "angle_eco": "Les différences entre les évaluations des modèles de langage massifs et des humains en matière de créativité sont influencées par la manière dont ils appliquent différents critères d'évaluation."}, {"option": "B", "resume_fr": "Les études montrent que les grandes modèles de langage (LLM) évaluent généralement la créativité selon un sous-ensemble plus restreint des critères humains, avec une convergence la plus forte sur la novateur et une divergence claire sur le contextuel. Les LLM moins sensibles à l'information contextuelle produisent des jugements de créativité moins influencés par ces facteurs sociaux et marchands.", "angle_eco": "Le mécanisme d'évaluation de la créativité par les grands modèles linguistiques (LLMs) et ses divergences avec l'évaluation humaine dépend des standards sous-jacents, avec une convergence plus forte en novateur et une divergence notoire en contextuel, reflétant des différences model-specifics dans la sensibilité à l'information contextuelle."}, {"option": "C", "resume_fr": "Les grandes langues de modèle (LLM) utilisent généralement un sous-ensemble plus restreint des critères d'évaluation de la créativité humaine, avec une convergence forte dans le domaine de la nouveauté et une divergence claire dans celui du contexte. Ces différences se reflètent également dans les jugements de créativité effectués par les modèles.", "angle_eco": "Les évaluations de créativité des grands modèles linguistiques divergent souvent du jugement humain, surtout dans la dimension contextuelle qui capture des informations sociales, marchandes et réputatoires."}]}, "E03": {"titre": "Estimating Causal Effects from Data Generated by Stochastic Algorithms", "versions": [{"option": "A", "resume_fr": "Ce papier propose une nouvelle méthode pour estimer l'impact des caractéristiques du contenu à partir de données observationnelles dans des systèmes qui utilisent des algorithmes stochastiques pour déterminer l'exposition des utilisateurs. Des éléments de données supplémentaires, notamment l'identité d'un élément non exposé et une estimation du rapport de probabilité entre les items non et exposés, permettent d'identifier les effets causaux même en présence de confondeurs non observés.", "angle_eco": "Estimant les effets causaux de caractéristiques du contenu à partir de données générées par des algorithmes stochastiques qui incluent au moins une item non exposée et son ratio de probabilité d'exposition, cette méthode permet d'évaluer l'impact des features même en présence de confondeurs non observés."}, {"option": "B", "resume_fr": "Les algorithmes stochastiques utilisés par les systèmes de recommandation et les chatbots pour sélectionner le contenu en fonction des caractéristiques des utilisateurs ou du contexte sont souvent soumis à des effets de confondants non observables. Les données observées peuvent être utilisées pour estimer l'impact des caractéristiques du contenu sur les résultats tels que la participation des utilisateurs.", "angle_eco": "L'estimation des effets causaux de caractéristiques de contenu peut être difficile dans les systèmes avec une grande bibliothèque de contenu ou où le contenu est généré spécifiquement pour un utilisateur, en raison de la personnalisation du contenu et de sa variabilité."}, {"option": "C", "resume_fr": "Ce papier propose une nouvelle méthode pour estimer l'impact des caractéristiques du contenu à partir de données observatives, lorsque l'algorithme déterminant l'exposition utilisateur incorpore un certain aléa. De plus, deux éléments de données supplémentaires sont enregistrés pour chaque utilisateur : l'identité d'au moins un élément qui aurait pu être exposé mais n'a pas été (l'élément non exposé) et une estimation du rapport entre la probabilité que cet élément non exposé ait été montré et celle de l'élément exposé.", "angle_eco": "Ce papier propose une méthode pour estimer l'impact des caractéristiques de contenu utilisant les données observatives, lorsque l'algorithme déterminant l'exposition du utilisateur incorpore un certain aléa, et que deux éléments de données supplémentaires sont enregistrés pour chaque utilisateur : l'identité d'au moins un élément qui aurait pu être exposé au utilisateur mais n'a pas été (l'élément non exposé) ; l'estimation du rapport entre la probabilité qu'un tel élément ait été montré et celle de l'élement exposé."}]}, "E04": {"titre": "TSAI-MetaFraud: A Benchmark Dataset for Financial Fraud Transaction and Behavioral Risk Detection in Metaverse Ecosystems", "versions": [{"option": "A", "resume_fr": "Le développement de plateformes métavers a introduit de nouvelles défis liés à la fraude, aux activités de bots et au comportement illégal financier. TSAI-MetaFraud est un nouveau jeu de données multimodal et multitâche pour l'analyse de fraudes dans les économies virtuelles, intégrant informations comportementales, transactionnelles et structurées en graphes.", "angle_eco": "TSAI-MetaFraud propose un ensemble de données bimodale et multitâche pour l'analyse des fraudes dans les économies virtuelles, intégrant information comportementale, transactionnelle et structurée en graphes."}, {"option": "B", "resume_fr": "TSAI-MetaFraud est un ensemble de données multimodale et multitâche destiné à la détection des fraudes dans les économies virtuelles du métavers, intégrant des informations comportementales, transactionnelles et structurales en graphe. Ce jeu de données définit plusieurs tâches de référence pour évaluer les méthodes de détection de fraude multimodale et fournit des évaluations baselines utilisant des modèles d'apprentissage automatique et des réseaux neuronaux en graphe.", "angle_eco": "Le mécanisme du papier consiste à présenter TSAI-MetaFraud, un ensemble de données multimodale et multitâche pour la détection de fraude dans les économies virtuelles, intégrant des informations comportementales, transactionnelles et structurées en graphe tout en fournissant des tâches de référence et des évaluations baselines."}, {"option": "C", "resume_fr": "Les plateformes de métaverse ont créé des économies virtuelles qui introduisent de nouveaux défis liés à la fraude, à l'activité bot et au comportement financier illégal. Le TSAI-MetaFraud est un ensemble de données multimodales et multi-tâches pour le détecteur de fraude en économie virtuelle, intégrant des informations comportementales, transactionnelles et structurées graphiques.", "angle_eco": "Le papier est un outil essentiel pour l'analyse économique car il permet de mesurer et de comparer les performances des différents acteurs du marché."}]}, "E05": {"titre": "Perturbed utility Markovian traffic equilibrium: theory and computation", "versions": [{"option": "A", "resume_fr": "Ce papier développe un cadre d'équilibre perturbé de utilité markovienne (PUME) qui maintient la scalabilité des modèles d'équilibre markovien basés sur les liens tout en étendant leur applicabilité à des scénarios avec des probabilités de choix aux limites, un chargement réseau non discounté et des interactions générales entre les liens. La formulation VI du problème d'équilibre PUME permet une structure de coûts non séparable et asymétrique, offrant ainsi un cadre de modélisation plus flexible que les modèles existants d'équilibre markovien de trafic (MTE).", "angle_eco": "Le mécanisme du perturbed utility Markovian equilibrium (PUME) consiste à définir le Bellman optimality operator par une fonction de surplus convexe dont le gradient fournit directement la politique optimale, permettant ainsi d'étendre les modèles de choix markoviens existants aux situations avec des probabilités de choix aux limites, un chargement réseau non discounté et des interactions générales entre les liens."}, {"option": "B", "resume_fr": "Le modèle de PUME présente un avantage par rapport aux modèles MTE actuels car il peut gérer les probabilités de choix de bordereaux et des charges non séparables. Le problème de VI formelisé pour le PUME garantit l'existence et la unicité d'une solution, offrant ainsi une alternative plus flexible à ceux existants.", "angle_eco": "Le modèle de circulation Markovien perturbé de utilité (PUME) présente un cadre plus flexible pour modéliser les situations avec des probabilités de choix de frontière, des charges réseau non décomptées et des interactions de lien généralisées."}, {"option": "C", "resume_fr": "Ce papier développe une nouvelle approche appelée PUME pour modéliser l'équilibre de trafic qui conserve la scalabilité des modèles Markoviens basés sur les liens tout en étendant leur utilité à des situations avec probabilités de choix aux limites, un chargement non-décurtisé du réseau et des interactions liées généralisées. La méthode PUME utilise une fonction de surplus convexe pour définir l'opérateur d'optimalité Markovien, ce qui permet des probabilités de choix intérieures et aux limites sans imposer de restrictions préexistantes sur les ensembles de choix.", "angle_eco": "Perturbée par la utilité et marquée de manière markoviennement, cette étude développe un cadre PUME qui maintient la scalabilité des modèles de trafic equilibrium basés sur les liens tout en étendant leur application aux situations avec probabilités de choix à bords, chargement non-décurtisé du réseau et interactions liées entre les liens."}]}, "E06": {"titre": "Frontier AI performance across the business disciplines: a case-grounded benchmark of knowledge work and analytical reasoning", "versions": [{"option": "A", "resume_fr": "Les benchmarks courants des modèles de langage large ne mesurent pas suffisamment les compétences d'analyse et de jugement subjectif effectuées quotidiennement par les professionnels du travail blanc. En revanche, les modèles d'intelligence artificielle sur BusinessCaseBench ont déjà obtenu des scores élevés par rapport aux critères établis par les enseignants, indiquant une performance de l'IA élevée et en constante amélioration pour ce type de travail.", "angle_eco": "Le mécanisme ou l'enjeu du papier porte sur la mesure des progrès de la performance d'IA dans les tâches d'analyse et de jugement subordonnées effectuées quotidiennement par les professionnels qualifiés."}, {"option": "B", "resume_fr": "Les grandes modèles de langage (LLM) améliorent rapidement leurs performances, mais ces benchmarks d'IA testent principalement des capacités telles que la rappel de faits, l'answerne à des questions étroites, le résolution de problèmes mathématiques et l'utilisation de outils agenciaux.\n\nLes modèles d'IA actuels déjà obtiennent de bons scores sur BusinessCaseBench, et les capacités au sein d'une famille de modèle améliorent considérablement au cours des deux années suivantes.", "angle_eco": "Le progrès de l'intelligence artificielle dans les domaines du travail analytique et de la prise de décision stratégique est mal mesuré."}, {"option": "C", "resume_fr": "Les modèles d'IA avancés atteignent des scores élevés sur BusinessCaseBench, un référentiel basé sur des cas d'affaires dans diverses disciplines commerciales. La performance de ces modèles s'améliore significativement au cours de deux ans, montrant une progression rapide de l'IA dans ce type de travail analytique.", "angle_eco": "Le mécanisme de BusinessCaseBench consiste à évaluer l'analytique et la réflexion stratégique des modèles d'intelligence artificielle en utilisant des questions tirées de cas d'affaires couvrant diverses disciplines, chacun associé à un critère de notation basé sur les solutions enseignantes expertes."}]}, "E07": {"titre": "Agentic AI Orchestration of Heterogeneous Economic Models for Rapid, Multi-scenario Analysis of Energy Crises", "versions": [{"option": "A", "resume_fr": "Les modèles économiques rigoureux peuvent prendre des mois à construire, mais les crises énergétiques nécessitent des décisions de politiciens dans des jours ou des heures. Les disruptions dans les marchés énergétiques ne sont pas isolées et se propagent rapidement à travers les systèmes mondiaux interconnectés.", "angle_eco": "Les économistes doivent faire face à des scénarios d'urgence énergétiques qui nécessitent des décisions rapides et des informations limitées, ce qui rend difficile l'intégration de modèles économiques hétérogènes."}, {"option": "B", "resume_fr": "Les modèles économiques rigoureux peuvent mettre des mois à être construits, tandis que les crises énergétiques exigent des décisions des pouvoirs publics dans des délais allant de quelques jours à quelques heures. Des grandes modélisations linguistiques peuvent effectuer la critique intégration directement, permettant la construction d'escenarios internes cohérents et l'exécution ordonnée des modèles existants.", "angle_eco": "Rigoureux modèles économiques peuvent mettre des mois à être construits, tandis que les crises énergétiques exigent des décisions des pouvoirs publics dans des délais allant de quelques jours à quelques heures."}, {"option": "C", "resume_fr": "Les modèles économiques existants sont souvent trop spécialisés et difficiles à intégrer manuellement, ce qui peut retarder considérablement les analyses nécessaires pour gérer rapidement les crises énergétiques. Les grandes langues de pensée peuvent remplacer cette limitation en intégrant automatiquement ces modèles, offrant une synthèse cohérente des scénarios et des résultats directs provenant des modèles originaux.", "angle_eco": "Le mécanisme crucial du papier est l'orchestration automatique de modèles économiques hétérogènes pour une analyse rapide et multi-cas d'une crise énergétique."}]}, "E08": {"titre": "Execution and Evaluation: A New Occupational Measure and Long-Run Employment Gradients", "versions": [{"option": "A", "resume_fr": "L'automatisation de l'exécution par l'intelligence artificielle est plus facile que celle de l'évaluation, et la mesure d'exposition classe les tâches selon la capacité de l'IA à les exécuter plutôt que selon la fonction humaine. L'augmentation de l'emploi est moindre dans les occupations exécutives fortes depuis 2012, ce qui suggère une tendance secular plutôt qu'un phénomène lié à l'ère de l'IA.", "angle_eco": "Execution share, distinct from AI capability and routine-task intensity, ranks occupations by the extent to which artificial intelligence can perform their tasks, revealing lower employment growth in execution-heavy white-collar jobs since 2012."}, {"option": "B", "resume_fr": "Les tâches de travail automatisées sont évaluées plus difficilement que leur exécution, car la production de contenu est peu coûteuse, tandis que la vérification de sa précision n'est pas. Les mesures d'exposition classent les tâches en fonction de leurs capacités à être effectuées par l'IA, et non en fonction de la fonction que le humain y fournit.", "angle_eco": "L'analyse économique utilise le papier comme outil pour évaluer les impacts des technologies de l'information sur les emplois et les gradients d'emploi dans différents secteurs."}, {"option": "C", "resume_fr": "La mesure d'exécution est stable et distincte de la capacité à l'IA, ajoutant peu de puissance supplémentaire par rapport aux activités d'évaluation existantes. Les emplois axés sur l'exécution ont connu une croissance plus faible dans les métiers blancs depuis 2012, sans équivalence des pentes entre familles d'occupations.", "angle_eco": "La mesure clé du papier est la part d'exécution, qui quantifie comment les tâches peuvent être automatisées par l'IA pour le travailleur humain, distincte de sa capacité à l'AI et de son intensité de tâches répétitives."}]}, "E09": {"titre": "Forecasting Inflation with Microdata: An Adaptive Machine Learning Approach", "versions": [{"option": "A", "resume_fr": "La microéconomie peut aider à prévoir l'inflation aggregate dans un environnement non stationnaire. Un pipeline d'apprentissage automatique adaptatif combine des prévisions micro avec des benchmarks classiques pour améliorer les résultats de la prédiction.", "angle_eco": "La valeur de la micro-données se révèle essentielle pour prédire l'inflation en période non stationnaire uniquement après les chocs importants."}, {"option": "B", "resume_fr": "La recherche montre que le prévisionnel basé sur les données microéconomiques améliore la prédiction de l'inflation après 2020, mais seulement pendant une période volatile. La combinaison du prévisionnel micro avec d'autres modèles s'avère performant à partir de cette date.", "angle_eco": "La valeur du papier réside dans son utilisation de la microdata pour entrainer un algorithme de machine learning adaptatif, qui permet d'améliorer les prévisions d'inflation comparées à des benchmarks univariés, surtout après 2020."}, {"option": "C", "resume_fr": "Le pipeline développé combine un algorithme de arbres graduellement améliorés avec une prévision microéconomique pour prédire l'inflation aggregée dans un environnement non stationnaire. Les résultats montrent que la valeur des données microéconomiques se manifeste principalement après 2020 pour améliorer les prévisions à tous les horizons.", "angle_eco": "Does microeconomic heterogeneity help to forecast aggregate inflation in a non-stationary environment?"}]}, "E10": {"titre": "Adaptive Ad Load Design for Sponsored Search Markets: Evidence, Theory, and Deployment", "versions": [{"option": "A", "resume_fr": "Cette recherche étudie la tension entre augmenter le nombre de slots publicitaires et les conversions totales, mettant en évidence une forte corrélation positive entre augmentation d'ad-load et hausse des revenus, accompagnée d'une diminution significative des conversions. Une stratégie adaptative, e-LAAL, a été développée pour optimiser cette balance, offrant gains de rétention pour les requêtes hautement convertibles tout en minimisant les pertes pour celles avec faibles taux de conversion.", "angle_eco": "Ad-load design est un mécanisme clé de la décision d'offre dans les marchés de recherche sponsorisée : augmenter le nombre de slots sponsorisés peut augmenter les revenus, mais risque de chasser les résultats organiques et de dégrader les résultats pour l'utilisateur."}, {"option": "B", "resume_fr": "L'augmentation de la charge publicitaire peut augmenter les revenus de 43% mais réduire les conversions de recherche totales de 5% et l'engagement quotidien de 2,2%. L'algorithme e-LAAL, qui combine une règle de décision sans modèle à base de résultats récents avec des bras d'exploration statiques, améliore le compromis entre revenus et conversions par rapport aux benchmarks existants.", "angle_eco": "Ad-load design in sponsored search markets involves balancing increased revenue from more ads with potential reductions in user engagement and organic results, as evidenced by a large-scale randomized field experiment on an Android app store where increasing ad load raised revenue by up to 43% but reduced total search conversions by up to 5%."}, {"option": "C", "resume_fr": "Les résultats montrent que l'augmentation de la charge publique peut augmenter les revenus jusqu'à 43% mais réduire les conversions totales et l'engagement journalier. L'algorithme adaptatif e-LAAL améliore le rapport revenu-conversion empirique par rapport aux benchmarks statiques déployés.", "angle_eco": "L'analyse économique du papier sur l'ad-load pour les marchés de recherche sponsorisée montre que plus de slots publicitaires peuvent augmenter les revenus, mais risquent de faire disparaître les résultats organiques et d'altérer les résultats des utilisateurs."}]}};
+const CLE_STOCKAGE = "frontiere-evaluation-aveugle";
+const items = Object.keys(DONNEES);
+let rang = 0;
+let notes = JSON.parse(localStorage.getItem(CLE_STOCKAGE) || "{}");
+
+function sauvegarder() {
+  localStorage.setItem(CLE_STOCKAGE, JSON.stringify(notes));
+  majAvancement();
+}
+
+function majAvancement() {
+  const attendu = items.length * 3;
+  const faites = Object.values(notes).filter((n) => n && n.note).length;
+  document.getElementById("avancement").textContent =
+    `Item ${rang + 1} sur ${items.length}, ${faites} version(s) notee(s) sur ${attendu}`;
+}
+
+function rendre() {
+  const item = items[rang];
+  const bloc = DONNEES[item];
+  document.getElementById("titre").textContent = `${item}. ${bloc.titre}`;
+
+  const conteneur = document.getElementById("versions");
+  conteneur.innerHTML = "";
+  bloc.versions.forEach((version) => {
+    const clef = `${item}|${version.option}`;
+    const enregistre = notes[clef] || { note: "", commentaire: "" };
+
+    const carte = document.createElement("div");
+    carte.className = "version" + (enregistre.note ? " notee" : "");
+
+    const etiquette = document.createElement("div");
+    etiquette.className = "etiquette";
+    etiquette.textContent = `Version ${version.option}`;
+    carte.appendChild(etiquette);
+
+    const resume = document.createElement("p");
+    resume.className = "resume";
+    resume.textContent = version.resume_fr;
+    carte.appendChild(resume);
+
+    const angle = document.createElement("p");
+    angle.className = "angle";
+    angle.textContent = version.angle_eco;
+    carte.appendChild(angle);
+
+    const notation = document.createElement("div");
+    notation.className = "notes";
+    [1, 2, 3, 4, 5].forEach((valeur) => {
+      const bouton = document.createElement("button");
+      bouton.type = "button";
+      bouton.textContent = valeur;
+      bouton.setAttribute("aria-pressed", String(Number(enregistre.note) === valeur));
+      bouton.addEventListener("click", () => {
+        notes[clef] = { ...(notes[clef] || {}), note: valeur };
+        sauvegarder();
+        rendre();
+      });
+      notation.appendChild(bouton);
+    });
+    carte.appendChild(notation);
+
+    const commentaire = document.createElement("textarea");
+    commentaire.placeholder = "Commentaire libre";
+    commentaire.value = enregistre.commentaire || "";
+    commentaire.addEventListener("input", (evenement) => {
+      notes[clef] = { ...(notes[clef] || {}), commentaire: evenement.target.value };
+      localStorage.setItem(CLE_STOCKAGE, JSON.stringify(notes));
+    });
+    carte.appendChild(commentaire);
+
+    conteneur.appendChild(carte);
+  });
+
+  majAvancement();
+}
+
+function exporter() {
+  const lignes = [["item", "option", "note_humaine_1_5", "commentaire"]];
+  items.forEach((item) => {
+    DONNEES[item].versions.forEach((version) => {
+      const enregistre = notes[`${item}|${version.option}`] || {};
+      lignes.push([
+        item,
+        version.option,
+        enregistre.note || "",
+        (enregistre.commentaire || "").replace(/"/g, '""'),
+      ]);
+    });
+  });
+  const csv = lignes
+    .map((ligne) => ligne.map((cellule) => `"${cellule}"`).join(","))
+    .join("\n");
+  const lien = document.createElement("a");
+  lien.href = URL.createObjectURL(new Blob(["\ufeff" + csv], { type: "text/csv" }));
+  lien.download = "notes_aveugle.csv";
+  lien.click();
+  document.getElementById("fin").textContent =
+    "Notes exportees. Depouiller avec : python -m pipeline.benchmark.depouiller_evaluation notes_aveugle.csv";
+}
+
+document.getElementById("suivant").addEventListener("click", () => {
+  rang = Math.min(rang + 1, items.length - 1);
+  rendre();
+  window.scrollTo({ top: 0 });
+});
+document.getElementById("precedent").addEventListener("click", () => {
+  rang = Math.max(rang - 1, 0);
+  rendre();
+  window.scrollTo({ top: 0 });
+});
+document.getElementById("exporter").addEventListener("click", exporter);
+document.getElementById("effacer").addEventListener("click", () => {
+  notes = {};
+  sauvegarder();
+  rendre();
+});
+
+rendre();
+</script>
+</body>
+</html>
