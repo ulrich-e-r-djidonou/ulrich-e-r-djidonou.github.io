@@ -116,7 +116,8 @@ def generer_rapport(corpus, resultats, modeles, metriques):
         "",
         "## Objet",
         "",
-        "Ce banc compare trois modèles locaux sur le même corpus figé de 61 articles. "
+        f"Ce banc compare trois modèles locaux sur le même corpus figé de "
+        f"{corpus['nombre_items']} articles. "
         "Il mesure la conformité automatique et le temps d'exécution. Il ne change "
         "pas le modèle utilisé en production.",
         "",

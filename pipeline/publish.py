@@ -144,12 +144,21 @@ def main():
         limite,
     )
 
+    entrees_par_mois = {}
     for entree in a_archiver:
-        mois = date_valide(entree).strftime("%Y-%m")
+        entrees_par_mois.setdefault(
+            date_valide(entree).strftime("%Y-%m"),
+            [],
+        ).append(entree)
+
+    for mois, entrees in entrees_par_mois.items():
         chemin_archive = ARCHIVES / f"{mois}.json"
         archive = charger_json(chemin_archive, [])
-        if not any(e["id"] == entree["id"] for e in archive):
-            archive.append(entree)
+        identifiants_archives = {entree["id"] for entree in archive}
+        archive.extend(
+            entree for entree in entrees
+            if entree["id"] not in identifiants_archives
+        )
         archive.sort(key=lambda e: e.get("date_publication") or "", reverse=True)
         contenu = json.dumps(archive, ensure_ascii=False, indent=2)
         json.loads(contenu)  # validation avant ecriture

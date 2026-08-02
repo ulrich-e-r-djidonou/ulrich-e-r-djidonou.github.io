@@ -2,7 +2,6 @@
 
 import argparse
 import json
-import os
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -10,6 +9,7 @@ from pathlib import Path
 import requests
 
 from pipeline.curate import (
+    OLLAMA_URL,
     construire_prompt_angle,
     construire_prompt_resume,
     erreurs_angle,
@@ -20,7 +20,6 @@ from pipeline.curate import (
 MODELES_DEFAUT = ["qwen2.5:3b", "qwen2.5:7b", "llama3.2:3b"]
 CORPUS_DEFAUT = Path(__file__).with_name("corpus.json")
 RESULTATS_DEFAUT = Path(__file__).with_name("resultats.json")
-OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/generate")
 
 
 def normaliser_sortie(texte):

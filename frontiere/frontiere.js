@@ -23,7 +23,6 @@
 
   const etat = {
     flux: [],
-    fluxPrincipal: [],
     themeActif: null,
     typeActif: null,
     recherche: "",
@@ -333,8 +332,8 @@
       chargerJSON("data/bibliotheque.json"),
     ]);
 
-    etat.fluxPrincipal = flux || [];
-    etat.flux = etat.fluxPrincipal;
+    const fluxPrincipal = flux || [];
+    afficherJeuEntrees(fluxPrincipal, "Sélection principale", false);
 
     const majEl = document.getElementById("derniere-maj");
     majEl.textContent = meta && meta.derniere_mise_a_jour
@@ -349,10 +348,9 @@
       rendreFlux();
     });
     document.getElementById("retour-selection").addEventListener("click", () => {
-      afficherJeuEntrees(etat.fluxPrincipal, "Sélection principale", false);
+      afficherJeuEntrees(fluxPrincipal, "Sélection principale", false);
     });
 
-    afficherJeuEntrees(etat.fluxPrincipal, "Sélection principale", false);
     rendreBibliotheque(bibliotheque);
     rendreArchives(meta);
   }
