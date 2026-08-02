@@ -3,3 +3,4 @@ __pycache__/
 pipeline/_candidats_bruts.json
 pipeline/_candidats_cures.json
 pipeline/_candidats_archives.json
+pipeline/_regeneration.json

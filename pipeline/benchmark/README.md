@@ -75,3 +75,36 @@ Le coût API direct est nul parce que l'exécution est locale. Le coût
 énergétique et le coût matériel ne sont pas mesurés. Les métriques
 automatiques ne suffisent pas à choisir un modèle. La décision finale revient
 à l'auteur du site après lecture de l'échantillon aveugle.
+
+### Grille de lecture
+
+Le CSV reste la source, mais noter trente blocs de texte dans un tableur
+pousse à survoler. La grille HTML présente un item à la fois, les trois
+versions côte à côte, et conserve les notes dans le navigateur. Elle
+n'embarque pas la clé des modèles.
+
+```powershell
+python -m pipeline.benchmark.generer_grille_html
+```
+
+Ouvrir ensuite `evaluation_aveugle.html`, noter de 1 à 5, puis exporter. Le
+dépouillement ne lève l'aveugle qu'à la dernière étape:
+
+```powershell
+python -m pipeline.benchmark.depouiller_evaluation notes_aveugle.csv
+```
+
+### Qualité du français, mesure du 2 août 2026
+
+Les règles de langue de `curate.py` appliquées après coup aux 349 champs
+produits par le banc:
+
+| Modèle | Champs avec au moins une alerte |
+|---|---:|
+| `qwen2.5:3b` | 8,3 % |
+| `qwen2.5:7b` | 5,9 % |
+| `llama3.2:3b` | 5,8 % |
+
+L'élision manquante domine dans les trois cas. Passer à un modèle plus gros
+ne la corrige pas: `qwen2.5:7b` demande 70 % de temps en plus pour un écart
+de 2,4 points. C'est le validateur qui traite ce défaut, pas le modèle.
