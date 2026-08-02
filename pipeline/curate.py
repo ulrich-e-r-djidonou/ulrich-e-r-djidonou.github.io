@@ -130,9 +130,12 @@ def resume_ollama(titre, abstract):
 def angle_eco_ollama(titre, abstract):
     """Une phrase 'pourquoi ca compte pour un economiste', ou None si Ollama echoue."""
     prompt = (
-        "En une seule phrase en francais, explique pourquoi ce papier compte pour un "
-        "economiste. Ne repete pas le titre mot pour mot, n'invente aucun chiffre absent "
-        "du texte source. Reponds seulement avec la phrase.\n\n"
+        "Rédige une seule phrase en français sur le mécanisme ou l'enjeu du papier "
+        "pour l'analyse économique. Commence directement par ce mécanisme ou cet enjeu. "
+        "Ne commence pas par « Ce papier », « Cet article » ou « Cette étude », ni par "
+        "une formule annonçant son intérêt pour un économiste. Ne répète pas le titre "
+        "mot pour mot et n'invente aucun chiffre ou résultat absent du texte source. "
+        "N'ajoute aucun préfixe ni commentaire.\n\n"
         f"Titre : {titre}\n"
         f"Resume original (anglais) : {abstract[:1500]}\n\n"
         "Phrase :"

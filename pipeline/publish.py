@@ -8,6 +8,7 @@ semaine, et ecrit :
   - frontiere/data/meta.json
   - frontiere/data/archives/AAAA-MM.json
   - frontiere/feed.xml
+  - sitemap.xml (date de mise a jour de /frontiere/ uniquement)
 
 Valide chaque JSON avant ecriture : si le resultat est mal forme ou vide
 alors que l'entree ne l'etait pas, le script s'arrete sans rien ecrire
@@ -16,6 +17,7 @@ alors que l'entree ne l'etait pas, le script s'arrete sans rien ecrire
 
 import io
 import json
+import re
 import sys
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -28,6 +30,7 @@ RACINE = Path(__file__).parent.parent
 DONNEES = RACINE / "frontiere" / "data"
 ARCHIVES = DONNEES / "archives"
 CURES = Path(__file__).parent / "_candidats_cures.json"
+SITEMAP = RACINE / "sitemap.xml"
 
 FENETRE_JOURS = 90
 THEMES_CONNUS = [
@@ -74,6 +77,33 @@ def generer_feed_rss(entrees):
   </channel>
 </rss>
 """
+
+
+def synchroniser_sitemap(chemin_sitemap=SITEMAP, chemin_meta=DONNEES / "meta.json"):
+    """Aligne le lastmod de /frontiere/ sur la date inscrite dans meta.json."""
+    meta = charger_json(chemin_meta, {})
+    derniere_mise_a_jour = meta.get("derniere_mise_a_jour")
+    if not derniere_mise_a_jour:
+        raise ValueError("derniere_mise_a_jour absente de meta.json")
+    try:
+        date.fromisoformat(derniere_mise_a_jour)
+    except ValueError as erreur:
+        raise ValueError("derniere_mise_a_jour doit etre une date ISO") from erreur
+
+    contenu = chemin_sitemap.read_text(encoding="utf-8")
+    motif = re.compile(
+        r"(<url>\s*<loc>https://djidonou\.com/frontiere/</loc>\s*<lastmod>)[^<]+(</lastmod>)"
+    )
+    contenu_modifie, nombre = motif.subn(
+        lambda correspondance: (
+            f"{correspondance.group(1)}{derniere_mise_a_jour}{correspondance.group(2)}"
+        ),
+        contenu,
+        count=1,
+    )
+    if nombre != 1:
+        raise ValueError("entree /frontiere/ introuvable ou invalide dans sitemap.xml")
+    chemin_sitemap.write_text(contenu_modifie, encoding="utf-8")
 
 
 def main():
@@ -141,6 +171,7 @@ def main():
     contenu_meta = json.dumps(meta, ensure_ascii=False, indent=2)
     json.loads(contenu_meta)
     (DONNEES / "meta.json").write_text(contenu_meta, encoding="utf-8")
+    synchroniser_sitemap()
 
     feed = generer_feed_rss(dans_fenetre)
     (RACINE / "frontiere" / "feed.xml").write_text(feed, encoding="utf-8")
