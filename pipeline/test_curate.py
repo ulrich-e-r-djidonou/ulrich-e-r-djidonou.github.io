@@ -149,6 +149,58 @@ class PolitiquePublicationTests(unittest.TestCase):
             angle.assert_not_called()
 
 
+class LangueFrancaiseTests(unittest.TestCase):
+    """Les regles doivent etre etroites : aucune sortie correcte rejetee."""
+
+    TEXTES_CORRECTS = [
+        "L'unité de mesure change. Le modèle d'Amazon reste stable.",
+        "Une hausse d'un point réduit l'écart. Les auteurs estiment qu'Amazon suit.",
+        "Le modèle de langage traite mille milliards de jetons. Il reste rapide.",
+        "Cet article mesure un effet. La méthode est simple.",
+        "Les données de 2026 montrent une baisse. Le résultat tient.",
+    ]
+
+    def test_n_alerte_pas_sur_du_francais_correct(self):
+        for texte in self.TEXTES_CORRECTS:
+            with self.subTest(texte=texte):
+                self.assertEqual(curate.erreurs_langue(texte), [])
+
+    def test_detecte_une_elision_manquante(self):
+        self.assertIn(
+            "elision_manquante",
+            curate.erreurs_langue("Le routage aligne les décisions avec le unité."),
+        )
+
+    def test_detecte_un_demonstratif_incorrect(self):
+        self.assertIn(
+            "demonstratif_incorrect", curate.erreurs_langue("Ce article mesure un effet.")
+        )
+
+    def test_detecte_le_faux_ami_trillion(self):
+        self.assertIn(
+            "faux_ami_numerique",
+            curate.erreurs_langue("L'analyse porte sur 380 trillions de jetons."),
+        )
+
+    def test_detecte_un_mot_double(self):
+        self.assertIn(
+            "mot_double", curate.erreurs_langue("Le modèle de de langage progresse.")
+        )
+
+    def test_detecte_une_fuite_anglaise(self):
+        self.assertIn(
+            "fuite_anglaise",
+            curate.erreurs_langue("Le mécanisme repose sur un incentive monétaire."),
+        )
+
+    def test_les_validateurs_de_sortie_appliquent_les_regles_de_langue(self):
+        resume = "Le modèle réduit le biais de un point. Il reste rapide."
+        angle = "Le mécanisme aligne le unité de compte sur la valeur observée."
+
+        self.assertIn("elision_manquante", curate.erreurs_resume(resume))
+        self.assertIn("elision_manquante", curate.erreurs_angle(angle))
+
+
 class PanneServiceTests(unittest.TestCase):
     """Une panne du service de redaction ne doit consommer aucun article."""
 

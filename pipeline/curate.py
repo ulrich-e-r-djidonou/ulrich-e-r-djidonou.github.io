@@ -67,6 +67,26 @@ MOTS_OUTILS_ANGLAIS = {
 }
 SYMBOLES_TEXTE_AUTORISES = {"%", "‰", "€", "$", "£", "°", "+", "=", "×"}
 
+# Controles de langue. Mesures du 2026-08-02 sur les 3 modeles du banc
+# (pipeline/benchmark) : l'elision manquante touche 5,8 % a 8,3 % des champs
+# quel que soit le modele. Un modele plus gros ne la corrige pas, un validateur
+# si. Le taux d'echec par champ etant faible, la reprise unique absorbe presque
+# tous les cas et le volume du flux n'en souffre pas.
+_VOYELLES = "aàâeéèêëiîïoôuùûyAÀÂEÉÈÊËIÎÏOÔUÙÛY"
+ELISION_MANQUANTE = re.compile(
+    rf"\b(?:le|la|de|ne|que|je|me|te|se)\s+[{_VOYELLES}][\w'-]+", re.IGNORECASE
+)
+DEMONSTRATIF_INCORRECT = re.compile(rf"\bce\s+[{_VOYELLES}][\w'-]+", re.IGNORECASE)
+MOT_DOUBLE = re.compile(r"\b(\w+)\s+\1\b", re.IGNORECASE)
+# Faux ami : un trillion anglais vaut 10^12, le trillion francais 10^18. Repris
+# tel quel, le chiffre est faux de six ordres de grandeur.
+FAUX_AMI_NUMERIQUE = re.compile(r"\btrillions?\b", re.IGNORECASE)
+FUITES_ANGLAISES = {
+    "however", "moreover", "therefore", "furthermore", "whereas", "thereby",
+    "incentive", "incentives", "findings", "insight", "insights",
+    "trade-off", "tradeoff",
+}
+
 # Score multiplicatif (nb mots-cles eco x nb mots-cles ia) : exige la presence
 # des deux dimensions a la fois, plutot qu'un score additif qui ferait remonter
 # des papiers purement economiques sans aucun lien IA. Seuil recalibre a 3 le
@@ -138,6 +158,27 @@ def _contient_anglais_residuel(texte):
     return sum(mot in MOTS_OUTILS_ANGLAIS for mot in mots) >= 3
 
 
+def erreurs_langue(texte):
+    """Retourne les fautes de francais detectables sans dictionnaire.
+
+    Regles volontairement etroites : chacune est sans ambiguite, pour ne
+    jamais rejeter une sortie correcte. Elles ne couvrent pas les accords en
+    genre ni le style, qui restent du ressort d'une lecture humaine.
+    """
+    erreurs = []
+    if ELISION_MANQUANTE.search(texte):
+        erreurs.append("elision_manquante")
+    if DEMONSTRATIF_INCORRECT.search(texte):
+        erreurs.append("demonstratif_incorrect")
+    if MOT_DOUBLE.search(texte):
+        erreurs.append("mot_double")
+    if FAUX_AMI_NUMERIQUE.search(texte):
+        erreurs.append("faux_ami_numerique")
+    if any(mot in FUITES_ANGLAISES for mot in re.findall(r"\b[a-z][a-z'-]+\b", texte)):
+        erreurs.append("fuite_anglaise")
+    return erreurs
+
+
 def erreurs_resume(texte):
     """Retourne les controles echoues pour un resume produit par le LLM."""
     if not texte:
@@ -151,6 +192,7 @@ def erreurs_resume(texte):
         erreurs.append("caracteres_non_latins")
     if _contient_anglais_residuel(texte):
         erreurs.append("anglais_residuel")
+    erreurs.extend(erreurs_langue(texte))
     return erreurs
 
 
@@ -166,6 +208,7 @@ def erreurs_angle(texte):
     debut = texte.lstrip().casefold()
     if debut.startswith(FORMULES_ANGLE_INTERDITES):
         erreurs.append("formule_stereotypee")
+    erreurs.extend(erreurs_langue(texte))
     return erreurs
 
 
@@ -216,7 +259,9 @@ def construire_prompt_resume(titre, abstract):
         "Tu resumes un papier de recherche en francais, pour un economiste presse. "
         "Ecris exactement 2 phrases en francais, factuelles, sans inventer de chiffre "
         "ou de resultat absent du texte source. N'ajoute aucun prefixe ni commentaire, "
-        "seulement les 2 phrases. N'utilise pas de tiret cadratin.\n\n"
+        "seulement les 2 phrases. N'utilise pas de tiret cadratin. Respecte les "
+        "elisions : ecris d'un, l'unite, qu'Amazon, et non de un, la unite, que Amazon. "
+        "Si le texte source dit trillion, ecris mille milliards.\n\n"
         f"Titre : {titre}\n"
         f"Resume original (anglais) : {abstract[:1500]}\n\n"
         "Resume en francais (2 phrases) :"
@@ -235,7 +280,9 @@ def construire_prompt_angle(titre, abstract):
         "Ne commence pas par « Ce papier », « Cet article » ou « Cette étude », ni par "
         "une formule annonçant son intérêt pour un économiste. Ne répète pas le titre "
         "mot pour mot et n'invente aucun chiffre ou résultat absent du texte source. "
-        "N'ajoute aucun préfixe ni commentaire et n'utilise pas de tiret cadratin.\n\n"
+        "N'ajoute aucun préfixe ni commentaire et n'utilise pas de tiret cadratin. "
+        "Respecte les élisions : écris d'un, l'unité, qu'Amazon, et non de un, "
+        "la unité, que Amazon. Si le texte source dit trillion, écris mille milliards.\n\n"
         f"Titre : {titre}\n"
         f"Resume original (anglais) : {abstract[:1500]}\n\n"
         "Phrase :"
