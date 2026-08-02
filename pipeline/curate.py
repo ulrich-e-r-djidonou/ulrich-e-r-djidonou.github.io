@@ -186,32 +186,38 @@ def resume_ollama(titre, abstract):
     """Resume en 2 phrases francaises, ou None si Ollama echoue (fallback heuristique)."""
     if not abstract:
         return None
-    prompt = (
+    return _appel_ollama(construire_prompt_resume(titre, abstract))
+
+
+def construire_prompt_resume(titre, abstract):
+    return (
         "Tu resumes un papier de recherche en francais, pour un economiste presse. "
         "Ecris exactement 2 phrases en francais, factuelles, sans inventer de chiffre "
         "ou de resultat absent du texte source. N'ajoute aucun prefixe ni commentaire, "
-        "seulement les 2 phrases.\n\n"
+        "seulement les 2 phrases. N'utilise pas de tiret cadratin.\n\n"
         f"Titre : {titre}\n"
         f"Resume original (anglais) : {abstract[:1500]}\n\n"
         "Resume en francais (2 phrases) :"
     )
-    return _appel_ollama(prompt)
 
 
 def angle_eco_ollama(titre, abstract):
     """Une phrase 'pourquoi ca compte pour un economiste', ou None si Ollama echoue."""
-    prompt = (
+    return _appel_ollama(construire_prompt_angle(titre, abstract))
+
+
+def construire_prompt_angle(titre, abstract):
+    return (
         "Rédige une seule phrase en français sur le mécanisme ou l'enjeu du papier "
         "pour l'analyse économique. Commence directement par ce mécanisme ou cet enjeu. "
         "Ne commence pas par « Ce papier », « Cet article » ou « Cette étude », ni par "
         "une formule annonçant son intérêt pour un économiste. Ne répète pas le titre "
         "mot pour mot et n'invente aucun chiffre ou résultat absent du texte source. "
-        "N'ajoute aucun préfixe ni commentaire.\n\n"
+        "N'ajoute aucun préfixe ni commentaire et n'utilise pas de tiret cadratin.\n\n"
         f"Titre : {titre}\n"
         f"Resume original (anglais) : {abstract[:1500]}\n\n"
         "Phrase :"
     )
-    return _appel_ollama(prompt)
 
 
 def main():

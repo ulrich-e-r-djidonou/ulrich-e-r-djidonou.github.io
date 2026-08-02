@@ -1,60 +1,81 @@
-# Pipeline La Frontiere
+# Pipeline La Frontière
 
-Trois etapes, executees dans l'ordre par `.github/workflows/frontiere.yml`
-(cron lundi et jeudi 11h UTC, ou `workflow_dispatch` manuel) :
+Trois étapes sont exécutées dans l'ordre par
+`.github/workflows/frontiere.yml`, le lundi et le jeudi à 11 h UTC:
 
+```powershell
+python pipeline/collect.py
+python pipeline/curate.py
+python pipeline/publish.py
 ```
-python pipeline/collect.py   # collecte multi-sources (sources.yaml)
-python pipeline/curate.py    # scoring heuristique + resume (mode degrade ou Ollama)
-python pipeline/publish.py   # fusion, fenetre 90 jours, archives, feed.xml
-```
 
-## Mode par defaut : heuristique, sans dependance externe
+## Collecte et sélection
 
-Sans configuration supplementaire, `curate.py` calcule un score deterministe
-(nombre de mots-cles economie x nombre de mots-cles IA/ML) et un resume qui
-est un simple extrait de l'abstract original, prefixe
-`[Extrait original, traduction non disponible]` quand la source est en
-anglais. Aucun appel reseau, aucune cle API requise.
+`collect.py` interroge les sources définies dans `sources.yaml` et écrit les
+candidats bruts dans `pipeline/_candidats_bruts.json`.
 
-## Mode optionnel : Ollama pour la redaction (pas pour le tri)
+`curate.py` calcule un score déterministe, soit le nombre de mots-clés
+économiques multiplié par le nombre de mots-clés IA ou ML. Le LLM ne
+participe jamais au tri.
 
-Le scoring reste **toujours** heuristique, meme quand Ollama est actif : un
-LLM ne sert jamais a decider quels items publier, seulement a rediger, pour
-les items deja retenus par le seuil, un resume en francais et une ligne
-"pourquoi ca compte pour un economiste" (`angle_eco`).
+- score d'au moins 3: l'item est admissible à la sélection principale;
+- score inférieur à 3: l'item rejoint l'archive avec ses métadonnées
+  vérifiables, sans appel LLM.
 
-Pour activer, definir ces variables d'environnement avant d'executer
-`curate.py` :
+Les fichiers intermédiaires sont ignorés par Git:
 
-```
+- `pipeline/_candidats_cures.json`;
+- `pipeline/_candidats_archives.json`.
+
+## Rédaction locale avec Ollama
+
+Les items admissibles sont rédigés en français par Ollama. Le workflow de
+production utilise actuellement `qwen2.5:3b`.
+
+```text
 FRONTIERE_LLM=ollama
-OLLAMA_MODEL=qwen2.5:3b       # optionnel, defaut qwen2.5:3b
-OLLAMA_URL=http://localhost:11434/api/generate   # optionnel
+OLLAMA_MODEL=qwen2.5:3b
+OLLAMA_URL=http://localhost:11434/api/generate
 ```
 
-Dans GitHub Actions, le workflow installe et demarre Ollama dans le runner
-avant d'executer le pipeline (voir `.github/workflows/frontiere.yml`) :
-aucun secret requis, le modele tourne localement dans le job.
+Le résumé et l'angle économique possèdent des validateurs distincts. Chaque
+champ peut être généré deux fois au maximum. Si la seconde sortie échoue,
+l'item n'est pas publié et reste marqué dans `pipeline/seen.json`. Aucun
+extrait anglais n'est utilisé comme repli.
 
-### En local, avec un modele plus gros
+Les contrôles portent notamment sur le nombre de phrases, les caractères non
+latins, la fuite de mots outils anglais et les ouvertures stéréotypées. La
+calibration sur les sorties existantes se lance avec:
 
-Si un Ollama local est deja installe avec un modele plus capable, executer
-directement :
-
+```powershell
+python -m pipeline.calibrer_validateurs --git-ref 3f406d40d7b9bc8ad7d58895d6984cc2ec33fe51
+python -m pipeline.calibrer_validateurs frontiere/data/flux.json
 ```
-FRONTIERE_LLM=ollama OLLAMA_MODEL=qwen2.5:14b python pipeline/curate.py
+
+## Publication
+
+`publish.py` conserve dans `frontiere/data/flux.json` les items récents dont
+le score atteint 3. Les items sous le seuil ou sortis de la fenêtre de 90
+jours sont écrits dans `frontiere/data/archives/AAAA-MM.json`.
+
+Le script met aussi à jour:
+
+- `frontiere/data/meta.json`;
+- `frontiere/feed.xml`;
+- le champ `lastmod` de `/frontiere/` dans `sitemap.xml`.
+
+Le workflow indexe explicitement `sitemap.xml` avec les sorties du pipeline.
+
+## Tests
+
+```powershell
+python -m unittest pipeline.test_curate pipeline.test_publish -v
+python -m py_compile pipeline/curate.py pipeline/publish.py
 ```
 
-### Garanties de secours (le run ne casse jamais)
+## Comparaison des modèles
 
-- Chaque appel Ollama a un timeout de 60 secondes.
-- Toute erreur (Ollama absent, timeout, reponse vide ou invalide) retombe
-  silencieusement sur `resume_heuristique()` pour cet item precis : le reste
-  du run continue normalement.
-- Les items rediges par Ollama portent un champ `"llm": "<nom-du-modele>"`
-  dans le JSON produit, absent pour les items en mode heuristique. Le front
-  (`frontiere.js`) affiche une mention discrete "Résumé assisté par IA
-  locale" uniquement sur ces items.
-- Debrancher `FRONTIERE_LLM` redonne exactement le comportement heuristique
-  d'origine, sans aucune autre modification.
+Le dossier [`pipeline/benchmark`](benchmark/README.md) contient le corpus
+figé de 61 items, l'exécuteur Ollama, les résultats automatiques et le
+protocole d'évaluation humaine à l'aveugle. Le banc ne modifie pas le modèle
+de production.

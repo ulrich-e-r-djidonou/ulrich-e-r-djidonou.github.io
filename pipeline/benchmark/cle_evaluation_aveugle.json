@@ -1,0 +1,142 @@
+{
+  "E01": {
+    "A": {
+      "modele": "llama3.2:3b",
+      "id": "arxiv-2607.09600v1"
+    },
+    "B": {
+      "modele": "qwen2.5:7b",
+      "id": "arxiv-2607.09600v1"
+    },
+    "C": {
+      "modele": "qwen2.5:3b",
+      "id": "arxiv-2607.09600v1"
+    }
+  },
+  "E02": {
+    "A": {
+      "modele": "llama3.2:3b",
+      "id": "arxiv-2607.22218v1"
+    },
+    "B": {
+      "modele": "qwen2.5:7b",
+      "id": "arxiv-2607.22218v1"
+    },
+    "C": {
+      "modele": "qwen2.5:3b",
+      "id": "arxiv-2607.22218v1"
+    }
+  },
+  "E03": {
+    "A": {
+      "modele": "qwen2.5:7b",
+      "id": "arxiv-2607.05792v1"
+    },
+    "B": {
+      "modele": "llama3.2:3b",
+      "id": "arxiv-2607.05792v1"
+    },
+    "C": {
+      "modele": "qwen2.5:3b",
+      "id": "arxiv-2607.05792v1"
+    }
+  },
+  "E04": {
+    "A": {
+      "modele": "qwen2.5:3b",
+      "id": "arxiv-2607.09528v1"
+    },
+    "B": {
+      "modele": "qwen2.5:7b",
+      "id": "arxiv-2607.09528v1"
+    },
+    "C": {
+      "modele": "llama3.2:3b",
+      "id": "arxiv-2607.09528v1"
+    }
+  },
+  "E05": {
+    "A": {
+      "modele": "qwen2.5:7b",
+      "id": "arxiv-2607.09568v1"
+    },
+    "B": {
+      "modele": "llama3.2:3b",
+      "id": "arxiv-2607.09568v1"
+    },
+    "C": {
+      "modele": "qwen2.5:3b",
+      "id": "arxiv-2607.09568v1"
+    }
+  },
+  "E06": {
+    "A": {
+      "modele": "qwen2.5:3b",
+      "id": "arxiv-2607.16057v1"
+    },
+    "B": {
+      "modele": "llama3.2:3b",
+      "id": "arxiv-2607.16057v1"
+    },
+    "C": {
+      "modele": "qwen2.5:7b",
+      "id": "arxiv-2607.16057v1"
+    }
+  },
+  "E07": {
+    "A": {
+      "modele": "llama3.2:3b",
+      "id": "arxiv-2607.23313v1"
+    },
+    "B": {
+      "modele": "qwen2.5:7b",
+      "id": "arxiv-2607.23313v1"
+    },
+    "C": {
+      "modele": "qwen2.5:3b",
+      "id": "arxiv-2607.23313v1"
+    }
+  },
+  "E08": {
+    "A": {
+      "modele": "qwen2.5:7b",
+      "id": "arxiv-2607.20807v1"
+    },
+    "B": {
+      "modele": "llama3.2:3b",
+      "id": "arxiv-2607.20807v1"
+    },
+    "C": {
+      "modele": "qwen2.5:3b",
+      "id": "arxiv-2607.20807v1"
+    }
+  },
+  "E09": {
+    "A": {
+      "modele": "llama3.2:3b",
+      "id": "arxiv-2607.12345v1"
+    },
+    "B": {
+      "modele": "qwen2.5:3b",
+      "id": "arxiv-2607.12345v1"
+    },
+    "C": {
+      "modele": "qwen2.5:7b",
+      "id": "arxiv-2607.12345v1"
+    }
+  },
+  "E10": {
+    "A": {
+      "modele": "qwen2.5:3b",
+      "id": "arxiv-2607.14418v1"
+    },
+    "B": {
+      "modele": "qwen2.5:7b",
+      "id": "arxiv-2607.14418v1"
+    },
+    "C": {
+      "modele": "llama3.2:3b",
+      "id": "arxiv-2607.14418v1"
+    }
+  }
+}
