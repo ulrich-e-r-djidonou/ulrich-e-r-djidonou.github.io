@@ -1,6 +1,7 @@
 import json
 import tempfile
 import unittest
+from datetime import date
 from pathlib import Path
 
 from pipeline import publish
@@ -43,6 +44,22 @@ class SynchroniserSitemapTests(unittest.TestCase):
                 "<loc>https://djidonou.com/frontiere/</loc>\n    <lastmod>2026-07-30</lastmod>",
                 resultat,
             )
+
+
+class RepartirSelectionTests(unittest.TestCase):
+    def test_separe_un_score_deux_d_un_score_trois(self):
+        entrees = [
+            {"id": "archive", "score": 2, "date_publication": "2026-08-01"},
+            {"id": "selection", "score": 3, "date_publication": "2026-08-01"},
+        ]
+
+        selection, archives = publish.repartir_selection_et_archives(
+            entrees,
+            date(2026, 5, 3),
+        )
+
+        self.assertEqual([entree["id"] for entree in selection], ["selection"])
+        self.assertEqual([entree["id"] for entree in archives], ["archive"])
 
 
 if __name__ == "__main__":

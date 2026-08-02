@@ -1,6 +1,6 @@
-import unittest
 import json
 import tempfile
+import unittest
 from pathlib import Path
 from unittest.mock import patch
 
@@ -81,6 +81,7 @@ class PolitiquePublicationTests(unittest.TestCase):
             racine = Path(dossier)
             entree = racine / "candidats.json"
             sortie = racine / "cures.json"
+            sortie_archive = racine / "archives.json"
             seen = racine / "seen.json"
             entree.write_text(json.dumps([candidat]), encoding="utf-8")
             seen.write_text("{}", encoding="utf-8")
@@ -88,6 +89,7 @@ class PolitiquePublicationTests(unittest.TestCase):
             with (
                 patch.object(curate, "ENTREE", entree),
                 patch.object(curate, "SORTIE", sortie),
+                patch.object(curate, "SORTIE_ARCHIVE", sortie_archive),
                 patch.object(curate, "SEEN", seen),
                 patch.object(curate, "LLM_ACTIF", True),
                 patch.object(
@@ -102,6 +104,45 @@ class PolitiquePublicationTests(unittest.TestCase):
             self.assertEqual(json.loads(sortie.read_text(encoding="utf-8")), [])
             self.assertIn("test-1", json.loads(seen.read_text(encoding="utf-8")))
             self.assertEqual(resume.call_count, 2)
+            angle.assert_not_called()
+
+    def test_archive_un_score_deux_sans_appeler_le_llm(self):
+        candidat = {
+            "id": "test-archive",
+            "titre": "Economic policy with machine learning",
+            "url": "https://example.com/test-archive",
+            "source": "test",
+            "type": "papier",
+            "date_publication": "2026-08-01",
+            "abstract": "Economic policy with machine learning.",
+            "auteurs": "Auteur Test",
+        }
+
+        with tempfile.TemporaryDirectory() as dossier:
+            racine = Path(dossier)
+            entree = racine / "candidats.json"
+            sortie = racine / "cures.json"
+            sortie_archive = racine / "archives.json"
+            seen = racine / "seen.json"
+            entree.write_text(json.dumps([candidat]), encoding="utf-8")
+            seen.write_text("{}", encoding="utf-8")
+
+            with (
+                patch.object(curate, "ENTREE", entree),
+                patch.object(curate, "SORTIE", sortie),
+                patch.object(curate, "SORTIE_ARCHIVE", sortie_archive),
+                patch.object(curate, "SEEN", seen),
+                patch.object(curate, "LLM_ACTIF", True),
+                patch.object(curate, "resume_ollama") as resume,
+                patch.object(curate, "angle_eco_ollama") as angle,
+            ):
+                curate.main()
+
+            self.assertEqual(json.loads(sortie.read_text(encoding="utf-8")), [])
+            archives = json.loads(sortie_archive.read_text(encoding="utf-8"))
+            self.assertEqual([entree["id"] for entree in archives], ["test-archive"])
+            self.assertNotIn("resume_fr", archives[0])
+            resume.assert_not_called()
             angle.assert_not_called()
 
 

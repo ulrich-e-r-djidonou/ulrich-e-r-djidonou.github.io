@@ -1,9 +1,9 @@
 """Publication pour La Frontiere.
 
 Lit pipeline/_candidats_cures.json, fusionne avec frontiere/data/flux.json
-existant, deduplique, applique une fenetre glissante de 90 jours (les
-entrees plus vieilles sont archivees par mois), designe le signal de la
-semaine, et ecrit :
+existant et pipeline/_candidats_archives.json, deduplique, applique une
+fenetre glissante de 90 jours et un seuil de selection principale, designe le
+signal de la semaine, et ecrit :
   - frontiere/data/flux.json
   - frontiere/data/meta.json
   - frontiere/data/archives/AAAA-MM.json
@@ -31,9 +31,11 @@ RACINE = Path(__file__).parent.parent
 DONNEES = RACINE / "frontiere" / "data"
 ARCHIVES = DONNEES / "archives"
 CURES = Path(__file__).parent / "_candidats_cures.json"
+CANDIDATS_ARCHIVES = Path(__file__).parent / "_candidats_archives.json"
 SITEMAP = RACINE / "sitemap.xml"
 
 FENETRE_JOURS = 90
+SEUIL_SELECTION_PRINCIPALE = 3
 THEMES_CONNUS = [
     "inference-causale", "llm", "prevision", "travail-emploi",
     "politique-publique", "outils-recherche", "donnees", "macro-finance",
@@ -107,27 +109,40 @@ def synchroniser_sitemap(chemin_sitemap=SITEMAP, chemin_meta=DONNEES / "meta.jso
     chemin_sitemap.write_text(contenu_modifie, encoding="utf-8")
 
 
+def repartir_selection_et_archives(entrees, limite):
+    """Separe la selection recente des items anciens ou sous le seuil."""
+    selection = []
+    archives = []
+    for entree in entrees:
+        if (
+            date_valide(entree) >= limite
+            and entree.get("score", 0) >= SEUIL_SELECTION_PRINCIPALE
+        ):
+            selection.append(entree)
+        else:
+            archives.append(entree)
+    return selection, archives
+
+
 def main():
     DONNEES.mkdir(parents=True, exist_ok=True)
     ARCHIVES.mkdir(parents=True, exist_ok=True)
 
     nouveaux = charger_json(CURES, [])
+    nouveaux_archives = charger_json(CANDIDATS_ARCHIVES, [])
     flux_existant = charger_json(DONNEES / "flux.json", [])
 
     fusion = {entree["id"]: entree for entree in flux_existant}
-    for entree in nouveaux:
+    for entree in nouveaux + nouveaux_archives:
         fusion[entree["id"]] = entree
 
     aujourd_hui = date.today()
     limite = aujourd_hui - timedelta(days=FENETRE_JOURS)
 
-    dans_fenetre = []
-    a_archiver = []
-    for entree in fusion.values():
-        if date_valide(entree) >= limite:
-            dans_fenetre.append(entree)
-        else:
-            a_archiver.append(entree)
+    dans_fenetre, a_archiver = repartir_selection_et_archives(
+        fusion.values(),
+        limite,
+    )
 
     for entree in a_archiver:
         mois = date_valide(entree).strftime("%Y-%m")

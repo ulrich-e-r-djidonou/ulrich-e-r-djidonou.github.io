@@ -2,7 +2,8 @@
 
 Lit pipeline/_candidats_bruts.json et pipeline/seen.json, calcule un score
 heuristique et un resume extrait pour chaque candidat non deja vu, et ecrit
-pipeline/_candidats_cures.json (uniquement les candidats au-dessus du seuil).
+pipeline/_candidats_cures.json pour la selection principale et
+pipeline/_candidats_archives.json pour les items sous le seuil.
 
 Le score reste TOUJOURS heuristique (deterministe, auditable) : un LLM ne
 sert jamais au tri, seulement a la redaction (resume + angle economiste),
@@ -31,6 +32,7 @@ if hasattr(sys.stderr, "reconfigure"):
 ICI = Path(__file__).parent
 ENTREE = ICI / "_candidats_bruts.json"
 SORTIE = ICI / "_candidats_cures.json"
+SORTIE_ARCHIVE = ICI / "_candidats_archives.json"
 SEEN = ICI / "seen.json"
 
 LLM_ACTIF = os.environ.get("FRONTIERE_LLM") == "ollama"
@@ -54,11 +56,10 @@ SYMBOLES_TEXTE_AUTORISES = {"%", "‰", "€", "$", "£", "°", "+", "=", "×"}
 
 # Score multiplicatif (nb mots-cles eco x nb mots-cles ia) : exige la presence
 # des deux dimensions a la fois, plutot qu'un score additif qui ferait remonter
-# des papiers purement economiques sans aucun lien IA. Seuil calibre a 2 (pas 4)
-# apres test sur donnees reelles le 2026-07-10 : avec des grilles de mots-cles
-# simples (pas de LLM), un seuil de 4 ne laissait passer qu'1 item sur 62 candidats.
-# A recalibrer si le volume reel du flux se revele trop bruyant ou trop maigre.
-SEUIL_PUBLICATION = 2
+# des papiers purement economiques sans aucun lien IA. Seuil recalibre a 3 le
+# 2026-08-02 : 25 des 61 items audites, soit environ 5 par semaine, restent dans
+# la selection principale. Les items sous le seuil rejoignent l'archive.
+SEUIL_PUBLICATION = 3
 
 MOTS_CLES_ECO = [
     "econom", "labor", "labour", "wage", "market", "policy", "welfare",
@@ -218,6 +219,7 @@ def main():
     deja_vus = json.loads(SEEN.read_text(encoding="utf-8")) if SEEN.exists() else {}
 
     cures = []
+    candidats_archives = []
     nouveaux_vus = dict(deja_vus)
     nb_deja_vus = 0
     nb_eligibles = 0
@@ -233,6 +235,18 @@ def main():
         nouveaux_vus[candidat["id"]] = {"score": score, "traite": True}
 
         if score < SEUIL_PUBLICATION:
+            candidats_archives.append({
+                "id": candidat["id"],
+                "titre": candidat["titre"],
+                "url": candidat["url"],
+                "source": candidat["source"],
+                "type": candidat["type"],
+                "date_publication": candidat.get("date_publication"),
+                "themes": themes_heuristique(texte_complet),
+                "score": score,
+                "auteurs": candidat.get("auteurs", ""),
+                "signal": False,
+            })
             continue
         nb_eligibles += 1
 
@@ -279,6 +293,10 @@ def main():
         cures.append(entree)
 
     SORTIE.write_text(json.dumps(cures, ensure_ascii=False, indent=2), encoding="utf-8")
+    SORTIE_ARCHIVE.write_text(
+        json.dumps(candidats_archives, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
     SEEN.write_text(json.dumps(nouveaux_vus, ensure_ascii=False, indent=2), encoding="utf-8")
 
     nb_llm = sum(1 for c in cures if c.get("llm"))
@@ -286,6 +304,7 @@ def main():
     print(f"Deja vus (ignores) : {nb_deja_vus}")
     print(f"Eligibles (score >= {SEUIL_PUBLICATION}) : {nb_eligibles}")
     print(f"Publies apres validation : {len(cures)}")
+    print(f"Transmis a l'archive (score < {SEUIL_PUBLICATION}) : {len(candidats_archives)}")
     print(f"Mode LLM actif : {LLM_ACTIF} ({OLLAMA_MODEL})" if LLM_ACTIF else "Mode LLM actif : non (heuristique seul)")
     if LLM_ACTIF:
         print(f"Resumes rediges et valides par Ollama : {nb_llm}/{len(cures)}")
@@ -294,6 +313,7 @@ def main():
         f"{nb_non_publies_validation}"
     )
     print(f"Ecrits dans {SORTIE}")
+    print(f"Ecrits dans {SORTIE_ARCHIVE}")
 
 
 if __name__ == "__main__":

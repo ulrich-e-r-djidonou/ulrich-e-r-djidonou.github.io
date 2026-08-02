@@ -13,34 +13,6 @@
       <description>Le benchmark OmegaUse-OfficeVal évalue les agents LLM sur des tâches de bureau à long terme avec un soutien économique au niveau des tâches. Il comprend 100 tâches tirées d'invocations pratiques du logiciel et adaptées via une procédure privée, nécessitant en moyenne deux heures et trois quarts d'intervention humaine pour être complétées.</description>
     </item>
     <item>
-      <title>On-Policy Distillation for LLM Safety: A Routing Approach to Template-Robust Realignment</title>
-      <link>https://arxiv.org/abs/2607.27081v1</link>
-      <guid isPermaLink="false">arxiv-2607.27081v1</guid>
-      <pubDate>2026-07-29</pubDate>
-      <description>Ce travail propose une méthode appelée Routing-based On-Policy Distillation (ROPD), un cadre de réalignement novateur qui modélise la divergence entre les distributions de probabilité des sorties alignées et compromises plutôt que de s'adapter aux templates spécifiques des plausibles attaquants. Les résultats montrent que ROPD améliore significativement l'efficacité et la robustesse du réalignement par rapport à quatre méthodes de base, en particulier dans le cas où les défenses se heurtent aux incohérences des plausibles attaquants.</description>
-    </item>
-    <item>
-      <title>Evaluating Regional Bias in LLMs From Abstract Stereotype to Concrete Social Decision-Making</title>
-      <link>https://arxiv.org/abs/2607.27022v1</link>
-      <guid isPermaLink="false">arxiv-2607.27022v1</guid>
-      <pubDate>2026-07-29</pubDate>
-      <description>Le cadre S2D systématique évalue la présence de préjugés régionaux dans six modèles de langage linguistique grandeur, allant d'opinions abstraites sur les groupes régionaux aux décisions sociales concrètes. Les résultats montrent des différences significatives entre les régions, avec une bonne correspondance entre les modèles, particulièrement pour les décisions concernant la compétence et l'occupation.</description>
-    </item>
-    <item>
-      <title>AgentSnare: Learning to Delay, Divert, and Defuse Autonomous Penetration Agents</title>
-      <link>https://arxiv.org/abs/2607.26998v1</link>
-      <guid isPermaLink="false">arxiv-2607.26998v1</guid>
-      <pubDate>2026-07-29</pubDate>
-      <description>AgentSnare est une système de déception dynamique qui construit et valide des artefacts dans un environnement découpé pour détourner l'agent d'intrusion. Il absorbe jusqu'à 46,8% des appels des outils du téléguidage agent dans le découpé et garde près de 55,9% des actions post-entrée là-bas, avec environ 90% des tentatives de terminaison basées sur des preuves du découpé.</description>
-    </item>
-    <item>
-      <title>Latent-IM: Latent Interaction Management for Speech LLMs</title>
-      <link>https://arxiv.org/abs/2607.26928v1</link>
-      <guid isPermaLink="false">arxiv-2607.26928v1</guid>
-      <pubDate>2026-07-29</pubDate>
-      <description>Classiques des systèmes de dialogue parlé séparent généralement la gestion du dialogue des composants qui réalisent les réponses. Dans le cadre des langages par modèles, ce découpage a disparu dans les représentations cachées du modèle. Nous proposons une structure intérieure de gestion de dialogue appelée Latent-IM, qui permet de reproduire des choix de mouvements conversationnels humains tout en restant comparable à la fine-tuning.</description>
-    </item>
-    <item>
       <title>The AI premium</title>
       <link>https://cepr.org/voxeu/columns/ai-premium</link>
       <guid isPermaLink="false">voxeu-https-cepr-org-voxeu-columns-ai-premium</guid>
@@ -55,39 +27,11 @@
       <description>Les modèles économiques existants sont souvent trop détaillés et ont des restrictions techniques qui les rendent inefficaces pour traiter rapidement les crises énergétiques. Les grandes ordinateurs de langage peuvent aider à combiner ces modèles en temps réel, offrant une synthèse précise des scénarios possibles sans produire d'interprétations quantitatives directes.</description>
     </item>
     <item>
-      <title>CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference</title>
-      <link>https://arxiv.org/abs/2607.22511v1</link>
-      <guid isPermaLink="false">arxiv-2607.22511v1</guid>
-      <pubDate>2026-07-24</pubDate>
-      <description>CausalForge est une nouvelle approche pour automatiser la recherche théorique dans l'inferieur causale, basée sur l'assistant Lean de preuves. Elle combine Causalean, un ensemble de déclarations mathématiquement vérifiées par machine, avec CausalSmith, un pipeline auto-optimisé capable de sélectionner des sujets de recherche, d'énoncer des résultats formels, de construire des preuves et de présenter ces artefacts pour validation humaine.</description>
-    </item>
-    <item>
       <title>TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI</title>
       <link>https://arxiv.org/abs/2607.22465v1</link>
       <guid isPermaLink="false">arxiv-2607.22465v1</guid>
       <pubDate>2026-07-24</pubDate>
       <description>TRACE-Router propose une approche de routage basée sur la tâche qui aligne les décisions de routage avec le unité d'encadrement, améliorant ainsi la correspondance entre l'évaluation des modèles et leurs décisions. Cette méthode permet à TRACE-Router d'apprendre des politiques de routage adaptatives sans nécessiter une estimation explicite du niveau de complexité des tâches.</description>
-    </item>
-    <item>
-      <title>Efficient Recommendations via Graph Coarsening and Label Propagation</title>
-      <link>https://arxiv.org/abs/2607.22287v1</link>
-      <guid isPermaLink="false">arxiv-2607.22287v1</guid>
-      <pubDate>2026-07-24</pubDate>
-      <description>Dans le domaine de la télécommunications, cette étude propose une méthodologie multifroteur combinant l'agrandissement cohaussé et les propagnations de labels pour résoudre efficacement les défis d'échelle des graphes dans un environnement industriel. Les résultats suggèrent une amélioration significative du score NDCG@5, atteignant jusqu'à +24% par rapport au benchmark basé sur le graphe complet lors de la première phase d'application du Label Propagation Algorithm (LPA).</description>
-    </item>
-    <item>
-      <title>Why Large Language Models and Humans Converge and Diverge in Evaluating Creativity</title>
-      <link>https://arxiv.org/abs/2607.22218v1</link>
-      <guid isPermaLink="false">arxiv-2607.22218v1</guid>
-      <pubDate>2026-07-24</pubDate>
-      <description>Les grandes langues de modèle (LLM) ont tendance à se baser sur un sous-ensemble plus restreint des critères d'évaluation de la créativité humaine, avec une convergence notoire dans le domaine du novelty et une divergence nette dans celui de la contextualisation.</description>
-    </item>
-    <item>
-      <title>Trajectory-Regularized Stochastic Optimal Control via KL Divergence</title>
-      <link>https://arxiv.org/abs/2607.22201v1</link>
-      <guid isPermaLink="false">arxiv-2607.22201v1</guid>
-      <pubDate>2026-07-24</pubDate>
-      <description>Nous introduisons le contrôle optimal stochastique régularisé par trajectoire (TRSOC), qui enrichit le contrôle optimal stochastique standard (SOC) avec une divergence de Kullback-Leibler entre les distributions des trajectoires contrôlées et réfèrentielles. Dans un cadre linéaire-quadratique, la formulation permet une solution explicite avec un coût de contrôle augmenté.</description>
     </item>
     <item>
       <title>DBA-Bench: A Production-Fidelity Benchmark for LLM-Based Database Operations Agents</title>
@@ -118,13 +62,6 @@
       <description>Dans de nombreux travaux de recherche en sciences sociales, comme l'économie, les agents basés sur LLM produisent des sorties pour lesquelles il n'existe pas de signal de correctivité machine-readable et complet. Cette absence crée une problématique distinctive de fiabilité dans les systèmes multi-agents : comment organiser le processus de génération, de critique, de coordination et de jugement humain lorsque aucun composant ne peut certifier la résultat final ?</description>
     </item>
     <item>
-      <title>Execution and Evaluation: A New Occupational Measure and Long-Run Employment Gradients</title>
-      <link>https://arxiv.org/abs/2607.20807v1</link>
-      <guid isPermaLink="false">arxiv-2607.20807v1</guid>
-      <pubDate>2026-07-23</pubDate>
-      <description>La mesure d'exécution, basée sur l'évaluation de $19{,}265$ sous-étiquettes O*NET, est stable et distincte des capacités d'IA et de l'intensité des tâches répétitives. L'évolution de la progression d'emploi dans les métiers chargés d'exécution montre une tendance séculaire plutôt qu'un événement à l'époque de l'IA.</description>
-    </item>
-    <item>
       <title>Licensing and Innovation Regimes in Pharmaceutical R&amp;D</title>
       <link>https://arxiv.org/abs/2607.20365v1</link>
       <guid isPermaLink="false">arxiv-2607.20365v1</guid>
@@ -139,32 +76,11 @@
       <description>PyroDash introduit une méthodologie de collaboration entre modèles SLM et LLM au niveau des tokens, qui permet d'optimiser la fiabilité et l'efficacité financière. Les résultats montrent que PyroDash peut atteindre des taux d'exactitude supérieurs à ceux des modèles LLM standards tout en réduisant significativement les coûts de traitement.</description>
     </item>
     <item>
-      <title>PoTRE: Test-Time Reasoning inspired by Cognitive Heterogeneity</title>
-      <link>https://arxiv.org/abs/2607.20268v1</link>
-      <guid isPermaLink="false">arxiv-2607.20268v1</guid>
-      <pubDate>2026-07-22</pubDate>
-      <description>PoTRE introduit une approche hétérogène qui découpe l'inference en quatre agents distincts pour résoudre des problèmes complexes nécessitant longue-horizon et révision itérative. Evalué sur trois benchmarks frontières, PoTRE affiche une performance d'exactitude de 49,92% sur le benchmark HLE, battant ainsi la meilleure note officielle précédemment établie.</description>
-    </item>
-    <item>
-      <title>Understanding the Impact of Linguistic Realization Choices on LLM Stance with Causal Tracing</title>
-      <link>https://arxiv.org/abs/2607.20115v1</link>
-      <guid isPermaLink="false">arxiv-2607.20115v1</guid>
-      <pubDate>2026-07-22</pubDate>
-      <description>Ce papier étudie comment les choix de construction linguistique influencent l'évaluation de sens des grandes langues modèles en changeant systématiquement les décisions du modèle. Les résultats montrent que le décodage à la fois moyen et final joue un rôle crucial dans cette transformation, tandis qu'il n'est pas clair où ces changements précis se produisent au sein de l'architecture du modèle.</description>
-    </item>
-    <item>
       <title>The Human-AI Substitution Principle: When will you be replaced by AI in your organization?</title>
       <link>https://arxiv.org/abs/2607.20781v1</link>
       <guid isPermaLink="false">arxiv-2607.20781v1</guid>
       <pubDate>2026-07-22</pubDate>
       <description>Le modèle HAT formalise la disparité économique entre l'apprentissage de compétences par les humains et le développement progressif des capacités d'IA. Il permet de déterminer quand, où, pourquoi et sous quelles conditions structurantes la substitution humain-AI peut se produire.</description>
-    </item>
-    <item>
-      <title>Optimizing Regret</title>
-      <link>https://arxiv.org/abs/2607.18866v1</link>
-      <guid isPermaLink="false">arxiv-2607.18866v1</guid>
-      <pubDate>2026-07-21</pubDate>
-      <description>Cette recherche développe une théorie complète de la fonctionnelle du regret de covariance, reliant le regret attendu à la covariancée entre coûts et décisions. Elle explore également les stratégies optimales pour linéaires et sous contraintes, ainsi que l'application aux stratégies d'allocation de portefeuille et aux stratégies basées sur des LLMs.</description>
     </item>
     <item>
       <title>Measuring AI innovation with trademark data</title>
@@ -174,13 +90,6 @@
       <description>Les chercheurs, gestionnaires et décideurs politiques examinent différentes approches et sources de données pour cartographier la progression et l'épanouissement de l'Intelligence Artificielle. Cette note illustre les opportunités que constituent les marques commerciales en ce qui concerne l'Intelligence Artificielle, affirmant qu'elles peuvent compléter les brevets d'IA pour recueillir des aspects variés de l'innovation en matière d'IA. Les données de marque commerciale offrent un outil fiable et disponible à un niveau mondial, couvrant tous les secteurs économiques, ce qui aide à explorer les questions émergentes liées au développement et à la diffusion de l'IA.</description>
     </item>
     <item>
-      <title>The Price of Quietness: How a Pandemic Affects City Dwellers' Response to Road Traffic Noise</title>
-      <link>https://arxiv.org/abs/2607.18677v1</link>
-      <guid isPermaLink="false">arxiv-2607.18677v1</guid>
-      <pubDate>2026-07-21</pubDate>
-      <description>Dans un contexte d'épidémie de COVID-19 à Singapour, les loyers de locations ont diminué significativement après l'arrivée du virus, avec une baisse supplémentaire pour le deuxième année consécutive. Une analyse textuelle des annonces immobilières a également montré que la préférence des locataires pour un environnement silencieux s'est accrue notament en 2020.</description>
-    </item>
-    <item>
       <title>Econometrics with Pre-Trained Embeddings for Unstructured Data</title>
       <link>https://arxiv.org/abs/2607.17378v1</link>
       <guid isPermaLink="false">arxiv-2607.17378v1</guid>
@@ -188,32 +97,88 @@
       <description>Ce papier propose des conditions suffisantes pour surmonter les difficultés posées par l'utilisation de modèles pré-entraînés pour extraire des embeddings à partir de données non structurées, et détermine la vitesse de convergence des modèles de machine learning avec ces embeddings. Il illustre théoriquement ses résultats en application double machine-learning pour estimer les paramètres d'intérêt.</description>
     </item>
     <item>
-      <title>PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization</title>
-      <link>https://arxiv.org/abs/2607.16184v1</link>
-      <guid isPermaLink="false">arxiv-2607.16184v1</guid>
-      <pubDate>2026-07-17</pubDate>
-      <description>Dans le cadre de la gestion des modèles LLM basés sur des Experts Mixtes (MoE), PagedWeight propose une méthode qui quantifie dynamiquement les poids du modèle pendant l'exécution et maintient un équilibre entre la précision des poids experts et la taille des caches KV. Cette approche améliore significativement le compromis qualité-mémoire par rapport à diverses méthodes de quantification existantes, en garantissant une performance élevée avec une utilisation réduite du GPU.</description>
+      <title>Algorithmic Intermediation and the International Transmission of U.S. Monetary Policy</title>
+      <link>https://arxiv.org/abs/2607.15385v1</link>
+      <guid isPermaLink="false">arxiv-2607.15385v1</guid>
+      <pubDate>2026-07-16</pubDate>
+      <description>Ce papier étudie comment l'intermédiation algorithmique et AI dans le gestion des fonds affecte la transmission internationale de la politique monétaire américaine vers les marchés émergents. Il souligne que la similarité des modèles entre les fonds est la principale source d'instabilité, tandis que l'ajustement rapide des modèles diversifiés permettrait une réduction des mouvements de capitaux en cas de volatilité élevée aux États-Unis.</description>
     </item>
     <item>
-      <title>Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems</title>
-      <link>https://arxiv.org/abs/2607.16177v1</link>
-      <guid isPermaLink="false">arxiv-2607.16177v1</guid>
-      <pubDate>2026-07-17</pubDate>
-      <description>La méthode PEARL améliore la performance des algorithmes de RL en réduisant les interactions avec l'environnement et en exploitant efficacement le caractère différentiable des systèmes dynamiques paramétriques. De plus, elle permet une généralisation跨过multiple scénarios et une échelle de RL à des systèmes complexes.</description>
+      <title>Higher utilisation explains the recent surge in productivity growth</title>
+      <link>https://cepr.org/voxeu/columns/higher-utilisation-explains-recent-surge-productivity-growth</link>
+      <guid isPermaLink="false">voxeu-higher-utilisation-explains-recent-surge-productivity-growth</guid>
+      <pubDate>2026-07-15</pubDate>
+      <description>La croissance de la productivité américaine s'est accélérée depuis 2022, avec une augmentation annuelle moyenne de l'output par heure de près de 2,5% entre fin 2022 et début 2026. Cependant, le rendement a dépassé son rythme pré-pandémique de 1 point de pourcentage grâce à la plus grande utilisation des ressources déjà en place plutôt qu'à la performance technologique d'IA.</description>
     </item>
     <item>
-      <title>Understanding Reasoning from Pretraining to Post-Training</title>
-      <link>https://arxiv.org/abs/2607.16097v1</link>
-      <guid isPermaLink="false">arxiv-2607.16097v1</guid>
-      <pubDate>2026-07-17</pubDate>
-      <description>La post-entraînement par renforcement a montré des effets bien prédictibles sur la performance basée sur l'entraînement préalable, avec le rendement final déterminé de manière approximativement linéaire à partir du nombre de jetons d'entraînement. La post-entraînement par renforcement a également révélé des effets non triviaux selon la difficulté des énigmes testées.</description>
+      <title>Adaptive Ad Load Design for Sponsored Search Markets: Evidence, Theory, and Deployment</title>
+      <link>https://arxiv.org/abs/2607.14418v1</link>
+      <guid isPermaLink="false">arxiv-2607.14418v1</guid>
+      <pubDate>2026-07-15</pubDate>
+      <description>Ad-load design est étudié comme une décision clé du côté de la supply dans les marchés d'annonces sponsorisées. Une expérience expérimentale a montré que l'augmentation de l'ad-load peut améliorer le revenu de 43% en moyenne, mais il entraîne également une réduction des conversions totales de 5% et la diminution de l'engagement quotidien de 2.2%.</description>
     </item>
     <item>
-      <title>Frontier AI performance across the business disciplines: a case-grounded benchmark of knowledge work and analytical reasoning</title>
-      <link>https://arxiv.org/abs/2607.16057v1</link>
-      <guid isPermaLink="false">arxiv-2607.16057v1</guid>
-      <pubDate>2026-07-17</pubDate>
-      <description>Les benchmarks actuels des langages de grande taille mettent principalement l'accent sur des compétences techniques telles que la rétention de faits et les problèmes résolus, tandis que le travail analytique effectué quotidiennement par les professionnels du travail blanc reste mal mesuré. Les performances des modèles d'intelligence artificielle sur cette forme de travail analytique sont déjà élevées et se sont notablement améliorées en deux ans.</description>
+      <title>Perturbed utility Markovian traffic equilibrium: theory and computation</title>
+      <link>https://arxiv.org/abs/2607.09568v1</link>
+      <guid isPermaLink="false">arxiv-2607.09568v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Ce papier développe une approche de Nash équilibre perturbé (PUME), conçue pour maintenir la flexibilité et l'efficacité computable des modèles basés sur les liens Markoviens, tout en s'étendant à différents scénarios. La PUME est basée sur un modèle de choix markovien perturbé (PUMCM), qui permet non seulement aux probabilités de choix internes mais aussi aux probabilités externes d'être comprises, sans restriction préalable des options de choix.</description>
+    </item>
+    <item>
+      <title>Deep Learning for Dynamic Programming with Recursive Utility Using First-order Conditions</title>
+      <link>https://arxiv.org/abs/2607.09461v1</link>
+      <guid isPermaLink="false">arxiv-2607.09461v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Cette étude propose une méthode appelée CEFOL, un algorithme d'apprentissage profond pour résoudre des problèmes de programmation dynamique discrète avec utilité récursive. CEFOL utilise deux réseaux neuronaux différents : l'un pour représenter l'équivalent certain et l'autre pour apprendre les fonctions valeurs, les fonctions politiques et les multiplicateurs de Lagrange en utilisant des conditions d'optimisation spécifiques du modèle.</description>
+    </item>
+    <item>
+      <title>LLM for EDA in Front-End Design: Challenges and Opportunities</title>
+      <link>https://arxiv.org/abs/2607.09616v1</link>
+      <guid isPermaLink="false">arxiv-2607.09616v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Dans le contexte croissante de la complexité des composants électroniques et des délais de commercialisation plus importants, la conception front-end devient un frein majeur dans la phase de développement. Les Modèles de Langage Large (LLM), en particulier lorsqu'ils sont utilisés comme interfaces d'intelligence artificielle agentic, telles que OpenClaw, montrent une grande promesse pour transformer les méthodes d'EDA, passant de l'aide locale à des exécutions autonomes.</description>
+    </item>
+    <item>
+      <title>DKCD: Domain Knowledge-Enhanced Causal Discovery from Unstructured Data</title>
+      <link>https://arxiv.org/abs/2607.09348v1</link>
+      <guid isPermaLink="false">arxiv-2607.09348v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Dans les domaines d'expertise élevés comme la santé, la finance et l'éducation, le détection de causalités à partir des données non structurées reste un défi sans être largement exploité. La méthodologie introduite ici, DKCD, comporte trois composants interconnectés pour surmonter les défis majeurs de cette tâche : la recherche de connaissances spécifiques au domaine et la réflexion causal guidée par ces connaissances, qui permettent d'améliorer l'identification des facteurs cachés essentiels et la précision des annotations, contribuant ainsi à une meilleure construction des graphes causaux.</description>
+    </item>
+    <item>
+      <title>Automatic Thematic Indexing of Large Literary Corpora: A Machine Learning Approach to Voltaire's Complete Works</title>
+      <link>https://arxiv.org/abs/2607.09316v1</link>
+      <guid isPermaLink="false">arxiv-2607.09316v1</guid>
+      <pubDate>2026-07-10</pubDate>
+      <description>Ce travail examine l'application de la machine learning à l'indexation thématique automatique, utilisant deux sous-corpus importants du Complexe des Oeuvres de Voltaire comme cas d'étude : l’Essai sur les mœurs et l'esprit des nations et les Questions sur l'Encyclopédie. Les meilleures performances sont obtenues avec un modèle Mistral quantifié à 4 bits, réalisant des scores F1 jusqu'à 0,67.</description>
+    </item>
+    <item>
+      <title>Resample or Reroute? Budget-Aware Test-Time Model Selection for Large Language Models</title>
+      <link>https://arxiv.org/abs/2607.08665v1</link>
+      <guid isPermaLink="false">arxiv-2607.08665v1</guid>
+      <pubDate>2026-07-09</pubDate>
+      <description>[Extrait original, traduction non disponible] Routing among large language models (LLMs) trades response quality against serving cost, motivated by the reported gap between deployed routers and a per-instance oracle.</description>
+    </item>
+    <item>
+      <title>AI Adoption in S&amp;P 500 Firms</title>
+      <link>https://arxiv.org/abs/2607.08920v1</link>
+      <guid isPermaLink="false">arxiv-2607.08920v1</guid>
+      <pubDate>2026-07-09</pubDate>
+      <description>Dans les entreprises S&amp;P 500 étudiées entre 2016 et 2025, plus de la moitié ont intégré AI profondément dans leurs processus, avec une augmentation rapide au sein du secteur technologique qui absorbe à lui seul la moitié des adoptions profondes. Les profits des entreprises connaissent une courbe J lorsqu'il s'agit d'intégrer l'AI de manière profonde, sans cependant démontrer de différences significatives en termes de dépenses en capitales ou de productivité.</description>
+    </item>
+    <item>
+      <title>SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets</title>
+      <link>https://arxiv.org/abs/2607.08681v1</link>
+      <guid isPermaLink="false">arxiv-2607.08681v1</guid>
+      <pubDate>2026-07-09</pubDate>
+      <description>Dans les marchés de l'énergie décentralisée, le système SolarChain-Eval met en évidence une réduction des risques d'exploitation invalidante du phénomène physique et de la production d'un apport fictif. Il souligne également comment la couche Planneur/Inspecteur basée sur un langage à grande portée améliore l'évaluation et le contrôle des actions potentiellement dangereuses.</description>
+    </item>
+    <item>
+      <title>AI, productivity, and work: Evidence from US firms</title>
+      <link>https://cepr.org/voxeu/columns/ai-productivity-and-work-evidence-us-firms</link>
+      <guid isPermaLink="false">voxeu-org-voxeu-columns-ai-productivity-and-work-evidence-us-firms</guid>
+      <pubDate>2026-06-26</pubDate>
+      <description>[Extrait original, traduction non disponible] Real-time evidence from users can inform the current policy debates around artificial intelligence. This column reports on a survey of executives at typical US firms to reveal that AI adoption is already widespread but shallow.</description>
     </item>
   </channel>
 </rss>

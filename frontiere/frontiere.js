@@ -23,6 +23,7 @@
 
   const etat = {
     flux: [],
+    fluxPrincipal: [],
     themeActif: null,
     typeActif: null,
     recherche: "",
@@ -187,6 +188,24 @@
     });
   }
 
+  function afficherJeuEntrees(entrees, titre, archiveActive) {
+    etat.flux = entrees || [];
+    etat.themeActif = null;
+    etat.typeActif = null;
+    etat.recherche = "";
+
+    const recherche = document.getElementById("recherche");
+    recherche.value = "";
+    const themes = Array.from(new Set(etat.flux.flatMap((e) => e.themes || []))).sort();
+    const types = Array.from(new Set(etat.flux.map((e) => e.type))).sort();
+    construireChips("chips-themes", themes, NOMS_THEMES, "themeActif");
+    construireChips("chips-types", types, NOMS_TYPES, "typeActif");
+
+    document.getElementById("flux-titre").textContent = titre;
+    document.getElementById("retour-selection").hidden = !archiveActive;
+    rendreFlux();
+  }
+
   function rendreSignal() {
     const signal = etat.flux.find((e) => e.signal);
     const section = document.getElementById("signal-semaine");
@@ -300,10 +319,7 @@
       bouton.textContent = m;
       bouton.addEventListener("click", async () => {
         const archive = await chargerJSON(`data/archives/${m}.json`);
-        etat.flux = archive || [];
-        etat.themeActif = null;
-        etat.typeActif = null;
-        rendreFlux();
+        afficherJeuEntrees(archive, `Archive ${m}`, true);
         document.getElementById("liste-flux").scrollIntoView({ behavior: "smooth" });
       });
       conteneur.appendChild(bouton);
@@ -317,7 +333,8 @@
       chargerJSON("data/bibliotheque.json"),
     ]);
 
-    etat.flux = flux || [];
+    etat.fluxPrincipal = flux || [];
+    etat.flux = etat.fluxPrincipal;
 
     const majEl = document.getElementById("derniere-maj");
     majEl.textContent = meta && meta.derniere_mise_a_jour
@@ -327,17 +344,15 @@
     rendreSignal();
     rendreStats(meta);
 
-    const themes = Array.from(new Set(etat.flux.flatMap((e) => e.themes || []))).sort();
-    const types = Array.from(new Set(etat.flux.map((e) => e.type))).sort();
-    construireChips("chips-themes", themes, NOMS_THEMES, "themeActif");
-    construireChips("chips-types", types, NOMS_TYPES, "typeActif");
-
     document.getElementById("recherche").addEventListener("input", (evt) => {
       etat.recherche = evt.target.value;
       rendreFlux();
     });
+    document.getElementById("retour-selection").addEventListener("click", () => {
+      afficherJeuEntrees(etat.fluxPrincipal, "Sélection principale", false);
+    });
 
-    rendreFlux();
+    afficherJeuEntrees(etat.fluxPrincipal, "Sélection principale", false);
     rendreBibliotheque(bibliotheque);
     rendreArchives(meta);
   }

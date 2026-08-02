@@ -85,12 +85,21 @@
           placeholder="Rechercher dans le flux..."
           aria-label="Rechercher dans le flux"
         >
+        <button type="button" id="retour-selection" class="chip" hidden>
+          Revenir à la sélection principale
+        </button>
         <div class="frontiere-chips" id="chips-themes" role="group" aria-label="Filtrer par thème"></div>
         <div class="frontiere-chips" id="chips-types" role="group" aria-label="Filtrer par type"></div>
       </section>
 
       <section class="frontiere-flux" aria-labelledby="flux-titre">
-        <h2 id="flux-titre" class="sr-only">Le flux</h2>
+        <div class="section-kicker">Veille courante</div>
+        <h2 id="flux-titre">Sélection principale</h2>
+        <p>
+          Cette sélection automatique retient les entrées dont le score
+          thématique atteint au moins 3. Le signal de la semaine met en avant
+          l'entrée la plus forte de cette sélection.
+        </p>
         <div id="liste-flux"></div>
       </section>
 
@@ -106,7 +115,12 @@
 
       <section class="frontiere-archives" aria-labelledby="archives-titre">
         <div class="section-kicker">Archives</div>
-        <h2 id="archives-titre">Mois précédents</h2>
+        <h2 id="archives-titre">Archive exhaustive</h2>
+        <p>
+          L'archive conserve toutes les entrées repérées par la collecte
+          thématique, y compris celles qui restent sous le seuil de la
+          sélection principale.
+        </p>
         <div id="liste-archives" class="frontiere-archives-liste"></div>
       </section>
     </main>
