@@ -132,7 +132,7 @@ function majAvancement() {
   const faites = Object.values(notes).filter((n) => n && n.note).length;
   const alerte = stockageDisponible
     ? ""
-    : " — notes en memoire seulement, exporter avant de fermer";
+    : " (notes en memoire seulement, exporter avant de fermer)";
   document.getElementById("avancement").textContent =
     `Item ${rang + 1} sur ${items.length}, ${faites} version(s) notee(s) sur ${attendu}${alerte}`;
 }
