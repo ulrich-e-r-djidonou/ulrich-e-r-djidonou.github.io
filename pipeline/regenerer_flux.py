@@ -188,7 +188,7 @@ def main():
 
     if not curate.LLM_ACTIF:
         print(
-            "FRONTIERE_LLM=ollama est requis. Rien n'a ete fait.",
+            "FRONTIERE_LLM doit valoir ollama ou api. Rien n'a ete fait.",
             file=sys.stderr,
         )
         return 1
@@ -231,7 +231,7 @@ def main():
     RELECTURE.write_text(
         json.dumps(
             {
-                "modele": curate.OLLAMA_MODEL,
+                "modele": curate.modele_actif(),
                 "duree_secondes": round(duree, 1),
                 "items": releve,
             },
@@ -241,11 +241,11 @@ def main():
         encoding="utf-8",
     )
 
-    ecrire_relecture_lisible(releve, curate.OLLAMA_MODEL, duree)
+    ecrire_relecture_lisible(releve, curate.modele_actif(), duree)
 
     print(
         f"\n{nb_valides}/{len(flux)} items rediges et valides en "
-        f"{duree / 60:.1f} min avec {curate.OLLAMA_MODEL}."
+        f"{duree / 60:.1f} min avec {curate.modele_actif()}."
     )
     print(f"Relecture avant/apres : {RELECTURE_LISIBLE}")
     print(f"Detail des essais : {RELECTURE}")
@@ -254,7 +254,7 @@ def main():
         print("Rien n'a ete ecrit dans le flux. Relire, puis relancer avec --appliquer.")
         return 0
 
-    ecrire_flux(flux, releve, curate.OLLAMA_MODEL)
+    ecrire_flux(flux, releve, curate.modele_actif())
     return 0
 
 

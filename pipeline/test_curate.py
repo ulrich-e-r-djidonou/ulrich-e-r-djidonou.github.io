@@ -208,6 +208,110 @@ class LangueFrancaiseTests(unittest.TestCase):
         self.assertIn("elision_manquante", curate.erreurs_angle(angle))
 
 
+class PostureEditorialeTests(unittest.TestCase):
+    """Le flux resume les travaux des autres, et chaque champ est lu seul."""
+
+    def test_refuse_la_premiere_personne(self):
+        texte = "Nous proposons des conditions suffisantes. La méthode tient."
+
+        self.assertIn("premiere_personne", curate.erreurs_resume(texte))
+
+    def test_refuse_le_possessif_de_l_auteur(self):
+        texte = "Notre méthode réduit le biais de moitié."
+
+        self.assertIn("premiere_personne", curate.erreurs_angle(texte))
+
+    def test_refuse_un_renvoi_a_un_antecedent_absent(self):
+        texte = "Le cadre proposé permet de surmonter ces difficultés."
+
+        self.assertIn("anaphore_orpheline", curate.erreurs_angle(texte))
+
+    def test_accepte_un_renvoi_dont_l_antecedent_est_present(self):
+        texte = (
+            "Les modèles pré-entraînés posent deux difficultés de convergence. "
+            "Ces difficultés disparaissent sous une condition de régularité."
+        )
+
+        self.assertNotIn("anaphore_orpheline", curate.erreurs_resume(texte))
+
+    def test_refuse_toute_ouverture_parlant_du_papier(self):
+        for ouverture in (
+            "Ce papier fournit des conditions suffisantes.",
+            "Cet article mesure un effet de composition.",
+            "Les auteurs estiment une élasticité de 0,3.",
+            "Dans cette étude, la méthode est comparée à trois repères.",
+        ):
+            with self.subTest(ouverture=ouverture):
+                self.assertIn("formule_stereotypee", curate.erreurs_angle(ouverture))
+
+    def test_accepte_une_ouverture_par_le_mecanisme(self):
+        texte = "L'appariement des données fiscales réduit le biais de sélection."
+
+        self.assertEqual(curate.erreurs_angle(texte), [])
+
+
+class FournisseurTests(unittest.TestCase):
+    """Le changement de fournisseur ne doit tenir qu'a la configuration."""
+
+    def _faux_requests(self, capture, charge_utile):
+        class Reponse:
+            def raise_for_status(self):
+                pass
+
+            def json(self):
+                return charge_utile
+
+        module = types.ModuleType("requests")
+        module.post = lambda url, **options: (
+            capture.update({"url": url, **options}) or Reponse()
+        )
+        return module
+
+    def test_appelle_ollama_au_format_ollama(self):
+        capture = {}
+        faux = self._faux_requests(capture, {"response": "  Texte produit.  "})
+
+        with (
+            patch.dict(sys.modules, {"requests": faux}),
+            patch.object(curate, "FOURNISSEUR", "ollama"),
+        ):
+            texte = curate._appel_ollama("prompt")
+
+        self.assertEqual(texte, "Texte produit.")
+        self.assertIn("prompt", capture["json"])
+        self.assertNotIn("headers", capture)
+
+    def test_appelle_une_api_au_format_openai(self):
+        capture = {}
+        faux = self._faux_requests(
+            capture, {"choices": [{"message": {"content": "Texte produit."}}]}
+        )
+
+        with (
+            patch.dict(sys.modules, {"requests": faux}),
+            patch.object(curate, "FOURNISSEUR", "api"),
+            patch.object(curate, "API_URL", "https://exemple.test/v1/chat/completions"),
+            patch.object(curate, "API_MODELE", "modele-test"),
+            patch.object(curate, "API_CLE", "cle-test"),
+        ):
+            texte = curate._appel_ollama("prompt")
+
+        self.assertEqual(texte, "Texte produit.")
+        self.assertEqual(capture["url"], "https://exemple.test/v1/chat/completions")
+        self.assertEqual(capture["headers"]["Authorization"], "Bearer cle-test")
+        self.assertEqual(capture["json"]["messages"][0]["content"], "prompt")
+        self.assertEqual(capture["json"]["temperature"], 0)
+
+    def test_le_nom_du_modele_suit_le_fournisseur(self):
+        with (
+            patch.object(curate, "FOURNISSEUR", "api"),
+            patch.object(curate, "API_MODELE", "modele-test"),
+        ):
+            self.assertEqual(curate.modele_actif(), "modele-test")
+        with patch.object(curate, "FOURNISSEUR", "ollama"):
+            self.assertEqual(curate.modele_actif(), curate.OLLAMA_MODEL)
+
+
 class PanneServiceTests(unittest.TestCase):
     """Une panne du service de redaction ne doit consommer aucun article."""
 

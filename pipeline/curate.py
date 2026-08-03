@@ -9,12 +9,12 @@ Le score reste TOUJOURS heuristique (deterministe, auditable) : un LLM ne
 sert jamais au tri, seulement a la redaction (resume + angle economiste),
 et seulement sur les items deja retenus par le seuil.
 
-En mode Ollama (variable d'environnement FRONTIERE_LLM=ollama),
-resume_ollama()/angle_eco_ollama() appellent un modele local pour rediger un
-resume en francais et une ligne d'analyse economique. Chaque sortie est
-validee separement. Une sortie invalide est relancee une fois, puis l'item
-n'est pas publie si le second essai echoue. Aucun extrait anglais n'est publie
-en repli.
+La redaction est confiee a un modele, local ou distant selon FRONTIERE_LLM :
+ollama pour un modele local, api pour tout service expose au format OpenAI.
+Le fournisseur ne change que la redaction du resume et de l'angle, jamais la
+selection. Chaque sortie est validee separement. Une sortie invalide est
+relancee une fois, puis l'item n'est pas publie si le second essai echoue.
+Aucun extrait anglais n'est publie en repli.
 
 Deux echecs sont distingues, parce qu'ils n'appellent pas la meme reaction :
   - echec de validation : le modele a repondu, mal. L'item est marque vu et
@@ -43,22 +43,58 @@ SORTIE = ICI / "_candidats_cures.json"
 SORTIE_ARCHIVE = ICI / "_candidats_archives.json"
 SEEN = ICI / "seen.json"
 
-LLM_ACTIF = os.environ.get("FRONTIERE_LLM") == "ollama"
+# Deux fournisseurs possibles pour la redaction, choisis par FRONTIERE_LLM :
+#   ollama : modele local, ce que fait la production aujourd'hui
+#   api    : tout service expose au format OpenAI (DeepSeek, Gemini, autres)
+# Le tri reste heuristique dans les deux cas : le fournisseur ne change que la
+# redaction, jamais la selection.
+FOURNISSEUR = os.environ.get("FRONTIERE_LLM", "")
+LLM_ACTIF = FOURNISSEUR in ("ollama", "api")
+
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/generate")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:3b")
 OLLAMA_TIMEOUT = 60
 PAUSE_AVANT_REPRISE = 2
 
+API_URL = os.environ.get("LLM_API_URL", "")
+API_MODELE = os.environ.get("LLM_API_MODELE", "")
+API_CLE = os.environ.get("LLM_API_CLE", "")
+
 
 class OllamaIndisponible(RuntimeError):
     """Le service de redaction ne repond pas. Panne, pas defaut de redaction."""
 
+
+def modele_actif():
+    """Nom du modele qui redige, quel que soit le fournisseur."""
+    return API_MODELE if FOURNISSEUR == "api" else OLLAMA_MODEL
+
+# Le prompt demande d'entrer directement dans le mecanisme. La liste couvre
+# toute ouverture qui parle du papier au lieu de son contenu, pas seulement la
+# formule "compte pour un economiste" : l'angle doit se lire seul, sous un
+# titre qui annonce deja qu'il s'agit d'un papier.
 FORMULES_ANGLE_INTERDITES = (
-    "ce papier compte pour un",
-    "cet article compte pour un",
-    "cette étude compte pour un",
-    "cette etude compte pour un",
-    "ce travail compte pour un",
+    "ce papier", "cet article", "cette étude", "cette etude",
+    "ce travail", "cette recherche", "cette analyse",
+    "dans ce papier", "dans cet article", "dans cette étude",
+    "dans cette etude", "les auteurs",
+)
+# Le flux resume les travaux des autres. La premiere personne y fait passer
+# l'auteur du site pour l'auteur du papier.
+PREMIERE_PERSONNE = re.compile(
+    r"\b(?:nous\s+(?:proposons|montrons|determinons|déterminons|presentons|présentons"
+    r"|utilisons|developpons|développons|estimons|trouvons|appliquons|avons|constatons"
+    r"|observons|analysons|etudions|étudions)"
+    r"|notre\s+(?:methode|méthode|approche|analyse|modele|modèle|etude|étude|travail|papier|article)"
+    r"|nos\s+(?:resultats|résultats|donnees|données|estimations|travaux))\b",
+    re.IGNORECASE,
+)
+# Un demonstratif pluriel devant un nom abstrait renvoie a un passage que le
+# lecteur n'a pas sous les yeux : l'angle et le resume sont lus seuls.
+ANAPHORE_ORPHELINE = re.compile(
+    r"\bces\s+(?:difficultés|difficultes|problèmes|problemes|limites|défis|defis"
+    r"|enjeux|obstacles|contraintes|lacunes|questions|approches|méthodes|methodes)\b",
+    re.IGNORECASE,
 )
 MOTS_OUTILS_ANGLAIS = {
     "the", "and", "of", "to", "with", "for", "from", "that", "this",
@@ -161,6 +197,31 @@ def _contient_anglais_residuel(texte):
     return sum(mot in MOTS_OUTILS_ANGLAIS for mot in mots) >= 3
 
 
+def _anaphore_sans_antecedent(texte):
+    """Vrai si un "ces X" renvoie a un X jamais introduit dans le texte.
+
+    Le lecteur ne voit ni l'abstract ni les autres champs : un renvoi qui
+    depasse les limites du texte affiche ne renvoie a rien.
+    """
+    for correspondance in ANAPHORE_ORPHELINE.finditer(texte):
+        nom = correspondance.group(0).split()[-1].casefold()
+        avant = texte[: correspondance.start()].casefold()
+        racine = nom[:-1] if nom.endswith("s") else nom
+        if racine not in avant:
+            return True
+    return False
+
+
+def erreurs_redaction(texte):
+    """Fautes de posture editoriale, communes au resume et a l'angle."""
+    erreurs = []
+    if PREMIERE_PERSONNE.search(texte):
+        erreurs.append("premiere_personne")
+    if _anaphore_sans_antecedent(texte):
+        erreurs.append("anaphore_orpheline")
+    return erreurs
+
+
 def erreurs_langue(texte):
     """Retourne les fautes de francais detectables sans dictionnaire.
 
@@ -196,6 +257,7 @@ def erreurs_resume(texte):
     if _contient_anglais_residuel(texte):
         erreurs.append("anglais_residuel")
     erreurs.extend(erreurs_langue(texte))
+    erreurs.extend(erreurs_redaction(texte))
     return erreurs
 
 
@@ -212,6 +274,7 @@ def erreurs_angle(texte):
     if debut.startswith(FORMULES_ANGLE_INTERDITES):
         erreurs.append("formule_stereotypee")
     erreurs.extend(erreurs_langue(texte))
+    erreurs.extend(erreurs_redaction(texte))
     return erreurs
 
 
@@ -224,8 +287,37 @@ def _generer_avec_reprise(generateur, validateur):
     return None
 
 
+def _requete_ollama(requests, prompt):
+    reponse = requests.post(
+        OLLAMA_URL,
+        json={"model": OLLAMA_MODEL, "prompt": prompt, "stream": False},
+        timeout=OLLAMA_TIMEOUT,
+    )
+    reponse.raise_for_status()
+    return reponse.json().get("response", "").strip() or None
+
+
+def _requete_api(requests, prompt):
+    """Appelle un service au format OpenAI : DeepSeek, Gemini et equivalents."""
+    reponse = requests.post(
+        API_URL,
+        headers={"Authorization": f"Bearer {API_CLE}"},
+        json={
+            "model": API_MODELE,
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": 0,
+        },
+        timeout=OLLAMA_TIMEOUT,
+    )
+    reponse.raise_for_status()
+    choix = reponse.json().get("choices") or []
+    if not choix:
+        return None
+    return (choix[0].get("message", {}).get("content") or "").strip() or None
+
+
 def _appel_ollama(prompt):
-    """Retourne le texte genere par Ollama.
+    """Retourne le texte genere par le fournisseur configure.
 
     Leve OllamaIndisponible si le service ne repond pas apres deux tentatives.
     Une panne de transport n'est pas un echec de redaction : elle ne doit pas
@@ -233,16 +325,11 @@ def _appel_ollama(prompt):
     """
     import requests
 
+    requete = _requete_api if FOURNISSEUR == "api" else _requete_ollama
     derniere_erreur = None
     for tentative in range(2):
         try:
-            reponse = requests.post(
-                OLLAMA_URL,
-                json={"model": OLLAMA_MODEL, "prompt": prompt, "stream": False},
-                timeout=OLLAMA_TIMEOUT,
-            )
-            reponse.raise_for_status()
-            return reponse.json().get("response", "").strip() or None
+            return requete(requests, prompt)
         except Exception as erreur:
             derniere_erreur = erreur
             if tentative == 0:
@@ -260,6 +347,9 @@ def resume_ollama(titre, abstract):
 def construire_prompt_resume(titre, abstract):
     return (
         "Tu resumes un papier de recherche en francais, pour un economiste presse. "
+        "Tu n'es pas l'auteur du papier : ecris a la troisieme personne, jamais "
+        "nous, notre ni nos. Le lecteur ne voit que tes deux phrases, donc "
+        "n'ecris pas ces difficultes ni ces problemes sans les avoir nommes avant. "
         "Ecris exactement 2 phrases en francais, factuelles, sans inventer de chiffre "
         "ou de resultat absent du texte source. N'ajoute aucun prefixe ni commentaire, "
         "seulement les 2 phrases. N'utilise pas de tiret cadratin. Respecte les "
@@ -284,6 +374,9 @@ def construire_prompt_angle(titre, abstract):
         "une formule annonçant son intérêt pour un économiste. Ne répète pas le titre "
         "mot pour mot et n'invente aucun chiffre ou résultat absent du texte source. "
         "N'ajoute aucun préfixe ni commentaire et n'utilise pas de tiret cadratin. "
+        "Tu n'es pas l'auteur du papier : n'écris jamais nous, notre ni nos. "
+        "La phrase est lue seule, sans le résumé : n'écris pas « ces difficultés » "
+        "ni « ces problèmes » sans les avoir nommés dans la phrase même. "
         "Respecte les élisions : écris d'un, l'unité, qu'Amazon, et non de un, "
         "la unité, que Amazon. Si le texte source dit trillion, écris mille milliards.\n\n"
         f"Titre : {titre}\n"
@@ -372,7 +465,7 @@ def main():
             "auteurs": candidat.get("auteurs", ""),
             "signal": False,
         }
-        entree["llm"] = OLLAMA_MODEL
+        entree["llm"] = modele_actif()
 
         cures.append(entree)
 
@@ -389,7 +482,7 @@ def main():
     print(f"Eligibles (score >= {SEUIL_PUBLICATION}) : {nb_eligibles}")
     print(f"Publies apres validation : {len(cures)}")
     print(f"Transmis a l'archive (score < {SEUIL_PUBLICATION}) : {len(candidats_archives)}")
-    print(f"Mode LLM actif : {LLM_ACTIF} ({OLLAMA_MODEL})" if LLM_ACTIF else "Mode LLM actif : non (heuristique seul)")
+    print(f"Redaction : {FOURNISSEUR} ({modele_actif()})" if LLM_ACTIF else "Redaction : aucune (heuristique seul)")
     if LLM_ACTIF:
         print(f"Resumes rediges et valides par Ollama : {nb_llm}/{len(cures)}")
     print(

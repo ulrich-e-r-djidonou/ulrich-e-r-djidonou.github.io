@@ -27,16 +27,39 @@ Les fichiers intermédiaires sont ignorés par Git:
 - `pipeline/_candidats_cures.json`;
 - `pipeline/_candidats_archives.json`.
 
-## Rédaction locale avec Ollama
+## Rédaction
 
-Les items admissibles sont rédigés en français par Ollama. Le workflow de
-production utilise actuellement `qwen2.5:3b`.
+Les items admissibles sont rédigés en français par un modèle. Deux
+fournisseurs, choisis par `FRONTIERE_LLM`. Le fournisseur ne change que la
+rédaction, jamais la sélection, qui reste heuristique.
+
+Modèle local, ce que fait la production aujourd'hui:
 
 ```text
 FRONTIERE_LLM=ollama
 OLLAMA_MODEL=qwen2.5:3b
 OLLAMA_URL=http://localhost:11434/api/generate
 ```
+
+Service distant au format OpenAI, DeepSeek, Gemini ou équivalent:
+
+```text
+FRONTIERE_LLM=api
+LLM_API_URL=https://api.deepseek.com/v1/chat/completions
+LLM_API_MODELE=deepseek-v4-flash
+LLM_API_CLE=...
+```
+
+En production la clé passe par un secret GitHub, jamais par le dépôt:
+
+```powershell
+gh secret set LLM_API_CLE
+```
+
+Volume mesuré sur le banc: 942 jetons en entrée et 218 en sortie par item,
+soit environ 245 000 et 57 000 jetons par an à 5 items par semaine. Aux
+tarifs d'août 2026, cela place le coût annuel entre 0,05 et 0,87 USD selon le
+modèle retenu.
 
 Le résumé et l'angle économique possèdent des validateurs distincts. Chaque
 champ peut être généré deux fois au maximum. Aucun extrait anglais n'est
@@ -51,12 +74,23 @@ Deux échecs sont distingués, parce qu'ils n'appellent pas la même réaction:
   sort en code 1. Le workflow échoue visiblement plutôt qu'une panne ne
   consomme définitivement un lot d'articles.
 
-Les contrôles portent sur le nombre de phrases, les caractères non latins, la
-fuite de mots outils anglais, les ouvertures stéréotypées et un jeu de règles
-de langue française: élision manquante, démonstratif devant voyelle, mot
-doublé, fuite de mot anglais isolé, et le faux ami `trillion`, qui vaut 10^12
-en anglais contre 10^18 en français. Ces règles sont volontairement étroites
-et ne couvrent ni les accords en genre ni le style.
+Les contrôles portent sur trois plans.
+
+**Forme**: nombre de phrases, ponctuation finale, caractères non latins, fuite
+de mots outils anglais.
+
+**Langue**: élision manquante, démonstratif devant voyelle, mot doublé, fuite
+de mot anglais isolé, et le faux ami `trillion`, qui vaut 10^12 en anglais
+contre 10^18 en français.
+
+**Posture éditoriale**: aucune ouverture qui parle du papier plutôt que de son
+contenu, aucune première personne, puisque le flux résume les travaux des
+autres, et aucun renvoi du type « ces difficultés » à un antécédent que le
+lecteur n'a pas sous les yeux, chaque champ étant lu seul.
+
+Ces règles sont volontairement étroites et ne couvrent ni les accords en genre
+ni le style. Passées sur la prose française du site, elles ne produisent aucun
+faux positif.
 
 La calibration sur les sorties existantes se lance avec:
 
