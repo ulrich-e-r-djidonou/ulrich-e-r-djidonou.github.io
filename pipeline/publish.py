@@ -33,6 +33,7 @@ ARCHIVES = DONNEES / "archives"
 CURES = Path(__file__).parent / "_candidats_cures.json"
 CANDIDATS_ARCHIVES = Path(__file__).parent / "_candidats_archives.json"
 SITEMAP = RACINE / "sitemap.xml"
+FRONTIERE_INDEX = RACINE / "frontiere" / "index.html"
 
 FENETRE_JOURS = 90
 SEUIL_SELECTION_PRINCIPALE = 3
@@ -109,6 +110,70 @@ def synchroniser_sitemap(chemin_sitemap=SITEMAP, chemin_meta=DONNEES / "meta.jso
     chemin_sitemap.write_text(contenu_modifie, encoding="utf-8")
 
 
+def generer_jsonld_flux(entrees):
+    """Une entree schema.org CreativeWork par item du flux, en JSON-LD.
+
+    Distingue la redaction (resume_fr, angle_eco), attribuee a Ulrich
+    Djidonou, du travail original cite (titre, auteurs, url externe) : sans
+    cette distinction, une IA qui lit le balisage attribuerait un papier
+    externe a l'auteur du site plutot qu'a ses vrais auteurs.
+    """
+    elements = []
+    for position, entree in enumerate(entrees, start=1):
+        description = entree.get("resume_fr", "")
+        if entree.get("angle_eco"):
+            description = f"{description} {entree['angle_eco']}".strip()
+        oeuvre = {
+            "@type": "CreativeWork",
+            "headline": entree["titre"],
+            "url": "https://djidonou.com/frontiere/",
+            "datePublished": entree.get("date_publication"),
+            "inLanguage": "fr",
+            "author": {"@id": "https://djidonou.com/#person"},
+            "description": description,
+            "isPartOf": {"@id": "https://djidonou.com/frontiere/#page"},
+            "citation": {
+                "@type": "CreativeWork",
+                "name": entree["titre"],
+                "url": entree["url"],
+                "author": entree.get("auteurs") or entree.get("source", ""),
+            },
+        }
+        if entree.get("themes"):
+            oeuvre["keywords"] = ", ".join(entree["themes"])
+        elements.append({
+            "@type": "ListItem",
+            "position": position,
+            "item": oeuvre,
+        })
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": elements,
+    }
+
+
+def injecter_jsonld_flux(donnees_jsonld, chemin_index=FRONTIERE_INDEX):
+    """Ecrit le JSON-LD par item dans le script balise id="flux-jsonld"."""
+    contenu = chemin_index.read_text(encoding="utf-8")
+    motif = re.compile(
+        r'(<script type="application/ld\+json" id="flux-jsonld">\s*).*?(\s*</script>)',
+        re.DOTALL,
+    )
+    charge_utile = json.dumps(donnees_jsonld, ensure_ascii=False, indent=2)
+    contenu_modifie, nombre = motif.subn(
+        lambda correspondance: (
+            f"{correspondance.group(1)}{charge_utile}{correspondance.group(2)}"
+        ),
+        contenu,
+        count=1,
+    )
+    if nombre != 1:
+        raise ValueError("bloc flux-jsonld introuvable dans frontiere/index.html")
+    chemin_index.write_text(contenu_modifie, encoding="utf-8")
+
+
 def repartir_selection_et_archives(entrees, limite):
     """Separe la selection recente des items anciens ou sous le seuil."""
     selection = []
@@ -180,6 +245,7 @@ def main():
         return
 
     (DONNEES / "flux.json").write_text(contenu_flux, encoding="utf-8")
+    injecter_jsonld_flux(generer_jsonld_flux(dans_fenetre))
 
     compte_par_theme = {theme: 0 for theme in THEMES_CONNUS}
     for entree in dans_fenetre:

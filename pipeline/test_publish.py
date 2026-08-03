@@ -46,6 +46,92 @@ class SynchroniserSitemapTests(unittest.TestCase):
             )
 
 
+class GenererJsonldFluxTests(unittest.TestCase):
+    def test_distingue_la_redaction_du_travail_cite(self):
+        entrees = [
+            {
+                "id": "arxiv-1",
+                "titre": "Un papier externe",
+                "url": "https://arxiv.org/abs/1",
+                "source": "arXiv",
+                "date_publication": "2026-08-01",
+                "resume_fr": "Resume en francais.",
+                "angle_eco": "Angle economique.",
+                "themes": ["llm", "travail-emploi"],
+                "auteurs": "A. Auteur, B. Auteur",
+            }
+        ]
+
+        donnees = publish.generer_jsonld_flux(entrees)
+
+        self.assertEqual(donnees["@type"], "ItemList")
+        item = donnees["itemListElement"][0]["item"]
+        self.assertEqual(item["author"], {"@id": "https://djidonou.com/#person"})
+        self.assertIn("Resume en francais.", item["description"])
+        self.assertIn("Angle economique.", item["description"])
+        self.assertEqual(item["citation"]["url"], "https://arxiv.org/abs/1")
+        self.assertEqual(item["citation"]["author"], "A. Auteur, B. Auteur")
+        self.assertEqual(item["keywords"], "llm, travail-emploi")
+
+    def test_retombe_sur_la_source_sans_auteurs(self):
+        entrees = [{
+            "id": "x", "titre": "T", "url": "https://x.example/1",
+            "source": "VoxEU", "date_publication": "2026-08-01",
+            "resume_fr": "R.", "angle_eco": "", "themes": [], "auteurs": "",
+        }]
+
+        donnees = publish.generer_jsonld_flux(entrees)
+
+        self.assertEqual(
+            donnees["itemListElement"][0]["item"]["citation"]["author"],
+            "VoxEU",
+        )
+
+    def test_liste_vide_produit_un_itemlist_vide(self):
+        donnees = publish.generer_jsonld_flux([])
+        self.assertEqual(donnees["itemListElement"], [])
+
+
+class InjecterJsonldFluxTests(unittest.TestCase):
+    def test_remplace_le_bloc_flux_jsonld_sans_toucher_au_reste(self):
+        with tempfile.TemporaryDirectory() as dossier:
+            index = Path(dossier) / "index.html"
+            index.write_text(
+                """<html><head>
+    <script type="application/ld+json">
+    { "@type": "CollectionPage" }
+    </script>
+
+    <script type="application/ld+json" id="flux-jsonld">
+    []
+    </script>
+</head></html>""",
+                encoding="utf-8",
+            )
+
+            publish.injecter_jsonld_flux(
+                {"@type": "ItemList", "itemListElement": [{"@type": "ListItem"}]},
+                chemin_index=index,
+            )
+
+            resultat = index.read_text(encoding="utf-8")
+            self.assertIn('"@type": "CollectionPage"', resultat)
+            self.assertIn('"itemListElement"', resultat)
+            bloc = resultat.split('id="flux-jsonld">', 1)[1].split("</script>", 1)[0]
+            self.assertEqual(
+                json.loads(bloc),
+                {"@type": "ItemList", "itemListElement": [{"@type": "ListItem"}]},
+            )
+
+    def test_bloc_absent_leve_une_erreur(self):
+        with tempfile.TemporaryDirectory() as dossier:
+            index = Path(dossier) / "index.html"
+            index.write_text("<html></html>", encoding="utf-8")
+
+            with self.assertRaises(ValueError):
+                publish.injecter_jsonld_flux({"@type": "ItemList"}, chemin_index=index)
+
+
 class RepartirSelectionTests(unittest.TestCase):
     def test_separe_un_score_deux_d_un_score_trois(self):
         entrees = [
