@@ -400,6 +400,59 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+.publication-list {
+  display: grid;
+  gap: 2.25rem;
+  margin-top: 2rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--line);
+}
+
+.publication-item {
+  position: relative;
+}
+
+.publication-item::before {
+  content: "";
+  position: absolute;
+  top: 0.6rem;
+  left: calc(-1.5rem - 1px);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--teal);
+  transform: translateX(-50%);
+}
+
+.publication-item h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--heading);
+  font-size: var(--fs-title-sm);
+  line-height: 1.2;
+}
+
+.publication-item p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.status-badge {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--amber);
+  border-radius: 999px;
+  color: var(--amber);
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: var(--fs-3xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
