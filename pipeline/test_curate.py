@@ -328,6 +328,17 @@ class FournisseurTests(unittest.TestCase):
             curate._delai_avant_reprise(erreur, 0), curate.PAUSE_MAX_DEBIT
         )
 
+    def test_attend_plus_longtemps_quand_le_service_est_sature(self):
+        class Reponse:
+            status_code = 503
+            headers = {}
+
+        erreur = Exception("service indisponible")
+        erreur.response = Reponse()
+
+        attentes = [curate._delai_avant_reprise(erreur, t) for t in range(3)]
+        self.assertEqual(attentes, [8, 16, 32])
+
     def test_attente_courte_pour_une_panne_ordinaire(self):
         self.assertEqual(
             curate._delai_avant_reprise(Exception("connexion refusee"), 0),

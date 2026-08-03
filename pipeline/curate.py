@@ -64,6 +64,9 @@ PAUSE_AVANT_REPRISE = 2
 # qu'un abandon : le lot est petit et ne tourne que deux fois par semaine.
 TENTATIVES_API = 4
 PAUSE_MAX_DEBIT = 65
+# Saturation passagere du service, et non refus : le modele redevient
+# disponible, mais rarement dans les deux secondes de la pause ordinaire.
+CODES_SATURATION = (500, 502, 503, 504)
 
 API_URL = os.environ.get("LLM_API_URL", "")
 API_MODELE = os.environ.get("LLM_API_MODELE", "")
@@ -370,13 +373,18 @@ def _delai_avant_reprise(erreur, tentative):
     Un 429 n'est ni une panne ni un defaut de redaction : le service demande
     d'attendre. Les paliers gratuits en imposent un a quelques appels par
     minute, ce qui suffirait sinon a interrompre un lot en cours de route.
+    Un 503 est la meme situation vue d'en face : le modele est sature, pas
+    ferme. Lui laisser deux secondes revient a abandonner tout de suite.
     """
     reponse = getattr(erreur, "response", None)
-    if reponse is not None and getattr(reponse, "status_code", None) == 429:
+    code = getattr(reponse, "status_code", None) if reponse is not None else None
+    if code == 429:
         entete = (reponse.headers or {}).get("Retry-After")
         if entete and str(entete).strip().isdigit():
             return min(int(entete), PAUSE_MAX_DEBIT)
         return min(PAUSE_AVANT_REPRISE * 2 ** (tentative + 3), PAUSE_MAX_DEBIT)
+    if code in CODES_SATURATION:
+        return min(PAUSE_AVANT_REPRISE * 2 ** (tentative + 2), PAUSE_MAX_DEBIT)
     return PAUSE_AVANT_REPRISE
 
 

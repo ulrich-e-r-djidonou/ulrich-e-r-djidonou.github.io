@@ -48,11 +48,17 @@ jobs:
         run: python -m pipeline.regenerer_flux --reprendre
 
       - name: Publier la relecture dans le resume de l'execution
-        if: ${{ !inputs.appliquer }}
+        # !cancelled() plutot que la condition seule : sans fonction de statut,
+        # GitHub ajoute un success() implicite et sauterait cette etape des que
+        # la redaction s'interrompt, c'est-a-dire quand elle est le plus utile.
+        if: ${{ !cancelled() && !inputs.appliquer }}
         run: cat pipeline/_regeneration.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Sauvegarder la relecture pour l'execution suivante
-        if: ${{ !inputs.appliquer }}
+        # Meme raison : un lot interrompu par un quota ou une saturation doit
+        # laisser derriere lui ce qu'il a deja redige, sinon --reprendre ne
+        # reprend jamais rien.
+        if: ${{ !cancelled() && !inputs.appliquer }}
         uses: actions/cache/save@v4
         with:
           path: |
