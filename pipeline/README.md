@@ -170,7 +170,7 @@ essais. Les items rejetés par la validation gardent leur texte précédent.
 ## Tests
 
 ```powershell
-python -m unittest pipeline.test_curate pipeline.test_publish pipeline.benchmark.test_benchmark -v
+python -m unittest pipeline.test_curate pipeline.test_publish pipeline.test_collect pipeline.test_verifier_sante pipeline.test_verifier_jsonld pipeline.benchmark.test_benchmark -v
 python -m py_compile pipeline/curate.py pipeline/publish.py
 ```
 
@@ -178,6 +178,30 @@ python -m py_compile pipeline/curate.py pipeline/publish.py
 `pipeline/`, puis rejoue la calibration des validateurs sur le flux publié.
 La calibration sort en code 2 si le taux de rejet hors formule dépasse 20 %,
 seuil au-delà duquel la non-publication ferait chuter le volume du flux.
+
+## Validation du balisage schema.org
+
+`verifier_jsonld.py` relit `index.html` et `frontiere/index.html`, extrait
+chaque bloc `application/ld+json` et vérifie qu'il est du JSON bien formé et
+que les champs attendus pour son `@type` sont présents et non vides
+(`Person`, `WebSite`, `WebPage`, `FAQPage`, `CollectionPage`, `ItemList`, et
+chaque `CreativeWork` imbriqué dans un `ItemList`). Pour un `CreativeWork`, il
+vérifie en plus que `citation.url` et `citation.author` sont renseignés : sans
+cette distinction, un lecteur automatisé attribuerait le travail cité à
+l'auteur du site plutôt qu'à ses propres auteurs.
+
+Ne contrôle que la structure, pas l'exactitude du contenu ni ce que Google
+affiche réellement : il n'existe pas d'équivalent scriptable du Rich Results
+Test sans passer par l'API Search Console, qui exige une authentification
+OAuth hors de portée d'un script CI simple.
+
+Dans `frontiere.yml`, ce contrôle se lance après `publish.py` mais avant le
+commit, à la différence de `verifier_sante.py` : un JSON-LD cassé est une
+régression réelle, pas un signal à surveiller, et ne doit jamais être publié.
+
+```powershell
+python -m pipeline.verifier_jsonld
+```
 
 ## Alerte de santé
 

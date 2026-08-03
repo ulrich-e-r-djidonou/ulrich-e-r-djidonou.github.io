@@ -37,6 +37,12 @@ jobs:
           python pipeline/curate.py
           python pipeline/publish.py
 
+      - name: Verifier le balisage schema.org
+        # Avant le commit, contrairement a la sante du flux : un JSON-LD casse
+        # est une regression reelle (contenu invisible ou mal attribue pour
+        # un lecteur automatise), pas juste un signal a surveiller.
+        run: python -m pipeline.verifier_jsonld
+
       - name: Committer si changements
         run: |
           git config user.name "frontiere-bot"

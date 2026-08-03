@@ -32,6 +32,7 @@ jobs:
             pipeline.test_publish \
             pipeline.test_collect \
             pipeline.test_verifier_sante \
+            pipeline.test_verifier_jsonld \
             pipeline.benchmark.test_benchmark \
             --verbose
 

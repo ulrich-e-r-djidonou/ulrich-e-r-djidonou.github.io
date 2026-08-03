@@ -1,3 +1,33 @@
+# Autorisation explicite des robots d'IA generative connus, plutot que de
+# compter sur le seul Allow: / generique : un futur changement de politique
+# cote crawler ne doit pas retirer silencieusement ce site de leurs sources.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 User-agent: *
 Allow: /
 
