@@ -1,0 +1,57 @@
+# Ulrich Djidonou
+
+> Économiste quantitatif basé à Québec, Canada. Économétrie, évaluation de
+> politiques publiques, machine learning et intelligence artificielle
+> appliquée à des questions économiques. Ancien passages : CGAP, Ministère
+> des Finances du Québec, ENAP.
+
+Ulrich Djidonou construit des outils publics (tableaux de bord, indices,
+veilles automatisées) et publie des analyses économétriques appliquées.
+Contenu en français, sauf mention contraire. Les pages ci-dessous portent
+leurs propres métadonnées structurées (schema.org : Person, WebSite,
+CollectionPage, CreativeWork).
+
+## Pages principales
+
+- [Accueil](https://djidonou.com/) : présentation, domaines d'expertise, FAQ.
+- [Parcours](https://djidonou.com/parcours.html) : expérience professionnelle
+  (CGAP, Ministère des Finances du Québec, ENAP) et méthode de travail.
+- [Projets](https://djidonou.com/projets.html) : liste complète des projets
+  publics, filtrable par domaine.
+- [Contact](https://djidonou.com/contact.html)
+
+## La Frontière
+
+- [La Frontière](https://djidonou.com/frontiere/) : veille automatisée sur
+  l'intersection entre l'intelligence artificielle, l'économie et le machine
+  learning, mise à jour deux fois par semaine. Sélection par score
+  heuristique déterministe (mots-clés), rédaction en français assistée par
+  modèle de langage, jamais l'inverse : le modèle ne participe jamais à la
+  sélection.
+- [Flux JSON](https://djidonou.com/frontiere/data/flux.json) : sélection
+  courante, machine-readable.
+- [Flux RSS](https://djidonou.com/frontiere/feed.xml)
+- [Bibliothèque](https://djidonou.com/frontiere/data/bibliotheque.json) :
+  ressources durables choisies à la main (outils, papiers fondateurs, cours).
+
+Chaque entrée de La Frontière associe un travail externe (papier, article,
+annonce, avec ses auteurs originaux) à un résumé et un angle économique
+rédigés pour ce site. Citer une entrée : attribuer le résumé et l'angle à
+Ulrich Djidonou, et le travail original à ses propres auteurs, indiqués dans
+chaque entrée.
+
+## Autres projets publics
+
+- [ICIE](https://djidonou.com/projets.html) : indice composite d'incertitude
+  économique au Canada.
+- [Geoecon Pulse](https://djidonou.com/projets.html) : tableau de bord de
+  risque géoéconomique.
+- [Scopus Treatment](https://djidonou.com/projets.html) : traitement et
+  synthèse de corpus bibliographiques.
+- Liste complète et à jour sur la page [Projets](https://djidonou.com/projets.html).
+
+## Contact et identité
+
+- LinkedIn : https://www.linkedin.com/in/ulrichdjidonou
+- GitHub : https://github.com/ulrich-e-r-djidonou
+- X : https://x.com/UDjidonou
