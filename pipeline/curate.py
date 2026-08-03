@@ -55,6 +55,10 @@ OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/generate")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:3b")
 OLLAMA_TIMEOUT = 60
 PAUSE_AVANT_REPRISE = 2
+# Les paliers gratuits limitent le debit. Quelques essais espaces valent mieux
+# qu'un abandon : le lot est petit et ne tourne que deux fois par semaine.
+TENTATIVES_API = 4
+PAUSE_MAX_DEBIT = 65
 
 API_URL = os.environ.get("LLM_API_URL", "")
 API_MODELE = os.environ.get("LLM_API_MODELE", "")
@@ -316,24 +320,42 @@ def _requete_api(requests, prompt):
     return (choix[0].get("message", {}).get("content") or "").strip() or None
 
 
+def _delai_avant_reprise(erreur, tentative):
+    """Attente avant nouvel essai, allongee si le service limite le debit.
+
+    Un 429 n'est ni une panne ni un defaut de redaction : le service demande
+    d'attendre. Les paliers gratuits en imposent un a quelques appels par
+    minute, ce qui suffirait sinon a interrompre un lot en cours de route.
+    """
+    reponse = getattr(erreur, "response", None)
+    if reponse is not None and getattr(reponse, "status_code", None) == 429:
+        entete = (reponse.headers or {}).get("Retry-After")
+        if entete and str(entete).strip().isdigit():
+            return min(int(entete), PAUSE_MAX_DEBIT)
+        return min(PAUSE_AVANT_REPRISE * 2 ** (tentative + 3), PAUSE_MAX_DEBIT)
+    return PAUSE_AVANT_REPRISE
+
+
 def _appel_ollama(prompt):
     """Retourne le texte genere par le fournisseur configure.
 
-    Leve OllamaIndisponible si le service ne repond pas apres deux tentatives.
-    Une panne de transport n'est pas un echec de redaction : elle ne doit pas
-    faire marquer l'item comme vu, sinon il ne serait jamais repeche.
+    Leve OllamaIndisponible si le service ne repond toujours pas apres les
+    tentatives prevues. Une panne de transport n'est pas un echec de
+    redaction : elle ne doit pas faire marquer l'item comme vu, sinon il ne
+    serait jamais repeche.
     """
     import requests
 
     requete = _requete_api if FOURNISSEUR == "api" else _requete_ollama
+    tentatives = TENTATIVES_API if FOURNISSEUR == "api" else 2
     derniere_erreur = None
-    for tentative in range(2):
+    for tentative in range(tentatives):
         try:
             return requete(requests, prompt)
         except Exception as erreur:
             derniere_erreur = erreur
-            if tentative == 0:
-                time.sleep(PAUSE_AVANT_REPRISE)
+            if tentative < tentatives - 1:
+                time.sleep(_delai_avant_reprise(erreur, tentative))
     raise OllamaIndisponible(derniere_erreur)
 
 

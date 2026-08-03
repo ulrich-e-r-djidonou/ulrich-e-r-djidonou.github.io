@@ -302,6 +302,34 @@ class FournisseurTests(unittest.TestCase):
         self.assertEqual(capture["json"]["messages"][0]["content"], "prompt")
         self.assertEqual(capture["json"]["temperature"], 0)
 
+    def test_attend_plus_longtemps_quand_le_debit_est_limite(self):
+        class Reponse:
+            status_code = 429
+            headers = {"Retry-After": "30"}
+
+        erreur = Exception("trop de requetes")
+        erreur.response = Reponse()
+
+        self.assertEqual(curate._delai_avant_reprise(erreur, 0), 30)
+
+    def test_plafonne_l_attente_demandee_par_le_service(self):
+        class Reponse:
+            status_code = 429
+            headers = {"Retry-After": "9999"}
+
+        erreur = Exception("trop de requetes")
+        erreur.response = Reponse()
+
+        self.assertEqual(
+            curate._delai_avant_reprise(erreur, 0), curate.PAUSE_MAX_DEBIT
+        )
+
+    def test_attente_courte_pour_une_panne_ordinaire(self):
+        self.assertEqual(
+            curate._delai_avant_reprise(Exception("connexion refusee"), 0),
+            curate.PAUSE_AVANT_REPRISE,
+        )
+
     def test_le_nom_du_modele_suit_le_fournisseur(self):
         with (
             patch.object(curate, "FOURNISSEUR", "api"),
