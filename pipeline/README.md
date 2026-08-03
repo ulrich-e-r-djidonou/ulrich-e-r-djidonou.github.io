@@ -167,6 +167,21 @@ Sans `--appliquer`, rien n'est écrit dans `frontiere/data/`. Le script produit
 `pipeline/_regeneration.json`, un avant/après par item avec le détail des
 essais. Les items rejetés par la validation gardent leur texte précédent.
 
+`--depuis-relecture` applique le contenu de `pipeline/_regeneration.json` sans
+rien régénérer, pour garantir que le texte publié est exactement celui qui a
+été relu : le modèle ne produit pas deux fois la même sortie.
+
+Le workflow manuel `regenerer-flux` (`.github/workflows/regenerer-flux.yml`,
+`workflow_dispatch`) rejoue cette même reprise côté GitHub Actions, avec le
+secret `LLM_API_CLE` déjà en place là-bas, donc sans clé à gérer en local.
+Un déclenchement sans l'option « appliquer » relit les items restants et
+publie l'avant/après dans le résumé de l'exécution ; un second déclenchement,
+avec l'option activée, applique cette relecture avec `--depuis-relecture`,
+sans repasser par le modèle. L'état intermédiaire (`_regeneration.json` et
+`.md`, tous deux ignorés par Git) passe d'une exécution à l'autre par le cache
+d'Actions, chaque sauvegarde utilisant une clé unique puisque le cache est
+immuable pour une clé donnée.
+
 ## Tests
 
 ```powershell

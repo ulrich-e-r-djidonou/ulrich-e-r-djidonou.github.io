@@ -1,0 +1,76 @@
+name: regenerer-flux
+
+on:
+  workflow_dispatch:
+    inputs:
+      appliquer:
+        description: "Appliquer la relecture deja produite (sinon relecture seule)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  regenerer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dependances
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Restaurer la relecture produite par l'execution precedente
+        # Chaque cle est unique (suffixe run_id) pour pouvoir en creer une
+        # nouvelle a chaque sauvegarde : le cache GitHub est immuable pour une
+        # cle donnee. restore-keys retombe sur la derniere sauvegardee, ce qui
+        # fait office de --reprendre entre deux declenchements manuels.
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            pipeline/_regeneration.json
+            pipeline/_regeneration.md
+          key: regeneration-legacy-${{ github.run_id }}
+          restore-keys: |
+            regeneration-legacy-
+
+      - name: Poursuivre la redaction (relecture seule, rien n'est publie)
+        if: ${{ !inputs.appliquer }}
+        env:
+          FRONTIERE_LLM: api
+          LLM_API_URL: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+          LLM_API_MODELE: gemini-3.6-flash
+          LLM_API_CLE: ${{ secrets.LLM_API_CLE }}
+        run: python -m pipeline.regenerer_flux --reprendre
+
+      - name: Publier la relecture dans le resume de l'execution
+        if: ${{ !inputs.appliquer }}
+        run: cat pipeline/_regeneration.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Sauvegarder la relecture pour l'execution suivante
+        if: ${{ !inputs.appliquer }}
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            pipeline/_regeneration.json
+            pipeline/_regeneration.md
+          key: regeneration-legacy-${{ github.run_id }}
+
+      - name: Appliquer la relecture deja relue, sans rien regenerer
+        # --depuis-relecture ne rappelle jamais le modele : le texte publie
+        # doit etre exactement celui qui a ete relu au tour precedent.
+        if: ${{ inputs.appliquer }}
+        run: python -m pipeline.regenerer_flux --depuis-relecture
+
+      - name: Committer si applique
+        if: ${{ inputs.appliquer }}
+        run: |
+          git config user.name "frontiere-bot"
+          git config user.email "actions@github.com"
+          git add frontiere/data/flux.json
+          git diff --cached --quiet || git commit -m "frontiere: application de la relecture de redaction des items publies"
+          git push
