@@ -30,6 +30,7 @@ import re
 import sys
 import time
 import unicodedata
+from datetime import date
 from pathlib import Path
 
 if hasattr(sys.stdout, "reconfigure"):
@@ -42,6 +43,10 @@ ENTREE = ICI / "_candidats_bruts.json"
 SORTIE = ICI / "_candidats_cures.json"
 SORTIE_ARCHIVE = ICI / "_candidats_archives.json"
 SEEN = ICI / "seen.json"
+# Committe (pas dans .gitignore) : verifier_sante.py doit retrouver
+# l'historique d'une execution a l'autre, ce qu'un fichier ignore ne permet pas.
+SANTE = ICI.parent / "frontiere" / "data" / "sante.json"
+NB_EXECUTIONS_CONSERVEES = 12
 
 # Deux fournisseurs possibles pour la redaction, choisis par FRONTIERE_LLM :
 #   ollama : modele local, ce que fait la production aujourd'hui
@@ -181,10 +186,28 @@ THEMES_MOTS_CLES = {
 }
 
 
+# Voir collect.py pour le raisonnement : les entrees des listes sont des
+# racines tronquees comparees par sous-chaine, sauf ces acronymes, qui
+# exigent un debut de mot. Sans cela « enrollment » compte comme « llm », et
+# tout papier sur la scolarisation gagne un point d'intelligence artificielle.
+MOTS_CLES_DEBUT_DE_MOT = {"llm"}
+_MOTIFS_DEBUT_DE_MOT = {
+    mot: re.compile(rf"\b{re.escape(mot)}", re.IGNORECASE)
+    for mot in MOTS_CLES_DEBUT_DE_MOT
+}
+
+
+def mot_cle_present(texte_bas, mot):
+    motif = _MOTIFS_DEBUT_DE_MOT.get(mot)
+    if motif is not None:
+        return bool(motif.search(texte_bas))
+    return mot in texte_bas
+
+
 def score_heuristique(texte):
     texte_bas = texte.lower()
-    nb_eco = sum(1 for mot in MOTS_CLES_ECO if mot in texte_bas)
-    nb_ia = sum(1 for mot in MOTS_CLES_IA if mot in texte_bas)
+    nb_eco = sum(1 for mot in MOTS_CLES_ECO if mot_cle_present(texte_bas, mot))
+    nb_ia = sum(1 for mot in MOTS_CLES_IA if mot_cle_present(texte_bas, mot))
     return min(nb_eco * nb_ia, 10)
 
 
@@ -192,7 +215,7 @@ def themes_heuristique(texte):
     texte_bas = texte.lower()
     themes = [
         theme for theme, mots in THEMES_MOTS_CLES.items()
-        if any(mot in texte_bas for mot in mots)
+        if any(mot_cle_present(texte_bas, mot) for mot in mots)
     ]
     return themes[:3]
 
@@ -430,6 +453,31 @@ def construire_prompt_angle(titre, abstract):
     )
 
 
+def enregistrer_execution(nb_eligibles, nb_publies, nb_reportes, nb_non_publies_validation):
+    """Ajoute cette execution a l'historique lu par verifier_sante.py.
+
+    Le fichier est committe : c'est la seule facon pour une execution
+    planifiee de savoir ce qu'a produit la precedente.
+    """
+    historique = []
+    if SANTE.exists():
+        try:
+            historique = json.loads(SANTE.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            historique = []
+    historique.append({
+        "date": date.today().isoformat(),
+        "fournisseur": FOURNISSEUR or "aucun",
+        "nb_eligibles": nb_eligibles,
+        "nb_publies": nb_publies,
+        "nb_reportes": nb_reportes,
+        "nb_rejetes_validation": nb_non_publies_validation,
+    })
+    historique = historique[-NB_EXECUTIONS_CONSERVEES:]
+    SANTE.parent.mkdir(parents=True, exist_ok=True)
+    SANTE.write_text(json.dumps(historique, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def main():
     candidats = json.loads(ENTREE.read_text(encoding="utf-8")) if ENTREE.exists() else []
     deja_vus = json.loads(SEEN.read_text(encoding="utf-8")) if SEEN.exists() else {}
@@ -521,6 +569,7 @@ def main():
         encoding="utf-8",
     )
     SEEN.write_text(json.dumps(nouveaux_vus, ensure_ascii=False, indent=2), encoding="utf-8")
+    enregistrer_execution(nb_eligibles, len(cures), nb_reportes, nb_non_publies_validation)
 
     nb_llm = sum(1 for c in cures if c.get("llm"))
     print(f"Candidats traites : {len(candidats)}")

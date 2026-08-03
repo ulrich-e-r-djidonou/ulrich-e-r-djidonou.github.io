@@ -27,8 +27,55 @@ sources:
     type: rss
     url: "https://www.nber.org/rss/new.xml"
     requiert_mot_cle_ia: true
+    # Le flux accole les auteurs au titre et ne porte aucune date : voir
+    # separateur_auteurs et date_repli. Le 403 de juillet 2026 ne se
+    # reproduit plus (verifie 2026-08-02 : 200, 31 entrees, abstracts complets).
+    separateur_auteurs: " -- by "
+    date_repli: collecte
+    type_item: papier
     fenetre_jours: 30
-    actif: false  # renvoie 403 (protection anti-bot cote serveur, verifie 2026-07-10) ; a reessayer periodiquement
+    actif: true
+
+  - id: aea
+    nom: "American Economic Association, revues"
+    type: crossref
+    # AER, AER Insights, JEP, JEL, AEJ Applied / Macro / Policy / Micro.
+    # ISSN verifies via https://api.crossref.org/journals (2026-08-02).
+    issn:
+      - "0002-8282"   # American Economic Review
+      - "2640-205X"   # AER: Insights
+      - "0895-3309"   # Journal of Economic Perspectives
+      - "0022-0515"   # Journal of Economic Literature
+      - "1945-7782"   # AEJ: Applied Economics
+      - "1945-7707"   # AEJ: Macroeconomics
+      - "1945-7731"   # AEJ: Economic Policy
+      - "1945-7669"   # AEJ: Microeconomics
+    axe_date: publication
+    requiert_mot_cle_ia: true
+    max_resultats: 100
+    # Les revues datent par numero mensuel : une fenetre de 30 jours en
+    # manquerait la moitie. 60 reste sous la fenetre de 90 jours de publish.py,
+    # donc aucun appel au modele n'est depense sur un item deja trop vieux.
+    fenetre_jours: 60
+    actif: true
+
+  - id: ssrn
+    nom: "SSRN, preprints"
+    type: crossref
+    prefixe_doi: "10.2139"
+    axe_date: depot
+    requiert_mot_cle_eco: true
+    requiert_mot_cle_ia: true
+    max_resultats: 60
+    fenetre_jours: 14
+    # Techniquement fonctionnel (abstracts presents, dates de depot fiables),
+    # mais inactif par choix : Crossref ne porte aucune metadonnee de
+    # discipline pour SSRN, si bien que le prefixe melange l'economie a la
+    # chimie et a la medecine. Mesure le 2026-08-02 : 2000 depots sur 7 jours,
+    # dont 214 passent les deux filtres de mots-cles. A ce volume, SSRN
+    # accaparerait le budget de redaction (16 appels par execution) au
+    # detriment d'arXiv, du NBER et de l'AEA. A reactiver si le budget augmente.
+    actif: false
 
   - id: voxeu
     nom: "VoxEU / CEPR"

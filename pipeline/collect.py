@@ -7,11 +7,12 @@ Une source qui echoue (reseau, format inattendu) est loguee et sautee :
 le run ne s'interrompt jamais a cause d'une seule source.
 """
 
+import html
 import io
 import json
 import re
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from xml.etree import ElementTree
 
@@ -25,6 +26,7 @@ sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")
 ICI = Path(__file__).parent
 SOURCES_YAML = ICI / "sources.yaml"
 SORTIE = ICI / "_candidats_bruts.json"
+SORTIE_SANTE = ICI / "_collecte_sante.json"
 
 MOTS_CLES_ECO = [
     "econom", "labor", "labour", "wage", "market", "policy", "welfare",
@@ -37,6 +39,19 @@ MOTS_CLES_IA = [
     "gpt", "foundation model", "generative ai", "chatbot",
 ]
 
+# La plupart des entrees ci-dessus sont des racines volontairement tronquees :
+# « econom » doit attraper « macroeconomics », donc la correspondance se fait
+# par sous-chaine. Quelques acronymes ne le supportent pas : « llm » se trouve
+# dans « enrollment », ce qui classait tout papier sur la scolarisation parmi
+# les travaux sur les grands modeles de langage. Ceux-la exigent un debut de
+# mot. « gpt » n'est pas du lot : aucun mot anglais ne le contient, et
+# l'exiger en debut de mot ferait perdre « ChatGPT ».
+MOTS_CLES_DEBUT_DE_MOT = {"llm"}
+_MOTIFS_DEBUT_DE_MOT = {
+    mot: re.compile(rf"\b{re.escape(mot)}", re.IGNORECASE)
+    for mot in MOTS_CLES_DEBUT_DE_MOT
+}
+
 TIMEOUT = 20
 NAVIGATEUR = {
     "User-Agent": (
@@ -46,9 +61,16 @@ NAVIGATEUR = {
 }
 
 
+def mot_cle_present(texte_bas, mot):
+    motif = _MOTIFS_DEBUT_DE_MOT.get(mot)
+    if motif is not None:
+        return bool(motif.search(texte_bas))
+    return mot in texte_bas
+
+
 def contient_mot_cle(texte, mots_cles):
     texte_bas = texte.lower()
-    return any(mot in texte_bas for mot in mots_cles)
+    return any(mot_cle_present(texte_bas, mot) for mot in mots_cles)
 
 
 def dans_fenetre(date_pub, fenetre_jours):
@@ -114,6 +136,14 @@ def collecter_arxiv(source):
     return items
 
 
+def separer_titre_auteurs(titre, separateur):
+    """NBER accole les auteurs au titre : « Titre -- by Alice, Bob »."""
+    if not separateur or separateur not in titre:
+        return titre, ""
+    partie_titre, _, partie_auteurs = titre.partition(separateur)
+    return partie_titre.strip(), partie_auteurs.strip()
+
+
 def collecter_rss(source):
     items = []
     flux = feedparser.parse(source["url"], request_headers=NAVIGATEUR)
@@ -125,6 +155,13 @@ def collecter_rss(source):
         resume = re.sub("<[^<]+?>", "", entree.get("summary", "")).strip()
         lien = entree.get("link", "")
         date_pub = parser_date_rss(entree)
+        titre, auteurs = separer_titre_auteurs(titre, source.get("separateur_auteurs"))
+
+        if date_pub is None and source.get("date_repli") == "collecte":
+            # Le flux « new » de NBER ne porte aucune date. Les items y sont
+            # par construction ceux de la semaine : la date de collecte est
+            # une approximation assumee, pas une date de publication reelle.
+            date_pub = datetime.now(timezone.utc)
 
         if not dans_fenetre(date_pub, source.get("fenetre_jours", 30)):
             continue
@@ -140,10 +177,122 @@ def collecter_rss(source):
             "titre": titre,
             "url": lien,
             "source": source["nom"],
-            "type": "article",
+            "type": source.get("type_item", "article"),
             "date_publication": date_pub.date().isoformat() if date_pub else None,
             "abstract": resume,
-            "auteurs": "",
+            "auteurs": auteurs,
+        })
+    return items
+
+
+CROSSREF_API = "https://api.crossref.org/works"
+
+
+def nettoyer_abstract_jats(brut):
+    """Crossref sert les abstracts en JATS : on retire balises et entites.
+
+    Le titre interne « Abstract » est supprime en premier, sinon il se
+    retrouve colle au premier mot du texte.
+    """
+    if not brut:
+        return ""
+    texte = re.sub(r"<jats:title>.*?</jats:title>", " ", brut, flags=re.DOTALL | re.IGNORECASE)
+    texte = re.sub(r"<[^>]+>", " ", texte)
+    texte = html.unescape(texte)
+    return re.sub(r"\s+", " ", texte).strip()
+
+
+def date_crossref(item, champs=("published", "issued", "created")):
+    """Renvoie la premiere date exploitable, ou None si aucune n'est complete.
+
+    Crossref accepte des dates partielles. Une date reduite a l'annee, ce
+    que deposent beaucoup de preprints, ne permet ni la fenetre glissante ni
+    le tri : elle est traitee comme absente.
+    """
+    for champ in champs:
+        parties = (item.get(champ) or {}).get("date-parts") or [[]]
+        parties = parties[0]
+        if len(parties) >= 3:
+            try:
+                return date(parties[0], parties[1], parties[2])
+            except (TypeError, ValueError):
+                continue
+        if len(parties) == 2:
+            try:
+                return date(parties[0], parties[1], 1)
+            except (TypeError, ValueError):
+                continue
+    return None
+
+
+def collecter_crossref(source):
+    """Interroge Crossref par ISSN (revues) ou par prefixe DOI (depots).
+
+    L'axe temporel differe selon la source : une revue se date par sa
+    publication, un depot de preprints par son enregistrement, seule date
+    fiable quand le champ « published » est reduit a l'annee.
+    """
+    items = []
+    axe = source.get("axe_date", "publication")
+    champ_filtre = "from-created-date" if axe == "depot" else "from-pub-date"
+    tri = "created" if axe == "depot" else "published"
+
+    depuis = date.today() - timedelta(days=source.get("fenetre_jours", 60))
+    filtres = [f"{champ_filtre}:{depuis.isoformat()}"]
+    for issn in source.get("issn", []):
+        filtres.append(f"issn:{issn}")
+    if source.get("prefixe_doi"):
+        filtres.append(f"prefix:{source['prefixe_doi']}")
+
+    parametres = {
+        "filter": ",".join(filtres),
+        "sort": tri,
+        "order": "desc",
+        "rows": source.get("max_resultats", 60),
+        "select": "DOI,title,abstract,author,published,issued,created,container-title",
+        # Crossref sert plus vite et plus stablement les clients identifies.
+        "mailto": source.get("contact", "contact@djidonou.com"),
+    }
+    reponse = requests.get(CROSSREF_API, params=parametres, timeout=TIMEOUT * 3, headers=NAVIGATEUR)
+    reponse.raise_for_status()
+
+    for item in reponse.json()["message"]["items"]:
+        titre = " ".join((item.get("title") or [""])[0].split())
+        resume = nettoyer_abstract_jats(item.get("abstract"))
+        doi = item.get("DOI", "")
+        if not titre or not doi:
+            continue
+        # Sans abstract, la redaction n'a rien a resumer et le score ne
+        # porterait que sur le titre : l'item est ecarte a la collecte.
+        if not resume:
+            continue
+
+        champs_date = ("created", "published", "issued") if axe == "depot" else ("published", "issued", "created")
+        date_pub = date_crossref(item, champs_date)
+        if date_pub and not dans_fenetre(
+            datetime.combine(date_pub, datetime.min.time(), tzinfo=timezone.utc),
+            source.get("fenetre_jours", 60),
+        ):
+            continue
+        if source.get("requiert_mot_cle_eco") and not contient_mot_cle(titre + " " + resume, MOTS_CLES_ECO):
+            continue
+        if source.get("requiert_mot_cle_ia") and not contient_mot_cle(titre + " " + resume, MOTS_CLES_IA):
+            continue
+
+        auteurs = ", ".join(
+            f"{a.get('given', '')} {a.get('family', '')}".strip()
+            for a in item.get("author", [])
+        ).strip(", ")
+
+        items.append({
+            "id": f"{source['id']}-{re.sub(r'[^a-zA-Z0-9]+', '-', doi)}",
+            "titre": titre,
+            "url": f"https://doi.org/{doi}",
+            "source": (item.get("container-title") or [source["nom"]])[0] or source["nom"],
+            "type": source.get("type_item", "papier"),
+            "date_publication": date_pub.isoformat() if date_pub else None,
+            "abstract": resume,
+            "auteurs": auteurs,
         })
     return items
 
@@ -176,6 +325,7 @@ def collecter_github_commits(source):
 
 COLLECTEURS = {
     "arxiv": collecter_arxiv,
+    "crossref": collecter_crossref,
     "rss": collecter_rss,
     "github_commits": collecter_github_commits,
 }
@@ -202,6 +352,18 @@ def main():
             recap.append((source["id"], f"echec : {exc}", 0))
 
     SORTIE.write_text(json.dumps(tous_les_items, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    actives = [ligne for ligne in recap if ligne[1] != "desactive"]
+    sante = {
+        "total_brut": len(tous_les_items),
+        "sources": [
+            {"id": id_source, "statut": statut, "items": nb}
+            for id_source, statut, nb in recap
+        ],
+        "sources_actives": len(actives),
+        "sources_en_echec": sum(1 for ligne in actives if ligne[1].startswith("echec")),
+    }
+    SORTIE_SANTE.write_text(json.dumps(sante, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print("Recapitulatif de la collecte :")
     for id_source, statut, nb in recap:

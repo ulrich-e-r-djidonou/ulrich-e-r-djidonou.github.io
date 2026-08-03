@@ -86,6 +86,7 @@ class PolitiquePublicationTests(unittest.TestCase):
             sortie = racine / "cures.json"
             sortie_archive = racine / "archives.json"
             seen = racine / "seen.json"
+            sante = racine / "sante.json"
             entree.write_text(json.dumps([candidat]), encoding="utf-8")
             seen.write_text("{}", encoding="utf-8")
 
@@ -94,6 +95,7 @@ class PolitiquePublicationTests(unittest.TestCase):
                 patch.object(curate, "SORTIE", sortie),
                 patch.object(curate, "SORTIE_ARCHIVE", sortie_archive),
                 patch.object(curate, "SEEN", seen),
+                patch.object(curate, "SANTE", sante),
                 patch.object(curate, "LLM_ACTIF", True),
                 patch.object(
                     curate,
@@ -127,6 +129,7 @@ class PolitiquePublicationTests(unittest.TestCase):
             sortie = racine / "cures.json"
             sortie_archive = racine / "archives.json"
             seen = racine / "seen.json"
+            sante = racine / "sante.json"
             entree.write_text(json.dumps([candidat]), encoding="utf-8")
             seen.write_text("{}", encoding="utf-8")
 
@@ -135,6 +138,7 @@ class PolitiquePublicationTests(unittest.TestCase):
                 patch.object(curate, "SORTIE", sortie),
                 patch.object(curate, "SORTIE_ARCHIVE", sortie_archive),
                 patch.object(curate, "SEEN", seen),
+                patch.object(curate, "SANTE", sante),
                 patch.object(curate, "LLM_ACTIF", True),
                 patch.object(curate, "resume_ollama") as resume,
                 patch.object(curate, "angle_eco_ollama") as angle,
@@ -381,6 +385,7 @@ class BudgetAppelsTests(unittest.TestCase):
                 "SORTIE": racine / "cures.json",
                 "SORTIE_ARCHIVE": racine / "archives.json",
                 "SEEN": racine / "seen.json",
+                "SANTE": racine / "sante.json",
             }
             chemins["ENTREE"].write_text(json.dumps([candidat]), encoding="utf-8")
             chemins["SEEN"].write_text("{}", encoding="utf-8")
@@ -419,6 +424,7 @@ class PanneServiceTests(unittest.TestCase):
             "SORTIE": racine / "cures.json",
             "SORTIE_ARCHIVE": racine / "archives.json",
             "SEEN": racine / "seen.json",
+            "SANTE": racine / "sante.json",
         }
         chemins["ENTREE"].write_text(json.dumps([self.CANDIDAT]), encoding="utf-8")
         chemins["SEEN"].write_text("{}", encoding="utf-8")
@@ -475,6 +481,69 @@ class PanneServiceTests(unittest.TestCase):
                 curate._appel_ollama("prompt")
 
         self.assertEqual(len(appels), 2)
+
+
+class EnregistrerExecutionTests(unittest.TestCase):
+    """L'historique lu par verifier_sante.py doit survivre entre executions."""
+
+    def test_ajoute_une_entree_au_fichier_existant(self):
+        with tempfile.TemporaryDirectory() as dossier:
+            sante = Path(dossier) / "sante.json"
+            sante.write_text(
+                json.dumps([{"date": "2026-07-01", "nb_publies": 3}]),
+                encoding="utf-8",
+            )
+            with (
+                patch.object(curate, "SANTE", sante),
+                patch.object(curate, "FOURNISSEUR", "api"),
+            ):
+                curate.enregistrer_execution(
+                    nb_eligibles=5, nb_publies=0, nb_reportes=2,
+                    nb_non_publies_validation=3,
+                )
+
+            historique = json.loads(sante.read_text(encoding="utf-8"))
+            self.assertEqual(len(historique), 2)
+            self.assertEqual(historique[-1]["nb_publies"], 0)
+            self.assertEqual(historique[-1]["nb_eligibles"], 5)
+            self.assertEqual(historique[-1]["fournisseur"], "api")
+
+    def test_cree_le_fichier_sil_est_absent(self):
+        with tempfile.TemporaryDirectory() as dossier:
+            sante = Path(dossier) / "sous-dossier" / "sante.json"
+            with patch.object(curate, "SANTE", sante):
+                curate.enregistrer_execution(
+                    nb_eligibles=0, nb_publies=0, nb_reportes=0,
+                    nb_non_publies_validation=0,
+                )
+            self.assertTrue(sante.exists())
+            self.assertEqual(len(json.loads(sante.read_text(encoding="utf-8"))), 1)
+
+    def test_conserve_seulement_les_dernieres_executions(self):
+        with tempfile.TemporaryDirectory() as dossier:
+            sante = Path(dossier) / "sante.json"
+            ancien = [{"date": f"2026-01-{i:02d}", "nb_publies": 1} for i in range(1, 15)]
+            sante.write_text(json.dumps(ancien), encoding="utf-8")
+            with (
+                patch.object(curate, "SANTE", sante),
+                patch.object(curate, "NB_EXECUTIONS_CONSERVEES", 12),
+            ):
+                curate.enregistrer_execution(
+                    nb_eligibles=1, nb_publies=1, nb_reportes=0,
+                    nb_non_publies_validation=0,
+                )
+            self.assertEqual(len(json.loads(sante.read_text(encoding="utf-8"))), 12)
+
+    def test_fichier_corrompu_repart_de_zero_sans_planter(self):
+        with tempfile.TemporaryDirectory() as dossier:
+            sante = Path(dossier) / "sante.json"
+            sante.write_text("pas du json valide", encoding="utf-8")
+            with patch.object(curate, "SANTE", sante):
+                curate.enregistrer_execution(
+                    nb_eligibles=1, nb_publies=1, nb_reportes=0,
+                    nb_non_publies_validation=0,
+                )
+            self.assertEqual(len(json.loads(sante.read_text(encoding="utf-8"))), 1)
 
 
 if __name__ == "__main__":

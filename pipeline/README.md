@@ -12,7 +12,36 @@ python pipeline/publish.py
 ## Collecte et sélection
 
 `collect.py` interroge les sources définies dans `sources.yaml` et écrit les
-candidats bruts dans `pipeline/_candidats_bruts.json`.
+candidats bruts dans `pipeline/_candidats_bruts.json`. Un récapitulatif par
+source (statut, nombre d'items) est aussi écrit dans
+`pipeline/_collecte_sante.json`, ignoré par Git, pour diagnostiquer une
+exécution à zéro publication sans rouvrir les journaux du workflow.
+
+Quatre types de source : `arxiv` (flux natif), `rss` (VoxEU, Banque du
+Canada, NBER), `crossref` (revues AEA par ISSN, SSRN par préfixe DOI) et
+`github_commits`.
+
+Le flux RSS du NBER accole les auteurs au titre (`Titre -- by Auteur, Auteur`)
+et ne porte aucune date : `separateur_auteurs` sépare les deux, `date_repli:
+collecte` retient la date de collecte comme approximation, les items du flux
+« new » étant par construction ceux de la semaine.
+
+Crossref sert les revues AEA (AER, AER Insights, JEP, JEL, les quatre AEJ) par
+ISSN, datées par leur publication. SSRN est accessible par le préfixe DOI
+`10.2139`, daté par son dépôt, seule date fiable puisque Crossref réduit
+souvent la date de publication SSRN à l'année seule. SSRN reste désactivé par
+défaut dans `sources.yaml` : Crossref ne porte aucune métadonnée de
+discipline pour ce préfixe, si bien qu'il mélange économie, chimie et
+médecine. Mesuré le 2 août 2026 : 2000 dépôts sur 7 jours, dont 214 passant
+les deux filtres de mots-clés, un volume qui épuiserait `LLM_BUDGET_APPELS` au
+détriment des autres sources.
+
+Les mots-clés `MOTS_CLES_ECO` et `MOTS_CLES_IA` (dans `collect.py` et,
+séparément, dans `curate.py` pour le score) sont des racines comparées par
+sous-chaîne, volontairement : « econom » doit attraper « macroeconomics ».
+Une exception : `llm`, seul acronyme de la liste qui apparaît aussi comme
+sous-chaîne d'un mot anglais courant (« enrollment »), exige donc un début de
+mot.
 
 `curate.py` calcule un score déterministe, soit le nombre de mots-clés
 économiques multiplié par le nombre de mots-clés IA ou ML. Le LLM ne
@@ -149,6 +178,26 @@ python -m py_compile pipeline/curate.py pipeline/publish.py
 `pipeline/`, puis rejoue la calibration des validateurs sur le flux publié.
 La calibration sort en code 2 si le taux de rejet hors formule dépasse 20 %,
 seuil au-delà duquel la non-publication ferait chuter le volume du flux.
+
+## Alerte de santé
+
+`curate.py` journalise chaque exécution (items éligibles, publiés, reportés,
+rejetés par la validation, fournisseur) dans `frontiere/data/sante.json`,
+committé, sur les 12 dernières exécutions.
+
+`verifier_sante.py` se lance après la publication, dans le workflow, et
+échoue si les deux dernières exécutions ont publié zéro item. Il ne bloque
+jamais la maintenance du flux : dans `frontiere.yml`, il se lance après le
+commit, pas avant. Une seule exécution à zéro peut être une semaine creuse ;
+deux d'affilée signalent plus probablement une source toutes en échec, un
+filtre de mots-clés devenu trop strict, ou un budget d'appels
+systématiquement épuisé avant la fin du lot. Un échec fait échouer le
+workflow visiblement, comme pour une panne du service de rédaction, ce qui
+déclenche la notification GitHub par défaut sur les exécutions planifiées.
+
+```powershell
+python -m pipeline.verifier_sante
+```
 
 ## Comparaison des modèles
 
