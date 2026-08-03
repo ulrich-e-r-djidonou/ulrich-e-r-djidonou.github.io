@@ -173,6 +173,15 @@ def main():
         help="ecrit les textes valides dans frontiere/data/flux.json",
     )
     analyseur.add_argument(
+        "--reprendre",
+        action="store_true",
+        help=(
+            "conserve les items deja rediges dans _regeneration.json et ne "
+            "traite que les autres. Utile quand un quota journalier a "
+            "interrompu un passage precedent."
+        ),
+    )
+    analyseur.add_argument(
         "--depuis-relecture",
         action="store_true",
         help=(
@@ -198,15 +207,44 @@ def main():
     debut = time.monotonic()
 
     releve = []
+    deja_faits = {}
+    if arguments.reprendre and RELECTURE.exists():
+        precedent = json.loads(RELECTURE.read_text(encoding="utf-8"))
+        deja_faits = {
+            ligne["id"]: ligne
+            for ligne in precedent.get("items", [])
+            if ligne.get("etat") in ("valide", "rejete")
+        }
+        print(f"Reprise : {len(deja_faits)} items deja rediges seront conserves.")
+
     nb_valides = 0
+    interrompu = None
     for rang, entree in enumerate(flux, start=1):
+        if entree["id"] in deja_faits:
+            ligne = deja_faits[entree["id"]]
+            releve.append(ligne)
+            nb_valides += ligne["etat"] == "valide"
+            print(f"[{rang}/{len(flux)}] {entree['id']} : conserve ({ligne['etat']})")
+            continue
+
         source = corpus.get(entree["id"])
         if not source or not source.get("abstract"):
             releve.append({"id": entree["id"], "etat": "abstract_absent"})
             print(f"[{rang}/{len(flux)}] {entree['id']} : abstract absent, ignore")
             continue
 
-        resume, angle, journal = rediger(entree["titre"], source["abstract"])
+        try:
+            resume, angle, journal = rediger(entree["titre"], source["abstract"])
+        except curate.OllamaIndisponible as erreur:
+            # Quota journalier ou panne : on garde ce qui est deja redige plutot
+            # que de tout perdre. --reprendre repart d'ici au prochain passage.
+            interrompu = erreur
+            print(
+                f"[{rang}/{len(flux)}] interruption : {erreur}",
+                file=sys.stderr,
+            )
+            break
+
         valide = bool(resume and angle)
         nb_valides += valide
         releve.append({
@@ -249,6 +287,14 @@ def main():
     )
     print(f"Relecture avant/apres : {RELECTURE_LISIBLE}")
     print(f"Detail des essais : {RELECTURE}")
+
+    if interrompu:
+        print(
+            f"\nLot interrompu apres {len(releve)} items sur {len(flux)}. "
+            "Relancer avec --reprendre pour continuer sans refaire le debut.",
+            file=sys.stderr,
+        )
+        return 2
 
     if not arguments.appliquer:
         print("Rien n'a ete ecrit dans le flux. Relire, puis relancer avec --appliquer.")
