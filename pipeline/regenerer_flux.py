@@ -219,6 +219,7 @@ def main():
 
     nb_valides = 0
     interrompu = None
+    budget_atteint = False
     for rang, entree in enumerate(flux, start=1):
         if entree["id"] in deja_faits:
             ligne = deja_faits[entree["id"]]
@@ -232,6 +233,17 @@ def main():
             releve.append({"id": entree["id"], "etat": "abstract_absent"})
             print(f"[{rang}/{len(flux)}] {entree['id']} : abstract absent, ignore")
             continue
+
+        if curate.budget_epuise():
+            # S'arreter avant le mur plutot que dessus. Un quota atteint se
+            # paie en requetes perdues : le service refuse, le code retente,
+            # et chaque tentative consomme une unite du quota du lendemain.
+            budget_atteint = True
+            print(
+                f"[{rang}/{len(flux)}] budget d'appels atteint, "
+                "le reste attend la prochaine execution"
+            )
+            break
 
         try:
             resume, angle, journal = rediger(entree["titre"], source["abstract"])
@@ -295,6 +307,17 @@ def main():
             file=sys.stderr,
         )
         return 2
+
+    if budget_atteint:
+        # Arret prevu, pas panne : le lot du jour est complet. Le code de
+        # sortie doit rester 0, sinon l'execution planifiee passe au rouge
+        # chaque jour alors que tout se deroule comme prevu.
+        restants = len(flux) - len([l for l in releve if l.get("etat")])
+        print(
+            f"\nLot du jour termine dans la limite du budget. "
+            f"{restants} items attendent la prochaine execution."
+        )
+        return 0
 
     if not arguments.appliquer:
         print("Rien n'a ete ecrit dans le flux. Relire, puis relancer avec --appliquer.")

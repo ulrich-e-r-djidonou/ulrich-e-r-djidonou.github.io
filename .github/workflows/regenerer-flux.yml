@@ -1,10 +1,16 @@
 name: regenerer-flux
 
 on:
+  schedule:
+    # Le palier gratuit accorde 20 requetes par jour et par modele, partagees
+    # avec la veille. Celle-ci tourne le lundi et le jeudi et en consomme 16 :
+    # ce rattrapage occupe les cinq autres jours, ou le quota est libre.
+    # 13:00 UTC, soit apres la remise a zero du quota, fuseau Pacifique.
+    - cron: "0 13 * * 2,3,5,6,0"
   workflow_dispatch:
     inputs:
-      appliquer:
-        description: "Appliquer la relecture deja produite (sinon relecture seule)"
+      appliquer_seulement:
+        description: "Appliquer la relecture deja produite, sans rien rediger"
         type: boolean
         default: false
 
@@ -28,7 +34,7 @@ jobs:
         # Chaque cle est unique (suffixe run_id) pour pouvoir en creer une
         # nouvelle a chaque sauvegarde : le cache GitHub est immuable pour une
         # cle donnee. restore-keys retombe sur la derniere sauvegardee, ce qui
-        # fait office de --reprendre entre deux declenchements manuels.
+        # fait office de --reprendre d'une execution a l'autre.
         uses: actions/cache/restore@v4
         with:
           path: |
@@ -38,27 +44,31 @@ jobs:
           restore-keys: |
             regeneration-legacy-
 
-      - name: Poursuivre la redaction (relecture seule, rien n'est publie)
-        if: ${{ !inputs.appliquer }}
+      - name: Rediger le lot du jour, dans la limite du quota
+        if: ${{ !inputs.appliquer_seulement }}
         env:
           FRONTIERE_LLM: api
           LLM_API_URL: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
           LLM_API_MODELE: gemini-3.6-flash
           LLM_API_CLE: ${{ secrets.LLM_API_CLE }}
+          # Meme budget que la veille, pour la meme raison : s'arreter avant le
+          # mur. Un quota atteint se paie deux fois, en requetes refusees puis
+          # en tentatives de reprise qui consomment le quota du lendemain.
+          LLM_BUDGET_APPELS: "16"
         run: python -m pipeline.regenerer_flux --reprendre
 
       - name: Publier la relecture dans le resume de l'execution
         # !cancelled() plutot que la condition seule : sans fonction de statut,
         # GitHub ajoute un success() implicite et sauterait cette etape des que
         # la redaction s'interrompt, c'est-a-dire quand elle est le plus utile.
-        if: ${{ !cancelled() && !inputs.appliquer }}
+        if: ${{ !cancelled() && !inputs.appliquer_seulement }}
         run: cat pipeline/_regeneration.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Sauvegarder la relecture pour l'execution suivante
         # Meme raison : un lot interrompu par un quota ou une saturation doit
         # laisser derriere lui ce qu'il a deja redige, sinon --reprendre ne
         # reprend jamais rien.
-        if: ${{ !cancelled() && !inputs.appliquer }}
+        if: ${{ !cancelled() && !inputs.appliquer_seulement }}
         uses: actions/cache/save@v4
         with:
           path: |
@@ -66,17 +76,27 @@ jobs:
             pipeline/_regeneration.md
           key: regeneration-legacy-${{ github.run_id }}
 
-      - name: Appliquer la relecture deja relue, sans rien regenerer
-        # --depuis-relecture ne rappelle jamais le modele : le texte publie
-        # doit etre exactement celui qui a ete relu au tour precedent.
-        if: ${{ inputs.appliquer }}
+      - name: Appliquer les textes valides
+        # --depuis-relecture ne rappelle jamais le modele : le texte publie est
+        # exactement celui qui vient d'etre redige et valide. L'etape est sure
+        # a repeter : ecrire_flux laisse intact tout item dont le texte courant
+        # ne correspond plus a celui de la relecture, donc les items appliques
+        # les jours precedents ne sont pas reecrits.
+        if: ${{ !cancelled() }}
         run: python -m pipeline.regenerer_flux --depuis-relecture
 
-      - name: Committer si applique
-        if: ${{ inputs.appliquer }}
+      - name: Committer si le flux a change
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "frontiere-bot"
           git config user.email "actions@github.com"
           git add frontiere/data/flux.json
-          git diff --cached --quiet || git commit -m "frontiere: application de la relecture de redaction des items publies"
+          if git diff --cached --quiet; then
+            echo "Rien a publier aujourd'hui : tous les items sont deja reecrits."
+            exit 0
+          fi
+          git commit -m "frontiere: reecriture des textes publies, lot du $(date -u +%F)"
+          # La veille commite sur la meme branche les lundis et jeudis : se
+          # rebaser evite un refus de poussee si les deux se croisent.
+          git pull --rebase origin main
           git push
