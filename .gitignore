@@ -6,3 +6,4 @@ pipeline/_candidats_archives.json
 pipeline/_collecte_sante.json
 pipeline/_regeneration.json
 pipeline/_regeneration.md
+pipeline/_regeneration_du_jour.md

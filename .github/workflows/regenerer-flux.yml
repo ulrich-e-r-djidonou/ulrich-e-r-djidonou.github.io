@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   regenerer:
@@ -100,3 +101,19 @@ jobs:
           # rebaser evite un refus de poussee si les deux se croisent.
           git pull --rebase origin main
           git push
+
+      - name: Notifier ce qui vient d'etre publie
+        # La relecture avant publication a disparu avec le declenchement
+        # automatique : ceci la remplace par une relecture a posteriori.
+        # L'assignation, pas l'ouverture seule, est ce qui declenche une
+        # notification GitHub fiable independamment des reglages de suivi
+        # du depot.
+        if: ${{ !cancelled() && hashFiles('pipeline/_regeneration_du_jour.md') != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "La Frontiere : textes reecrits le $(date -u +%F)" \
+            --body-file pipeline/_regeneration_du_jour.md \
+            --assignee ulrich-e-r-djidonou

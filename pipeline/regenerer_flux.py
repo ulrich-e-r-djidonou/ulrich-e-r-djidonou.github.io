@@ -10,11 +10,15 @@ Le modele utilise est celui de la production. Ce script ne choisit pas de
 modele : cette decision revient a l'auteur du site.
 
 Par defaut, rien n'est ecrit dans frontiere/data/. Le script produit un
-fichier de relecture avant/apres. L'option --appliquer remplace les textes
-dans le flux, une fois la relecture faite.
+fichier de relecture avant/apres, plus un second fichier isolant les seuls
+items rediges a l'instant (_regeneration_du_jour.md), utile pour notifier
+sans re-signaler chaque jour ce qui est deja en ligne depuis la veille.
+L'option --appliquer remplace les textes dans le flux, une fois la
+relecture faite ; --depuis-relecture fait de meme sans rien regenerer.
 
     python -m pipeline.regenerer_flux
     python -m pipeline.regenerer_flux --appliquer
+    python -m pipeline.regenerer_flux --depuis-relecture
 """
 
 import argparse
@@ -33,21 +37,17 @@ FLUX = RACINE / "frontiere" / "data" / "flux.json"
 CORPUS = Path(__file__).parent / "benchmark" / "corpus.json"
 RELECTURE = Path(__file__).parent / "_regeneration.json"
 RELECTURE_LISIBLE = Path(__file__).parent / "_regeneration.md"
+RAPPORT_DU_JOUR = Path(__file__).parent / "_regeneration_du_jour.md"
 
 
-def ecrire_relecture_lisible(releve, modele, duree):
-    """Rend l'avant/apres lisible, le JSON etant fait pour la machine."""
-    valides = [ligne for ligne in releve if ligne.get("etat") == "valide"]
-    rejetes = [ligne for ligne in releve if ligne.get("etat") == "rejete"]
-
+def _rendre_markdown(titre_document, note, valides, rejetes, modele, duree):
     lignes = [
-        "# Relecture de la redaction rejouee",
+        f"# {titre_document}",
         "",
         f"Modele : `{modele}`. {len(valides)} items valides, {len(rejetes)} rejetes, "
         f"en {duree / 60:.1f} min.",
         "",
-        "Les items rejetes gardent leur texte actuel. Ils sont listes en fin de",
-        "document avec le motif de rejet.",
+        note,
         "",
     ]
 
@@ -81,7 +81,50 @@ def ecrire_relecture_lisible(releve, modele, duree):
             lignes.append(f"- **{ligne['titre']}** : {', '.join(motifs)}")
         lignes.append("")
 
-    RELECTURE_LISIBLE.write_text("\n".join(lignes), encoding="utf-8")
+    return "\n".join(lignes)
+
+
+def ecrire_relecture_lisible(releve, modele, duree):
+    """Rend l'avant/apres lisible, le JSON etant fait pour la machine."""
+    valides = [ligne for ligne in releve if ligne.get("etat") == "valide"]
+    rejetes = [ligne for ligne in releve if ligne.get("etat") == "rejete"]
+    texte = _rendre_markdown(
+        "Relecture de la redaction rejouee",
+        "Les items rejetes gardent leur texte actuel. Ils sont listes en fin de\n"
+        "document avec le motif de rejet.",
+        valides,
+        rejetes,
+        modele,
+        duree,
+    )
+    RELECTURE_LISIBLE.write_text(texte, encoding="utf-8")
+
+
+def ecrire_rapport_du_jour(releve, modele, duree):
+    """Isole ce qui vient d'etre publie aujourd'hui, pour une relecture a posteriori.
+
+    releve accumule les items reconduits depuis le cache (nouveau=False) et
+    ceux traites a l'instant (nouveau=True). Seuls ces derniers viennent
+    d'atteindre le site : c'est le seul sous-ensemble qu'une notification
+    quotidienne doit signaler, sous peine de re-notifier chaque jour les
+    memes items deja lus et deja en ligne.
+    """
+    du_jour = [ligne for ligne in releve if ligne.get("nouveau")]
+    valides = [ligne for ligne in du_jour if ligne.get("etat") == "valide"]
+    rejetes = [ligne for ligne in du_jour if ligne.get("etat") == "rejete"]
+    if not valides and not rejetes:
+        RAPPORT_DU_JOUR.unlink(missing_ok=True)
+        return
+    texte = _rendre_markdown(
+        "Textes publies aujourd'hui sur La Frontiere",
+        "Ces textes sont deja en ligne. Cette relecture est a posteriori : "
+        "toute correction se fait en editant frontiere/data/flux.json.",
+        valides,
+        rejetes,
+        modele,
+        duree,
+    )
+    RAPPORT_DU_JOUR.write_text(texte, encoding="utf-8")
 
 
 def charger_corpus():
@@ -222,7 +265,7 @@ def main():
     budget_atteint = False
     for rang, entree in enumerate(flux, start=1):
         if entree["id"] in deja_faits:
-            ligne = deja_faits[entree["id"]]
+            ligne = dict(deja_faits[entree["id"]], nouveau=False)
             releve.append(ligne)
             nb_valides += ligne["etat"] == "valide"
             print(f"[{rang}/{len(flux)}] {entree['id']} : conserve ({ligne['etat']})")
@@ -263,6 +306,7 @@ def main():
             "id": entree["id"],
             "titre": entree["titre"],
             "etat": "valide" if valide else "rejete",
+            "nouveau": True,
             "avant": {
                 "resume_fr": entree.get("resume_fr", ""),
                 "angle_eco": entree.get("angle_eco", ""),
@@ -292,6 +336,7 @@ def main():
     )
 
     ecrire_relecture_lisible(releve, curate.modele_actif(), duree)
+    ecrire_rapport_du_jour(releve, curate.modele_actif(), duree)
 
     print(
         f"\n{nb_valides}/{len(flux)} items rediges et valides en "
