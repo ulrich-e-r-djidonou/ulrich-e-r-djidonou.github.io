@@ -44,3 +44,11 @@ jobs:
           git add frontiere/ pipeline/seen.json sitemap.xml
           git diff --cached --quiet || git commit -m "frontiere: mise a jour automatique $(date -u +%F)"
           git push
+
+      - name: Verifier la sante du flux
+        # Placee apres le commit : une alerte ne doit jamais empecher la
+        # maintenance normale (archives, fenetre de 90 jours) d'etre publiee.
+        # Echoue le job si les 2 dernieres executions ont publie zero item,
+        # ce qui declenche la notification GitHub par defaut sur les
+        # executions planifiees en echec.
+        run: python pipeline/verifier_sante.py

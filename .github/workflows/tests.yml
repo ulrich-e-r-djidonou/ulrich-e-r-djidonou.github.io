@@ -30,6 +30,8 @@ jobs:
           python -m unittest \
             pipeline.test_curate \
             pipeline.test_publish \
+            pipeline.test_collect \
+            pipeline.test_verifier_sante \
             pipeline.benchmark.test_benchmark \
             --verbose
 
