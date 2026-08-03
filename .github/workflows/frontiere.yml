@@ -21,26 +21,17 @@ jobs:
       - name: Installer les dependances
         run: pip install -r pipeline/requirements.txt
 
-      - name: Installer Ollama
-        run: curl -fsSL https://ollama.com/install.sh | sh
-
-      - name: Demarrer Ollama et telecharger le modele
-        run: |
-          # Le script d'installation demarre deja un service systemd Ollama ;
-          # ne relancer "ollama serve" que s'il n'ecoute pas encore.
-          if ! curl -sf http://localhost:11434/ >/dev/null; then
-            ollama serve &
-            for i in $(seq 1 30); do
-              curl -sf http://localhost:11434/ >/dev/null && break
-              sleep 1
-            done
-          fi
-          ollama pull qwen2.5:3b
-
       - name: Executer le pipeline
         env:
-          FRONTIERE_LLM: ollama
-          OLLAMA_MODEL: qwen2.5:3b
+          FRONTIERE_LLM: api
+          LLM_API_URL: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+          LLM_API_MODELE: gemini-3.6-flash
+          LLM_API_CLE: ${{ secrets.LLM_API_CLE }}
+          # Le palier gratuit accorde 20 requetes par jour et par modele. Le
+          # budget s'arrete a 16 pour garder de la marge : les items non
+          # rediges ne sont pas marques vus et reviennent a l'execution
+          # suivante, le jeudi ou le lundi.
+          LLM_BUDGET_APPELS: "16"
         run: |
           python pipeline/collect.py
           python pipeline/curate.py

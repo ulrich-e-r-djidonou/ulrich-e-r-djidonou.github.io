@@ -340,6 +340,64 @@ class FournisseurTests(unittest.TestCase):
             self.assertEqual(curate.modele_actif(), curate.OLLAMA_MODEL)
 
 
+class BudgetAppelsTests(unittest.TestCase):
+    """Le quota gratuit se compte en requetes : mieux vaut s'arreter avant."""
+
+    def setUp(self):
+        self._appels = curate._appels_effectues
+        curate._appels_effectues = 0
+
+    def tearDown(self):
+        curate._appels_effectues = self._appels
+
+    def test_sans_budget_rien_n_est_limite(self):
+        with patch.object(curate, "BUDGET_APPELS", 0):
+            curate._appels_effectues = 999
+            self.assertFalse(curate.budget_epuise())
+
+    def test_s_arrete_avant_de_depasser_le_quota(self):
+        with patch.object(curate, "BUDGET_APPELS", 20):
+            curate._appels_effectues = 16
+            self.assertFalse(curate.budget_epuise())
+            curate._appels_effectues = 17
+            self.assertTrue(curate.budget_epuise())
+
+    def test_les_items_hors_budget_restent_non_vus(self):
+        candidat = {
+            "id": "test-budget",
+            "titre": "Economic policy with machine learning",
+            "url": "https://example.com/test-budget",
+            "source": "test",
+            "type": "papier",
+            "date_publication": "2026-08-01",
+            "abstract": "Economic policy and market analysis using machine learning.",
+            "auteurs": "Auteur Test",
+        }
+
+        with tempfile.TemporaryDirectory() as dossier:
+            racine = Path(dossier)
+            chemins = {
+                "ENTREE": racine / "candidats.json",
+                "SORTIE": racine / "cures.json",
+                "SORTIE_ARCHIVE": racine / "archives.json",
+                "SEEN": racine / "seen.json",
+            }
+            chemins["ENTREE"].write_text(json.dumps([candidat]), encoding="utf-8")
+            chemins["SEEN"].write_text("{}", encoding="utf-8")
+
+            with ExitStack() as pile:
+                for nom, chemin in chemins.items():
+                    pile.enter_context(patch.object(curate, nom, chemin))
+                pile.enter_context(patch.object(curate, "LLM_ACTIF", True))
+                pile.enter_context(patch.object(curate, "BUDGET_APPELS", 20))
+                redaction = pile.enter_context(patch.object(curate, "resume_ollama"))
+                curate._appels_effectues = 20
+                curate.main()
+
+            redaction.assert_not_called()
+            self.assertEqual(json.loads(chemins["SEEN"].read_text(encoding="utf-8")), {})
+
+
 class PanneServiceTests(unittest.TestCase):
     """Une panne du service de redaction ne doit consommer aucun article."""
 

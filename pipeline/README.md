@@ -33,7 +33,15 @@ Les items admissibles sont rédigés en français par un modèle. Deux
 fournisseurs, choisis par `FRONTIERE_LLM`. Le fournisseur ne change que la
 rédaction, jamais la sélection, qui reste heuristique.
 
-Modèle local, ce que fait la production aujourd'hui:
+La production utilise `gemini-3.6-flash` par le palier gratuit de l'API
+Gemini. Ce palier accorde 20 requêtes par jour et par modèle, ce qui suffit à
+deux exécutions hebdomadaires. `LLM_BUDGET_APPELS` arrête la rédaction avant
+d'atteindre la limite: les items non rédigés ne sont pas marqués vus et
+reviennent à l'exécution suivante, comme après une panne. Aucun paiement n'est
+nécessaire, l'achat de crédits Google exigeant un minimum de 20 CAD non
+remboursables pour une consommation réelle inférieure à 1 CAD par an.
+
+Modèle local, l'option de repli:
 
 ```text
 FRONTIERE_LLM=ollama

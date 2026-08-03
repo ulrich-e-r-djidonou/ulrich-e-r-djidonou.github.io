@@ -64,6 +64,27 @@ API_URL = os.environ.get("LLM_API_URL", "")
 API_MODELE = os.environ.get("LLM_API_MODELE", "")
 API_CLE = os.environ.get("LLM_API_CLE", "")
 
+# Budget d'appels par execution. Les paliers gratuits comptent en requetes par
+# jour et par modele : Gemini en accorde 20. Plutot que de laisser un lot
+# volumineux epuiser le quota et echouer au milieu, on s'arrete avant. Les
+# items non rediges ne sont pas marques vus et reviennent a l'execution
+# suivante, exactement comme apres une panne.
+BUDGET_APPELS = int(os.environ.get("LLM_BUDGET_APPELS", "0") or 0)
+# Un item consomme au pire deux champs fois deux essais.
+APPELS_MAX_PAR_ITEM = 4
+_appels_effectues = 0
+
+
+def appels_effectues():
+    return _appels_effectues
+
+
+def budget_epuise():
+    """Vrai s'il ne reste pas de quoi rediger un item entier."""
+    if not BUDGET_APPELS:
+        return False
+    return _appels_effectues + APPELS_MAX_PAR_ITEM > BUDGET_APPELS
+
 
 class OllamaIndisponible(RuntimeError):
     """Le service de redaction ne repond pas. Panne, pas defaut de redaction."""
@@ -346,11 +367,13 @@ def _appel_ollama(prompt):
     """
     import requests
 
+    global _appels_effectues
     requete = _requete_api if FOURNISSEUR == "api" else _requete_ollama
     tentatives = TENTATIVES_API if FOURNISSEUR == "api" else 2
     derniere_erreur = None
     for tentative in range(tentatives):
         try:
+            _appels_effectues += 1
             return requete(requests, prompt)
         except Exception as erreur:
             derniere_erreur = erreur
@@ -444,9 +467,10 @@ def main():
             continue
         nb_eligibles += 1
 
-        if not LLM_ACTIF:
-            # Sans service de redaction, l'item n'est ni publiable ni juge :
-            # il reste non vu pour etre repris quand le LLM sera disponible.
+        if not LLM_ACTIF or budget_epuise():
+            # Sans service de redaction, ou sans budget d'appels restant,
+            # l'item n'est ni publiable ni juge : il reste non vu pour etre
+            # repris a l'execution suivante.
             nb_reportes += 1
             continue
 
@@ -506,7 +530,9 @@ def main():
     print(f"Transmis a l'archive (score < {SEUIL_PUBLICATION}) : {len(candidats_archives)}")
     print(f"Redaction : {FOURNISSEUR} ({modele_actif()})" if LLM_ACTIF else "Redaction : aucune (heuristique seul)")
     if LLM_ACTIF:
-        print(f"Resumes rediges et valides par Ollama : {nb_llm}/{len(cures)}")
+        print(f"Resumes rediges et valides : {nb_llm}/{len(cures)}")
+        budget = f" sur un budget de {BUDGET_APPELS}" if BUDGET_APPELS else ""
+        print(f"Appels au modele : {appels_effectues()}{budget}")
     print(
         "Items non publies apres deux echecs de validation : "
         f"{nb_non_publies_validation}"
