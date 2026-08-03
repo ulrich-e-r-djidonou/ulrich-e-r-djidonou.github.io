@@ -329,6 +329,39 @@ def erreurs_angle(texte):
     return erreurs
 
 
+def _nombres(texte):
+    """Valeurs numeriques d'un texte, francais ou anglais.
+
+    Deux normalisations, sans lesquelles le meme nombre compte pour deux :
+    le separateur de milliers francais (380 000) est retire, et la virgule
+    decimale (2,32) devient un point.
+    """
+    sans_milliers = re.sub(r"(?<=\d)[   ](?=\d{3}(?!\d))", "", texte)
+    normalise = re.sub(r"(?<=\d),(?=\d)", ".", sans_milliers)
+    return {float(n) for n in re.findall(r"\d+(?:\.\d+)?", normalise)}
+
+
+def erreurs_invention(texte, source):
+    """Chiffres presents dans le texte genere mais absents de la source.
+
+    Ne verifie pas le sens, seulement la presence : une lecture humaine
+    resterait necessaire pour juger si un chiffre repris est bien employe.
+    Ce filtre intercepte seulement le cas le plus grave sans elle, un
+    chiffre materiellement absent du titre et du resume d'origine.
+
+    Le facteur mille est tolere parce que le prompt exige lui-meme une
+    conversion : trillion devient mille milliards, donc 380 dans la source
+    devient legitimement 380 000 dans le texte. Sans cette tolerance, le
+    filtre rejetterait la traduction qu'il demande.
+    """
+    if not texte or not source:
+        return []
+    nombres_source = _nombres(source)
+    autorises = nombres_source | {valeur * 1000 for valeur in nombres_source}
+    inventes = _nombres(texte) - autorises
+    return ["chiffre_invente"] if inventes else []
+
+
 def _generer_avec_reprise(generateur, validateur):
     """Tente deux generations au maximum et retourne la premiere sortie valide."""
     for _ in range(2):
@@ -534,7 +567,8 @@ def main():
             lambda: resume_ollama(
                 candidat["titre"], candidat.get("abstract", "")
             ),
-            lambda texte: not erreurs_resume(texte),
+            lambda texte: not erreurs_resume(texte)
+            and not erreurs_invention(texte, texte_complet),
         )
         if not resume_fr:
             nouveaux_vus[candidat["id"]] = {"score": score, "traite": True}
@@ -545,7 +579,8 @@ def main():
             lambda: angle_eco_ollama(
                 candidat["titre"], candidat.get("abstract", "")
             ),
-            lambda texte: not erreurs_angle(texte),
+            lambda texte: not erreurs_angle(texte)
+            and not erreurs_invention(texte, texte_complet),
         )
         if not angle_eco:
             nouveaux_vus[candidat["id"]] = {"score": score, "traite": True}

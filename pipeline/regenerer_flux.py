@@ -151,13 +151,14 @@ def generer_en_journalisant(generateur, validateur):
 
 def rediger(titre, abstract):
     """Retourne (resume, angle, journal des essais)."""
+    source = f"{titre} {abstract}"
     resume, essais_resume = generer_en_journalisant(
         lambda: curate.resume_ollama(titre, abstract),
-        curate.erreurs_resume,
+        lambda texte: curate.erreurs_resume(texte) + curate.erreurs_invention(texte, source),
     )
     angle, essais_angle = generer_en_journalisant(
         lambda: curate.angle_eco_ollama(titre, abstract),
-        curate.erreurs_angle,
+        lambda texte: curate.erreurs_angle(texte) + curate.erreurs_invention(texte, source),
     )
     return resume, angle, {"resume": essais_resume, "angle": essais_angle}
 

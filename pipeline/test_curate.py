@@ -32,6 +32,43 @@ class ValidationResumeTests(unittest.TestCase):
         self.assertIn("anglais_residuel", curate.erreurs_resume(texte))
 
 
+class ValidationInventionTests(unittest.TestCase):
+    def test_accepte_un_chiffre_repris_de_la_source(self):
+        source = "Titre. Le modele traite 100 taches sur 2,32 heures en moyenne."
+        texte = "L'etude porte sur 100 taches et 2,32 heures de travail humain."
+
+        self.assertEqual(curate.erreurs_invention(texte, source), [])
+
+    def test_refuse_un_chiffre_absent_de_la_source(self):
+        source = "Titre. Le modele traite 100 taches sur 2,32 heures en moyenne."
+        texte = "L'etude porte sur 250 taches evaluees par le modele."
+
+        self.assertIn("chiffre_invente", curate.erreurs_invention(texte, source))
+
+    def test_accepte_une_virgule_decimale_francaise(self):
+        source = "Titre. Le taux atteint 3.5 percent selon les auteurs."
+        texte = "Le taux atteint 3,5 pourcent selon l'etude."
+
+        self.assertEqual(curate.erreurs_invention(texte, source), [])
+
+    def test_accepte_la_conversion_trillion_exigee_par_le_prompt(self):
+        # Le prompt impose d'ecrire mille milliards pour trillion : le filtre
+        # ne doit pas rejeter la traduction qu'il demande lui-meme.
+        source = "Titre. This column analyses 380 trillion tokens of AI use."
+        texte = "L'etude porte sur 380 000 milliards de jetons de consommation."
+
+        self.assertEqual(curate.erreurs_invention(texte, source), [])
+
+    def test_le_separateur_de_milliers_ne_cree_pas_de_faux_nombre(self):
+        self.assertEqual(curate._nombres("380 000 milliards"), {380000.0})
+
+    def test_ignore_un_texte_sans_chiffre(self):
+        source = "Titre. Le modele traite plusieurs taches."
+        texte = "L'etude porte sur plusieurs taches administratives."
+
+        self.assertEqual(curate.erreurs_invention(texte, source), [])
+
+
 class ValidationAngleTests(unittest.TestCase):
     def test_accepte_une_phrase_directe(self):
         texte = "La mesure du biais éclaire le ciblage des politiques publiques."
