@@ -6,6 +6,10 @@
   --teal-dark: #073f3d;
   --green: #7b9e53;
   --amber: #c38a2e;
+  /* Ambre utilise comme couleur de TEXTE : #c38a2e ne tient que 2.95:1 sur
+     fond clair, sous le seuil WCAG AA (4.5:1). Ce ton fonce sert au texte,
+     --amber reste pour bordures et outline de focus. */
+  --amber-text: #8a610e;
   --line: #d7d0c3;
   --white: #fffdf8;
   --shadow: rgba(22, 32, 31, 0.14);
@@ -64,6 +68,7 @@
     --ink: #e8ece9;
     --muted: #9fada7;
     --teal: #4fc7bd;
+    --amber-text: #d9a34a;
     --line: #2b3735;
     --white: #182220;
     --shadow: rgba(0, 0, 0, 0.45);
@@ -444,7 +449,7 @@ h1 {
   padding: 0.2rem 0.55rem;
   border: 1px solid var(--amber);
   border-radius: 999px;
-  color: var(--amber);
+  color: var(--amber-text);
   font-family: "Trebuchet MS", Verdana, sans-serif;
   font-size: var(--fs-3xs);
   font-weight: 700;
@@ -898,6 +903,26 @@ h1 {
     width: 100%;
     gap: 0.7rem;
     font-size: var(--fs-2xs);
+  }
+}
+
+/* Ecrans tactiles : les cibles interactives compactes (icones sociales 38px,
+   chips, liens de nav) passent au minimum recommande de 44px, sans changer
+   le rendu souris/trackpad. */
+@media (pointer: coarse) {
+  .social-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .chip {
+    min-height: 44px;
+    padding: 0.6rem 0.9rem;
+  }
+
+  nav a {
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
   }
 }
 

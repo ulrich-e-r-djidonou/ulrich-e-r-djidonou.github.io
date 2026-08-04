@@ -7,3 +7,9 @@ pipeline/_collecte_sante.json
 pipeline/_regeneration.json
 pipeline/_regeneration.md
 pipeline/_regeneration_du_jour.md
+
+# Installation locale du skill impeccable (outillage, non versionne)
+.claude/
+.github/agents/
+.github/hooks/
+.github/skills/
