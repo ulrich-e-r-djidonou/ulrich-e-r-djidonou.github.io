@@ -143,10 +143,13 @@ SYMBOLES_TEXTE_AUTORISES = {"%", "‰", "€", "$", "£", "°", "+", "=", "×"}
 # tous les cas et le volume du flux n'en souffre pas.
 # Le y est exclu : "le yoga", "du yen" et "de yaourt" sont corrects, l'inclure
 # produirait des faux positifs. Le h muet est exclu aussi, faute de pouvoir le
-# distinguer du h aspire de "le heros" sans dictionnaire.
+# distinguer du h aspire de "le heros" sans dictionnaire. Onze et ses derives
+# sont exclus : "de onze modeles", "le onze novembre" sont corrects, onze ne
+# s'elide pas (faux positif constate le 4 aout 2026 sur un resume valide).
 _VOYELLES = "aàâeéèêëiîïoôuùûAÀÂEÉÈÊËIÎÏOÔUÙÛ"
 ELISION_MANQUANTE = re.compile(
-    rf"\b(?:le|la|du|de|ne|que|je|me|te|se)\s+[{_VOYELLES}][\w'-]+", re.IGNORECASE
+    rf"\b(?:le|la|du|de|ne|que|je|me|te|se)\s+(?!onz[ei])[{_VOYELLES}][\w'-]+",
+    re.IGNORECASE,
 )
 DEMONSTRATIF_INCORRECT = re.compile(rf"\bce\s+[{_VOYELLES}][\w'-]+", re.IGNORECASE)
 MOT_DOUBLE = re.compile(r"\b(\w+)\s+\1\b", re.IGNORECASE)

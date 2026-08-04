@@ -6,8 +6,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-29",
-    "resume_fr": "Le benchmark OmegaUse-OfficeVal évalue les agents de modèle de langue grand(e)s sur des tâches longue(s)-durée de l'environnement office-suite, avec une prise en compte économique des coûts humains. Sur la moyenne, ces tâches nécessitent environ 2,32 heures de travail humain pour être terminées.",
-    "angle_eco": "Le mécanisme crucial de l'OmegaUse-OfficeVal benchmark réside dans son intégration d’indicateurs économiques à chaque tâche de workflow longue échéance de gestion de bureau, permettant ainsi des comparaisons précises entre les coûts humains et ceux liés aux inferences des modèles langage-moderne.",
+    "resume_fr": "Le benchmark open source OmegaUse-OfficeVal évalue les agents basés sur des grands modèles de langage à travers 100 tâches bureautiques nécessitant en moyenne 2,32 heures de travail humain, en intégrant des indicateurs économiques de temps et de coût. Bien que les modèles évalués soient nettement plus rapides et moins chers que les travailleurs humains, la qualité de leurs livrables n'atteint pas encore le niveau humain.",
+    "angle_eco": "L'appariement de tâches bureautiques complexes à des indicateurs de temps de travail humain et de coût permet de comparer directement les coûts d'inférence des agents autonomes à ceux de la main-d'œuvre, montrant que ces modèles sont nettement plus rapides et moins chers mais n'atteignent pas encore la qualité des prestations humaines.",
     "themes": [
       "llm",
       "travail-emploi",
@@ -16,7 +16,7 @@
     "score": 4,
     "auteurs": "Jingbo Zhou, Yusai Zhao, Qi Bao, Jingjia Cao, Zhenghai Chen, Chang Gao, Kaiqi Guo, Muxin Guo, Mingxuan Li, Xinjiang Lu, Yanru Ma, Yixiong Xiao, Zenghui Zhang, Le Zhang, Hua Wu",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "voxeu-https-cepr-org-voxeu-columns-ai-premium",
@@ -25,15 +25,15 @@
     "source": "VoxEU / CEPR",
     "type": "article",
     "date_publication": "2026-07-28",
-    "resume_fr": "L'analyse démontre comment l'IA modifie les marchés boursiers et affecte la productivité des entreprises grâce à une quantité massive de données d'utilisation, révélant un avantage équilibré entre les marchés développés et les frontières. Les marchés boursiers perçoivent positivement le passage à l'IA pour les tâches impliquant implémentations, communication et coordination, en comparaison avec celles nécessitant une analyse ou des tâches scientifiques.",
-    "angle_eco": "L'étude mesure l'effet de l'IA sur les entreprises, les marchés et le travail à partir de 380 000 milliards de jetons de consommation d'IA effectivement observée.",
+    "resume_fr": "En s'appuyant sur la consommation réalisée de 380 mille milliards de tokens d'intelligence artificielle, l'étude démontre que les entreprises dont les actions sont les plus sensibles à la croissance de cet usage obtiennent des rendements ultérieurs plus élevés. Cette prime boursière est particulièrement élevée pour les marchés développés, les modèles de pointe et les tâches complexes, les marchés financiers associant plus positivement cette transition aux travaux de mise en œuvre, de communication et de coordination qu'aux activités analytiques ou scientifiques.",
+    "angle_eco": "L'analyse de la sensibilité des actions à la croissance de l'utilisation de l'intelligence artificielle, établie à partir de 380 mille milliards de tokens consommés, révèle l'existence d'une prime boursière générant des rendements ultérieurs plus élevés pour les entreprises exposées, en particulier sur les marchés développés et pour les activités de mise en œuvre, de communication et de coordination.",
     "themes": [
       "macro-finance"
     ],
     "score": 3,
     "auteurs": "",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.23313v1",
@@ -42,8 +42,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-25",
-    "resume_fr": "Les modèles économiques existants sont souvent limités et dispersés, nécessitant des heures ou des jours pour intégrer plusieurs systèmes liés. Les langues de grande portée peuvent automatiser cette intégration, générant des scénarios cohérents tout en reproduisant tous les résultats d'un modèle sous-jacent.",
-    "angle_eco": "Le mécanisme crucial du papier est l'intégration automatique de modèles économiques existants pour fournir des scénarios cohérents à court terme, tandis que le principal enjeu concerne les décisions urgentes prises par les policymakers face aux disruptions rapides dans les marchés énergétiques.",
+    "resume_fr": "Pour pallier la fragmentation des modèles économiques et répondre à l'urgence des crises énergétiques, les auteurs ont conçu une architecture fondée sur les grands modèles linguistiques capable d'automatiser leur orchestration. Ce cadre coordonne seize modèles sectoriels et macroéconomiques à travers cinq scénarios d'analyse, tout en garantissant que chaque donnée chiffrée provient exclusivement de l'exécution des modèles sous-jacents et non de l'intelligence artificielle.",
+    "angle_eco": "L'automatisation de l'intégration et de l'exécution séquentielle de modèles économiques et physiques hétérogènes par un grand modèle de langage permet de produire rapidement des analyses prospectives multiscénarios et traçables pour guider les prises de décision lors de crises énergétiques.",
     "themes": [
       "llm",
       "politique-publique",
@@ -52,7 +52,7 @@
     "score": 6,
     "auteurs": "Dana Golden, Brett Indelicato, Lav R. Varshney, Carlos D. Messina, Suzanne Thornsbury",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.22465v1",
@@ -61,8 +61,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-24",
-    "resume_fr": "TRACE-Router présente une approche de routage à la tâche qui corrige le décalage entre les décisions individuelles de routage et l'efficacité globale des applications agentic, en améliorant significativement la prise en compte de la précision et de la latence. Sur deux benchmarks agentic, TRACE-Router améliore la balance précision-latence par rapport aux méthodes d'interpolation existantes.",
-    "angle_eco": "TRACE-Router résout le décalage entre les décisions de routage per-call et la qualité globale des workflows longue-horizon en alignant les décisions de routage au niveau du tâche, grâce à un apprentissage avec feedback décalé.",
+    "resume_fr": "Pour pallier l'incapacité des routeurs par appel à traiter le retour d'information différé des flux de travail d'agents, le cadre TRACE-Router attribue chaque tâche à un modèle unique dès son admission via un bandit contextuel. Évaluée sur trois bancs d'essai, cette approche améliore le compromis entre précision et latence, surpassant le meilleur modèle unique sur Terminal-Bench de 7,1 points de précision tout en réduisant la latence de 36 %.",
+    "angle_eco": "L'optimisation du compromis entre précision et latence dans les flux de travail d'intelligence artificielle repose sur l'allocation globale de chaque tâche à un modèle unique dès son admission, guidée par la récompense terminale obtenue à la fin de l'exécution plutôt que par des décisions d'aiguillage indépendantes à chaque appel.",
     "themes": [
       "llm",
       "politique-publique",
@@ -71,7 +71,7 @@
     "score": 4,
     "auteurs": "Ritik Raj, Souvik Kundu, Sarbartha Banerjee, Dheemanth Joshi, Ishita Vohra, Tushar Krishna",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.22165v1",
@@ -80,8 +80,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-24",
-    "resume_fr": "Les LLM basés sur les bases de données montrent une promesse, mais des lacunes dans l'évaluation et l'environnement de production rendent difficile leur comparaison. La banque de démonstration DBA-Bench vise à combler ces écarts en mettant l'accent sur la fiabilité opérationnelle, l'évaluation basée sur les résultats et la reproduction contrôlée des scénarios complexes.",
-    "angle_eco": "La production fidélité est un enjeu crucial du DBA-Bench, une nouvelle échelle de benchmark pour les agents d'agents de gestion de base de données basés sur LLM, qui met l'accent sur la fiabilité des environnements multi-environnement en ligne et la reproduction contrôlée des scénarios complexes.",
+    "resume_fr": "Pour évaluer la capacité des agents d'intelligence artificielle à gérer des bases de données en conditions réelles, le benchmark DBA-Bench propose 106 scénarios complexes répartis sur sept domaines opérationnels au sein d'environnements PostgreSQL. L'évaluation de plusieurs systèmes sur 848 exécutions révèle un taux de réussite sécurisé moyen de seulement 12,4 %, le meilleur agent automatisé atteignant 17,9 % contre 93,4 % pour un administrateur humain.",
+    "angle_eco": "L'automatisation de la gestion des bases de données par des modèles de langage se heurte à d'importantes limites de sécurité et d'efficacité en environnement de production, le meilleur système autonome n'atteignant que 17,9 % de résolutions sûres contre 93,4 % pour un administrateur humain.",
     "themes": [
       "inference-causale",
       "llm",
@@ -90,7 +90,7 @@
     "score": 4,
     "auteurs": "Junming Chen, Junyang Jiang, Xu Chen, Zibo Liang, Kai Zheng",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.21826v1",
@@ -99,8 +99,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-23",
-    "resume_fr": "Dans cet essai, nous avons appliqué des modèles quantitatifs à Bitcoin et Ethereum, deux cryptomonnaies populaires. Notre méthode de détection des bulles combinait le modèle Power Law créé par Johansen, Ledoit et Sornette avec un modèle statistique développé par Phillips, Shi et Yu.",
-    "angle_eco": "Le mécanisme de ce papier porte sur l'utilisation de modèles quantitatifs pour détecter les bulles dans Bitcoin et Ether, deux principales cryptomonnaies, en combinant le modèle Log Periodic Power Law (LPPL) avec des tests statistiques.",
+    "resume_fr": "En combinant le modèle LPPL et les tests statistiques PSY sur la période du 1er décembre 2016 au 16 janvier 2018, cette étude évalue la présence de bulles financières dans les cours du Bitcoin et de l'Ether. Les résultats identifient des signaux caractéristiques de bulles ayant anticipé les krachs du Bitcoin à la mi-décembre 2017 et début janvier 2018, ainsi que ceux de l'Ether en juin 2017 et janvier 2018, confirmant le risque spéculatif élevé entretenu par le sentiment des investisseurs.",
+    "angle_eco": "L'application combinée de modèles log-périodiques et de tests statistiques permet de détecter l'exubérance des investisseurs et d'anticiper la formation de bulles et les krachs spéculatifs sur les cours du Bitcoin et de l'Ether.",
     "themes": [
       "llm",
       "macro-finance"
@@ -108,7 +108,7 @@
     "score": 3,
     "auteurs": "Marco Bianchetti, Camilla Ricci, Marco Scaringi",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.21459v1",
@@ -117,13 +117,13 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-23",
-    "resume_fr": "Digital search est passant d'un processus humain de découverte à un système agent-assisté de prise de décision. Ce changement transforme la nature du contrat entre les utilisateurs et l'interface de recherche, modifiant ainsi les principes du marché et des mécanismes économiques associés.",
-    "angle_eco": "La transformation du processus de décisions douteux vers une approche agent-native modifie l'interface traditionnelle basée sur les liens pour en faire un composant intégré, entraînant des questions fondamentales sur la qualité et l'accès à l'information, la confiance, l'allègement de moteur d'équilibre et la structure du marché.",
+    "resume_fr": "La recherche numérique évolue d'un modèle traditionnel centré sur les liens vers un système d'agents d'intelligence artificielle auxquels la prise de décision est déléguée, modifiant ainsi la transparence, la concurrence et la monétisation. La théorie économique et de premières preuves expérimentales indiquent que les choix d'architecture de ces systèmes d'agents ont un impact déterminant sur l'efficacité des marchés, la concurrence et le bien-être des consommateurs comme des entreprises.",
+    "angle_eco": "Le passage de la recherche numérique guidée par l'utilisateur à une prise de décision déléguée à des agents autonomes transforme la structure des marchés, car les choix de conception régissant l'accès à l'information et l'exécution des actions déterminent directement la concurrence, l'alignement des incitations et le bien-être des acteurs économiques.",
     "themes": [],
     "score": 3,
     "auteurs": "David M. Rothschild, Nicole Immorlica, Brendan Lucier, Markus Mobius, Aleksandrs Slivkins",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.21268v1",
@@ -132,8 +132,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-23",
-    "resume_fr": "Dans plusieurs tâches de recherche en économie, les agents basés sur des LLM produisent des sorties sans signal de vérification machine-readable adéquat. Notre architecture pAI-Econ-claude gère cette incomplétude par un déploiement multi-agents contrôlé par l'humain, permettant une coordination efficace et une prise en compte de la jugation humaine dans les décisions critiques.",
-    "angle_eco": "La principale problématique traitée par ce papier dans le cadre de l'analyse économique concerne comment organiser la génération, la critique, la coordination et les décisions humaines lorsque aucun composant ne peut certifier la validité finale du résultat.",
+    "resume_fr": "Afin de pallier le manque de vérification automatisée dans le développement de théories économiques par des agents autonomes, les chercheurs ont conçu pAI-Econ-claude, une architecture multi-agents associant des portes de contrôle spécialisées et une supervision humaine. Testée sur cinq tâches économiques face à un système sans filtrage, cette architecture a réduit la sévérité moyenne des défaillances de 1,58 à 1,16 tout en portant l'utilité globale de 2,60 à 3,10, obtenant la préférence des évaluateurs dans quatre cas sur cinq.",
+    "angle_eco": "L'intégration d'un espace de travail partagé, de filtres spécialisés diagnostiquant les défaillances et de points de contrôle humains au sein d'une architecture multi-agents permet d'améliorer l'auditabilité et la fiabilité du développement de théories économiques assisté par intelligence artificielle.",
     "themes": [
       "llm",
       "politique-publique"
@@ -141,7 +141,7 @@
     "score": 3,
     "auteurs": "Chen Zhu, Xiaolu Wang, Weilong Zhang",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.20365v1",
@@ -150,8 +150,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-22",
-    "resume_fr": "Nous avons développé un modèle dans lequel les projets de recherche et développement pharmaceutique varient en qualité ainsi que par leur régime d'innovation, distinguant entre innovations incrémentales et nouvelles. Notre analyse suggère que la couverture contractuelle maintient une sélection positive et égalisation des rendements compétitifs pour les innovations incrémentales, tandis que les projets novateurs pourraient rencontrer des friction de marché plus prononcées.",
-    "angle_eco": "Licensing affects positive selection and competitive return equalization for incremental innovation while potentially exhibiting weaker screening for novel projects, leading to residual market imperfections.",
+    "resume_fr": "Cette étude analyse l'impact de l'octroi de licences sur la recherche et développement pharmaceutique en distinguant les innovations incrémentales, caractérisées par une information plus précise, des innovations novatrices. À l'aide de méthodes d'apprentissage automatique double et de variables instrumentales, l'analyse montre que les licences augmentent la probabilité globale de succès, mais que l'égalisation concurrentielle des rendements ne s'observe que pour les innovations incrémentales et s'effondre pour les projets novateurs.",
+    "angle_eco": "L'impact des accords de licence sur l'efficience de la R&D pharmaceutique dépend du type d'innovation, la meilleure précision de l'information assurant une égalisation concurrentielle des rendements pour les projets incrémentaux, tandis que des imperfections de marché persistent pour les innovations novatrices.",
     "themes": [
       "inference-causale",
       "prevision",
@@ -160,7 +160,7 @@
     "score": 4,
     "auteurs": "Michele Liberatore, Massimo Riccaboni",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.20327v1",
@@ -169,8 +169,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-22",
-    "resume_fr": "PyroDash propose une méthode pour combiner modèles de langue grands et petits au niveau des tokens, offrant un rendement élevé tout en réduisant considérablement les coûts par rapport aux modèles de langue grands uniquement. Les résultats montrent que PyroDash peut atteindre des niveaux d'exactitude allant jusqu'à 64,04 % avec une réduction significative du coût, atteignant ainsi un équilibre entre performance et efficacité économique.",
-    "angle_eco": "PyroDash met en avant la collaboration entre SLM et LLM à l'échelle des tokens pour réduire les coûts tout en préservant les performances de raisonnement.",
+    "resume_fr": "Les chercheurs proposent PyroDash, un cadre d'inférence collaborative dans lequel un petit modèle de langage apprend à déléguer la génération de texte à un grand modèle gelé via un jeton de contrôle afin de réduire les coûts d'utilisation. Évalué sur cinq benchmarks de raisonnement mathématique, PyroDash surpasse l'exactitude du grand modèle seul de 6,36 points de pourcentage tout en réduisant le coût de 20,4 %, ou réduit le coût total de 49,36 à 1,78 dollar US selon la configuration retenue.",
+    "angle_eco": "L'optimisation du compromis entre le coût d'inférence et la précision du raisonnement repose sur une délégation dynamique au niveau des jetons, où un petit modèle de langage peu coûteux déclenche le transfert de la génération vers un grand modèle plus cher uniquement lorsque cela est nécessaire.",
     "themes": [
       "llm",
       "travail-emploi",
@@ -179,7 +179,7 @@
     "score": 4,
     "auteurs": "Niqi Lyu, Pengtao Shi, Wei Qiu, Jianlin Zhong, Sicong Xia, Jianyao Ma, Yicheng Ding",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.20781v1",
@@ -188,15 +188,15 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-22",
-    "resume_fr": "La modélisation HAT nous permet d'analyser comment les coûts équilibrés et les compétences, ainsi que la profondeur organisationnelle, l'étendue de déploiement et l'adaptabilité stratégique influencent le processus de remplacement par l’IA. Elle souligne une principale conclusion : lorsque les coûts équivalents et les différences en efficacité entre humains et IA sont surpassés, l'IA peut remplacer la main-d'œuvre humaine.",
-    "angle_eco": "L'enjeu du modèle HAT est la formalisation de l'asymétrie économique entre l'apprentissage des compétences humaines et le développement des capacités d'AI.",
+    "resume_fr": "Ce papier introduit un modèle analytique d'allocation des tâches entre l'humain et l'IA qui formalise l'asymétrie économique entre l'acquisition de compétences humaines et la montée en échelle de l'IA au sein d'organisations hiérarchiques. En établissant un principe de substitution précis, l'étude démontre que l'adoption de l'IA engendre des transitions d'effectifs brutales, des hiérarchies plus plates et une vulnérabilité accrue des cadres intermédiaires.",
+    "angle_eco": "L'asymétrie économique entre l'acquisition de compétences par les salariés et la mise à l'échelle des capacités de l'intelligence artificielle détermine la manière dont les coûts ajustés du risque, la profondeur organisationnelle et le niveau de qualification régissent la substitution du travail humain, le risque d'automatisation des cadres intermédiaires et le resserrement des hiérarchies d'entreprise.",
     "themes": [
       "travail-emploi"
     ],
     "score": 4,
     "auteurs": "Bonny Banerjee, Shreya Singh",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.18795v1",
@@ -205,8 +205,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-21",
-    "resume_fr": "Les chercheurs, les gestionnaires et les décideurs politiques explorent différentes approches et sources de données pour cartographier le développement et la diffusion des technologies d'intelligence artificielle. Nous montrons comment les marques déposés sur l'IA peuvent compléter les brevets d'IA pour recueillir divers aspects de l'innovation IA, révélant ainsi l'étendue et les façons dont les entreprises explorent les technologies d'intelligence artificielle.",
-    "angle_eco": "Le mécanisme offert par ce papier est l'utilisation des brevets de marque pour capturer différents aspects de l'innovation en intelligence artificielle, allant au-delà des brevets d'invention.",
+    "resume_fr": "Les données relatives aux marques déposées constituent une source d'information opportune et mondiale couvrant tous les secteurs économiques, permettant de compléter les brevets pour mesurer la façon dont les entreprises exploitent l'intelligence artificielle pour développer de nouveaux biens et services. Une exploration empirique d'entreprises italiennes montre comment ces données peuvent être utilisées à différents niveaux d'analyse pour étudier le développement et la diffusion de l'intelligence artificielle.",
+    "angle_eco": "L'exploitation des données relatives aux marques commerciales permet de compléter l'étude des brevets afin de mesurer l'intégration concrète de l'intelligence artificielle dans de nouveaux biens et services, en offrant un suivi réactif et mondial de sa diffusion dans l'ensemble des secteurs économiques.",
     "themes": [
       "politique-publique",
       "donnees"
@@ -214,7 +214,7 @@
     "score": 3,
     "auteurs": "C. Castaldi, F. Castellacci, A. Fronzetti Colladon, L. Segneri, F. Venturini",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.17378v1",
@@ -223,8 +223,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-19",
-    "resume_fr": "Dans cet article, nous proposons des conditions suffisantes pour surmonter les deux principales difficultés liées à l'utilisation de modèles pré-entraînés dans l'analyse d'univers data non structurée. Nous déterminons également la vitesse de convergence des modèles de machine learning équipés de tels embeddings, illustrant nos résultats à travers des applications de double machine learning pour l'estimation de paramètres tels que les régressions partiellement linéaires avec des contrôles non structurés.",
-    "angle_eco": "Ce papier fournit des conditions suffisantes pour surmonter ces difficultés et dérive la vitesse de convergence des modèles d'apprentissage automatique avec des embeddings pré-entraînés, illustrant la théorie par l'application double du machine learning pour estimer les paramètres d'intérêt.",
+    "resume_fr": "L'utilisation en économie de représentations vectorielles (*embeddings*) issues de modèles d'apprentissage profond pré-entraînés pose des défis théoriques majeurs dus aux différences de tâches d'entraînement et aux problèmes d'identification de la fonction de plongement. Cet article fournit des conditions suffisantes pour surmonter ces défis théoriques, dérive la vitesse de convergence des modèles d'apprentissage automatique intégrant des plongements pré-entraînés et illustre la théorie par des applications d'apprentissage automatique double.",
+    "angle_eco": "L'utilisation de représentations vectorielles issues de modèles d'apprentissage profond pré-entraînés pour analyser des données non structurées en économétrie soulève des problèmes d'identification et de transférabilité entre tâches différentes, nécessitant la définition de conditions suffisantes pour garantir la convergence des modèles cibles.",
     "themes": [
       "inference-causale",
       "donnees"
@@ -232,7 +232,7 @@
     "score": 4,
     "auteurs": "Yuya Shimizu",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.15385v1",
@@ -241,8 +241,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-16",
-    "resume_fr": "Ce travail étudie comment l'intermédiation et le management algorithmique affectent la transmission internationale de la politique monétaire américaine aux marchés émergents. Il souligne que les erreurs similaires des modèles utilisés par divers fonds, plutôt que l'intermédiation en soi, sont à l'origine principale du déséquilibre.",
-    "angle_eco": "La stabilité des flux de capitaux international est perturbée par l'herding algorithmique lorsque les modèles utilisés dans les fonds sont similaires, tandis que la diversité des modèles permet d'éliminer ces effets.",
+    "resume_fr": "Ce papier montre que le mimétisme algorithmique amplifie les sorties de capitaux des marchés émergents après un choc de politique monétaire américaine uniquement en période de forte volatilité, en raison de la similitude des modèles d'investissement. À partir des flux de portefeuilles d'actions vers dix-neuf marchés émergents de 2000 à 2024, les résultats indiquent que les politiques publiques doivent préserver la diversité des modèles plutôt que de limiter la taille de l'intermédiation non bancaire.",
+    "angle_eco": "La similitude des modèles de gestion algorithmique amplifie les sorties de capitaux des marchés émergents après un choc de politique monétaire américaine en période de forte volatilité, alors que la diversité des algorithmes permet de compenser les erreurs individuelles et de stabiliser les flux financiers.",
     "themes": [
       "prevision",
       "politique-publique",
@@ -251,7 +251,7 @@
     "score": 4,
     "auteurs": "Fernando Toledo, Luis Dimotta Bré, Gabriel Montes-Rojas",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "voxeu-higher-utilisation-explains-recent-surge-productivity-growth",
@@ -260,8 +260,8 @@
     "source": "VoxEU / CEPR",
     "type": "article",
     "date_publication": "2026-07-15",
-    "resume_fr": "L'accélération de la productivité aux États-Unis depuis 2022 est principalement due à une utilisation accrue des ressources existantes, plutôt qu'à l'amélioration de l'efficacité. Quelque soit son rôle potentiel, l'intelligence artificielle semble avoir contribué à cette augmentation via la demande forte et les incertitudes accrues plutôt que par une amélioration de l'efficacité.",
-    "angle_eco": "Le mécanisme de l'augmentation des taux d'utilisation explique la récente accélération du taux de croissance de la productivité.",
+    "resume_fr": "Aux États-Unis, la production par heure a augmenté d'environ 2,5 % par an entre la fin de 2022 et le début de 2026, dépassant de 1 point de pourcentage son rythme d'avant la pandémie. Cette accélération de la productivité s'explique principalement par une utilisation plus intensive du travail et du capital déjà en place, l'intelligence artificielle y ayant contribué par une forte demande et une incertitude accrue plutôt que par des gains d'efficacité.",
+    "angle_eco": "L'accélération récente de la productivité du travail aux États-Unis s'explique principalement par une utilisation plus intensive du capital et de la main-d'œuvre déjà en place, stimulée par une forte demande et une incertitude accrue, plutôt que par des gains d'efficacité directe apportés par l'intelligence artificielle.",
     "themes": [
       "travail-emploi",
       "donnees",
@@ -270,7 +270,7 @@
     "score": 3,
     "auteurs": "",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.14418v1",
@@ -279,15 +279,15 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-15",
-    "resume_fr": "Dans un expérimentation à grande échelle sur l'application Android, Amazon a observé que la réduction du nombre de slots publicitaires pouvait augmenter significativement les revenus, tout en diminuant paradoxalement le taux d'engagement et de conversions. Les gains en revenus varient néanmoins selon la fréquence des requêtes ciblées, avec une réduction limitée ou négative pour les requêtes moins convertissantes.",
-    "angle_eco": "Le mécanisme central est l'adaptation de la charge d'affichages pour maximiser les revenus tout en minimisant le désengagement des utilisateurs, avec un ajustement stratifié selon les niveaux de conversion des requêtes.",
+    "resume_fr": "Un essai randomisé à grande échelle sur un magasin d'applications Android montre que l'augmentation du nombre d'emplacements publicitaires accroît les revenus jusqu'à 43 %, mais réduit les conversions de recherche jusqu'à 5 % et l'engagement quotidien jusqu'à 2,2 %. Pour optimiser cet arbitrage fortement hétérogène selon les requêtes, un algorithme adaptatif nommé e-LAAL a été déployé auprès de 22,3 millions d'utilisateurs et sur 77,6 millions de recherches, améliorant le compromis entre revenus et conversions par rapport aux références statiques.",
+    "angle_eco": "L'arbitrage économique entre l'augmentation des recettes publicitaires et la dégradation de l'expérience des utilisateurs peut être optimisé par un ajustement adaptatif du nombre d'annonces affichées selon l'hétérogénéité des requêtes et la composition des annonceurs.",
     "themes": [
       "politique-publique"
     ],
     "score": 3,
     "auteurs": "Mohammad Rashid, Hema Yoganarasimhan",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.09568v1",
@@ -296,8 +296,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-10",
-    "resume_fr": "Ce papier développe une approche PUME pour les équilibres de circulation à grande échelle qui combine la scalabilité des modèles basés sur liens Markoviens avec leur capacité d'appliquer aux contextes comportant des probabilités de choix frontières, un chargement non-déduit et interactions liées aux liens généralisées. La formulation VI du PUME permet de gérer les structures de coûts non séparables et asymétriques, offrant ainsi une approche plus flexible que celle des modèles d'équilibre de circulation Markoviens traditionnels.",
-    "angle_eco": "Perturbed utility Markovian choice model (PUMCM) est la base théorique de PUME, qui définit l'opérateur d'optimalité du Bellman à travers une fonction de surplus convexe dont le gradient fournit le schéma d'action optimal.",
+    "resume_fr": "L'article développe un cadre d'équilibre marcovien à utilité perturbée pour l'affectation du trafic à grande échelle, capable d'attribuer des flux nuls aux tronçons peu attractifs sans imposer de restriction préalable sur l'ensemble des choix. Formulé sous la forme d'une inégalité variationnelle sur l'espace des coûts duaux, ce modèle garantit l'existence et l'unicité de l'équilibre pour des structures de coûts non séparables et asymétriques, tout en introduisant une méthode d'itération sur les politiques modifiée pour son calcul.",
+    "angle_eco": "L'intégration d'une fonction de surplus convexe au sein d'un modèle de choix markovien permet d'attribuer des flux nuls aux tronçons non attractifs sans restriction préalable des options, tout en garantissant l'existence et l'unicité d'un équilibre de trafic à grande échelle aux structures de coûts non séparables.",
     "themes": [
       "llm",
       "politique-publique",
@@ -306,7 +306,7 @@
     "score": 4,
     "auteurs": "Rui Yao, Kenan Zhang",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.09461v1",
@@ -315,8 +315,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-10",
-    "resume_fr": "Cette recherche propose un algorithme appelé CEFOL pour résoudre des problèmes de programmation dynamique discrète avec une utilité récursive grâce à l'apprentissage profond. L'algorithme exploite les conditions optimales spécifiques du modèle et la fonction de certitude équivalente séparément représentée par un réseau neuronal, ce qui permet d'atteindre des résultats précis dans plusieurs problèmes testés.",
-    "angle_eco": "CEFOL intègre une représentation séparée de l'équivalent certain pour résoudre efficacement les problèmes d'optimisation dynamique avec récurrence et utilité récursive.",
+    "resume_fr": "L'article présente l'algorithme CEFOL, une méthode d'apprentissage profond conçue pour la programmation dynamique en temps discret à utilité récursive qui utilise des réseaux de neurones pour représenter l'équivalent certain, la fonction de valeur, les règles de décision et les multiplicateurs de Lagrange. En s'appuyant sur les conditions d'optimalité du premier ordre et de Karush-Kuhn-Tucker, cet algorithme intègre directement les contraintes d'inégalité sans fonction de pénalité et affiche des résidus d'optimalité hors échantillon compris entre 1,0e-4 et 1,0e-3 sur des modèles d'épargne et des modèles DSGE.",
+    "angle_eco": "L'utilisation de réseaux de neurones distincts pour approximer l'équivalent certain et minimiser les résidus des conditions de premier ordre permet de résoudre directement les problèmes d'optimisation dynamique à utilité récursive soumis à des contraintes d'égalité et d'inégalité, y compris lorsqu'elles sont occasionnellement saturées.",
     "themes": [
       "llm",
       "politique-publique"
@@ -324,7 +324,7 @@
     "score": 8,
     "auteurs": "Xianhua Peng, Wu Guo, Songyan Wang, Jianfei Zhu",
     "signal": true,
-    "llm": "qwen2.5:3b"
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.09616v1",
@@ -333,15 +333,15 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-10",
-    "resume_fr": "Dans le domaine de la conception front-end des circuits électroniques, l'automatisation reste un défi critique face aux pressions du temps-to-market. Cependant, les Grandes Langues Linguistiques Modèles ont révélé une potentialité significative dans l'aide à la conception et peuvent servir d'interfaces intelligentes pour plusieurs tâches clés en front-end, comme le génération de spécifications HDL et la construction de bancs de tests.",
-    "angle_eco": "Le mécanisme de ce papier porte sur l'évolution du rôle des Large Language Models en tant qu'interfaces intelligentes unifiées pour les tâches clés de la génération de spécification et de testbench dans la phase front-end de la conception électronique, ainsi que leur potentiel d'amélioration qualitatives des workflows traditionnels comme la synthèse haute niveau.",
+    "resume_fr": "Les modèles de langage de grande taille montrent un potentiel significatif en automatisation de la conception électronique, notamment pour la génération de langages de description matérielle, la construction de bancs d'essai et l'exploration de l'espace de conception, tandis que l'émergence d'une intelligence artificielle agentive ouvre une nouvelle voie pour l'évolution de l'automatisation de la conception électronique vers une exécution autonome. Cet article examine les avancées des modèles de langage dans la conception avant-projet en se concentrant sur la génération de circuits et de bancs d'essai à partir d'une spécification commune, ainsi que sur l'amélioration de la qualité de conception, tout en identifiant les défis clés et les opportunités futures pour intégrer ces modèles dans les outils d'automatisation de la conception électronique.",
+    "angle_eco": "L'intégration des modèles de langage de grande taille dans l'automatisation de la conception électronique pourrait transformer la conception front-end en passant d'une assistance localisée à une exécution autonome capable de générer des descriptions matérielles, de construire des bancs de test et d'explorer l'espace de conception à partir d'une spécification partagée.",
     "themes": [
       "llm"
     ],
     "score": 3,
     "auteurs": "Kangwei Xu, Bing Li, Ulf Schlichtmann",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "claude-haiku-4-5"
   },
   {
     "id": "arxiv-2607.09348v1",
@@ -350,8 +350,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-10",
-    "resume_fr": "DKCD, une nouvelle approche proposée pour la détection causale dans les données non structurées dans des domaines hautement spécialisés, met en évidence des facteurs causaux latents essentiels grâce à l'intégration de connaissances spécifiques au domaine. Elle améliore significativement le développement de graphes causaux en utilisant annotations précises et guidées par la raison causale.",
-    "angle_eco": "DKCD surmonte les défis de non-identification des facteurs latents et d'annotation fiable des facteurs dans la détection causale de données sans structure dans des domaines experts à travers l'intégration de connaissances spécifiques.",
+    "resume_fr": "Les auteurs proposent DKCD, un cadre de découverte causale à partir de données non structurées dans des domaines à haute expertise comme la santé et la finance, qui intègre des connaissances spécifiques au domaine pour identifier les facteurs latents implicites dans les données et améliorer l'annotation fiable des facteurs. Le framework combine trois composantes interconnectées : l'extraction de connaissances du domaine, le raisonnement causal guidé par ces connaissances pour découvrir les facteurs causaux latents, et la construction de graphes causaux basée sur un ensemble de facteurs plus complet et des annotations plus précises.",
+    "angle_eco": "L'identification insuffisante des facteurs latents implicites dans les données non structurées et l'annotation peu fiable de ces facteurs, dues à l'absence de connaissances spécifiques au domaine, constituent des obstacles majeurs à la découverte causale dans les secteurs à haute expertise comme la santé, la finance et l'éducation.",
     "themes": [
       "inference-causale",
       "llm",
@@ -360,7 +360,7 @@
     "score": 4,
     "auteurs": "Xin Li, Jin Li, Shoujin Wang, Kun Yu, Fang Chen",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "claude-haiku-4-5"
   },
   {
     "id": "arxiv-2607.09316v1",
@@ -369,8 +369,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-10",
-    "resume_fr": "Les auteurs présentent une étude sur l'utilisation de méthodes de machine learning pour l'indexation thématique automatique dans deux sous-corpora importants du Complet des Œuvres de Voltaire, ce qui pourrait permettre d'automatiser un processus traditionnellement manuel et coûteux. Notre modèle le mieux performant atteint des scores F1 de 0,67, soulignant cependant la complexité de l'évaluation en raison du jugement subjectif des indexateurs professionnels.",
-    "angle_eco": "La principale innovation du papier réside dans l'application de méthodes d'apprentissage automatique pour automatiser le processus de thématisation, un cadre multi-label classification basé sur des modèles de grands langages ajustés via Low-Rank Adaptation (LoRA), allant des configurations de quantification 4-bit jusqu'à des modèles très larges.",
+    "resume_fr": "Les auteurs appliquent l'apprentissage automatique à l'indexation thématique de deux sous-corpus importants des Œuvres complètes de Voltaire, en formulant la tâche comme un problème de classification multi-étiquettes où un modèle doit assigner les entrées d'index qu'un indexeur professionnel appliquerait à une page de texte donnée. Le meilleur modèle, issu de la famille Mistral en configuration quantifiée 4-bit, atteint des scores F1 jusqu'à 0,67, les auteurs arguant que ces résultats constituent des bornes inférieures compte tenu de la subjectivité inhérente à l'indexation professionnelle et de la fréquence à laquelle les prédictions du modèle s'avèrent sémantiquement valides malgré des divergences avec l'index imprimé.",
+    "angle_eco": "L'automatisation de l'indexation thématique des grands corpus littéraires par apprentissage automatique pourrait réduire le caractère manuel et intensif en travail de cette pratique essentielle à l'accès savant aux éditions historiques et littéraires de grande envergure.",
     "themes": [
       "llm",
       "prevision",
@@ -379,7 +379,7 @@
     "score": 3,
     "auteurs": "Miguel Arana-Catania, Gillian Pink, Glenn Roe",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "claude-haiku-4-5"
   },
   {
     "id": "arxiv-2607.08665v1",
@@ -388,8 +388,8 @@
     "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
     "type": "papier",
     "date_publication": "2026-07-09",
-    "resume_fr": "Cette recherche propose une stratégie de sélection de modèle de grand langage à temps de test, optimisant le compromis entre qualité des réponses et coûts de service, en suggérant d'allouer chaque unité du budget entre la resampling du modèle engagé et le routage vers un autre modèle alternative. Les expériences montrent que cette approche RoR améliore notamment les performances parmi les pools de modèles les plus diversifiés.",
-    "angle_eco": "La phrase sur le mécanisme ou l'enjeu du papier est : Le papier met en avant la nécessité de sélectionner entre lesquelles des grandes langues modèles utiliser lors de l'exécution (resampling) et celle à qui rediriger lors d'un raté (rerouting), tout cela dans un cadre budgétaire limité, ce qui a des implications sur la qualité du rendement attendue.",
+    "resume_fr": "Les auteurs formulent un problème de sélection de modèle au moment du test avec budget limité, où chaque unité de budget doit être allouée entre le rééchantillonnage du modèle engagé et le réacheminement vers un modèle alternatif afin de maximiser la justesse attendue. Une politique d'allocation en ligne basée sur la justesse marginale estimée par unité de coût est proposée et validée sur un ensemble de onze modèles en poids ouvert sur quatre benchmarks, montrant des gains particulièrement importants sur les ensembles les plus hétérogènes par rapport aux approches de base.",
+    "angle_eco": "L'allocation d'un budget de calcul limité par requête entre le rééchantillonnage du modèle engagé et le routage vers un modèle alternatif constitue un arbitrage central pour maximiser la qualité des réponses d'un système de sélection de modèles de langage au moment de l'inférence.",
     "themes": [
       "llm",
       "politique-publique"
@@ -397,7 +397,7 @@
     "score": 4,
     "auteurs": "Teng-Ruei Chen",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "claude-haiku-4-5"
   },
   {
     "id": "arxiv-2607.08920v1",
@@ -406,8 +406,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-09",
-    "resume_fr": "Dans les entreprises S&P 500 étudiées entre 2016 et 2025, plus de la moitié ont intégré AI profondément dans leurs processus, avec une augmentation rapide au sein du secteur technologique qui absorbe à lui seul la moitié des adoptions profondes. Les profits des entreprises connaissent une courbe J lorsqu'il s'agit d'intégrer l'AI de manière profonde, sans cependant démontrer de différences significatives en termes de dépenses en capitales ou de productivité.",
-    "angle_eco": "Ce papier compte pour un économiste car il analyse l'adoption d'intelligence artificielle dans les grandes entreprises américaines et ses implications sur la productivité et le marché du travail.",
+    "resume_fr": "Les auteurs étudient l'adoption de l'intelligence artificielle par les entreprises du S&P 500 entre 2016 et 2025 en développant une mesure fondée sur les dépôts réglementaires auprès de la SEC, et constatent qu'en 2025, 11% de ces entreprises avaient intégré profondément l'IA dans leurs processus métier tandis que 10% supplémentaires l'utilisaient dans la production et la livraison de services. L'adoption a plus que quadruplé depuis 5% en 2022, avec une accélération lente dans les secteurs non technologiques mais très agressive dans le secteur technologique qui représente les deux tiers de l'adoption profonde, tandis que la rentabilité des entreprises suit une courbe en J sans différences observées en matière de dépenses d'investissement ou de productivité.",
+    "angle_eco": "La mesure de l'intégration profonde de l'intelligence artificielle dans les processus métier des grandes entreprises à partir des déclarations réglementaires permet de distinguer l'adoption réelle de l'effet de mode et de documenter une accélération de cette adoption depuis 2022, particulièrement prononcée dans le secteur technologique.",
     "themes": [
       "llm",
       "travail-emploi",
@@ -416,7 +416,7 @@
     "score": 6,
     "auteurs": "Yang Yu, Martin Fleming, Lucy Hampton, Christophe Combemale, Neil Thompson",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "claude-haiku-4-5"
   },
   {
     "id": "arxiv-2607.08681v1",
@@ -425,8 +425,8 @@
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-07-09",
-    "resume_fr": "Dans des marchés énergétiques décentralisés, SolarChain-Eval est une benchmark physique contrainte proposant de mesurer la fiabilité des agents économiques. L'étude révèle un compromis entre utilité et sécurité dans l'évaluation d'agents par RL, tandis que le système intégrant une planificateur-auditeur linguistique améliore considérablement l'auditabilité et réduit certains risques.",
-    "angle_eco": "SolarChain-Eval propose une approche physique contrainte pour évaluer de manière fiable les acteurs économiques autonomes dans les marchés d'énergie distribués, en formulant la gouvernance du marché comme un Processus Decisions Markovien compatible Gymnasium où les agents prennent des décisions horaires.",
+    "resume_fr": "Les auteurs proposent SolarChain-Eval, un benchmark contraint par la physique pour évaluer des agents économiques fiables sur les marchés décentralisés d'énergie, en formulant la gouvernance de marché comme un processus de décision de Markov compatible avec Gymnasium et en évaluant les politiques selon plusieurs dimensions incluant l'utilité du marché, la sécurité physique, le glissement de prix, la fluidité des actions, l'équité spatiale et l'auditabilité. Les expériences montrent un compromis clair entre utilité et sécurité, les agents par apprentissage par renforcement améliorant l'utilité du marché mais pouvant produire des comportements non sûrs, tandis qu'une couche Planificateur/Auditeur basée sur un modèle de langage améliore l'auditabilité et atténue certains risques.",
+    "angle_eco": "L'évaluation des agents économiques autonomes dans les marchés décentralisés d'énergie doit concilier l'amélioration de l'utilité du marché avec la prévention des comportements non sûrs tels que l'exploitation de données physiques invalides, la création de liquidité artificielle et les décisions de gouvernance instables.",
     "themes": [
       "llm",
       "politique-publique",
@@ -435,7 +435,7 @@
     "score": 4,
     "auteurs": "Shilin Ou, Yifan Xu, Luyao Zhang",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "claude-haiku-4-5"
   },
   {
     "id": "voxeu-org-voxeu-columns-ai-productivity-and-work-evidence-us-firms",
@@ -444,8 +444,8 @@
     "source": "VoxEU / CEPR",
     "type": "article",
     "date_publication": "2026-06-26",
-    "resume_fr": "Nous utilisons des données de sondage d'un groupe de plus de 750 dirigeants de sociétés pour étudier les effets de l'intelligence artificielle sur la productivité et le marché du travail. Les gains de productivité liés à l'IA sont positifs, mais varient selon les secteurs, avec des augmentations prédites en 2026, surtout dans les services et la finance de haute compétence.",
-    "angle_eco": "AI adoption varies significantly among firms, with half having already invested, despite many smaller firms only beginning their journey, contributing to heterogeneous labor productivity gains across sectors.",
+    "resume_fr": "Les auteurs analysent les effets de l'intelligence artificielle sur la productivité et l'emploi à partir d'une enquête auprès de près de 750 dirigeants d'entreprises américaines, révélant une adoption hétérogène de l'IA selon les secteurs et les tailles d'entreprises, avec des gains de productivité du travail positifs attendus en 2026 particulièrement dans les services à haut niveau de compétences et la finance. Ils documentent un paradoxe de productivité où les gains perçus dépassent les gains mesurés, et identifient peu de déclin d'emploi agrégé à court terme malgré une réallocation compositionnelle du travail marquée par le déclin des postes de secrétariat de routine et une demande accrue pour les rôles techniques qualifiés.",
+    "angle_eco": "L'adoption hétérogène de l'intelligence artificielle par les entreprises américaines génère des gains de productivité du travail concentrés dans les services à forte intensité de compétences et la finance, portés par l'innovation et l'augmentation des revenus plutôt que par l'approfondissement du capital, tandis que les marchés du travail connaissent une réallocation compositionnelle des emplois vers les rôles techniques qualifiés au détriment des fonctions administratives de routine.",
     "themes": [
       "travail-emploi",
       "politique-publique",
@@ -454,6 +454,6 @@
     "score": 3,
     "auteurs": "",
     "signal": false,
-    "llm": "qwen2.5:3b"
+    "llm": "claude-haiku-4-5"
   }
 ]
