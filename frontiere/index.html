@@ -706,9 +706,11 @@
           <p>
             Un pipeline Python collecte deux fois par semaine (lundi et jeudi)
             les nouvelles parutions d'arXiv (econ.EM, econ.GN, cs.LG, cs.CL,
-            stat.ML filtrées économie) et de VoxEU/CEPR, puis attribue à chaque
-            entrée un score thématique : la sélection principale retient celles
-            qui atteignent au moins 3. Les résumés en français sont générés par
+            stat.ML filtrées économie), du NBER, des revues de l'American
+            Economic Association (AER, JEP, JEL, AEJ), de VoxEU/CEPR et de la
+            Banque du Canada, puis attribue à chaque entrée un score
+            thématique : la sélection principale retient celles qui atteignent
+            au moins 3. Les résumés en français sont générés par
             un modèle de langue (Gemini, avec Claude en complément), puis
             contrôlés par des validateurs automatiques : tout chiffre absent du
             titre ou du résumé source entraîne le rejet du texte. La
