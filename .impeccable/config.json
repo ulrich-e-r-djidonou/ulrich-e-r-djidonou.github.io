@@ -1,0 +1,38 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-08-04T17:33:05.322Z",
+        "reason": "Lisere signature en haut des cartes, documente dans DESIGN.md"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "frontiere/frontiere.css"
+        ],
+        "createdAt": "2026-08-04T17:33:05.396Z",
+        "reason": "Meme lisere signature sur les cartes de La Frontiere"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "2px",
+        "createdAt": "2026-08-04T17:33:05.465Z",
+        "reason": "Radius des filets fins (soulignement nav, signature-line), intentionnel"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#e6eee9",
+        "createdAt": "2026-08-04T17:33:05.540Z",
+        "reason": "Texte du bloc Methode sur fond teal fonce, contraste 9.9:1"
+      }
+    ]
+  }
+}

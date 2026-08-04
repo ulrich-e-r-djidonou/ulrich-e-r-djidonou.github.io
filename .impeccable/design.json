@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-04T00:00:00Z",
+  "title": "Design System: djidonou.com",
+  "extensions": {
+    "colorMeta": {
+      "teal": { "role": "primary", "displayName": "Teal frontière", "canonical": "#0b5c5a", "tonalRamp": ["oklch(20% 0.05 190)", "oklch(30% 0.06 190)", "oklch(40% 0.07 190)", "oklch(50% 0.08 190)", "oklch(60% 0.09 190)", "oklch(72% 0.09 190)", "oklch(84% 0.07 190)", "oklch(94% 0.03 190)"] },
+      "green": { "role": "secondary", "displayName": "Vert lichen", "canonical": "#7b9e53", "tonalRamp": ["oklch(22% 0.05 125)", "oklch(32% 0.07 125)", "oklch(42% 0.09 125)", "oklch(52% 0.10 125)", "oklch(64% 0.11 125)", "oklch(74% 0.10 125)", "oklch(85% 0.07 125)", "oklch(94% 0.03 125)"] },
+      "amber": { "role": "secondary", "displayName": "Ambre carnet", "canonical": "#c38a2e", "tonalRamp": ["oklch(24% 0.06 75)", "oklch(35% 0.08 75)", "oklch(46% 0.10 75)", "oklch(57% 0.12 75)", "oklch(68% 0.13 75)", "oklch(78% 0.11 75)", "oklch(87% 0.08 75)", "oklch(95% 0.03 75)"] },
+      "paper": { "role": "neutral", "displayName": "Papier", "canonical": "#f7f4ee", "tonalRamp": ["oklch(18% 0.005 90)", "oklch(30% 0.006 90)", "oklch(45% 0.008 90)", "oklch(60% 0.009 90)", "oklch(72% 0.010 90)", "oklch(84% 0.010 90)", "oklch(92% 0.008 90)", "oklch(97% 0.006 90)"] },
+      "ink": { "role": "neutral", "displayName": "Encre", "canonical": "#16201f" },
+      "muted": { "role": "neutral", "displayName": "Gris terrain", "canonical": "#5e6a67" },
+      "line": { "role": "neutral", "displayName": "Filet", "canonical": "#d7d0c3" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Titre du hero uniquement; 2.65rem mobile, 2.9rem pages intérieures." },
+      "body": { "displayName": "Body", "purpose": "Texte courant Georgia 1.16rem/1.55, largeurs 55-62ch." },
+      "label": { "displayName": "Label", "purpose": "Kickers et étiquettes Trebuchet 700 uppercase 0.08em." }
+    },
+    "shadows": [
+      { "name": "card", "value": "0 10px 24px rgba(22, 32, 31, 0.08)", "purpose": "Cartes projet; alpha 0.35 en mode sombre." },
+      { "name": "portrait", "value": "0 18px 34px rgba(22, 32, 31, 0.08)", "purpose": "Portrait du hero." }
+    ],
+    "motion": [
+      { "name": "hover", "value": "180ms ease", "purpose": "Survols boutons et icônes, translateY(-2px)." },
+      { "name": "card-reveal", "value": "220ms ease", "purpose": "Liseré de carte scaleX(0→1) et levée -4px." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "980px" },
+      { "name": "narrow", "value": "620px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Bouton primaire",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Action principale; teal plein, texte blanc cassé.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Voir les projets</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 2.85rem; padding: 0.75rem 1.1rem; background: var(--teal, #0b5c5a); color: #fffdf8; border: 1px solid var(--teal, #0b5c5a); border-radius: 4px; font-family: 'Trebuchet MS', Verdana, sans-serif; font-size: 0.95rem; font-weight: 700; text-decoration: none; transition: transform 180ms ease; } .ds-btn-primary:hover { transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 3px solid #c38a2e; outline-offset: 4px; }"
+    },
+    {
+      "name": "Bouton secondaire",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Action secondaire; transparent, bordure teal.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Me contacter</a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 2.85rem; padding: 0.75rem 1.1rem; background: transparent; color: #073f3d; border: 1px solid #0b5c5a; border-radius: 4px; font-family: 'Trebuchet MS', Verdana, sans-serif; font-size: 0.95rem; font-weight: 700; text-decoration: none; transition: transform 180ms ease; } .ds-btn-secondary:hover { transform: translateY(-2px); } .ds-btn-secondary:focus-visible { outline: 3px solid #c38a2e; outline-offset: 4px; }"
+    },
+    {
+      "name": "Chip filtre",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Filtre de la page projets; état pressé en teal.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"false\">Économétrie</button> <button class=\"ds-chip\" aria-pressed=\"true\">Machine learning</button>",
+      "css": ".ds-chip { padding: 0.4rem 0.75rem; border: 1px solid #d7d0c3; border-radius: 999px; background: #fffdf8; color: #5e6a67; font-family: 'Trebuchet MS', Verdana, sans-serif; font-size: 0.8rem; font-weight: 700; cursor: pointer; } .ds-chip[aria-pressed=\"true\"] { background: #0b5c5a; border-color: #0b5c5a; color: #fffdf8; } .ds-chip:focus-visible { outline: 3px solid #c38a2e; outline-offset: 3px; }"
+    },
+    {
+      "name": "Carte projet",
+      "kind": "card",
+      "refersTo": "card-project",
+      "description": "Carte avec liseré signature qui se déploie au survol.",
+      "html": "<article class=\"ds-card\"><p class=\"ds-card-type\">Dashboard</p><h3>ICIE</h3><p>Indice canadien d'incertitude économique construit sur Google Trends.</p><a href=\"#\">Voir le dashboard</a></article>",
+      "css": ".ds-card { position: relative; display: flex; flex-direction: column; padding: 1.35rem; background: #fffdf8; border: 1px solid #d7d0c3; border-radius: 6px; box-shadow: 0 10px 24px rgba(22,32,31,0.08); overflow: hidden; font-family: Georgia, serif; color: #16201f; transition: transform 180ms ease, border-color 180ms ease; } .ds-card::before { content: \"\"; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #0b5c5a 0%, #7b9e53 55%, #c38a2e 100%); transform: scaleX(0); transform-origin: left; transition: transform 220ms ease; } .ds-card:hover { transform: translateY(-4px); border-color: #7b9e53; } .ds-card:hover::before { transform: scaleX(1); } .ds-card h3 { margin: 0 0 0.6rem; color: #073f3d; font-size: 1.45rem; line-height: 1.15; } .ds-card p { color: #5e6a67; margin: 0 0 0.5rem; } .ds-card-type { color: #0b5c5a; font-family: 'Trebuchet MS', Verdana, sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; } .ds-card a { margin-top: auto; padding-top: 0.8rem; color: #0b5c5a; font-family: 'Trebuchet MS', Verdana, sans-serif; font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Nav du header; page active soulignée du liseré.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Accueil</a><a href=\"#\">Projets</a><a href=\"#\">Parcours</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 1.25rem; font-family: 'Trebuchet MS', Verdana, sans-serif; font-size: 0.88rem; color: #5e6a67; } .ds-nav a { position: relative; padding-bottom: 5px; text-decoration: none; color: inherit; } .ds-nav a[aria-current=\"page\"] { color: #073f3d; font-weight: 700; } .ds-nav a[aria-current=\"page\"]::after { content: \"\"; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #0b5c5a 0%, #7b9e53 55%, #c38a2e 100%); } .ds-nav a:focus-visible { outline: 3px solid #c38a2e; outline-offset: 4px; }"
+    },
+    {
+      "name": "Badge de statut",
+      "kind": "chip",
+      "refersTo": "status-badge",
+      "description": "Badge ambre pour l'état d'une publication.",
+      "html": "<span class=\"ds-badge\">En cours</span>",
+      "css": ".ds-badge { padding: 0.2rem 0.55rem; border: 1px solid #c38a2e; border-radius: 999px; color: #c38a2e; font-family: 'Trebuchet MS', Verdana, sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Le carnet de terrain",
+    "overview": "Le site est le carnet de terrain d'un économiste : papier chaud, serif classique, filets fins, pastilles de timeline, encadrés factuels. Rien ne crie; la retenue est le style. Le seul geste graphique affirmé est le liseré signature teal-vert-ambre.",
+    "keyCharacteristics": [
+      "Papier chaud et serif éditoriale, jamais de look SaaS",
+      "Un seul motif signature : le dégradé ligne de frontière",
+      "Filets 1px et pastilles plutôt que bordures épaisses",
+      "Sans-serif réservée aux étiquettes et à la navigation",
+      "Mode sombre natif, tokens à inversion contrôlée"
+    ],
+    "rules": [
+      { "name": "La règle du liseré", "body": "Le dégradé teal-vert-ambre est le seul gradient du site, en filets fins de 2 à 4px. Jamais en fond de bloc, jamais en texte.", "section": "colors" },
+      { "name": "La règle du focus ambre", "body": "Tout élément focusable reçoit outline 3px ambre avec offset 3-4px.", "section": "colors" },
+      { "name": "La règle des steps", "body": "Toute taille de police passe par un step nommé --fs-*.", "section": "typography" },
+      { "name": "La règle posée", "body": "Rien ne bouge de plus de 4px, rien ne dure plus de 220ms, aucun rebond.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do réutiliser les steps --fs-* et les tokens de couleur existants",
+      "Do réserver le liseré aux filets fins",
+      "Do vérifier chaque ajout dans les deux thèmes",
+      "Do garder le focus ambre 3px sur tout élément interactif"
+    ],
+    "donts": [
+      "Don't introduire de bordure latérale épaisse comme accent",
+      "Don't utiliser le dégradé en fond de bloc ou en texte",
+      "Don't ajouter d'autre famille de police ni de taille hors échelle",
+      "Don't dépasser -4px / 220ms sur les survols"
+    ]
+  }
+}
