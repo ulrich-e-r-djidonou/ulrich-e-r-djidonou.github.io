@@ -702,6 +702,22 @@
           <a href="data/flux.json">Données du flux (JSON)</a>
           <a href="data/bibliotheque.json">Bibliothèque (JSON)</a>
         </div>
+        <details class="frontiere-methode">
+          <summary>Comment cette veille est produite</summary>
+          <p>
+            Un pipeline Python collecte deux fois par semaine (lundi et jeudi)
+            les nouvelles parutions d'arXiv (econ.EM, econ.GN, cs.LG, cs.CL,
+            stat.ML filtrées économie) et de VoxEU/CEPR, puis attribue à chaque
+            entrée un score thématique : la sélection principale retient celles
+            qui atteignent au moins 3. Les résumés en français sont générés par
+            un modèle de langue (Gemini, avec Claude en complément), puis
+            contrôlés par des validateurs automatiques : tout chiffre absent du
+            titre ou du résumé source entraîne le rejet du texte. La
+            bibliothèque, elle, est choisie à la main. Le code du pipeline est
+            public sur
+            <a href="https://github.com/ulrich-e-r-djidonou/ulrich-e-r-djidonou.github.io/tree/main/pipeline">GitHub</a>.
+          </p>
+        </details>
       </section>
 
       <section class="frontiere-signal" id="signal-semaine" aria-labelledby="signal-titre" hidden>
