@@ -1,12 +1,10 @@
 name: regenerer-flux
 
 on:
-  schedule:
-    # Le palier gratuit accorde 20 requetes par jour et par modele, partagees
-    # avec la veille. Celle-ci tourne le lundi et le jeudi et en consomme 16 :
-    # ce rattrapage occupe les cinq autres jours, ou le quota est libre.
-    # 13:00 UTC, soit apres la remise a zero du quota, fuseau Pacifique.
-    - cron: "0 13 * * 2,3,5,6,0"
+  # Le rattrapage des 25 textes herites de l'ancien modele local est termine
+  # (4 aout 2026 : 18 items Gemini, 7 items Claude). Le declenchement planifie
+  # est retire pour ne plus consommer le quota Gemini partage avec la veille ;
+  # ce workflow reste disponible manuellement si un lot doit etre reecrit.
   workflow_dispatch:
     inputs:
       appliquer_seulement:
