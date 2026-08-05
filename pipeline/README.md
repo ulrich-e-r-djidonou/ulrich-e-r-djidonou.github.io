@@ -87,10 +87,29 @@ LLM_API_MODELE=deepseek-v4-flash
 LLM_API_CLE=...
 ```
 
-En production la clé passe par un secret GitHub, jamais par le dépôt:
+Un second point de terminaison de repli, au même format, peut être ajouté à
+côté. `curate.py` n'y recourt que si le fournisseur principal échoue après ses
+propres tentatives (quota épuisé, panne) ; la bascule vaut ensuite pour le
+reste de l'exécution. `LLM_BUDGET_APPELS` reste un seul compteur, tous
+fournisseurs confondus.
+
+```text
+LLM_API_URL_REPLI=https://api.anthropic.com/v1/chat/completions
+LLM_API_MODELE_REPLI=claude-haiku-4-5
+LLM_API_CLE_REPLI=...
+```
+
+En `.github/workflows/frontiere.yml`, ce repli est configuré vers Claude
+(`claude-haiku-4-5`, via l'endpoint compatible OpenAI d'Anthropic), pour le
+cas où le palier gratuit de Gemini est épuisé avant la fin du lot, comme le 3
+août 2026.
+
+En production la clé passe par un secret GitHub, jamais par le dépôt. Le repli
+en a un second, distinct de celui du fournisseur principal:
 
 ```powershell
 gh secret set LLM_API_CLE
+gh secret set LLM_API_CLE_REPLI
 ```
 
 Volume mesuré sur le banc: 942 jetons en entrée et 218 en sortie par item,

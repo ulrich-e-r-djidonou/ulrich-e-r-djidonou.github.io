@@ -16,12 +16,22 @@ selection. Chaque sortie est validee separement. Une sortie invalide est
 relancee une fois, puis l'item n'est pas publie si le second essai echoue.
 Aucun extrait anglais n'est publie en repli.
 
+Pour le fournisseur api, un second point de terminaison de repli peut etre
+configure (LLM_API_URL_REPLI et consorts, meme format OpenAI). Si le
+fournisseur principal echoue apres ses propres tentatives (quota epuise,
+panne), la redaction bascule dessus pour le reste de l'execution au lieu
+d'echouer tout de suite. Le budget d'appels (LLM_BUDGET_APPELS) reste compte
+une seule fois, tous fournisseurs confondus. Sans repli configure, le
+comportement est inchange : une panne du fournisseur principal fait echouer
+le run.
+
 Deux echecs sont distingues, parce qu'ils n'appellent pas la meme reaction :
   - echec de validation : le modele a repondu, mal. L'item est marque vu et
     ne sera pas repeche. C'est la politique arretee.
-  - service indisponible : le modele n'a pas repondu. Rien n'est ecrit, aucun
-    item n'est marque vu, le script sort en erreur. Une panne ne doit jamais
-    consommer definitivement des articles.
+  - service indisponible : ni le fournisseur principal ni son repli (s'il est
+    configure) n'ont repondu. Rien n'est ecrit, aucun item n'est marque vu,
+    le script sort en erreur. Une panne ne doit jamais consommer
+    definitivement des articles.
 """
 
 import json
@@ -72,6 +82,17 @@ API_URL = os.environ.get("LLM_API_URL", "")
 API_MODELE = os.environ.get("LLM_API_MODELE", "")
 API_CLE = os.environ.get("LLM_API_CLE", "")
 
+# Repli du fournisseur api : un second point de terminaison, au meme format
+# OpenAI, sollicite seulement si le principal echoue apres ses propres
+# tentatives (quota epuise, panne). Sans ces trois variables, le comportement
+# est inchange : une panne du fournisseur principal fait echouer le run,
+# exactement comme avant. La cle ne doit jamais figurer ailleurs qu'ici (elle
+# vient d'un secret GitHub cote workflow, jamais du depot).
+API_URL_REPLI = os.environ.get("LLM_API_URL_REPLI", "")
+API_MODELE_REPLI = os.environ.get("LLM_API_MODELE_REPLI", "")
+API_CLE_REPLI = os.environ.get("LLM_API_CLE_REPLI", "")
+REPLI_ACTIF = bool(API_URL_REPLI and API_MODELE_REPLI and API_CLE_REPLI)
+
 # Budget d'appels par execution. Les paliers gratuits comptent en requetes par
 # jour et par modele : Gemini en accorde 20. Plutot que de laisser un lot
 # volumineux epuiser le quota et echouer au milieu, on s'arrete avant. Les
@@ -81,6 +102,11 @@ BUDGET_APPELS = int(os.environ.get("LLM_BUDGET_APPELS", "0") or 0)
 # Un item consomme au pire deux champs fois deux essais.
 APPELS_MAX_PAR_ITEM = 4
 _appels_effectues = 0
+# Vrai une fois que le fournisseur principal a echoue et que la redaction est
+# passee sur le repli. Persiste pour le reste de l'execution : retenter un
+# fournisseur dont le quota est epuise ne ferait que perdre du temps sur
+# chaque item suivant.
+_bascule_repli = False
 
 
 def appels_effectues():
@@ -99,8 +125,14 @@ class OllamaIndisponible(RuntimeError):
 
 
 def modele_actif():
-    """Nom du modele qui redige, quel que soit le fournisseur."""
-    return API_MODELE if FOURNISSEUR == "api" else OLLAMA_MODEL
+    """Nom du modele qui redige, quel que soit le fournisseur.
+
+    Reflete la bascule : une fois le repli engage, les items suivants
+    portent son nom, pas celui du fournisseur principal tombe en panne.
+    """
+    if FOURNISSEUR == "api":
+        return API_MODELE_REPLI if _bascule_repli else API_MODELE
+    return OLLAMA_MODEL
 
 # Le prompt demande d'entrer directement dans le mecanisme. La liste couvre
 # toute ouverture qui parle du papier au lieu de son contenu, pas seulement la
@@ -384,13 +416,16 @@ def _requete_ollama(requests, prompt):
     return reponse.json().get("response", "").strip() or None
 
 
-def _requete_api(requests, prompt):
-    """Appelle un service au format OpenAI : DeepSeek, Gemini et equivalents."""
+def _requete_api(requests, prompt, url, modele, cle):
+    """Appelle un service au format OpenAI : DeepSeek, Gemini, Claude (endpoint
+    compatible) et equivalents. url/modele/cle varient selon qu'il s'agit du
+    fournisseur principal ou de son repli.
+    """
     reponse = requests.post(
-        API_URL,
-        headers={"Authorization": f"Bearer {API_CLE}"},
+        url,
+        headers={"Authorization": f"Bearer {cle}"},
         json={
-            "model": API_MODELE,
+            "model": modele,
             "messages": [{"role": "user", "content": prompt}],
             "temperature": 0,
         },
@@ -424,19 +459,11 @@ def _delai_avant_reprise(erreur, tentative):
     return PAUSE_AVANT_REPRISE
 
 
-def _appel_ollama(prompt):
-    """Retourne le texte genere par le fournisseur configure.
-
-    Leve OllamaIndisponible si le service ne repond toujours pas apres les
-    tentatives prevues. Une panne de transport n'est pas un echec de
-    redaction : elle ne doit pas faire marquer l'item comme vu, sinon il ne
-    serait jamais repeche.
+def _tenter(requests, prompt, requete, tentatives):
+    """Boucle de tentatives generique, commune au fournisseur principal et a
+    son repli, pour ne pas dupliquer la logique de pause entre les deux.
     """
-    import requests
-
     global _appels_effectues
-    requete = _requete_api if FOURNISSEUR == "api" else _requete_ollama
-    tentatives = TENTATIVES_API if FOURNISSEUR == "api" else 2
     derniere_erreur = None
     for tentative in range(tentatives):
         try:
@@ -447,6 +474,58 @@ def _appel_ollama(prompt):
             if tentative < tentatives - 1:
                 time.sleep(_delai_avant_reprise(erreur, tentative))
     raise OllamaIndisponible(derniere_erreur)
+
+
+def _appel_ollama(prompt):
+    """Retourne le texte genere par le fournisseur configure.
+
+    Pour le fournisseur api, bascule sur le repli (LLM_API_URL_REPLI et
+    consorts) si le principal echoue apres ses propres tentatives. La
+    bascule vaut pour le reste de l'execution : une fois engagee, les items
+    suivants vont directement au repli, sans retenter un fournisseur dont le
+    quota est epuise. Le budget d'appels (LLM_BUDGET_APPELS) reste un seul
+    compteur global, quel que soit le point de terminaison sollicite.
+
+    Leve OllamaIndisponible si le service (et son repli, le cas echeant) ne
+    repond toujours pas apres les tentatives prevues. Une panne de transport
+    n'est pas un echec de redaction : elle ne doit pas faire marquer l'item
+    comme vu, sinon il ne serait jamais repeche.
+    """
+    import requests
+
+    global _bascule_repli
+
+    if FOURNISSEUR != "api":
+        return _tenter(requests, prompt, _requete_ollama, tentatives=2)
+
+    if _bascule_repli:
+        return _tenter(
+            requests, prompt,
+            lambda req, p: _requete_api(req, p, API_URL_REPLI, API_MODELE_REPLI, API_CLE_REPLI),
+            tentatives=TENTATIVES_API,
+        )
+
+    try:
+        return _tenter(
+            requests, prompt,
+            lambda req, p: _requete_api(req, p, API_URL, API_MODELE, API_CLE),
+            tentatives=TENTATIVES_API,
+        )
+    except OllamaIndisponible as erreur_principale:
+        if not REPLI_ACTIF:
+            raise
+        print(
+            f"Fournisseur principal indisponible ({API_MODELE}) : "
+            f"{erreur_principale}. Bascule sur le repli ({API_MODELE_REPLI}) "
+            "pour le reste de l'execution.",
+            file=sys.stderr,
+        )
+        _bascule_repli = True
+        return _tenter(
+            requests, prompt,
+            lambda req, p: _requete_api(req, p, API_URL_REPLI, API_MODELE_REPLI, API_CLE_REPLI),
+            tentatives=TENTATIVES_API,
+        )
 
 
 def resume_ollama(titre, abstract):
@@ -512,6 +591,7 @@ def enregistrer_execution(nb_eligibles, nb_publies, nb_reportes, nb_non_publies_
     historique.append({
         "date": date.today().isoformat(),
         "fournisseur": FOURNISSEUR or "aucun",
+        "bascule_repli": _bascule_repli,
         "nb_eligibles": nb_eligibles,
         "nb_publies": nb_publies,
         "nb_reportes": nb_reportes,
@@ -624,6 +704,11 @@ def main():
     print(f"Publies apres validation : {len(cures)}")
     print(f"Transmis a l'archive (score < {SEUIL_PUBLICATION}) : {len(candidats_archives)}")
     print(f"Redaction : {FOURNISSEUR} ({modele_actif()})" if LLM_ACTIF else "Redaction : aucune (heuristique seul)")
+    if LLM_ACTIF and _bascule_repli:
+        print(
+            f"Bascule sur le repli engagee : {API_MODELE} indisponible, "
+            f"{API_MODELE_REPLI} a pris le relais pour le reste de l'execution."
+        )
     if LLM_ACTIF:
         print(f"Resumes rediges et valides : {nb_llm}/{len(cures)}")
         budget = f" sur un budget de {BUDGET_APPELS}" if BUDGET_APPELS else ""

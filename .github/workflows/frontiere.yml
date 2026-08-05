@@ -32,6 +32,14 @@ jobs:
           # rediges ne sont pas marques vus et reviennent a l'execution
           # suivante, le jeudi ou le lundi.
           LLM_BUDGET_APPELS: "16"
+          # Repli si Gemini est en panne ou si son quota gratuit est epuise
+          # (429, cas du 3 aout 2026) : curate.py bascule alors sur Claude
+          # pour le reste de l'execution plutot que de faire echouer le job.
+          # LLM_BUDGET_APPELS ci-dessus reste compte une seule fois, tous
+          # fournisseurs confondus (voir pipeline/curate.py, _appel_ollama).
+          LLM_API_URL_REPLI: https://api.anthropic.com/v1/chat/completions
+          LLM_API_MODELE_REPLI: claude-haiku-4-5
+          LLM_API_CLE_REPLI: ${{ secrets.LLM_API_CLE_REPLI }}
         run: |
           python pipeline/collect.py
           python pipeline/curate.py

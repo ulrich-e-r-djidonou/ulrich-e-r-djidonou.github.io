@@ -386,10 +386,259 @@ class FournisseurTests(unittest.TestCase):
         with (
             patch.object(curate, "FOURNISSEUR", "api"),
             patch.object(curate, "API_MODELE", "modele-test"),
+            patch.object(curate, "_bascule_repli", False),
         ):
             self.assertEqual(curate.modele_actif(), "modele-test")
         with patch.object(curate, "FOURNISSEUR", "ollama"):
             self.assertEqual(curate.modele_actif(), curate.OLLAMA_MODEL)
+
+
+class RepliFournisseurTests(unittest.TestCase):
+    """Bascule vers un second point de terminaison quand le principal echoue.
+
+    Reproduit le cas reel du 3 aout 2026 : Gemini renvoie 429 (quota epuise),
+    et la redaction doit continuer via le repli plutot que de faire echouer
+    le run.
+    """
+
+    def setUp(self):
+        # Compteur de budget partage entre tests : remis a zero pour que
+        # chaque test parte propre, comme BudgetAppelsTests plus bas.
+        self._appels = curate._appels_effectues
+        curate._appels_effectues = 0
+
+    def tearDown(self):
+        curate._appels_effectues = self._appels
+
+    def _faux_requests(self, capture, url_principal, url_repli):
+        class ErreurHTTP(Exception):
+            def __init__(self, status_code):
+                super().__init__(f"HTTP {status_code}")
+                self.response = types.SimpleNamespace(status_code=status_code, headers={})
+
+        class ReponseOk:
+            def raise_for_status(self):
+                pass
+
+            def json(self):
+                return {"choices": [{"message": {"content": "Texte du repli."}}]}
+
+        def poster(url, **options):
+            capture.setdefault("appels", []).append(url)
+            if url == url_principal:
+                raise ErreurHTTP(429)
+            assert url == url_repli
+            return ReponseOk()
+
+        module = types.ModuleType("requests")
+        module.post = poster
+        return module
+
+    def test_bascule_sur_le_repli_apres_epuisement_du_principal(self):
+        capture = {}
+        faux = self._faux_requests(
+            capture, "https://principal.test/chat/completions", "https://repli.test/chat/completions"
+        )
+
+        with (
+            patch.dict(sys.modules, {"requests": faux}),
+            patch.object(curate, "FOURNISSEUR", "api"),
+            patch.object(curate, "API_URL", "https://principal.test/chat/completions"),
+            patch.object(curate, "API_MODELE", "gemini-3.6-flash"),
+            patch.object(curate, "API_CLE", "cle-gemini"),
+            patch.object(curate, "API_URL_REPLI", "https://repli.test/chat/completions"),
+            patch.object(curate, "API_MODELE_REPLI", "claude-haiku-4-5"),
+            patch.object(curate, "API_CLE_REPLI", "cle-claude"),
+            patch.object(curate, "REPLI_ACTIF", True),
+            patch.object(curate, "_bascule_repli", False),
+            patch.object(curate, "TENTATIVES_API", 2),
+            patch("time.sleep"),
+        ):
+            texte = curate._appel_ollama("prompt")
+            self.assertEqual(texte, "Texte du repli.")
+            # Le nom du modele actif suit la bascule.
+            self.assertEqual(curate.modele_actif(), "claude-haiku-4-5")
+
+        # 2 essais rates sur le principal, puis 1 essai reussi sur le repli.
+        self.assertEqual(
+            capture["appels"],
+            ["https://principal.test/chat/completions"] * 2
+            + ["https://repli.test/chat/completions"],
+        )
+
+    def test_les_items_suivants_vont_directement_au_repli(self):
+        capture = {}
+        faux = self._faux_requests(
+            capture, "https://principal.test/chat/completions", "https://repli.test/chat/completions"
+        )
+
+        with (
+            patch.dict(sys.modules, {"requests": faux}),
+            patch.object(curate, "FOURNISSEUR", "api"),
+            patch.object(curate, "API_URL", "https://principal.test/chat/completions"),
+            patch.object(curate, "API_MODELE", "gemini-3.6-flash"),
+            patch.object(curate, "API_CLE", "cle-gemini"),
+            patch.object(curate, "API_URL_REPLI", "https://repli.test/chat/completions"),
+            patch.object(curate, "API_MODELE_REPLI", "claude-haiku-4-5"),
+            patch.object(curate, "API_CLE_REPLI", "cle-claude"),
+            patch.object(curate, "REPLI_ACTIF", True),
+            # La bascule est deja engagee par un item precedent du meme run.
+            patch.object(curate, "_bascule_repli", True),
+            patch.object(curate, "TENTATIVES_API", 2),
+            patch("time.sleep"),
+        ):
+            texte = curate._appel_ollama("prompt")
+
+        self.assertEqual(texte, "Texte du repli.")
+        self.assertEqual(capture["appels"], ["https://repli.test/chat/completions"])
+
+    def test_sans_repli_configure_une_panne_du_principal_leve_toujours(self):
+        capture = {}
+        faux = self._faux_requests(
+            capture, "https://principal.test/chat/completions", "https://repli.test/chat/completions"
+        )
+
+        with (
+            patch.dict(sys.modules, {"requests": faux}),
+            patch.object(curate, "FOURNISSEUR", "api"),
+            patch.object(curate, "API_URL", "https://principal.test/chat/completions"),
+            patch.object(curate, "API_MODELE", "gemini-3.6-flash"),
+            patch.object(curate, "API_CLE", "cle-gemini"),
+            patch.object(curate, "REPLI_ACTIF", False),
+            patch.object(curate, "_bascule_repli", False),
+            patch.object(curate, "TENTATIVES_API", 2),
+            patch("time.sleep"),
+        ):
+            with self.assertRaises(curate.OllamaIndisponible):
+                curate._appel_ollama("prompt")
+
+        # Comportement inchange sans repli configure : seul le principal est
+        # sollicite, aucun essai sur une URL de repli.
+        self.assertEqual(capture["appels"], ["https://principal.test/chat/completions"] * 2)
+
+    def test_le_budget_d_appels_compte_le_principal_et_le_repli_ensemble(self):
+        capture = {}
+        faux = self._faux_requests(
+            capture, "https://principal.test/chat/completions", "https://repli.test/chat/completions"
+        )
+
+        with (
+            patch.dict(sys.modules, {"requests": faux}),
+            patch.object(curate, "FOURNISSEUR", "api"),
+            patch.object(curate, "API_URL", "https://principal.test/chat/completions"),
+            patch.object(curate, "API_MODELE", "gemini-3.6-flash"),
+            patch.object(curate, "API_CLE", "cle-gemini"),
+            patch.object(curate, "API_URL_REPLI", "https://repli.test/chat/completions"),
+            patch.object(curate, "API_MODELE_REPLI", "claude-haiku-4-5"),
+            patch.object(curate, "API_CLE_REPLI", "cle-claude"),
+            patch.object(curate, "REPLI_ACTIF", True),
+            patch.object(curate, "_bascule_repli", False),
+            patch.object(curate, "TENTATIVES_API", 2),
+            patch("time.sleep"),
+        ):
+            curate._appel_ollama("prompt")
+            # 2 essais sur le principal + 1 sur le repli, un seul compteur.
+            self.assertEqual(curate._appels_effectues, 3)
+
+
+class RepliIntegrationTests(unittest.TestCase):
+    """Le run complet publie via le repli au lieu d'echouer, sans marquer
+    d'item vu sans texte redige.
+    """
+
+    CANDIDAT = {
+        "id": "test-repli-integration",
+        "titre": "Economic policy with machine learning",
+        "url": "https://example.com/test-repli-integration",
+        "source": "test",
+        "type": "papier",
+        "date_publication": "2026-08-01",
+        "abstract": "Economic policy and market analysis using machine learning.",
+        "auteurs": "Auteur Test",
+    }
+
+    def setUp(self):
+        self._appels = curate._appels_effectues
+        curate._appels_effectues = 0
+
+    def tearDown(self):
+        curate._appels_effectues = self._appels
+
+    def test_le_run_publie_via_le_repli_quand_le_principal_est_en_panne(self):
+        capture = {"appels": []}
+
+        class ErreurHTTP(Exception):
+            def __init__(self, status_code):
+                super().__init__(f"HTTP {status_code}")
+                self.response = types.SimpleNamespace(status_code=status_code, headers={})
+
+        class ReponseOk:
+            def __init__(self, texte):
+                self._texte = texte
+
+            def raise_for_status(self):
+                pass
+
+            def json(self):
+                return {"choices": [{"message": {"content": self._texte}}]}
+
+        # Deux sorties valides pretes a etre lues dans l'ordre resume, angle.
+        textes_repli = iter([
+            "La méthode réduit le biais. Elle améliore aussi la précision.",
+            "L'appariement des données fiscales réduit le biais de sélection.",
+        ])
+
+        def poster(url, **options):
+            capture["appels"].append(url)
+            if url == "https://principal.test/chat/completions":
+                raise ErreurHTTP(429)
+            return ReponseOk(next(textes_repli))
+
+        faux_requests = types.ModuleType("requests")
+        faux_requests.post = poster
+
+        with tempfile.TemporaryDirectory() as dossier:
+            racine = Path(dossier)
+            chemins = {
+                "ENTREE": racine / "candidats.json",
+                "SORTIE": racine / "cures.json",
+                "SORTIE_ARCHIVE": racine / "archives.json",
+                "SEEN": racine / "seen.json",
+                "SANTE": racine / "sante.json",
+            }
+            chemins["ENTREE"].write_text(json.dumps([self.CANDIDAT]), encoding="utf-8")
+            chemins["SEEN"].write_text("{}", encoding="utf-8")
+
+            with ExitStack() as pile:
+                for nom, chemin in chemins.items():
+                    pile.enter_context(patch.object(curate, nom, chemin))
+                pile.enter_context(patch.dict(sys.modules, {"requests": faux_requests}))
+                pile.enter_context(patch.object(curate, "LLM_ACTIF", True))
+                pile.enter_context(patch.object(curate, "FOURNISSEUR", "api"))
+                pile.enter_context(patch.object(curate, "API_URL", "https://principal.test/chat/completions"))
+                pile.enter_context(patch.object(curate, "API_MODELE", "gemini-3.6-flash"))
+                pile.enter_context(patch.object(curate, "API_CLE", "cle-gemini"))
+                pile.enter_context(patch.object(curate, "API_URL_REPLI", "https://repli.test/chat/completions"))
+                pile.enter_context(patch.object(curate, "API_MODELE_REPLI", "claude-haiku-4-5"))
+                pile.enter_context(patch.object(curate, "API_CLE_REPLI", "cle-claude"))
+                pile.enter_context(patch.object(curate, "REPLI_ACTIF", True))
+                pile.enter_context(patch.object(curate, "_bascule_repli", False))
+                pile.enter_context(patch.object(curate, "TENTATIVES_API", 2))
+                pile.enter_context(patch("time.sleep"))
+                curate.main()
+
+            cures = json.loads(chemins["SORTIE"].read_text(encoding="utf-8"))
+            self.assertEqual(len(cures), 1)
+            self.assertEqual(cures[0]["resume_fr"], "La méthode réduit le biais. Elle améliore aussi la précision.")
+            self.assertEqual(cures[0]["llm"], "claude-haiku-4-5")
+
+            # L'item a bien un texte redige : il est marque vu a juste titre,
+            # pas par un echec silencieux qui l'aurait marque sans rediger.
+            seen = json.loads(chemins["SEEN"].read_text(encoding="utf-8"))
+            self.assertIn("test-repli-integration", seen)
+
+            sante = json.loads(chemins["SANTE"].read_text(encoding="utf-8"))
+            self.assertTrue(sante[-1]["bascule_repli"])
 
 
 class BudgetAppelsTests(unittest.TestCase):
