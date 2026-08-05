@@ -41,6 +41,7 @@ class ScoreSourceEconomiqueTests(unittest.TestCase):
             "VoxEU / CEPR",
             "Reserve federale americaine (Fed), working papers",
             "Banque centrale europeenne (BCE), working papers",
+            "IMF Working Papers",
         ):
             with self.subTest(source=source):
                 self.assertTrue(curate.est_source_economique(source))

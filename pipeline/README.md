@@ -18,8 +18,8 @@ source (statut, nombre d'items) est aussi écrit dans
 exécution à zéro publication sans rouvrir les journaux du workflow.
 
 Quatre types de source : `arxiv` (flux natif), `rss` (VoxEU, Banque du
-Canada, NBER, Fed, BCE), `crossref` (revues AEA par ISSN, SSRN par préfixe
-DOI) et `github_commits`.
+Canada, NBER, Fed, BCE), `crossref` (revues AEA par ISSN, FMI par ISSN, SSRN
+par préfixe DOI) et `github_commits`.
 
 Le flux RSS du NBER accole les auteurs au titre (`Titre -- by Auteur, Auteur`)
 et ne porte aucune date : `separateur_auteurs` sépare les deux, `date_repli:
@@ -32,8 +32,11 @@ le magasin de certificats TLS qu'il utilise alors dépend de la plateforme, ce
 qui faisait par exemple échouer le flux de la BCE en local tout en marchant
 avec `requests`, qui embarque son propre magasin.
 
-Crossref sert les revues AEA (AER, AER Insights, JEP, JEL, les quatre AEJ) par
-ISSN, datées par leur publication. SSRN est accessible par le préfixe DOI
+Crossref sert les revues AEA (AER, AER Insights, JEP, JEL, les quatre AEJ) et
+la série IMF Working Papers par ISSN, datées par leur publication. Le préfixe
+DOI du FMI (`10.5089`) mélange à lui seul rapports pays, notes techniques et
+documents de politique : l'ISSN `1018-5941` isole la seule série de
+recherche. SSRN est accessible par le préfixe DOI
 `10.2139`, daté par son dépôt, seule date fiable puisque Crossref réduit
 souvent la date de publication SSRN à l'année seule. SSRN reste désactivé par
 défaut dans `sources.yaml` : Crossref ne porte aucune métadonnée de
@@ -58,9 +61,9 @@ participe jamais au tri.
   vérifiables, sans appel LLM.
 
 Une exception tient au fait que certaines sources publient de l'économie par
-construction: les revues de l'AEA, les working papers du NBER, les colonnes
-VoxEU/CEPR, la Banque du Canada, la Réserve fédérale américaine et la Banque
-centrale européenne (`SOURCES_ECONOMIQUES` dans `curate.py`).
+construction: les revues de l'AEA, les working papers du NBER et du FMI, les
+colonnes VoxEU/CEPR, la Banque du Canada, la Réserve fédérale américaine et
+la Banque centrale européenne (`SOURCES_ECONOMIQUES` dans `curate.py`).
 Pour celles-là, le compte de mots-clés économiques est planché au seuil, si
 bien que l'article est jugé sur sa seule pertinence IA. Un comité scientifique
 a déjà tranché la question que `MOTS_CLES_ECO` essaie de deviner, et le

@@ -243,6 +243,9 @@ SOURCES_ECONOMIQUES = (
     "european central bank",
     "bce",
     "ecb",
+    "fonds monetaire international",
+    "international monetary fund",
+    "imf",
 )
 # Plancher applique au compte de mots economiques pour ces sources. Egal au
 # seuil de publication : un seul mot-cle IA suffit alors a franchir la barre,

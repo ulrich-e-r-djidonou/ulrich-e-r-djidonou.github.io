@@ -59,6 +59,22 @@ sources:
     fenetre_jours: 60
     actif: true
 
+  - id: fmi
+    nom: "Fonds monetaire international (FMI), working papers"
+    type: crossref
+    # ISSN de la serie IMF Working Papers, verifie via
+    # https://api.crossref.org/works?filter=prefix:10.5089 (2026-08-05).
+    # Le prefixe DOI 10.5089 a lui seul melange aussi rapports pays,
+    # notes techniques et documents de politique : l'ISSN isole la seule
+    # serie de recherche.
+    issn:
+      - "1018-5941"   # IMF Working Papers
+    axe_date: publication
+    requiert_mot_cle_ia: true
+    max_resultats: 60
+    fenetre_jours: 60
+    actif: true
+
   - id: ssrn
     nom: "SSRN, preprints"
     type: crossref
