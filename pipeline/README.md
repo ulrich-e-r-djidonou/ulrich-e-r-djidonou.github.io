@@ -51,6 +51,26 @@ participe jamais au tri.
 - score inférieur à 3: l'item rejoint l'archive avec ses métadonnées
   vérifiables, sans appel LLM.
 
+Une exception tient au fait que certaines sources publient de l'économie par
+construction: les revues de l'AEA, les working papers du NBER, les colonnes
+VoxEU/CEPR et la Banque du Canada (`SOURCES_ECONOMIQUES` dans `curate.py`).
+Pour celles-là, le compte de mots-clés économiques est planché au seuil, si
+bien que l'article est jugé sur sa seule pertinence IA. Un comité scientifique
+a déjà tranché la question que `MOTS_CLES_ECO` essaie de deviner, et le
+vocabulaire d'un sous-champ n'a aucune raison de figurer dans une liste
+généraliste.
+
+Le cas qui a motivé cette règle, le 5 août 2026: « The Emerging Market for
+Intelligence: How Firms Buy and Sell AI » (JEP, DOI 10.1257/jep.20261506),
+archivé avec un score de 2 parce que son résumé parle de prix, de fournisseurs
+et de différenciation, sans employer les mots généralistes de la liste. Un
+article du *Journal of Economic Perspectives* échouait donc au test « est-ce de
+l'économie ». Les deux corrections évidentes ont été mesurées puis écartées sur
+127 articles réels: abaisser le seuil à 2 faisait entrer 35 articles de plus,
+dont des papiers d'ingénierie informatique sans contenu économique; enrichir la
+liste de mots en faisait entrer 18, avec le même défaut atténué. La règle par
+source en rattrape 5, tous pertinents, sans aucun faux positif.
+
 Les fichiers intermédiaires sont ignorés par Git:
 
 - `pipeline/_candidats_cures.json`;

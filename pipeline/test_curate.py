@@ -10,6 +10,118 @@ from unittest.mock import patch
 from pipeline import curate
 
 
+class ScoreSourceEconomiqueTests(unittest.TestCase):
+    """Une revue d'economie publie de l'economie : le score ne doit pas le
+    redemander au vocabulaire de l'abstract.
+
+    Cas reel du 2026-08-05 : un article du Journal of Economic Perspectives
+    archive parce que son abstract parle de prix et de fournisseurs plutot que
+    d'employer les mots generalistes de MOTS_CLES_ECO.
+    """
+
+    # Abstract reel de "The Emerging Market for Intelligence: How Firms Buy and
+    # Sell AI" (Demirer, Fradkin, Tadelis, JEP, DOI 10.1257/jep.20261506).
+    TITRE_JEP = "The Emerging Market for Intelligence: How Firms Buy and Sell AI"
+    ABSTRACT_JEP = (
+        "We describe the emerging business-to-business market for large language model "
+        "(LLM) inference and document key empirical patterns in its supply, pricing, and "
+        "dynamics, using data from OpenRouter. First, supply has expanded rapidly: the "
+        "number of commercially available models, model creators, and inference providers "
+        "has grown sharply, driven heavily by opensource entrants. Second, the price of "
+        "intelligence has fallen roughly a thousandfold. Third, the market is highly "
+        "dynamic, with frequent turnover among leading models and creators."
+    )
+
+    def test_reconnait_les_sources_economiques(self):
+        for source in (
+            "Journal of Economic Perspectives",
+            "American Economic Review",
+            "American Economic Journal: Applied Economics",
+            "NBER, nouveaux working papers",
+            "VoxEU / CEPR",
+        ):
+            with self.subTest(source=source):
+                self.assertTrue(curate.est_source_economique(source))
+
+    def test_ne_reconnait_pas_une_source_generaliste(self):
+        for source in ("arXiv cs.LG / cs.CL / stat.ML (filtre economie)", "", None):
+            with self.subTest(source=source):
+                self.assertFalse(curate.est_source_economique(source))
+
+    def test_l_article_jep_atteint_le_seuil_via_sa_source(self):
+        texte = f"{self.TITRE_JEP} {self.ABSTRACT_JEP}"
+
+        # Sans la source, le calcul historique le laisse sous le seuil.
+        self.assertLess(curate.score_heuristique(texte), curate.SEUIL_PUBLICATION)
+        # Avec la source, il passe.
+        self.assertGreaterEqual(
+            curate.score_heuristique(texte, "Journal of Economic Perspectives"),
+            curate.SEUIL_PUBLICATION,
+        )
+
+    def test_une_source_economique_sans_lien_ia_reste_ecartee(self):
+        """Le plancher ne doit pas publier toute l'economie : la dimension IA
+        reste exigee, sinon le flux perdrait son sujet."""
+        texte = (
+            "Minimum Wages and Employment. We estimate the effect of minimum wage "
+            "increases on teenage employment using state-level variation."
+        )
+
+        self.assertEqual(
+            curate.score_heuristique(texte, "American Economic Review"), 0
+        )
+
+    def test_une_source_arxiv_garde_le_calcul_historique(self):
+        texte = f"{self.TITRE_JEP} {self.ABSTRACT_JEP}"
+
+        self.assertEqual(
+            curate.score_heuristique(texte, "arXiv cs.LG / cs.CL / stat.ML (filtre economie)"),
+            curate.score_heuristique(texte),
+        )
+
+    def test_main_transmet_la_source_au_score(self):
+        """Verification de bout en bout : un item AEA scoré 2 par le calcul
+        historique doit etre juge eligible, pas archive."""
+        candidat = {
+            "id": "aea-test-jep",
+            "titre": self.TITRE_JEP,
+            "url": "https://doi.org/10.1257/jep.20261506",
+            "source": "Journal of Economic Perspectives",
+            "type": "papier",
+            "date_publication": "2026-08-01",
+            "abstract": self.ABSTRACT_JEP,
+            "auteurs": "Auteur Test",
+        }
+
+        with tempfile.TemporaryDirectory() as dossier:
+            racine = Path(dossier)
+            chemins = {
+                "ENTREE": racine / "candidats.json",
+                "SORTIE": racine / "cures.json",
+                "SORTIE_ARCHIVE": racine / "archives.json",
+                "SEEN": racine / "seen.json",
+                "SANTE": racine / "sante.json",
+            }
+            chemins["ENTREE"].write_text(json.dumps([candidat]), encoding="utf-8")
+            chemins["SEEN"].write_text("{}", encoding="utf-8")
+
+            with ExitStack() as pile:
+                for nom, chemin in chemins.items():
+                    pile.enter_context(patch.object(curate, nom, chemin))
+                # Sans service de redaction : l'item eligible est reporte, pas
+                # archive. C'est la distinction qui prouve que le score a change.
+                pile.enter_context(patch.object(curate, "LLM_ACTIF", False))
+                curate.main()
+
+            archives = json.loads(chemins["SORTIE_ARCHIVE"].read_text(encoding="utf-8"))
+            self.assertEqual(archives, [], "l'article ne doit plus tomber dans l'archive")
+            self.assertEqual(
+                json.loads(chemins["SEEN"].read_text(encoding="utf-8")),
+                {},
+                "un item eligible non redige reste non vu, pour etre repris",
+            )
+
+
 class ValidationResumeTests(unittest.TestCase):
     def test_accepte_deux_phrases_francaises(self):
         texte = "La méthode réduit le biais. Elle améliore aussi la précision."

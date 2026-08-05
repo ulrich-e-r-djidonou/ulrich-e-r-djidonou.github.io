@@ -212,6 +212,37 @@ MOTS_CLES_IA = [
     "gpt", "foundation model", "generative ai", "chatbot",
 ]
 
+# Sources dont la nature economique est acquise avant toute lecture du texte :
+# revues de l'AEA, working papers du NBER, colonnes VoxEU/CEPR, publications de
+# la Banque du Canada. Un comite scientifique y a deja tranche la question que
+# MOTS_CLES_ECO essaie de deviner.
+#
+# Motif du 2026-08-05 : "The Emerging Market for Intelligence: How Firms Buy
+# and Sell AI" (JEP, DOI 10.1257/jep.20261506) a ete archive avec un score de 2.
+# Son abstract parle de prix, de fournisseurs et de differenciation, mais aucun
+# de ces mots ne figure dans MOTS_CLES_ECO, si bien qu'un article du Journal of
+# Economic Perspectives a echoue au test « est-ce de l'economie ». Enrichir la
+# liste de mots ou baisser le seuil corrigeait ce cas, mais faisait entrer par
+# la meme porte des papiers d'ingenierie informatique sans contenu economique
+# (mesure sur 127 items : +35 items pour un seuil a 2, +18 pour une liste
+# enrichie, contre +5 ici, tous pertinents).
+SOURCES_ECONOMIQUES = (
+    "american economic review",
+    "american economic journal",
+    "journal of economic perspectives",
+    "journal of economic literature",
+    "aer",
+    "nber",
+    "voxeu",
+    "cepr",
+    "banque du canada",
+    "bank of canada",
+)
+# Plancher applique au compte de mots economiques pour ces sources. Egal au
+# seuil de publication : un seul mot-cle IA suffit alors a franchir la barre,
+# ce qui revient a juger ces articles sur leur seule pertinence IA.
+PLANCHER_ECO_SOURCE_ECONOMIQUE = SEUIL_PUBLICATION
+
 THEMES_MOTS_CLES = {
     "inference-causale": ["causal", "identification", "instrument", "difference-in-differences", "rdd"],
     "llm": ["llm", "large language model", "gpt", "chatbot", "generative ai"],
@@ -242,10 +273,35 @@ def mot_cle_present(texte_bas, mot):
     return mot in texte_bas
 
 
-def score_heuristique(texte):
+def est_source_economique(source):
+    """Vrai si la source publie de l'economie par construction.
+
+    La comparaison se fait par sous-chaine sur le nom de source ecrit par
+    collect.py, qui pour les revues AEA vaut le titre servi par Crossref
+    (« Journal of Economic Perspectives ») et pour le NBER le libelle de la
+    source configuree dans sources.yaml.
+    """
+    if not source:
+        return False
+    source_bas = source.lower()
+    return any(marque in source_bas for marque in SOURCES_ECONOMIQUES)
+
+
+def score_heuristique(texte, source=None):
+    """Score de selection : nb de mots-cles economiques x nb de mots-cles IA.
+
+    Pour une source deja economique (voir SOURCES_ECONOMIQUES), le compte
+    economique est plancher : la revue ou le comite scientifique a deja
+    etabli qu'il s'agit d'economie, et le vocabulaire d'un sous-champ
+    (economie industrielle, organisation industrielle) n'a aucune raison de
+    figurer dans une liste de mots generaliste. L'article est alors juge sur
+    sa seule pertinence IA. Ailleurs, le calcul est inchange.
+    """
     texte_bas = texte.lower()
     nb_eco = sum(1 for mot in MOTS_CLES_ECO if mot_cle_present(texte_bas, mot))
     nb_ia = sum(1 for mot in MOTS_CLES_IA if mot_cle_present(texte_bas, mot))
+    if est_source_economique(source):
+        nb_eco = max(nb_eco, PLANCHER_ECO_SOURCE_ECONOMIQUE)
     return min(nb_eco * nb_ia, 10)
 
 
@@ -620,7 +676,7 @@ def main():
             continue
 
         texte_complet = f"{candidat['titre']} {candidat.get('abstract', '')}"
-        score = score_heuristique(texte_complet)
+        score = score_heuristique(texte_complet, candidat.get("source"))
 
         if score < SEUIL_PUBLICATION:
             nouveaux_vus[candidat["id"]] = {"score": score, "traite": True}
