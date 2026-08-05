@@ -39,6 +39,8 @@ class ScoreSourceEconomiqueTests(unittest.TestCase):
             "American Economic Journal: Applied Economics",
             "NBER, nouveaux working papers",
             "VoxEU / CEPR",
+            "Reserve federale americaine (Fed), working papers",
+            "Banque centrale europeenne (BCE), working papers",
         ):
             with self.subTest(source=source):
                 self.assertTrue(curate.est_source_economique(source))

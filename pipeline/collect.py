@@ -146,13 +146,26 @@ def separer_titre_auteurs(titre, separateur):
 
 def collecter_rss(source):
     items = []
-    flux = feedparser.parse(source["url"], request_headers=NAVIGATEUR)
+    # feedparser recupere lui-meme l'URL par defaut (via urllib), dont le
+    # magasin de certificats TLS depend de la plateforme d'execution : le
+    # flux de la BCE echoue ainsi en local (chaine de certificats incomplete
+    # pour urllib) mais reussit avec requests, deja utilise partout ailleurs
+    # dans ce fichier. On recupere donc le contenu avec requests et on ne
+    # laisse a feedparser que l'analyse du XML.
+    reponse = requests.get(source["url"], timeout=TIMEOUT, headers=NAVIGATEUR)
+    reponse.raise_for_status()
+    flux = feedparser.parse(reponse.content)
     if flux.bozo and not flux.entries:
         raise RuntimeError(f"flux RSS illisible : {flux.bozo_exception}")
 
     for entree in flux.entries:
         titre = entree.get("title", "").strip()
-        resume = re.sub("<[^<]+?>", "", entree.get("summary", "")).strip()
+        # Une balise remplacee par du vide peut coller deux mots ensemble :
+        # le flux de la Fed separe la liste d'auteurs du resume par
+        # « </a><br /><br /> », sans aucun espace autour. Chaque balise est
+        # donc remplacee par un espace, puis les espaces multiples sont
+        # reduits a un seul.
+        resume = re.sub(r"\s+", " ", re.sub("<[^<]+?>", " ", entree.get("summary", ""))).strip()
         lien = entree.get("link", "")
         date_pub = parser_date_rss(entree)
         titre, auteurs = separer_titre_auteurs(titre, source.get("separateur_auteurs"))

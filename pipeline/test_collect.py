@@ -177,6 +177,9 @@ class CollecterCrossrefTests(unittest.TestCase):
 
 
 class CollecterRssNberTests(unittest.TestCase):
+    def _reponse(self, contenu=b""):
+        return SimpleNamespace(content=contenu, raise_for_status=lambda: None)
+
     def test_titre_et_auteurs_separes_avec_date_de_repli(self):
         source = {
             "id": "nber",
@@ -197,13 +200,66 @@ class CollecterRssNberTests(unittest.TestCase):
                 }
             ],
         )
-        with patch.object(collect.feedparser, "parse", return_value=flux_simule):
+        with patch.object(collect.requests, "get", return_value=self._reponse()), \
+             patch.object(collect.feedparser, "parse", return_value=flux_simule):
             resultat = collect.collecter_rss(source)
         self.assertEqual(len(resultat), 1)
         self.assertEqual(resultat[0]["titre"], "Self-Fulfilling Credit Scores")
         self.assertEqual(resultat[0]["auteurs"], "Victor Duarte, Julia Fonseca")
         self.assertEqual(resultat[0]["type"], "papier")
         self.assertIsNotNone(resultat[0]["date_publication"])
+
+    def test_balises_adjacentes_sans_espace_ne_collent_pas_les_mots(self):
+        """Cas reel du flux de la Fed : la liste d'auteurs et le resume sont
+        separes par « </a><br /><br /> », sans aucun espace autour. Une
+        balise retiree en la remplacant par du vide colle alors le dernier
+        nom d'auteur au premier mot du resume."""
+        source = {"id": "fed", "nom": "Fed", "url": "https://example.invalid/rss.xml"}
+        flux_simule = SimpleNamespace(
+            bozo=False,
+            entries=[
+                {
+                    "title": "Un papier",
+                    "summary": (
+                        '<a href="https://example.invalid/a">Alice Martin</a>'
+                        "<br /><br />Despite documented heterogeneity..."
+                    ),
+                    "link": "https://example.invalid/papier",
+                }
+            ],
+        )
+        with patch.object(collect.requests, "get", return_value=self._reponse()), \
+             patch.object(collect.feedparser, "parse", return_value=flux_simule):
+            resultat = collect.collecter_rss(source)
+        self.assertEqual(
+            resultat[0]["abstract"], "Alice Martin Despite documented heterogeneity..."
+        )
+
+    def test_recupere_le_contenu_via_requests_plutot_que_feedparser(self):
+        """feedparser ne doit plus aller chercher l'URL lui-meme : son propre
+        magasin de certificats TLS depend de la plateforme (voir le flux de
+        la BCE, qui echoue via urllib mais reussit via requests)."""
+        source = {"id": "bce", "nom": "BCE", "url": "https://example.invalid/rss.xml"}
+        flux_simule = SimpleNamespace(bozo=False, entries=[])
+        with patch.object(collect.requests, "get", return_value=self._reponse(b"<rss></rss>")) as get_simule, \
+             patch.object(collect.feedparser, "parse", return_value=flux_simule) as parse_simule:
+            collect.collecter_rss(source)
+        get_simule.assert_called_once_with(
+            source["url"], timeout=collect.TIMEOUT, headers=collect.NAVIGATEUR
+        )
+        parse_simule.assert_called_once_with(b"<rss></rss>")
+
+    def test_erreur_http_propage_une_exception(self):
+        """Une source RSS en panne doit lever, pour que main() la loggue en
+        echec sans bloquer les autres sources."""
+        source = {"id": "bce", "nom": "BCE", "url": "https://example.invalid/rss.xml"}
+        reponse_en_echec = SimpleNamespace(
+            content=b"",
+            raise_for_status=lambda: (_ for _ in ()).throw(RuntimeError("500")),
+        )
+        with patch.object(collect.requests, "get", return_value=reponse_en_echec):
+            with self.assertRaises(RuntimeError):
+                collect.collecter_rss(source)
 
 
 if __name__ == "__main__":

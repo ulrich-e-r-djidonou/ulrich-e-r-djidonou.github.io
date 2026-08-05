@@ -18,13 +18,19 @@ source (statut, nombre d'items) est aussi écrit dans
 exécution à zéro publication sans rouvrir les journaux du workflow.
 
 Quatre types de source : `arxiv` (flux natif), `rss` (VoxEU, Banque du
-Canada, NBER), `crossref` (revues AEA par ISSN, SSRN par préfixe DOI) et
-`github_commits`.
+Canada, NBER, Fed, BCE), `crossref` (revues AEA par ISSN, SSRN par préfixe
+DOI) et `github_commits`.
 
 Le flux RSS du NBER accole les auteurs au titre (`Titre -- by Auteur, Auteur`)
 et ne porte aucune date : `separateur_auteurs` sépare les deux, `date_repli:
 collecte` retient la date de collecte comme approximation, les items du flux
 « new » étant par construction ceux de la semaine.
+
+`collecter_rss` récupère le contenu avec `requests` avant de le passer à
+`feedparser`, plutôt que de laisser `feedparser` interroger l'URL lui-même :
+le magasin de certificats TLS qu'il utilise alors dépend de la plateforme, ce
+qui faisait par exemple échouer le flux de la BCE en local tout en marchant
+avec `requests`, qui embarque son propre magasin.
 
 Crossref sert les revues AEA (AER, AER Insights, JEP, JEL, les quatre AEJ) par
 ISSN, datées par leur publication. SSRN est accessible par le préfixe DOI
@@ -53,7 +59,8 @@ participe jamais au tri.
 
 Une exception tient au fait que certaines sources publient de l'économie par
 construction: les revues de l'AEA, les working papers du NBER, les colonnes
-VoxEU/CEPR et la Banque du Canada (`SOURCES_ECONOMIQUES` dans `curate.py`).
+VoxEU/CEPR, la Banque du Canada, la Réserve fédérale américaine et la Banque
+centrale européenne (`SOURCES_ECONOMIQUES` dans `curate.py`).
 Pour celles-là, le compte de mots-clés économiques est planché au seuil, si
 bien que l'article est jugé sur sa seule pertinence IA. Un comité scientifique
 a déjà tranché la question que `MOTS_CLES_ECO` essaie de deviner, et le

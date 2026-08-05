@@ -93,6 +93,26 @@ sources:
     fenetre_jours: 30
     actif: true
 
+  - id: fed
+    nom: "Reserve federale americaine (Fed), working papers"
+    type: rss
+    # Feed officiel liste sur https://www.federalreserve.gov/feeds/feeds.htm,
+    # verifie le 5 aout 2026 (200, 15 entrees, resumes complets).
+    url: "https://www.federalreserve.gov/feeds/working_papers.xml"
+    requiert_mot_cle_ia: true
+    fenetre_jours: 30
+    actif: true
+
+  - id: bce
+    nom: "Banque centrale europeenne (BCE), working papers"
+    type: rss
+    # Feed officiel liste sur https://www.ecb.europa.eu/home/html/rss.en.html,
+    # verifie le 5 aout 2026 (200, 15 entrees, resumes complets).
+    url: "https://www.ecb.europa.eu/rss/wppub.html"
+    requiert_mot_cle_ia: true
+    fenetre_jours: 30
+    actif: true
+
   - id: huggingface-papers
     nom: "Hugging Face, daily papers"
     type: rss

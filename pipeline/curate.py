@@ -237,6 +237,12 @@ SOURCES_ECONOMIQUES = (
     "cepr",
     "banque du canada",
     "bank of canada",
+    "reserve federale",
+    "federal reserve",
+    "banque centrale europeenne",
+    "european central bank",
+    "bce",
+    "ecb",
 )
 # Plancher applique au compte de mots economiques pour ces sources. Egal au
 # seuil de publication : un seul mot-cle IA suffit alors a franchir la barre,
