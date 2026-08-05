@@ -1,0 +1,11 @@
+[
+  {
+    "date": "2026-08-05",
+    "fournisseur": "api",
+    "bascule_repli": false,
+    "nb_eligibles": 2,
+    "nb_publies": 2,
+    "nb_reportes": 0,
+    "nb_rejetes_validation": 0
+  }
+]

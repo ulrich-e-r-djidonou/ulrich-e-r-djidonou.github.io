@@ -1,5 +1,42 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35546-fromrss",
+    "titre": "Time Travel on Professional Profiles",
+    "url": "https://www.nber.org/papers/w35546#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-05",
+    "resume_fr": "En analysant les données de Revelio Labs de 2020 à 2026, l'étude révèle que 19,7 % des utilisateurs américains établis de LinkedIn modifient rétroactivement l'intitulé ou la description d'un emploi déjà quitté, un comportement fortement associé aux changements d'employeur. Ces modifications rétroactives montrent une nette augmentation des termes liés à l'intelligence artificielle après 2022, un recul des mentions du travail à distance ou de la diversité, ainsi qu'une hausse de la rédaction assistée par de grands modèles de langage après l'arrivée de ChatGPT, en particulier chez les actifs moins diplômés et les titulaires de MBA issus de programmes moins bien classés.",
+    "angle_eco": "La révision rétroactive des profils professionnels en ligne par les travailleurs introduit des biais dans la mesure historique des compétences tout en révélant la perception qu'ont les actifs des compétences recherchées sur le marché du travail.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 6,
+    "auteurs": "Nicholas Bloom, Gideon Moore, Lisa K. Simon, Caelan Wilkie-Rogers",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "aea-10-1257-jep-20261505",
+    "titre": "AI and Our Economic Future",
+    "url": "https://doi.org/10.1257/jep.20261505",
+    "source": "Journal of Economic Perspectives",
+    "type": "papier",
+    "date_publication": "2026-08-01",
+    "resume_fr": "Bien que l'automatisation de l'intelligence puisse accélérer la croissance économique au-delà du taux historique américain de 2 % par an, cette accélération risque d'être freinée par la présence de maillons faibles non automatisés. La nécessité d'automatiser la grande majorité de ces maillons faibles retarde les importants gains de productivité, tout en risquant d'accélérer la survenue de dommages majeurs si une intelligence artificielle puissante est détournée à des fins malveillantes.",
+    "angle_eco": "L'automatisation des tâches cognitives et physiques par l'intelligence artificielle pourrait accélérer la croissance économique, bien que la présence de maillons faibles non automatisés retarde la réalisation des gains de productivité tout en accélérant l'émergence de risques majeurs.",
+    "themes": [
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 3,
+    "auteurs": "Charles I. Jones",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
     "id": "arxiv-2607.27155v1",
     "titre": "OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding",
     "url": "https://arxiv.org/abs/2607.27155v1",

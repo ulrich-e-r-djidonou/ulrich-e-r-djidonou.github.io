@@ -1258,5 +1258,33 @@
   "voxeu-https-cepr-org-voxeu-columns-ai-premium": {
     "score": 3,
     "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35540-fromrss": {
+    "score": 0,
+    "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35545-fromrss": {
+    "score": 1,
+    "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35546-fromrss": {
+    "score": 6,
+    "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35559-fromrss": {
+    "score": 1,
+    "traite": true
+  },
+  "aea-10-1257-jep-20261506": {
+    "score": 2,
+    "traite": true
+  },
+  "aea-10-1257-jep-20261505": {
+    "score": 3,
+    "traite": true
+  },
+  "voxeu-epr-org-voxeu-columns-automation-does-not-lower-labour-share": {
+    "score": 2,
+    "traite": true
   }
 }

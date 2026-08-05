@@ -6,179 +6,193 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Time Travel on Professional Profiles</title>
+      <link>https://www.nber.org/papers/w35546#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35546-fromrss</guid>
+      <pubDate>2026-08-05</pubDate>
+      <description>En analysant les données de Revelio Labs de 2020 à 2026, l'étude révèle que 19,7 % des utilisateurs américains établis de LinkedIn modifient rétroactivement l'intitulé ou la description d'un emploi déjà quitté, un comportement fortement associé aux changements d'employeur. Ces modifications rétroactives montrent une nette augmentation des termes liés à l'intelligence artificielle après 2022, un recul des mentions du travail à distance ou de la diversité, ainsi qu'une hausse de la rédaction assistée par de grands modèles de langage après l'arrivée de ChatGPT, en particulier chez les actifs moins diplômés et les titulaires de MBA issus de programmes moins bien classés.</description>
+    </item>
+    <item>
+      <title>AI and Our Economic Future</title>
+      <link>https://doi.org/10.1257/jep.20261505</link>
+      <guid isPermaLink="false">aea-10-1257-jep-20261505</guid>
+      <pubDate>2026-08-01</pubDate>
+      <description>Bien que l'automatisation de l'intelligence puisse accélérer la croissance économique au-delà du taux historique américain de 2 % par an, cette accélération risque d'être freinée par la présence de maillons faibles non automatisés. La nécessité d'automatiser la grande majorité de ces maillons faibles retarde les importants gains de productivité, tout en risquant d'accélérer la survenue de dommages majeurs si une intelligence artificielle puissante est détournée à des fins malveillantes.</description>
+    </item>
+    <item>
       <title>OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding</title>
       <link>https://arxiv.org/abs/2607.27155v1</link>
       <guid isPermaLink="false">arxiv-2607.27155v1</guid>
       <pubDate>2026-07-29</pubDate>
-      <description>Le benchmark OmegaUse-OfficeVal évalue les agents de modèle de langue grand(e)s sur des tâches longue(s)-durée de l'environnement office-suite, avec une prise en compte économique des coûts humains. Sur la moyenne, ces tâches nécessitent environ 2,32 heures de travail humain pour être terminées.</description>
+      <description>Le benchmark open source OmegaUse-OfficeVal évalue les agents basés sur des grands modèles de langage à travers 100 tâches bureautiques nécessitant en moyenne 2,32 heures de travail humain, en intégrant des indicateurs économiques de temps et de coût. Bien que les modèles évalués soient nettement plus rapides et moins chers que les travailleurs humains, la qualité de leurs livrables n'atteint pas encore le niveau humain.</description>
     </item>
     <item>
       <title>The AI premium</title>
       <link>https://cepr.org/voxeu/columns/ai-premium</link>
       <guid isPermaLink="false">voxeu-https-cepr-org-voxeu-columns-ai-premium</guid>
       <pubDate>2026-07-28</pubDate>
-      <description>L'analyse démontre comment l'IA modifie les marchés boursiers et affecte la productivité des entreprises grâce à une quantité massive de données d'utilisation, révélant un avantage équilibré entre les marchés développés et les frontières. Les marchés boursiers perçoivent positivement le passage à l'IA pour les tâches impliquant implémentations, communication et coordination, en comparaison avec celles nécessitant une analyse ou des tâches scientifiques.</description>
+      <description>En s'appuyant sur la consommation réalisée de 380 mille milliards de tokens d'intelligence artificielle, l'étude démontre que les entreprises dont les actions sont les plus sensibles à la croissance de cet usage obtiennent des rendements ultérieurs plus élevés. Cette prime boursière est particulièrement élevée pour les marchés développés, les modèles de pointe et les tâches complexes, les marchés financiers associant plus positivement cette transition aux travaux de mise en œuvre, de communication et de coordination qu'aux activités analytiques ou scientifiques.</description>
     </item>
     <item>
       <title>Agentic AI Orchestration of Heterogeneous Economic Models for Rapid, Multi-scenario Analysis of Energy Crises</title>
       <link>https://arxiv.org/abs/2607.23313v1</link>
       <guid isPermaLink="false">arxiv-2607.23313v1</guid>
       <pubDate>2026-07-25</pubDate>
-      <description>Les modèles économiques existants sont souvent limités et dispersés, nécessitant des heures ou des jours pour intégrer plusieurs systèmes liés. Les langues de grande portée peuvent automatiser cette intégration, générant des scénarios cohérents tout en reproduisant tous les résultats d'un modèle sous-jacent.</description>
+      <description>Pour pallier la fragmentation des modèles économiques et répondre à l'urgence des crises énergétiques, les auteurs ont conçu une architecture fondée sur les grands modèles linguistiques capable d'automatiser leur orchestration. Ce cadre coordonne seize modèles sectoriels et macroéconomiques à travers cinq scénarios d'analyse, tout en garantissant que chaque donnée chiffrée provient exclusivement de l'exécution des modèles sous-jacents et non de l'intelligence artificielle.</description>
     </item>
     <item>
       <title>TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI</title>
       <link>https://arxiv.org/abs/2607.22465v1</link>
       <guid isPermaLink="false">arxiv-2607.22465v1</guid>
       <pubDate>2026-07-24</pubDate>
-      <description>TRACE-Router présente une approche de routage à la tâche qui corrige le décalage entre les décisions individuelles de routage et l'efficacité globale des applications agentic, en améliorant significativement la prise en compte de la précision et de la latence. Sur deux benchmarks agentic, TRACE-Router améliore la balance précision-latence par rapport aux méthodes d'interpolation existantes.</description>
+      <description>Pour pallier l'incapacité des routeurs par appel à traiter le retour d'information différé des flux de travail d'agents, le cadre TRACE-Router attribue chaque tâche à un modèle unique dès son admission via un bandit contextuel. Évaluée sur trois bancs d'essai, cette approche améliore le compromis entre précision et latence, surpassant le meilleur modèle unique sur Terminal-Bench de 7,1 points de précision tout en réduisant la latence de 36 %.</description>
     </item>
     <item>
       <title>DBA-Bench: A Production-Fidelity Benchmark for LLM-Based Database Operations Agents</title>
       <link>https://arxiv.org/abs/2607.22165v1</link>
       <guid isPermaLink="false">arxiv-2607.22165v1</guid>
       <pubDate>2026-07-24</pubDate>
-      <description>Les LLM basés sur les bases de données montrent une promesse, mais des lacunes dans l'évaluation et l'environnement de production rendent difficile leur comparaison. La banque de démonstration DBA-Bench vise à combler ces écarts en mettant l'accent sur la fiabilité opérationnelle, l'évaluation basée sur les résultats et la reproduction contrôlée des scénarios complexes.</description>
+      <description>Pour évaluer la capacité des agents d'intelligence artificielle à gérer des bases de données en conditions réelles, le benchmark DBA-Bench propose 106 scénarios complexes répartis sur sept domaines opérationnels au sein d'environnements PostgreSQL. L'évaluation de plusieurs systèmes sur 848 exécutions révèle un taux de réussite sécurisé moyen de seulement 12,4 %, le meilleur agent automatisé atteignant 17,9 % contre 93,4 % pour un administrateur humain.</description>
     </item>
     <item>
       <title>Are cryptocurrencies real financial bubbles? Evidence from quantitative analyses</title>
       <link>https://arxiv.org/abs/2607.21826v1</link>
       <guid isPermaLink="false">arxiv-2607.21826v1</guid>
       <pubDate>2026-07-23</pubDate>
-      <description>Dans cet essai, nous avons appliqué des modèles quantitatifs à Bitcoin et Ethereum, deux cryptomonnaies populaires. Notre méthode de détection des bulles combinait le modèle Power Law créé par Johansen, Ledoit et Sornette avec un modèle statistique développé par Phillips, Shi et Yu.</description>
+      <description>En combinant le modèle LPPL et les tests statistiques PSY sur la période du 1er décembre 2016 au 16 janvier 2018, cette étude évalue la présence de bulles financières dans les cours du Bitcoin et de l'Ether. Les résultats identifient des signaux caractéristiques de bulles ayant anticipé les krachs du Bitcoin à la mi-décembre 2017 et début janvier 2018, ainsi que ceux de l'Ether en juin 2017 et janvier 2018, confirmant le risque spéculatif élevé entretenu par le sentiment des investisseurs.</description>
     </item>
     <item>
       <title>The Evolution of Digital Search: From Blue Links to Delegated Decision-Making</title>
       <link>https://arxiv.org/abs/2607.21459v1</link>
       <guid isPermaLink="false">arxiv-2607.21459v1</guid>
       <pubDate>2026-07-23</pubDate>
-      <description>Digital search est passant d'un processus humain de découverte à un système agent-assisté de prise de décision. Ce changement transforme la nature du contrat entre les utilisateurs et l'interface de recherche, modifiant ainsi les principes du marché et des mécanismes économiques associés.</description>
+      <description>La recherche numérique évolue d'un modèle traditionnel centré sur les liens vers un système d'agents d'intelligence artificielle auxquels la prise de décision est déléguée, modifiant ainsi la transparence, la concurrence et la monétisation. La théorie économique et de premières preuves expérimentales indiquent que les choix d'architecture de ces systèmes d'agents ont un impact déterminant sur l'efficacité des marchés, la concurrence et le bien-être des consommateurs comme des entreprises.</description>
     </item>
     <item>
       <title>pAI-Econ-claude: A Gated Human-in-the-Loop Multi-Agent Architecture for AI-Assisted Economic Theory Development</title>
       <link>https://arxiv.org/abs/2607.21268v1</link>
       <guid isPermaLink="false">arxiv-2607.21268v1</guid>
       <pubDate>2026-07-23</pubDate>
-      <description>Dans plusieurs tâches de recherche en économie, les agents basés sur des LLM produisent des sorties sans signal de vérification machine-readable adéquat. Notre architecture pAI-Econ-claude gère cette incomplétude par un déploiement multi-agents contrôlé par l'humain, permettant une coordination efficace et une prise en compte de la jugation humaine dans les décisions critiques.</description>
+      <description>Afin de pallier le manque de vérification automatisée dans le développement de théories économiques par des agents autonomes, les chercheurs ont conçu pAI-Econ-claude, une architecture multi-agents associant des portes de contrôle spécialisées et une supervision humaine. Testée sur cinq tâches économiques face à un système sans filtrage, cette architecture a réduit la sévérité moyenne des défaillances de 1,58 à 1,16 tout en portant l'utilité globale de 2,60 à 3,10, obtenant la préférence des évaluateurs dans quatre cas sur cinq.</description>
     </item>
     <item>
       <title>Licensing and Innovation Regimes in Pharmaceutical R&amp;D</title>
       <link>https://arxiv.org/abs/2607.20365v1</link>
       <guid isPermaLink="false">arxiv-2607.20365v1</guid>
       <pubDate>2026-07-22</pubDate>
-      <description>Nous avons développé un modèle dans lequel les projets de recherche et développement pharmaceutique varient en qualité ainsi que par leur régime d'innovation, distinguant entre innovations incrémentales et nouvelles. Notre analyse suggère que la couverture contractuelle maintient une sélection positive et égalisation des rendements compétitifs pour les innovations incrémentales, tandis que les projets novateurs pourraient rencontrer des friction de marché plus prononcées.</description>
+      <description>Cette étude analyse l'impact de l'octroi de licences sur la recherche et développement pharmaceutique en distinguant les innovations incrémentales, caractérisées par une information plus précise, des innovations novatrices. À l'aide de méthodes d'apprentissage automatique double et de variables instrumentales, l'analyse montre que les licences augmentent la probabilité globale de succès, mais que l'égalisation concurrentielle des rendements ne s'observe que pour les innovations incrémentales et s'effondre pour les projets novateurs.</description>
     </item>
     <item>
       <title>PyroDash: Cost-Efficient Token-Level Small-Large Language Model Collaborative Inference</title>
       <link>https://arxiv.org/abs/2607.20327v1</link>
       <guid isPermaLink="false">arxiv-2607.20327v1</guid>
       <pubDate>2026-07-22</pubDate>
-      <description>PyroDash propose une méthode pour combiner modèles de langue grands et petits au niveau des tokens, offrant un rendement élevé tout en réduisant considérablement les coûts par rapport aux modèles de langue grands uniquement. Les résultats montrent que PyroDash peut atteindre des niveaux d'exactitude allant jusqu'à 64,04 % avec une réduction significative du coût, atteignant ainsi un équilibre entre performance et efficacité économique.</description>
+      <description>Les chercheurs proposent PyroDash, un cadre d'inférence collaborative dans lequel un petit modèle de langage apprend à déléguer la génération de texte à un grand modèle gelé via un jeton de contrôle afin de réduire les coûts d'utilisation. Évalué sur cinq benchmarks de raisonnement mathématique, PyroDash surpasse l'exactitude du grand modèle seul de 6,36 points de pourcentage tout en réduisant le coût de 20,4 %, ou réduit le coût total de 49,36 à 1,78 dollar US selon la configuration retenue.</description>
     </item>
     <item>
       <title>The Human-AI Substitution Principle: When will you be replaced by AI in your organization?</title>
       <link>https://arxiv.org/abs/2607.20781v1</link>
       <guid isPermaLink="false">arxiv-2607.20781v1</guid>
       <pubDate>2026-07-22</pubDate>
-      <description>La modélisation HAT nous permet d'analyser comment les coûts équilibrés et les compétences, ainsi que la profondeur organisationnelle, l'étendue de déploiement et l'adaptabilité stratégique influencent le processus de remplacement par l’IA. Elle souligne une principale conclusion : lorsque les coûts équivalents et les différences en efficacité entre humains et IA sont surpassés, l'IA peut remplacer la main-d'œuvre humaine.</description>
+      <description>Ce papier introduit un modèle analytique d'allocation des tâches entre l'humain et l'IA qui formalise l'asymétrie économique entre l'acquisition de compétences humaines et la montée en échelle de l'IA au sein d'organisations hiérarchiques. En établissant un principe de substitution précis, l'étude démontre que l'adoption de l'IA engendre des transitions d'effectifs brutales, des hiérarchies plus plates et une vulnérabilité accrue des cadres intermédiaires.</description>
     </item>
     <item>
       <title>Measuring AI innovation with trademark data</title>
       <link>https://arxiv.org/abs/2607.18795v1</link>
       <guid isPermaLink="false">arxiv-2607.18795v1</guid>
       <pubDate>2026-07-21</pubDate>
-      <description>Les chercheurs, les gestionnaires et les décideurs politiques explorent différentes approches et sources de données pour cartographier le développement et la diffusion des technologies d'intelligence artificielle. Nous montrons comment les marques déposés sur l'IA peuvent compléter les brevets d'IA pour recueillir divers aspects de l'innovation IA, révélant ainsi l'étendue et les façons dont les entreprises explorent les technologies d'intelligence artificielle.</description>
+      <description>Les données relatives aux marques déposées constituent une source d'information opportune et mondiale couvrant tous les secteurs économiques, permettant de compléter les brevets pour mesurer la façon dont les entreprises exploitent l'intelligence artificielle pour développer de nouveaux biens et services. Une exploration empirique d'entreprises italiennes montre comment ces données peuvent être utilisées à différents niveaux d'analyse pour étudier le développement et la diffusion de l'intelligence artificielle.</description>
     </item>
     <item>
       <title>Econometrics with Pre-Trained Embeddings for Unstructured Data</title>
       <link>https://arxiv.org/abs/2607.17378v1</link>
       <guid isPermaLink="false">arxiv-2607.17378v1</guid>
       <pubDate>2026-07-19</pubDate>
-      <description>Dans cet article, nous proposons des conditions suffisantes pour surmonter les deux principales difficultés liées à l'utilisation de modèles pré-entraînés dans l'analyse d'univers data non structurée. Nous déterminons également la vitesse de convergence des modèles de machine learning équipés de tels embeddings, illustrant nos résultats à travers des applications de double machine learning pour l'estimation de paramètres tels que les régressions partiellement linéaires avec des contrôles non structurés.</description>
+      <description>L'utilisation en économie de représentations vectorielles (*embeddings*) issues de modèles d'apprentissage profond pré-entraînés pose des défis théoriques majeurs dus aux différences de tâches d'entraînement et aux problèmes d'identification de la fonction de plongement. Cet article fournit des conditions suffisantes pour surmonter ces défis théoriques, dérive la vitesse de convergence des modèles d'apprentissage automatique intégrant des plongements pré-entraînés et illustre la théorie par des applications d'apprentissage automatique double.</description>
     </item>
     <item>
       <title>Algorithmic Intermediation and the International Transmission of U.S. Monetary Policy</title>
       <link>https://arxiv.org/abs/2607.15385v1</link>
       <guid isPermaLink="false">arxiv-2607.15385v1</guid>
       <pubDate>2026-07-16</pubDate>
-      <description>Ce travail étudie comment l'intermédiation et le management algorithmique affectent la transmission internationale de la politique monétaire américaine aux marchés émergents. Il souligne que les erreurs similaires des modèles utilisés par divers fonds, plutôt que l'intermédiation en soi, sont à l'origine principale du déséquilibre.</description>
+      <description>Ce papier montre que le mimétisme algorithmique amplifie les sorties de capitaux des marchés émergents après un choc de politique monétaire américaine uniquement en période de forte volatilité, en raison de la similitude des modèles d'investissement. À partir des flux de portefeuilles d'actions vers dix-neuf marchés émergents de 2000 à 2024, les résultats indiquent que les politiques publiques doivent préserver la diversité des modèles plutôt que de limiter la taille de l'intermédiation non bancaire.</description>
     </item>
     <item>
       <title>Higher utilisation explains the recent surge in productivity growth</title>
       <link>https://cepr.org/voxeu/columns/higher-utilisation-explains-recent-surge-productivity-growth</link>
       <guid isPermaLink="false">voxeu-higher-utilisation-explains-recent-surge-productivity-growth</guid>
       <pubDate>2026-07-15</pubDate>
-      <description>L'accélération de la productivité aux États-Unis depuis 2022 est principalement due à une utilisation accrue des ressources existantes, plutôt qu'à l'amélioration de l'efficacité. Quelque soit son rôle potentiel, l'intelligence artificielle semble avoir contribué à cette augmentation via la demande forte et les incertitudes accrues plutôt que par une amélioration de l'efficacité.</description>
+      <description>Aux États-Unis, la production par heure a augmenté d'environ 2,5 % par an entre la fin de 2022 et le début de 2026, dépassant de 1 point de pourcentage son rythme d'avant la pandémie. Cette accélération de la productivité s'explique principalement par une utilisation plus intensive du travail et du capital déjà en place, l'intelligence artificielle y ayant contribué par une forte demande et une incertitude accrue plutôt que par des gains d'efficacité.</description>
     </item>
     <item>
       <title>Adaptive Ad Load Design for Sponsored Search Markets: Evidence, Theory, and Deployment</title>
       <link>https://arxiv.org/abs/2607.14418v1</link>
       <guid isPermaLink="false">arxiv-2607.14418v1</guid>
       <pubDate>2026-07-15</pubDate>
-      <description>Dans un expérimentation à grande échelle sur l'application Android, Amazon a observé que la réduction du nombre de slots publicitaires pouvait augmenter significativement les revenus, tout en diminuant paradoxalement le taux d'engagement et de conversions. Les gains en revenus varient néanmoins selon la fréquence des requêtes ciblées, avec une réduction limitée ou négative pour les requêtes moins convertissantes.</description>
+      <description>Un essai randomisé à grande échelle sur un magasin d'applications Android montre que l'augmentation du nombre d'emplacements publicitaires accroît les revenus jusqu'à 43 %, mais réduit les conversions de recherche jusqu'à 5 % et l'engagement quotidien jusqu'à 2,2 %. Pour optimiser cet arbitrage fortement hétérogène selon les requêtes, un algorithme adaptatif nommé e-LAAL a été déployé auprès de 22,3 millions d'utilisateurs et sur 77,6 millions de recherches, améliorant le compromis entre revenus et conversions par rapport aux références statiques.</description>
     </item>
     <item>
       <title>Perturbed utility Markovian traffic equilibrium: theory and computation</title>
       <link>https://arxiv.org/abs/2607.09568v1</link>
       <guid isPermaLink="false">arxiv-2607.09568v1</guid>
       <pubDate>2026-07-10</pubDate>
-      <description>Ce papier développe une approche PUME pour les équilibres de circulation à grande échelle qui combine la scalabilité des modèles basés sur liens Markoviens avec leur capacité d'appliquer aux contextes comportant des probabilités de choix frontières, un chargement non-déduit et interactions liées aux liens généralisées. La formulation VI du PUME permet de gérer les structures de coûts non séparables et asymétriques, offrant ainsi une approche plus flexible que celle des modèles d'équilibre de circulation Markoviens traditionnels.</description>
+      <description>L'article développe un cadre d'équilibre marcovien à utilité perturbée pour l'affectation du trafic à grande échelle, capable d'attribuer des flux nuls aux tronçons peu attractifs sans imposer de restriction préalable sur l'ensemble des choix. Formulé sous la forme d'une inégalité variationnelle sur l'espace des coûts duaux, ce modèle garantit l'existence et l'unicité de l'équilibre pour des structures de coûts non séparables et asymétriques, tout en introduisant une méthode d'itération sur les politiques modifiée pour son calcul.</description>
     </item>
     <item>
       <title>Deep Learning for Dynamic Programming with Recursive Utility Using First-order Conditions</title>
       <link>https://arxiv.org/abs/2607.09461v1</link>
       <guid isPermaLink="false">arxiv-2607.09461v1</guid>
       <pubDate>2026-07-10</pubDate>
-      <description>Cette recherche propose un algorithme appelé CEFOL pour résoudre des problèmes de programmation dynamique discrète avec une utilité récursive grâce à l'apprentissage profond. L'algorithme exploite les conditions optimales spécifiques du modèle et la fonction de certitude équivalente séparément représentée par un réseau neuronal, ce qui permet d'atteindre des résultats précis dans plusieurs problèmes testés.</description>
+      <description>L'article présente l'algorithme CEFOL, une méthode d'apprentissage profond conçue pour la programmation dynamique en temps discret à utilité récursive qui utilise des réseaux de neurones pour représenter l'équivalent certain, la fonction de valeur, les règles de décision et les multiplicateurs de Lagrange. En s'appuyant sur les conditions d'optimalité du premier ordre et de Karush-Kuhn-Tucker, cet algorithme intègre directement les contraintes d'inégalité sans fonction de pénalité et affiche des résidus d'optimalité hors échantillon compris entre 1,0e-4 et 1,0e-3 sur des modèles d'épargne et des modèles DSGE.</description>
     </item>
     <item>
       <title>LLM for EDA in Front-End Design: Challenges and Opportunities</title>
       <link>https://arxiv.org/abs/2607.09616v1</link>
       <guid isPermaLink="false">arxiv-2607.09616v1</guid>
       <pubDate>2026-07-10</pubDate>
-      <description>Dans le domaine de la conception front-end des circuits électroniques, l'automatisation reste un défi critique face aux pressions du temps-to-market. Cependant, les Grandes Langues Linguistiques Modèles ont révélé une potentialité significative dans l'aide à la conception et peuvent servir d'interfaces intelligentes pour plusieurs tâches clés en front-end, comme le génération de spécifications HDL et la construction de bancs de tests.</description>
+      <description>Les modèles de langage de grande taille montrent un potentiel significatif en automatisation de la conception électronique, notamment pour la génération de langages de description matérielle, la construction de bancs d'essai et l'exploration de l'espace de conception, tandis que l'émergence d'une intelligence artificielle agentive ouvre une nouvelle voie pour l'évolution de l'automatisation de la conception électronique vers une exécution autonome. Cet article examine les avancées des modèles de langage dans la conception avant-projet en se concentrant sur la génération de circuits et de bancs d'essai à partir d'une spécification commune, ainsi que sur l'amélioration de la qualité de conception, tout en identifiant les défis clés et les opportunités futures pour intégrer ces modèles dans les outils d'automatisation de la conception électronique.</description>
     </item>
     <item>
       <title>DKCD: Domain Knowledge-Enhanced Causal Discovery from Unstructured Data</title>
       <link>https://arxiv.org/abs/2607.09348v1</link>
       <guid isPermaLink="false">arxiv-2607.09348v1</guid>
       <pubDate>2026-07-10</pubDate>
-      <description>DKCD, une nouvelle approche proposée pour la détection causale dans les données non structurées dans des domaines hautement spécialisés, met en évidence des facteurs causaux latents essentiels grâce à l'intégration de connaissances spécifiques au domaine. Elle améliore significativement le développement de graphes causaux en utilisant annotations précises et guidées par la raison causale.</description>
+      <description>Les auteurs proposent DKCD, un cadre de découverte causale à partir de données non structurées dans des domaines à haute expertise comme la santé et la finance, qui intègre des connaissances spécifiques au domaine pour identifier les facteurs latents implicites dans les données et améliorer l'annotation fiable des facteurs. Le framework combine trois composantes interconnectées : l'extraction de connaissances du domaine, le raisonnement causal guidé par ces connaissances pour découvrir les facteurs causaux latents, et la construction de graphes causaux basée sur un ensemble de facteurs plus complet et des annotations plus précises.</description>
     </item>
     <item>
       <title>Automatic Thematic Indexing of Large Literary Corpora: A Machine Learning Approach to Voltaire's Complete Works</title>
       <link>https://arxiv.org/abs/2607.09316v1</link>
       <guid isPermaLink="false">arxiv-2607.09316v1</guid>
       <pubDate>2026-07-10</pubDate>
-      <description>Les auteurs présentent une étude sur l'utilisation de méthodes de machine learning pour l'indexation thématique automatique dans deux sous-corpora importants du Complet des Œuvres de Voltaire, ce qui pourrait permettre d'automatiser un processus traditionnellement manuel et coûteux. Notre modèle le mieux performant atteint des scores F1 de 0,67, soulignant cependant la complexité de l'évaluation en raison du jugement subjectif des indexateurs professionnels.</description>
+      <description>Les auteurs appliquent l'apprentissage automatique à l'indexation thématique de deux sous-corpus importants des Œuvres complètes de Voltaire, en formulant la tâche comme un problème de classification multi-étiquettes où un modèle doit assigner les entrées d'index qu'un indexeur professionnel appliquerait à une page de texte donnée. Le meilleur modèle, issu de la famille Mistral en configuration quantifiée 4-bit, atteint des scores F1 jusqu'à 0,67, les auteurs arguant que ces résultats constituent des bornes inférieures compte tenu de la subjectivité inhérente à l'indexation professionnelle et de la fréquence à laquelle les prédictions du modèle s'avèrent sémantiquement valides malgré des divergences avec l'index imprimé.</description>
     </item>
     <item>
       <title>Resample or Reroute? Budget-Aware Test-Time Model Selection for Large Language Models</title>
       <link>https://arxiv.org/abs/2607.08665v1</link>
       <guid isPermaLink="false">arxiv-2607.08665v1</guid>
       <pubDate>2026-07-09</pubDate>
-      <description>Cette recherche propose une stratégie de sélection de modèle de grand langage à temps de test, optimisant le compromis entre qualité des réponses et coûts de service, en suggérant d'allouer chaque unité du budget entre la resampling du modèle engagé et le routage vers un autre modèle alternative. Les expériences montrent que cette approche RoR améliore notamment les performances parmi les pools de modèles les plus diversifiés.</description>
+      <description>Les auteurs formulent un problème de sélection de modèle au moment du test avec budget limité, où chaque unité de budget doit être allouée entre le rééchantillonnage du modèle engagé et le réacheminement vers un modèle alternatif afin de maximiser la justesse attendue. Une politique d'allocation en ligne basée sur la justesse marginale estimée par unité de coût est proposée et validée sur un ensemble de onze modèles en poids ouvert sur quatre benchmarks, montrant des gains particulièrement importants sur les ensembles les plus hétérogènes par rapport aux approches de base.</description>
     </item>
     <item>
       <title>AI Adoption in S&amp;P 500 Firms</title>
       <link>https://arxiv.org/abs/2607.08920v1</link>
       <guid isPermaLink="false">arxiv-2607.08920v1</guid>
       <pubDate>2026-07-09</pubDate>
-      <description>Dans les entreprises S&amp;P 500 étudiées entre 2016 et 2025, plus de la moitié ont intégré AI profondément dans leurs processus, avec une augmentation rapide au sein du secteur technologique qui absorbe à lui seul la moitié des adoptions profondes. Les profits des entreprises connaissent une courbe J lorsqu'il s'agit d'intégrer l'AI de manière profonde, sans cependant démontrer de différences significatives en termes de dépenses en capitales ou de productivité.</description>
+      <description>Les auteurs étudient l'adoption de l'intelligence artificielle par les entreprises du S&amp;P 500 entre 2016 et 2025 en développant une mesure fondée sur les dépôts réglementaires auprès de la SEC, et constatent qu'en 2025, 11% de ces entreprises avaient intégré profondément l'IA dans leurs processus métier tandis que 10% supplémentaires l'utilisaient dans la production et la livraison de services. L'adoption a plus que quadruplé depuis 5% en 2022, avec une accélération lente dans les secteurs non technologiques mais très agressive dans le secteur technologique qui représente les deux tiers de l'adoption profonde, tandis que la rentabilité des entreprises suit une courbe en J sans différences observées en matière de dépenses d'investissement ou de productivité.</description>
     </item>
     <item>
       <title>SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets</title>
       <link>https://arxiv.org/abs/2607.08681v1</link>
       <guid isPermaLink="false">arxiv-2607.08681v1</guid>
       <pubDate>2026-07-09</pubDate>
-      <description>Dans des marchés énergétiques décentralisés, SolarChain-Eval est une benchmark physique contrainte proposant de mesurer la fiabilité des agents économiques. L'étude révèle un compromis entre utilité et sécurité dans l'évaluation d'agents par RL, tandis que le système intégrant une planificateur-auditeur linguistique améliore considérablement l'auditabilité et réduit certains risques.</description>
+      <description>Les auteurs proposent SolarChain-Eval, un benchmark contraint par la physique pour évaluer des agents économiques fiables sur les marchés décentralisés d'énergie, en formulant la gouvernance de marché comme un processus de décision de Markov compatible avec Gymnasium et en évaluant les politiques selon plusieurs dimensions incluant l'utilité du marché, la sécurité physique, le glissement de prix, la fluidité des actions, l'équité spatiale et l'auditabilité. Les expériences montrent un compromis clair entre utilité et sécurité, les agents par apprentissage par renforcement améliorant l'utilité du marché mais pouvant produire des comportements non sûrs, tandis qu'une couche Planificateur/Auditeur basée sur un modèle de langage améliore l'auditabilité et atténue certains risques.</description>
     </item>
     <item>
       <title>AI, productivity, and work: Evidence from US firms</title>
       <link>https://cepr.org/voxeu/columns/ai-productivity-and-work-evidence-us-firms</link>
       <guid isPermaLink="false">voxeu-org-voxeu-columns-ai-productivity-and-work-evidence-us-firms</guid>
       <pubDate>2026-06-26</pubDate>
-      <description>Nous utilisons des données de sondage d'un groupe de plus de 750 dirigeants de sociétés pour étudier les effets de l'intelligence artificielle sur la productivité et le marché du travail. Les gains de productivité liés à l'IA sont positifs, mais varient selon les secteurs, avec des augmentations prédites en 2026, surtout dans les services et la finance de haute compétence.</description>
+      <description>Les auteurs analysent les effets de l'intelligence artificielle sur la productivité et l'emploi à partir d'une enquête auprès de près de 750 dirigeants d'entreprises américaines, révélant une adoption hétérogène de l'IA selon les secteurs et les tailles d'entreprises, avec des gains de productivité du travail positifs attendus en 2026 particulièrement dans les services à haut niveau de compétences et la finance. Ils documentent un paradoxe de productivité où les gains perçus dépassent les gains mesurés, et identifient peu de déclin d'emploi agrégé à court terme malgré une réallocation compositionnelle du travail marquée par le déclin des postes de secrétariat de routine et une demande accrue pour les rôles techniques qualifiés.</description>
     </item>
   </channel>
 </rss>
