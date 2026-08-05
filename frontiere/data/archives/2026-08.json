@@ -57,20 +57,5 @@
     "score": 2,
     "auteurs": "",
     "signal": false
-  },
-  {
-    "id": "aea-10-1257-jep-20261506",
-    "titre": "The Emerging Market for Intelligence: How Firms Buy and Sell AI",
-    "url": "https://doi.org/10.1257/jep.20261506",
-    "source": "Journal of Economic Perspectives",
-    "type": "papier",
-    "date_publication": "2026-08-01",
-    "themes": [
-      "llm",
-      "donnees"
-    ],
-    "score": 2,
-    "auteurs": "Mert Demirer, Andrey Fradkin, Nadav Tadelis",
-    "signal": false
   }
 ]

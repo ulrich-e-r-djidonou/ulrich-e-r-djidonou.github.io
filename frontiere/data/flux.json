@@ -37,6 +37,24 @@
     "llm": "gemini-3.6-flash"
   },
   {
+    "id": "aea-10-1257-jep-20261506",
+    "titre": "The Emerging Market for Intelligence: How Firms Buy and Sell AI",
+    "url": "https://doi.org/10.1257/jep.20261506",
+    "source": "Journal of Economic Perspectives",
+    "type": "papier",
+    "date_publication": "2026-08-01",
+    "resume_fr": "L'inférence de grands modèles de langage constitue désormais un marché de gros à part entière, où l'offre de modèles et de fournisseurs concurrents s'est multipliée rapidement grâce aux modèles ouverts. Le prix de cette intelligence a chuté d'environ mille fois, les modèles ouverts coûtant désormais près de 90% de moins que leurs équivalents propriétaires, dans un marché très dynamique où aucun acteur ne domine durablement.",
+    "angle_eco": "La chute des prix de l'inférence et la multiplication des fournisseurs concurrents dessinent un marché de l'intelligence artificielle proche des télécommunications ou de l'électricité à leurs débuts, où aucun fournisseur ne conserve longtemps son avantage.",
+    "themes": [
+      "llm",
+      "donnees"
+    ],
+    "score": 3,
+    "auteurs": "Mert Demirer, Andrey Fradkin, Nadav Tadelis",
+    "signal": false,
+    "llm": "claude (ajout manuel demande par Ulrich, score heuristique reel 2, sous le seuil de 3)"
+  },
+  {
     "id": "arxiv-2607.27155v1",
     "titre": "OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding",
     "url": "https://arxiv.org/abs/2607.27155v1",

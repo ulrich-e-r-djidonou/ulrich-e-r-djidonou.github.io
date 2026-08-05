@@ -20,6 +20,13 @@
       <description>Bien que l'automatisation de l'intelligence puisse accélérer la croissance économique au-delà du taux historique américain de 2 % par an, cette accélération risque d'être freinée par la présence de maillons faibles non automatisés. La nécessité d'automatiser la grande majorité de ces maillons faibles retarde les importants gains de productivité, tout en risquant d'accélérer la survenue de dommages majeurs si une intelligence artificielle puissante est détournée à des fins malveillantes.</description>
     </item>
     <item>
+      <title>The Emerging Market for Intelligence: How Firms Buy and Sell AI</title>
+      <link>https://doi.org/10.1257/jep.20261506</link>
+      <guid isPermaLink="false">aea-10-1257-jep-20261506</guid>
+      <pubDate>2026-08-01</pubDate>
+      <description>L'inférence de grands modèles de langage constitue désormais un marché de gros à part entière, où l'offre de modèles et de fournisseurs concurrents s'est multipliée rapidement grâce aux modèles ouverts. Le prix de cette intelligence a chuté d'environ mille fois, les modèles ouverts coûtant désormais près de 90% de moins que leurs équivalents propriétaires, dans un marché très dynamique où aucun acteur ne domine durablement.</description>
+    </item>
+    <item>
       <title>OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding</title>
       <link>https://arxiv.org/abs/2607.27155v1</link>
       <guid isPermaLink="false">arxiv-2607.27155v1</guid>
