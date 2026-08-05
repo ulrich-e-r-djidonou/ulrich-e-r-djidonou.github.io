@@ -19,6 +19,77 @@
     "llm": "gemini-3.6-flash"
   },
   {
+    "id": "nber-https-www-nber-org-papers-w35540-fromrss",
+    "titre": "Predictive Risk Scores in the Public Sector: Experimental Evidence from Child-Protection Investigations",
+    "url": "https://www.nber.org/papers/w35540#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-05",
+    "resume_fr": "Une évaluation aléatoire portant sur 4 752 signalements d'enfants dans le comté de Northampton montre que l'accès des superviseurs de la protection de l'enfance à un score algorithmique de risque a augmenté les placements en famille d'accueil et les services destinés aux enfants au risque prédit le plus élevé. Cette intervention a réduit les signalements ultérieurs pour maltraitance sans accentuer les disparités raciales dans les décisions ou les résultats, ce qui montre que les algorithmes peuvent améliorer le ciblage tout en préservant le pouvoir d'appréciation humain.",
+    "angle_eco": "L'intégration d'évaluations algorithmiques du risque dans l'allocation d'une attention publique limitée sous incertitude permet d'orienter efficacement les interventions de protection vers les enfants les plus exposés et de réduire les signalements ultérieurs de maltraitance, tout en préservant le pouvoir d'appréciation humain sans accentuer les disparités raciales.",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 3,
+    "auteurs": "E. Jason Baron, Arkadev Ghosh, Richard Lombardo",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35545-fromrss",
+    "titre": "Detecting Critical Junctures as They Unfold: Foundations, Measurement, and Applications from 120 Years of Reporting",
+    "url": "https://www.nber.org/papers/w35545#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-05",
+    "resume_fr": "Pour éviter d'étudier les jonctions critiques uniquement de manière rétrospective, cette recherche développe une approche fondée sur un grand modèle de langage afin d'identifier l'incertitude institutionnelle directement dans le discours contemporain. Appliquée à l'archive du Times de Londres contenant 11,95 millions d'articles publiés entre 1800 et 2019, cette méthode permet de construire la première mesure textuelle à long terme de l'incertitude institutionnelle, ancrée dans l'analyse de 120 ans de reportages allant de 1900 à 2019.",
+    "angle_eco": "L'analyse automatisée de la presse historique permet de mesurer l'incertitude institutionnelle pour détecter les conjonctures critiques au moment où elles se produisent, évitant ainsi le biais rétrospectif dans la compréhension des trajectoires de développement économique.",
+    "themes": [
+      "llm"
+    ],
+    "score": 3,
+    "auteurs": "Michael Callen, Gregory Levy, Saipremnath Muthukumaran, Jonathan L. Weigel, Noam Yuchtman",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35559-fromrss",
+    "titre": "Replaceable but Employed: Automation and the Meaning of Work",
+    "url": "https://www.nber.org/papers/w35559#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-05",
+    "resume_fr": "Une alternative automatisée crédible peut réduire le sens que les travailleurs attribuent à leur contribution, ce qui augmente la compensation salariale exigée ou leur impose une perte de bien-être lorsqu'ils conservent leur emploi. La démonstration publique d'une telle technologie permet aux développeurs de stimuler la demande en dépréciant le travail humain, réduisant ainsi la valeur de l'emploi avant même sa suppression.",
+    "angle_eco": "La simple présence d'une alternative automatisée crédible détériore le sens du travail en affaiblissant le sentiment de contribution individuelle du salarié, ce qui altère la rémunération et peut rendre l'automatisation socialement préjudiciable avant même la suppression effective des emplois.",
+    "themes": [
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 3,
+    "auteurs": "Joshua S. Gans",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "voxeu-epr-org-voxeu-columns-automation-does-not-lower-labour-share",
+    "titre": "Automation does not lower the labour share",
+    "url": "https://cepr.org/voxeu/columns/automation-does-not-lower-labour-share",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-08-04",
+    "resume_fr": "À partir de données couvrant la quasi-totalité des entreprises françaises entre 1994 et 2019, cette étude examine la relation entre l'automatisation et la part du revenu revenant au travail au niveau de l'entreprise. Les résultats montrent que bien que l'automatisation ait profondément transformé les emplois et la production, elle n'a pas nécessairement déplacé les revenus du travail vers le capital.",
+    "angle_eco": "L'automatisation à l'échelle des entreprises peut restructurer profondément les emplois et la production sans pour autant déplacer nécessairement les revenus du travail vers le capital.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 6,
+    "auteurs": "",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
     "id": "aea-10-1257-jep-20261505",
     "titre": "AI and Our Economic Future",
     "url": "https://doi.org/10.1257/jep.20261505",
@@ -491,6 +562,23 @@
     "auteurs": "Shilin Ou, Yifan Xu, Luyao Zhang",
     "signal": false,
     "llm": "claude-haiku-4-5"
+  },
+  {
+    "id": "voxeu-lumns-chatgpts-financial-advice-supply-demand-and-life-cycle",
+    "titre": "ChatGPT's financial advice: Supply, demand, and the life cycle",
+    "url": "https://cepr.org/voxeu/columns/chatgpts-financial-advice-supply-demand-and-life-cycle",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-06-29",
+    "resume_fr": "Suivre les conseils financiers générés par de grands modèles de langage rapprocherait les ménages des prescriptions de la théorie du cycle de vie, avec une participation accrue aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus importantes. Les recommandations varient selon le genre, les deux tiers de cet écart provenant de la façon dont hommes et femmes formulent leurs requêtes, l'autre tiers provenant de l'étiquette de genre associée à des requêtes par ailleurs identiques.",
+    "angle_eco": "La part de l'écart de recommandation attribuable à la manière dont hommes et femmes formulent leurs demandes, plutôt qu'à l'étiquette de genre associée à une requête identique, éclaire une source additionnelle de biais dans les conseils financiers générés par l'intelligence artificielle.",
+    "themes": [
+      "llm"
+    ],
+    "score": 6,
+    "auteurs": "",
+    "signal": false,
+    "llm": "claude (repassage manuel du 5 aout, colonne hors fenetre de collecte et cepr.org bloquant l'acces automatise ; source : extrait original archive + resume du papier sous-jacent via arxiv.org/abs/2608.01607, Choukhmane/de Silva/Lin/Akuzawa)"
   },
   {
     "id": "voxeu-org-voxeu-columns-ai-productivity-and-work-evidence-us-firms",

@@ -13,6 +13,34 @@
       <description>En analysant les données de Revelio Labs de 2020 à 2026, l'étude révèle que 19,7 % des utilisateurs américains établis de LinkedIn modifient rétroactivement l'intitulé ou la description d'un emploi déjà quitté, un comportement fortement associé aux changements d'employeur. Ces modifications rétroactives montrent une nette augmentation des termes liés à l'intelligence artificielle après 2022, un recul des mentions du travail à distance ou de la diversité, ainsi qu'une hausse de la rédaction assistée par de grands modèles de langage après l'arrivée de ChatGPT, en particulier chez les actifs moins diplômés et les titulaires de MBA issus de programmes moins bien classés.</description>
     </item>
     <item>
+      <title>Predictive Risk Scores in the Public Sector: Experimental Evidence from Child-Protection Investigations</title>
+      <link>https://www.nber.org/papers/w35540#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35540-fromrss</guid>
+      <pubDate>2026-08-05</pubDate>
+      <description>Une évaluation aléatoire portant sur 4 752 signalements d'enfants dans le comté de Northampton montre que l'accès des superviseurs de la protection de l'enfance à un score algorithmique de risque a augmenté les placements en famille d'accueil et les services destinés aux enfants au risque prédit le plus élevé. Cette intervention a réduit les signalements ultérieurs pour maltraitance sans accentuer les disparités raciales dans les décisions ou les résultats, ce qui montre que les algorithmes peuvent améliorer le ciblage tout en préservant le pouvoir d'appréciation humain.</description>
+    </item>
+    <item>
+      <title>Detecting Critical Junctures as They Unfold: Foundations, Measurement, and Applications from 120 Years of Reporting</title>
+      <link>https://www.nber.org/papers/w35545#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35545-fromrss</guid>
+      <pubDate>2026-08-05</pubDate>
+      <description>Pour éviter d'étudier les jonctions critiques uniquement de manière rétrospective, cette recherche développe une approche fondée sur un grand modèle de langage afin d'identifier l'incertitude institutionnelle directement dans le discours contemporain. Appliquée à l'archive du Times de Londres contenant 11,95 millions d'articles publiés entre 1800 et 2019, cette méthode permet de construire la première mesure textuelle à long terme de l'incertitude institutionnelle, ancrée dans l'analyse de 120 ans de reportages allant de 1900 à 2019.</description>
+    </item>
+    <item>
+      <title>Replaceable but Employed: Automation and the Meaning of Work</title>
+      <link>https://www.nber.org/papers/w35559#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35559-fromrss</guid>
+      <pubDate>2026-08-05</pubDate>
+      <description>Une alternative automatisée crédible peut réduire le sens que les travailleurs attribuent à leur contribution, ce qui augmente la compensation salariale exigée ou leur impose une perte de bien-être lorsqu'ils conservent leur emploi. La démonstration publique d'une telle technologie permet aux développeurs de stimuler la demande en dépréciant le travail humain, réduisant ainsi la valeur de l'emploi avant même sa suppression.</description>
+    </item>
+    <item>
+      <title>Automation does not lower the labour share</title>
+      <link>https://cepr.org/voxeu/columns/automation-does-not-lower-labour-share</link>
+      <guid isPermaLink="false">voxeu-epr-org-voxeu-columns-automation-does-not-lower-labour-share</guid>
+      <pubDate>2026-08-04</pubDate>
+      <description>À partir de données couvrant la quasi-totalité des entreprises françaises entre 1994 et 2019, cette étude examine la relation entre l'automatisation et la part du revenu revenant au travail au niveau de l'entreprise. Les résultats montrent que bien que l'automatisation ait profondément transformé les emplois et la production, elle n'a pas nécessairement déplacé les revenus du travail vers le capital.</description>
+    </item>
+    <item>
       <title>AI and Our Economic Future</title>
       <link>https://doi.org/10.1257/jep.20261505</link>
       <guid isPermaLink="false">aea-10-1257-jep-20261505</guid>
@@ -186,20 +214,6 @@
       <guid isPermaLink="false">arxiv-2607.08920v1</guid>
       <pubDate>2026-07-09</pubDate>
       <description>Les auteurs étudient l'adoption de l'intelligence artificielle par les entreprises du S&amp;P 500 entre 2016 et 2025 en développant une mesure fondée sur les dépôts réglementaires auprès de la SEC, et constatent qu'en 2025, 11% de ces entreprises avaient intégré profondément l'IA dans leurs processus métier tandis que 10% supplémentaires l'utilisaient dans la production et la livraison de services. L'adoption a plus que quadruplé depuis 5% en 2022, avec une accélération lente dans les secteurs non technologiques mais très agressive dans le secteur technologique qui représente les deux tiers de l'adoption profonde, tandis que la rentabilité des entreprises suit une courbe en J sans différences observées en matière de dépenses d'investissement ou de productivité.</description>
-    </item>
-    <item>
-      <title>SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets</title>
-      <link>https://arxiv.org/abs/2607.08681v1</link>
-      <guid isPermaLink="false">arxiv-2607.08681v1</guid>
-      <pubDate>2026-07-09</pubDate>
-      <description>Les auteurs proposent SolarChain-Eval, un benchmark contraint par la physique pour évaluer des agents économiques fiables sur les marchés décentralisés d'énergie, en formulant la gouvernance de marché comme un processus de décision de Markov compatible avec Gymnasium et en évaluant les politiques selon plusieurs dimensions incluant l'utilité du marché, la sécurité physique, le glissement de prix, la fluidité des actions, l'équité spatiale et l'auditabilité. Les expériences montrent un compromis clair entre utilité et sécurité, les agents par apprentissage par renforcement améliorant l'utilité du marché mais pouvant produire des comportements non sûrs, tandis qu'une couche Planificateur/Auditeur basée sur un modèle de langage améliore l'auditabilité et atténue certains risques.</description>
-    </item>
-    <item>
-      <title>AI, productivity, and work: Evidence from US firms</title>
-      <link>https://cepr.org/voxeu/columns/ai-productivity-and-work-evidence-us-firms</link>
-      <guid isPermaLink="false">voxeu-org-voxeu-columns-ai-productivity-and-work-evidence-us-firms</guid>
-      <pubDate>2026-06-26</pubDate>
-      <description>Les auteurs analysent les effets de l'intelligence artificielle sur la productivité et l'emploi à partir d'une enquête auprès de près de 750 dirigeants d'entreprises américaines, révélant une adoption hétérogène de l'IA selon les secteurs et les tailles d'entreprises, avec des gains de productivité du travail positifs attendus en 2026 particulièrement dans les services à haut niveau de compétences et la finance. Ils documentent un paradoxe de productivité où les gains perçus dépassent les gains mesurés, et identifient peu de déclin d'emploi agrégé à court terme malgré une réallocation compositionnelle du travail marquée par le déclin des postes de secrétariat de routine et une demande accrue pour les rôles techniques qualifiés.</description>
     </item>
   </channel>
 </rss>

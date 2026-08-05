@@ -236,7 +236,7 @@
     "traite": true
   },
   "voxeu-lumns-chatgpts-financial-advice-supply-demand-and-life-cycle": {
-    "score": 2,
+    "score": 6,
     "traite": true
   },
   "voxeu-org-voxeu-columns-ai-productivity-and-work-evidence-us-firms": {
@@ -1259,20 +1259,8 @@
     "score": 3,
     "traite": true
   },
-  "nber-https-www-nber-org-papers-w35540-fromrss": {
-    "score": 0,
-    "traite": true
-  },
-  "nber-https-www-nber-org-papers-w35545-fromrss": {
-    "score": 1,
-    "traite": true
-  },
   "nber-https-www-nber-org-papers-w35546-fromrss": {
     "score": 6,
-    "traite": true
-  },
-  "nber-https-www-nber-org-papers-w35559-fromrss": {
-    "score": 1,
     "traite": true
   },
   "aea-10-1257-jep-20261506": {
@@ -1283,8 +1271,20 @@
     "score": 3,
     "traite": true
   },
+  "nber-https-www-nber-org-papers-w35540-fromrss": {
+    "score": 3,
+    "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35545-fromrss": {
+    "score": 3,
+    "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35559-fromrss": {
+    "score": 3,
+    "traite": true
+  },
   "voxeu-epr-org-voxeu-columns-automation-does-not-lower-labour-share": {
-    "score": 2,
+    "score": 6,
     "traite": true
   }
 }
