@@ -54,6 +54,12 @@ jobs:
           # mur. Un quota atteint se paie deux fois, en requetes refusees puis
           # en tentatives de reprise qui consomment le quota du lendemain.
           LLM_BUDGET_APPELS: "16"
+          # Meme repli que la veille : regenerer_flux.py passe par
+          # curate._appel_ollama, donc la bascule vers Claude en cas de panne
+          # ou de quota Gemini epuise s'applique ici sans code supplementaire.
+          LLM_API_URL_REPLI: https://api.anthropic.com/v1/chat/completions
+          LLM_API_MODELE_REPLI: claude-haiku-4-5
+          LLM_API_CLE_REPLI: ${{ secrets.LLM_API_CLE_REPLI }}
         run: python -m pipeline.regenerer_flux --reprendre
 
       - name: Publier la relecture dans le resume de l'execution

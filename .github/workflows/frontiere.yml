@@ -28,10 +28,16 @@ jobs:
           LLM_API_MODELE: gemini-3.6-flash
           LLM_API_CLE: ${{ secrets.LLM_API_CLE }}
           # Le palier gratuit accorde 20 requetes par jour et par modele. Le
-          # budget s'arrete a 16 pour garder de la marge : les items non
-          # rediges ne sont pas marques vus et reviennent a l'execution
+          # budget etait a 16 (4 articles garantis) pour garder de la marge
+          # avant le mur ; porte a 20 le 5 aout 2026 pour garantir 5 articles
+          # par execution, ce que le repli ci-dessous rend sans risque : la
+          # marge n'est plus dans le budget, elle est dans le second
+          # fournisseur. Un article coute 2 appels quand ses deux champs sont
+          # valides du premier coup, 4 au pire (2 champs x 2 essais), donc ce
+          # budget rend 5 articles au pire et jusqu'a 9 au mieux. Les items
+          # non rediges ne sont pas marques vus et reviennent a l'execution
           # suivante, le jeudi ou le lundi.
-          LLM_BUDGET_APPELS: "16"
+          LLM_BUDGET_APPELS: "20"
           # Repli si Gemini est en panne ou si son quota gratuit est epuise
           # (429, cas du 3 aout 2026) : curate.py bascule alors sur Claude
           # pour le reste de l'execution plutot que de faire echouer le job.
