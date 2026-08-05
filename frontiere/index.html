@@ -904,24 +904,37 @@
         <details class="frontiere-methode">
           <summary>Comment cette veille est produite</summary>
           <p>
-            Un pipeline Python collecte deux fois par semaine (lundi et jeudi)
-            les nouvelles parutions d'arXiv (econ.EM, econ.GN, cs.LG, cs.CL,
-            stat.ML filtrées économie), du NBER, des revues de l'American
-            Economic Association (AER, JEP, JEL, AEJ), du FMI, de VoxEU/CEPR,
-            de la Banque du Canada, de la Réserve fédérale américaine et de la
-            Banque centrale européenne, puis attribue à chaque entrée un score
-            thématique : la sélection principale retient celles qui atteignent
-            au moins 3. Pour les revues et institutions économiques reconnues
-            (AER, JEP, JEL, AEJ, NBER, FMI, VoxEU/CEPR, Banque du Canada,
-            Réserve fédérale américaine, Banque centrale européenne), la
-            nature économique du texte est considérée acquise : seul le lien avec
-            l'intelligence artificielle reste à évaluer, pour ne pas écarter
-            un article faute de vocabulaire économique standard dans son
-            résumé. Les résumés en français sont générés par
-            un modèle de langue (Gemini, avec Claude en complément), puis
-            contrôlés par des validateurs automatiques : tout chiffre absent du
-            titre ou du résumé source entraîne le rejet du texte. La
-            bibliothèque, elle, est choisie à la main.
+            D'abord, un pipeline Python collecte deux fois par semaine (lundi
+            et jeudi) les nouvelles parutions d'arXiv (econ.EM, econ.GN,
+            cs.LG, cs.CL, stat.ML filtrées économie), du NBER, des revues de
+            l'American Economic Association (AER, JEP, JEL, AEJ), de
+            VoxEU/CEPR, de la Banque du Canada, de la Réserve fédérale
+            américaine, de la Banque centrale européenne et du Fonds
+            monétaire international, puis attribue à chaque entrée un score
+            thématique : la sélection principale retient celles qui
+            atteignent au moins 3.
+          </p>
+          <p>
+            Ensuite, pour les revues et institutions économiques reconnues
+            (AER, JEP, JEL, AEJ, NBER, VoxEU/CEPR, Banque du Canada, Réserve
+            fédérale américaine, Banque centrale européenne, Fonds monétaire
+            international), la nature économique du texte est considérée
+            acquise : seul le lien avec l'intelligence artificielle reste à
+            évaluer, pour ne pas écarter un article faute de vocabulaire
+            économique standard dans son résumé.
+          </p>
+          <p>
+            Enfin, les résumés en français sont générés par un modèle de
+            langue (Gemini, avec Claude en complément), puis contrôlés par
+            des validateurs automatiques : tout chiffre absent du titre ou du
+            résumé source entraîne le rejet du texte. La bibliothèque, elle,
+            est choisie à la main.
+          </p>
+          <p>
+            Par ailleurs, je vérifie ce que produit le pipeline dans la
+            mesure du possible. Si vous relevez un oubli ou une piste
+            d'amélioration, <a href="/contact.html">écrivez-moi</a> : votre
+            retour est bienvenu.
           </p>
         </details>
       </section>
