@@ -98,6 +98,14 @@
   color: var(--soft-heading);
 }
 
+.frontiere-signal-legende {
+  margin: 0.5rem 0 0;
+  color: var(--soft-heading);
+  opacity: 0.75;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: var(--fs-xs);
+}
+
 .frontiere-stats {
   margin: 0 4rem 2rem;
 }
