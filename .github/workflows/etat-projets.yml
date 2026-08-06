@@ -48,4 +48,9 @@ jobs:
           git config user.email "actions@github.com"
           git add data/projets.json projets.html
           git diff --cached --quiet || git commit -m "projets: etiquettes de fraicheur au $(date -u +%F)"
+          # Le pipeline de veille commit sur la meme branche. Les deux crons
+          # sont espaces d'une heure, mais une execution longue ou relancee a
+          # la main les ferait se croiser, et le push echouerait sur une
+          # branche qui a avance entre-temps.
+          git pull --rebase --quiet
           git push
