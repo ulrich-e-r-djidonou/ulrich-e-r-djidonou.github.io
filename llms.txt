@@ -46,8 +46,8 @@ chaque entrée.
   économique au Canada.
 - [Geoecon Pulse](https://djidonou.com/projets.html) : tableau de bord de
   risque géoéconomique.
-- [Scopus Treatment](https://djidonou.com/projets.html) : traitement et
-  synthèse de corpus bibliographiques.
+- [La Frontière](https://djidonou.com/frontiere/) : veille automatisée sur
+  l'intersection IA, économie et machine learning.
 - Liste complète et à jour sur la page [Projets](https://djidonou.com/projets.html).
 
 ## Contact et identité
