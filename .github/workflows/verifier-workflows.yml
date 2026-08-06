@@ -1,0 +1,38 @@
+name: verifier-workflows
+
+# Une automatisation en panne ne se plaint pas : GitHub envoie un courriel
+# par execution ratee, qui se noie dans les autres. Trois projets ont ainsi
+# passe des mois a ne plus se mettre a jour. Ce controle hebdomadaire fait
+# echouer le run des qu'une automatisation planifiee est cassee, desactivee
+# ou muette : une seule notification, sur un depot qu'on regarde.
+
+on:
+  schedule:
+    - cron: "0 12 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - "pipeline/verifier_workflows.py"
+      - ".github/workflows/verifier-workflows.yml"
+  workflow_dispatch: {}
+
+jobs:
+  workflows:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dependances
+        run: pip install requests
+
+      - name: Verifier la sante des automatisations
+        # Le jeton du run suffit : le controle ne lit que des donnees
+        # publiques. Couvrir les depots prives demanderait un jeton personnel
+        # stocke en secret, que ce controle evite volontairement.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m pipeline.verifier_workflows
