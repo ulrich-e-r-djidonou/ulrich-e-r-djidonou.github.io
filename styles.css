@@ -553,10 +553,16 @@ h1 {
   color: var(--soft-muted);
 }
 
-/* Etat du projet : distingue les projets vivants, qui annoncent une cadence
-   de mise a jour, des analyses terminees, qui annoncent la periode couverte.
-   Sans ce reperage, un lecteur applique par defaut l'exigence de fraicheur
-   aux deux, et juge perimee une etude qui ne l'est pas. */
+/* Etat du projet : le point vert distingue les projets encore alimentes des
+   analyses terminees, qui annoncent la periode couverte. Sans ce reperage,
+   un lecteur applique par defaut l'exigence de fraicheur aux deux, et juge
+   perimee une etude qui ne l'est pas.
+
+   Les projets vivants annoncaient une cadence (« deux fois par mois »), ce
+   qui decrit une intention : une automatisation en panne laisse la promesse
+   intacte. Ils portent maintenant la date reelle de leur derniere donnee,
+   relue par pipeline/etat_projets.py. Le point vert dit que le projet est
+   alimente, le texte dit jusqu'ou. */
 .project-etat {
   margin: 0.9rem 0 0;
   font-family: "Trebuchet MS", Verdana, sans-serif;

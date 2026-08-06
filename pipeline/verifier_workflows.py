@@ -55,7 +55,6 @@ SILENCE_MAX_JOURS = 50
 # echecs relevent des mises a jour de dependances, pas de l'automatisation
 # d'un projet.
 WORKFLOWS_IGNORES = (
-    "pages build and deployment",
     "dependency graph",
     "dependabot updates",
     # Ce controle lui-meme : il echoue exactement quand il trouve quelque
@@ -63,6 +62,36 @@ WORKFLOWS_IGNORES = (
     # ajouterait une ligne de bruit a chaque rapport non vide.
     "verifier-workflows",
 )
+
+# Le deploiement Pages ne se declenche jamais par cron : son evenement est
+# `dynamic`, produit par un push ou par l'API. Le filtrer sur `schedule`,
+# comme le reste, revenait a ne jamais le regarder. Il a ainsi echoue le
+# 6 aout 2026 sans que rien ne le dise, alors qu'un deploiement rate laisse
+# le site servir la version precedente : la panne est invisible cote
+# visiteur, et c'est exactement ce que ce controle doit rattraper.
+#
+# Deux orthographes : l'API nomme le workflow `pages-build-deployment`,
+# tandis que chaque execution s'intitule « pages build and deployment ».
+# L'ancienne liste des ignores ne portait que la seconde, donc elle ne
+# correspondait a rien ; le workflow n'etait pas ignore, il etait
+# simplement invisible faute d'execution planifiee. Retenir les deux evite
+# de refaire l'erreur si GitHub change celle qu'il expose.
+NOMS_PAGES = frozenset({"pages-build-deployment", "pages build and deployment"})
+
+
+def est_workflow_pages(titre):
+    return titre.strip().lower() in NOMS_PAGES
+
+
+def evenement_surveille(titre):
+    """Evenement dont la derniere execution fait foi pour ce workflow.
+
+    Pour tout le reste, seules les executions planifiees comptent : un
+    lancement manuel rate est deja sous les yeux de celui qui l'a lance, et
+    un essai manuel ancien masquerait l'etat reel du cron. Pages n'a pas de
+    cron du tout, donc son dernier deploiement fait foi quel qu'il soit.
+    """
+    return None if est_workflow_pages(titre) else "schedule"
 
 
 def jeton_personnel():
@@ -179,29 +208,28 @@ def examiner_depot(depot, rang_prive=1):
         return problemes
 
     for workflow in workflows:
-        titre = workflow.get("name", "")
-        if titre.lower() in WORKFLOWS_IGNORES:
+        titre_reel = workflow.get("name", "")
+        if titre_reel.lower() in WORKFLOWS_IGNORES:
             continue
+        est_pages = est_workflow_pages(titre_reel)
         # Le nom d'un workflow decrit ce qu'il fait, donc ce que fait le
         # projet : le masquer avec celui du depot, sinon le masquage ne
-        # protege rien.
-        if prive_masque:
-            titre = "automatisation"
+        # protege rien. Pages garde son nom : il est identique partout et
+        # ne revele rien du projet.
+        titre = titre_reel if est_pages or not prive_masque else "automatisation"
 
         etat = workflow.get("state", "")
         if etat.startswith("disabled"):
             problemes.append((nom, titre, f"workflow desactive ({etat})"))
             continue
 
-        # Seules les executions planifiees comptent. Un lancement manuel
-        # rate est deja sous les yeux de celui qui l'a lance ; c'est
-        # l'automatisation qui tourne sans temoin, donc elle seule a besoin
-        # d'etre surveillee. Filtrer sur l'evenement evite aussi qu'un essai
-        # manuel ancien masque l'etat reel du cron.
+        evenement = evenement_surveille(titre_reel)
+        parametres = {"per_page": 1}
+        if evenement:
+            parametres["event"] = evenement
         executions = api(
             f"/repos/{chemin}/actions/workflows/{workflow['id']}/runs",
-            per_page=1,
-            event="schedule",
+            **parametres,
         ).get("workflow_runs", [])
 
         if not executions:
@@ -214,9 +242,19 @@ def examiner_depot(depot, rang_prive=1):
             # repare resterait signale jusqu'a sa prochaine echeance, parfois
             # un mois plus tard, et le rapport perdrait sa credibilite.
             if not reparee_depuis(chemin, workflow["id"], derniere.get("created_at")):
-                problemes.append(
-                    (nom, titre, "derniere execution planifiee en echec")
+                motif = (
+                    "dernier deploiement en echec, le site sert la version "
+                    "precedente"
+                    if est_pages
+                    else "derniere execution planifiee en echec"
                 )
+                problemes.append((nom, titre, motif))
+            continue
+
+        if est_pages:
+            # Pas de controle de silence sur Pages : un depot sans commit
+            # depuis des mois n'a aucun deploiement a montrer, et c'est
+            # normal. Seul un echec non repare compte.
             continue
 
         lancee = horodatage(derniere.get("created_at"))

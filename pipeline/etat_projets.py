@@ -12,19 +12,28 @@ remplit depuis ce que chaque projet publie reellement, et regenere le
 fragment correspondant de `projets.html`. La date affichee ne peut plus etre
 en avance sur la donnee : elle en descend.
 
-Pour ICIE, deux sources, dans l'ordre :
+Chaque projet est lu la ou sa date vit deja, sans lui demander de publier un
+fichier de plus :
 
-1. `etat.json`, ecrit a cote du dashboard par la publication ICIE. Contrat
-   stable, deux cents octets.
-2. A defaut, le JSON embarque dans le dashboard lui-meme, dont le champ
-   `recent.latestDate` porte la derniere date de donnees. Ce repli couvre la
-   periode ou `etat.json` n'existe pas encore, et le cas ou une publication
-   l'oublierait.
+- ICIE : `etat.json`, ecrit a cote du dashboard par la publication ICIE,
+  contrat stable de deux cents octets. A defaut, le JSON embarque dans le
+  dashboard, dont `recent.latestDate` porte la derniere date de donnees. Ce
+  repli couvre la periode ou `etat.json` n'existe pas encore, et le cas ou
+  une publication l'oublierait.
+- Geoecon Pulse : le champ `lastUpdated` de `data/indicators.json`, que le
+  dashboard sert deja a ses propres graphiques.
+- BDC Fedspeak : la derniere ligne de `data/processed/tone_index.csv`, soit
+  la date du dernier communique de la Banque du Canada analyse.
+
+Ces deux dernieres cartes annoncaient une cadence (« deux fois par mois »),
+ce qui decrit une intention plutot qu'un fait : une automatisation en panne
+laisse la promesse intacte. Une date, elle, cesse d'avancer.
 
     python -m pipeline.etat_projets
     python -m pipeline.etat_projets --rapport-seul   # n'echoue jamais
 """
 
+import csv
 import json
 import re
 import sys
@@ -52,9 +61,27 @@ MOIS = (
 # a surveiller ici.
 SOURCES = {
     "icie": {
+        "lecteur": "icie",
         "etat_json": "https://ulrich-e-r-djidonou.github.io/icie-dashboard/etat.json",
         "page": "https://ulrich-e-r-djidonou.github.io/icie-dashboard/",
         "gabarit": "Données jusqu'au {date}",
+    },
+    "geoecon": {
+        "lecteur": "champ_json",
+        "url": "https://ulrich-e-r-djidonou.github.io/geoecon-pulse/data/indicators.json",
+        "champ": "lastUpdated",
+        # « Mise a jour le » et non « Donnees jusqu'au » : ce champ date le
+        # rafraichissement, pas la fin de la periode couverte.
+        "gabarit": "Mise à jour le {date}",
+    },
+    "fedspeak": {
+        "lecteur": "derniere_date_csv",
+        "url": (
+            "https://raw.githubusercontent.com/ulrich-e-r-djidonou/"
+            "bdc-fedspeak/main/data/processed/tone_index.csv"
+        ),
+        "colonne": "date",
+        "gabarit": "Communiqués analysés jusqu'au {date}",
     },
 }
 
@@ -90,9 +117,43 @@ def date_depuis_dashboard(html):
     return str(valeur)[:10]
 
 
+def date_depuis_champ_json(charge, champ):
+    """Lit une date dans un champ nomme d'un JSON deja publie par le projet."""
+    valeur = charge.get(champ)
+    if not valeur:
+        raise ValueError(f"champ {champ} absent ou vide")
+    return str(valeur)[:10]
+
+
+def derniere_date_csv(texte, colonne):
+    """Derniere date non vide d'une colonne, quel que soit l'ordre des lignes.
+
+    Un fichier trie par date rendrait la derniere ligne suffisante, mais rien
+    ne garantit cet ordre a long terme, et une reprise de collecte peut
+    ajouter une ligne ancienne en fin de fichier.
+    """
+    dates = [
+        ligne[colonne].strip()
+        for ligne in csv.DictReader(texte.splitlines())
+        if ligne.get(colonne) and ligne[colonne].strip()
+    ]
+    if not dates:
+        raise ValueError(f"aucune date dans la colonne {colonne}")
+    return max(dates)[:10]
+
+
 def lire_source(source, recuperer=None):
     """Retourne (date_iso, origine) pour un projet, ou leve une exception."""
     recuperer = recuperer or _recuperer
+    lecteur = source.get("lecteur", "icie")
+
+    if lecteur == "champ_json":
+        charge = json.loads(recuperer(source["url"]))
+        return date_depuis_champ_json(charge, source["champ"]), source["champ"]
+
+    if lecteur == "derniere_date_csv":
+        return derniere_date_csv(recuperer(source["url"]), source["colonne"]), "csv"
+
     try:
         return date_depuis_etat_json(json.loads(recuperer(source["etat_json"]))), "etat.json"
     except (requests.RequestException, ValueError, KeyError):
@@ -171,7 +232,7 @@ def main():
         projets[identifiant] = {
             "etat": source["gabarit"].format(date=formater_date_francaise(iso)),
             "date_donnees": iso,
-            "source": source["etat_json"],
+            "source": source.get("etat_json") or source["url"],
         }
         mouvement = "inchange" if precedent == iso else f"{precedent} -> {iso}"
         print(f"{identifiant} : {iso} (via {origine}, {mouvement})")

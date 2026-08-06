@@ -138,6 +138,117 @@ class ExaminerDepotTests(unittest.TestCase):
         self.assertEqual(nom, "gtrends")
         self.assertEqual(titre, "rafraichir-icie")
 
+    def test_pages_est_lu_sans_filtre_d_evenement(self):
+        # Les deploiements Pages ont l'evenement `dynamic`. Les filtrer sur
+        # `schedule`, comme le reste, revenait a ne jamais les regarder.
+        parametres_vus = []
+
+        def faux_api(chemin, **parametres):
+            if chemin.endswith("/actions/workflows"):
+                return {"workflows": [{"id": 9, "name": "pages-build-deployment",
+                                       "state": "active"}]}
+            parametres_vus.append(parametres)
+            return {"workflow_runs": []}
+
+        with mock.patch.object(verifier_workflows, "api", faux_api):
+            verifier_workflows.examiner_depot(self.depot())
+
+        self.assertNotIn("event", parametres_vus[0])
+
+    def test_les_autres_workflows_restent_filtres_sur_schedule(self):
+        parametres_vus = []
+
+        def faux_api(chemin, **parametres):
+            if chemin.endswith("/actions/workflows"):
+                return {"workflows": [{"id": 7, "name": "rafraichir-icie",
+                                       "state": "active"}]}
+            parametres_vus.append(parametres)
+            return {"workflow_runs": []}
+
+        with mock.patch.object(verifier_workflows, "api", faux_api):
+            verifier_workflows.examiner_depot(self.depot())
+
+        self.assertEqual(parametres_vus[0].get("event"), "schedule")
+
+    def test_un_deploiement_pages_en_echec_est_signale(self):
+        def faux_api(chemin, **parametres):
+            if chemin.endswith("/actions/workflows"):
+                return {"workflows": [{"id": 9, "name": "pages-build-deployment",
+                                       "state": "active"}]}
+            if parametres.get("status") == "success":
+                return {"workflow_runs": []}
+            return {"workflow_runs": [{"conclusion": "failure",
+                                       "created_at": "2026-08-06T12:57:20Z"}]}
+
+        with mock.patch.object(verifier_workflows, "api", faux_api):
+            problemes = verifier_workflows.examiner_depot(self.depot())
+
+        self.assertEqual(len(problemes), 1)
+        self.assertIn("version precedente", problemes[0][2])
+
+    def test_un_deploiement_pages_repare_n_est_pas_signale(self):
+        def faux_api(chemin, **parametres):
+            if chemin.endswith("/actions/workflows"):
+                return {"workflows": [{"id": 9, "name": "pages-build-deployment",
+                                       "state": "active"}]}
+            if parametres.get("status") == "success":
+                return {"workflow_runs": [{"created_at": "2026-08-06T18:20:00Z"}]}
+            return {"workflow_runs": [{"conclusion": "failure",
+                                       "created_at": "2026-08-06T12:57:20Z"}]}
+
+        with mock.patch.object(verifier_workflows, "api", faux_api):
+            problemes = verifier_workflows.examiner_depot(self.depot())
+
+        self.assertEqual(problemes, [])
+
+    def test_pages_ancien_mais_reussi_n_est_pas_signale(self):
+        # Un depot sans commit depuis des mois n'a aucun deploiement recent,
+        # et c'est normal : le controle de silence ne s'applique pas a Pages.
+        def faux_api(chemin, **parametres):
+            if chemin.endswith("/actions/workflows"):
+                return {"workflows": [{"id": 9, "name": "pages-build-deployment",
+                                       "state": "active"}]}
+            return {"workflow_runs": [{"conclusion": "success",
+                                       "created_at": "2024-01-01T00:00:00Z"}]}
+
+        with mock.patch.object(verifier_workflows, "api", faux_api):
+            problemes = verifier_workflows.examiner_depot(self.depot())
+
+        self.assertEqual(problemes, [])
+
+    def test_pages_garde_son_nom_sur_un_depot_prive(self):
+        # Ce nom est identique sur tous les depots et ne revele rien du
+        # projet : le masquer rendrait le rapport illisible sans rien
+        # proteger.
+        def faux_api(chemin, **parametres):
+            if chemin.endswith("/actions/workflows"):
+                return {"workflows": [{"id": 9, "name": "pages-build-deployment",
+                                       "state": "disabled_manually"}]}
+            return {"workflow_runs": []}
+
+        with mock.patch.dict("os.environ", {}, clear=True):
+            with mock.patch.object(verifier_workflows, "api", faux_api):
+                problemes = verifier_workflows.examiner_depot(
+                    self.depot(private=True), rang_prive=1
+                )
+
+        self.assertEqual(problemes[0][0], "depot prive 1")
+        self.assertEqual(problemes[0][1], "pages-build-deployment")
+
+    def test_les_deux_orthographes_de_pages_sont_reconnues(self):
+        # L'API nomme le workflow `pages-build-deployment`, chaque execution
+        # s'intitule « pages build and deployment ». L'ancienne liste des
+        # ignores ne portait que la seconde : elle ne correspondait a rien.
+        for titre in ("pages-build-deployment", "pages build and deployment",
+                      "Pages-Build-Deployment"):
+            with self.subTest(titre=titre):
+                self.assertTrue(verifier_workflows.est_workflow_pages(titre))
+                self.assertIsNone(verifier_workflows.evenement_surveille(titre))
+        self.assertFalse(verifier_workflows.est_workflow_pages("rafraichir-icie"))
+        self.assertEqual(
+            verifier_workflows.evenement_surveille("rafraichir-icie"), "schedule"
+        )
+
     def test_un_depot_sans_full_name_retombe_sur_le_proprietaire(self):
         appels = []
 

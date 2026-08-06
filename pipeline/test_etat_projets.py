@@ -67,6 +67,91 @@ class LireSourceTests(unittest.TestCase):
         )
 
 
+class ChampJsonTests(unittest.TestCase):
+    source = {
+        "lecteur": "champ_json",
+        "url": "https://exemple.test/indicators.json",
+        "champ": "lastUpdated",
+        "gabarit": "Mise à jour le {date}",
+    }
+
+    def test_lit_le_champ_nomme(self):
+        def recuperer(url):
+            return json.dumps({"lastUpdated": "2026-08-05", "regions": {}})
+
+        self.assertEqual(
+            etat_projets.lire_source(self.source, recuperer),
+            ("2026-08-05", "lastUpdated"),
+        )
+
+    def test_champ_absent_leve_une_erreur(self):
+        with self.assertRaises(ValueError):
+            etat_projets.date_depuis_champ_json({"regions": {}}, "lastUpdated")
+
+    def test_champ_vide_leve_une_erreur(self):
+        # Un champ present mais vide passerait le test d'existence et
+        # produirait une etiquette sans date.
+        with self.assertRaises(ValueError):
+            etat_projets.date_depuis_champ_json({"lastUpdated": ""}, "lastUpdated")
+
+
+class DerniereDateCsvTests(unittest.TestCase):
+    source = {
+        "lecteur": "derniere_date_csv",
+        "url": "https://exemple.test/tone_index.csv",
+        "colonne": "date",
+        "gabarit": "Communiqués analysés jusqu'au {date}",
+    }
+
+    def test_prend_la_date_la_plus_recente(self):
+        def recuperer(url):
+            return "date,tone\n2026-07-15,-1.0\n2009-01-20,-1.0\n"
+
+        self.assertEqual(
+            etat_projets.lire_source(self.source, recuperer), ("2026-07-15", "csv")
+        )
+
+    def test_l_ordre_des_lignes_n_a_pas_d_importance(self):
+        # Une reprise de collecte peut ajouter une ligne ancienne en fin de
+        # fichier : lire la derniere ligne ferait alors reculer l'etiquette.
+        croissant = "date\n2009-01-20\n2026-07-15\n"
+        decroissant = "date\n2026-07-15\n2009-01-20\n"
+        self.assertEqual(
+            etat_projets.derniere_date_csv(croissant, "date"),
+            etat_projets.derniere_date_csv(decroissant, "date"),
+        )
+
+    def test_lignes_sans_date_ignorees(self):
+        texte = "date,tone\n,\n2026-07-15,-1.0\n  ,\n"
+        self.assertEqual(etat_projets.derniere_date_csv(texte, "date"), "2026-07-15")
+
+    def test_colonne_entierement_vide_leve_une_erreur(self):
+        with self.assertRaises(ValueError):
+            etat_projets.derniere_date_csv("date,tone\n,\n", "date")
+
+
+class SourcesDeclareesTests(unittest.TestCase):
+    def test_chaque_source_a_un_lecteur_connu(self):
+        connus = {"icie", "champ_json", "derniere_date_csv"}
+        for identifiant, source in etat_projets.SOURCES.items():
+            with self.subTest(projet=identifiant):
+                self.assertIn(source.get("lecteur", "icie"), connus)
+
+    def test_chaque_source_expose_une_url_pour_le_journal(self):
+        # main() ecrit source["etat_json"] ou source["url"] dans le JSON :
+        # une source qui n'a ni l'un ni l'autre ferait echouer l'ecriture
+        # apres que la date a ete lue.
+        for identifiant, source in etat_projets.SOURCES.items():
+            with self.subTest(projet=identifiant):
+                self.assertTrue(source.get("etat_json") or source.get("url"))
+
+    def test_chaque_gabarit_accepte_une_date(self):
+        for identifiant, source in etat_projets.SOURCES.items():
+            with self.subTest(projet=identifiant):
+                rendu = source["gabarit"].format(date="2 août 2026")
+                self.assertIn("2 août 2026", rendu)
+
+
 class AppliquerEtatsTests(unittest.TestCase):
     page = (
         '<article class="project-card">\n'
