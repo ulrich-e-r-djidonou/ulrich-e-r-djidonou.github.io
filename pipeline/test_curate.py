@@ -888,6 +888,12 @@ class PanneServiceTests(unittest.TestCase):
         with (
             patch.dict(sys.modules, {"requests": faux_requests}),
             patch.object(curate, "PAUSE_AVANT_REPRISE", 0),
+            # Sans ce verrou, le nombre de tentatives depend de FRONTIERE_LLM
+            # dans l'environnement qui lance les tests : le chemin api en
+            # compte quatre, le chemin ollama deux. Le test echouait donc sur
+            # une machine ou la variable vaut « api », et passait en CI ou
+            # elle est absente.
+            patch.object(curate, "FOURNISSEUR", "ollama"),
         ):
             with self.assertRaises(curate.OllamaIndisponible):
                 curate._appel_ollama("prompt")

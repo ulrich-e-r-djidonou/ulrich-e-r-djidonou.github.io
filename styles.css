@@ -553,6 +553,34 @@ h1 {
   color: var(--soft-muted);
 }
 
+/* Etat du projet : distingue les projets vivants, qui annoncent une cadence
+   de mise a jour, des analyses terminees, qui annoncent la periode couverte.
+   Sans ce reperage, un lecteur applique par defaut l'exigence de fraicheur
+   aux deux, et juge perimee une etude qui ne l'est pas. */
+.project-etat {
+  margin: 0.9rem 0 0;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.04em;
+}
+
+.project-etat::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.45;
+  vertical-align: middle;
+}
+
+.project-etat[data-vivant]::before {
+  background: var(--green);
+  opacity: 1;
+}
+
 .frontiere-signal-teaser {
   font-size: var(--fs-xs);
   font-style: italic;

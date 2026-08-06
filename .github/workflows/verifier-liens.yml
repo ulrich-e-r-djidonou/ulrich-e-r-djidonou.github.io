@@ -1,0 +1,34 @@
+name: verifier-liens
+
+# Les projets affiches sur le site vivent ailleurs : GitHub Pages, Netlify,
+# Streamlit. Un lien peut mourir sans qu'aucun commit ici ne le signale. Ce
+# controle hebdomadaire fait echouer le run, ce qui declenche une notification
+# GitHub, plutot que d'attendre qu'un visiteur tombe sur le lien casse.
+
+on:
+  schedule:
+    - cron: "0 11 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "frontiere/*.html"
+      - "pipeline/verifier_liens.py"
+      - ".github/workflows/verifier-liens.yml"
+  workflow_dispatch: {}
+
+jobs:
+  liens:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dependances
+        run: pip install requests
+
+      - name: Verifier les liens sortants
+        run: python -m pipeline.verifier_liens
