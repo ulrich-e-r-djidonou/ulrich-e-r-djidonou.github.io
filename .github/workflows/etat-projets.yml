@@ -1,0 +1,51 @@
+name: etat-projets
+
+# Les etiquettes de fraicheur des cartes de projets etaient ecrites a la
+# main. Tant qu'un projet se rafraichissait a la main, la date suivait ; des
+# que le rafraichissement devient planifie, elle ne suit plus. Ce controle
+# quotidien lit ce que chaque projet publie reellement et reecrit
+# data/projets.json et projets.html a partir de la. L'ecart entre la donnee
+# et la carte ne peut plus depasser une journee.
+
+on:
+  schedule:
+    - cron: "0 10 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "pipeline/etat_projets.py"
+      - ".github/workflows/etat-projets.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  etats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dependances
+        run: pip install requests
+
+      - name: Relire l'etat publie de chaque projet
+        # Echoue si une source devient illisible. La valeur precedente est
+        # conservee dans le JSON : l'alerte porte sur le fait de ne plus
+        # pouvoir confirmer la date, pas sur la date elle-meme.
+        run: python -m pipeline.etat_projets
+
+      - name: Committer si changements
+        # Place apres l'etape precedente, donc saute si elle echoue : mieux
+        # vaut garder la derniere date confirmee que committer un etat qu'on
+        # n'a pas pu verifier.
+        run: |
+          git config user.name "frontiere-bot"
+          git config user.email "actions@github.com"
+          git add data/projets.json projets.html
+          git diff --cached --quiet || git commit -m "projets: etiquettes de fraicheur au $(date -u +%F)"
+          git push

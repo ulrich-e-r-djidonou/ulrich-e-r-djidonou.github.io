@@ -30,9 +30,18 @@ jobs:
         run: pip install requests
 
       - name: Verifier la sante des automatisations
-        # Le jeton du run suffit : le controle ne lit que des donnees
-        # publiques. Couvrir les depots prives demanderait un jeton personnel
-        # stocke en secret, que ce controle evite volontairement.
+        # JETON_SANTE_DEPOTS doit etre un jeton a portee fine, en LECTURE
+        # SEULE, avec les permissions « Metadata: Read » et « Actions: Read »
+        # et rien d'autre. Un jeton classique ne sait pas lire un depot prive
+        # sans la portee `repo`, qui donne aussi l'ECRITURE sur tous les
+        # depots prives du compte : la stocker dans un depot public mettrait
+        # ce pouvoir a une modification de workflow pres.
+        #
+        # Sans ce secret, le controle retombe sur les depots publics et le
+        # dit dans son rapport plutot que d'annoncer une couverture qu'il n'a
+        # pas. Les noms des depots prives restent masques : le journal d'un
+        # depot public est lisible par tout le monde.
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JETON_DEPOTS: ${{ secrets.JETON_SANTE_DEPOTS }}
         run: python -m pipeline.verifier_workflows

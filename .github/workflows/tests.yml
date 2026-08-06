@@ -33,6 +33,9 @@ jobs:
             pipeline.test_collect \
             pipeline.test_verifier_sante \
             pipeline.test_verifier_jsonld \
+            pipeline.test_verifier_automatisation \
+            pipeline.test_verifier_workflows \
+            pipeline.test_etat_projets \
             pipeline.benchmark.test_benchmark \
             --verbose
 

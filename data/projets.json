@@ -1,0 +1,10 @@
+{
+  "derniere_verification": "2026-08-06",
+  "projets": {
+    "icie": {
+      "etat": "Données jusqu'au 2 août 2026",
+      "date_donnees": "2026-08-02",
+      "source": "https://ulrich-e-r-djidonou.github.io/icie-dashboard/etat.json"
+    }
+  }
+}

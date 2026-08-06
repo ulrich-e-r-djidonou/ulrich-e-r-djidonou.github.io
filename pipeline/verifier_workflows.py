@@ -1,4 +1,4 @@
-"""Signale les depots publics dont l'automatisation ne tourne plus.
+"""Signale les depots dont l'automatisation ne tourne plus.
 
 Un workflow planifie peut echouer mois apres mois sans que rien ne remonte :
 GitHub envoie un courriel, qui se noie dans les autres. Trois projets ont
@@ -13,13 +13,24 @@ Trois signaux sont surveillés :
 3. Workflow planifie qui n'a rien execute depuis trop longtemps : le cron a
    pu cesser de se declencher sans qu'aucune execution en echec ne le dise.
 
-Ne couvre que les depots publics : le jeton fourni aux workflows GitHub ne
-donne acces qu'a son propre depot et aux donnees publiques. Couvrir les
-depots prives demanderait un jeton personnel stocke en secret, ce que ce
-controle evite volontairement.
+Le perimetre depend du jeton fourni :
+
+- `JETON_DEPOTS`, un jeton personnel, couvre aussi les depots prives. C'est
+  la seule facon de surveiller `gtrends`, ou vit la chaine ICIE, et les
+  autres depots fermes : le jeton d'un run GitHub ne voit pas au-dela de son
+  propre depot.
+- Sans lui, le controle retombe sur les depots publics et le dit en clair
+  dans son rapport, plutot que d'annoncer une couverture qu'il n'a pas.
+
+Ce controle tourne dans un depot public, dont les journaux d'execution sont
+lisibles par n'importe qui. Les depots prives y apparaissent donc numerotes,
+sans leur nom ni celui de leur automatisation : le signal (« quelque chose
+est casse ») remonte sans publier le detail de projets fermes. En local,
+`AFFICHER_NOMS_PRIVES=1` reaffiche les noms.
 
     python -m pipeline.verifier_workflows
     python -m pipeline.verifier_workflows --rapport-seul   # n'echoue jamais
+    AFFICHER_NOMS_PRIVES=1 python -m pipeline.verifier_workflows
 """
 
 import os
@@ -54,9 +65,14 @@ WORKFLOWS_IGNORES = (
 )
 
 
+def jeton_personnel():
+    """Jeton personnel eventuel, seul a donner acces aux depots prives."""
+    return os.environ.get("JETON_DEPOTS", "").strip()
+
+
 def entetes():
-    """Le jeton du run suffit : seules des donnees publiques sont lues."""
-    jeton = os.environ.get("GITHUB_TOKEN", "")
+    """Le jeton personnel prime : sans lui, celui du run ne voit que le public."""
+    jeton = jeton_personnel() or os.environ.get("GITHUB_TOKEN", "")
     entetes = {"Accept": "application/vnd.github+json"}
     if jeton:
         entetes["Authorization"] = f"Bearer {jeton}"
@@ -71,12 +87,28 @@ def api(chemin, **parametres):
     return reponse.json()
 
 
-def depots_publics():
+def source_depots(avec_jeton_personnel):
+    """Chemin et parametres d'API selon l'etendue que le jeton autorise.
+
+    `/user/repos` renvoie les depots prives autant que publics, mais exige un
+    jeton personnel : appele avec le jeton d'un run, il repond 401 ou 403.
+    `/users/{proprietaire}/repos` accepte n'importe quel jeton et ne renvoie
+    que le public. Choisir le mauvais chemin ferait echouer le controle ou
+    lui ferait manquer la moitie des depots en silence.
+    """
+    if avec_jeton_personnel:
+        return "/user/repos", {"affiliation": "owner", "sort": "pushed"}
+    return f"/users/{PROPRIETAIRE}/repos", {"type": "owner", "sort": "pushed"}
+
+
+def depots_du_proprietaire(avec_jeton_personnel=None):
+    if avec_jeton_personnel is None:
+        avec_jeton_personnel = bool(jeton_personnel())
+    chemin, parametres = source_depots(avec_jeton_personnel)
     depots = []
     page = 1
     while True:
-        lot = api(f"/users/{PROPRIETAIRE}/repos", per_page=100, page=page,
-                  type="owner", sort="pushed")
+        lot = api(chemin, per_page=100, page=page, **parametres)
         if not lot:
             break
         depots += [d for d in lot if not d.get("archived")]
@@ -92,10 +124,10 @@ def horodatage(texte):
     return datetime.fromisoformat(texte.replace("Z", "+00:00"))
 
 
-def reparee_depuis(depot, workflow_id, date_echec):
+def reparee_depuis(chemin_complet, workflow_id, date_echec):
     """Vrai si une execution a reussi apres l'echec, quel qu'en soit le declencheur."""
     reussites = api(
-        f"/repos/{PROPRIETAIRE}/{depot}/actions/workflows/{workflow_id}/runs",
+        f"/repos/{chemin_complet}/actions/workflows/{workflow_id}/runs",
         per_page=1,
         status="success",
     ).get("workflow_runs", [])
@@ -108,13 +140,39 @@ def reparee_depuis(depot, workflow_id, date_echec):
     return derniere_reussite > echec
 
 
-def examiner_depot(depot):
+def noms_prives_affichables():
+    """Vrai si le journal peut porter les noms des depots prives.
+
+    Ce controle tourne dans un depot public, dont les journaux d'execution
+    sont lisibles par n'importe qui. Nommer un depot prive en echec y
+    publierait son nom, celui de son automatisation et le fait qu'elle est
+    cassee : de quoi renseigner un inconnu sur des projets fermes. En local,
+    ou l'auteur est le seul lecteur, il n'y a rien a masquer.
+    """
+    return bool(os.environ.get("AFFICHER_NOMS_PRIVES", "").strip())
+
+
+def etiquette_depot(depot, rang_prive):
+    """Nom a afficher : masque pour un depot prive, sauf en local."""
+    if not depot.get("private"):
+        return depot["name"]
+    if noms_prives_affichables():
+        return f"{depot['name']} (prive)"
+    return f"depot prive {rang_prive}"
+
+
+def examiner_depot(depot, rang_prive=1):
     """Retourne la liste des problemes trouves sur un depot."""
     problemes = []
-    nom = depot["name"]
+    # Un jeton personnel peut ramener des depots qui ne sont pas sous
+    # PROPRIETAIRE. Passer par full_name evite d'interroger un chemin qui
+    # n'existe pas et de compter le depot comme sans automatisation.
+    chemin = depot.get("full_name") or f"{PROPRIETAIRE}/{depot['name']}"
+    nom = etiquette_depot(depot, rang_prive)
+    prive_masque = depot.get("private") and not noms_prives_affichables()
 
     try:
-        workflows = api(f"/repos/{PROPRIETAIRE}/{nom}/actions/workflows",
+        workflows = api(f"/repos/{chemin}/actions/workflows",
                         per_page=100).get("workflows", [])
     except requests.HTTPError:
         # Actions desactive sur le depot : rien a surveiller.
@@ -124,6 +182,11 @@ def examiner_depot(depot):
         titre = workflow.get("name", "")
         if titre.lower() in WORKFLOWS_IGNORES:
             continue
+        # Le nom d'un workflow decrit ce qu'il fait, donc ce que fait le
+        # projet : le masquer avec celui du depot, sinon le masquage ne
+        # protege rien.
+        if prive_masque:
+            titre = "automatisation"
 
         etat = workflow.get("state", "")
         if etat.startswith("disabled"):
@@ -136,7 +199,7 @@ def examiner_depot(depot):
         # d'etre surveillee. Filtrer sur l'evenement evite aussi qu'un essai
         # manuel ancien masque l'etat reel du cron.
         executions = api(
-            f"/repos/{PROPRIETAIRE}/{nom}/actions/workflows/{workflow['id']}/runs",
+            f"/repos/{chemin}/actions/workflows/{workflow['id']}/runs",
             per_page=1,
             event="schedule",
         ).get("workflow_runs", [])
@@ -150,7 +213,7 @@ def examiner_depot(depot):
             # attendre le prochain cron. Sans cette verification, un workflow
             # repare resterait signale jusqu'a sa prochaine echeance, parfois
             # un mois plus tard, et le rapport perdrait sa credibilite.
-            if not reparee_depuis(nom, workflow["id"], derniere.get("created_at")):
+            if not reparee_depuis(chemin, workflow["id"], derniere.get("created_at")):
                 problemes.append(
                     (nom, titre, "derniere execution planifiee en echec")
                 )
@@ -167,15 +230,38 @@ def examiner_depot(depot):
     return problemes
 
 
+def resume_perimetre(depots, avec_jeton_personnel):
+    """Phrase d'entete du rapport, qui dit ce qui n'est pas couvert."""
+    if not avec_jeton_personnel:
+        return (
+            f"{len(depots)} depots publics examines. Les depots prives ne sont "
+            "pas couverts : definir le secret JETON_DEPOTS pour les inclure."
+        )
+    if noms_prives_affichables():
+        prives = sum(1 for depot in depots if depot.get("private"))
+        return f"{len(depots)} depots examines, dont {prives} prives."
+    # Le decompte des depots prives n'apparait pas dans un journal public :
+    # le total suffit a confirmer que le jeton a bien elargi le perimetre.
+    return (
+        f"{len(depots)} depots examines, publics et prives. Noms des depots "
+        "prives masques ; relancer en local avec AFFICHER_NOMS_PRIVES=1 pour "
+        "les voir."
+    )
+
+
 def main():
     rapport_seul = "--rapport-seul" in sys.argv
+    avec_jeton_personnel = bool(jeton_personnel())
 
-    depots = depots_publics()
-    print(f"{len(depots)} depots publics examines.")
+    depots = depots_du_proprietaire(avec_jeton_personnel)
+    print(resume_perimetre(depots, avec_jeton_personnel))
 
     problemes = []
+    rang_prive = 0
     for depot in depots:
-        problemes += examiner_depot(depot)
+        if depot.get("private"):
+            rang_prive += 1
+        problemes += examiner_depot(depot, rang_prive)
 
     if not problemes:
         print("Aucune automatisation en panne.")
