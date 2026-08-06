@@ -1286,5 +1286,225 @@
   "voxeu-epr-org-voxeu-columns-automation-does-not-lower-labour-share": {
     "score": 6,
     "traite": true
+  },
+  "arxiv-2608.05017v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.04983v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.04977v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.04925v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.04839v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.04664v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.04631v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.04629v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.04469v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.04409v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.04208v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.04198v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.04162v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.03881v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.03847v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.03773v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.03716v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.03703v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.03596v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.03570v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.03504v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.03486v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.03221v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.03153v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.02943v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.02909v1": {
+    "score": 3,
+    "traite": true
+  },
+  "arxiv-2608.02854v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.02817v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.02800v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.02539v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.02398v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.02311v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.02102v1": {
+    "score": 8,
+    "traite": true
+  },
+  "arxiv-2608.02055v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.01607v1": {
+    "score": 4,
+    "traite": true
+  },
+  "arxiv-2608.01544v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.01540v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.01432v2": {
+    "score": 5,
+    "traite": true
+  },
+  "arxiv-2608.01421v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.01415v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.05148v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.05132v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.05111v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.05084v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.05080v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.05050v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.05045v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.04968v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.04962v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.04930v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.04893v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.04879v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.04872v1": {
+    "score": 2,
+    "traite": true
+  },
+  "fed-ne-learning-approaches-to-implied-volatility-forecasting-htm": {
+    "score": 3,
+    "traite": true
+  },
+  "bce-ww-ecb-europa-eu-pub-pdf-scpwps-ecb-wp3262-7169a94638-en-pdf": {
+    "score": 3,
+    "traite": true
   }
 }

@@ -90,6 +90,81 @@
     "llm": "gemini-3.6-flash"
   },
   {
+    "id": "arxiv-2608.02909v1",
+    "titre": "When Predictions Become Regressors: A Split-Sample Correction for Biases in Downstream Inference",
+    "url": "https://arxiv.org/abs/2608.02909v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-03",
+    "resume_fr": "Pour corriger le biais d'estimation causé par l'usage de prédictions d'apprentissage automatique comme variables explicatives dans des régressions, les auteurs proposent une méthode de variables instrumentales construites sur des découpages indépendants des données. Des simulations indiquent que cette approche permet de retrouver des valeurs proches de la réalité même sur de petits échantillons, une efficacité illustrée par deux applications portant sur le Parlement allemand et la lutte contre la pauvreté en Chine.",
+    "angle_eco": "L'utilisation de mesures prédites par l'apprentissage automatique comme variables explicatives dans des régressions génère des biais d'estimation dus aux erreurs de mesure, qu'il est possible de corriger au moyen de variables instrumentales construites sur des découpages indépendants des données initiales sans apport de nouvelles données.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "prevision"
+    ],
+    "score": 3,
+    "auteurs": "Nathan Canen, Ted Enamorado",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "arxiv-2608.02102v1",
+    "titre": "Navigating the skill diversity frontier: How skill complexity explains worker resilience",
+    "url": "https://arxiv.org/abs/2608.02102v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-03",
+    "resume_fr": "À partir de données longitudinales de LinkedIn portant sur 2,4 millions de travailleurs américains et 16 753 compétences distinctes, cette étude développe un cadre d'analyse réseau afin de mesurer la spécialisation, la diversité et la frontière de diversité des compétences. Si la spécialisation est principalement associée à des professions aux salaires plus élevés, les travailleurs les plus proches de la frontière de diversité ont une probabilité accrue d'acquérir de nouvelles compétences, de recevoir des promotions et de s'orienter vers des emplois moins exposés à l'automatisation.",
+    "angle_eco": "La modélisation en réseau de la complexité des compétences permet de distinguer le capital productif du capital adaptatif en montrant que si la spécialisation favorise des salaires plus élevés, la diversité des compétences et la proximité avec une frontière de diversité optimale déterminent l'acquisition de nouvelles aptitudes, la mobilité professionnelle et la résilience face à l'automatisation.",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 8,
+    "auteurs": "Mar Carpanelli, Jedrzej Duszynski, Fabian Stephany",
+    "signal": true,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "arxiv-2608.01607v1",
+    "titre": "AI Financial Advice: Supply, Demand, and Life Cycle Implications",
+    "url": "https://arxiv.org/abs/2608.01607v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-03",
+    "resume_fr": "En simulant l'impact sur l'ensemble du cycle de vie des conseils financiers de GPT-5.2 sollicités par un échantillon représentatif, une étude montre que ces recommandations orientent les individus vers la théorie du cycle de vie, avec une participation élargie aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus élevées. Ces conseils varient selon la culture financière, l'expérience préalable de l'IA et le genre, deux tiers des divergences d'allocation en actions entre hommes et femmes découlant de la rédaction de requêtes différentes et un tiers provenant d'étiquettes de genre rattachées à des requêtes identiques.",
+    "angle_eco": "La simulation des effets sur l'ensemble du cycle de vie des conseils financiers issus des modèles de langage montre que leur suivi oriente les choix d'épargne et d'investissement vers les prédictions de la théorie du cycle de vie, tout en révélant des variations de recommandation liées à l'offre et à la demande selon le genre, l'expérience en intelligence artificielle et la culture financière.",
+    "themes": [
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 4,
+    "auteurs": "Taha Choukhmane, Tim de Silva, Weidong Lin, Matthew Akuzawa",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "arxiv-2608.01432v2",
+    "titre": "A New Theory of Value for Post-AGI Economics",
+    "url": "https://arxiv.org/abs/2608.01432v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-02",
+    "resume_fr": "Face à la divergence potentielle entre les prix du marché et le bien-être sociétal causée par l'automatisation du travail cognitif par l'intelligence artificielle générale, cet article introduit la théorie de la valeur de l'épanouissement. Cette théorie redéfinit la valeur comme la contribution aux capacités durables des personnes et des communautés à s'épanouir sous contraintes planétaires, et propose une architecture de gouvernance fondée sur le rendement de l'épanouissement.",
+    "angle_eco": "L'automatisation du travail cognitif par l'intelligence artificielle générale risquant de séparer les indicateurs marchands traditionnels comme le PIB du bien-être réel, l'analyse économique doit redéfinir la valeur à partir de la contribution multidimensionnelle d'un système aux capacités durables d'épanouissement des personnes et des collectivités sous contraintes sociales et écologiques.",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 5,
+    "auteurs": "Keyun Ruan",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
     "id": "aea-10-1257-jep-20261505",
     "titre": "AI and Our Economic Future",
     "url": "https://doi.org/10.1257/jep.20261505",
@@ -141,6 +216,24 @@
     ],
     "score": 4,
     "auteurs": "Jingbo Zhou, Yusai Zhao, Qi Bao, Jingjia Cao, Zhenghai Chen, Chang Gao, Kaiqi Guo, Muxin Guo, Mingxuan Li, Xinjiang Lu, Yanru Ma, Yixiong Xiao, Zenghui Zhang, Le Zhang, Hua Wu",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "bce-ww-ecb-europa-eu-pub-pdf-scpwps-ecb-wp3262-7169a94638-en-pdf",
+    "titre": "A SPOT in the dark: using AI to assess financial stability risks",
+    "url": "https://www.ecb.europa.eu//pub/pdf/scpwps/ecb.wp3262~7169a94638.en.pdf",
+    "source": "Banque centrale europeenne (BCE), working papers",
+    "type": "article",
+    "date_publication": "2026-07-29",
+    "resume_fr": "Afin d'évaluer la sévérité et la probabilité des événements déclencheurs de risques pour la stabilité financière, cette étude emploie des grands modèles de langage pour construire l'indicateur SPOT à partir d'articles de presse publiés entre 2005 et 2026. L'indicateur SPOT augmente avant les principaux événements déclencheurs historiques, identifie correctement leurs sources et améliore la prévision des risques baissiers pesant sur l'économie, démontrant le potentiel de l'intelligence artificielle pour le suivi de la stabilité financière.",
+    "angle_eco": "L'analyse textuelle par des modèles d'intelligence artificielle appliquée à la presse financière permet de mesurer la sévérité et la probabilité d'événements déclencheurs potentiels, améliorant ainsi l'évaluation des risques baissiers pour l'économie et le suivi de la stabilité financière.",
+    "themes": [
+      "llm",
+      "donnees"
+    ],
+    "score": 3,
+    "auteurs": "",
     "signal": false,
     "llm": "gemini-3.6-flash"
   },
@@ -449,7 +542,7 @@
     ],
     "score": 8,
     "auteurs": "Xianhua Peng, Wu Guo, Songyan Wang, Jianfei Zhu",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash"
   },
   {
@@ -562,6 +655,25 @@
     "auteurs": "Shilin Ou, Yifan Xu, Luyao Zhang",
     "signal": false,
     "llm": "claude-haiku-4-5"
+  },
+  {
+    "id": "fed-ne-learning-approaches-to-implied-volatility-forecasting-htm",
+    "titre": "FEDS Paper: Capturing Heterogeneity: Machine Learning Approaches to Implied Volatility Forecasting",
+    "url": "https://www.federalreserve.gov/econres/feds/capturing-heterogeneity-machine-learning-approaches-to-implied-volatility-forecasting.htm",
+    "source": "Reserve federale americaine (Fed), working papers",
+    "type": "article",
+    "date_publication": "2026-07-07",
+    "resume_fr": "Hyung Joo Kim et Dong Hwan Oh développent un cadre d'apprentissage automatique fondé sur des arbres de régression pour étendre le modèle SHAR, permettant aux paramètres de prévision de la volatilité implicite de varier selon la maturité et la monneyness des options. L'analyse empirique menée sur les options du S&P 500 montre que la spécification par arbres boostés réduit la RMSE à un mois de 13 % par rapport au modèle SHAR de référence, atteignant les erreurs de prévision hors échantillon les plus faibles à tous les horizons.",
+    "angle_eco": "L'utilisation d'arbres de régression pour segmenter la surface des options selon leur maturité et leur position par rapport au prix d'exercice permet d'adapter les paramètres des modèles autorégressifs à l'hétérogénéité de la volatilité implicite, réduisant ainsi l'erreur de prévision à un mois de 13 % par rapport au modèle de référence.",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 3,
+    "auteurs": "",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "voxeu-lumns-chatgpts-financial-advice-supply-demand-and-life-cycle",

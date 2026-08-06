@@ -41,6 +41,34 @@
       <description>À partir de données couvrant la quasi-totalité des entreprises françaises entre 1994 et 2019, cette étude examine la relation entre l'automatisation et la part du revenu revenant au travail au niveau de l'entreprise. Les résultats montrent que bien que l'automatisation ait profondément transformé les emplois et la production, elle n'a pas nécessairement déplacé les revenus du travail vers le capital.</description>
     </item>
     <item>
+      <title>When Predictions Become Regressors: A Split-Sample Correction for Biases in Downstream Inference</title>
+      <link>https://arxiv.org/abs/2608.02909v1</link>
+      <guid isPermaLink="false">arxiv-2608.02909v1</guid>
+      <pubDate>2026-08-03</pubDate>
+      <description>Pour corriger le biais d'estimation causé par l'usage de prédictions d'apprentissage automatique comme variables explicatives dans des régressions, les auteurs proposent une méthode de variables instrumentales construites sur des découpages indépendants des données. Des simulations indiquent que cette approche permet de retrouver des valeurs proches de la réalité même sur de petits échantillons, une efficacité illustrée par deux applications portant sur le Parlement allemand et la lutte contre la pauvreté en Chine.</description>
+    </item>
+    <item>
+      <title>Navigating the skill diversity frontier: How skill complexity explains worker resilience</title>
+      <link>https://arxiv.org/abs/2608.02102v1</link>
+      <guid isPermaLink="false">arxiv-2608.02102v1</guid>
+      <pubDate>2026-08-03</pubDate>
+      <description>À partir de données longitudinales de LinkedIn portant sur 2,4 millions de travailleurs américains et 16 753 compétences distinctes, cette étude développe un cadre d'analyse réseau afin de mesurer la spécialisation, la diversité et la frontière de diversité des compétences. Si la spécialisation est principalement associée à des professions aux salaires plus élevés, les travailleurs les plus proches de la frontière de diversité ont une probabilité accrue d'acquérir de nouvelles compétences, de recevoir des promotions et de s'orienter vers des emplois moins exposés à l'automatisation.</description>
+    </item>
+    <item>
+      <title>AI Financial Advice: Supply, Demand, and Life Cycle Implications</title>
+      <link>https://arxiv.org/abs/2608.01607v1</link>
+      <guid isPermaLink="false">arxiv-2608.01607v1</guid>
+      <pubDate>2026-08-03</pubDate>
+      <description>En simulant l'impact sur l'ensemble du cycle de vie des conseils financiers de GPT-5.2 sollicités par un échantillon représentatif, une étude montre que ces recommandations orientent les individus vers la théorie du cycle de vie, avec une participation élargie aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus élevées. Ces conseils varient selon la culture financière, l'expérience préalable de l'IA et le genre, deux tiers des divergences d'allocation en actions entre hommes et femmes découlant de la rédaction de requêtes différentes et un tiers provenant d'étiquettes de genre rattachées à des requêtes identiques.</description>
+    </item>
+    <item>
+      <title>A New Theory of Value for Post-AGI Economics</title>
+      <link>https://arxiv.org/abs/2608.01432v2</link>
+      <guid isPermaLink="false">arxiv-2608.01432v2</guid>
+      <pubDate>2026-08-02</pubDate>
+      <description>Face à la divergence potentielle entre les prix du marché et le bien-être sociétal causée par l'automatisation du travail cognitif par l'intelligence artificielle générale, cet article introduit la théorie de la valeur de l'épanouissement. Cette théorie redéfinit la valeur comme la contribution aux capacités durables des personnes et des communautés à s'épanouir sous contraintes planétaires, et propose une architecture de gouvernance fondée sur le rendement de l'épanouissement.</description>
+    </item>
+    <item>
       <title>AI and Our Economic Future</title>
       <link>https://doi.org/10.1257/jep.20261505</link>
       <guid isPermaLink="false">aea-10-1257-jep-20261505</guid>
@@ -60,6 +88,13 @@
       <guid isPermaLink="false">arxiv-2607.27155v1</guid>
       <pubDate>2026-07-29</pubDate>
       <description>Le benchmark open source OmegaUse-OfficeVal évalue les agents basés sur des grands modèles de langage à travers 100 tâches bureautiques nécessitant en moyenne 2,32 heures de travail humain, en intégrant des indicateurs économiques de temps et de coût. Bien que les modèles évalués soient nettement plus rapides et moins chers que les travailleurs humains, la qualité de leurs livrables n'atteint pas encore le niveau humain.</description>
+    </item>
+    <item>
+      <title>A SPOT in the dark: using AI to assess financial stability risks</title>
+      <link>https://www.ecb.europa.eu//pub/pdf/scpwps/ecb.wp3262~7169a94638.en.pdf</link>
+      <guid isPermaLink="false">bce-ww-ecb-europa-eu-pub-pdf-scpwps-ecb-wp3262-7169a94638-en-pdf</guid>
+      <pubDate>2026-07-29</pubDate>
+      <description>Afin d'évaluer la sévérité et la probabilité des événements déclencheurs de risques pour la stabilité financière, cette étude emploie des grands modèles de langage pour construire l'indicateur SPOT à partir d'articles de presse publiés entre 2005 et 2026. L'indicateur SPOT augmente avant les principaux événements déclencheurs historiques, identifie correctement leurs sources et améliore la prévision des risques baissiers pesant sur l'économie, démontrant le potentiel de l'intelligence artificielle pour le suivi de la stabilité financière.</description>
     </item>
     <item>
       <title>The AI premium</title>
@@ -179,41 +214,6 @@
       <guid isPermaLink="false">arxiv-2607.09461v1</guid>
       <pubDate>2026-07-10</pubDate>
       <description>L'article présente l'algorithme CEFOL, une méthode d'apprentissage profond conçue pour la programmation dynamique en temps discret à utilité récursive qui utilise des réseaux de neurones pour représenter l'équivalent certain, la fonction de valeur, les règles de décision et les multiplicateurs de Lagrange. En s'appuyant sur les conditions d'optimalité du premier ordre et de Karush-Kuhn-Tucker, cet algorithme intègre directement les contraintes d'inégalité sans fonction de pénalité et affiche des résidus d'optimalité hors échantillon compris entre 1,0e-4 et 1,0e-3 sur des modèles d'épargne et des modèles DSGE.</description>
-    </item>
-    <item>
-      <title>LLM for EDA in Front-End Design: Challenges and Opportunities</title>
-      <link>https://arxiv.org/abs/2607.09616v1</link>
-      <guid isPermaLink="false">arxiv-2607.09616v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>Les modèles de langage de grande taille montrent un potentiel significatif en automatisation de la conception électronique, notamment pour la génération de langages de description matérielle, la construction de bancs d'essai et l'exploration de l'espace de conception, tandis que l'émergence d'une intelligence artificielle agentive ouvre une nouvelle voie pour l'évolution de l'automatisation de la conception électronique vers une exécution autonome. Cet article examine les avancées des modèles de langage dans la conception avant-projet en se concentrant sur la génération de circuits et de bancs d'essai à partir d'une spécification commune, ainsi que sur l'amélioration de la qualité de conception, tout en identifiant les défis clés et les opportunités futures pour intégrer ces modèles dans les outils d'automatisation de la conception électronique.</description>
-    </item>
-    <item>
-      <title>DKCD: Domain Knowledge-Enhanced Causal Discovery from Unstructured Data</title>
-      <link>https://arxiv.org/abs/2607.09348v1</link>
-      <guid isPermaLink="false">arxiv-2607.09348v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>Les auteurs proposent DKCD, un cadre de découverte causale à partir de données non structurées dans des domaines à haute expertise comme la santé et la finance, qui intègre des connaissances spécifiques au domaine pour identifier les facteurs latents implicites dans les données et améliorer l'annotation fiable des facteurs. Le framework combine trois composantes interconnectées : l'extraction de connaissances du domaine, le raisonnement causal guidé par ces connaissances pour découvrir les facteurs causaux latents, et la construction de graphes causaux basée sur un ensemble de facteurs plus complet et des annotations plus précises.</description>
-    </item>
-    <item>
-      <title>Automatic Thematic Indexing of Large Literary Corpora: A Machine Learning Approach to Voltaire's Complete Works</title>
-      <link>https://arxiv.org/abs/2607.09316v1</link>
-      <guid isPermaLink="false">arxiv-2607.09316v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>Les auteurs appliquent l'apprentissage automatique à l'indexation thématique de deux sous-corpus importants des Œuvres complètes de Voltaire, en formulant la tâche comme un problème de classification multi-étiquettes où un modèle doit assigner les entrées d'index qu'un indexeur professionnel appliquerait à une page de texte donnée. Le meilleur modèle, issu de la famille Mistral en configuration quantifiée 4-bit, atteint des scores F1 jusqu'à 0,67, les auteurs arguant que ces résultats constituent des bornes inférieures compte tenu de la subjectivité inhérente à l'indexation professionnelle et de la fréquence à laquelle les prédictions du modèle s'avèrent sémantiquement valides malgré des divergences avec l'index imprimé.</description>
-    </item>
-    <item>
-      <title>Resample or Reroute? Budget-Aware Test-Time Model Selection for Large Language Models</title>
-      <link>https://arxiv.org/abs/2607.08665v1</link>
-      <guid isPermaLink="false">arxiv-2607.08665v1</guid>
-      <pubDate>2026-07-09</pubDate>
-      <description>Les auteurs formulent un problème de sélection de modèle au moment du test avec budget limité, où chaque unité de budget doit être allouée entre le rééchantillonnage du modèle engagé et le réacheminement vers un modèle alternatif afin de maximiser la justesse attendue. Une politique d'allocation en ligne basée sur la justesse marginale estimée par unité de coût est proposée et validée sur un ensemble de onze modèles en poids ouvert sur quatre benchmarks, montrant des gains particulièrement importants sur les ensembles les plus hétérogènes par rapport aux approches de base.</description>
-    </item>
-    <item>
-      <title>AI Adoption in S&amp;P 500 Firms</title>
-      <link>https://arxiv.org/abs/2607.08920v1</link>
-      <guid isPermaLink="false">arxiv-2607.08920v1</guid>
-      <pubDate>2026-07-09</pubDate>
-      <description>Les auteurs étudient l'adoption de l'intelligence artificielle par les entreprises du S&amp;P 500 entre 2016 et 2025 en développant une mesure fondée sur les dépôts réglementaires auprès de la SEC, et constatent qu'en 2025, 11% de ces entreprises avaient intégré profondément l'IA dans leurs processus métier tandis que 10% supplémentaires l'utilisaient dans la production et la livraison de services. L'adoption a plus que quadruplé depuis 5% en 2022, avec une accélération lente dans les secteurs non technologiques mais très agressive dans le secteur technologique qui représente les deux tiers de l'adoption profonde, tandis que la rentabilité des entreprises suit une courbe en J sans différences observées en matière de dépenses d'investissement ou de productivité.</description>
     </item>
   </channel>
 </rss>
