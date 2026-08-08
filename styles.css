@@ -626,6 +626,14 @@ h1 {
   margin-bottom: 1.75rem;
 }
 
+.page-note {
+  margin-top: -1rem;
+  margin-bottom: 1.75rem;
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  font-style: italic;
+}
+
 .filter-chips {
   display: flex;
   flex-wrap: wrap;
