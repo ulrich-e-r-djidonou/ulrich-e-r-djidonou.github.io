@@ -79,6 +79,16 @@
     titre.appendChild(lien);
     carte.appendChild(titre);
 
+    // Nom des auteurs affiche des que le champ est fourni (chaine, ex.
+    // "Prenom Nom, Prenom Nom") : evite qu'on croie Ulrich Djidonou auteur
+    // de l'article relaye.
+    if (entree.auteurs) {
+      const ligneAuteurs = document.createElement("p");
+      ligneAuteurs.className = "carte-auteurs";
+      ligneAuteurs.textContent = `Par ${entree.auteurs}`;
+      carte.appendChild(ligneAuteurs);
+    }
+
     if (entree.resume_fr) {
       const resume = document.createElement("p");
       resume.textContent = entree.resume_fr;
