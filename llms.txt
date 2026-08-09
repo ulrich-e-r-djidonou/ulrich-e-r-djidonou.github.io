@@ -1,6 +1,6 @@
 # Ulrich Djidonou
 
-> Économiste quantitatif basé à Québec, Canada. Économétrie, évaluation de
+> Économiste basé à Québec, Canada. Économétrie, évaluation de
 > politiques publiques, machine learning et intelligence artificielle
 > appliquée à des questions économiques. Ancien passages : CGAP, Ministère
 > des Finances du Québec, ENAP.
@@ -18,6 +18,8 @@ CollectionPage, CreativeWork).
   (CGAP, Ministère des Finances du Québec, ENAP) et méthode de travail.
 - [Projets](https://djidonou.com/projets.html) : liste complète des projets
   publics, filtrable par domaine.
+- [Ressources](https://djidonou.com/ressources.html) : outils, librairies,
+  papiers fondateurs, cours et données choisis à la main.
 - [Contact](https://djidonou.com/contact.html)
 
 ## La Frontière
@@ -31,8 +33,9 @@ CollectionPage, CreativeWork).
 - [Flux JSON](https://djidonou.com/frontiere/data/flux.json) : sélection
   courante, machine-readable.
 - [Flux RSS](https://djidonou.com/frontiere/feed.xml)
-- [Bibliothèque](https://djidonou.com/frontiere/data/bibliotheque.json) :
-  ressources durables choisies à la main (outils, papiers fondateurs, cours).
+- [Ressources, données](https://djidonou.com/data/bibliotheque.json) :
+  ressources choisies à la main (outils, papiers fondateurs, cours), publiées
+  sur la page [Ressources](https://djidonou.com/ressources.html).
 
 Chaque entrée de La Frontière associe un travail externe (papier, article,
 annonce, avec ses auteurs originaux) à un résumé et un angle économique

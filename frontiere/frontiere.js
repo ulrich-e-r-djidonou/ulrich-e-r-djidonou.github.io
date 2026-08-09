@@ -259,51 +259,6 @@
     });
   }
 
-  function rendreBibliotheque(items) {
-    const conteneur = document.getElementById("accordeons-bibliotheque");
-    conteneur.innerHTML = "";
-    if (!items || !items.length) {
-      const vide = document.createElement("p");
-      vide.className = "frontiere-vide";
-      vide.textContent = "La bibliothèque n'est pas encore disponible.";
-      conteneur.appendChild(vide);
-      return;
-    }
-
-    const parCategorie = new Map();
-    items.forEach((item) => {
-      if (!parCategorie.has(item.categorie)) parCategorie.set(item.categorie, []);
-      parCategorie.get(item.categorie).push(item);
-    });
-
-    parCategorie.forEach((liste, categorie) => {
-      const details = document.createElement("details");
-      details.className = "accordeon";
-      const summary = document.createElement("summary");
-      summary.textContent = `${categorie} (${liste.length})`;
-      details.appendChild(summary);
-
-      const contenu = document.createElement("div");
-      contenu.className = "accordeon-contenu";
-      liste.forEach((item) => {
-        const bloc = document.createElement("div");
-        bloc.className = "item-bibliotheque";
-        const lien = document.createElement("a");
-        lien.href = item.url;
-        lien.target = "_blank";
-        lien.rel = "noopener";
-        lien.textContent = item.titre;
-        bloc.appendChild(lien);
-        const description = document.createElement("p");
-        description.textContent = item.description_fr;
-        bloc.appendChild(description);
-        contenu.appendChild(bloc);
-      });
-      details.appendChild(contenu);
-      conteneur.appendChild(details);
-    });
-  }
-
   async function rendreArchives(meta) {
     const conteneur = document.getElementById("liste-archives");
     conteneur.innerHTML = "";
@@ -329,10 +284,9 @@
   }
 
   async function init() {
-    const [flux, meta, bibliotheque] = await Promise.all([
+    const [flux, meta] = await Promise.all([
       chargerJSON("data/flux.json"),
       chargerJSON("data/meta.json"),
-      chargerJSON("data/bibliotheque.json"),
     ]);
 
     const fluxPrincipal = flux || [];
@@ -354,7 +308,6 @@
       afficherJeuEntrees(fluxPrincipal, "Sélection principale", false);
     });
 
-    rendreBibliotheque(bibliotheque);
     rendreArchives(meta);
   }
 
