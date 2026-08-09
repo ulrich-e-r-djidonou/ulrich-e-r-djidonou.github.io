@@ -682,6 +682,15 @@ h1 {
   font-size: var(--fs-sm);
 }
 
+/* Etat vide de la page Ressources (donnees introuvables). Meme rendu que
+   .frontiere-vide, mais defini ici : /ressources.html ne charge pas
+   frontiere/frontiere.css. */
+.ressources-vide {
+  padding: 2rem 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
 .filter-chips {
   display: flex;
   flex-wrap: wrap;

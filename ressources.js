@@ -20,7 +20,7 @@
     conteneur.innerHTML = "";
     if (!items || !items.length) {
       const vide = document.createElement("p");
-      vide.className = "frontiere-vide";
+      vide.className = "ressources-vide";
       vide.textContent = "Les ressources ne sont pas disponibles pour le moment.";
       conteneur.appendChild(vide);
       return;
