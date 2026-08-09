@@ -5,10 +5,12 @@ on:
     branches: [main]
     paths:
       - "pipeline/**"
+      - "index.html"
       - ".github/workflows/tests.yml"
   pull_request:
     paths:
       - "pipeline/**"
+      - "index.html"
       - ".github/workflows/tests.yml"
   workflow_dispatch: {}
 
@@ -36,6 +38,7 @@ jobs:
             pipeline.test_verifier_automatisation \
             pipeline.test_verifier_workflows \
             pipeline.test_etat_projets \
+            pipeline.test_faq_coherence \
             pipeline.benchmark.test_benchmark \
             --verbose
 
