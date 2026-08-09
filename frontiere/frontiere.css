@@ -39,6 +39,7 @@
 }
 
 .frontiere-methode-titre {
+  margin: 0;
   color: var(--teal);
   font-family: "Trebuchet MS", Verdana, sans-serif;
   font-size: var(--fs-xs);
@@ -246,7 +247,7 @@
   font-size: var(--fs-sm);
 }
 
-.carte-auteurs {
+.carte-entree .carte-auteurs {
   color: var(--muted);
   font-size: var(--fs-2xs);
   font-weight: 700;

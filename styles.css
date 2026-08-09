@@ -930,21 +930,27 @@ h1 {
   }
 }
 
-/* Sous 620 px, la marque et les cinq liens ne tiennent plus sur une meme
-   ligne. Les empiler garde les cinq liens visibles ; un defilement horizontal
-   en cacherait deux derriere une barre que rien n'annonce. */
+/* Sous 620 px, la marque et les six liens ne tiennent plus sur une meme
+   ligne. Les empiler garde les six liens visibles ; un defilement horizontal
+   en cacherait certains derriere une barre que rien n'annonce.
+   Depuis l'ajout de La Frontiere (sixieme lien), les six liens seuls ne
+   tiennent plus non plus sur une ligne a gap/police/marges d'origine :
+   resserrement du gap, de la police (fs-3xs) et des marges laterales du
+   header pour les six garder sur une ligne jusqu'a 360px. En dessous
+   (ecrans 320px, minoritaires), retour a deux lignes plutot que de
+   compresser au point de nuire a la lisibilite ou aux cibles tactiles. */
 @media (max-width: 620px) {
   .site-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
-    padding: 0.65rem 1.25rem 0.5rem;
+    padding: 0.65rem 0.85rem 0.5rem;
   }
 
   .site-header nav {
     width: 100%;
-    gap: 0.7rem;
-    font-size: var(--fs-2xs);
+    gap: 0.3rem;
+    font-size: var(--fs-3xs);
   }
 }
 
