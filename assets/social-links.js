@@ -14,8 +14,9 @@ const SOCIAL_LINKS = {
 // Adresse courriel jamais ecrite en clair dans le HTML : assemblee au clic.
 // Obfuscation legere anti-scraping, pas un chiffrement : le nom d'usager est
 // lui-meme fragmente pour qu'aucun scraper de code source ne trouve la
-// chaine "romariche" en un seul morceau.
-const MAIL_USER = ["romar", "iche"].join("");
+// chaine complete en un seul morceau. Adresse de correspondance publique,
+// distincte de l'adresse personnelle.
+const MAIL_USER = ["ulrich.dji", "donou"].join("");
 const MAIL_DOMAIN = ["gmail", "com"].join(".");
 
 const SOCIAL_ICON_DEFS = [

@@ -6,7 +6,7 @@
     <title>La Frontière | Veille IA, économie et machine learning | Ulrich Djidonou</title>
     <meta
       name="description"
-      content="La Frontière : veille automatisée sur l'intersection entre l'intelligence artificielle, l'économie et le machine learning, selon des critères thématiques définis par Ulrich Djidonou, économiste quantitatif."
+      content="La Frontière : veille automatisée sur l'intersection entre l'intelligence artificielle, l'économie et le machine learning, selon des critères thématiques définis par Ulrich Djidonou, économiste."
     >
     <meta property="og:title" content="La Frontière | Veille IA, économie et machine learning">
     <meta property="og:description" content="Veille automatisée sur l'intersection entre l'IA, l'économie et le machine learning, mise à jour deux fois par semaine.">
@@ -1033,6 +1033,7 @@
         <a href="/parcours.html">Parcours</a>
         <a href="/recherche.html">Recherche</a>
         <a href="/frontiere/" aria-current="page">La Frontière</a>
+        <a href="/ressources.html">Ressources</a>
         <a href="/contact.html">Contact</a>
       </nav>
     </header>
@@ -1045,14 +1046,17 @@
           Ce qui se passe à l'intersection de l'intelligence artificielle, de
           l'économie et du machine learning.
         </p>
+        <div class="hero-actions">
+          <a class="button primary" href="feed.xml">Suivre La Frontière (RSS)</a>
+        </div>
         <p class="frontiere-meta" id="derniere-maj">Chargement…</p>
         <div class="frontiere-liens">
           <a href="feed.xml">Flux RSS</a>
           <a href="data/flux.json">Données du flux (JSON)</a>
-          <a href="data/bibliotheque.json">Bibliothèque (JSON)</a>
+          <a href="/ressources.html">Ressources</a>
         </div>
-        <details class="frontiere-methode">
-          <summary>Comment cette veille est produite</summary>
+        <div class="frontiere-methode">
+          <h2 class="frontiere-methode-titre">Comment cette veille est produite</h2>
           <p>
             D'abord, un pipeline Python collecte deux fois par semaine (lundi
             et jeudi) les nouvelles parutions d'arXiv (econ.EM, econ.GN,
@@ -1077,8 +1081,9 @@
             Enfin, les résumés en français sont générés par un modèle de
             langue (Gemini, avec Claude en complément), puis contrôlés par
             des validateurs automatiques : tout chiffre absent du titre ou du
-            résumé source entraîne le rejet du texte. La bibliothèque, elle,
-            est choisie à la main.
+            résumé source entraîne le rejet du texte. Les
+            <a href="/ressources.html">ressources</a>, elles, sont choisies à
+            la main.
           </p>
           <p>
             Par ailleurs, je vérifie ce que produit le pipeline dans la
@@ -1086,7 +1091,7 @@
             d'amélioration, <a href="/contact.html">écrivez-moi</a> : votre
             retour est bienvenu.
           </p>
-        </details>
+        </div>
       </section>
 
       <section class="frontiere-signal" id="signal-semaine" aria-labelledby="signal-titre" hidden>
@@ -1126,16 +1131,6 @@
           l'entrée la plus forte de cette sélection.
         </p>
         <div id="liste-flux"></div>
-      </section>
-
-      <section id="bibliotheque" class="frontiere-bibliotheque" aria-labelledby="bibliotheque-titre">
-        <div class="section-kicker">Bibliothèque</div>
-        <h2 id="bibliotheque-titre">Ressources durables</h2>
-        <p class="frontiere-bibliotheque-intro">
-          Outils, librairies, papiers fondateurs, cours et données choisis à
-          la main, pas mis à jour automatiquement.
-        </p>
-        <div id="accordeons-bibliotheque"></div>
       </section>
 
       <section class="frontiere-archives" aria-labelledby="archives-titre">

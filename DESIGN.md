@@ -135,7 +135,7 @@ Palette de carnet : neutres papier et encre, un teal institutionnel dominant, ve
 
 ## Layout
 
-Sections pleine largeur empilées, padding horizontal 4rem (1.25rem sous 980px), padding vertical 4.5rem (3rem mobile). Alternance de fonds papier / blanc cassé séparés par filets 1px. Grilles : projets en `repeat(3, minmax(0, 1fr))`, méthode en 4 colonnes, tout passe en 1 colonne sous 980px. Header sticky avec backdrop-blur, empilé en colonne sous 620px pour garder les cinq liens visibles. Largeurs de lecture plafonnées (34rem lead, 55-56rem sections, 62ch FAQ).
+Sections pleine largeur empilées, padding horizontal 4rem (1.25rem sous 980px), padding vertical 4.5rem (3rem mobile). Alternance de fonds papier / blanc cassé séparés par filets 1px. Grilles : projets en `repeat(3, minmax(0, 1fr))`, méthode en 4 colonnes, tout passe en 1 colonne sous 980px. Header sticky avec backdrop-blur, empilé en colonne sous 620px ; à sept liens la nav ne tient plus sur une seule ligne à une taille lisible, elle se replie donc naturellement sur deux lignes équilibrées (5 + 2 à 390px, 4 + 3 à 320px) plutôt que d'être compressée ou mise en défilement horizontal. Largeurs de lecture plafonnées (34rem lead, 55-56rem sections, 62ch FAQ).
 
 ## Elevation & Depth
 
