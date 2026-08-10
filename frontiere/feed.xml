@@ -6,6 +6,48 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>AI Financial Advice: Supply, Demand, and Life Cycle Implications</title>
+      <link>https://www.nber.org/papers/w35574#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35574-fromrss</guid>
+      <pubDate>2026-08-10</pubDate>
+      <description>En simulant les effets à long terme des conseils financiers générés par GPT-5.2 pour un échantillon représentatif, l'étude montre que suivre ces recommandations oriente les individus vers la théorie du cycle de vie, à travers une participation accrue aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus élevées. Bien que ces conseils varient selon la culture financière, l'expérience préalable en IA et le genre, deux tiers des écarts de part d'actions selon le sexe découlent des requêtes rédigées par les utilisateurs et un tiers de l'attribution d'étiquettes de genre à des requêtes identiques.</description>
+    </item>
+    <item>
+      <title>Staged Access and Liability for Dual-Use Artificial Intelligence</title>
+      <link>https://www.nber.org/papers/w35586#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35586-fromrss</guid>
+      <pubDate>2026-08-10</pubDate>
+      <description>L'étude montre que la responsabilité d'un développeur d'intelligence artificielle à double usage incite l'adversaire à intensifier sa recherche de failles logicielles, tandis que l'accès échelonné neutralise cette réaction stratégique, ce qui rend la responsabilité et l'accès échelonné complémentaires. Comme la recherche défensive consomme des ressources réelles et que la responsabilité financière ne permet pas d'imposer la date de sortie souhaitée par le régulateur, le taux de responsabilité optimal peut être inférieur à l'internalisation totale des dommages et doit s'accompagner d'un mandat temporel distinct.</description>
+    </item>
+    <item>
+      <title>AI Agents and Prompt Engineering in Econometric Coding</title>
+      <link>https://www.nber.org/papers/w35588#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35588-fromrss</guid>
+      <pubDate>2026-08-10</pubDate>
+      <description>L'étude évalue la génération de code économétrique par les grands modèles de langage et montre que le passage d'un simple agent conversationnel à un agent contraint augmente le taux de réussite des tâches de 74 à 96 %, pour un coût supplémentaire d'environ huit centimes par exécution. Pour les modèles Claude Sonnet 4.6 et GPT-5.4, l'incitation par quelques exemples et l'autonomie fonctionnent comme des substituts, tandis que les différences de performance selon le logiciel statistique disparaissent en grande partie avec l'agent contraint.</description>
+    </item>
+    <item>
+      <title>AI feedback loops and the conditions for explosive growth</title>
+      <link>https://cepr.org/voxeu/columns/ai-feedback-loops-and-conditions-explosive-growth</link>
+      <guid isPermaLink="false">voxeu-eu-columns-ai-feedback-loops-and-conditions-explosive-growth</guid>
+      <pubDate>2026-08-09</pubDate>
+      <description>Ce papier présente un cadre d'analyse selon lequel l'utilisation de l'intelligence artificielle pour développer ses propres modèles futurs pourrait engendrer une explosion de l'intelligence et accélérer le progrès technologique par des boucles de rétroaction. Si le seuil de déclenchement d'une croissance explosive selon la part du travail, les rendements de la recherche et l'automatisation des tâches apparaît surprenamment bas, sa concrétisation dépendra des goulets d'étranglement humains, des contraintes physiques de calcul et du rythme d'automatisation.</description>
+    </item>
+    <item>
+      <title>ResidencyRL: Reinforcement Learning in Simulated Clinical Environments</title>
+      <link>https://arxiv.org/abs/2608.07418v1</link>
+      <guid isPermaLink="false">arxiv-2608.07418v1</guid>
+      <pubDate>2026-08-07</pubDate>
+      <description>La méthode ResidencyRL utilise l'apprentissage par renforcement pour entraîner des agents d'intelligence artificielle clinique au travers de simulations de consultations médicales interactives. Lors des évaluations, cet entraînement améliore la précision diagnostique de 7,0 % en conditions adverses, réduit de 31 % le taux de signaux d'alerte manqués et obtient la préférence des cliniciens experts dans 87,6 % des comparaisons à l'aveugle.</description>
+    </item>
+    <item>
+      <title>An AI4AI Framework for Visual Token Pruning</title>
+      <link>https://arxiv.org/abs/2608.07193v1</link>
+      <guid isPermaLink="false">arxiv-2608.07193v1</guid>
+      <pubDate>2026-08-07</pubDate>
+      <description>Afin de réduire le coût d'inférence des grands modèles de langage multimodaux, cette étude présente AutoPrune, un cadre sans entraînement qui permet aux modèles de langage de concevoir automatiquement des règles d'élagage de jetons visuels. Ce système s'appuie sur un langage spécifique composé de 131 atomes réutilisables représentant chaque état de recherche comme une modification résiduelle d'une politique de base performante.</description>
+    </item>
+    <item>
       <title>Time Travel on Professional Profiles</title>
       <link>https://www.nber.org/papers/w35546#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35546-fromrss</guid>
@@ -172,48 +214,6 @@
       <guid isPermaLink="false">arxiv-2607.18795v1</guid>
       <pubDate>2026-07-21</pubDate>
       <description>Les données relatives aux marques déposées constituent une source d'information opportune et mondiale couvrant tous les secteurs économiques, permettant de compléter les brevets pour mesurer la façon dont les entreprises exploitent l'intelligence artificielle pour développer de nouveaux biens et services. Une exploration empirique d'entreprises italiennes montre comment ces données peuvent être utilisées à différents niveaux d'analyse pour étudier le développement et la diffusion de l'intelligence artificielle.</description>
-    </item>
-    <item>
-      <title>Econometrics with Pre-Trained Embeddings for Unstructured Data</title>
-      <link>https://arxiv.org/abs/2607.17378v1</link>
-      <guid isPermaLink="false">arxiv-2607.17378v1</guid>
-      <pubDate>2026-07-19</pubDate>
-      <description>L'utilisation en économie de représentations vectorielles (*embeddings*) issues de modèles d'apprentissage profond pré-entraînés pose des défis théoriques majeurs dus aux différences de tâches d'entraînement et aux problèmes d'identification de la fonction de plongement. Cet article fournit des conditions suffisantes pour surmonter ces défis théoriques, dérive la vitesse de convergence des modèles d'apprentissage automatique intégrant des plongements pré-entraînés et illustre la théorie par des applications d'apprentissage automatique double.</description>
-    </item>
-    <item>
-      <title>Algorithmic Intermediation and the International Transmission of U.S. Monetary Policy</title>
-      <link>https://arxiv.org/abs/2607.15385v1</link>
-      <guid isPermaLink="false">arxiv-2607.15385v1</guid>
-      <pubDate>2026-07-16</pubDate>
-      <description>Ce papier montre que le mimétisme algorithmique amplifie les sorties de capitaux des marchés émergents après un choc de politique monétaire américaine uniquement en période de forte volatilité, en raison de la similitude des modèles d'investissement. À partir des flux de portefeuilles d'actions vers dix-neuf marchés émergents de 2000 à 2024, les résultats indiquent que les politiques publiques doivent préserver la diversité des modèles plutôt que de limiter la taille de l'intermédiation non bancaire.</description>
-    </item>
-    <item>
-      <title>Higher utilisation explains the recent surge in productivity growth</title>
-      <link>https://cepr.org/voxeu/columns/higher-utilisation-explains-recent-surge-productivity-growth</link>
-      <guid isPermaLink="false">voxeu-higher-utilisation-explains-recent-surge-productivity-growth</guid>
-      <pubDate>2026-07-15</pubDate>
-      <description>Aux États-Unis, la production par heure a augmenté d'environ 2,5 % par an entre la fin de 2022 et le début de 2026, dépassant de 1 point de pourcentage son rythme d'avant la pandémie. Cette accélération de la productivité s'explique principalement par une utilisation plus intensive du travail et du capital déjà en place, l'intelligence artificielle y ayant contribué par une forte demande et une incertitude accrue plutôt que par des gains d'efficacité.</description>
-    </item>
-    <item>
-      <title>Adaptive Ad Load Design for Sponsored Search Markets: Evidence, Theory, and Deployment</title>
-      <link>https://arxiv.org/abs/2607.14418v1</link>
-      <guid isPermaLink="false">arxiv-2607.14418v1</guid>
-      <pubDate>2026-07-15</pubDate>
-      <description>Un essai randomisé à grande échelle sur un magasin d'applications Android montre que l'augmentation du nombre d'emplacements publicitaires accroît les revenus jusqu'à 43 %, mais réduit les conversions de recherche jusqu'à 5 % et l'engagement quotidien jusqu'à 2,2 %. Pour optimiser cet arbitrage fortement hétérogène selon les requêtes, un algorithme adaptatif nommé e-LAAL a été déployé auprès de 22,3 millions d'utilisateurs et sur 77,6 millions de recherches, améliorant le compromis entre revenus et conversions par rapport aux références statiques.</description>
-    </item>
-    <item>
-      <title>Perturbed utility Markovian traffic equilibrium: theory and computation</title>
-      <link>https://arxiv.org/abs/2607.09568v1</link>
-      <guid isPermaLink="false">arxiv-2607.09568v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>L'article développe un cadre d'équilibre marcovien à utilité perturbée pour l'affectation du trafic à grande échelle, capable d'attribuer des flux nuls aux tronçons peu attractifs sans imposer de restriction préalable sur l'ensemble des choix. Formulé sous la forme d'une inégalité variationnelle sur l'espace des coûts duaux, ce modèle garantit l'existence et l'unicité de l'équilibre pour des structures de coûts non séparables et asymétriques, tout en introduisant une méthode d'itération sur les politiques modifiée pour son calcul.</description>
-    </item>
-    <item>
-      <title>Deep Learning for Dynamic Programming with Recursive Utility Using First-order Conditions</title>
-      <link>https://arxiv.org/abs/2607.09461v1</link>
-      <guid isPermaLink="false">arxiv-2607.09461v1</guid>
-      <pubDate>2026-07-10</pubDate>
-      <description>L'article présente l'algorithme CEFOL, une méthode d'apprentissage profond conçue pour la programmation dynamique en temps discret à utilité récursive qui utilise des réseaux de neurones pour représenter l'équivalent certain, la fonction de valeur, les règles de décision et les multiplicateurs de Lagrange. En s'appuyant sur les conditions d'optimalité du premier ordre et de Karush-Kuhn-Tucker, cet algorithme intègre directement les contraintes d'inégalité sans fonction de pénalité et affiche des résidus d'optimalité hors échantillon compris entre 1,0e-4 et 1,0e-3 sur des modèles d'épargne et des modèles DSGE.</description>
     </item>
   </channel>
 </rss>

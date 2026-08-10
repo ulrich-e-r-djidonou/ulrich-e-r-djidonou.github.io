@@ -1,5 +1,115 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35574-fromrss",
+    "titre": "AI Financial Advice: Supply, Demand, and Life Cycle Implications",
+    "url": "https://www.nber.org/papers/w35574#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-10",
+    "resume_fr": "En simulant les effets à long terme des conseils financiers générés par GPT-5.2 pour un échantillon représentatif, l'étude montre que suivre ces recommandations oriente les individus vers la théorie du cycle de vie, à travers une participation accrue aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus élevées. Bien que ces conseils varient selon la culture financière, l'expérience préalable en IA et le genre, deux tiers des écarts de part d'actions selon le sexe découlent des requêtes rédigées par les utilisateurs et un tiers de l'attribution d'étiquettes de genre à des requêtes identiques.",
+    "angle_eco": "L'évaluation des conseils financiers générés par l'intelligence artificielle montre que leur suivi rapproche les comportements d'épargne et d'investissement des prédictions de la théorie du cycle de vie, les divergences de recommandations selon le genre découlant aux deux tiers de la formulation des requêtes par les utilisateurs et pour un tiers de l'étiquetage de genre appliqué par le modèle.",
+    "themes": [
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 6,
+    "auteurs": "Taha Choukhmane, Tim de Silva, Weidong Lin, Matthew Akuzawa",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35586-fromrss",
+    "titre": "Staged Access and Liability for Dual-Use Artificial Intelligence",
+    "url": "https://www.nber.org/papers/w35586#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-10",
+    "resume_fr": "L'étude montre que la responsabilité d'un développeur d'intelligence artificielle à double usage incite l'adversaire à intensifier sa recherche de failles logicielles, tandis que l'accès échelonné neutralise cette réaction stratégique, ce qui rend la responsabilité et l'accès échelonné complémentaires. Comme la recherche défensive consomme des ressources réelles et que la responsabilité financière ne permet pas d'imposer la date de sortie souhaitée par le régulateur, le taux de responsabilité optimal peut être inférieur à l'internalisation totale des dommages et doit s'accompagner d'un mandat temporel distinct.",
+    "angle_eco": "L'association de l'accès échelonné et de la responsabilité légale des développeurs d'intelligence artificielle à double usage permet de neutraliser la réponse stratégique des adversaires cherchant des failles, ce qui nécessite d'imposer un calendrier de sortie réglementé aux côtés d'une responsabilité financière partielle pour optimiser des efforts de défense coûteux.",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 3,
+    "auteurs": "Joshua S. Gans",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35588-fromrss",
+    "titre": "AI Agents and Prompt Engineering in Econometric Coding",
+    "url": "https://www.nber.org/papers/w35588#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-10",
+    "resume_fr": "L'étude évalue la génération de code économétrique par les grands modèles de langage et montre que le passage d'un simple agent conversationnel à un agent contraint augmente le taux de réussite des tâches de 74 à 96 %, pour un coût supplémentaire d'environ huit centimes par exécution. Pour les modèles Claude Sonnet 4.6 et GPT-5.4, l'incitation par quelques exemples et l'autonomie fonctionnent comme des substituts, tandis que les différences de performance selon le logiciel statistique disparaissent en grande partie avec l'agent contraint.",
+    "angle_eco": "Passer d'un simple agent conversationnel à un agent d'intelligence artificielle capable d'exécuter et de réviser son propre code fait passer le taux de réussite des tâches de codage économétrique de 74 à 96 % pour environ huit centimes supplémentaires par exécution, tout en faisant largement disparaître les différences de performance entre les logiciels statistiques.",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 9,
+    "auteurs": "Sebastian Galiani, Federico Ariel López, Raul A. Sosa",
+    "signal": true,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "voxeu-eu-columns-ai-feedback-loops-and-conditions-explosive-growth",
+    "titre": "AI feedback loops and the conditions for explosive growth",
+    "url": "https://cepr.org/voxeu/columns/ai-feedback-loops-and-conditions-explosive-growth",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-08-09",
+    "resume_fr": "Ce papier présente un cadre d'analyse selon lequel l'utilisation de l'intelligence artificielle pour développer ses propres modèles futurs pourrait engendrer une explosion de l'intelligence et accélérer le progrès technologique par des boucles de rétroaction. Si le seuil de déclenchement d'une croissance explosive selon la part du travail, les rendements de la recherche et l'automatisation des tâches apparaît surprenamment bas, sa concrétisation dépendra des goulets d'étranglement humains, des contraintes physiques de calcul et du rythme d'automatisation.",
+    "angle_eco": "Les boucles de rétroaction issues de l'utilisation de l'intelligence artificielle pour concevoir ses futurs modèles pourraient engendrer une croissance économique explosive, une dynamique dont la réalisation dépend de la part du travail, du rendement de la recherche et du degré d'automatisation des tâches, tout en se heurtant à des contraintes physiques de calcul et à des goulets d'étranglement humains.",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 3,
+    "auteurs": "",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "arxiv-2608.07418v1",
+    "titre": "ResidencyRL: Reinforcement Learning in Simulated Clinical Environments",
+    "url": "https://arxiv.org/abs/2608.07418v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "resume_fr": "La méthode ResidencyRL utilise l'apprentissage par renforcement pour entraîner des agents d'intelligence artificielle clinique au travers de simulations de consultations médicales interactives. Lors des évaluations, cet entraînement améliore la précision diagnostique de 7,0 % en conditions adverses, réduit de 31 % le taux de signaux d'alerte manqués et obtient la préférence des cliniciens experts dans 87,6 % des comparaisons à l'aveugle.",
+    "angle_eco": "L'apprentissage par renforcement appliqué à des simulations d'interactions cliniques complexes permet d'optimiser la prise de décision médicale séquentielle sous incertitude, améliorant ainsi la précision diagnostique et la sécurité des soins.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "auteurs": "Valentin Liévin, Samuel Schmidgall, Tim Strother, Alex Bijamov, Akshay Goel, Anil Palepu, Chunjong Park, Vahid Balazadeh, Min Woo Sun, Marius Guerard, Justin Chen, Dave Steiner, Vikram Dhillon, Ibrahim Azar, Akhil Mehta, Nicholas Spetsieris, Shilpan Shah, Maen Abdelrahim, Amit Dahiya, Yun Liu, Katherine Chou, Yossi Matias, Avinatan Hassidim, Dale R. Webster, Quoc V. Le, Raia Hadsell, Joelle Barral, Carey Radebaugh, Aleksandra Faust, Shekoofeh Azizi, Mike Schaekermann, Po-Hsuan Cameron Chen, Tao Tu, David Racz, Lin Yang",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "arxiv-2608.07193v1",
+    "titre": "An AI4AI Framework for Visual Token Pruning",
+    "url": "https://arxiv.org/abs/2608.07193v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "resume_fr": "Afin de réduire le coût d'inférence des grands modèles de langage multimodaux, cette étude présente AutoPrune, un cadre sans entraînement qui permet aux modèles de langage de concevoir automatiquement des règles d'élagage de jetons visuels. Ce système s'appuie sur un langage spécifique composé de 131 atomes réutilisables représentant chaque état de recherche comme une modification résiduelle d'une politique de base performante.",
+    "angle_eco": "L'automatisation de la conception des politiques d'élagage de jetons visuels par des modèles de langage permet de réduire les coûts d'inférence des grands modèles multimodaux en remplaçant le tâtonnement manuel coûteux par un langage structuré qui restreint l'espace de recherche.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "auteurs": "Zhen Liu, Wenli Huang, Wei Song, Yuhan Liu, Zhiqin Yang, Jingwen Fu",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35546-fromrss",
     "titre": "Time Travel on Professional Profiles",
     "url": "https://www.nber.org/papers/w35546#fromrss",
@@ -124,7 +234,7 @@
     ],
     "score": 8,
     "auteurs": "Mar Carpanelli, Jedrzej Duszynski, Fabian Stephany",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash"
   },
   {

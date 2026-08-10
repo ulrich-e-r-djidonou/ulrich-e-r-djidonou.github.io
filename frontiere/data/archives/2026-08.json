@@ -1,5 +1,342 @@
 [
   {
+    "id": "arxiv-2608.07400v1",
+    "titre": "FinRank: An Evidence-Grounded Benchmark for Financial Question Answering and Retrieval over SEC Filings",
+    "url": "https://arxiv.org/abs/2608.07400v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Sasan Mansouri, Daniel Saad, Mark Wahrenburg, Manu Weissel, Fabian Woebbeking",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07251v1",
+    "titre": "Reading Copom's Tone: A Weighted LLM Framework for Hawkish-Dovish Sentiment, Forward Guidance, and Uncertainty",
+    "url": "https://arxiv.org/abs/2608.07251v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "llm",
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 2,
+    "auteurs": "Gabriel de Macedo Santos",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07208v1",
+    "titre": "Measuring Concept Content in Text from LLM Activations: ESG Evidence from Concept Vectors and Linear Probes",
+    "url": "https://arxiv.org/abs/2608.07208v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "llm",
+      "donnees"
+    ],
+    "score": 0,
+    "auteurs": "Luc Hazenoot, Zhaochun Ren, Amirhossein Zohrehvand",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07162v1",
+    "titre": "Estimating and Testing Kinks in Panel Data Models",
+    "url": "https://arxiv.org/abs/2608.07162v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "outils-recherche",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Yousef Kaddoura",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07011v1",
+    "titre": "Linguistic Pattern Based Optimization of Economic and Spatial Uniformity Criteria in Facility Layout Problems",
+    "url": "https://arxiv.org/abs/2608.07011v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "auteurs": "Jerzy Grobelny, Rafał Michalski",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.06842v1",
+    "titre": "Tabular Foundation Models and the Unity of Economic Behaviour",
+    "url": "https://arxiv.org/abs/2608.06842v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "prevision"
+    ],
+    "score": 1,
+    "auteurs": "Victor H. Aguiar",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07433v1",
+    "titre": "Wasserstein Policy Gradient for Entropy-Regularized Linear-Quadratic Control",
+    "url": "https://arxiv.org/abs/2608.07433v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "auteurs": "Zhaoyu Zhu, Rui Gao, Shuang Li",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07423v1",
+    "titre": "Cloud-Boosted Low-Compute Multi-Channel Speech Enhancement",
+    "url": "https://arxiv.org/abs/2608.07423v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "auteurs": "Xulin Fan, Juan Azcarreta, Ashutosh Pandey, Jesus Alvarez, Ke Tan, Jacob Donley, Ritwik Giri, Buye Xu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07393v1",
+    "titre": "FedDOSE: Federated Learning Framework Decomposing Site Effects for Modeling Brain Dynamic Functional Connectivity",
+    "url": "https://arxiv.org/abs/2608.07393v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "auteurs": "Deepank Girish, Yi Hao Chan, Yubin Zheng, Sukrit Gupta, Jagath C. Rajapakse",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07335v1",
+    "titre": "Aftab: A Comprehensive Benchmark of CNN Encoders and Advanced Value Functions in Parallelized Q-Networks",
+    "url": "https://arxiv.org/abs/2608.07335v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "auteurs": "Taha Shieenavaz, Shabnam Zareshahraki, Loris Nanni",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07301v1",
+    "titre": "From Optimal Actions to World Models: Identifiability of Transition Kernels in Discounted MDPs",
+    "url": "https://arxiv.org/abs/2608.07301v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "auteurs": "Neal Batra",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07283v1",
+    "titre": "Grammar Engineering Meets LLMs: Development of Cantonese and Irish ParGram Treebanks",
+    "url": "https://arxiv.org/abs/2608.07283v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 2,
+    "auteurs": "Chit-Fung Lam, Elaine Uí Dhonnchadha",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07274v1",
+    "titre": "TOFD: Target-Oriented Feature Decoupling against Poisoning Attacks in Split Federated Learning",
+    "url": "https://arxiv.org/abs/2608.07274v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "auteurs": "Yuhan Xie, Jingrong Huang, Chen Lyu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07228v1",
+    "titre": "Learning Suffers More Than the Policy Class Under Partial Observability: A Closed-Form Analysis",
+    "url": "https://arxiv.org/abs/2608.07228v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 1,
+    "auteurs": "Idil Gözel",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07213v1",
+    "titre": "From Test-Time Scaling to Reusable Memory: Measuring Crystallization in Text-to-SQL",
+    "url": "https://arxiv.org/abs/2608.07213v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 0,
+    "auteurs": "Jiaqian Wang, Yutao Qi, Wenjin Hou, Yuanxi Che, Muning Wen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.07180v1",
+    "titre": "Momba: Network Modernization Improves Multi-Objective Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2608.07180v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "themes": [],
+    "score": 2,
+    "auteurs": "Adam Štafa, Santeri Heiskanen, Petr Novotný, Joni Pajarinen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.06584v1",
+    "titre": "Two Types of Tertiarization: Household Demand, Production Networks, and the Rise of Services",
+    "url": "https://arxiv.org/abs/2608.06584v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-06",
+    "themes": [
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Li Gan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.06528v1",
+    "titre": "Capacity Markets for Large Loads under Supply-Chain Constraints",
+    "url": "https://arxiv.org/abs/2608.06528v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-06",
+    "themes": [
+      "inference-causale",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Tong Liu, Jacob Mays",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.06134v1",
+    "titre": "Large-Market Discipline in Combinatorial Double Auctions: No Assembly, Bundle Selection, and Complementarities",
+    "url": "https://arxiv.org/abs/2608.06134v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-06",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "auteurs": "Konstantinos E. Zachariadis, Yongxin Yang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.06116v1",
+    "titre": "Bartlett Couplings of the Onion and Vine LKJ Samplers",
+    "url": "https://arxiv.org/abs/2608.06116v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-06",
+    "themes": [],
+    "score": 0,
+    "auteurs": "Peter Reinhard Hansen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.06053v1",
+    "titre": "Fixed-Effect Saturation Is Not Weak Identification: Certifying Inference under Measurement Error",
+    "url": "https://arxiv.org/abs/2608.06053v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-06",
+    "themes": [
+      "inference-causale",
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Stanisław M. S. Halkiewicz",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.05676v1",
+    "titre": "Risk in a Data-Rich Model",
+    "url": "https://arxiv.org/abs/2608.05676v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-06",
+    "themes": [
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Dario Caldara, Haroon Mumtaz, Molin Zhong",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.05636v1",
+    "titre": "Benefits of Shifting Passenger Traffic from Air to Rail: A Case Study of California High-Speed Rail",
+    "url": "https://arxiv.org/abs/2608.05636v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-06",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "auteurs": "Kaijing Ding, Lu Dai, Mark Hansen",
+    "signal": false
+  },
+  {
     "id": "arxiv-2608.05017v1",
     "titre": "Algorithm-Driven SVARs: Navigating the Wilderness of Big Data",
     "url": "https://arxiv.org/abs/2608.05017v1",
@@ -344,6 +681,65 @@
     ],
     "score": 2,
     "auteurs": "Wenxiao Zhao, Dong Liu, Kaiyi Xu, Feng Liu, Zhen Zhao, Fei Ben, Shu Wang, Wenhao Li, Yingnian Wu, Fenghua Ling, Haobo Li, Lei Bai",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.06427v1",
+    "titre": "Adversarial Causal Intervention Falsification",
+    "url": "https://arxiv.org/abs/2608.06427v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-05",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "auteurs": "Mojtaba Eslami",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.04925v2",
+    "titre": "From Long to Short: How Interest Rates Shape Life Insurance Markets",
+    "url": "https://arxiv.org/abs/2608.04925v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-05",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Ziang Li, Derek Wenning",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.04631v2",
+    "titre": "Clustered Local Projections for Short and Ultra-Short Time Series -- A Hierarchical Bayesian Framework",
+    "url": "https://arxiv.org/abs/2608.04631v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-05",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "auteurs": "Todd Clark, Florian Huber",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.05211v1",
+    "titre": "Legal aid eligibility and court outcomes: a design-based double-machine-learning approach",
+    "url": "https://arxiv.org/abs/2608.05211v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-05",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "auteurs": "Fabio Italo Martinenghi",
     "signal": false
   },
   {
