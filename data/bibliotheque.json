@@ -116,13 +116,13 @@
   {
     "titre": "Anthropic/EconomicIndex (Hugging Face)",
     "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-    "categorie": "Datasets et indices",
+    "categorie": "Données",
     "description_fr": "Jeu de données ouvert par Anthropic classant les usages de Claude selon la taxonomie des tâches O*NET, utilisé pour mesurer l'exposition des métiers à l'IA."
   },
   {
     "titre": "awesome-ai-for-economists",
     "url": "https://github.com/hanlulong/awesome-ai-for-economists",
-    "categorie": "Datasets et indices",
+    "categorie": "Autres",
     "description_fr": "Liste organisée d'outils, de librairies et de ressources IA transformant la recherche, l'enseignement et l'analyse de politiques en économie."
   }
 ]
