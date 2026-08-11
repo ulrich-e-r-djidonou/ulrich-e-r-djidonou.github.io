@@ -59,6 +59,41 @@ class SeparerTitreAuteursTests(unittest.TestCase):
         self.assertEqual(auteurs, "")
 
 
+class SeparerAuteursAvantDoubleBrTests(unittest.TestCase):
+    def test_extrait_les_auteurs_et_le_reste_du_resume(self):
+        auteurs, reste = collect.separer_auteurs_avant_double_br(
+            '<a href="https://x.invalid">Alice Martin</a>, Bob Roy'
+            "<br /><br />Le resume commence ici."
+        )
+        self.assertEqual(auteurs, "Alice Martin, Bob Roy")
+        self.assertEqual(reste, "Le resume commence ici.")
+
+    def test_variante_sans_espace_entre_les_deux_br(self):
+        auteurs, reste = collect.separer_auteurs_avant_double_br(
+            "Alice Martin<br/><br/>Resume."
+        )
+        self.assertEqual(auteurs, "Alice Martin")
+        self.assertEqual(reste, "Resume.")
+
+    def test_motif_absent_renvoie_auteurs_vide_et_le_resume_entier(self):
+        auteurs, reste = collect.separer_auteurs_avant_double_br("Un resume sans auteurs.")
+        self.assertEqual(auteurs, "")
+        self.assertEqual(reste, "Un resume sans auteurs.")
+
+
+class AuteursNatifsFeedparserTests(unittest.TestCase):
+    def test_champ_authors_prefere_au_champ_author(self):
+        entree = {"author": "ignore", "authors": [{"name": "Alice Martin, Bob Roy"}]}
+        self.assertEqual(collect.auteurs_natifs_feedparser(entree), "Alice Martin, Bob Roy")
+
+    def test_repli_sur_le_champ_author_si_authors_absent(self):
+        entree = {"author": "Alice Martin"}
+        self.assertEqual(collect.auteurs_natifs_feedparser(entree), "Alice Martin")
+
+    def test_aucun_champ_auteur_renvoie_chaine_vide(self):
+        self.assertEqual(collect.auteurs_natifs_feedparser({}), "")
+
+
 class NettoyerAbstractJatsTests(unittest.TestCase):
     def test_retire_le_titre_abstract_et_les_balises(self):
         brut = "<jats:title>Abstract</jats:title><jats:p>Le texte &amp; la suite.</jats:p>"
@@ -209,12 +244,41 @@ class CollecterRssNberTests(unittest.TestCase):
         self.assertEqual(resultat[0]["type"], "papier")
         self.assertIsNotNone(resultat[0]["date_publication"])
 
-    def test_balises_adjacentes_sans_espace_ne_collent_pas_les_mots(self):
-        """Cas reel du flux de la Fed : la liste d'auteurs et le resume sont
-        separes par « </a><br /><br /> », sans aucun espace autour. Une
-        balise retiree en la remplacant par du vide colle alors le dernier
-        nom d'auteur au premier mot du resume."""
-        source = {"id": "fed", "nom": "Fed", "url": "https://example.invalid/rss.xml"}
+    def test_auteurs_avant_double_br_extraits_du_resume(self):
+        """Cas reel du flux de la Fed : la liste d'auteurs precede le
+        resume, separee par « </a><br /><br /> », sans aucun espace autour.
+        Avec auteurs_avant_double_br, le segment doit devenir le champ
+        auteurs, pas rester colle au debut de l'abstract (regression du
+        2026-08-11 : 1 item sur 45 sans auteur affiche dans La Frontiere)."""
+        source = {
+            "id": "fed",
+            "nom": "Fed",
+            "url": "https://example.invalid/rss.xml",
+            "auteurs_avant_double_br": True,
+        }
+        flux_simule = SimpleNamespace(
+            bozo=False,
+            entries=[
+                {
+                    "title": "Un papier",
+                    "summary": (
+                        '<a href="https://example.invalid/a">Alice Martin</a>, Bob Roy'
+                        "<br /><br />Despite documented heterogeneity..."
+                    ),
+                    "link": "https://example.invalid/papier",
+                }
+            ],
+        )
+        with patch.object(collect.requests, "get", return_value=self._reponse()), \
+             patch.object(collect.feedparser, "parse", return_value=flux_simule):
+            resultat = collect.collecter_rss(source)
+        self.assertEqual(resultat[0]["auteurs"], "Alice Martin, Bob Roy")
+        self.assertEqual(resultat[0]["abstract"], "Despite documented heterogeneity...")
+
+    def test_sans_auteurs_avant_double_br_le_resume_reste_entier(self):
+        """Sans le drapeau active pour la source, le comportement d'avant
+        est preserve : aucune balise ne colle deux mots ensemble."""
+        source = {"id": "bce", "nom": "BCE", "url": "https://example.invalid/rss.xml"}
         flux_simule = SimpleNamespace(
             bozo=False,
             entries=[
@@ -231,9 +295,32 @@ class CollecterRssNberTests(unittest.TestCase):
         with patch.object(collect.requests, "get", return_value=self._reponse()), \
              patch.object(collect.feedparser, "parse", return_value=flux_simule):
             resultat = collect.collecter_rss(source)
+        self.assertEqual(resultat[0]["auteurs"], "")
         self.assertEqual(
             resultat[0]["abstract"], "Alice Martin Despite documented heterogeneity..."
         )
+
+    def test_auteurs_natifs_feedparser_utilises_a_defaut_dautre_source(self):
+        """Cas reel de VoxEU/CEPR : ni separateur dans le titre, ni double
+        saut de ligne dans le resume, mais feedparser expose deja les
+        auteurs (balise <author> ou <dc:creator> du flux d'origine)."""
+        source = {"id": "voxeu", "nom": "VoxEU / CEPR", "url": "https://example.invalid/rss.xml"}
+        flux_simule = SimpleNamespace(
+            bozo=False,
+            entries=[
+                {
+                    "title": "Un article",
+                    "summary": "Ce papier etudie...",
+                    "link": "https://example.invalid/article",
+                    "author": "Alessandro Caiumi, Giovanni Peri",
+                    "authors": [{"name": "Alessandro Caiumi, Giovanni Peri"}],
+                }
+            ],
+        )
+        with patch.object(collect.requests, "get", return_value=self._reponse()), \
+             patch.object(collect.feedparser, "parse", return_value=flux_simule):
+            resultat = collect.collecter_rss(source)
+        self.assertEqual(resultat[0]["auteurs"], "Alessandro Caiumi, Giovanni Peri")
 
     def test_recupere_le_contenu_via_requests_plutot_que_feedparser(self):
         """feedparser ne doit plus aller chercher l'URL lui-meme : son propre

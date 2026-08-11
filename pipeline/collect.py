@@ -144,6 +144,37 @@ def separer_titre_auteurs(titre, separateur):
     return partie_titre.strip(), partie_auteurs.strip()
 
 
+MOTIF_DOUBLE_BR = re.compile(r"<br\s*/?>\s*<br\s*/?>", re.IGNORECASE)
+
+
+def separer_auteurs_avant_double_br(resume_brut):
+    """Le flux de la Fed place la liste d'auteurs avant le resume, separee
+    par un double saut de ligne HTML : « <a>Nom</a>, Nom2<br /><br />Resume ».
+    Renvoie (auteurs, reste_du_resume_brut) ; ("", resume_brut) si le motif
+    est absent, pour que l'appelant retombe sur le resume complet."""
+    correspondance = MOTIF_DOUBLE_BR.search(resume_brut)
+    if not correspondance:
+        return "", resume_brut
+    segment_auteurs = resume_brut[: correspondance.start()]
+    reste = resume_brut[correspondance.end():]
+    # Une balise fermante collee a une virgule (« </a>, Bob Roy ») laisse un
+    # espace parasite devant la ponctuation une fois la balise effacee.
+    auteurs = re.sub(r"<[^<]+?>", " ", segment_auteurs)
+    auteurs = re.sub(r"\s+([,.;:])", r"\1", auteurs)
+    auteurs = re.sub(r"\s+", " ", auteurs).strip()
+    return auteurs, reste
+
+
+def auteurs_natifs_feedparser(entree):
+    """Auteurs tels que feedparser les expose nativement (balise <author> ou
+    <dc:creator> du flux d'origine). VoxEU/CEPR les fournit ainsi ; aucune
+    config par source n'est necessaire, feedparser les normalise deja."""
+    noms = [a.get("name", "") for a in entree.get("authors", []) if a.get("name")]
+    if noms:
+        return ", ".join(noms)
+    return entree.get("author") or ""
+
+
 def collecter_rss(source):
     items = []
     # feedparser recupere lui-meme l'URL par defaut (via urllib), dont le
@@ -160,15 +191,24 @@ def collecter_rss(source):
 
     for entree in flux.entries:
         titre = entree.get("title", "").strip()
+        resume_brut = entree.get("summary", "")
+        # Ordre de priorite pour les auteurs : (1) segment avant un double
+        # saut de ligne HTML, cas de la Fed ; (2) suffixe du titre apres un
+        # separateur configure, cas de NBER ; (3) champ auteur natif de
+        # feedparser, cas de VoxEU. Le premier qui donne un resultat gagne.
+        auteurs_resume, resume_brut = (
+            separer_auteurs_avant_double_br(resume_brut)
+            if source.get("auteurs_avant_double_br")
+            else ("", resume_brut)
+        )
         # Une balise remplacee par du vide peut coller deux mots ensemble :
-        # le flux de la Fed separe la liste d'auteurs du resume par
-        # « </a><br /><br /> », sans aucun espace autour. Chaque balise est
-        # donc remplacee par un espace, puis les espaces multiples sont
-        # reduits a un seul.
-        resume = re.sub(r"\s+", " ", re.sub("<[^<]+?>", " ", entree.get("summary", ""))).strip()
+        # chaque balise est donc remplacee par un espace, puis les espaces
+        # multiples sont reduits a un seul.
+        resume = re.sub(r"\s+", " ", re.sub("<[^<]+?>", " ", resume_brut)).strip()
         lien = entree.get("link", "")
         date_pub = parser_date_rss(entree)
-        titre, auteurs = separer_titre_auteurs(titre, source.get("separateur_auteurs"))
+        titre, auteurs_titre = separer_titre_auteurs(titre, source.get("separateur_auteurs"))
+        auteurs = auteurs_resume or auteurs_titre or auteurs_natifs_feedparser(entree)
 
         if date_pub is None and source.get("date_repli") == "collecte":
             # Le flux « new » de NBER ne porte aucune date. Les items y sont
