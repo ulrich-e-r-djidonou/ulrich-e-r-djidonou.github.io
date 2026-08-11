@@ -73,65 +73,6 @@
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "@id": "https://djidonou.com/#faq",
-      "inLanguage": "fr",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Que fait un économiste au juste?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Un économiste traduit une question économique ou institutionnelle en un problème mesurable, puis y répond avec des données : économétrie, inférence causale, prévision, machine learning. Le résultat prend la forme d'une évaluation, d'un indicateur, d'un modèle ou d'un dashboard utilisable pour décider. Dans la pratique, cette analyse est souvent contrainte par la disponibilité des données et exige de l'intuition économique, de la théorie et un travail de données rigoureux avant toute interprétation : les limites des données déterminent souvent quelles questions peuvent réellement recevoir une réponse."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels sont les parcours de carrière en économie?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Une bonne synthèse existe déjà : What Economists Do, A Practical Map of Careers, Training, and PhD Pathways, d'Abdoulaye Ndiaye (New York University), mis à jour le 28 décembre 2025. D'autres références utiles sont réunies dans les ressources."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Qu'est-ce que l'ICIE et comment mesure-t-il l'incertitude économique au Canada?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "L'ICIE est un indice canadien d'incertitude économique construit à partir des volumes de recherche Google Trends. Il est accompagné de tests de sensibilité et d'une validation externe, et il est consultable dans un dashboard public."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels outils utilisez-vous pour vos analyses?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Principalement Python, R, Stata et SQL pour l'analyse et l'économétrie, des modèles de machine learning comme XGBoost, des méthodes de prévision comme ARIMA et Prophet, Power BI ou des pages web interactives pour les dashboards, et des outils d'IA comme Claude Code, Gemini, Codex, Ollama et Perplexity pour accélérer la recherche."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Travaillez-vous en français et en anglais?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, je travaille dans les deux langues. Ce site est en français et mes projets publics sur GitHub sont généralement documentés en français et/ou en anglais selon le projet."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Comment vous contacter?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Le plus simple est de passer par la page contact ou par LinkedIn. Je réponds volontiers aux questions sur mes projets, aux discussions de méthode et aux propositions de collaboration de recherche."
-          }
-        }
-      ]
-    }
-    </script>
-
     <link rel="stylesheet" href="/styles.css">
     <script>
       // Anciennes ancres de la version une-page : redirection vers la page dediee.
@@ -157,8 +98,8 @@
       </a>
       <nav aria-label="Navigation principale">
         <a href="/" aria-current="page">Accueil</a>
-        <a href="/projets.html">Projets</a>
         <a href="/parcours.html">Parcours</a>
+        <a href="/projets.html">Projets</a>
         <a href="/recherche.html">Recherche</a>
         <a href="/frontiere/">La Frontière</a>
         <a href="/ressources.html">Ressources</a>
@@ -176,9 +117,6 @@
             Économétrie et inférence causale, évaluation de politiques
             publiques, machine learning et IA appliquée.
           </p>
-          <div class="hero-actions">
-            <a class="button primary" href="/projets.html">Voir les projets</a>
-          </div>
         </div>
         <div class="hero-portrait">
           <img src="/assets/ulrich-djidonou-portrait.png" alt="Ulrich Djidonou" width="272" height="472">
@@ -193,17 +131,16 @@
         <p>
           Mon travail part d'une question pratique : quelle décision devient
           plus claire grâce aux données? Selon le problème, la réponse peut
-          prendre la forme d'une analyse de données (p. ex. données
+          prendre la forme d'une analyse descriptive de données (p. ex. données
           administratives, sondage), d'une <a href="/parcours.html#experience">évaluation de politique publique</a>,
-          d'une analyse économétrique, d'un dashboard, d'un modèle prédictif,
+          d'une analyse économétrique, d'un tableau de bord, d'un modèle prédictif,
           d'un pipeline de recherche ou d'une <a href="/frontiere/">veille automatisée</a>.
         </p>
         <p>
-          Cette méthode a nourri des décisions réelles. Pour en témoigner, par
-          exemple, mon travail de recherche a été reconnu par un conseil
-          d'administration pour sa rigueur, servant de fondement à la prise de
-          décision concernant l'évolution d'un régime public, la co-rédaction
-          d'un rapport déposé à l'Assemblée nationale du Québec et six
+          Cette méthode a nourri des décisions réelles : (1) mon travail de recherche, 
+          reconnu par un conseil d'administration pour sa rigueur, a servi de fondement à 
+          la prise de décision concernant l'évolution d'un régime public; (2) la co-rédaction 
+          d'un rapport déposé à l'Assemblée nationale du Québec; et (3) six 
           partenariats de recherche universitaires (voir le
           <a href="/parcours.html#experience">parcours</a>).
         </p>
@@ -212,7 +149,7 @@
           <span>Économétrie (p. ex. inférence causale)</span>
           <span>Machine learning</span>
           <span>IA appliquée</span>
-          <span>Dashboards</span>
+          <span>Tableaux de bord</span>
         </div>
       </section>
 
@@ -221,15 +158,15 @@
         <h2 id="projects-title">Projets d'analyses de données, de veille de la recherche, d'économétrie, et d'IA appliquée</h2>
         <div class="project-grid">
           <article class="project-card featured">
-            <img class="project-thumb" src="/assets/screenshots/icie.jpg" alt="Capture d'écran du dashboard ICIE" loading="lazy" width="960" height="540">
-            <p class="project-type">Indice et dashboard</p>
+            <img class="project-thumb" src="/assets/screenshots/icie.jpg" alt="Capture d'écran du tableau de bord ICIE" loading="lazy" width="960" height="540">
+            <p class="project-type">Indice et tableau de bord</p>
             <h3>ICIE<span class="sr-only">, indice canadien d'incertitude économique</span></h3>
             <p>
               Indice canadien d'incertitude économique fondé sur Google Trends,
-              avec tests de sensibilité, validation externe et dashboard public.
+              avec tests de sensibilité, validation externe et tableau de bord public.
             </p>
             <p class="project-etat">Données jusqu'au 2 août 2026</p>
-            <a href="https://ulrich-e-r-djidonou.github.io/icie-dashboard/">Ouvrir le dashboard</a>
+            <a href="https://ulrich-e-r-djidonou.github.io/icie-dashboard/">Ouvrir le tableau de bord</a>
           </article>
 
           <article class="project-card featured" id="carte-frontiere">
@@ -247,15 +184,15 @@
           </article>
 
           <article class="project-card featured">
-            <img class="project-thumb" src="/assets/screenshots/geoecon-pulse.jpg" alt="Capture d'écran du dashboard Geoecon Pulse" loading="lazy" width="960" height="540">
+            <img class="project-thumb" src="/assets/screenshots/geoecon-pulse.jpg" alt="Capture d'écran du tableau de bord Geoecon Pulse" loading="lazy" width="960" height="540">
             <p class="project-type">Intelligence économique</p>
             <h3>Geoecon Pulse<span class="sr-only">, veille géoéconomique mondiale</span></h3>
             <p>
-              Dashboard de veille géoéconomique mondiale couvrant Canada,
+              Tableau de bord de veille géoéconomique mondiale couvrant Canada,
               États-Unis, Chine, Inde et Monde avec mise à jour quotidienne.
             </p>
             <p class="project-etat" data-vivant>Mise à jour automatique, quotidienne</p>
-            <a href="https://djidonou.com/geoecon-pulse/">Ouvrir le dashboard</a>
+            <a href="https://djidonou.com/geoecon-pulse/">Ouvrir le tableau de bord</a>
           </article>
         </div>
         <p class="projects-more">
@@ -274,82 +211,9 @@
           <a href="/parcours.html#experience">mandat à l'autre</a>, la même
           <a href="/parcours.html#methode">méthode en quatre temps</a> :
           formuler la question, construire la preuve, rendre l'analyse
-          utilisable, expliquer les limites.
+          utilisable, communiquer de façon accessible ce que le résultat montre,
+          ce qu'il ne montre pas, et ce qu'il permet de décider.
         </p>
-      </section>
-
-      <section id="faq" class="faq positioning" aria-labelledby="faq-title">
-        <div class="section-kicker">FAQ</div>
-        <h2 id="faq-title">Questions fréquentes</h2>
-        <div class="faq-list">
-          <details>
-            <summary>Que fait un économiste au juste?</summary>
-            <p>
-              Un économiste traduit une question économique ou
-              institutionnelle en un problème mesurable, puis y répond avec des
-              données : économétrie, inférence causale, prévision, machine
-              learning. Le résultat prend la forme d'une évaluation, d'un
-              indicateur, d'un modèle ou d'un dashboard utilisable pour décider.
-            </p>
-            <p>
-              Dans la pratique, cette analyse est souvent contrainte par la
-              disponibilité des données et exige de l'intuition économique, de
-              la théorie et un travail de données rigoureux avant toute
-              interprétation : les limites des données déterminent souvent
-              quelles questions peuvent réellement recevoir une réponse.
-            </p>
-          </details>
-          <!-- Document tiers, rediffuse avec attribution visible a l'auteur.
-               Source originale : https://abdouecon.github.io/research/publicgoods/econ_advice.pdf -->
-          <details>
-            <summary>Quels sont les parcours de carrière en économie?</summary>
-            <p>
-              Une bonne synthèse existe déjà :
-              <a href="/assets/documents/what-economists-do.pdf">What Economists
-              Do, A Practical Map of Careers, Training, and PhD Pathways</a>,
-              d'Abdoulaye Ndiaye (New York University), mis à jour le 28
-              décembre 2025. D'autres références utiles sont réunies dans les
-              <a href="/ressources.html">ressources</a>.
-            </p>
-          </details>
-          <details>
-            <summary>Qu'est-ce que l'ICIE et comment mesure-t-il l'incertitude économique au Canada?</summary>
-            <p>
-              L'ICIE est un indice canadien d'incertitude économique construit à
-              partir des volumes de recherche Google Trends. Il est accompagné
-              de tests de sensibilité et d'une validation externe, et il est
-              consultable dans un <a href="https://ulrich-e-r-djidonou.github.io/icie-dashboard/">dashboard public</a>.
-            </p>
-          </details>
-          <details>
-            <summary>Quels outils utilisez-vous pour vos analyses?</summary>
-            <p>
-              Principalement Python, R, Stata et SQL pour l'analyse et
-              l'économétrie, des modèles de machine learning comme XGBoost, des
-              méthodes de prévision comme ARIMA et Prophet, Power BI ou des
-              pages web interactives pour les <a href="/projets.html">dashboards</a>,
-              et des outils d'IA comme Claude Code, Gemini, Codex, Ollama et
-              Perplexity pour accélérer la recherche.
-            </p>
-          </details>
-          <details>
-            <summary>Travaillez-vous en français et en anglais?</summary>
-            <p>
-              Oui, je travaille dans les deux langues. Ce site est en français
-              et mes projets publics sur GitHub sont généralement documentés en
-              français et/ou en anglais selon le projet.
-            </p>
-          </details>
-          <details>
-            <summary>Comment vous contacter?</summary>
-            <p>
-              Le plus simple est de passer par la <a href="/contact.html">page
-              contact</a> ou par LinkedIn. Je réponds volontiers aux questions
-              sur mes projets, aux discussions de méthode et aux propositions de
-              collaboration de recherche.
-            </p>
-          </details>
-        </div>
       </section>
 
       <section id="contact" class="contact" aria-labelledby="contact-title">

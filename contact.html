@@ -26,8 +26,8 @@
       </a>
       <nav aria-label="Navigation principale">
         <a href="/">Accueil</a>
-        <a href="/projets.html">Projets</a>
         <a href="/parcours.html">Parcours</a>
+        <a href="/projets.html">Projets</a>
         <a href="/recherche.html">Recherche</a>
         <a href="/frontiere/">La Frontière</a>
         <a href="/ressources.html">Ressources</a>
@@ -81,7 +81,12 @@
           adresse n'est jamais partagée ni affichée ailleurs sur le site.
         </p>
 
-        <form id="contact-form" class="contact-form-card">
+        <noscript>
+          <p class="lead" style="margin-bottom: 1rem;">
+            <strong>Note :</strong> JavaScript est désactivé. Vous pouvez tout de même utiliser le formulaire (vous serez redirigé après l'envoi), ou m'écrire directement sur <a href="https://www.linkedin.com/in/ulrichdjidonou" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+          </p>
+        </noscript>
+        <form id="contact-form" class="contact-form-card" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="8b8cba2b-1103-4e35-bd26-015f77d46001">
           <input type="hidden" name="subject" value="Message depuis djidonou.com">
           <input type="hidden" name="from_name" value="djidonou.com">
