@@ -359,6 +359,7 @@ h1 {
    comme un accent decoratif plutot que comme une structure. */
 .experience-list {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2.25rem;
   margin-top: 2rem;
   padding-left: 1.5rem;
@@ -408,6 +409,7 @@ h1 {
 
 .publication-list {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2.25rem;
   margin-top: 2rem;
   padding-left: 1.5rem;
@@ -1073,7 +1075,10 @@ h1 {
   .project-grid,
   .evidence-list,
   .method ol {
-    grid-template-columns: 1fr;
+    /* minmax(0, 1fr), pas juste 1fr : sans le 0 explicite, la colonne
+       reprend le min-content de son contenu (ex. project-thumb) et deborde
+       horizontalement sous 620px au lieu de suivre la largeur disponible. */
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .contact {
@@ -1160,6 +1165,7 @@ h1 {
 }
 
 .distinction-figure figcaption {
+  min-width: 0;
   max-width: 34ch;
   color: var(--muted);
   font-size: var(--fs-xs);
