@@ -11,14 +11,6 @@ const SOCIAL_LINKS = {
   rss: "https://djidonou.com/frontiere/feed.xml",
 };
 
-// Adresse courriel jamais ecrite en clair dans le HTML : assemblee au clic.
-// Obfuscation legere anti-scraping, pas un chiffrement : le nom d'usager est
-// lui-meme fragmente pour qu'aucun scraper de code source ne trouve la
-// chaine complete en un seul morceau. Adresse de correspondance publique,
-// distincte de l'adresse personnelle.
-const MAIL_USER = ["ulrich.dji", "donou"].join("");
-const MAIL_DOMAIN = ["gmail", "com"].join(".");
-
 const SOCIAL_ICON_DEFS = [
   {
     key: "linkedin",
@@ -77,18 +69,6 @@ function renderSocialIcons(root) {
   });
 }
 
-function initMailButtons(root) {
-  const buttons = (root || document).querySelectorAll("[data-mail-button]");
-  buttons.forEach((button) => {
-    button.removeAttribute("hidden");
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      window.location.href = "mailto:" + MAIL_USER + "@" + MAIL_DOMAIN;
-    });
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   renderSocialIcons(document);
-  initMailButtons(document);
 });

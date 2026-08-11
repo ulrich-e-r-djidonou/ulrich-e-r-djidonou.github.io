@@ -302,7 +302,8 @@ h1 {
 .projects,
 .secondary-projects,
 .method,
-.contact {
+.contact,
+.contact-form {
   padding: 4.5rem 4rem;
 }
 
@@ -896,6 +897,95 @@ h1 {
   margin-top: 1.5rem;
 }
 
+/* Formulaire de contact (Web3Forms) : carte blanche sur fond papier,
+   coherente avec le reste du systeme (filet 1px, radius 6px, ombre carte). */
+.contact-form {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+
+.contact-form .lead {
+  margin-bottom: 2rem;
+}
+
+.contact-form-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  max-width: 34rem;
+  padding: 2rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 10px 24px var(--card-shadow);
+}
+
+.contact-form-card .form-field {
+  width: 100%;
+}
+
+/* Champ piege anti-bot : retire de la mise en page et du flux visuel, mais
+   reste dans le DOM pour les robots qui remplissent tout champ trouve. */
+.botcheck {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--muted);
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: var(--fs-2xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: var(--fs-base);
+}
+
+.form-field textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.form-field input:focus-visible,
+.form-field textarea:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+  border-color: var(--teal);
+}
+
+.form-status {
+  margin: 0;
+  min-height: 1.3em;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+
+.form-status[data-state="success"] {
+  color: var(--teal);
+}
+
+.form-status[data-state="error"] {
+  color: var(--amber-text);
+}
+
 .site-footer {
   display: flex;
   flex-wrap: wrap;
@@ -975,7 +1065,8 @@ h1 {
   .projects,
   .secondary-projects,
   .method,
-  .contact {
+  .contact,
+  .contact-form {
     padding: 3rem 1.25rem;
   }
 
