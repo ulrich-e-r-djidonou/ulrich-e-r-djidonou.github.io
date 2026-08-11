@@ -1,5 +1,9 @@
-"""Verifie que la FAQ visible d'index.html et le bloc FAQPage (JSON-LD) disent
-la meme chose, dans le meme ordre.
+"""Verifie que la FAQ visible de parcours.html et le bloc FAQPage (JSON-LD)
+disent la meme chose, dans le meme ordre.
+
+La FAQ vivait sur index.html jusqu'au 2026-08-11, date a laquelle elle a ete
+deplacee en fin de parcours.html. Le chemin surveille suit la FAQ : si elle
+demenage a nouveau, changer PAGE_FAQ ci-dessous, pas les tests.
 
 Un moteur de recherche affiche le contenu du bloc FAQPage tel quel dans les
 resultats enrichis, pas le HTML visible : s'ils divergent (question ajoutee
@@ -19,7 +23,7 @@ import unittest
 from pathlib import Path
 
 RACINE = Path(__file__).parent.parent
-INDEX = RACINE / "index.html"
+PAGE_FAQ = RACINE / "parcours.html"
 
 MOTIF_BLOC_JSONLD = re.compile(
     r'<script type="application/ld\+json"[^>]*>\s*(.*?)\s*</script>', re.DOTALL
@@ -38,7 +42,7 @@ def texte_sans_balises(fragment):
     return re.sub(r"\s+", " ", sans_balises).strip()
 
 
-def lire_faqpage_json(chemin=INDEX):
+def lire_faqpage_json(chemin=PAGE_FAQ):
     """Renvoie la liste (question, reponse) du bloc FAQPage, dans son ordre."""
     contenu = chemin.read_text(encoding="utf-8")
     for bloc in MOTIF_BLOC_JSONLD.findall(contenu):
@@ -51,7 +55,7 @@ def lire_faqpage_json(chemin=INDEX):
     raise AssertionError(f"{chemin.name} : aucun bloc FAQPage trouve")
 
 
-def lire_faq_visible(chemin=INDEX):
+def lire_faq_visible(chemin=PAGE_FAQ):
     """Renvoie la liste (question, reponse) affichee dans .faq-list, dans
     l'ordre d'affichage. Les balises (liens compris) sont retirees pour ne
     garder que le texte lu par le visiteur."""
