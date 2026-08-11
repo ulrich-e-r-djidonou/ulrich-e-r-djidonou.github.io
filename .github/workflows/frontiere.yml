@@ -57,6 +57,12 @@ jobs:
         # un lecteur automatise), pas juste un signal a surveiller.
         run: python -m pipeline.verifier_jsonld
 
+      - name: Verifier qu'aucune source n'a perdu tous ses auteurs
+        # Meme logique : une source dont 100% des items sont sans auteur
+        # signale une extraction cassee (voir pipeline/verifier_auteurs.py),
+        # pas un simple manque isole a documenter apres coup.
+        run: python -m pipeline.verifier_auteurs
+
       - name: Committer si changements
         run: |
           git config user.name "frontiere-bot"
