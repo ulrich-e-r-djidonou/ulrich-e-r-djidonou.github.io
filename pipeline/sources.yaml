@@ -115,6 +115,10 @@ sources:
     # Feed officiel liste sur https://www.federalreserve.gov/feeds/feeds.htm,
     # verifie le 5 aout 2026 (200, 15 entrees, resumes complets).
     url: "https://www.federalreserve.gov/feeds/working_papers.xml"
+    # Les auteurs precedent le resume dans le champ <summary>, separes par
+    # un double saut de ligne HTML : voir separer_auteurs_avant_double_br
+    # dans pipeline/collect.py.
+    auteurs_avant_double_br: true
     requiert_mot_cle_ia: true
     fenetre_jours: 30
     actif: true
@@ -125,6 +129,10 @@ sources:
     # Feed officiel liste sur https://www.ecb.europa.eu/home/html/rss.en.html,
     # verifie le 5 aout 2026 (200, 15 entrees, resumes complets).
     url: "https://www.ecb.europa.eu/rss/wppub.html"
+    # Pas d'auteurs disponibles : ni le flux (verifie le 2026-08-11, aucun
+    # champ auteur, titre et resume neutres), ni la page liee (l'URL pointe
+    # directement sur le PDF, pas de page HTML avec metadonnees a scraper).
+    # Les items de cette source restent donc sans auteur affiche.
     requiert_mot_cle_ia: true
     fenetre_jours: 30
     actif: true

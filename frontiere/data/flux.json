@@ -67,7 +67,7 @@
       "macro-finance"
     ],
     "score": 3,
-    "auteurs": "",
+    "auteurs": "Tom Davidson, Basil Halperin, Thomas Houlden, Anton Korinek",
     "signal": false,
     "llm": "gemini-3.6-flash"
   },
@@ -195,7 +195,7 @@
       "donnees"
     ],
     "score": 6,
-    "auteurs": "",
+    "auteurs": "Zsofia Barany, Aseem Patel, Christian Siegel",
     "signal": false,
     "llm": "gemini-3.6-flash"
   },
@@ -360,7 +360,7 @@
       "macro-finance"
     ],
     "score": 3,
-    "auteurs": "",
+    "auteurs": "Nicola Borri, Yukun Liu, Aleh Tsyvinski",
     "signal": false,
     "llm": "gemini-3.6-flash"
   },
@@ -781,7 +781,7 @@
       "donnees"
     ],
     "score": 3,
-    "auteurs": "",
+    "auteurs": "Hyung Joo Kim, Dong Hwan Oh",
     "signal": false,
     "llm": "gemini-3.6-flash"
   },
