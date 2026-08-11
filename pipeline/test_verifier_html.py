@@ -75,5 +75,12 @@ class SiteTests(unittest.TestCase):
                 self.assertEqual(verifier_html.verifier(page), [])
 
 
+class HookTests(unittest.TestCase):
+    def test_hook_present_dans_githooks_pas_dans_pipeline(self):
+        racine = verifier_html.RACINE
+        self.assertTrue((racine / ".githooks" / "pre-commit").exists())
+        self.assertFalse((racine / "pipeline" / "pre-commit").exists())
+
+
 if __name__ == "__main__":
     unittest.main()

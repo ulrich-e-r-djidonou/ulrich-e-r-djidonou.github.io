@@ -1,7 +1,7 @@
 #!/bin/sh
 # Verifie la structure HTML des pages modifiees avant de commiter.
-# Installation : cp pipeline/pre-commit .git/hooks/pre-commit
-#                chmod +x .git/hooks/pre-commit
+# Installation, une seule fois par clone local :
+#   git config core.hooksPath .githooks
 set -e
 
 pages=$(git diff --cached --name-only --diff-filter=ACM | grep '\.html$' || true)
