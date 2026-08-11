@@ -39,6 +39,7 @@ jobs:
             pipeline.test_verifier_workflows \
             pipeline.test_etat_projets \
             pipeline.test_faq_coherence \
+            pipeline.test_verifier_html \
             pipeline.benchmark.test_benchmark \
             --verbose
 

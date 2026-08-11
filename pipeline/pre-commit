@@ -1,0 +1,12 @@
+#!/bin/sh
+# Verifie la structure HTML des pages modifiees avant de commiter.
+# Installation : cp pipeline/pre-commit .git/hooks/pre-commit
+#                chmod +x .git/hooks/pre-commit
+set -e
+
+pages=$(git diff --cached --name-only --diff-filter=ACM | grep '\.html$' || true)
+if [ -z "$pages" ]; then
+    exit 0
+fi
+
+python -X utf8 -m pipeline.verifier_html $pages
