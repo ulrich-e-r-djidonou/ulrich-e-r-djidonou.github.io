@@ -1042,11 +1042,14 @@ h1 {
     scroll-behavior: auto;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 1ms !important;
-    transition-duration: 1ms !important;
+  /* Site n'a aucune keyframe animation : seules ces quatre regles ont une
+     transition. On les cible directement plutot que d'ecraser * en bloc,
+     pour que la regle reste lisible et intentionnelle. */
+  .button,
+  .project-card,
+  .project-card::before,
+  .social-icon {
+    transition-duration: 1ms;
   }
 }
 
