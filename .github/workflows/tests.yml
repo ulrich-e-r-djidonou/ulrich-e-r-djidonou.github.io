@@ -44,6 +44,7 @@ jobs:
             pipeline.test_etat_projets \
             pipeline.test_faq_coherence \
             pipeline.test_verifier_html \
+            pipeline.test_verifier_auteurs \
             pipeline.benchmark.test_benchmark \
             --verbose
 
