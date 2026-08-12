@@ -28,6 +28,23 @@
     recherche: "",
   };
 
+  // Second filet, apres celui de la collecte (pipeline/collect.py,
+  // lien_publiable) : les items deja publies dans flux.json ont ete collectes
+  // avant que ce filtre existe, et les archives ne sont jamais recollectees.
+  // Un href `javascript:` s'execute au clic ; renvoyer null fait afficher le
+  // titre sans lien plutot que d'armer le clic.
+  function lienSur(url) {
+    if (typeof url !== "string") return null;
+    try {
+      const analysee = new URL(url, window.location.href);
+      return analysee.protocol === "http:" || analysee.protocol === "https:"
+        ? url
+        : null;
+    } catch (erreur) {
+      return null;
+    }
+  }
+
   async function chargerJSON(chemin) {
     try {
       const reponse = await fetch(chemin, { cache: "no-store" });
@@ -71,12 +88,17 @@
     carte.appendChild(entete);
 
     const titre = document.createElement("h3");
-    const lien = document.createElement("a");
-    lien.href = entree.url;
-    lien.target = "_blank";
-    lien.rel = "noopener";
-    lien.textContent = entree.titre;
-    titre.appendChild(lien);
+    const url = lienSur(entree.url);
+    if (url) {
+      const lien = document.createElement("a");
+      lien.href = url;
+      lien.target = "_blank";
+      lien.rel = "noopener";
+      lien.textContent = entree.titre;
+      titre.appendChild(lien);
+    } else {
+      titre.textContent = entree.titre;
+    }
     carte.appendChild(titre);
 
     // Nom des auteurs affiche des que le champ est fourni (chaine, ex.
@@ -216,13 +238,18 @@
       return;
     }
     const titre = document.getElementById("signal-titre");
-    titre.innerHTML = "";
-    const lien = document.createElement("a");
-    lien.href = signal.url;
-    lien.target = "_blank";
-    lien.rel = "noopener";
-    lien.textContent = signal.titre;
-    titre.appendChild(lien);
+    titre.textContent = "";
+    const url = lienSur(signal.url);
+    if (url) {
+      const lien = document.createElement("a");
+      lien.href = url;
+      lien.target = "_blank";
+      lien.rel = "noopener";
+      lien.textContent = signal.titre;
+      titre.appendChild(lien);
+    } else {
+      titre.textContent = signal.titre;
+    }
     section.hidden = false;
   }
 

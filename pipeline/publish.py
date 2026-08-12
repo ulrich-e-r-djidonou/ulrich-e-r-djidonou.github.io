@@ -154,6 +154,21 @@ def generer_jsonld_flux(entrees):
     }
 
 
+def echapper_pour_balise_script(charge_utile):
+    """Neutralise le `<` d'un JSON destine a vivre entre <script> et </script>.
+
+    json.dumps n'echappe ni `<` ni `/`. Le titre d'un item vient tel quel du
+    flux RSS de la source (voir collect.py) : un titre contenant la chaine
+    </script> fermerait la balise et le reste passerait pour du HTML dans une
+    page servie sur djidonou.com. Le pipeline commite ce fichier deux fois par
+    semaine sans relecture humaine, donc le filtre est ici et non en aval.
+
+    \\u003c est un echappement JSON standard : un lecteur automatise (Google,
+    un LLM) relit exactement la meme valeur qu'avant.
+    """
+    return charge_utile.replace("<", "\\u003c")
+
+
 def injecter_jsonld_flux(donnees_jsonld, chemin_index=FRONTIERE_INDEX):
     """Ecrit le JSON-LD par item dans le script balise id="flux-jsonld"."""
     contenu = chemin_index.read_text(encoding="utf-8")
@@ -161,7 +176,9 @@ def injecter_jsonld_flux(donnees_jsonld, chemin_index=FRONTIERE_INDEX):
         r'(<script type="application/ld\+json" id="flux-jsonld">\s*).*?(\s*</script>)',
         re.DOTALL,
     )
-    charge_utile = json.dumps(donnees_jsonld, ensure_ascii=False, indent=2)
+    charge_utile = echapper_pour_balise_script(
+        json.dumps(donnees_jsonld, ensure_ascii=False, indent=2)
+    )
     contenu_modifie, nombre = motif.subn(
         lambda correspondance: (
             f"{correspondance.group(1)}{charge_utile}{correspondance.group(2)}"

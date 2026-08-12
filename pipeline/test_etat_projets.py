@@ -178,6 +178,26 @@ class AppliquerEtatsTests(unittest.TestCase):
         )
         self.assertIn('<p class="project-etat" data-vivant>Mise à jour automatique</p>', html)
 
+    def test_le_texte_distant_est_echappe(self):
+        """Le texte derive de JSON publie par des sites tiers et finit dans
+        projets.html sans relecture. Il ne doit pas pouvoir ouvrir de balise."""
+        html, _ = etat_projets.appliquer_etats(
+            self.page, {"icie": {"etat": "<img src=x onerror=alert(1)>"}}
+        )
+
+        self.assertNotIn("<img", html)
+        self.assertIn("&lt;img src=x onerror=alert(1)&gt;", html)
+
+    def test_l_apostrophe_francaise_reste_intacte(self):
+        """Garde-fou sur quote=False : echapper l'apostrophe rendrait pareil
+        mais salirait le diff de chaque etiquette."""
+        html, _ = etat_projets.appliquer_etats(
+            self.page, {"icie": {"etat": "Données jusqu'au 30 septembre 2026"}}
+        )
+
+        self.assertIn("jusqu'au", html)
+        self.assertNotIn("&#x27;", html)
+
     def test_une_carte_absente_est_signalee(self):
         # Sans ce signal, le JSON avancerait pendant que la page afficherait
         # une vieille date, exactement le mensonge que ce module evite.

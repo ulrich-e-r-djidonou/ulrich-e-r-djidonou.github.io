@@ -22,7 +22,14 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 RACINE = Path(__file__).parent.parent
-PAGES = [RACINE / "index.html", RACINE / "frontiere" / "index.html"]
+# faq.html ajoutee le 2026-08-12 : la regle FAQPage existait dans
+# CHAMPS_REQUIS mais aucune page listee ici n'en portait, donc elle ne
+# s'appliquait a rien. Le bloc vivait sur parcours.html, hors couverture.
+PAGES = [
+    RACINE / "index.html",
+    RACINE / "faq.html",
+    RACINE / "frontiere" / "index.html",
+]
 
 CHAMPS_REQUIS = {
     "WebSite": ["url", "name"],

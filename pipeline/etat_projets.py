@@ -37,6 +37,9 @@ import csv
 import json
 import re
 import sys
+# Le parametre local s'appelle deja `html` dans appliquer_etats : l'alias
+# evite de masquer le module au moment ou on en a besoin.
+from html import escape as echapper_html
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -184,7 +187,14 @@ def appliquer_etats(html, projets):
     """
     manquants = []
     for identifiant, etat in sorted(projets.items()):
-        texte = etat.get("etat", "")
+        # Le texte derive de JSON recupere sur des sites tiers (etat.json,
+        # dashboards) : il est tronque a 10 caracteres en amont, donc peu
+        # exploitable, mais il finit dans projets.html sans relecture humaine.
+        # L'echapper coute une ligne et retire la question. quote=False parce
+        # que le texte va dans le contenu d'un <p>, pas dans un attribut :
+        # echapper l'apostrophe en &#x27; rendrait pareil a l'ecran mais
+        # salirait le diff de chaque etiquette francaise ("Donnees jusqu'au").
+        texte = echapper_html(etat.get("etat", ""), quote=False)
         if not texte:
             continue
         motif = re.compile(

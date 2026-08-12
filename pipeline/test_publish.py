@@ -132,6 +132,57 @@ class InjecterJsonldFluxTests(unittest.TestCase):
                 publish.injecter_jsonld_flux({"@type": "ItemList"}, chemin_index=index)
 
 
+class EchappementBaliseScriptTests(unittest.TestCase):
+    """Le titre d'un item vient brut du flux de la source. S'il contient
+    </script>, le JSON-LD injecte dans frontiere/index.html fermerait la
+    balise et le reste passerait pour du HTML executable, sur une page
+    committee deux fois par semaine sans relecture humaine."""
+
+    TITRE_PIEGE = "</script><img src=x onerror=alert(1)>"
+
+    def test_un_titre_piege_ne_ferme_pas_la_balise(self):
+        charge = publish.echapper_pour_balise_script(
+            json.dumps({"headline": self.TITRE_PIEGE}, ensure_ascii=False)
+        )
+
+        self.assertNotIn("</script>", charge)
+        self.assertNotIn("<", charge)
+
+    def test_la_valeur_relue_est_identique_a_l_originale(self):
+        """L'echappement doit etre transparent : un moteur de recherche ou un
+        LLM qui relit le bloc doit voir exactement le titre d'origine."""
+        charge = publish.echapper_pour_balise_script(
+            json.dumps({"headline": self.TITRE_PIEGE}, ensure_ascii=False)
+        )
+
+        self.assertEqual(json.loads(charge)["headline"], self.TITRE_PIEGE)
+
+    def test_le_bloc_injecte_dans_la_page_reste_clos(self):
+        with tempfile.TemporaryDirectory() as dossier:
+            index = Path(dossier) / "index.html"
+            index.write_text(
+                '<script type="application/ld+json" id="flux-jsonld">\n'
+                "{}\n</script>",
+                encoding="utf-8",
+            )
+            entrees = [{
+                "titre": self.TITRE_PIEGE,
+                "url": "https://example.test/a",
+                "date_publication": "2026-08-01",
+                "resume_fr": "resume",
+                "source": "Source",
+            }]
+
+            publish.injecter_jsonld_flux(
+                publish.generer_jsonld_flux(entrees), chemin_index=index
+            )
+
+            contenu = index.read_text(encoding="utf-8")
+            # Une seule fermeture : celle de la balise ouverte plus haut.
+            self.assertEqual(contenu.count("</script>"), 1)
+            self.assertNotIn("<img", contenu)
+
+
 class RepartirSelectionTests(unittest.TestCase):
     def test_separe_un_score_deux_d_un_score_trois(self):
         entrees = [

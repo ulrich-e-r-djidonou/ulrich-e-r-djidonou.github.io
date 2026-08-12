@@ -13,13 +13,16 @@ CollectionPage, CreativeWork).
 
 ## Pages principales
 
-- [Accueil](https://djidonou.com/) : présentation, domaines d'expertise, FAQ.
+- [Accueil](https://djidonou.com/) : présentation et domaines d'expertise.
 - [Parcours](https://djidonou.com/parcours.html) : expérience professionnelle
   (CGAP, Ministère des Finances du Québec, ENAP) et méthode de travail.
 - [Projets](https://djidonou.com/projets.html) : liste complète des projets
   publics, filtrable par domaine.
 - [Ressources](https://djidonou.com/ressources.html) : outils, librairies,
   papiers fondateurs, cours et données choisis à la main.
+- [FAQ](https://djidonou.com/faq.html) : ce que fait un économiste, les outils
+  d'analyse utilisés, les langues de travail. Porte le balisage schema.org
+  FAQPage.
 - [Contact](https://djidonou.com/contact.html)
 
 ## La Frontière

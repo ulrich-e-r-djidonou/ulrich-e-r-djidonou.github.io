@@ -5,6 +5,22 @@
 (function () {
   "use strict";
 
+  // Meme garde que frontiere.js : data/bibliotheque.json est tenu a la main,
+  // donc le risque est theorique ici, mais un href non http(s) ne doit jamais
+  // devenir cliquable, quel que soit le fichier qui l'a fourni. Une URL
+  // relative ("/assets/...") se resout en https et passe.
+  function lienSur(url) {
+    if (typeof url !== "string") return null;
+    try {
+      const analysee = new URL(url, window.location.href);
+      return analysee.protocol === "http:" || analysee.protocol === "https:"
+        ? url
+        : null;
+    } catch (erreur) {
+      return null;
+    }
+  }
+
   async function chargerJSON(chemin) {
     try {
       const reponse = await fetch(chemin, { cache: "no-store" });
@@ -44,16 +60,23 @@
       liste.forEach((item) => {
         const bloc = document.createElement("div");
         bloc.className = "item-bibliotheque";
-        const lien = document.createElement("a");
-        lien.href = item.url;
-        // Une ressource hebergee sur le site (ex. un PDF sous /assets) reste
-        // dans l'onglet courant ; seuls les liens externes s'ouvrent a part.
-        if (!item.url.startsWith("/")) {
-          lien.target = "_blank";
-          lien.rel = "noopener";
+        const url = lienSur(item.url);
+        if (url) {
+          const lien = document.createElement("a");
+          lien.href = url;
+          // Une ressource hebergee sur le site (ex. un PDF sous /assets) reste
+          // dans l'onglet courant ; seuls les liens externes s'ouvrent a part.
+          if (!url.startsWith("/")) {
+            lien.target = "_blank";
+            lien.rel = "noopener";
+          }
+          lien.textContent = item.titre;
+          bloc.appendChild(lien);
+        } else {
+          const nom = document.createElement("strong");
+          nom.textContent = item.titre;
+          bloc.appendChild(nom);
         }
-        lien.textContent = item.titre;
-        bloc.appendChild(lien);
         const description = document.createElement("p");
         description.textContent = item.description_fr;
         bloc.appendChild(description);

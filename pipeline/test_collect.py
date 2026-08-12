@@ -349,5 +349,30 @@ class CollecterRssNberTests(unittest.TestCase):
                 collect.collecter_rss(source)
 
 
+class LienPubliableTests(unittest.TestCase):
+    """Le lien d'un item vient du flux de la source. Publie tel quel dans un
+    href, un schema `javascript:` s'executerait au clic du visiteur."""
+
+    def test_accepte_http_et_https(self):
+        self.assertTrue(collect.lien_publiable("https://www.nber.org/papers/w1"))
+        self.assertTrue(collect.lien_publiable("http://arxiv.org/abs/2501.00001"))
+
+    def test_rejette_les_schemas_executables(self):
+        for url in (
+            "javascript:alert(1)",
+            "JavaScript:alert(1)",
+            "  javascript:alert(1)  ",
+            "data:text/html,<script>alert(1)</script>",
+            "vbscript:msgbox(1)",
+        ):
+            with self.subTest(url=url):
+                self.assertFalse(collect.lien_publiable(url))
+
+    def test_rejette_le_vide(self):
+        """Remplace l'ancien `if not lien` : un item sans lien reste ecarte."""
+        self.assertFalse(collect.lien_publiable(""))
+        self.assertFalse(collect.lien_publiable(None))
+
+
 if __name__ == "__main__":
     unittest.main()
