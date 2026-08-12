@@ -4,6 +4,8 @@ from datetime import date, datetime, timezone
 from types import SimpleNamespace
 from unittest.mock import patch
 
+import yaml
+
 from pipeline import collect
 
 
@@ -347,6 +349,54 @@ class CollecterRssNberTests(unittest.TestCase):
         with patch.object(collect.requests, "get", return_value=reponse_en_echec):
             with self.assertRaises(RuntimeError):
                 collect.collecter_rss(source)
+
+
+class EtiquetteTypeItemTests(unittest.TestCase):
+    """« Papier » et « Article » doivent refleter le statut de publication du
+    document, jamais le protocole de collecte.
+
+    Chaque collecteur applique un defaut different (« article » pour le RSS,
+    « papier » pour Crossref). Le 2026-08-12, cela affichait les working
+    papers de la Fed et de la BCE comme des articles publies, et les revues
+    a comite de lecture de l'AEA comme des papiers de travail. Ces tests
+    figent la convention decrite en tete de sources.yaml."""
+
+    ATTENDU = {
+        "arxiv-econ": "papier",
+        "arxiv-ml-econ": "papier",
+        "nber": "papier",
+        "fmi": "papier",
+        "ssrn": "papier",
+        "fed": "papier",
+        "bce": "papier",
+        "aea": "article",
+        "voxeu": "article",
+    }
+
+    def setUp(self):
+        config = yaml.safe_load(collect.SOURCES_YAML.read_text(encoding="utf-8"))
+        self.sources = {s["id"]: s for s in config["sources"]}
+
+    def test_chaque_source_porte_l_etiquette_attendue(self):
+        for identifiant, attendu in self.ATTENDU.items():
+            with self.subTest(source=identifiant):
+                self.assertEqual(self.sources[identifiant].get("type_item"), attendu)
+
+    def test_l_etiquette_est_explicite_et_non_heritee_du_collecteur(self):
+        """Un type_item absent laisserait le defaut du collecteur decider,
+        c'est-a-dire le protocole plutot que la nature du document."""
+        for identifiant in self.ATTENDU:
+            with self.subTest(source=identifiant):
+                self.assertIn("type_item", self.sources[identifiant])
+
+    def test_seules_les_etiquettes_connues_sont_utilisees(self):
+        """Une valeur hors de cette liste ne serait traduite par aucun libelle
+        dans NOMS_TYPES (frontiere.js) et s'afficherait brute au lecteur."""
+        connues = {"papier", "article", "outil", "dataset", "annonce", "cours"}
+        for identifiant, source in self.sources.items():
+            if "type_item" in source:
+                with self.subTest(source=identifiant):
+                    self.assertIn(source["type_item"], connues)
 
 
 class LienPubliableTests(unittest.TestCase):

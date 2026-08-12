@@ -144,7 +144,11 @@ def collecter_arxiv(source):
             "titre": titre,
             "url": id_arxiv.replace("http://", "https://"),
             "source": source["nom"],
-            "type": "papier",
+            # Lit type_item comme les autres collecteurs, au lieu de forcer la
+            # valeur : sources.yaml reste le seul endroit qui decide de
+            # l'etiquette. Le defaut conserve le comportement d'avant, arXiv
+            # ne publiant que des preprints.
+            "type": source.get("type_item", "papier"),
             "date_publication": date_pub.date().isoformat() if date_pub else None,
             "abstract": resume,
             "auteurs": ", ".join(a for a in auteurs if a),
