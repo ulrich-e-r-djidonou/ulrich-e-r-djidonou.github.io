@@ -128,10 +128,29 @@ sources:
     # perspectives des entreprises, les deliberations du Conseil de direction et
     # les enquetes trimestrielles, soit des publications institutionnelles.
     # Les documents de travail passent par staff-working-papers, flux qui repond
-    # mais reste vide, et la recherche du personnel par staff-analytical-notes,
-    # non collecte a ce jour.
+    # mais reste vide au 12 aout 2026. La recherche du personnel arrive par la
+    # source banque-canada-notes ci-dessous.
     type_item: article
     url: "https://www.bankofcanada.ca/content_type/publications/feed/"
+    requiert_mot_cle_ia: true
+    fenetre_jours: 30
+    actif: true
+
+  - id: banque-canada-notes
+    nom: "Banque du Canada, notes analytiques du personnel"
+    type: rss
+    # Recherche du personnel de la Banque, diffusee sans comite de lecture :
+    # « papier » au sens de la convention ci-dessus, comme la Fed et la BCE.
+    # Le flux « publications » ne les contient pas, verifie le 12 aout 2026 :
+    # sans cette source, la recherche de la Banque n'entre pas dans la veille.
+    #
+    # DORMANTE A L'AJOUT. Le flux repond et se lit, mais sa derniere entree
+    # date du 12 decembre 2025, soit huit mois. Elle est activee pour capter
+    # une reprise, pas parce qu'elle apporte quelque chose aujourd'hui : ne
+    # pas s'etonner qu'elle ne produise rien. verifier_fraicheur_sources.py
+    # la signalera si le silence se prolonge.
+    type_item: papier
+    url: "https://www.bankofcanada.ca/content_type/staff-analytical-notes/feed/"
     requiert_mot_cle_ia: true
     fenetre_jours: 30
     actif: true
