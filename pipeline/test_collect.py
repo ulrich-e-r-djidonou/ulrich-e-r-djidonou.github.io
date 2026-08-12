@@ -398,18 +398,10 @@ class EtiquetteTypeItemTests(unittest.TestCase):
         Exception assumee : les collecteurs qui n'exposent qu'un seul type de
         contenu et le forcent en dur (github_commits publie des annonces)."""
         sans_etiquette_admis = {"github_commits"}
-        # En attente d'arbitrage de l'auteur, pas un oubli : le flux
-        # « publications » de la Banque du Canada melange notes analytiques
-        # (article) et documents de travail (papier), et une seule etiquette
-        # mentirait sur une partie des entrees. Retirer cette ligne des que la
-        # decision est prise, pour que la garantie redevienne totale.
-        en_attente_de_decision = {"banque-canada"}
         for identifiant, source in self.sources.items():
             if not source.get("actif"):
                 continue
             if source.get("type") in sans_etiquette_admis:
-                continue
-            if identifiant in en_attente_de_decision:
                 continue
             with self.subTest(source=identifiant):
                 self.assertIn(

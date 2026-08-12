@@ -123,6 +123,14 @@ sources:
   - id: banque-canada
     nom: "Banque du Canada, publications"
     type: rss
+    # Verifie le 12 aout 2026 : ce flux ne contient aucun document de travail.
+    # Ses entrees sont le Rapport sur la politique monetaire, l'Enquete sur les
+    # perspectives des entreprises, les deliberations du Conseil de direction et
+    # les enquetes trimestrielles, soit des publications institutionnelles.
+    # Les documents de travail passent par staff-working-papers, flux qui repond
+    # mais reste vide, et la recherche du personnel par staff-analytical-notes,
+    # non collecte a ce jour.
+    type_item: article
     url: "https://www.bankofcanada.ca/content_type/publications/feed/"
     requiert_mot_cle_ia: true
     fenetre_jours: 30
