@@ -154,6 +154,29 @@ def generer_jsonld_flux(entrees):
     }
 
 
+def inventorier_archives(dossier=None):
+    """Renvoie (mois_non_vides, comptes) a partir des fichiers d'archives.
+
+    Un mois sans aucune entree existe comme fichier mais n'est pas une
+    archive : le lister donnait un bouton cliquable menant a un ecran vide,
+    ce qu'un visiteur lit comme une panne. C'est le cas de 2026-06.json, qui
+    contient une liste vide depuis sa creation.
+
+    Les comptes accompagnent la liste pour que le bouton annonce ce qu'il
+    ouvre, plutot que d'obliger a cliquer pour le decouvrir.
+    """
+    dossier = dossier or ARCHIVES
+    mois = []
+    comptes = {}
+    for chemin in sorted(dossier.glob("*.json")):
+        entrees = charger_json(chemin, [])
+        if not entrees:
+            continue
+        mois.append(chemin.stem)
+        comptes[chemin.stem] = len(entrees)
+    return mois, comptes
+
+
 def echapper_pour_balise_script(charge_utile):
     """Neutralise le `<` d'un JSON destine a vivre entre <script> et </script>.
 
@@ -270,11 +293,13 @@ def main():
             if theme in compte_par_theme:
                 compte_par_theme[theme] += 1
 
+    mois_archives, compte_par_archive = inventorier_archives()
     meta = {
         "derniere_mise_a_jour": aujourd_hui.isoformat(),
         "nb_entrees_flux": len(dans_fenetre),
         "compte_par_theme": compte_par_theme,
-        "mois_archives": sorted(p.stem for p in ARCHIVES.glob("*.json")),
+        "mois_archives": mois_archives,
+        "compte_par_archive": compte_par_archive,
     }
     contenu_meta = json.dumps(meta, ensure_ascii=False, indent=2)
     json.loads(contenu_meta)

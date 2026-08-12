@@ -45,6 +45,7 @@ jobs:
             pipeline.test_faq_coherence \
             pipeline.test_verifier_html \
             pipeline.test_verifier_auteurs \
+            pipeline.test_migrer_etiquettes_types \
             pipeline.benchmark.test_benchmark \
             --verbose
 

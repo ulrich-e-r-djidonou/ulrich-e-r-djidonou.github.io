@@ -132,6 +132,52 @@ class InjecterJsonldFluxTests(unittest.TestCase):
                 publish.injecter_jsonld_flux({"@type": "ItemList"}, chemin_index=index)
 
 
+class InventaireArchivesTests(unittest.TestCase):
+    """Un mois d'archive vide existe comme fichier mais n'a rien a montrer.
+    Le lister donnait un bouton menant a un ecran vide, ce qu'un visiteur
+    lit comme une panne plutot que comme une absence de contenu."""
+
+    def _dossier(self, contenus):
+        dossier = Path(self.enveloppe.name)
+        for mois, entrees in contenus.items():
+            (dossier / f"{mois}.json").write_text(
+                json.dumps(entrees, ensure_ascii=False), encoding="utf-8"
+            )
+        return dossier
+
+    def setUp(self):
+        self.enveloppe = tempfile.TemporaryDirectory()
+        self.addCleanup(self.enveloppe.cleanup)
+
+    def test_un_mois_vide_n_est_pas_liste(self):
+        dossier = self._dossier({
+            "2026-06": [],
+            "2026-07": [{"id": "a"}, {"id": "b"}],
+        })
+
+        mois, comptes = publish.inventorier_archives(dossier)
+
+        self.assertEqual(mois, ["2026-07"])
+        self.assertNotIn("2026-06", comptes)
+
+    def test_les_comptes_suivent_les_mois_listes(self):
+        dossier = self._dossier({
+            "2026-07": [{"id": "a"}, {"id": "b"}],
+            "2026-08": [{"id": "c"}],
+        })
+
+        mois, comptes = publish.inventorier_archives(dossier)
+
+        self.assertEqual(mois, ["2026-07", "2026-08"])
+        self.assertEqual(comptes, {"2026-07": 2, "2026-08": 1})
+
+    def test_aucune_archive_ne_leve_pas(self):
+        mois, comptes = publish.inventorier_archives(Path(self.enveloppe.name))
+
+        self.assertEqual(mois, [])
+        self.assertEqual(comptes, {})
+
+
 class EchappementBaliseScriptTests(unittest.TestCase):
     """Le titre d'un item vient brut du flux de la source. S'il contient
     </script>, le JSON-LD injecte dans frontiere/index.html fermerait la

@@ -389,6 +389,36 @@ class EtiquetteTypeItemTests(unittest.TestCase):
             with self.subTest(source=identifiant):
                 self.assertIn("type_item", self.sources[identifiant])
 
+    def test_toute_source_active_porte_une_etiquette_explicite(self):
+        """Etend la garantie aux sources futures. Sans type_item, l'etiquette
+        retombe sur le defaut du collecteur, c'est-a-dire sur le protocole de
+        collecte : c'est exactement le mecanisme qui avait inverse la Fed,
+        la BCE et l'AEA.
+
+        Exception assumee : les collecteurs qui n'exposent qu'un seul type de
+        contenu et le forcent en dur (github_commits publie des annonces)."""
+        sans_etiquette_admis = {"github_commits"}
+        # En attente d'arbitrage de l'auteur, pas un oubli : le flux
+        # « publications » de la Banque du Canada melange notes analytiques
+        # (article) et documents de travail (papier), et une seule etiquette
+        # mentirait sur une partie des entrees. Retirer cette ligne des que la
+        # decision est prise, pour que la garantie redevienne totale.
+        en_attente_de_decision = {"banque-canada"}
+        for identifiant, source in self.sources.items():
+            if not source.get("actif"):
+                continue
+            if source.get("type") in sans_etiquette_admis:
+                continue
+            if identifiant in en_attente_de_decision:
+                continue
+            with self.subTest(source=identifiant):
+                self.assertIn(
+                    "type_item",
+                    source,
+                    f"la source active '{identifiant}' herite son etiquette du "
+                    f"defaut de son collecteur ; la declarer explicitement",
+                )
+
     def test_seules_les_etiquettes_connues_sont_utilisees(self):
         """Une valeur hors de cette liste ne serait traduite par aucun libelle
         dans NOMS_TYPES (frontiere.js) et s'afficherait brute au lecteur."""

@@ -338,10 +338,17 @@
       conteneur.appendChild(vide);
       return;
     }
+    const comptes = (meta && meta.compte_par_archive) || {};
     mois.sort().reverse().forEach((m) => {
       const bouton = document.createElement("button");
       bouton.type = "button";
-      bouton.textContent = m;
+      // Le compte vient de meta.json quand il y est. Les meta generees avant
+      // le 2026-08-12 ne le portent pas : le bouton retombe alors sur le seul
+      // mois, plutot que d'afficher un nombre invente.
+      const nombre = comptes[m];
+      bouton.textContent = nombre
+        ? `${m} (${nombre} ${nombre > 1 ? "entrées" : "entrée"})`
+        : m;
       bouton.addEventListener("click", async () => {
         const archive = await chargerJSON(`data/archives/${m}.json`);
         afficherJeuEntrees(archive, `Archive ${m}`, true);
