@@ -14,6 +14,10 @@ Une redirection vers une page de connexion est traitee comme un echec, meme
 si elle repond 200 : pour un visiteur, un lien qui exige un compte n'est pas
 un lien public.
 
+Un lien qu'on n'a pas pu joindre n'est pas un lien mort. Quand un hebergeur
+limite le debit sans desemparer, le controle le rapporte comme indetermine
+et n'echoue pas : il n'y a rien a corriger dans la page. Voir Probleme.
+
     python -m pipeline.verifier_liens
     python -m pipeline.verifier_liens --rapport-seul   # n'echoue jamais
 """
@@ -21,6 +25,7 @@ un lien public.
 import re
 import sys
 import time
+from collections import namedtuple
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -48,6 +53,14 @@ MOTIF_LIEN = re.compile(r'href="(https?://[^"]+)"')
 CODES_TRANSITOIRES = frozenset({408, 425, 429, 498, 500, 502, 503, 504})
 TENTATIVES = 3
 ATTENTE_ENTRE_TENTATIVES = 5
+
+# bloquant=False : le lien n'a pas pu etre joint, mais rien n'indique qu'il
+# soit mort. Distinguer les deux est tout l'interet de ce module depuis le
+# 13 aout 2026 : archive.org repond 503 aux adresses IP des runners GitHub
+# tout en repondant 200 depuis un poste ordinaire, verifie trois fois de
+# suite. Faire echouer la CI la-dessus demanderait de « corriger » un lien
+# parfaitement valide, et apprendrait surtout a ignorer le rouge.
+Probleme = namedtuple("Probleme", ("raison", "bloquant"))
 
 # Hotes ignores : ils repondent normalement dans un navigateur mais servent un
 # 403 ou un captcha aux clients automatises, ce qui produirait une fausse
@@ -128,7 +141,7 @@ def hote_ignore(url):
 
 
 def verifier_par_le_reseau(url):
-    """Retourne None si le lien repond, sinon la raison de l'echec."""
+    """Retourne None si le lien repond, sinon un Probleme."""
     reponse = None
     for tentative in range(TENTATIVES):
         try:
@@ -140,7 +153,9 @@ def verifier_par_le_reseau(url):
             reponse.close()
         except requests.RequestException as erreur:
             if tentative + 1 == TENTATIVES:
-                return f"injoignable ({type(erreur).__name__})"
+                # Injoignable apres plusieurs essais : reseau coupe, DNS,
+                # timeout. Rien ne dit que la page est morte.
+                return Probleme(f"injoignable ({type(erreur).__name__})", bloquant=False)
             time.sleep(ATTENTE_ENTRE_TENTATIVES)
             continue
 
@@ -149,19 +164,28 @@ def verifier_par_le_reseau(url):
         if tentative + 1 < TENTATIVES:
             time.sleep(ATTENTE_ENTRE_TENTATIVES)
 
+    if reponse.status_code in CODES_TRANSITOIRES:
+        return Probleme(
+            f"HTTP {reponse.status_code} apres {TENTATIVES} essais "
+            f"(limitation de debit ou panne passagere, pas un lien mort)",
+            bloquant=False,
+        )
+
     if reponse.status_code >= 400:
-        return f"HTTP {reponse.status_code}"
+        return Probleme(f"HTTP {reponse.status_code}", bloquant=True)
 
     parcourues = [etape.url for etape in reponse.history] + [reponse.url]
     for etape in parcourues:
         if any(indice in etape.lower() for indice in INDICES_AUTHENTIFICATION):
-            return f"passe par une authentification ({etape.split('?')[0]})"
+            return Probleme(
+                f"passe par une authentification ({etape.split('?')[0]})", bloquant=True
+            )
 
     return None
 
 
 def verifier(url):
-    """Retourne None si le lien est sain, sinon la raison de l'echec.
+    """Retourne None si le lien est sain, sinon un Probleme.
 
     Une adresse que ce depot possede est tranchee sur le disque ; tout le
     reste par le reseau, y compris les adresses du site absentes du depot
@@ -177,7 +201,8 @@ def verifier(url):
 def main():
     rapport_seul = "--rapport-seul" in sys.argv
 
-    echecs = []
+    a_corriger = []
+    indetermines = []
     deja_vus = {}
 
     for page in pages_a_verifier():
@@ -187,19 +212,28 @@ def main():
             if url not in deja_vus:
                 deja_vus[url] = verifier(url)
             probleme = deja_vus[url]
-            if probleme:
-                echecs.append((page.relative_to(RACINE).as_posix(), url, probleme))
+            if probleme is None:
+                continue
+            entree = (page.relative_to(RACINE).as_posix(), url, probleme.raison)
+            (a_corriger if probleme.bloquant else indetermines).append(entree)
 
     print(f"{len(deja_vus)} liens absolus verifies sur "
           f"{len(pages_a_verifier())} pages.")
 
-    if not echecs:
-        print("Aucun lien mort.")
+    # Rapporte avant le verdict : un lien qu'on n'a pas pu joindre reste une
+    # information utile, meme s'il ne fait echouer personne.
+    if indetermines:
+        print(f"\n{len(indetermines)} lien(s) non verifiable(s) pour l'instant :")
+        for page, url, raison in indetermines:
+            print(f"  {page} : {url}\n      {raison}")
+
+    if not a_corriger:
+        print("\nAucun lien mort.")
         return 0
 
-    print(f"\n{len(echecs)} lien(s) a corriger :")
-    for page, url, probleme in echecs:
-        print(f"  {page} : {url}\n      {probleme}")
+    print(f"\n{len(a_corriger)} lien(s) a corriger :")
+    for page, url, raison in a_corriger:
+        print(f"  {page} : {url}\n      {raison}")
 
     return 0 if rapport_seul else 1
 

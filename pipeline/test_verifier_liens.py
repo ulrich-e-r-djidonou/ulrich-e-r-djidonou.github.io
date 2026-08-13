@@ -11,6 +11,7 @@ vit dans chemin_local(), qui ne consulte que le disque.
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 
 from pipeline import verifier_liens
 
@@ -100,6 +101,89 @@ class VerifierTests(unittest.TestCase):
             self.assertIsNone(verifier_liens.verifier("https://djidonou.com/faq.html"))
         finally:
             verifier_liens.requests.get = original
+
+
+class BloquantTests(unittest.TestCase):
+    """Un lien qu'on n'a pas pu joindre n'est pas un lien mort.
+
+    archive.org repond 503 aux adresses IP des runners GitHub tout en
+    repondant 200 depuis un poste ordinaire (verifie trois fois le 13 aout
+    2026). Faire echouer la CI la-dessus demanderait de « corriger » un lien
+    valide. Le reseau est simule ici : ces tests ne sortent pas de la machine.
+    """
+
+    def _reponse(self, code, url="https://exemple.invalid/page"):
+        return SimpleNamespace(
+            status_code=code, history=[], url=url, close=lambda: None
+        )
+
+    def _avec_reponse(self, code):
+        original = verifier_liens.requests.get
+        dormir = verifier_liens.time.sleep
+        verifier_liens.requests.get = lambda *a, **k: self._reponse(code)
+        verifier_liens.time.sleep = lambda _: None  # pas d'attente reelle
+        try:
+            return verifier_liens.verifier("https://exemple.invalid/page")
+        finally:
+            verifier_liens.requests.get = original
+            verifier_liens.time.sleep = dormir
+
+    def test_un_503_persistant_est_signale_sans_bloquer(self):
+        probleme = self._avec_reponse(503)
+
+        self.assertIsNotNone(probleme)
+        self.assertFalse(probleme.bloquant)
+        self.assertIn("503", probleme.raison)
+        self.assertIn("pas un lien mort", probleme.raison)
+
+    def test_un_429_persistant_ne_bloque_pas(self):
+        self.assertFalse(self._avec_reponse(429).bloquant)
+
+    def test_un_404_bloque(self):
+        probleme = self._avec_reponse(404)
+
+        self.assertIsNotNone(probleme)
+        self.assertTrue(probleme.bloquant)
+        self.assertIn("404", probleme.raison)
+
+    def test_un_403_bloque(self):
+        self.assertTrue(self._avec_reponse(403).bloquant)
+
+    def test_un_200_est_sain(self):
+        self.assertIsNone(self._avec_reponse(200))
+
+    def test_un_code_transitoire_est_reessaye_puis_accepte_s_il_se_retablit(self):
+        """Le cas nominal de la reprise : le premier essai echoue, le second
+        passe. Sans cela le controle echouerait au hasard des hebergeurs."""
+        codes = [503, 200]
+        original = verifier_liens.requests.get
+        dormir = verifier_liens.time.sleep
+        verifier_liens.requests.get = lambda *a, **k: self._reponse(codes.pop(0))
+        verifier_liens.time.sleep = lambda _: None
+        try:
+            self.assertIsNone(verifier_liens.verifier("https://exemple.invalid/page"))
+        finally:
+            verifier_liens.requests.get = original
+            verifier_liens.time.sleep = dormir
+
+        self.assertEqual(codes, [], "les deux reponses simulees doivent etre consommees")
+
+    def test_une_authentification_bloque(self):
+        reponse = SimpleNamespace(
+            status_code=200,
+            history=[],
+            url="https://exemple.invalid/-/login",
+            close=lambda: None,
+        )
+        original = verifier_liens.requests.get
+        verifier_liens.requests.get = lambda *a, **k: reponse
+        try:
+            probleme = verifier_liens.verifier("https://exemple.invalid/tableau")
+        finally:
+            verifier_liens.requests.get = original
+
+        self.assertIsNotNone(probleme)
+        self.assertTrue(probleme.bloquant)
 
 
 class ConfigurationTests(unittest.TestCase):
