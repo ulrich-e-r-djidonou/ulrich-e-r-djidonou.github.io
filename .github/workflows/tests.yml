@@ -46,6 +46,7 @@ jobs:
             pipeline.test_verifier_html \
             pipeline.test_verifier_csp \
             pipeline.test_verifier_fraicheur_sources \
+            pipeline.test_verifier_liens \
             pipeline.test_verifier_auteurs \
             pipeline.test_migrer_etiquettes_types \
             pipeline.benchmark.test_benchmark \
