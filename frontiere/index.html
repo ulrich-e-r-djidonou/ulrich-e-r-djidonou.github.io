@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>La Frontière | Veille IA, économie et machine learning | Ulrich Djidonou</title>
     <meta
@@ -1239,6 +1240,7 @@
         <a href="/projets.html">Projets</a>
         <a href="/frontiere/" aria-current="page">La Frontière</a>
         <a href="/ressources.html">Ressources</a>
+        <a href="/faq.html">FAQ</a>
         <a href="/contact.html">Contact</a>
       </nav>
     </header>
@@ -1247,8 +1249,10 @@
       <section class="frontiere-hero">
         <p class="eyebrow">Veille automatisée</p>
         <h1>La Frontière</h1>
+        <p class="frontiere-definition-question"><em>La Frontière, c'est quoi ?</em></p>
         <p class="lead">
-          Ce qui se passe à l'intersection de l'intelligence artificielle, de
+          La Frontière est une veille automatisée qui permet de suivre les
+          articles à l'intersection de l'intelligence artificielle, de
           l'économie et du machine learning.
         </p>
         <div class="hero-actions">
@@ -1260,8 +1264,9 @@
           <a href="data/flux.json">Données du flux (JSON)</a>
           <a href="/ressources.html">Ressources</a>
         </div>
-        <div class="frontiere-methode">
-          <h2 class="frontiere-methode-titre">Comment cette veille est produite</h2>
+        <details class="frontiere-methode accordeon">
+          <summary class="frontiere-methode-titre">Comment cette veille est produite (cliquer pour lire)</summary>
+          <div class="accordeon-contenu">
           <p>
             D'abord, un pipeline Python collecte deux fois par semaine (lundi
             et jeudi) les nouvelles parutions d'arXiv (econ.EM, econ.GN,
@@ -1289,20 +1294,30 @@
             résumé source entraîne le rejet du texte.
           </p>
           <p>
+            Le signal de la semaine est l'article qui répond le mieux aux
+            critères de sélection, c'est-à-dire celui dont le score
+            thématique est le plus élevé dans la sélection en cours.
+          </p>
+          <p>
+            Deux mots reviennent dans les étiquettes des entrées. Un
+            <strong>papier de recherche</strong> est un travail diffusé avant
+            publication, préprint ou document de travail. Un
+            <strong>article publié</strong> est paru dans une revue à comité
+            de lecture ou dans une publication éditoriale.
+          </p>
+          <p>
             Par ailleurs, je vérifie ce que produit le pipeline dans la
             mesure du possible. Si vous relevez une anomalie ou une piste
             d'amélioration sur quelconque aspect, <a href="/contact.html">écrivez-moi</a> :
             votre retour est bienvenu.
           </p>
-        </div>
+          </div>
+        </details>
       </section>
 
       <section class="frontiere-signal" id="signal-semaine" aria-labelledby="signal-titre" hidden>
         <div class="section-kicker">Signal de la semaine</div>
         <h2 id="signal-titre"></h2>
-        <p class="frontiere-signal-legende">
-          L'article le mieux noté de la sélection en cours, choisi automatiquement.
-        </p>
       </section>
 
       <section class="frontiere-stats" aria-label="Répartition thématique du flux">
@@ -1330,8 +1345,7 @@
         <h2 id="flux-titre">Sélection principale</h2>
         <p>
           Cette sélection automatique retient les entrées dont le score
-          thématique atteint au moins 3. Le signal de la semaine met en avant
-          l'entrée la plus forte de cette sélection.
+          thématique atteint au moins 3.
         </p>
         <div id="liste-flux"></div>
       </section>

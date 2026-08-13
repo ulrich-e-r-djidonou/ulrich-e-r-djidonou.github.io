@@ -4,6 +4,8 @@ from datetime import date, datetime, timezone
 from types import SimpleNamespace
 from unittest.mock import patch
 
+import yaml
+
 from pipeline import collect
 
 
@@ -347,6 +349,109 @@ class CollecterRssNberTests(unittest.TestCase):
         with patch.object(collect.requests, "get", return_value=reponse_en_echec):
             with self.assertRaises(RuntimeError):
                 collect.collecter_rss(source)
+
+
+class EtiquetteTypeItemTests(unittest.TestCase):
+    """« Papier » et « Article » doivent refleter le statut de publication du
+    document, jamais le protocole de collecte.
+
+    Chaque collecteur applique un defaut different (« article » pour le RSS,
+    « papier » pour Crossref). Le 2026-08-12, cela affichait les working
+    papers de la Fed et de la BCE comme des articles publies, et les revues
+    a comite de lecture de l'AEA comme des papiers de travail. Ces tests
+    figent la convention decrite en tete de sources.yaml."""
+
+    ATTENDU = {
+        "arxiv-econ": "papier",
+        "arxiv-ml-econ": "papier",
+        "nber": "papier",
+        "fmi": "papier",
+        "ssrn": "papier",
+        "fed": "papier",
+        "bce": "papier",
+        "aea": "article",
+        "voxeu": "article",
+    }
+
+    def setUp(self):
+        config = yaml.safe_load(collect.SOURCES_YAML.read_text(encoding="utf-8"))
+        self.sources = {s["id"]: s for s in config["sources"]}
+
+    def test_chaque_source_porte_l_etiquette_attendue(self):
+        for identifiant, attendu in self.ATTENDU.items():
+            with self.subTest(source=identifiant):
+                self.assertEqual(self.sources[identifiant].get("type_item"), attendu)
+
+    def test_l_etiquette_est_explicite_et_non_heritee_du_collecteur(self):
+        """Un type_item absent laisserait le defaut du collecteur decider,
+        c'est-a-dire le protocole plutot que la nature du document."""
+        for identifiant in self.ATTENDU:
+            with self.subTest(source=identifiant):
+                self.assertIn("type_item", self.sources[identifiant])
+
+    def test_toute_source_active_porte_une_etiquette_explicite(self):
+        """Etend la garantie aux sources futures. Sans type_item, l'etiquette
+        retombe sur le defaut du collecteur, c'est-a-dire sur le protocole de
+        collecte : c'est exactement le mecanisme qui avait inverse la Fed,
+        la BCE et l'AEA.
+
+        Exception assumee : les collecteurs qui n'exposent qu'un seul type de
+        contenu et le forcent en dur (github_commits publie des annonces)."""
+        sans_etiquette_admis = {"github_commits"}
+        # En attente d'arbitrage de l'auteur, pas un oubli : le flux
+        # « publications » de la Banque du Canada melange notes analytiques
+        # (article) et documents de travail (papier), et une seule etiquette
+        # mentirait sur une partie des entrees. Retirer cette ligne des que la
+        # decision est prise, pour que la garantie redevienne totale.
+        en_attente_de_decision = {"banque-canada"}
+        for identifiant, source in self.sources.items():
+            if not source.get("actif"):
+                continue
+            if source.get("type") in sans_etiquette_admis:
+                continue
+            if identifiant in en_attente_de_decision:
+                continue
+            with self.subTest(source=identifiant):
+                self.assertIn(
+                    "type_item",
+                    source,
+                    f"la source active '{identifiant}' herite son etiquette du "
+                    f"defaut de son collecteur ; la declarer explicitement",
+                )
+
+    def test_seules_les_etiquettes_connues_sont_utilisees(self):
+        """Une valeur hors de cette liste ne serait traduite par aucun libelle
+        dans NOMS_TYPES (frontiere.js) et s'afficherait brute au lecteur."""
+        connues = {"papier", "article", "outil", "dataset", "annonce", "cours"}
+        for identifiant, source in self.sources.items():
+            if "type_item" in source:
+                with self.subTest(source=identifiant):
+                    self.assertIn(source["type_item"], connues)
+
+
+class LienPubliableTests(unittest.TestCase):
+    """Le lien d'un item vient du flux de la source. Publie tel quel dans un
+    href, un schema `javascript:` s'executerait au clic du visiteur."""
+
+    def test_accepte_http_et_https(self):
+        self.assertTrue(collect.lien_publiable("https://www.nber.org/papers/w1"))
+        self.assertTrue(collect.lien_publiable("http://arxiv.org/abs/2501.00001"))
+
+    def test_rejette_les_schemas_executables(self):
+        for url in (
+            "javascript:alert(1)",
+            "JavaScript:alert(1)",
+            "  javascript:alert(1)  ",
+            "data:text/html,<script>alert(1)</script>",
+            "vbscript:msgbox(1)",
+        ):
+            with self.subTest(url=url):
+                self.assertFalse(collect.lien_publiable(url))
+
+    def test_rejette_le_vide(self):
+        """Remplace l'ancien `if not lien` : un item sans lien reste ecarte."""
+        self.assertFalse(collect.lien_publiable(""))
+        self.assertFalse(collect.lien_publiable(None))
 
 
 if __name__ == "__main__":

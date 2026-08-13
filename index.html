@@ -2,6 +2,13 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
+    <!-- Le contenu de La Frontiere vient de flux tiers et est publie sans
+         relecture humaine. Cette politique est la derniere barriere si une
+         injection passe malgre les filtres du pipeline : aucun script inline,
+         aucune origine externe. Tout le JS du site est servi depuis /assets.
+         `frame-ancestors` est absent volontairement : il est ignore en <meta>,
+         il faudrait un en-tete HTTP, que GitHub Pages ne permet pas. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ulrich Djidonou | Économétrie, IA et politiques publiques</title>
     <meta
@@ -74,21 +81,7 @@
     </script>
 
     <link rel="stylesheet" href="/styles.css">
-    <script>
-      // Anciennes ancres de la version une-page : redirection vers la page dediee.
-      (function () {
-        var redirections = {
-          "#experience": "/parcours.html#experience",
-          "#methode": "/parcours.html#methode",
-          "#projets": "/projets.html#projets",
-          "#contact": "/contact.html",
-        };
-        var cible = redirections[window.location.hash];
-        if (cible) {
-          window.location.replace(cible);
-        }
-      })();
-    </script>
+    <script src="/assets/redirection-ancres.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -102,6 +95,7 @@
         <a href="/projets.html">Projets</a>
         <a href="/frontiere/">La Frontière</a>
         <a href="/ressources.html">Ressources</a>
+        <a href="/faq.html">FAQ</a>
         <a href="/contact.html">Contact</a>
       </nav>
     </header>

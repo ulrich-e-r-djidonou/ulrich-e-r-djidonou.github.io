@@ -1,0 +1,44 @@
+name: codeql
+
+# Les trois familles de defauts corrigees le 12 aout (injection dans une balise
+# script, schema d'URL non valide dans un href, et injection HTML sans
+# echappement) sont detectees par defaut par CodeQL. L'activer couvre le code
+# futur sans revue manuelle.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  security-events: write
+  contents: read
+  actions: read
+
+jobs:
+  analyze:
+    name: Analyse CodeQL
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      contents: read
+      actions: read
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ['javascript-typescript', 'python']
+    steps:
+      - name: Extraction du depot
+        uses: actions/checkout@v4
+
+      - name: Initialiser CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+
+      - name: Executer l'analyse CodeQL
+        uses: github/codeql-action/analyze@v3

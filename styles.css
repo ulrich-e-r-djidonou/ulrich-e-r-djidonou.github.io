@@ -910,6 +910,13 @@ h1 {
   margin-bottom: 2rem;
 }
 
+/* Le message noscript est colle au formulaire qui le suit : moins d'air que
+   le chapeau normal. Etait un style= en ligne, sorti d'ici pour que la
+   Content-Security-Policy puisse refuser tout style inline. */
+.contact-form noscript .lead {
+  margin-bottom: 1rem;
+}
+
 .contact-form-card {
   display: flex;
   flex-direction: column;
@@ -1197,5 +1204,14 @@ h1 {
 
 .faq-list details p {
   margin: 0.75rem 0 0.25rem;
+  color: var(--muted);
+}
+
+/* Renvoi vers le formulaire, sous la derniere question de faq.html : sans
+   cette marge il se colle au filet de la derniere ligne et se lit comme une
+   reponse orpheline. */
+.faq .faq-list + p {
+  max-width: 62ch;
+  margin-top: 1.5rem;
   color: var(--muted);
 }

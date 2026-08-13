@@ -33,6 +33,18 @@
   font-weight: 700;
 }
 
+/* Question posee au lecteur juste sous le titre. La reponse est le .lead qui
+   suit : le chapeau precedent decrivait le sujet sans jamais dire ce qu'est
+   l'objet, ce qui laissait le visiteur deviner. */
+.frontiere-definition-question {
+  margin-top: 1rem;
+  color: var(--teal);
+  font-size: var(--fs-lead, 1.05rem);
+}
+
+/* Bloc replie par defaut depuis le 2026-08-12 : ses quatre paragraphes
+   occupaient le premier ecran et repoussaient le flux lui-meme sous la ligne
+   de flottaison. <details> natif, donc l'ouverture ne depend pas du JS. */
 .frontiere-methode {
   margin-top: 1.5rem;
   max-width: 46rem;
@@ -198,6 +210,21 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+/* Semaines anterieures a la plus recente. Le summary reprend .semaine-titre
+   pour que le repere visuel reste le meme d'une semaine a l'autre ; seuls le
+   curseur et la marge basse changent. */
+.semaine-repliee {
+  margin-bottom: 0.5rem;
+}
+
+.semaine-repliee > summary {
+  cursor: pointer;
+}
+
+.semaine-repliee[open] > summary {
+  margin-bottom: 1rem;
 }
 
 .carte-entree {

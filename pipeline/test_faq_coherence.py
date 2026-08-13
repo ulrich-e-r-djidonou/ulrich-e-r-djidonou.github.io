@@ -1,9 +1,10 @@
 """Verifie que la FAQ visible de parcours.html et le bloc FAQPage (JSON-LD)
 disent la meme chose, dans le meme ordre.
 
-La FAQ vivait sur index.html jusqu'au 2026-08-11, date a laquelle elle a ete
-deplacee en fin de parcours.html. Le chemin surveille suit la FAQ : si elle
-demenage a nouveau, changer PAGE_FAQ ci-dessous, pas les tests.
+La FAQ vivait sur index.html jusqu'au 2026-08-11, puis en fin de
+parcours.html, et depuis le 2026-08-12 sur sa propre page, faq.html. Le
+chemin surveille suit la FAQ : si elle demenage a nouveau, changer PAGE_FAQ
+ci-dessous, pas les tests.
 
 Un moteur de recherche affiche le contenu du bloc FAQPage tel quel dans les
 resultats enrichis, pas le HTML visible : s'ils divergent (question ajoutee
@@ -23,14 +24,15 @@ import unittest
 from pathlib import Path
 
 RACINE = Path(__file__).parent.parent
-PAGE_FAQ = RACINE / "parcours.html"
+PAGE_FAQ = RACINE / "faq.html"
 
 MOTIF_BLOC_JSONLD = re.compile(
     r'<script type="application/ld\+json"[^>]*>\s*(.*?)\s*</script>', re.DOTALL
 )
-MOTIF_LISTE_FAQ = re.compile(
-    r'<div class="faq-list">(.*?)</div>\s*</section>', re.DOTALL
-)
+# Ancre sur la seule fermeture du conteneur, pas sur `</div></section>` :
+# la liste ne contient que des <details>, et la section peut desormais se
+# terminer par autre chose (sur faq.html, un renvoi vers le formulaire).
+MOTIF_LISTE_FAQ = re.compile(r'<div class="faq-list">(.*?)</div>', re.DOTALL)
 MOTIF_DETAILS = re.compile(
     r"<details>\s*<summary>(.*?)</summary>(.*?)</details>", re.DOTALL
 )

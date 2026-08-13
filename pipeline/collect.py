@@ -14,6 +14,7 @@ import re
 import sys
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 from xml.etree import ElementTree
 
 import feedparser
@@ -51,6 +52,21 @@ _MOTIFS_DEBUT_DE_MOT = {
     mot: re.compile(rf"\b{re.escape(mot)}", re.IGNORECASE)
     for mot in MOTS_CLES_DEBUT_DE_MOT
 }
+
+def lien_publiable(url):
+    """Vrai si l'URL peut finir dans un href de page publiee.
+
+    Le lien d'un item vient du flux de la source, jamais d'ici. Un href
+    `javascript:` s'execute au clic du visiteur : l'allowlist de schemas est
+    la seule chose qui separe un flux tiers compromis d'une execution de code
+    sur djidonou.com. Allowlist et non blocklist, parce que `data:` et
+    `vbscript:` posent le meme probleme et que la liste des schemas exotiques
+    n'est pas connue d'avance.
+    """
+    if not url:
+        return False
+    return urlparse(url.strip()).scheme in {"http", "https"}
+
 
 TIMEOUT = 20
 NAVIGATEUR = {
@@ -128,7 +144,11 @@ def collecter_arxiv(source):
             "titre": titre,
             "url": id_arxiv.replace("http://", "https://"),
             "source": source["nom"],
-            "type": "papier",
+            # Lit type_item comme les autres collecteurs, au lieu de forcer la
+            # valeur : sources.yaml reste le seul endroit qui decide de
+            # l'etiquette. Le defaut conserve le comportement d'avant, arXiv
+            # ne publiant que des preprints.
+            "type": source.get("type_item", "papier"),
             "date_publication": date_pub.date().isoformat() if date_pub else None,
             "abstract": resume,
             "auteurs": ", ".join(a for a in auteurs if a),
@@ -222,7 +242,7 @@ def collecter_rss(source):
             continue
         if source.get("requiert_mot_cle_ia") and not contient_mot_cle(titre + " " + resume, MOTS_CLES_IA):
             continue
-        if not lien:
+        if not lien_publiable(lien):
             continue
 
         items.append({

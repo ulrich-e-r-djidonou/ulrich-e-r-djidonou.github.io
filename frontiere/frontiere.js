@@ -12,10 +12,17 @@
     "macro-finance": "Macro et finance",
   };
 
+  // « Papier » et « Article » ne se distinguaient pas a la lecture. La
+  // distinction reelle est le statut de publication, elle est maintenant dans
+  // le libelle et definie dans le bloc methode de la page.
+  //
+  // Les cles restent inchangees : elles vivent dans flux.json et dans toutes
+  // les archives mensuelles, les renommer casserait l'affichage des archives
+  // et les filtres par type.
   const NOMS_TYPES = {
-    "papier": "Papier",
+    "papier": "Papier de recherche",
     "outil": "Outil",
-    "article": "Article",
+    "article": "Article publié",
     "dataset": "Dataset",
     "annonce": "Annonce",
     "cours": "Cours",
@@ -27,6 +34,23 @@
     typeActif: null,
     recherche: "",
   };
+
+  // Second filet, apres celui de la collecte (pipeline/collect.py,
+  // lien_publiable) : les items deja publies dans flux.json ont ete collectes
+  // avant que ce filtre existe, et les archives ne sont jamais recollectees.
+  // Un href `javascript:` s'execute au clic ; renvoyer null fait afficher le
+  // titre sans lien plutot que d'armer le clic.
+  function lienSur(url) {
+    if (typeof url !== "string") return null;
+    try {
+      const analysee = new URL(url, window.location.href);
+      return analysee.protocol === "http:" || analysee.protocol === "https:"
+        ? url
+        : null;
+    } catch (erreur) {
+      return null;
+    }
+  }
 
   async function chargerJSON(chemin) {
     try {
@@ -71,12 +95,17 @@
     carte.appendChild(entete);
 
     const titre = document.createElement("h3");
-    const lien = document.createElement("a");
-    lien.href = entree.url;
-    lien.target = "_blank";
-    lien.rel = "noopener";
-    lien.textContent = entree.titre;
-    titre.appendChild(lien);
+    const url = lienSur(entree.url);
+    if (url) {
+      const lien = document.createElement("a");
+      lien.href = url;
+      lien.target = "_blank";
+      lien.rel = "noopener";
+      lien.textContent = entree.titre;
+      titre.appendChild(lien);
+    } else {
+      titre.textContent = entree.titre;
+    }
     carte.appendChild(titre);
 
     // Nom des auteurs affiche des que le champ est fourni (chaine, ex.
@@ -143,18 +172,52 @@
       return;
     }
 
-    let semaineCourante = null;
-    entrees.forEach((entree) => {
-      const semaine = debutDeSemaine(entree.date_publication);
-      if (semaine !== semaineCourante) {
-        semaineCourante = semaine;
+    // La semaine la plus recente reste deroulee ; les precedentes sont
+    // repliees. Sur 45 entrees reparties sur 8 semaines, tout afficher d'un
+    // bloc noyait la selection du jour dans un mur de cartes.
+    //
+    // « La plus recente » se lit comme le premier groupe rencontre, jamais
+    // comme une date en dur : le flux est regenere les lundis et jeudis, une
+    // date figee serait fausse des la mise a jour suivante. Apres un filtre,
+    // le premier groupe restant s'ouvre aussi, ce qui est le comportement
+    // voulu : une recherche ne doit pas renvoyer que des blocs fermes.
+    grouperParSemaine(entrees).forEach((groupe, rang) => {
+      if (rang === 0) {
         const titreSemaine = document.createElement("h3");
         titreSemaine.className = "semaine-titre";
-        titreSemaine.textContent = `Semaine du ${semaine}`;
+        titreSemaine.textContent = `Semaine du ${groupe.semaine}`;
         conteneur.appendChild(titreSemaine);
+        groupe.entrees.forEach((entree) => conteneur.appendChild(creerCarte(entree)));
+        return;
       }
-      conteneur.appendChild(creerCarte(entree));
+
+      const bloc = document.createElement("details");
+      bloc.className = "semaine-repliee";
+      const resume = document.createElement("summary");
+      resume.className = "semaine-titre";
+      const nombre = groupe.entrees.length;
+      resume.textContent =
+        `Semaine du ${groupe.semaine} (${nombre} ${nombre > 1 ? "entrées" : "entrée"}, cliquer pour voir)`;
+      bloc.appendChild(resume);
+      groupe.entrees.forEach((entree) => bloc.appendChild(creerCarte(entree)));
+      conteneur.appendChild(bloc);
     });
+  }
+
+  function grouperParSemaine(entrees) {
+    // Conserve l'ordre d'arrivee des entrees, deja triees par le pipeline :
+    // le premier groupe produit est donc bien le plus recent.
+    const groupes = [];
+    entrees.forEach((entree) => {
+      const semaine = debutDeSemaine(entree.date_publication);
+      const dernier = groupes[groupes.length - 1];
+      if (dernier && dernier.semaine === semaine) {
+        dernier.entrees.push(entree);
+      } else {
+        groupes.push({ semaine, entrees: [entree] });
+      }
+    });
+    return groupes;
   }
 
   function construireChips(conteneurId, valeurs, noms, cle) {
@@ -216,13 +279,18 @@
       return;
     }
     const titre = document.getElementById("signal-titre");
-    titre.innerHTML = "";
-    const lien = document.createElement("a");
-    lien.href = signal.url;
-    lien.target = "_blank";
-    lien.rel = "noopener";
-    lien.textContent = signal.titre;
-    titre.appendChild(lien);
+    titre.textContent = "";
+    const url = lienSur(signal.url);
+    if (url) {
+      const lien = document.createElement("a");
+      lien.href = url;
+      lien.target = "_blank";
+      lien.rel = "noopener";
+      lien.textContent = signal.titre;
+      titre.appendChild(lien);
+    } else {
+      titre.textContent = signal.titre;
+    }
     section.hidden = false;
   }
 
@@ -270,10 +338,17 @@
       conteneur.appendChild(vide);
       return;
     }
+    const comptes = (meta && meta.compte_par_archive) || {};
     mois.sort().reverse().forEach((m) => {
       const bouton = document.createElement("button");
       bouton.type = "button";
-      bouton.textContent = m;
+      // Le compte vient de meta.json quand il y est. Les meta generees avant
+      // le 2026-08-12 ne le portent pas : le bouton retombe alors sur le seul
+      // mois, plutot que d'afficher un nombre invente.
+      const nombre = comptes[m];
+      bouton.textContent = nombre
+        ? `${m} (${nombre} ${nombre > 1 ? "entrées" : "entrée"})`
+        : m;
       bouton.addEventListener("click", async () => {
         const archive = await chargerJSON(`data/archives/${m}.json`);
         afficherJeuEntrees(archive, `Archive ${m}`, true);
