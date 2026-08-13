@@ -42,6 +42,11 @@ ETIQUETTE_PAR_SOURCE = {
     "Reserve federale americaine (Fed), working papers": "papier",
     "Banque centrale europeenne (BCE), working papers": "papier",
     "VoxEU / CEPR": "article",
+    # Arbitrage rendu le 12 aout 2026. Le flux « publications » de la Banque du
+    # Canada avait ete decrit comme melangeant notes analytiques et documents de
+    # travail ; sa lecture montre qu'il n'en contient aucun. Il ne sert que des
+    # publications institutionnelles, d'ou « article ».
+    "Banque du Canada, publications": "article",
 }
 
 # Les revues de l'AEA arrivent sous leur nom de revue, pas sous le nom de la
@@ -58,11 +63,11 @@ REVUES_AEA = {
     "American Economic Journal: Microeconomics",
 }
 
-# Laissee volontairement hors de la table : le flux « publications » de la
-# Banque du Canada melange notes analytiques et documents de travail, et une
-# seule etiquette mentirait sur une partie des entrees. Ses entrees sont
-# rapportees comme non reconnues plutot que reetiquetees a l'aveugle.
-SOURCES_SANS_DECISION = {"Banque du Canada, publications"}
+# Sources dont l'etiquette n'est pas tranchee. Leurs entrees sont rapportees
+# comme non reconnues plutot que reetiquetees a l'aveugle : mieux vaut une
+# etiquette ancienne qu'une etiquette inventee. Vide depuis l'arbitrage du
+# 12 aout 2026 sur la Banque du Canada.
+SOURCES_SANS_DECISION = set()
 
 
 def etiquette_attendue(source):

@@ -1,13 +1,39 @@
 #!/bin/sh
-# Verifie la structure HTML des pages modifiees avant de commiter.
+# Verifie les pages modifiees et la suite de tests avant de commiter.
 # Installation, une seule fois par clone local :
 #   git config core.hooksPath .githooks
+#
+# Le hook lit l'arbre de travail, pas le contenu indexe. Un fichier
+# partiellement ajoute (git add -p) est donc verifie dans sa version
+# complete, pas dans celle qui sera commitee.
 set -e
 
-pages=$(git diff --cached --name-only --diff-filter=ACM | grep '\.html$' || true)
-if [ -z "$pages" ]; then
-    exit 0
+modifies=$(git diff --cached --name-only --diff-filter=ACM)
+pages=$(echo "$modifies" | grep '\.html$' || true)
+python_touche=$(echo "$modifies" | grep '\.py$' || true)
+
+if [ -n "$pages" ]; then
+    python -X utf8 -m pipeline.verifier_html $pages
+    python -X utf8 -m pipeline.verifier_csp $pages
 fi
 
-python -X utf8 -m pipeline.verifier_html $pages
-python -X utf8 -m pipeline.verifier_csp $pages
+# La suite complete tourne des qu'un fichier Python ou une page bouge. Elle
+# prend moins d'une seconde, et un test rouge est deja arrive jusqu'a une
+# branche prete a fusionner le 12 aout 2026 : le controle CSP annoncait
+# « conforme » sur une page qui autorisait unsafe-inline, parce que sa regex
+# s'arretait au premier guillemet simple. Les tests le voyaient, personne ne
+# les avait lances.
+if [ -n "$pages" ] || [ -n "$python_touche" ]; then
+    # Liste construite depuis le disque et non depuis git ls-files : un
+    # fichier de test tout neuf n'est pas encore suivi, et c'est justement
+    # celui qu'il ne faut pas rater.
+    modules=""
+    for fichier in pipeline/test_*.py pipeline/benchmark/test_*.py; do
+        [ -e "$fichier" ] || continue
+        modules="$modules $(echo "$fichier" | sed 's#/#.#g; s#\.py$##')"
+    done
+
+    if [ -n "$modules" ]; then
+        python -X utf8 -m unittest $modules
+    fi
+fi

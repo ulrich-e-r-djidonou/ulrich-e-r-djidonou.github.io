@@ -37,7 +37,7 @@ MOTS_CLES_ECO = [
 MOTS_CLES_IA = [
     "artificial intelligence", "machine learning", "deep learning", "llm",
     "large language model", "neural network", "algorithm", "automation",
-    "gpt", "foundation model", "generative ai", "chatbot",
+    "gpt", "foundation model", "generative ai", "chatbot", "ai",
 ]
 
 # La plupart des entrees ci-dessus sont des racines volontairement tronquees :
@@ -51,6 +51,23 @@ MOTS_CLES_DEBUT_DE_MOT = {"llm"}
 _MOTIFS_DEBUT_DE_MOT = {
     mot: re.compile(rf"\b{re.escape(mot)}", re.IGNORECASE)
     for mot in MOTS_CLES_DEBUT_DE_MOT
+}
+
+# « ai » exige les deux frontieres, pas seulement la premiere : trouve le 12
+# aout 2026 sur deux papiers du FMI (« AI and Economic Divergence in Asia »,
+# « Aggregate Gains from AI and Their Distribution ») qui n'ecrivent jamais
+# « artificial intelligence » en toutes lettres et passaient donc inapercus.
+# Une frontiere de debut seule capturerait « aims », « aircraft », « aided » ;
+# ajouter aussi la frontiere de fin ecarte ces mots tout en gardant les
+# composes a trait d'union (« AI-driven »), le trait n'etant pas un caractere
+# de mot. Verifie sans faux positif sur les 45 items deja publies de
+# frontiere/data/flux.json (16 occurrences de \bai\b, toutes reellement liees
+# a l'IA). « llm » reste a frontiere unique expres, pour continuer a
+# reconnaitre le pluriel « LLMs ».
+MOTS_CLES_MOT_ENTIER = {"ai"}
+_MOTIFS_MOT_ENTIER = {
+    mot: re.compile(rf"\b{re.escape(mot)}\b", re.IGNORECASE)
+    for mot in MOTS_CLES_MOT_ENTIER
 }
 
 def lien_publiable(url):
@@ -78,7 +95,7 @@ NAVIGATEUR = {
 
 
 def mot_cle_present(texte_bas, mot):
-    motif = _MOTIFS_DEBUT_DE_MOT.get(mot)
+    motif = _MOTIFS_MOT_ENTIER.get(mot) or _MOTIFS_DEBUT_DE_MOT.get(mot)
     if motif is not None:
         return bool(motif.search(texte_bas))
     return mot in texte_bas

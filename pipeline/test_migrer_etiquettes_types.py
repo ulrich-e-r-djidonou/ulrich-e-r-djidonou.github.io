@@ -26,9 +26,16 @@ class EtiquetteAttendueTests(unittest.TestCase):
 
     def test_une_source_sans_regle_est_indecidable(self):
         """None, pas une valeur par defaut : une etiquette inventee serait
-        pire que l'etiquette ancienne qu'elle remplacerait."""
-        self.assertIsNone(migration.etiquette_attendue("Banque du Canada, publications"))
+        pire que l'etiquette ancienne qu'elle remplacerait.
+
+        Le nom est volontairement fictif. Ces tests s'appuyaient sur la Banque
+        du Canada tant qu'elle etait sans regle ; l'arbitrage du 12 aout 2026
+        lui en a donne une, et deux d'entre eux se sont mis a echouer pendant
+        qu'un troisieme passait par coincidence. Un exemple qui ne peut jamais
+        recevoir de regle ne connait pas ce sort."""
+        self.assertIsNone(migration.etiquette_attendue("Source inexistante, pour le test"))
         self.assertIsNone(migration.etiquette_attendue("Source inconnue"))
+        self.assertIsNone(migration.etiquette_attendue(""))
 
 
 class AnalyserTests(unittest.TestCase):
@@ -55,13 +62,13 @@ class AnalyserTests(unittest.TestCase):
 
     def test_une_source_sans_regle_est_rapportee(self):
         entrees = [
-            {"titre": "T", "source": "Banque du Canada, publications", "type": "article"},
+            {"titre": "T", "source": "Source inexistante, pour le test", "type": "article"},
         ]
 
         changements, non_reconnues = migration.analyser(entrees)
 
         self.assertEqual(changements, [])
-        self.assertEqual(non_reconnues, {"Banque du Canada, publications"})
+        self.assertEqual(non_reconnues, {"Source inexistante, pour le test"})
 
 
 class AppliquerTests(unittest.TestCase):
@@ -78,12 +85,15 @@ class AppliquerTests(unittest.TestCase):
         self.assertEqual(entrees[1]["type"], "papier")
 
     def test_ne_touche_pas_a_une_source_sans_regle(self):
-        entrees = [{"source": "Banque du Canada, publications", "type": "article"}]
+        """L'etiquette de depart est volontairement absurde : si le module
+        touchait a une source sans regle, l'assertion la verrait. Avec une
+        valeur plausible, le test pourrait passer par coincidence."""
+        entrees = [{"source": "Source inexistante, pour le test", "type": "etiquette-absurde"}]
 
         modifiees = migration.appliquer(entrees)
 
         self.assertEqual(modifiees, 0)
-        self.assertEqual(entrees[0]["type"], "article")
+        self.assertEqual(entrees[0]["type"], "etiquette-absurde")
 
     def test_est_sur_a_repeter(self):
         """Une seconde execution ne doit rien trouver a faire."""
