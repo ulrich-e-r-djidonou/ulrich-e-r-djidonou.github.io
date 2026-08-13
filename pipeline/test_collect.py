@@ -144,12 +144,16 @@ class CollecterCrossrefTests(unittest.TestCase):
             "requiert_mot_cle_ia": True,
             "fenetre_jours": 60,
         }
+        # Relative a aujourd'hui, bien a l'interieur de la fenetre de 60 jours :
+        # voir test_axe_depot_utilise_created_pour_la_date sur pourquoi une
+        # date figee sort tot ou tard de sa fenetre.
+        publication = date.today() - timedelta(days=10)
         items_crossref = [
             {
                 "DOI": "10.1257/aer.1",
                 "title": ["Machine learning in labor markets"],
                 "abstract": "<jats:p>Une etude sur le machine learning et le marche du travail.</jats:p>",
-                "published": {"date-parts": [[2026, 7, 1]]},
+                "published": {"date-parts": [[publication.year, publication.month, publication.day]]},
                 "author": [{"given": "A", "family": "B"}],
                 "container-title": ["American Economic Review"],
             },
@@ -157,7 +161,7 @@ class CollecterCrossrefTests(unittest.TestCase):
                 "DOI": "10.1257/aer.2",
                 "title": ["Sans resume"],
                 "abstract": "",
-                "published": {"date-parts": [[2026, 7, 1]]},
+                "published": {"date-parts": [[publication.year, publication.month, publication.day]]},
             },
         ]
         with patch.object(collect.requests, "get", return_value=self._reponse(items_crossref)):
@@ -176,12 +180,15 @@ class CollecterCrossrefTests(unittest.TestCase):
             "requiert_mot_cle_ia": True,
             "fenetre_jours": 60,
         }
+        # A l'interieur de la fenetre : le resultat vide doit venir du filtre
+        # de mot-cle, pas d'une date sortie de la fenetre par coincidence.
+        publication = date.today() - timedelta(days=10)
         items_crossref = [
             {
                 "DOI": "10.1257/aer.3",
                 "title": ["School enrollment and local labor markets"],
                 "abstract": "<jats:p>Effets de la scolarisation sur le marche du travail local.</jats:p>",
-                "published": {"date-parts": [[2026, 7, 1]]},
+                "published": {"date-parts": [[publication.year, publication.month, publication.day]]},
             },
         ]
         with patch.object(collect.requests, "get", return_value=self._reponse(items_crossref)):
