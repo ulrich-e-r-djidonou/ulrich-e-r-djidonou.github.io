@@ -26,6 +26,7 @@ une raison de faire echouer une CI.
 """
 
 import argparse
+import os
 import sys
 from datetime import datetime, timedelta, timezone
 
@@ -155,6 +156,42 @@ def sonder(source, maintenant=None):
     )
 
 
+def rapport_markdown(resultats):
+    """Formate les resultats de sondage en table Markdown.
+
+    Fonction pure (aucun reseau, aucun acces disque) pour rester testable :
+    voir sonder() pour la partie qui interroge les flux. Destinee a
+    $GITHUB_STEP_SUMMARY, qui rend le Markdown dans l'onglet Summary d'une
+    execution GitHub Actions, la ou un rapport texte perdu dans les logs
+    passait inapercu jusqu'ici sans ouvrir le job.
+    """
+    muettes = [r for r in resultats if est_muette(r[0])]
+
+    lignes = [
+        "## Fraicheur des sources de La Frontiere",
+        "",
+        "| Etat | Source | Detail |",
+        "|---|---|---|",
+    ]
+    for etat, source_id, explication in resultats:
+        # Pas d'emoji : l'etat lui-meme (ACTIVE vs le reste) distingue deja
+        # les lignes ; le gras suffit a les reperer en diagonale.
+        colonne_etat = f"**{etat}**" if est_muette(etat) else etat
+        lignes.append(f"| {colonne_etat} | {source_id} | {explication} |")
+
+    lignes.append("")
+    if not muettes:
+        lignes.append("Toutes les sources actives alimentent la veille.")
+    else:
+        lignes.append(
+            f"**{len(muettes)} source(s) muette(s)** sur {len(resultats)} actives. "
+            "Une source muette n'est pas forcement a retirer : verifier d'abord "
+            "si son flux a change d'adresse, puis si ses filtres sont trop etroits."
+        )
+
+    return "\n".join(lignes) + "\n"
+
+
 def main(argv=None):
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
@@ -170,14 +207,22 @@ def main(argv=None):
     )
     options = analyse.parse_args(argv)
 
-    muettes = []
+    resultats = []
     for source in charger_sources():
         etat, explication = sonder(source)
-        if est_muette(etat):
-            muettes.append((source["id"], etat, explication))
+        resultats.append((etat, source["id"], explication))
+        if est_muette(etat) or not options.muettes:
             print(f"{etat:<12} {source['id']:<24} {explication}")
-        elif not options.muettes:
-            print(f"{etat:<12} {source['id']:<24} {explication}")
+
+    muettes = [r for r in resultats if est_muette(r[0])]
+
+    # En plus des logs ci-dessus : sur GitHub Actions, GITHUB_STEP_SUMMARY
+    # pointe un fichier Markdown ajoute a l'onglet Summary de l'execution.
+    # Absent en local, ce qui laisse ce bloc sans effet hors CI.
+    chemin_resume = os.environ.get("GITHUB_STEP_SUMMARY")
+    if chemin_resume:
+        with open(chemin_resume, "a", encoding="utf-8") as f:
+            f.write(rapport_markdown(resultats))
 
     if not muettes:
         print("\nToutes les sources actives alimentent la veille.")

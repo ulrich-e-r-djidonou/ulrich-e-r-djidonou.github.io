@@ -122,6 +122,50 @@ class EstMuetteTests(unittest.TestCase):
         self.assertFalse(sonde.est_muette("ACTIVE"))
 
 
+class RapportMarkdownTests(unittest.TestCase):
+    """rapport_markdown() alimente $GITHUB_STEP_SUMMARY : sans reseau, comme
+    diagnostic(), pour rester testable independamment de sonder()."""
+
+    def test_toutes_actives_produit_un_message_positif_sans_muettes(self):
+        resultats = [("ACTIVE", "nber", "3 entree(s) retenue(s)")]
+
+        rapport = sonde.rapport_markdown(resultats)
+
+        self.assertIn("Toutes les sources actives alimentent la veille.", rapport)
+        self.assertNotIn("muette(s)", rapport)
+
+    def test_une_source_muette_apparait_dans_le_compte_et_la_table(self):
+        resultats = [
+            ("ACTIVE", "nber", "3 entree(s) retenue(s)"),
+            ("DORMANTE", "banque-canada-notes", "derniere publication il y a 244 jours"),
+        ]
+
+        rapport = sonde.rapport_markdown(resultats)
+
+        self.assertIn("1 source(s) muette(s)", rapport)
+        self.assertIn("banque-canada-notes", rapport)
+        self.assertIn("DORMANTE", rapport)
+
+    def test_produit_une_table_markdown_valide(self):
+        resultats = [("ACTIVE", "nber", "3 entree(s) retenue(s)")]
+
+        rapport = sonde.rapport_markdown(resultats)
+
+        self.assertIn("| Etat | Source | Detail |", rapport)
+        self.assertIn("|---|---|---|", rapport)
+        self.assertIn("| ACTIVE | nber | 3 entree(s) retenue(s) |", rapport)
+
+    def test_une_source_muette_est_mise_en_gras_sans_emoji(self):
+        """Pas d'emoji dans les livrables : voir CLAUDE.md. L'etat en gras
+        suffit a distinguer une ligne muette au survol de la table."""
+        resultats = [("DORMANTE", "banque-canada-notes", "derniere publication il y a 244 jours")]
+
+        rapport = sonde.rapport_markdown(resultats)
+
+        self.assertIn("| **DORMANTE** | banque-canada-notes |", rapport)
+        self.assertTrue(all(ord(c) < 128 for c in rapport), "un caractere non-ASCII (emoji ?) s'est glisse dans le rapport")
+
+
 class ChargerSourcesTests(unittest.TestCase):
     def test_ne_renvoie_que_les_sources_actives(self):
         sources = sonde.charger_sources()

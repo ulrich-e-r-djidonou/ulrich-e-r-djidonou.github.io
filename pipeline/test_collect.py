@@ -1,6 +1,6 @@
 import json
 import unittest
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from types import SimpleNamespace
 from unittest.mock import patch
 
@@ -198,19 +198,24 @@ class CollecterCrossrefTests(unittest.TestCase):
             "requiert_mot_cle_ia": True,
             "fenetre_jours": 14,
         }
+        # Relative a aujourd'hui, pas une date figee : une date absolue finit
+        # toujours par sortir de la fenetre de 14 jours au fil des sessions.
+        # Trouve le 13 aout 2026, ou une date fixee au 30 juillet avait
+        # bascule hors fenetre entre deux tours de la meme conversation.
+        creation = date.today() - timedelta(days=5)
         items_crossref = [
             {
                 "DOI": "10.2139/ssrn.1",
                 "title": ["Artificial intelligence and wage inequality"],
                 "abstract": "<jats:p>IA, salaires et inegalite du marche du travail.</jats:p>",
-                "published": {"date-parts": [[2026]]},
-                "created": {"date-parts": [[2026, 7, 30]]},
+                "published": {"date-parts": [[creation.year]]},
+                "created": {"date-parts": [[creation.year, creation.month, creation.day]]},
             },
         ]
         with patch.object(collect.requests, "get", return_value=self._reponse(items_crossref)):
             resultat = collect.collecter_crossref(source)
         self.assertEqual(len(resultat), 1)
-        self.assertEqual(resultat[0]["date_publication"], "2026-07-30")
+        self.assertEqual(resultat[0]["date_publication"], creation.isoformat())
 
 
 class CollecterRssNberTests(unittest.TestCase):
