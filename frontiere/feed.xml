@@ -6,6 +6,13 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Organizational Technology Ladders: Remote Work and Generative AI Adoption</title>
+      <link>https://arxiv.org/abs/2608.11626v1</link>
+      <guid isPermaLink="false">arxiv-2608.11626v1</guid>
+      <pubDate>2026-08-12</pubDate>
+      <description>À partir de données d'offres d'emploi américaines, cette étude estime qu'une hausse de 10 points de pourcentage des recrutements en télétravail en 2021-2022 augmente la part des offres mentionnant l'intelligence artificielle générative en 2023-2024 de 0,4 point de pourcentage entre les entreprises et de 0,7 point entre les professions au sein d'une même entreprise. Ce résultat illustre l'existence d'une échelle technologique organisationnelle, l'adoption du télétravail réorientant l'embauche vers des compétences techniques et managériales qui accélèrent l'adoption ultérieure de l'IA générative.</description>
+    </item>
+    <item>
       <title>AI Financial Advice: Supply, Demand, and Life Cycle Implications</title>
       <link>https://www.nber.org/papers/w35574#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35574-fromrss</guid>
@@ -25,6 +32,13 @@
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35588-fromrss</guid>
       <pubDate>2026-08-10</pubDate>
       <description>L'étude évalue la génération de code économétrique par les grands modèles de langage et montre que le passage d'un simple agent conversationnel à un agent contraint augmente le taux de réussite des tâches de 74 à 96 %, pour un coût supplémentaire d'environ huit centimes par exécution. Pour les modèles Claude Sonnet 4.6 et GPT-5.4, l'incitation par quelques exemples et l'autonomie fonctionnent comme des substituts, tandis que les différences de performance selon le logiciel statistique disparaissent en grande partie avec l'agent contraint.</description>
+    </item>
+    <item>
+      <title>Environmental and Economic Implications of Artificial Intelligence Data Centers in the United States</title>
+      <link>https://arxiv.org/abs/2608.09882v1</link>
+      <guid isPermaLink="false">arxiv-2608.09882v1</guid>
+      <pubDate>2026-08-10</pubDate>
+      <description>Une analyse des centres de données dédiés à l'intelligence artificielle aux États-Unis montre que leurs impacts environnementaux et économiques, notamment les émissions, la consommation d'eau et l'occupation des sols, dépendent principalement des réseaux électriques et des infrastructures régionales dans lesquels ils s'insèrent. Comme les structures réglementaires actuelles ne prennent pas totalement en compte les externalités temporelles et spatiales de ces infrastructures, des politiques intégrées combinant efficacité énergétique et planification territoriale sont nécessaires pour en optimiser le fonctionnement.</description>
     </item>
     <item>
       <title>AI feedback loops and the conditions for explosive growth</title>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">arxiv-2607.20327v1</guid>
       <pubDate>2026-07-22</pubDate>
       <description>Les chercheurs proposent PyroDash, un cadre d'inférence collaborative dans lequel un petit modèle de langage apprend à déléguer la génération de texte à un grand modèle gelé via un jeton de contrôle afin de réduire les coûts d'utilisation. Évalué sur cinq benchmarks de raisonnement mathématique, PyroDash surpasse l'exactitude du grand modèle seul de 6,36 points de pourcentage tout en réduisant le coût de 20,4 %, ou réduit le coût total de 49,36 à 1,78 dollar US selon la configuration retenue.</description>
-    </item>
-    <item>
-      <title>The Human-AI Substitution Principle: When will you be replaced by AI in your organization?</title>
-      <link>https://arxiv.org/abs/2607.20781v1</link>
-      <guid isPermaLink="false">arxiv-2607.20781v1</guid>
-      <pubDate>2026-07-22</pubDate>
-      <description>Ce papier introduit un modèle analytique d'allocation des tâches entre l'humain et l'IA qui formalise l'asymétrie économique entre l'acquisition de compétences humaines et la montée en échelle de l'IA au sein d'organisations hiérarchiques. En établissant un principe de substitution précis, l'étude démontre que l'adoption de l'IA engendre des transitions d'effectifs brutales, des hiérarchies plus plates et une vulnérabilité accrue des cadres intermédiaires.</description>
-    </item>
-    <item>
-      <title>Measuring AI innovation with trademark data</title>
-      <link>https://arxiv.org/abs/2607.18795v1</link>
-      <guid isPermaLink="false">arxiv-2607.18795v1</guid>
-      <pubDate>2026-07-21</pubDate>
-      <description>Les données relatives aux marques déposées constituent une source d'information opportune et mondiale couvrant tous les secteurs économiques, permettant de compléter les brevets pour mesurer la façon dont les entreprises exploitent l'intelligence artificielle pour développer de nouveaux biens et services. Une exploration empirique d'entreprises italiennes montre comment ces données peuvent être utilisées à différents niveaux d'analyse pour étudier le développement et la diffusion de l'intelligence artificielle.</description>
     </item>
   </channel>
 </rss>

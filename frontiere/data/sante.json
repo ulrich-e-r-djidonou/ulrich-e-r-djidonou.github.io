@@ -25,5 +25,14 @@
     "nb_publies": 6,
     "nb_reportes": 0,
     "nb_rejetes_validation": 0
+  },
+  {
+    "date": "2026-08-13",
+    "fournisseur": "api",
+    "bascule_repli": false,
+    "nb_eligibles": 2,
+    "nb_publies": 2,
+    "nb_reportes": 0,
+    "nb_rejetes_validation": 0
   }
 ]

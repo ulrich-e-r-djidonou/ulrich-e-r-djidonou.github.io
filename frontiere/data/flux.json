@@ -1,5 +1,24 @@
 [
   {
+    "id": "arxiv-2608.11626v1",
+    "titre": "Organizational Technology Ladders: Remote Work and Generative AI Adoption",
+    "url": "https://arxiv.org/abs/2608.11626v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-12",
+    "resume_fr": "À partir de données d'offres d'emploi américaines, cette étude estime qu'une hausse de 10 points de pourcentage des recrutements en télétravail en 2021-2022 augmente la part des offres mentionnant l'intelligence artificielle générative en 2023-2024 de 0,4 point de pourcentage entre les entreprises et de 0,7 point entre les professions au sein d'une même entreprise. Ce résultat illustre l'existence d'une échelle technologique organisationnelle, l'adoption du télétravail réorientant l'embauche vers des compétences techniques et managériales qui accélèrent l'adoption ultérieure de l'IA générative.",
+    "angle_eco": "L'existence d'une échelle de technologies organisationnelles implique que l'adoption du travail à distance réoriente le recrutement vers des compétences techniques et managériales, ce qui réduit le coût d'adoption ultérieure de l'intelligence artificielle générative.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 3,
+    "auteurs": "Gregor Schubert",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35574-fromrss",
     "titre": "AI Financial Advice: Supply, Demand, and Life Cycle Implications",
     "url": "https://www.nber.org/papers/w35574#fromrss",
@@ -50,6 +69,25 @@
     "score": 9,
     "auteurs": "Sebastian Galiani, Federico Ariel López, Raul A. Sosa",
     "signal": true,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "arxiv-2608.09882v1",
+    "titre": "Environmental and Economic Implications of Artificial Intelligence Data Centers in the United States",
+    "url": "https://arxiv.org/abs/2608.09882v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-10",
+    "resume_fr": "Une analyse des centres de données dédiés à l'intelligence artificielle aux États-Unis montre que leurs impacts environnementaux et économiques, notamment les émissions, la consommation d'eau et l'occupation des sols, dépendent principalement des réseaux électriques et des infrastructures régionales dans lesquels ils s'insèrent. Comme les structures réglementaires actuelles ne prennent pas totalement en compte les externalités temporelles et spatiales de ces infrastructures, des politiques intégrées combinant efficacité énergétique et planification territoriale sont nécessaires pour en optimiser le fonctionnement.",
+    "angle_eco": "L'alignement du déploiement des centres de données pour l'intelligence artificielle avec le mix énergétique local, les contraintes de transmission et les ressources en eau constitue l'enjeu central pour intégrer leurs externalités environnementales et économiques dans les cadres réglementaires.",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 4,
+    "auteurs": "Johanna Bolaños-Zuñiga, Alberto J. Lamadrid",
+    "signal": false,
     "llm": "gemini-3.6-flash"
   },
   {

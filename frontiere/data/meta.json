@@ -1,14 +1,14 @@
 {
-  "derniere_mise_a_jour": "2026-08-10",
-  "nb_entrees_flux": 45,
+  "derniere_mise_a_jour": "2026-08-13",
+  "nb_entrees_flux": 47,
   "compte_par_theme": {
-    "inference-causale": 5,
-    "llm": 27,
+    "inference-causale": 6,
+    "llm": 28,
     "prevision": 5,
-    "travail-emploi": 15,
-    "politique-publique": 19,
-    "outils-recherche": 13,
-    "donnees": 13,
+    "travail-emploi": 16,
+    "politique-publique": 20,
+    "outils-recherche": 14,
+    "donnees": 14,
     "macro-finance": 6
   },
   "mois_archives": [
