@@ -71,6 +71,16 @@ jobs:
           git diff --cached --quiet || git commit -m "frontiere: mise a jour automatique $(date -u +%F)"
           git push
 
+      - name: Rapporter les sources qui n'alimentent plus la veille
+        # Informatif, jamais bloquant : une source calme une semaine donnee
+        # n'est pas une panne. verifier_sante.py couvre deja le flux dans son
+        # ensemble ; ce rapport-ci descend au niveau de chaque source, la ou
+        # une mort silencieuse passe autrement inapercue. Un flux qui repond
+        # 200 avec un XML valide et zero entree recente ne leve aucune erreur
+        # nulle part ailleurs.
+        if: always()
+        run: python -m pipeline.verifier_fraicheur_sources
+
       - name: Verifier la sante du flux
         # Placee apres le commit : une alerte ne doit jamais empecher la
         # maintenance normale (archives, fenetre de 90 jours) d'etre publiee.
