@@ -20,6 +20,7 @@ un lien public.
 
 import re
 import sys
+import time
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -40,6 +41,14 @@ NAVIGATEUR = {
 
 MOTIF_LIEN = re.compile(r'href="(https?://[^"]+)"')
 
+# Codes qui traduisent une limitation de debit ou une indisponibilite passagere
+# plutot qu'un lien mort. archive.org a renvoye un 498 le 13 aout 2026 sur une
+# URL qui repondait 200 quelques minutes plus tard : sans reprise, ce controle
+# hebdomadaire echoue au hasard des humeurs des hebergeurs.
+CODES_TRANSITOIRES = frozenset({408, 425, 429, 498, 500, 502, 503, 504})
+TENTATIVES = 3
+ATTENTE_ENTRE_TENTATIVES = 5
+
 # Hotes ignores : ils repondent normalement dans un navigateur mais servent un
 # 403 ou un captcha aux clients automatises, ce qui produirait une fausse
 # alerte chaque semaine.
@@ -56,6 +65,50 @@ HOTES_IGNORES = (
 # l'ecran de connexion a l'adresse d'origine, donc le lien repond 200 sur son
 # URL de depart alors qu'il a traverse /-/auth/ puis /-/login en chemin.
 INDICES_AUTHENTIFICATION = ("/login", "/auth/", "signin", "sign-in", "oauth")
+
+# Le site lui-meme. Ses liens ne se verifient pas par le reseau : ce workflow
+# se declenche au push sur main, avant que GitHub Pages ait fini de deployer.
+# Une page neuve n'est donc pas encore en ligne quand le controle la demande,
+# et repond 404. Constate le 13 aout 2026 sur faq.html, creee par la PR #12 :
+# echec du controle alors que la page etait parfaitement valide, et le serait
+# a chaque ajout de page a l'avenir. Une alerte qui se declenche a tort de
+# facon previsible apprend surtout a ignorer le rouge.
+#
+# Interroger le reseau pour son propre site est de toute facon la mauvaise
+# question : cela verifie le deploiement precedent, pas celui qu'on s'apprete
+# a publier. Le disque, lui, porte l'etat exact qui partira en ligne.
+HOTE_DU_SITE = "djidonou.com"
+
+# Les fichiers qu'un repertoire sert quand l'URL s'arrete sur un slash.
+INDEX_IMPLICITES = ("index.html",)
+
+
+def chemin_local(url):
+    """Chemin dans le depot correspondant a une URL du site, ou None.
+
+    None signale que ce depot ne possede pas cette adresse : les projets
+    (geoecon-pulse, AI-CA, ia-quebec-dashboard...) vivent dans leurs propres
+    depots et sont servis sous le meme domaine. Eux se verifient bien par le
+    reseau, seul endroit ou leur existence est observable d'ici.
+    """
+    partie = urlparse(url)
+    if partie.netloc.lower().removeprefix("www.") != HOTE_DU_SITE:
+        return None
+
+    relatif = partie.path.lstrip("/")
+    candidats = [relatif] if relatif else []
+    if not relatif or relatif.endswith("/"):
+        candidats += [relatif + index for index in INDEX_IMPLICITES]
+
+    for candidat in candidats:
+        chemin = (RACINE / candidat).resolve()
+        # Garde-fou contre un « ../ » dans une URL : on ne sort pas du depot.
+        if not chemin.is_relative_to(RACINE.resolve()):
+            return None
+        if chemin.is_file():
+            return chemin
+
+    return None
 
 
 def pages_a_verifier():
@@ -74,17 +127,27 @@ def hote_ignore(url):
     return urlparse(url).netloc.lower() in HOTES_IGNORES
 
 
-def verifier(url):
-    """Retourne None si le lien est sain, sinon la raison de l'echec."""
-    try:
-        # Certains hebergeurs refusent HEAD : on demande directement le GET,
-        # en flux pour ne pas telecharger la page entiere.
-        reponse = requests.get(
-            url, timeout=TIMEOUT, headers=NAVIGATEUR, allow_redirects=True, stream=True
-        )
-        reponse.close()
-    except requests.RequestException as erreur:
-        return f"injoignable ({type(erreur).__name__})"
+def verifier_par_le_reseau(url):
+    """Retourne None si le lien repond, sinon la raison de l'echec."""
+    reponse = None
+    for tentative in range(TENTATIVES):
+        try:
+            # Certains hebergeurs refusent HEAD : on demande directement le
+            # GET, en flux pour ne pas telecharger la page entiere.
+            reponse = requests.get(
+                url, timeout=TIMEOUT, headers=NAVIGATEUR, allow_redirects=True, stream=True
+            )
+            reponse.close()
+        except requests.RequestException as erreur:
+            if tentative + 1 == TENTATIVES:
+                return f"injoignable ({type(erreur).__name__})"
+            time.sleep(ATTENTE_ENTRE_TENTATIVES)
+            continue
+
+        if reponse.status_code not in CODES_TRANSITOIRES:
+            break
+        if tentative + 1 < TENTATIVES:
+            time.sleep(ATTENTE_ENTRE_TENTATIVES)
 
     if reponse.status_code >= 400:
         return f"HTTP {reponse.status_code}"
@@ -95,6 +158,20 @@ def verifier(url):
             return f"passe par une authentification ({etape.split('?')[0]})"
 
     return None
+
+
+def verifier(url):
+    """Retourne None si le lien est sain, sinon la raison de l'echec.
+
+    Une adresse que ce depot possede est tranchee sur le disque ; tout le
+    reste par le reseau, y compris les adresses du site absentes du depot
+    (projets heberges ailleurs, ou page reellement supprimee : seul le
+    reseau distingue les deux). Voir chemin_local() pour le pourquoi.
+    """
+    if chemin_local(url) is not None:
+        return None
+
+    return verifier_par_le_reseau(url)
 
 
 def main():
