@@ -5,10 +5,10 @@
     <!-- Le contenu de La Frontiere vient de flux tiers et est publie sans
          relecture humaine. Cette politique est la derniere barriere si une
          injection passe malgre les filtres du pipeline : aucun script inline,
-         aucune origine externe. Tout le JS du site est servi depuis /assets.
+         aucune origine externe hormis GoatCounter (mesure d'audience, gc.zgo.at).
          `frame-ancestors` est absent volontairement : il est ignore en <meta>,
          il faudrait un en-tete HTTP, que GitHub Pages ne permet pas. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://api.web3forms.com https://djidonougoatcounter.goatcounter.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ulrich Djidonou | Économétrie, IA et politiques publiques</title>
     <meta
@@ -232,5 +232,6 @@
 
     <script src="/assets/social-links.js" defer></script>
     <script src="/assets/home-frontiere-signal.js" defer></script>
+    <script data-goatcounter="https://djidonougoatcounter.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
   </body>
 </html>
