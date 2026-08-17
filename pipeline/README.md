@@ -327,6 +327,13 @@ python -m pipeline.verifier_jsonld
 rejetés par la validation, fournisseur) dans `frontiere/data/sante.json`,
 committé, sur les 12 dernières exécutions.
 
+`publish.py` refuse de redésigner le signal quand `_candidats_cures.json` est
+absent: il tourne alors hors du pipeline, et l'absence de récolte n'est pas une
+récolte vide. La maintenance normale se poursuit (fenêtre, archives, feed,
+sitemap), seul le signal en place reste intact. Sans ce garde-fou, un simple
+`python pipeline/publish.py` lancé pour vérifier autre chose détruit le signal
+publié, ce qui est arrivé deux fois le 17 août 2026.
+
 `publish.py` complète ensuite la ligne du jour avec `signal_designe` et
 `score_max`, le meilleur score de la récolte. Il la complète sur place au lieu
 d'en écrire une seconde: `curate.py` tourne avant lui, donc avant que le signal
@@ -376,6 +383,31 @@ qui déclencherait l'alerte sur du passé qui n'en savait rien.
 ```powershell
 python -m pipeline.verifier_sante
 ```
+
+## Calibrage du plancher du signal
+
+`relever_scores_signal.py` lit les `score_max` du carnet et dit ce qu'un autre
+plancher aurait donné: distribution des meilleurs scores, part d'exécutions
+désignant un signal pour chaque plancher possible, et une piste chiffrée. En
+lecture seule, jamais lancé par le workflow, à interroger quand on se demande
+si `SEUIL_SIGNAL` est bien placé.
+
+```powershell
+python -m pipeline.relever_scores_signal
+```
+
+Il refuse de recommander sous 8 exécutions mesurées, soit environ un mois:
+quatre exécutions couvrent deux semaines, et deux semaines calmes ne sont pas
+une tendance. Il distingue aussi deux situations que l'absence de
+recommandation confondrait, un plancher qui convient et une distribution où
+aucun plancher ne convient, ce second cas désignant le score plutôt que le
+seuil.
+
+La fourchette visée est de 40 à 85 % d'exécutions avec signal. Sous le plancher
+bas, la section est vide trop souvent et le message d'exception cesse d'être lu
+comme tel; au-dessus du plancher haut, le signal ne distingue plus rien. À
+couverture acceptable égale, le script retient le plancher le plus élevé, qui
+sélectionne mieux.
 
 ## Comparaison des modèles
 

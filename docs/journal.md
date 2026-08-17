@@ -16,6 +16,59 @@ absolu, avec le motif et le numéro de PR quand il en existe une.
 
 ---
 
+## 2026-08-17, empêcher un lancement nu de détruire le signal
+
+Réponse aux deux fausses manoeuvres relevées dans l'entrée ci-dessous. Elles
+avaient la même cause: `publish.py` s'exécute volontiers hors de son contexte et
+écrit dans les fichiers publiés sans rien demander. Lancé sans
+`_candidats_cures.json`, il voyait une récolte vide et redésignait le signal sur
+un vivier inexistant, ce qui détruisait celui en place.
+
+La distinction qui manquait: l'absence de récolte n'est pas une récolte vide.
+Le fichier de candidats absent signifie que ce n'est pas une publication, pas
+qu'il n'y avait rien à publier. `publish.py` conserve donc le signal tel quel
+dans ce cas, en le disant clairement.
+
+Le garde-fou ne gèle pas le reste. La fenêtre, les archives, le flux RSS et le
+sitemap continuent d'être tenus, parce que c'est précisément ce qu'on veut
+pouvoir relancer à la main. Deux tests couvrent les deux moitiés: le signal
+préservé, et la maintenance qui se poursuit.
+
+Un échec dur aurait été plus simple à écrire, mais il aurait interdit la
+maintenance manuelle, qui est un usage légitime. Protéger la seule chose
+fragile vaut mieux que bloquer l'outil entier.
+
+## 2026-08-17, un outil pour calibrer le plancher plutôt qu'une promesse
+
+`relever_scores_signal.py` lit les `score_max` du carnet et dit ce qu'un autre
+plancher aurait donné. Écrit maintenant, alors que le carnet ne contient que
+deux mesures, parce qu'un outil disponible se consulte, là où un rapport promis
+pour dans un mois se serait perdu.
+
+Trois choix de conception valent d'être retenus, tous du même ordre: refuser de
+conclure plus loin que ce que les données permettent.
+
+Le script ne recommande rien sous huit exécutions mesurées, environ un mois.
+Quatre exécutions couvrent deux semaines, et deux semaines calmes ne sont pas
+une tendance. Il décrit alors, sans conclure.
+
+Il distingue un plancher qui convient d'une distribution où aucun plancher ne
+convient. C'est un test qui a révélé le défaut: la première version répondait
+« rien à changer » dans les deux cas, y compris quand le plancher ne désignait
+un signal que 10 % du temps. La formulation faisait lire « tout va bien » là où
+la vraie conclusion est que les scores sont trop concentrés pour qu'un seuil les
+sépare, ce qui met en cause le score lui-même et non le seuil.
+
+À couverture acceptable égale, il retient le plancher le plus élevé plutôt que
+le plus central, parce qu'un plancher haut sélectionne mieux à qualité de
+couverture identique.
+
+La fourchette visée, 40 à 85 % d'exécutions avec signal, reste un jugement, pas
+une mesure. Elle est écrite dans le code avec son motif, pour être discutée
+plutôt que subie.
+
+---
+
 ## 2026-08-17, le vivier du signal est la semaine, pas l'exécution
 
 Défaut trouvé en lançant le workflow à la main pour vérifier les trois entrées

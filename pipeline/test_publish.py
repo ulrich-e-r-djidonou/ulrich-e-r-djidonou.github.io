@@ -656,6 +656,41 @@ class MainTests(unittest.TestCase):
         self.assertEqual(par_id["deja-vu"]["resume_fr"], "Nouveau texte.")
         self.assertEqual([e["id"] for e in flux if e.get("signal")], ["autre"])
 
+    def test_sans_fichier_de_candidats_le_signal_en_place_est_conserve(self):
+        # publish.py lance seul, hors du pipeline : ce n'est pas une recolte
+        # vide, c'est l'absence de recolte. Redesigner detruirait le signal en
+        # place, ce qui est arrive deux fois le 17 aout 2026.
+        en_place = self.entree("en-place", 6, 4, signal=True, deja_signal=True)
+        concurrent = self.entree("concurrent", 9, 1)
+
+        with contextlib.ExitStack() as pile:
+            racine, donnees = self.bac_a_sable(
+                pile, [], [en_place, concurrent],
+            )
+            (racine / "_candidats_cures.json").unlink()
+            publish.main()
+
+            flux = json.loads((donnees / "flux.json").read_text(encoding="utf-8"))
+
+        self.assertEqual([e["id"] for e in flux if e.get("signal")], ["en-place"])
+
+    def test_sans_fichier_de_candidats_la_maintenance_se_poursuit(self):
+        # La fenetre, les archives et le sitemap restent tenus : le garde-fou
+        # protege le signal, il ne gele pas le reste.
+        recent = self.entree("recent", 6, 1, signal=True, deja_signal=True)
+        perime = self.entree("perime", 6, publish.FENETRE_JOURS + 5)
+
+        with contextlib.ExitStack() as pile:
+            racine, donnees = self.bac_a_sable(pile, [], [recent, perime])
+            (racine / "_candidats_cures.json").unlink()
+            publish.main()
+
+            flux = json.loads((donnees / "flux.json").read_text(encoding="utf-8"))
+            archives = sorted((donnees / "archives").glob("*.json"))
+
+        self.assertEqual([e["id"] for e in flux], ["recent"])
+        self.assertEqual(len(archives), 1)
+
     def test_un_flux_existant_ne_devient_jamais_vide(self):
         # Garde-fou deja present dans main() : sans candidat et avec un flux
         # entierement hors fenetre, la page garde son etat plutot que de se

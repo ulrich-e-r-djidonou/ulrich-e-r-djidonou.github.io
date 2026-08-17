@@ -470,20 +470,31 @@ def main():
 
     dans_fenetre.sort(key=lambda e: e.get("date_publication") or "", reverse=True)
 
-    for entree in dans_fenetre:
-        entree["signal"] = False
-    # Les ids du run : les items cures a cette execution. Les candidats
-    # d'archive en sont exclus, ils sortent deja de la fenetre par leur date.
-    ids_du_run = [entree["id"] for entree in nouveaux]
-    signal = designer_signal(dans_fenetre, ids_du_run, aujourd_hui)
-    if signal is not None:
-        signal["signal"] = True
-        # Marque definitive : un article a son tour en tete de page, une fois.
-        signal["deja_signal"] = True
+    # Sans fichier de candidats, cette execution n'est pas une publication :
+    # c'est publish.py lance seul, hors du pipeline. Redesigner le signal sur
+    # une recolte inexistante detruit celui en place, ce qui est arrive deux
+    # fois le 17 aout 2026 pendant une simple verification d'import. La
+    # maintenance normale (fenetre, archives, feed, sitemap) se poursuit, seul
+    # le signal est laisse intact.
+    recolte_reelle = CURES.exists()
+    if not recolte_reelle:
+        print(
+            "ATTENTION : _candidats_cures.json absent, publish.py tourne hors "
+            "du pipeline. Le signal en place est conserve tel quel."
+        )
 
-    # Mesure sur les seuls items du run qui pouvaient devenir signal, donc
-    # ceux tombes dans la fenetre : un candidat d'archive n'y prete pas.
+    ids_du_run = [entree["id"] for entree in nouveaux]
     entrees_du_run = [e for e in dans_fenetre if e.get("id") in set(ids_du_run)]
+    signal = None
+
+    if recolte_reelle:
+        for entree in dans_fenetre:
+            entree["signal"] = False
+        signal = designer_signal(dans_fenetre, ids_du_run, aujourd_hui)
+        if signal is not None:
+            signal["signal"] = True
+            # Marque definitive : un article a son tour en tete de page, une fois.
+            signal["deja_signal"] = True
 
     contenu_flux = json.dumps(dans_fenetre, ensure_ascii=False, indent=2)
     json.loads(contenu_flux)  # validation avant ecriture
@@ -518,6 +529,14 @@ def main():
     (RACINE / "frontiere" / "feed.xml").write_text(feed, encoding="utf-8")
 
     print(f"Flux publie : {len(dans_fenetre)} entrees, {len(a_archiver)} archivees.")
+
+    if not recolte_reelle:
+        # Rien a journaliser : le carnet decrit des executions du pipeline, et
+        # celle-ci n'en est pas une.
+        conserve = next((e["titre"] for e in dans_fenetre if e.get("signal")), None)
+        print(f"Signal de la semaine : inchange ({conserve or 'aucun en place'}).")
+        return
+
     enregistrer_issue_signal(signal, entrees_du_run, aujourd_hui)
 
     if signal is not None:
