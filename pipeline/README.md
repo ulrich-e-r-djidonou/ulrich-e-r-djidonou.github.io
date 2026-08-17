@@ -199,6 +199,29 @@ Le script met aussi à jour:
 
 Le workflow indexe explicitement `sitemap.xml` avec les sorties du pipeline.
 
+### Signal de la semaine
+
+`designer_signal` marque d'un drapeau `signal` l'entrée mise en avant en tête
+de la page. Le choix se fait par paliers de fraîcheur décroissante, le premier
+non vide gagnant: les items rapportés par l'exécution en cours, sinon ceux
+publiés depuis 7 jours, sinon la fenêtre entière. Le dernier palier n'est
+atteint que par une exécution sans récolte, cas où reproposer le meilleur du
+trimestre vaut mieux que vider la section.
+
+Les paliers ne couvrent qu'une exécution vide, jamais un score faible. Le
+signal se choisissait auparavant sur les 90 jours sans contrainte de
+fraîcheur, si bien que le mieux noté gardait la place jusqu'à sortir de la
+fenêtre: constaté le 17 août 2026, un article du 10 août la tenait depuis une
+semaine et l'aurait tenue deux mois de plus. Laisser un score faible
+redescendre d'un palier reproduirait ce défaut.
+
+`SEUIL_SIGNAL` vaut 6, le double du seuil de publication. Le score étant le
+produit du nombre de mots-clés économiques par celui des mots-clés IA, 6 exige
+les deux dimensions franchement présentes, 2 x 3 au moins. Sous ce plancher
+aucun signal n'est désigné et la page indique qu'aucun article ne ressort du
+lot, plutôt que d'en mettre un en avant sans le mériter. La carte de l'accueil
+laisse alors sa ligne de teaser masquée.
+
 ## Rédaction à nouveau des items déjà publiés
 
 Un correctif de prompt ou de validateur ne nettoie que les items à venir.
