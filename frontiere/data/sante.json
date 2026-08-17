@@ -42,6 +42,8 @@
     "nb_eligibles": 11,
     "nb_publies": 9,
     "nb_reportes": 2,
-    "nb_rejetes_validation": 0
+    "nb_rejetes_validation": 0,
+    "signal_designe": true,
+    "score_max": 6
   }
 ]
