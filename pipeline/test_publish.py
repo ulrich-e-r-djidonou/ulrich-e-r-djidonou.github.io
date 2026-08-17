@@ -1,8 +1,10 @@
+import contextlib
 import json
 import tempfile
 import unittest
 from datetime import date, timedelta
 from pathlib import Path
+from unittest import mock
 
 from pipeline import curate, publish
 
@@ -266,20 +268,38 @@ class DesignerSignalTests(unittest.TestCase):
             ).isoformat(),
         }
 
-    def test_prefere_un_item_du_run_a_un_ancien_mieux_note(self):
-        ancien = self.entree("ancien", 9, 7)
+    def test_ecarte_un_ancien_hors_semaine_meme_mieux_note(self):
+        # Defaut d'origine : un article bien note gardait la place jusqu'a
+        # sortir des 90 jours. Hors des 7 jours, il ne concourt plus tant que
+        # la semaine a quelque chose a proposer.
+        hors_semaine = self.entree("hors-semaine", 9, publish.FENETRE_SIGNAL_JOURS + 3)
         frais = self.entree("frais", 6, 0)
 
         signal = publish.designer_signal(
-            [ancien, frais],
+            [hors_semaine, frais],
             ["frais"],
             self.REFERENCE,
         )
 
         self.assertEqual(signal["id"], "frais")
 
-    def test_aucun_signal_si_le_run_reste_sous_le_plancher(self):
-        ancien = self.entree("ancien", 9, 7)
+    def test_le_meilleur_de_la_semaine_gagne_meme_hors_du_run(self):
+        # Le vivier est la semaine, pas l'execution : un article de la semaine
+        # jamais passe en signal reste candidat, meme si le run ne l'a pas
+        # rapporte cette fois-ci.
+        du_run = self.entree("du-run", 6, 0)
+        de_la_semaine = self.entree("de-la-semaine", 9, 3)
+
+        signal = publish.designer_signal(
+            [du_run, de_la_semaine],
+            ["du-run"],
+            self.REFERENCE,
+        )
+
+        self.assertEqual(signal["id"], "de-la-semaine")
+
+    def test_aucun_signal_si_le_vivier_frais_reste_sous_le_plancher(self):
+        ancien = dict(self.entree("ancien", 9, 7), deja_signal=True)
         frais = self.entree("frais", publish.SEUIL_SIGNAL - 1, 0)
 
         signal = publish.designer_signal(
@@ -290,20 +310,49 @@ class DesignerSignalTests(unittest.TestCase):
 
         self.assertIsNone(signal)
 
-    def test_replie_sur_la_semaine_quand_le_run_n_a_rien_rapporte(self):
-        vieux = self.entree("vieux", 9, publish.FENETRE_SIGNAL_JOURS + 1)
-        semaine = self.entree("semaine", publish.SEUIL_SIGNAL, 2)
+    def test_la_semaine_reste_candidate_quand_le_run_est_maigre(self):
+        # Motif du 17 aout 2026 : une execution manuelle n'ayant rapporte que
+        # des items faibles effacait un signal valide, alors que la semaine en
+        # contenait de bons. Une recolte maigre n'est pas une semaine vide.
+        faible = self.entree("faible", publish.SEUIL_SIGNAL - 2, 0)
+        bon_de_la_semaine = self.entree("bon", publish.SEUIL_SIGNAL, 2)
 
-        signal = publish.designer_signal([vieux, semaine], [], self.REFERENCE)
+        signal = publish.designer_signal(
+            [faible, bon_de_la_semaine],
+            ["faible"],
+            self.REFERENCE,
+        )
 
-        self.assertEqual(signal["id"], "semaine")
+        self.assertEqual(signal["id"], "bon")
 
-    def test_replie_sur_la_fenetre_quand_la_semaine_est_vide(self):
+    def test_un_article_deja_passe_en_signal_est_ecarte(self):
+        # Coeur de la demande initiale : ne plus revoir le meme article d'une
+        # semaine sur l'autre. La fenetre glissante seule ne suffit pas, un
+        # article restant eligible tant qu'il n'en est pas sorti.
+        ancien_signal = dict(self.entree("ancien", 9, 3), deja_signal=True)
+        neuf = self.entree("neuf", publish.SEUIL_SIGNAL, 0)
+
+        signal = publish.designer_signal(
+            [ancien_signal, neuf],
+            ["neuf"],
+            self.REFERENCE,
+        )
+
+        self.assertEqual(signal["id"], "neuf")
+
+    def test_replie_hors_semaine_quand_le_vivier_frais_est_vide(self):
         vieux = self.entree("vieux", 9, publish.FENETRE_SIGNAL_JOURS + 5)
 
         signal = publish.designer_signal([vieux], [], self.REFERENCE)
 
         self.assertEqual(signal["id"], "vieux")
+
+    def test_aucun_signal_si_tous_sont_deja_passes(self):
+        epuises = [
+            dict(self.entree(f"vu-{i}", 9, i), deja_signal=True) for i in range(3)
+        ]
+
+        self.assertIsNone(publish.designer_signal(epuises, [], self.REFERENCE))
 
     def test_flux_vide_ne_designe_rien(self):
         self.assertIsNone(publish.designer_signal([], [], self.REFERENCE))
@@ -468,6 +517,158 @@ class CompleterDerniereExecutionTests(unittest.TestCase):
             publish.enregistrer_issue_signal(None, [], self.JOUR, chemin)
 
             self.assertEqual(chemin.read_text(encoding="utf-8"), "{ pas du json")
+
+
+class MainTests(unittest.TestCase):
+    """Chaine complete de publish.main() dans un bac a sable.
+
+    Seul maillon que les tests de fonctions pures ne couvraient pas : la
+    lecture de _candidats_cures.json, donc la construction de ids_du_run, dont
+    depend le premier palier du signal. Une regression y serait passee
+    inapercue jusqu'a la prochaine execution planifiee.
+
+    Les dates sont relatives a date.today() : main() lit l'horloge, et une
+    date figee finirait par sortir de la fenetre de 90 jours.
+    """
+
+    INDEX_MINIMAL = (
+        '<html><body><script type="application/ld+json" id="flux-jsonld">'
+        "\n{}\n</script></body></html>"
+    )
+    SITEMAP_MINIMAL = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        "  <url>\n    <loc>https://djidonou.com/frontiere/</loc>\n"
+        "    <lastmod>2020-01-01</lastmod>\n  </url>\n</urlset>\n"
+    )
+
+    def entree(self, identifiant, score, jours_avant, **extra):
+        aujourd_hui = date.today()
+        entree = {
+            "id": identifiant,
+            "titre": identifiant,
+            "url": f"https://exemple.test/{identifiant}",
+            "source": "arXiv",
+            "type": "papier",
+            "date_publication": (
+                aujourd_hui - timedelta(days=jours_avant)
+            ).isoformat(),
+            "resume_fr": "Resume.",
+            "angle_eco": "Angle.",
+            "themes": ["llm"],
+            "score": score,
+            "auteurs": "Untel",
+            "signal": False,
+        }
+        entree.update(extra)
+        return entree
+
+    def bac_a_sable(self, pile, cures, flux_existant):
+        """Monte un faux depot et branche les chemins du module dessus."""
+        racine = Path(pile.enter_context(tempfile.TemporaryDirectory()))
+        donnees = racine / "frontiere" / "data"
+        donnees.mkdir(parents=True)
+        (racine / "frontiere" / "index.html").write_text(
+            self.INDEX_MINIMAL, encoding="utf-8",
+        )
+        (racine / "sitemap.xml").write_text(self.SITEMAP_MINIMAL, encoding="utf-8")
+        (donnees / "flux.json").write_text(
+            json.dumps(flux_existant, ensure_ascii=False), encoding="utf-8",
+        )
+        cures_chemin = racine / "_candidats_cures.json"
+        cures_chemin.write_text(json.dumps(cures, ensure_ascii=False), encoding="utf-8")
+
+        for nom, valeur in {
+            "RACINE": racine,
+            "DONNEES": donnees,
+            "ARCHIVES": donnees / "archives",
+            "CURES": cures_chemin,
+            "CANDIDATS_ARCHIVES": racine / "_candidats_archives.json",
+            "SITEMAP": racine / "sitemap.xml",
+            "FRONTIERE_INDEX": racine / "frontiere" / "index.html",
+        }.items():
+            pile.enter_context(mock.patch.object(publish, nom, valeur))
+        return racine, donnees
+
+    def test_le_signal_vient_des_candidats_cures_du_run(self):
+        # L'ancien, mieux note, est deja dans le flux mais a eu son tour ; le
+        # frais arrive par _candidats_cures.json, seul fichier a prouver ici.
+        ancien = self.entree("ancien", 9, 5, deja_signal=True)
+        frais = self.entree("frais", 6, 0, nb_eco=3, nb_ia=2)
+
+        with contextlib.ExitStack() as pile:
+            _, donnees = self.bac_a_sable(pile, [frais], [ancien])
+            publish.main()
+
+            flux = json.loads((donnees / "flux.json").read_text(encoding="utf-8"))
+
+        signaux = [e["id"] for e in flux if e.get("signal")]
+        self.assertEqual(signaux, ["frais"])
+        self.assertEqual(len(flux), 2)
+
+    def test_le_plancher_laisse_le_flux_sans_signal(self):
+        frais = self.entree("frais", publish.SEUIL_SIGNAL - 1, 0)
+        ancien = self.entree("ancien", 9, 5, deja_signal=True)
+
+        with contextlib.ExitStack() as pile:
+            _, donnees = self.bac_a_sable(pile, [frais], [ancien])
+            publish.main()
+
+            flux = json.loads((donnees / "flux.json").read_text(encoding="utf-8"))
+
+        self.assertEqual([e["id"] for e in flux if e.get("signal")], [])
+
+    def test_ecrit_meta_feed_et_jsonld_sans_toucher_au_vrai_depot(self):
+        frais = self.entree("frais", 6, 0, nb_eco=3, nb_ia=2)
+
+        with contextlib.ExitStack() as pile:
+            racine, donnees = self.bac_a_sable(pile, [frais], [])
+            publish.main()
+
+            meta = json.loads((donnees / "meta.json").read_text(encoding="utf-8"))
+            feed = (racine / "frontiere" / "feed.xml").read_text(encoding="utf-8")
+            index = (racine / "frontiere" / "index.html").read_text(encoding="utf-8")
+            sitemap = (racine / "sitemap.xml").read_text(encoding="utf-8")
+
+        self.assertEqual(meta["nb_entrees_flux"], 1)
+        self.assertEqual(meta["derniere_mise_a_jour"], date.today().isoformat())
+        self.assertIn("frais", feed)
+        self.assertIn("frais", index)
+        self.assertIn(f"<lastmod>{date.today().isoformat()}</lastmod>", sitemap)
+
+    def test_deja_signal_survit_a_une_nouvelle_redaction(self):
+        # regenerer_flux.py reecrit des entrees deja publiees. Sans report du
+        # marqueur, un article deja passe en tete de page y reviendrait.
+        deja_vu = self.entree("deja-vu", 9, 2, deja_signal=True)
+        rediger_a_nouveau = self.entree("deja-vu", 9, 2, resume_fr="Nouveau texte.")
+        autre = self.entree("autre", publish.SEUIL_SIGNAL, 1)
+
+        with contextlib.ExitStack() as pile:
+            _, donnees = self.bac_a_sable(
+                pile, [rediger_a_nouveau, autre], [deja_vu],
+            )
+            publish.main()
+
+            flux = json.loads((donnees / "flux.json").read_text(encoding="utf-8"))
+
+        par_id = {e["id"]: e for e in flux}
+        self.assertTrue(par_id["deja-vu"]["deja_signal"])
+        self.assertEqual(par_id["deja-vu"]["resume_fr"], "Nouveau texte.")
+        self.assertEqual([e["id"] for e in flux if e.get("signal")], ["autre"])
+
+    def test_un_flux_existant_ne_devient_jamais_vide(self):
+        # Garde-fou deja present dans main() : sans candidat et avec un flux
+        # entierement hors fenetre, la page garde son etat plutot que de se
+        # vider.
+        perime = self.entree("perime", 6, publish.FENETRE_JOURS + 10)
+
+        with contextlib.ExitStack() as pile:
+            _, donnees = self.bac_a_sable(pile, [], [perime])
+            publish.main()
+
+            flux = json.loads((donnees / "flux.json").read_text(encoding="utf-8"))
+
+        self.assertEqual([e["id"] for e in flux], ["perime"])
 
 
 if __name__ == "__main__":

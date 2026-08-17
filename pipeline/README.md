@@ -202,18 +202,28 @@ Le workflow indexe explicitement `sitemap.xml` avec les sorties du pipeline.
 ### Signal de la semaine
 
 `designer_signal` marque d'un drapeau `signal` l'entrée mise en avant en tête
-de la page. Le choix se fait par paliers de fraîcheur décroissante, le premier
-non vide gagnant: les items rapportés par l'exécution en cours, sinon ceux
-publiés depuis 7 jours, sinon la fenêtre entière. Le dernier palier n'est
-atteint que par une exécution sans récolte, cas où reproposer le meilleur du
-trimestre vaut mieux que vider la section.
+de la page. Le vivier est la semaine: les items rapportés par l'exécution en
+cours, réunis à ceux publiés depuis 7 jours, dont sont écartés ceux déjà passés
+en signal (`deja_signal`). À défaut de vivier, la fenêtre entière sert de repli,
+pour une semaine réellement vide plutôt que simplement calme.
 
-Les paliers ne couvrent qu'une exécution vide, jamais un score faible. Le
-signal se choisissait auparavant sur les 90 jours sans contrainte de
+Le signal se choisissait à l'origine sur les 90 jours sans contrainte de
 fraîcheur, si bien que le mieux noté gardait la place jusqu'à sortir de la
 fenêtre: constaté le 17 août 2026, un article du 10 août la tenait depuis une
-semaine et l'aurait tenue deux mois de plus. Laisser un score faible
-redescendre d'un palier reproduirait ce défaut.
+semaine et l'aurait tenue deux mois de plus.
+
+Le premier correctif ne retenait que l'exécution en cours, ce qui rendait le
+signal otage de la dernière récolte. Une exécution manuelle lancée onze heures
+après celle du matin, le même jour, n'a rapporté que deux items faibles et a
+effacé un signal valide alors que trois articles à 6 dormaient dans la semaine.
+Une récolte maigre n'est pas une semaine vide, d'où le vivier élargi.
+
+C'est `deja_signal` qui garantit la rotation, et non la fenêtre glissante: un
+article reste éligible tant qu'il n'est pas sorti des sept jours, et celui du
+10 août l'était encore le 17. Le marqueur est définitif, un article ayant son
+tour en tête de page une seule fois. Il est reporté quand `regenerer_flux.py`
+réécrit une entrée déjà publiée, sans quoi une nouvelle rédaction ferait
+revenir un article déjà vu.
 
 `SEUIL_SIGNAL` vaut 6, le double du seuil de publication. Le score étant le
 produit du nombre de mots-clés économiques par celui des mots-clés IA, 6 exige

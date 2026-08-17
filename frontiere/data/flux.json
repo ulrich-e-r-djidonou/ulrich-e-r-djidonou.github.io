@@ -69,7 +69,8 @@
     "score": 6,
     "auteurs": "Philip Oreopoulos, Michael Liut, Alp Sungu, Nina Low",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "deja_signal": true
   },
   {
     "id": "nber-https-www-nber-org-papers-w35632-fromrss",
@@ -107,7 +108,8 @@
     "score": 6,
     "auteurs": "Paola Ganum, Tohid Atashbar",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "deja_signal": true
   },
   {
     "id": "arxiv-2608.14399v1",
@@ -221,8 +223,9 @@
     ],
     "score": 6,
     "auteurs": "Taha Choukhmane, Tim de Silva, Weidong Lin, Matthew Akuzawa",
-    "signal": false,
-    "llm": "gemini-3.6-flash"
+    "signal": true,
+    "llm": "gemini-3.6-flash",
+    "deja_signal": true
   },
   {
     "id": "nber-https-www-nber-org-papers-w35586-fromrss",
@@ -257,7 +260,8 @@
     "score": 9,
     "auteurs": "Sebastian Galiani, Federico Ariel López, Raul A. Sosa",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "deja_signal": true
   },
   {
     "id": "arxiv-2608.09882v1",
@@ -461,7 +465,8 @@
     "score": 8,
     "auteurs": "Mar Carpanelli, Jedrzej Duszynski, Fabian Stephany",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "deja_signal": true
   },
   {
     "id": "arxiv-2608.01607v1",
@@ -898,7 +903,8 @@
     "score": 8,
     "auteurs": "Xianhua Peng, Wu Guo, Songyan Wang, Jianfei Zhu",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "deja_signal": true
   },
   {
     "id": "arxiv-2607.09616v1",
@@ -971,7 +977,8 @@
     "score": 4,
     "auteurs": "Teng-Ruei Chen",
     "signal": false,
-    "llm": "claude-haiku-4-5"
+    "llm": "claude-haiku-4-5",
+    "deja_signal": true
   },
   {
     "id": "arxiv-2607.08920v1",
