@@ -54,11 +54,11 @@ SEUIL_SELECTION_PRINCIPALE = 3
 # semaine et l'aurait tenue deux mois de plus, faute d'un score superieur.
 # « Signal de la semaine » decrivait alors un classement trimestriel.
 #
-# Le choix se fait desormais par paliers de fraicheur decroissante (voir
-# designer_signal) : les items rapportes par l'execution en cours, sinon les
-# 7 derniers jours, sinon la fenetre entiere. Les paliers ne servent qu'a
-# couvrir une execution vide, jamais a rattraper un score faible : sans quoi
-# le repli ressusciterait l'ancien signal, c'est-a-dire le defaut corrige ici.
+# Le vivier du signal est desormais la semaine (voir designer_signal) : les
+# items de l'execution en cours reunis a ceux publies depuis 7 jours, dont on
+# ecarte ceux deja passes en signal. C'est cette derniere exclusion qui
+# garantit la rotation, une fenetre glissante seule ne suffisant pas : au 17
+# aout, l'article du 10 etait encore dans les 7 jours, donc encore eligible.
 FENETRE_SIGNAL_JOURS = 7
 
 # Plancher sous lequel aucun signal n'est designe, la page expliquant alors
@@ -141,25 +141,37 @@ def designer_signal(entrees, ids_du_run, aujourd_hui):
     Pure : ne lit ni le disque ni l'horloge, la date du jour est un argument
     pour que les tests n'aient pas a figer de date litterale.
 
-    Trois paliers de fraicheur decroissante, le premier non vide gagne :
-      1. les entrees rapportees par l'execution en cours (ids_du_run) ;
-      2. a defaut, celles publiees depuis FENETRE_SIGNAL_JOURS jours ;
-      3. a defaut, la fenetre entiere.
-    Le palier 3 n'est atteint que par une execution sans recolte sur une
-    semaine calme, cas ou reproposer le meilleur du trimestre vaut mieux que
-    de vider la section.
+    Le vivier est la semaine, pas l'execution : les entrees rapportees par
+    l'execution en cours reunies a celles publiees depuis FENETRE_SIGNAL_JOURS
+    jours. La premiere version ne retenait que l'execution, ce qui rendait le
+    signal otage de la derniere recolte : le 17 aout 2026, une execution
+    manuelle lancee onze heures apres celle du matin n'a rapporte que deux
+    items faibles et a efface un signal parfaitement valide, alors que trois
+    articles a 6 dormaient dans la semaine. Une recolte maigre n'est pas une
+    semaine vide.
+
+    Les articles deja passes en signal sont ecartes, ce qui garantit la
+    rotation demandee : c'est la repetition d'une semaine sur l'autre qui a
+    ouvert ce chantier, et une fenetre glissante seule ne l'empeche pas, un
+    article restant eligible tant qu'il n'est pas sorti des sept jours.
+
+    A defaut de vivier, la fenetre entiere sert de repli, pour une semaine
+    reellement vide plutot que simplement calme.
 
     Le plancher SEUIL_SIGNAL s'applique au seul candidat retenu, sans repli
-    sur le palier suivant : un score faible dans une recolte fraiche signifie
-    que rien ne ressort cette semaine, pas qu'il faut aller rechercher plus
-    vieux et mieux note.
+    sur le palier suivant : un score faible dans un vivier frais signifie que
+    rien ne ressort cette semaine, pas qu'il faut aller chercher plus vieux et
+    mieux note.
     """
     ids = set(ids_du_run or ())
     limite = aujourd_hui - timedelta(days=FENETRE_SIGNAL_JOURS)
+    jamais_signal = [e for e in entrees if not e.get("deja_signal")]
     paliers = (
-        [e for e in entrees if e.get("id") in ids],
-        [e for e in entrees if date_valide(e) >= limite],
-        list(entrees),
+        [
+            e for e in jamais_signal
+            if e.get("id") in ids or date_valide(e) >= limite
+        ],
+        jamais_signal,
     )
     for candidats in paliers:
         if not candidats:
@@ -252,8 +264,15 @@ def generer_feed_rss(entrees):
 """
 
 
-def synchroniser_sitemap(chemin_sitemap=SITEMAP, chemin_meta=DONNEES / "meta.json"):
-    """Aligne le lastmod de /frontiere/ sur la date inscrite dans meta.json."""
+def synchroniser_sitemap(chemin_sitemap=None, chemin_meta=None):
+    """Aligne le lastmod de /frontiere/ sur la date inscrite dans meta.json.
+
+    Les chemins se resolvent a l'appel et non dans la signature : lies par
+    defaut, ils figeraient les vrais fichiers du site des l'import, et un test
+    de main() reecrirait sitemap.xml au lieu de son bac a sable.
+    """
+    chemin_sitemap = chemin_sitemap or SITEMAP
+    chemin_meta = chemin_meta or (DONNEES / "meta.json")
     meta = charger_json(chemin_meta, {})
     derniere_mise_a_jour = meta.get("derniere_mise_a_jour")
     if not derniere_mise_a_jour:
@@ -361,8 +380,12 @@ def echapper_pour_balise_script(charge_utile):
     return charge_utile.replace("<", "\\u003c")
 
 
-def injecter_jsonld_flux(donnees_jsonld, chemin_index=FRONTIERE_INDEX):
-    """Ecrit le JSON-LD par item dans le script balise id="flux-jsonld"."""
+def injecter_jsonld_flux(donnees_jsonld, chemin_index=None):
+    """Ecrit le JSON-LD par item dans le script balise id="flux-jsonld".
+
+    Chemin resolu a l'appel, meme motif que synchroniser_sitemap.
+    """
+    chemin_index = chemin_index or FRONTIERE_INDEX
     contenu = chemin_index.read_text(encoding="utf-8")
     motif = re.compile(
         r'(<script type="application/ld\+json" id="flux-jsonld">\s*).*?(\s*</script>)',
@@ -408,6 +431,13 @@ def main():
 
     fusion = {entree["id"]: entree for entree in flux_existant}
     for entree in nouveaux + nouveaux_archives:
+        # deja_signal survit au remplacement : regenerer_flux.py reecrit des
+        # entrees deja publiees, et une entree rediger a nouveau reviendrait
+        # sinon dans le vivier, ce qui reafficherait un article deja passe en
+        # tete de page.
+        ancienne = fusion.get(entree["id"])
+        if ancienne and ancienne.get("deja_signal"):
+            entree["deja_signal"] = True
         fusion[entree["id"]] = entree
 
     aujourd_hui = date.today()
@@ -448,6 +478,8 @@ def main():
     signal = designer_signal(dans_fenetre, ids_du_run, aujourd_hui)
     if signal is not None:
         signal["signal"] = True
+        # Marque definitive : un article a son tour en tete de page, une fois.
+        signal["deja_signal"] = True
 
     # Mesure sur les seuls items du run qui pouvaient devenir signal, donc
     # ceux tombes dans la fenetre : un candidat d'archive n'y prete pas.

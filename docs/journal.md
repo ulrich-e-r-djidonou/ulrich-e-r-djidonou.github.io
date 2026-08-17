@@ -16,6 +16,59 @@ absolu, avec le motif et le numéro de PR quand il en existe une.
 
 ---
 
+## 2026-08-17, le vivier du signal est la semaine, pas l'exécution
+
+Défaut trouvé en lançant le workflow à la main pour vérifier les trois entrées
+ci-dessous. L'exécution manuelle, onze heures après celle du matin, n'a
+rapporté que deux items faibles, et la page est passée d'un signal valide à
+« aucun article ne ressort du lot » alors que trois articles à 6 dormaient dans
+les sept derniers jours.
+
+La cause est une décision prise plus tôt dans la journée, et elle était trop
+étroite: le vivier se limitait aux items de l'exécution en cours, les paliers
+de repli ne couvrant qu'une récolte vide, jamais un score faible. Le
+raisonnement se défendait pour empêcher le repli de ressusciter l'article du 10
+août, mais il rendait le signal otage de la dernière récolte. Deux exécutions
+le même jour, ou un jeudi calme, et la semaine perd son signal. Une récolte
+maigre n'est pas une semaine vide.
+
+Le vivier est donc devenu la semaine: les items de l'exécution réunis à ceux
+publiés depuis sept jours. Ce qui rouvrait la question d'origine, puisque
+l'article du 10 août était encore dans les sept jours le 17, donc encore
+éligible. Une fenêtre glissante seule ne produit pas de rotation.
+
+D'où `deja_signal`, marqueur définitif: un article a son tour en tête de page,
+une fois. C'est lui, et non la fraîcheur, qui garantit ce qu'Ulrich demandait
+au départ, ne plus revoir le même article d'une semaine sur l'autre. Il est
+reporté quand une entrée déjà publiée est rédigée à nouveau, sinon
+`regenerer_flux.py` ferait revenir un article déjà vu.
+
+Le rattrapage des articles passés a été reconstitué depuis l'historique Git de
+`flux.json`, vingt-cinq versions parcourues, plutôt que de mémoire: six
+articles ont porté le drapeau à un moment. Les six sont marqués. Deux d'entre
+eux n'ont été affichés que quelques minutes, pendant les itérations de la
+journée, et on aurait pu les épargner en jugeant que leur exposition ne
+comptait pas. Ce critère aurait été invérifiable et laissé à mon appréciation,
+là où le registre publié tranche seul. Le signal du jour devient *AI Financial
+Advice: Supply, Demand, and Life Cycle Implications*, score 6.
+
+Deux fausses manoeuvres de ma part dans la même séquence, notées parce qu'elles
+disent quelque chose du montage. Lancer `publish.py` en local, pour tester un
+import, a réécrit `flux.json` avec un run vide et fait remonter l'ancien
+article; les fichiers ont été restaurés depuis HEAD après vérification. Puis
+une redésignation manuelle a écrasé `score_max` avec une récolte vide passée en
+argument, chiffre rétabli depuis le journal du workflow. Les deux viennent de
+la même cause: le pipeline s'exécute volontiers hors de son contexte et écrit
+dans les fichiers publiés sans rien demander.
+
+C'est aussi ce qui a motivé, dans la foulée, de résoudre les chemins de
+`synchroniser_sitemap` et `injecter_jsonld_flux` à l'appel plutôt que dans leur
+signature. Liés par défaut à l'import, ils désignaient les vrais fichiers du
+site, et le test de bout en bout de `main()` aurait réécrit `sitemap.xml` et
+`frontiere/index.html` au lieu de son bac à sable.
+
+---
+
 ## 2026-08-17, à score égal, le poids économique départage
 
 Décision d'Ulrich, prise en connaissance des deux entrées ci-dessous: garder
