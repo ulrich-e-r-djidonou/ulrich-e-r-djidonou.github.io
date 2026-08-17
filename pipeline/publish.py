@@ -37,6 +37,28 @@ FRONTIERE_INDEX = RACINE / "frontiere" / "index.html"
 
 FENETRE_JOURS = 90
 SEUIL_SELECTION_PRINCIPALE = 3
+
+# Le signal se choisissait parmi les 90 jours de la fenetre, sans contrainte
+# de fraicheur : le mieux note y restait signal jusqu'a sortir de la fenetre.
+# Constate le 17 aout 2026, un article du 10 aout tenait la place depuis une
+# semaine et l'aurait tenue deux mois de plus, faute d'un score superieur.
+# « Signal de la semaine » decrivait alors un classement trimestriel.
+#
+# Le choix se fait desormais par paliers de fraicheur decroissante (voir
+# designer_signal) : les items rapportes par l'execution en cours, sinon les
+# 7 derniers jours, sinon la fenetre entiere. Les paliers ne servent qu'a
+# couvrir une execution vide, jamais a rattraper un score faible : sans quoi
+# le repli ressusciterait l'ancien signal, c'est-a-dire le defaut corrige ici.
+FENETRE_SIGNAL_JOURS = 7
+
+# Plancher sous lequel aucun signal n'est designe, la page expliquant alors
+# qu'aucun article ne ressort du lot. Le score est le produit du nombre de
+# mots-cles economiques par le nombre de mots-cles IA (pipeline/curate.py,
+# score_heuristique) : 6 exige les deux dimensions franchement presentes,
+# 2 x 3 au moins, soit le double du seuil de publication. Sur la selection du
+# 17 aout 2026, 11 entrees sur 56 l'atteignaient.
+SEUIL_SIGNAL = 6
+
 THEMES_CONNUS = [
     "inference-causale", "llm", "prevision", "travail-emploi",
     "politique-publique", "outils-recherche", "donnees", "macro-finance",
@@ -57,6 +79,45 @@ def date_valide(entree):
         return date.fromisoformat(brute)
     except ValueError:
         return date.today()
+
+
+def designer_signal(entrees, ids_du_run, aujourd_hui):
+    """Choisit le signal de la semaine, ou None si aucun ne ressort du lot.
+
+    Pure : ne lit ni le disque ni l'horloge, la date du jour est un argument
+    pour que les tests n'aient pas a figer de date litterale.
+
+    Trois paliers de fraicheur decroissante, le premier non vide gagne :
+      1. les entrees rapportees par l'execution en cours (ids_du_run) ;
+      2. a defaut, celles publiees depuis FENETRE_SIGNAL_JOURS jours ;
+      3. a defaut, la fenetre entiere.
+    Le palier 3 n'est atteint que par une execution sans recolte sur une
+    semaine calme, cas ou reproposer le meilleur du trimestre vaut mieux que
+    de vider la section.
+
+    Le plancher SEUIL_SIGNAL s'applique au seul candidat retenu, sans repli
+    sur le palier suivant : un score faible dans une recolte fraiche signifie
+    que rien ne ressort cette semaine, pas qu'il faut aller rechercher plus
+    vieux et mieux note.
+    """
+    ids = set(ids_du_run or ())
+    limite = aujourd_hui - timedelta(days=FENETRE_SIGNAL_JOURS)
+    paliers = (
+        [e for e in entrees if e.get("id") in ids],
+        [e for e in entrees if date_valide(e) >= limite],
+        list(entrees),
+    )
+    for candidats in paliers:
+        if not candidats:
+            continue
+        meilleur = max(
+            candidats,
+            key=lambda e: (e.get("score", 0), e.get("date_publication") or ""),
+        )
+        if meilleur.get("score", 0) < SEUIL_SIGNAL:
+            return None
+        return meilleur
+    return None
 
 
 def generer_feed_rss(entrees):
@@ -273,9 +334,12 @@ def main():
 
     for entree in dans_fenetre:
         entree["signal"] = False
-    if dans_fenetre:
-        meilleur = max(dans_fenetre, key=lambda e: (e.get("score", 0), e.get("date_publication") or ""))
-        meilleur["signal"] = True
+    # Les ids du run : les items cures a cette execution. Les candidats
+    # d'archive en sont exclus, ils sortent deja de la fenetre par leur date.
+    ids_du_run = [entree["id"] for entree in nouveaux]
+    signal = designer_signal(dans_fenetre, ids_du_run, aujourd_hui)
+    if signal is not None:
+        signal["signal"] = True
 
     contenu_flux = json.dumps(dans_fenetre, ensure_ascii=False, indent=2)
     json.loads(contenu_flux)  # validation avant ecriture
@@ -310,7 +374,13 @@ def main():
     (RACINE / "frontiere" / "feed.xml").write_text(feed, encoding="utf-8")
 
     print(f"Flux publie : {len(dans_fenetre)} entrees, {len(a_archiver)} archivees.")
-    print(f"Signal de la semaine : {meilleur['titre'] if dans_fenetre else 'aucun'}")
+    if signal is not None:
+        print(f"Signal de la semaine : {signal['titre']} (score {signal.get('score', 0)})")
+    else:
+        print(
+            f"Signal de la semaine : aucun, aucun article n'atteint le score "
+            f"{SEUIL_SIGNAL} parmi les {len(ids_du_run)} rapportes."
+        )
 
 
 if __name__ == "__main__":

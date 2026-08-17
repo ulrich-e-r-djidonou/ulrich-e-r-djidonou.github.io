@@ -271,14 +271,36 @@
     rendreFlux();
   }
 
-  function rendreSignal() {
-    const signal = etat.flux.find((e) => e.signal);
+  // Prend la selection principale en argument plutot que etat.flux : celui-ci
+  // porte le jeu affiche, archive comprise, et une archive n'a jamais de
+  // signal. Sans cet argument, un futur appel depuis une vue d'archive
+  // afficherait « aucun article ne ressort cette semaine » a tort.
+  function rendreSignal(fluxPrincipal) {
+    const signal = fluxPrincipal.find((e) => e.signal);
     const section = document.getElementById("signal-semaine");
+    const titre = document.getElementById("signal-titre");
+    const legende = document.getElementById("signal-legende");
     if (!signal) {
-      section.hidden = true;
+      // Flux vide : la page entiere est vide, la section n'a rien a dire.
+      // Flux garni sans signal : le pipeline a juge que rien n'atteignait le
+      // seuil (pipeline/publish.py, SEUIL_SIGNAL). Le dire est plus honnete
+      // que de masquer la section, qui laisserait croire a une panne.
+      if (fluxPrincipal.length === 0) {
+        section.hidden = true;
+        return;
+      }
+      titre.textContent = "Aucun article ne ressort du lot cette semaine.";
+      legende.textContent =
+        "Les articles collectés depuis la dernière mise à jour touchent aux "
+        + "deux thèmes de la veille, économie et intelligence artificielle, "
+        + "trop faiblement pour qu'un seul soit mis en avant. La sélection "
+        + "complète reste ci-dessous.";
+      legende.hidden = false;
+      section.hidden = false;
       return;
     }
-    const titre = document.getElementById("signal-titre");
+    legende.textContent = "";
+    legende.hidden = true;
     titre.textContent = "";
     const url = lienSur(signal.url);
     if (url) {
@@ -372,7 +394,7 @@
       ? `Dernière mise à jour : ${formaterDate(meta.derniere_mise_a_jour)}`
       : "Mise à jour indisponible pour le moment.";
 
-    rendreSignal();
+    rendreSignal(fluxPrincipal);
     rendreStats(meta);
 
     document.getElementById("recherche").addEventListener("input", (evt) => {

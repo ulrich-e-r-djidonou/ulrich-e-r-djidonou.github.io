@@ -19,7 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!Array.isArray(entrees) || entrees.length === 0) {
         return;
       }
-      const signal = entrees.find((entree) => entree.signal === true) || entrees[0];
+      // Sans repli sur entrees[0] : depuis le 17 aout 2026 le pipeline peut
+      // ne designer aucun signal quand rien n'atteint le seuil (voir
+      // pipeline/publish.py, SEUIL_SIGNAL). Presenter alors le dernier
+      // article collecte comme « dernier signal » lui prete une importance
+      // que la selection lui refuse. La ligne reste masquee, la carte tient
+      // sans elle.
+      const signal = entrees.find((entree) => entree.signal === true);
       if (!signal || !signal.titre) {
         return;
       }
