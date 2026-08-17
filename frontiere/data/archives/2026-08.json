@@ -1,5 +1,435 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35597-fromrss",
+    "titre": "AI in a Fragmenting World",
+    "url": "https://www.nber.org/papers/w35597#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-17",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "auteurs": "Barry Eichengreen, George Cui, Asmaa A. El-Ganainy, Yevgeniya Koriyenko, Elyad Shojaei, Li Zeng, Shihangyin Zhang",
+    "signal": false
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35630-fromrss",
+    "titre": "Tariffs, Investment, and the Missing Trade Collapse",
+    "url": "https://www.nber.org/papers/w35630#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-17",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Francesco Ferrante, Andrea Prestipino, Andrea Raffo, Michael E. Waugh",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14528v1",
+    "titre": "Handover of In-Context Learning State Across Session Boundaries",
+    "url": "https://arxiv.org/abs/2608.14528v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "llm",
+      "prevision"
+    ],
+    "score": 0,
+    "auteurs": "Masahiro Kato, Taka Kato",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14307v1",
+    "titre": "Macroprudential Policy and Downside Risk: Regime-Dependent Effects of Capital Regulation",
+    "url": "https://arxiv.org/abs/2608.14307v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "politique-publique",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Vivien Czofa, Tibor Szendrei, Katalin Varga",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14164v1",
+    "titre": "Science under Threat? A Natural Experiment in Economics",
+    "url": "https://arxiv.org/abs/2608.14164v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "auteurs": "Dominic Rohner, Oliver Vanden Eynde, Philine Widmer",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14141v1",
+    "titre": "Who Owns the Online Media?",
+    "url": "https://arxiv.org/abs/2608.14141v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [],
+    "score": 0,
+    "auteurs": "Ulrich Matter, Philine Widmer",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.13953v1",
+    "titre": "Limited-Information Estimation of Heterogeneous Agent Models",
+    "url": "https://arxiv.org/abs/2608.13953v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Laura Liu, Mikkel Plagborg-Møller, Nelson Matthew P. Tan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.13871v1",
+    "titre": "Financial Technologies, Labor Markets, and Wage Inequality: Evidence from Instant Payment Systems",
+    "url": "https://arxiv.org/abs/2608.13871v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 0,
+    "auteurs": "Carlos Burga, Jacelly Cespedes, Carlos Parra, Bernardo Ricca",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.13851v1",
+    "titre": "Scalable likelihood-based inference for limited dependent variable models",
+    "url": "https://arxiv.org/abs/2608.13851v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "donnees"
+    ],
+    "score": 1,
+    "auteurs": "David T. Frazier, Ruben Loaiza-Maya, Didier Nibbering",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14509v1",
+    "titre": "Split the Labor: Separating Evidence Interpretation from Decision Aggregation",
+    "url": "https://arxiv.org/abs/2608.14509v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "auteurs": "Zhelun Wu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14498v1",
+    "titre": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training",
+    "url": "https://arxiv.org/abs/2608.14498v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "auteurs": "Hanfeng Lu, Tianyu Feng, Suyi Li, Yuheng Zhao, Wei Gao, Shaopan Xiong, Ju Huang, Siran Yang, Jiamang Wang, Lin Qu, Wei Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14496v1",
+    "titre": "Generating Benchmark Health Data Using a Tabular Diffusion Transformer",
+    "url": "https://arxiv.org/abs/2608.14496v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "auteurs": "Hao Yan, Lisa Pilgram, Dan Liu, Linglong Kong, Fida Dankar, Khaled El Emam",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14430v1",
+    "titre": "Designing Reinforcement Learning for Diffusion Models: A Unified Path-Space View",
+    "url": "https://arxiv.org/abs/2608.14430v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 1,
+    "auteurs": "Yixian Xu, Yuanrui Zhang, Shengjie Luo, Liwei Wang, Di He",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14408v1",
+    "titre": "Online Inference in Distributional Temporal-Difference Learning",
+    "url": "https://arxiv.org/abs/2608.14408v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "auteurs": "Yang Peng, Liangyu Zhang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14397v1",
+    "titre": "LLMs Don't Pay for the Jump",
+    "url": "https://arxiv.org/abs/2608.14397v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "inference-causale",
+      "llm"
+    ],
+    "score": 2,
+    "auteurs": "Paras Balani, Subhrakanta Panda",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14369v1",
+    "titre": "Non-Shattering at and Above the Dynamical Temperature in the Spherical Pure p-Spin Model",
+    "url": "https://arxiv.org/abs/2608.14369v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [],
+    "score": 0,
+    "auteurs": "Taegyun Kim",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14339v1",
+    "titre": "Clearing the Fog: Towards Installing and Refining Proactive Exploration Capabilities in LLM Agents",
+    "url": "https://arxiv.org/abs/2608.14339v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "llm",
+      "donnees"
+    ],
+    "score": 1,
+    "auteurs": "Zhizhao Guan, Chen Huang, Ziming Liu, Hongru Liang, Wenqiang Lei, See-Kiong Ng, Tat-Seng Chua, Anthony G Cohn",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14332v1",
+    "titre": "CORAL: Curriculum-Optimized Reward Adaptation for LiDAR-Based Goal-Directed Urban Driving",
+    "url": "https://arxiv.org/abs/2608.14332v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "auteurs": "Anisa Saleem, Duksu Kim",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14319v1",
+    "titre": "Quantum Multi-Armed Bandits and Linear Bandits: Lower Bounds and Algorithms",
+    "url": "https://arxiv.org/abs/2608.14319v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [],
+    "score": 1,
+    "auteurs": "Maoli Liu, Zhuohua Li, John C. S. Lui",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14312v1",
+    "titre": "Envs-FORGE: Frontier-Optimized Reward-Grounded Environment Synthesis for Agent RL",
+    "url": "https://arxiv.org/abs/2608.14312v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "auteurs": "Xiaojun Wu, Cehao Yang, Honghao Liu, Xueyuan Lin, Zhichao Shi, Hao Zhou, Xuhui Jiang, Chengjin Xu, Jia Li, Jian Guo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14277v1",
+    "titre": "SimpleOPD: Simple Tokenizer-Agnostic On-Policy Distillation for Long-Context Reasoning",
+    "url": "https://arxiv.org/abs/2608.14277v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Haonan He, Haodi Lei, Yun Luo, Haoran Zhang, Shunkai Zhang, Yizhuo Li, Shengji Tang, Zhilin Wang, Runzhe Zhan, Lei Bai, Ganqu Cui, Fangchen Yu, Yafu Li, Peng Ye, Ning Ding, Yu Cheng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14254v1",
+    "titre": "Meteorology-driven Causal Nowcasting of Fugitive Landfill Emissions Enables Proactive Public Health Response",
+    "url": "https://arxiv.org/abs/2608.14254v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 0,
+    "auteurs": "Timothy C. Pearce, David J. T. Smith, Alec Dobney, Alessia Freddo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14245v1",
+    "titre": "Body size predicts how long ant workers live - but not how they age or how they die from heat",
+    "url": "https://arxiv.org/abs/2608.14245v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "travail-emploi"
+    ],
+    "score": 0,
+    "auteurs": "Alana Moscardi, Rafael da Silva, Gleycon Silva",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.14227v1",
+    "titre": "Attributing Preprocessing Invariance in Spectral Foundation Models",
+    "url": "https://arxiv.org/abs/2608.14227v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 1,
+    "auteurs": "Dongjun Wei, Hongyi Wu, Yinuo Zou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.13822v1",
+    "titre": "Sharp Minimax Theory for Randomized Experiments",
+    "url": "https://arxiv.org/abs/2608.13822v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-13",
+    "themes": [],
+    "score": 0,
+    "auteurs": "Timothy Sudijono, Edgar Dobriban, Eric Tchetgen Tchetgen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.13775v1",
+    "titre": "Structured Payment in Pawnshop Borrowing: Mandates vs. Choice",
+    "url": "https://arxiv.org/abs/2608.13775v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-13",
+    "themes": [],
+    "score": 0,
+    "auteurs": "Francis J. DiTraglia, Craig McIntosh, Isaac Meza, Joyce Sadka, Enrique Seira",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.13466v1",
+    "titre": "Learning about Treatment Effects in Panels under Unknown Interference",
+    "url": "https://arxiv.org/abs/2608.13466v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-13",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "auteurs": "Shengbin Wei",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.13431v1",
+    "titre": "Measuring the Arrow of Time: Identification, Estimation, and Inference for Directional Structure in Multivariate Time Series",
+    "url": "https://arxiv.org/abs/2608.13431v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-13",
+    "themes": [
+      "inference-causale",
+      "travail-emploi",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "auteurs": "Avishek Bhandari",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.13224v1",
+    "titre": "Parameter Identification in Autoregressions under Discrete Sampling or Temporal Aggregation",
+    "url": "https://arxiv.org/abs/2608.13224v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-13",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "auteurs": "Marko Mlikota",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.13152v1",
+    "titre": "Estimation of distribution functions, their jumps and interval probabilities under measurement error",
+    "url": "https://arxiv.org/abs/2608.13152v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-13",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "auteurs": "Kairat Mynbaev, Carlos Martins-Filho, Chad Brown",
+    "signal": false
+  },
+  {
     "id": "arxiv-2608.12281v1",
     "titre": "Oil price shocks reveal unequal capacities for mobility adaptation",
     "url": "https://arxiv.org/abs/2608.12281v1",
@@ -299,6 +729,34 @@
     "signal": false
   },
   {
+    "id": "arxiv-2608.12667v1",
+    "titre": "Does life-satisfaction inequality measure societal inequality? A focal-value-rounding critique",
+    "url": "https://arxiv.org/abs/2608.12667v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-12",
+    "themes": [],
+    "score": 0,
+    "auteurs": "C. P. Barrington-Leigh",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.12589v1",
+    "titre": "Supervised Mixed-Frequency Learning for Macro-Financial Forecasting When Factors are Weak",
+    "url": "https://arxiv.org/abs/2608.12589v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-12",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "auteurs": "Ulrich Hounyo, Zhendong Li",
+    "signal": false
+  },
+  {
     "id": "arxiv-2608.11464v1",
     "titre": "Estimating the perturbed utility route choice model with trip-level data",
     "url": "https://arxiv.org/abs/2608.11464v1",
@@ -537,6 +995,34 @@
     "id": "arxiv-2608.09027v1",
     "titre": "Asymptotics for Treatment Choice with Partial Identification",
     "url": "https://arxiv.org/abs/2608.09027v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-10",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "auteurs": "José Luis Montiel Olea, Chen Qiu, Jörg Stoye",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.09812v2",
+    "titre": "Optimal Experimental Design and Estimation when Potential Outcomes are Bounded",
+    "url": "https://arxiv.org/abs/2608.09812v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-10",
+    "themes": [],
+    "score": 0,
+    "auteurs": "Peter Hull",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.09027v2",
+    "titre": "Local Asymptotics for Treatment Choice with Partial Identification",
+    "url": "https://arxiv.org/abs/2608.09027v2",
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-08-10",
@@ -904,6 +1390,22 @@
     "signal": false
   },
   {
+    "id": "voxeu-tps-cepr-org-voxeu-columns-how-rise-ai-matters-fiscal-policy",
+    "titre": "How the rise of AI matters for fiscal policy",
+    "url": "https://cepr.org/voxeu/columns/how-rise-ai-matters-fiscal-policy",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-08-07",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 0,
+    "auteurs": "Karen Dynan, Douglas Elmendorf, Louise Sheiner",
+    "signal": false
+  },
+  {
     "id": "arxiv-2608.06584v1",
     "titre": "Two Types of Tertiarization: Household Demand, Production Networks, and the Rise of Services",
     "url": "https://arxiv.org/abs/2608.06584v1",
@@ -1017,6 +1519,21 @@
     ],
     "score": 0,
     "auteurs": "N Kunst, S Dias, K Payne, S Palmer, MO Soares",
+    "signal": false
+  },
+  {
+    "id": "voxeu-https-cepr-org-multimedia-next-generation-pse-26",
+    "titre": "The Next Generation: PSE '26",
+    "url": "https://cepr.org/multimedia/next-generation-pse-26",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-08-06",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "auteurs": "",
     "signal": false
   },
   {
@@ -1805,6 +2322,21 @@
     ],
     "score": 0,
     "auteurs": "Weihua An, Pablo Estrada, Juan Estrada, David Jacho-Chavez",
+    "signal": false
+  },
+  {
+    "id": "fmi-10-5089-9798229054348-001",
+    "titre": "AI and Economic Divergence in Asia",
+    "url": "https://doi.org/10.5089/9798229054348.001",
+    "source": "IMF Working Papers",
+    "type": "papier",
+    "date_publication": "2026-08-01",
+    "themes": [
+      "travail-emploi",
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Natasha Che, Weining Xin, Taichi Yoshida",
     "signal": false
   }
 ]

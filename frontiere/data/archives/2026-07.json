@@ -617,5 +617,20 @@
     "score": 2,
     "auteurs": "Alessio Brini",
     "signal": false
+  },
+  {
+    "id": "fmi-10-5089-9798229051279-001",
+    "titre": "Aggregate Gains from AI and Their Distribution",
+    "url": "https://doi.org/10.5089/9798229051279.001",
+    "source": "IMF Working Papers",
+    "type": "papier",
+    "date_publication": "2026-07-01",
+    "themes": [
+      "travail-emploi",
+      "macro-finance"
+    ],
+    "score": 0,
+    "auteurs": "Rachel Yuting Fan, Ha Minh Nguyen",
+    "signal": false
   }
 ]

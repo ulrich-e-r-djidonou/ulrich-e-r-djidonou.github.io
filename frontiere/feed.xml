@@ -6,6 +6,62 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Algorithm-Driven SVARs: Navigating the Wilderness of Big Data</title>
+      <link>https://www.nber.org/papers/w35604#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35604-fromrss</guid>
+      <pubDate>2026-08-17</pubDate>
+      <description>Cette étude développe une méthodologie bayésienne pour sélectionner automatiquement les ensembles de variables dans les modèles SVAR à l'aide d'un critère hors échantillon, en retenant le plus grand système admissible. Les résultats montrent que la production réagit à la construction résidentielle plutôt qu'au seul crédit aux ménages, et que l'ajout de l'écart de taux d'entreprise sélectionné identifie le risque de défaut attendu comme un canal majeur de transmission de la politique monétaire.</description>
+    </item>
+    <item>
+      <title>The Global Transition – The Impact of Demographics and AI on Economic Power</title>
+      <link>https://www.nber.org/papers/w35618#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35618-fromrss</guid>
+      <pubDate>2026-08-17</pubDate>
+      <description>Cette étude s'appuie sur un modèle d'équilibre général dynamique couvrant 17 régions pour évaluer l'impact des évolutions démographiques mondiales au cours du XXIe siècle. Selon les simulations basées sur les dernières projections de l'ONU, le vieillissement démographique entraînera une surabondance de capital comprimant les rendements réels, une baisse de 10 % du PIB mondial en 2100, une nette hausse des cotisations sociales et une réorganisation majeure de l'hégémonie économique.</description>
+    </item>
+    <item>
+      <title>One Click Away: AI Tutoring with Khanmigo in a Two-Year School Experiment</title>
+      <link>https://www.nber.org/papers/w35620#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35620-fromrss</guid>
+      <pubDate>2026-08-17</pubDate>
+      <description>Un essai contrôlé randomisé mené pendant deux ans dans dix-huit collèges du Tennessee montre que l'accès au tuteur d'intelligence artificielle Khanmigo augmente les résultats en mathématiques des élèves de 0,06 à 0,08 écart-type sur une année scolaire. Cependant, ce progrès reste similaire à celui obtenu sans intelligence artificielle en raison d'une utilisation peu fréquente et superficielle par les élèves, ce qui indique que l'engagement réel des utilisateurs constitue la contrainte majeure.</description>
+    </item>
+    <item>
+      <title>Making AI Tutoring Productive: Evidence from a Mastery-Based Math Practice Experiment</title>
+      <link>https://www.nber.org/papers/w35621#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35621-fromrss</guid>
+      <pubDate>2026-08-17</pubDate>
+      <description>Une expérience aléatoire menée auprès de plus de 6 000 collégiens montre que l'utilisation d'un tuteur fondé sur l'intelligence artificielle ralentit la progression globale des élèves tout en améliorant la précision de leurs réponses après une erreur. Les évaluations différées révèlent que l'intégration de l'intelligence artificielle dans un parcours fondé sur la maîtrise engendre des gains sur le contenu révisé, confirmant que l'efficacité du tutorat automatique repose sur un encadrement structuré des erreurs.</description>
+    </item>
+    <item>
+      <title>Taxpayer Behavior in the Age of AI: A Field Experiment on Property Tax Appeals</title>
+      <link>https://www.nber.org/papers/w35632#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35632-fromrss</guid>
+      <pubDate>2026-08-17</pubDate>
+      <description>Une expérience de terrain menée auprès de 645 ménages du comté de Dallas montre que l'accès à un agent conversationnel d'intelligence artificielle augmente de 9,1 points de pourcentage la probabilité de contester son impôt foncier sans agent humain, la faisant passer de 41,4 % à 50,5 %. Bien que 78 % des ménages y ayant accès aient engagé une conversation avec l'outil, l'augmentation des contestations s'est avérée plus faible chez les foyers les moins favorisés, ce qui suggère un risque d'accroissement des disparités existantes.</description>
+    </item>
+    <item>
+      <title>Macrofinance meets AI: Evaluating alignment between LLMs and economists</title>
+      <link>https://cepr.org/voxeu/columns/macrofinance-meets-ai-evaluating-alignment-between-llms-and-economists</link>
+      <guid isPermaLink="false">voxeu-ce-meets-ai-evaluating-alignment-between-llms-and-economists</guid>
+      <pubDate>2026-08-15</pubDate>
+      <description>En comparant plusieurs modèles GPT aux évaluations d'économistes du FMI sur des rapports au titre de l'Article IV, cette étude évalue les tâches d'analyse pouvant être déléguées à l'intelligence artificielle. Les résultats montrent que les meilleurs modèles actuels réussissent les tâches factuelles et structurées, mais restent moins fiables pour les évaluations nuancées exigeant le jugement d'experts humains.</description>
+    </item>
+    <item>
+      <title>Whose doctor does the AI recommend? An algorithm audit of reputation and demographic signals in large language model-assisted physician choice</title>
+      <link>https://arxiv.org/abs/2608.14399v1</link>
+      <guid isPermaLink="false">arxiv-2608.14399v1</guid>
+      <pubDate>2026-08-14</pubDate>
+      <description>Un audit algorithmique mesurant les recommandations de médecins par sept grands modèles de langage montre que la réputation domine les choix, une hausse de note de 3,9 à 4,7 augmentant la probabilité de sélection de 31,4 points de pourcentage et une hausse du tarif de 90 à 190 dollars la réduisant de 20,0 points. L'analyse révèle également de légers biais favorisant les noms à consonance féminine (+2,5 points) et issus de minorités (+1,3 à +2,9 points), des effets qui demeurent totalement invisibles dans les auto-explications fournies par ces modèles.</description>
+    </item>
+    <item>
+      <title>A Survey of Large Models in Sports</title>
+      <link>https://arxiv.org/abs/2608.14377v1</link>
+      <guid isPermaLink="false">arxiv-2608.14377v1</guid>
+      <pubDate>2026-08-14</pubDate>
+      <description>Cet article présente un panorama complet de l'application des grands modèles de langage multimodaux dans le domaine du sport, en détaillant les tâches, les applications, les jeux de données et les bancs d'essai existants. Les auteurs y abordent également les défis actuels et les orientations futures afin d'établir les bases de l'intelligence sportive guidée par ces modèles, tout en mettant à disposition un répertoire open-source.</description>
+    </item>
+    <item>
       <title>Organizational Technology Ladders: Remote Work and Generative AI Adoption</title>
       <link>https://arxiv.org/abs/2608.11626v1</link>
       <guid isPermaLink="false">arxiv-2608.11626v1</guid>
@@ -139,6 +195,13 @@
       <description>L'inférence de grands modèles de langage constitue désormais un marché de gros à part entière, où l'offre de modèles et de fournisseurs concurrents s'est multipliée rapidement grâce aux modèles ouverts. Le prix de cette intelligence a chuté d'environ mille fois, les modèles ouverts coûtant désormais près de 90% de moins que leurs équivalents propriétaires, dans un marché très dynamique où aucun acteur ne domine durablement.</description>
     </item>
     <item>
+      <title>Public Debt, Wealth Inequality, and the Burden of Taxation</title>
+      <link>https://doi.org/10.5089/9798229055925.001</link>
+      <guid isPermaLink="false">fmi-10-5089-9798229055925-001</guid>
+      <pubDate>2026-08-01</pubDate>
+      <description>À partir d'un modèle de Diamond avec hétérogénéité des ménages et fiscalité progressive, cette étude démontre que la dette publique façonne la répartition des richesses en dictant la progressivité de l'impôt par le canal de la charge fiscale. Les données empiriques d'après-guerre confirment que la dette publique constitue un déterminant majeur des inégalités de patrimoine, son effet étant non linéaire selon le niveau de la charge fiscale et dépendant du régime de taux d'intérêt.</description>
+    </item>
+    <item>
       <title>OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding</title>
       <link>https://arxiv.org/abs/2607.27155v1</link>
       <guid isPermaLink="false">arxiv-2607.27155v1</guid>
@@ -151,69 +214,6 @@
       <guid isPermaLink="false">bce-ww-ecb-europa-eu-pub-pdf-scpwps-ecb-wp3262-7169a94638-en-pdf</guid>
       <pubDate>2026-07-29</pubDate>
       <description>Afin d'évaluer la sévérité et la probabilité des événements déclencheurs de risques pour la stabilité financière, cette étude emploie des grands modèles de langage pour construire l'indicateur SPOT à partir d'articles de presse publiés entre 2005 et 2026. L'indicateur SPOT augmente avant les principaux événements déclencheurs historiques, identifie correctement leurs sources et améliore la prévision des risques baissiers pesant sur l'économie, démontrant le potentiel de l'intelligence artificielle pour le suivi de la stabilité financière.</description>
-    </item>
-    <item>
-      <title>The AI premium</title>
-      <link>https://cepr.org/voxeu/columns/ai-premium</link>
-      <guid isPermaLink="false">voxeu-https-cepr-org-voxeu-columns-ai-premium</guid>
-      <pubDate>2026-07-28</pubDate>
-      <description>En s'appuyant sur la consommation réalisée de 380 mille milliards de tokens d'intelligence artificielle, l'étude démontre que les entreprises dont les actions sont les plus sensibles à la croissance de cet usage obtiennent des rendements ultérieurs plus élevés. Cette prime boursière est particulièrement élevée pour les marchés développés, les modèles de pointe et les tâches complexes, les marchés financiers associant plus positivement cette transition aux travaux de mise en œuvre, de communication et de coordination qu'aux activités analytiques ou scientifiques.</description>
-    </item>
-    <item>
-      <title>Agentic AI Orchestration of Heterogeneous Economic Models for Rapid, Multi-scenario Analysis of Energy Crises</title>
-      <link>https://arxiv.org/abs/2607.23313v1</link>
-      <guid isPermaLink="false">arxiv-2607.23313v1</guid>
-      <pubDate>2026-07-25</pubDate>
-      <description>Pour pallier la fragmentation des modèles économiques et répondre à l'urgence des crises énergétiques, les auteurs ont conçu une architecture fondée sur les grands modèles linguistiques capable d'automatiser leur orchestration. Ce cadre coordonne seize modèles sectoriels et macroéconomiques à travers cinq scénarios d'analyse, tout en garantissant que chaque donnée chiffrée provient exclusivement de l'exécution des modèles sous-jacents et non de l'intelligence artificielle.</description>
-    </item>
-    <item>
-      <title>TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI</title>
-      <link>https://arxiv.org/abs/2607.22465v1</link>
-      <guid isPermaLink="false">arxiv-2607.22465v1</guid>
-      <pubDate>2026-07-24</pubDate>
-      <description>Pour pallier l'incapacité des routeurs par appel à traiter le retour d'information différé des flux de travail d'agents, le cadre TRACE-Router attribue chaque tâche à un modèle unique dès son admission via un bandit contextuel. Évaluée sur trois bancs d'essai, cette approche améliore le compromis entre précision et latence, surpassant le meilleur modèle unique sur Terminal-Bench de 7,1 points de précision tout en réduisant la latence de 36 %.</description>
-    </item>
-    <item>
-      <title>DBA-Bench: A Production-Fidelity Benchmark for LLM-Based Database Operations Agents</title>
-      <link>https://arxiv.org/abs/2607.22165v1</link>
-      <guid isPermaLink="false">arxiv-2607.22165v1</guid>
-      <pubDate>2026-07-24</pubDate>
-      <description>Pour évaluer la capacité des agents d'intelligence artificielle à gérer des bases de données en conditions réelles, le benchmark DBA-Bench propose 106 scénarios complexes répartis sur sept domaines opérationnels au sein d'environnements PostgreSQL. L'évaluation de plusieurs systèmes sur 848 exécutions révèle un taux de réussite sécurisé moyen de seulement 12,4 %, le meilleur agent automatisé atteignant 17,9 % contre 93,4 % pour un administrateur humain.</description>
-    </item>
-    <item>
-      <title>Are cryptocurrencies real financial bubbles? Evidence from quantitative analyses</title>
-      <link>https://arxiv.org/abs/2607.21826v1</link>
-      <guid isPermaLink="false">arxiv-2607.21826v1</guid>
-      <pubDate>2026-07-23</pubDate>
-      <description>En combinant le modèle LPPL et les tests statistiques PSY sur la période du 1er décembre 2016 au 16 janvier 2018, cette étude évalue la présence de bulles financières dans les cours du Bitcoin et de l'Ether. Les résultats identifient des signaux caractéristiques de bulles ayant anticipé les krachs du Bitcoin à la mi-décembre 2017 et début janvier 2018, ainsi que ceux de l'Ether en juin 2017 et janvier 2018, confirmant le risque spéculatif élevé entretenu par le sentiment des investisseurs.</description>
-    </item>
-    <item>
-      <title>The Evolution of Digital Search: From Blue Links to Delegated Decision-Making</title>
-      <link>https://arxiv.org/abs/2607.21459v1</link>
-      <guid isPermaLink="false">arxiv-2607.21459v1</guid>
-      <pubDate>2026-07-23</pubDate>
-      <description>La recherche numérique évolue d'un modèle traditionnel centré sur les liens vers un système d'agents d'intelligence artificielle auxquels la prise de décision est déléguée, modifiant ainsi la transparence, la concurrence et la monétisation. La théorie économique et de premières preuves expérimentales indiquent que les choix d'architecture de ces systèmes d'agents ont un impact déterminant sur l'efficacité des marchés, la concurrence et le bien-être des consommateurs comme des entreprises.</description>
-    </item>
-    <item>
-      <title>pAI-Econ-claude: A Gated Human-in-the-Loop Multi-Agent Architecture for AI-Assisted Economic Theory Development</title>
-      <link>https://arxiv.org/abs/2607.21268v1</link>
-      <guid isPermaLink="false">arxiv-2607.21268v1</guid>
-      <pubDate>2026-07-23</pubDate>
-      <description>Afin de pallier le manque de vérification automatisée dans le développement de théories économiques par des agents autonomes, les chercheurs ont conçu pAI-Econ-claude, une architecture multi-agents associant des portes de contrôle spécialisées et une supervision humaine. Testée sur cinq tâches économiques face à un système sans filtrage, cette architecture a réduit la sévérité moyenne des défaillances de 1,58 à 1,16 tout en portant l'utilité globale de 2,60 à 3,10, obtenant la préférence des évaluateurs dans quatre cas sur cinq.</description>
-    </item>
-    <item>
-      <title>Licensing and Innovation Regimes in Pharmaceutical R&amp;D</title>
-      <link>https://arxiv.org/abs/2607.20365v1</link>
-      <guid isPermaLink="false">arxiv-2607.20365v1</guid>
-      <pubDate>2026-07-22</pubDate>
-      <description>Cette étude analyse l'impact de l'octroi de licences sur la recherche et développement pharmaceutique en distinguant les innovations incrémentales, caractérisées par une information plus précise, des innovations novatrices. À l'aide de méthodes d'apprentissage automatique double et de variables instrumentales, l'analyse montre que les licences augmentent la probabilité globale de succès, mais que l'égalisation concurrentielle des rendements ne s'observe que pour les innovations incrémentales et s'effondre pour les projets novateurs.</description>
-    </item>
-    <item>
-      <title>PyroDash: Cost-Efficient Token-Level Small-Large Language Model Collaborative Inference</title>
-      <link>https://arxiv.org/abs/2607.20327v1</link>
-      <guid isPermaLink="false">arxiv-2607.20327v1</guid>
-      <pubDate>2026-07-22</pubDate>
-      <description>Les chercheurs proposent PyroDash, un cadre d'inférence collaborative dans lequel un petit modèle de langage apprend à déléguer la génération de texte à un grand modèle gelé via un jeton de contrôle afin de réduire les coûts d'utilisation. Évalué sur cinq benchmarks de raisonnement mathématique, PyroDash surpasse l'exactitude du grand modèle seul de 6,36 points de pourcentage tout en réduisant le coût de 20,4 %, ou réduit le coût total de 49,36 à 1,78 dollar US selon la configuration retenue.</description>
     </item>
   </channel>
 </rss>

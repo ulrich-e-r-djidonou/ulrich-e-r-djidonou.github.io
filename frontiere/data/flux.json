@@ -1,5 +1,152 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35604-fromrss",
+    "titre": "Algorithm-Driven SVARs: Navigating the Wilderness of Big Data",
+    "url": "https://www.nber.org/papers/w35604#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-17",
+    "resume_fr": "Cette étude développe une méthodologie bayésienne pour sélectionner automatiquement les ensembles de variables dans les modèles SVAR à l'aide d'un critère hors échantillon, en retenant le plus grand système admissible. Les résultats montrent que la production réagit à la construction résidentielle plutôt qu'au seul crédit aux ménages, et que l'ajout de l'écart de taux d'entreprise sélectionné identifie le risque de défaut attendu comme un canal majeur de transmission de la politique monétaire.",
+    "angle_eco": "La sélection algorithmique des variables des modèles SVAR reposant sur un critère bayésien hors échantillon permet d'optimiser la construction des ensembles d'information et de mieux identifier les canaux de transmission macroéconomiques comme l'écart de crédit et le risque de défaut anticipé.",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 3,
+    "auteurs": "Yucheng Yang, Tao Zha",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35618-fromrss",
+    "titre": "The Global Transition – The Impact of Demographics and AI on Economic Power",
+    "url": "https://www.nber.org/papers/w35618#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-17",
+    "resume_fr": "Cette étude s'appuie sur un modèle d'équilibre général dynamique couvrant 17 régions pour évaluer l'impact des évolutions démographiques mondiales au cours du XXIe siècle. Selon les simulations basées sur les dernières projections de l'ONU, le vieillissement démographique entraînera une surabondance de capital comprimant les rendements réels, une baisse de 10 % du PIB mondial en 2100, une nette hausse des cotisations sociales et une réorganisation majeure de l'hégémonie économique.",
+    "angle_eco": "La simulation des tendances démographiques et de l'adoption de l'automatisation à l'échelle mondiale met en lumière la façon dont le vieillissement de la population entraîne une baisse des rendements du capital, une hausse des cotisations retraites et un basculement de la puissance économique internationale au cours du siècle.",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 5,
+    "auteurs": "Seth G. Benzell, Laurence J. Kotlikoff, Victor Yifan Ye",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35620-fromrss",
+    "titre": "One Click Away: AI Tutoring with Khanmigo in a Two-Year School Experiment",
+    "url": "https://www.nber.org/papers/w35620#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-17",
+    "resume_fr": "Un essai contrôlé randomisé mené pendant deux ans dans dix-huit collèges du Tennessee montre que l'accès au tuteur d'intelligence artificielle Khanmigo augmente les résultats en mathématiques des élèves de 0,06 à 0,08 écart-type sur une année scolaire. Cependant, ce progrès reste similaire à celui obtenu sans intelligence artificielle en raison d'une utilisation peu fréquente et superficielle par les élèves, ce qui indique que l'engagement réel des utilisateurs constitue la contrainte majeure.",
+    "angle_eco": "La contrainte limitant l'impact éducatif de l'intelligence artificielle en mathématiques réside dans le faible engagement des élèves, dont l'utilisation rare et superficielle du tuteur virtuel restreint les progrès scolaires à des niveaux comparables à ceux d'un entraînement classique sans assistance.",
+    "themes": [
+      "llm"
+    ],
+    "score": 3,
+    "auteurs": "Philip Oreopoulos, Nina Low",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35621-fromrss",
+    "titre": "Making AI Tutoring Productive: Evidence from a Mastery-Based Math Practice Experiment",
+    "url": "https://www.nber.org/papers/w35621#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-17",
+    "resume_fr": "Une expérience aléatoire menée auprès de plus de 6 000 collégiens montre que l'utilisation d'un tuteur fondé sur l'intelligence artificielle ralentit la progression globale des élèves tout en améliorant la précision de leurs réponses après une erreur. Les évaluations différées révèlent que l'intégration de l'intelligence artificielle dans un parcours fondé sur la maîtrise engendre des gains sur le contenu révisé, confirmant que l'efficacité du tutorat automatique repose sur un encadrement structuré des erreurs.",
+    "angle_eco": "L'efficacité du tutorat basé sur les grands modèles de langage repose sur un accompagnement structuré qui transforme les erreurs des élèves en moments d'apprentissage productifs, particulièrement lorsque ce soutien est combiné à un parcours axé sur la maîtrise des notions.",
+    "themes": [
+      "llm"
+    ],
+    "score": 6,
+    "auteurs": "Philip Oreopoulos, Michael Liut, Alp Sungu, Nina Low",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35632-fromrss",
+    "titre": "Taxpayer Behavior in the Age of AI: A Field Experiment on Property Tax Appeals",
+    "url": "https://www.nber.org/papers/w35632#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-17",
+    "resume_fr": "Une expérience de terrain menée auprès de 645 ménages du comté de Dallas montre que l'accès à un agent conversationnel d'intelligence artificielle augmente de 9,1 points de pourcentage la probabilité de contester son impôt foncier sans agent humain, la faisant passer de 41,4 % à 50,5 %. Bien que 78 % des ménages y ayant accès aient engagé une conversation avec l'outil, l'augmentation des contestations s'est avérée plus faible chez les foyers les moins favorisés, ce qui suggère un risque d'accroissement des disparités existantes.",
+    "angle_eco": "L'accès à un agent conversationnel d'intelligence artificielle aide les contribuables à évaluer les informations fiscales et augmente ainsi leurs contestations autonomes de taxe foncière sans intermédiaire humain, tout en risquant d'accroître les disparités socio-économiques car les ménages plus défavorisés en tirent un bénéfice moindre.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "auteurs": "Justin E. Holz, Ricardo Perez-Truglia, Andrew Simon, Alejandro Zentner",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "voxeu-ce-meets-ai-evaluating-alignment-between-llms-and-economists",
+    "titre": "Macrofinance meets AI: Evaluating alignment between LLMs and economists",
+    "url": "https://cepr.org/voxeu/columns/macrofinance-meets-ai-evaluating-alignment-between-llms-and-economists",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-08-15",
+    "resume_fr": "En comparant plusieurs modèles GPT aux évaluations d'économistes du FMI sur des rapports au titre de l'Article IV, cette étude évalue les tâches d'analyse pouvant être déléguées à l'intelligence artificielle. Les résultats montrent que les meilleurs modèles actuels réussissent les tâches factuelles et structurées, mais restent moins fiables pour les évaluations nuancées exigeant le jugement d'experts humains.",
+    "angle_eco": "L'utilisation des modèles d'intelligence artificielle dans l'analyse économique permet de traiter efficacement les tâches factuelles et structurées, mais demeure moins fiable que le jugement humain pour répondre à des questions d'évaluation nuancées.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 6,
+    "auteurs": "Paola Ganum, Tohid Atashbar",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "arxiv-2608.14399v1",
+    "titre": "Whose doctor does the AI recommend? An algorithm audit of reputation and demographic signals in large language model-assisted physician choice",
+    "url": "https://arxiv.org/abs/2608.14399v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "resume_fr": "Un audit algorithmique mesurant les recommandations de médecins par sept grands modèles de langage montre que la réputation domine les choix, une hausse de note de 3,9 à 4,7 augmentant la probabilité de sélection de 31,4 points de pourcentage et une hausse du tarif de 90 à 190 dollars la réduisant de 20,0 points. L'analyse révèle également de légers biais favorisant les noms à consonance féminine (+2,5 points) et issus de minorités (+1,3 à +2,9 points), des effets qui demeurent totalement invisibles dans les auto-explications fournies par ces modèles.",
+    "angle_eco": "L'intermédiation algorithmique des choix de santé par les modèles de langage réattribue la visibilité des médecins principalement en fonction de leur réputation et de leurs tarifs, tout en générant des biais démographiques et de positionnement que les auto-explications de l'intelligence artificielle ne permettent pas de détecter.",
+    "themes": [
+      "inference-causale",
+      "llm"
+    ],
+    "score": 4,
+    "auteurs": "Syeda Anshrah Gillani, Mirza Samad Ahmed Baig",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "arxiv-2608.14377v1",
+    "titre": "A Survey of Large Models in Sports",
+    "url": "https://arxiv.org/abs/2608.14377v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "resume_fr": "Cet article présente un panorama complet de l'application des grands modèles de langage multimodaux dans le domaine du sport, en détaillant les tâches, les applications, les jeux de données et les bancs d'essai existants. Les auteurs y abordent également les défis actuels et les orientations futures afin d'établir les bases de l'intelligence sportive guidée par ces modèles, tout en mettant à disposition un répertoire open-source.",
+    "angle_eco": "L'intégration des grands modèles de langage multimodaux dans le secteur sportif transforme la compréhension, l'analyse et l'interaction au sein de cette industrie tout en soutenant son potentiel de croissance économique à travers la structuration des applications, des jeux de données et des défis technologiques de l'intelligence sportive.",
+    "themes": [
+      "llm",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 4,
+    "auteurs": "Yichen Xu, Jianzhe Ma, Chuhan Wang, Zhonghao Cao, Liangyu Chen, Wenxuan Wang, Qin Jin",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
     "id": "arxiv-2608.11626v1",
     "titre": "Organizational Technology Ladders: Remote Work and Generative AI Adoption",
     "url": "https://arxiv.org/abs/2608.11626v1",
@@ -347,6 +494,25 @@
     "auteurs": "Mert Demirer, Andrey Fradkin, Nadav Tadelis",
     "signal": false,
     "llm": "claude (ajout manuel demande par Ulrich, score heuristique reel 2, sous le seuil de 3)"
+  },
+  {
+    "id": "fmi-10-5089-9798229055925-001",
+    "titre": "Public Debt, Wealth Inequality, and the Burden of Taxation",
+    "url": "https://doi.org/10.5089/9798229055925.001",
+    "source": "IMF Working Papers",
+    "type": "papier",
+    "date_publication": "2026-08-01",
+    "resume_fr": "À partir d'un modèle de Diamond avec hétérogénéité des ménages et fiscalité progressive, cette étude démontre que la dette publique façonne la répartition des richesses en dictant la progressivité de l'impôt par le canal de la charge fiscale. Les données empiriques d'après-guerre confirment que la dette publique constitue un déterminant majeur des inégalités de patrimoine, son effet étant non linéaire selon le niveau de la charge fiscale et dépendant du régime de taux d'intérêt.",
+    "angle_eco": "La dette publique modifie l'inégalité des patrimoines en déterminant endogènement la progressivité de la fiscalité à travers le fardeau fiscal, ce qui en fait un canal central par lequel les chocs structurels se transmettent à la répartition de la richesse.",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "auteurs": "Moustafa Chatzouz",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
   },
   {
     "id": "arxiv-2607.27155v1",
