@@ -120,6 +120,63 @@ def designer_signal(entrees, ids_du_run, aujourd_hui):
     return None
 
 
+def completer_derniere_execution(historique, aujourd_hui, signal_designe, score_max):
+    """Ajoute l'issue du signal a la ligne du jour dans l'historique de sante.
+
+    Pure : renvoie (historique, complete) sans toucher au disque.
+
+    Le carnet est ecrit par curate.py, qui tourne avant publish.py, donc avant
+    que le signal soit designe. La ligne du jour est completee sur place
+    plutot que dupliquee : une seconde ligne a la meme date ferait compter
+    deux executions la ou il n'y en a eu qu'une, et verifier_sante.py raisonne
+    precisement sur les dernieres lignes.
+
+    Aucune ligne n'est creee si celle du jour manque : publish.py lance seul,
+    hors du workflow, n'a pas d'execution de collecte a decrire, et inventer
+    une ligne a moitie vide fausserait l'historique plus qu'un trou avoue.
+    """
+    if not historique:
+        return historique, False
+    derniere = historique[-1]
+    if derniere.get("date") != aujourd_hui.isoformat():
+        return historique, False
+    derniere["signal_designe"] = signal_designe
+    # score_max porte sur la recolte du jour, pas sur la fenetre : c'est la
+    # mesure qui dit si le plancher est bien calibre. Sur une execution sans
+    # recolte, il n'y a rien a mesurer et le champ vaut None plutot que 0,
+    # qu'on confondrait avec une recolte dont tout serait tombe a zero.
+    derniere["score_max"] = score_max
+    return historique, True
+
+
+def enregistrer_issue_signal(signal, entrees_du_run, aujourd_hui, chemin=None):
+    """Ecrit l'issue du signal dans frontiere/data/sante.json."""
+    chemin = chemin or (DONNEES / "sante.json")
+    if not chemin.exists():
+        print("Aucun historique de sante a completer.")
+        return
+    try:
+        historique = json.loads(chemin.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        print("Historique de sante illisible, issue du signal non enregistree.")
+        return
+
+    scores = [e.get("score", 0) for e in entrees_du_run]
+    historique, complete = completer_derniere_execution(
+        historique,
+        aujourd_hui,
+        signal is not None,
+        max(scores) if scores else None,
+    )
+    if not complete:
+        print("Aucune ligne de sante datee de ce jour, issue du signal non enregistree.")
+        return
+
+    contenu = json.dumps(historique, ensure_ascii=False, indent=2)
+    json.loads(contenu)  # validation avant ecriture
+    chemin.write_text(contenu, encoding="utf-8")
+
+
 def generer_feed_rss(entrees):
     items_xml = []
     for entree in entrees[:30]:
@@ -341,6 +398,10 @@ def main():
     if signal is not None:
         signal["signal"] = True
 
+    # Mesure sur les seuls items du run qui pouvaient devenir signal, donc
+    # ceux tombes dans la fenetre : un candidat d'archive n'y prete pas.
+    entrees_du_run = [e for e in dans_fenetre if e.get("id") in set(ids_du_run)]
+
     contenu_flux = json.dumps(dans_fenetre, ensure_ascii=False, indent=2)
     json.loads(contenu_flux)  # validation avant ecriture
 
@@ -374,6 +435,8 @@ def main():
     (RACINE / "frontiere" / "feed.xml").write_text(feed, encoding="utf-8")
 
     print(f"Flux publie : {len(dans_fenetre)} entrees, {len(a_archiver)} archivees.")
+    enregistrer_issue_signal(signal, entrees_du_run, aujourd_hui)
+
     if signal is not None:
         print(f"Signal de la semaine : {signal['titre']} (score {signal.get('score', 0)})")
     else:

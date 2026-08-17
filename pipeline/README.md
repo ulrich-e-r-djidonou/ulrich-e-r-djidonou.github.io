@@ -296,6 +296,14 @@ python -m pipeline.verifier_jsonld
 rejetés par la validation, fournisseur) dans `frontiere/data/sante.json`,
 committé, sur les 12 dernières exécutions.
 
+`publish.py` complète ensuite la ligne du jour avec `signal_designe` et
+`score_max`, le meilleur score de la récolte. Il la complète sur place au lieu
+d'en écrire une seconde: `curate.py` tourne avant lui, donc avant que le signal
+soit désigné, et deux lignes à la même date feraient compter deux exécutions là
+où il n'y en a eu qu'une. Si la ligne du jour manque, parce que `publish.py` a
+été lancé seul hors du workflow, rien n'est créé plutôt qu'une ligne à moitié
+vide.
+
 `verifier_sante.py` se lance après la publication, dans le workflow, et
 échoue si les deux dernières exécutions ont publié zéro item. Il ne bloque
 jamais la maintenance du flux : dans `frontiere.yml`, il se lance après le
@@ -305,6 +313,34 @@ filtre de mots-clés devenu trop strict, ou un budget d'appels
 systématiquement épuisé avant la fin du lot. Un échec fait échouer le
 workflow visiblement, comme pour une panne du service de rédaction, ce qui
 déclenche la notification GitHub par défaut sur les exécutions planifiées.
+
+Le même script rapporte l'issue du signal, et celui-ci demandait sa propre
+surveillance depuis que le plancher a rendu la section vide possible: une
+exécution peut publier ses neuf items, ne désigner aucun signal, et paraître en
+parfaite santé, `nb_publies` étant le seul chiffre surveillé. Une quinzaine
+calme et un scoring qui a cessé de fonctionner produisent alors le même écran.
+Quatre exécutions consécutives sans signal, environ deux semaines, déclenchent
+un rapport listant les `score_max` de la période.
+
+Ce rapport est informatif, là où l'alerte à zéro publication est bloquante, et
+l'écart se justifie par le taux de fausse alerte. Zéro item publié deux fois de
+suite est presque toujours une panne. Une quinzaine sans article marquant reste
+plausible sur un flux de veille, et faire échouer le workflow dessus
+apprendrait à ignorer ses échecs, ce qui coûte plus cher que de rater
+l'information.
+
+`score_max` est journalisé à chaque exécution, y compris quand tout va bien.
+`SEUIL_SIGNAL` a été fixé le 17 août 2026 sur une seule semaine de données et
+un raisonnement sur la structure du score, jamais sur une distribution
+observée: ces lignes sont la matière qui permettra de le réviser. Des maximums
+qui s'écrasent sous le plancher exécution après exécution désignent le scoring,
+donc les listes de mots-clés ou la forme des résumés servis par les sources.
+Des maximums qui frôlent le plancher sans l'atteindre désignent le plancher
+lui-même.
+
+Les lignes antérieures au 17 août 2026 ne portent pas `signal_designe` et sont
+ignorées par ce contrôle, plutôt que comptées comme des absences de signal, ce
+qui déclencherait l'alerte sur du passé qui n'en savait rien.
 
 ```powershell
 python -m pipeline.verifier_sante

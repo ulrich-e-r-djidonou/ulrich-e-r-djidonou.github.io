@@ -309,5 +309,82 @@ class DesignerSignalTests(unittest.TestCase):
         self.assertIsNone(publish.designer_signal([], [], self.REFERENCE))
 
 
+class CompleterDerniereExecutionTests(unittest.TestCase):
+    """Dates litterales assumees : ce sont des cles d'appariement, pas des
+    bornes de fenetre glissante. La fonction compare une date a une autre,
+    sans notion d'anciennete."""
+
+    JOUR = date(2026, 8, 17)
+
+    def ligne(self, jour):
+        return {"date": jour.isoformat(), "nb_publies": 3}
+
+    def test_complete_la_ligne_du_jour_sans_en_ajouter(self):
+        historique = [self.ligne(self.JOUR - timedelta(days=4)), self.ligne(self.JOUR)]
+
+        resultat, complete = publish.completer_derniere_execution(
+            historique, self.JOUR, True, 8,
+        )
+
+        self.assertTrue(complete)
+        self.assertEqual(len(resultat), 2)
+        self.assertTrue(resultat[-1]["signal_designe"])
+        self.assertEqual(resultat[-1]["score_max"], 8)
+        self.assertNotIn("signal_designe", resultat[0])
+
+    def test_ne_cree_rien_si_la_ligne_du_jour_manque(self):
+        # publish.py lance seul, hors du workflow : curate.py n'a pas ecrit de
+        # ligne, et en inventer une fausserait le compte d'executions.
+        historique = [self.ligne(self.JOUR - timedelta(days=4))]
+
+        resultat, complete = publish.completer_derniere_execution(
+            historique, self.JOUR, False, 4,
+        )
+
+        self.assertFalse(complete)
+        self.assertEqual(len(resultat), 1)
+        self.assertNotIn("signal_designe", resultat[0])
+
+    def test_historique_vide_ne_declenche_rien(self):
+        resultat, complete = publish.completer_derniere_execution(
+            [], self.JOUR, True, 9,
+        )
+        self.assertFalse(complete)
+        self.assertEqual(resultat, [])
+
+    def test_absence_de_signal_est_enregistree_comme_telle(self):
+        historique = [self.ligne(self.JOUR)]
+
+        resultat, _ = publish.completer_derniere_execution(
+            historique, self.JOUR, False, 4,
+        )
+
+        self.assertIs(resultat[-1]["signal_designe"], False)
+        self.assertEqual(resultat[-1]["score_max"], 4)
+
+    def test_recolte_vide_journalise_none_et_non_zero(self):
+        # 0 se confondrait avec une recolte dont tous les scores seraient nuls.
+        with tempfile.TemporaryDirectory() as dossier:
+            chemin = Path(dossier) / "sante.json"
+            chemin.write_text(
+                json.dumps([self.ligne(self.JOUR)]), encoding="utf-8",
+            )
+
+            publish.enregistrer_issue_signal(None, [], self.JOUR, chemin)
+
+            ligne = json.loads(chemin.read_text(encoding="utf-8"))[-1]
+            self.assertIsNone(ligne["score_max"])
+            self.assertIs(ligne["signal_designe"], False)
+
+    def test_carnet_illisible_ne_leve_pas(self):
+        with tempfile.TemporaryDirectory() as dossier:
+            chemin = Path(dossier) / "sante.json"
+            chemin.write_text("{ pas du json", encoding="utf-8")
+
+            publish.enregistrer_issue_signal(None, [], self.JOUR, chemin)
+
+            self.assertEqual(chemin.read_text(encoding="utf-8"), "{ pas du json")
+
+
 if __name__ == "__main__":
     unittest.main()

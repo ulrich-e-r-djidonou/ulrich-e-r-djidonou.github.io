@@ -16,6 +16,58 @@ absolu, avec le motif et le numéro de PR quand il en existe une.
 
 ---
 
+## 2026-08-17, surveiller l'absence de signal et mesurer les scores
+
+Suite immédiate de l'entrée ci-dessous, dont le correctif a ouvert un trou de
+surveillance en même temps qu'il réparait la règle.
+
+Avant le plancher, la section Signal ne pouvait pas être vide: il existait
+toujours un article au score maximal, même médiocre. Depuis, elle peut l'être,
+et deux causes très différentes produisent le même écran. Une quinzaine calme,
+ce qui est légitime. Ou un scoring qui a cessé de fonctionner, parce qu'une
+source a changé la forme de ses résumés ou qu'un filtre est devenu trop strict,
+auquel cas tous les scores s'écrasent entre 3 et 4 et la section reste vide
+indéfiniment.
+
+Ce second cas était invisible. La surveillance ne regardait que `nb_publies`,
+et l'exécution du 17 août montre bien le problème: 9 items publiés, aucune
+bascule de repli, aucun rejet, `verifier_sante.py` répond « ok ». Le pipeline
+est en parfaite santé du point de vue de ce qu'il mesure. Seul le signal
+disparaîtrait, et rien ne mesurait le signal. C'est la classe de panne
+silencieuse que `verifier_fraicheur_sources.py` traque déjà au niveau des
+sources, où un flux qui répond 200 avec un XML valide et zéro entrée récente ne
+lève aucune erreur.
+
+Deux champs ajoutés au carnet, `signal_designe` et `score_max`. Le second est
+le plus utile, et pour une raison qui touche à l'entrée précédente: le plancher
+de 6 a été fixé sur une seule semaine de données et un raisonnement sur la
+structure du score. C'est un jugement, pas une mesure. Journaliser le meilleur
+score de chaque récolte donne la distribution réelle, donc la possibilité de
+réviser le plancher sur des chiffres. Le rapport dit d'ailleurs comment lire
+ces chiffres: des maximums écrasés sous le plancher accusent le scoring, des
+maximums qui le frôlent accusent le plancher.
+
+Deux arbitrages méritent d'être retenus.
+
+Le rapport est informatif, non bloquant, contrairement à l'alerte à zéro
+publication. Rendre bloquant un contrôle dont la fausse alerte est plausible,
+et une quinzaine sans article marquant l'est sur un flux de veille, apprend à
+ignorer les échecs du workflow. Ce coût dépasse celui de rater l'information,
+puisqu'il dégrade aussi les alertes qui, elles, sont fiables.
+
+Les lignes antérieures à cette date sont ignorées faute de porter le champ,
+au lieu d'être comptées comme des absences de signal. Sans cette précaution
+l'alerte se serait déclenchée dès la première exécution sans signal, en
+additionnant trois exécutions passées qui n'en savaient rien, exactement le
+genre de test qui se déclenche tout seul et que
+`pipeline/verifier_dates_tests.py` existe pour prévenir ailleurs.
+
+La ligne du 17 août a été complétée à la main, via la fonction elle-même,
+plutôt qu'attendre l'exécution du jeudi: le carnet ne garde que 12 exécutions,
+et la seule dont on connaissait déjà l'issue en détail méritait d'y figurer.
+
+---
+
 ## 2026-08-17, le signal de la semaine se choisit sur la collecte du jour
 
 PR [#18](https://github.com/ulrich-e-r-djidonou/ulrich-e-r-djidonou.github.io/pull/18).

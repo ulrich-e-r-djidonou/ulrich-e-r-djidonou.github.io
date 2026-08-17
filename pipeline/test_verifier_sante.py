@@ -49,5 +49,53 @@ class ExecutionsAZeroPublicationTests(unittest.TestCase):
         self.assertIsNotNone(resultat)
 
 
+def executions_signal(*drapeaux):
+    """Historique ou chaque drapeau est True, False, ou None pour une ligne
+    ancienne, ecrite avant que signal_designe existe."""
+    lignes = []
+    for i, drapeau in enumerate(drapeaux):
+        ligne = {
+            "date": f"2026-07-{10 + i:02d}",
+            "fournisseur": "api",
+            "nb_publies": 3,
+        }
+        if drapeau is not None:
+            ligne["signal_designe"] = drapeau
+            ligne["score_max"] = 3 if drapeau is False else 8
+        lignes.append(ligne)
+    return lignes
+
+
+class ExecutionsSansSignalTests(unittest.TestCase):
+    def test_quatre_absences_consecutives_declenchent_l_alerte(self):
+        historique = executions_signal(True, False, False, False, False)
+        resultat = verifier_sante.executions_sans_signal(historique, 4)
+        self.assertIsNotNone(resultat)
+        self.assertEqual(len(resultat), 4)
+
+    def test_trois_absences_ne_suffisent_pas(self):
+        historique = executions_signal(False, False, False)
+        self.assertIsNone(verifier_sante.executions_sans_signal(historique, 4))
+
+    def test_un_signal_designe_reinitialise(self):
+        historique = executions_signal(False, False, False, True)
+        self.assertIsNone(verifier_sante.executions_sans_signal(historique, 4))
+
+    def test_les_lignes_anterieures_au_champ_sont_ignorees(self):
+        # Les executions d'avant le 17 aout 2026 ne portent pas le champ. Les
+        # compter comme des absences declencherait l'alerte sur du passe qui
+        # n'en savait rien, des la premiere execution a vide.
+        historique = executions_signal(None, None, None, False)
+        self.assertIsNone(verifier_sante.executions_sans_signal(historique, 4))
+
+    def test_les_lignes_anciennes_ne_coupent_pas_une_serie(self):
+        historique = executions_signal(False, None, False, False, False)
+        resultat = verifier_sante.executions_sans_signal(historique, 4)
+        self.assertIsNotNone(resultat)
+
+    def test_historique_vide_ne_declenche_rien(self):
+        self.assertIsNone(verifier_sante.executions_sans_signal([], 4))
+
+
 if __name__ == "__main__":
     unittest.main()
