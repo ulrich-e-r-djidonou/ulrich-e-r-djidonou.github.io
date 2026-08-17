@@ -106,7 +106,7 @@
     ],
     "score": 6,
     "auteurs": "Paola Ganum, Tohid Atashbar",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash"
   },
   {
@@ -143,6 +143,47 @@
     ],
     "score": 4,
     "auteurs": "Yichen Xu, Jianzhe Ma, Chuhan Wang, Zhonghao Cao, Liangyu Chen, Wenxuan Wang, Qin Jin",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "fed-complementarity-and-the-evolution-of-u-s-wage-inequality-htm",
+    "titre": "IFDP Paper: Occupational Complexity, Capital-Skill Complementarity, and the Evolution of U.S. Wage Inequality: A Quantitative Analysis",
+    "url": "https://www.federalreserve.gov/econres/ifdp/occupational-complexity-capital-skill-complementarity-and-the-evolution-of-u-s-wage-inequality.htm",
+    "source": "Reserve federale americaine (Fed), working papers",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "resume_fr": "Cette étude met en évidence une forte relation positive aux États-Unis entre la complexité de la résolution de problèmes dans une profession et sa croissance salariale depuis 1980, alors que les réallocations d'emplois vers les professions les plus complexes sont restées modestes. Au moyen d'un modèle d'équilibre général estimé quantitativement, l'analyse montre que l'augmentation de la prime de complexité s'expliquait par la complémentarité capital-compétence et le recul des prix du capital équipement jusqu'en 2000, avant d'être portée par une plus grande efficacité des professions à exploiter les compétences des travailleurs après 2000.",
+    "angle_eco": "L'appariement sélectif des compétences individuelles aux exigences de résolution de problèmes des professions, combiné à la complémentarité entre capital et qualifications, explique la dynamique des inégalités salariales américaines sur les quatre dernières décennies tout en unifiant l'approche par les tâches et le progrès technique biaisé en faveur des compétences.",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Colin Caines, Florian Hoffmann, Gueorgui Kambourov",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "voxeu-https-cepr-org-voxeu-columns-europes-regulatory-double-bind",
+    "titre": "Europe's regulatory double bind",
+    "url": "https://cepr.org/voxeu/columns/europes-regulatory-double-bind",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-08-13",
+    "resume_fr": "Bien que le volet de transparence du règlement sur l'intelligence artificielle de l'Union européenne soit désormais en vigueur pour obliger les fournisseurs à informer les utilisateurs, l'application de son régime encadrant les systèmes à haut risque, qui devait prendre pleinement effet le 2 août 2026, a été retardée. Cette situation crée une double contrainte dans laquelle l'Europe perd sa souveraineté réglementaire, qu'elle choisisse d'appliquer ses propres règles ou d'y renoncer.",
+    "angle_eco": "Le retard dans la mise en œuvre du régime encadrant les intelligences artificielles à haut risque, combiné à l'application des seules obligations de transparence, place l'Europe dans une double impasse où l'exécution tout comme le renoncement à ses propres règles entraînent une perte de sa souveraineté réglementaire.",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Marco Perugini",
     "signal": false,
     "llm": "gemini-3.6-flash"
   },

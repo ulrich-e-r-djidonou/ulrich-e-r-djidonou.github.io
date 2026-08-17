@@ -62,6 +62,20 @@
       <description>Cet article présente un panorama complet de l'application des grands modèles de langage multimodaux dans le domaine du sport, en détaillant les tâches, les applications, les jeux de données et les bancs d'essai existants. Les auteurs y abordent également les défis actuels et les orientations futures afin d'établir les bases de l'intelligence sportive guidée par ces modèles, tout en mettant à disposition un répertoire open-source.</description>
     </item>
     <item>
+      <title>IFDP Paper: Occupational Complexity, Capital-Skill Complementarity, and the Evolution of U.S. Wage Inequality: A Quantitative Analysis</title>
+      <link>https://www.federalreserve.gov/econres/ifdp/occupational-complexity-capital-skill-complementarity-and-the-evolution-of-u-s-wage-inequality.htm</link>
+      <guid isPermaLink="false">fed-complementarity-and-the-evolution-of-u-s-wage-inequality-htm</guid>
+      <pubDate>2026-08-14</pubDate>
+      <description>Cette étude met en évidence une forte relation positive aux États-Unis entre la complexité de la résolution de problèmes dans une profession et sa croissance salariale depuis 1980, alors que les réallocations d'emplois vers les professions les plus complexes sont restées modestes. Au moyen d'un modèle d'équilibre général estimé quantitativement, l'analyse montre que l'augmentation de la prime de complexité s'expliquait par la complémentarité capital-compétence et le recul des prix du capital équipement jusqu'en 2000, avant d'être portée par une plus grande efficacité des professions à exploiter les compétences des travailleurs après 2000.</description>
+    </item>
+    <item>
+      <title>Europe's regulatory double bind</title>
+      <link>https://cepr.org/voxeu/columns/europes-regulatory-double-bind</link>
+      <guid isPermaLink="false">voxeu-https-cepr-org-voxeu-columns-europes-regulatory-double-bind</guid>
+      <pubDate>2026-08-13</pubDate>
+      <description>Bien que le volet de transparence du règlement sur l'intelligence artificielle de l'Union européenne soit désormais en vigueur pour obliger les fournisseurs à informer les utilisateurs, l'application de son régime encadrant les systèmes à haut risque, qui devait prendre pleinement effet le 2 août 2026, a été retardée. Cette situation crée une double contrainte dans laquelle l'Europe perd sa souveraineté réglementaire, qu'elle choisisse d'appliquer ses propres règles ou d'y renoncer.</description>
+    </item>
+    <item>
       <title>Organizational Technology Ladders: Remote Work and Generative AI Adoption</title>
       <link>https://arxiv.org/abs/2608.11626v1</link>
       <guid isPermaLink="false">arxiv-2608.11626v1</guid>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">fmi-10-5089-9798229055925-001</guid>
       <pubDate>2026-08-01</pubDate>
       <description>À partir d'un modèle de Diamond avec hétérogénéité des ménages et fiscalité progressive, cette étude démontre que la dette publique façonne la répartition des richesses en dictant la progressivité de l'impôt par le canal de la charge fiscale. Les données empiriques d'après-guerre confirment que la dette publique constitue un déterminant majeur des inégalités de patrimoine, son effet étant non linéaire selon le niveau de la charge fiscale et dépendant du régime de taux d'intérêt.</description>
-    </item>
-    <item>
-      <title>OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding</title>
-      <link>https://arxiv.org/abs/2607.27155v1</link>
-      <guid isPermaLink="false">arxiv-2607.27155v1</guid>
-      <pubDate>2026-07-29</pubDate>
-      <description>Le benchmark open source OmegaUse-OfficeVal évalue les agents basés sur des grands modèles de langage à travers 100 tâches bureautiques nécessitant en moyenne 2,32 heures de travail humain, en intégrant des indicateurs économiques de temps et de coût. Bien que les modèles évalués soient nettement plus rapides et moins chers que les travailleurs humains, la qualité de leurs livrables n'atteint pas encore le niveau humain.</description>
-    </item>
-    <item>
-      <title>A SPOT in the dark: using AI to assess financial stability risks</title>
-      <link>https://www.ecb.europa.eu//pub/pdf/scpwps/ecb.wp3262~7169a94638.en.pdf</link>
-      <guid isPermaLink="false">bce-ww-ecb-europa-eu-pub-pdf-scpwps-ecb-wp3262-7169a94638-en-pdf</guid>
-      <pubDate>2026-07-29</pubDate>
-      <description>Afin d'évaluer la sévérité et la probabilité des événements déclencheurs de risques pour la stabilité financière, cette étude emploie des grands modèles de langage pour construire l'indicateur SPOT à partir d'articles de presse publiés entre 2005 et 2026. L'indicateur SPOT augmente avant les principaux événements déclencheurs historiques, identifie correctement leurs sources et améliore la prévision des risques baissiers pesant sur l'économie, démontrant le potentiel de l'intelligence artificielle pour le suivi de la stabilité financière.</description>
     </item>
   </channel>
 </rss>
