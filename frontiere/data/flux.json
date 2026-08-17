@@ -107,7 +107,7 @@
     ],
     "score": 6,
     "auteurs": "Paola Ganum, Tohid Atashbar",
-    "signal": false,
+    "signal": true,
     "llm": "gemini-3.6-flash",
     "deja_signal": true
   },
@@ -223,7 +223,7 @@
     ],
     "score": 6,
     "auteurs": "Taha Choukhmane, Tim de Silva, Weidong Lin, Matthew Akuzawa",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash",
     "deja_signal": true
   },
