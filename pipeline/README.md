@@ -222,6 +222,27 @@ aucun signal n'est désigné et la page indique qu'aucun article ne ressort du
 lot, plutôt que d'en mettre un en avant sans le mériter. La carte de l'accueil
 laisse alors sa ligne de teaser masquée.
 
+Entre candidats, `cle_signal` ordonne sur quatre critères successifs: le score,
+puis `nb_eco`, puis le nombre de mots-clés économiques du seul titre, puis la
+date. Le score étant un produit, un 6 vaut 2 x 3 ou 3 x 2 sans qu'on puisse les
+distinguer, alors que ces deux articles n'ont pas le même intérêt pour une
+veille tenue par un économiste: le poids économique tranche donc en premier,
+et le titre à un cran plus fin, parce qu'un titre qui porte le vocabulaire
+économique annonce mieux la couleur en tête de page. La date ne départage plus
+que ce que rien n'a séparé, et garantit un ordre total.
+
+`curate.py` verse `nb_eco` et `nb_ia` dans chaque entrée, `compter_mots_cles`
+exposant les deux comptes avant leur multiplication. Ils sont conservés faute
+de pouvoir être recalculés: le score se calcule sur le titre plus l'abstract
+anglais, et l'abstract n'est pas versé dans le flux. Les entrées publiées avant
+le 17 août 2026 ne portent pas ces champs et ne sont départagées que sur leur
+titre, ce qui reste exact faute d'être complet.
+
+`poids_economique_titre` importe `MOTS_CLES_ECO` depuis `curate.py` au lieu
+d'en tenir une copie. Deux listes qui dérivent l'une de l'autre feraient
+départager le signal sur un vocabulaire différent de celui qui l'a rendu
+éligible.
+
 ## Rédaction à nouveau des items déjà publiés
 
 Un correctif de prompt ou de validateur ne nettoie que les items à venir.

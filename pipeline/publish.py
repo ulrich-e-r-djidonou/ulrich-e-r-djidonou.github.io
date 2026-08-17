@@ -22,6 +22,16 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from xml.sax.saxutils import escape
 
+# Le workflow lance `python pipeline/publish.py`, qui met pipeline/ sur le
+# chemin d'import, tandis que les tests font `from pipeline import publish`,
+# qui y met la racine du depot. Les deux formes sont donc necessaires : la
+# premiere seule casserait la suite de tests, la seconde seule casserait la
+# publication en production, ce qui ne se verrait que le lundi suivant.
+try:
+    from pipeline import curate
+except ImportError:  # pragma: no cover - depend du mode de lancement
+    import curate
+
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 if hasattr(sys.stderr, "reconfigure"):
@@ -81,6 +91,50 @@ def date_valide(entree):
         return date.today()
 
 
+def poids_economique_titre(titre):
+    """Nombre de mots-cles economiques presents dans le seul titre.
+
+    Importe la liste depuis curate.py plutot que d'en tenir une copie : deux
+    listes de mots-cles qui derivent l'une de l'autre feraient departager le
+    signal sur un vocabulaire different de celui qui l'a rendu eligible.
+    """
+    return sum(
+        1 for mot in curate.MOTS_CLES_ECO
+        if curate.mot_cle_present((titre or "").lower(), mot)
+    )
+
+
+def cle_signal(entree):
+    """Ordre de preference entre candidats au signal, du plus fort au plus faible.
+
+    Le score d'abord, puis le poids economique, decide le 17 aout 2026 : a
+    score egal, l'article le plus economique passe devant. Le score etant le
+    produit des deux comptes, un 6 vaut 2 x 3 ou 3 x 2 sans qu'on puisse les
+    distinguer, alors que ces deux articles n'ont pas le meme interet pour une
+    veille tenue par un economiste.
+
+    Le titre tranche ensuite, meme motif a un cran plus fin : entre deux
+    articles aussi economiques au compte global, celui dont le titre porte le
+    vocabulaire economique annonce mieux la couleur en tete de page.
+
+    La date ne sert plus qu'a departager ce que rien n'a separe, et garantit
+    un ordre total : sans elle, deux entrees strictement equivalentes se
+    classeraient selon leur position dans le fichier, donc selon l'ordre de
+    collecte.
+
+    nb_eco vaut 0 par defaut. Les entrees publiees avant le 17 aout 2026 ne le
+    portent pas, l'abstract sur lequel il se calcule n'etant pas verse dans le
+    flux. Elles ne sont donc departagees que sur leur titre, ce qui reste
+    exact, faute d'etre complet.
+    """
+    return (
+        entree.get("score", 0),
+        entree.get("nb_eco", 0),
+        poids_economique_titre(entree.get("titre")),
+        entree.get("date_publication") or "",
+    )
+
+
 def designer_signal(entrees, ids_du_run, aujourd_hui):
     """Choisit le signal de la semaine, ou None si aucun ne ressort du lot.
 
@@ -110,10 +164,7 @@ def designer_signal(entrees, ids_du_run, aujourd_hui):
     for candidats in paliers:
         if not candidats:
             continue
-        meilleur = max(
-            candidats,
-            key=lambda e: (e.get("score", 0), e.get("date_publication") or ""),
-        )
+        meilleur = max(candidats, key=cle_signal)
         if meilleur.get("score", 0) < SEUIL_SIGNAL:
             return None
         return meilleur
