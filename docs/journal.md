@@ -16,6 +16,58 @@ absolu, avec le motif et le numéro de PR quand il en existe une.
 
 ---
 
+## 2026-08-17, à score égal, le poids économique départage
+
+Décision d'Ulrich, prise en connaissance des deux entrées ci-dessous: garder
+l'article au score maximal comme signal, l'essayer tel quel, et ajuster si la
+qualité ne suit pas. Avec une préférence explicite pour trancher les égalités,
+qui est le vrai apport ici. À score égal, l'article le plus économique passe
+devant; à poids égal, celui dont le titre porte le vocabulaire économique.
+
+Le motif tient à la forme du score, qui est un produit et non une somme. Un 6
+vaut 2 x 3 ou 3 x 2, et le score seul ne distingue pas un article très
+économique modérément IA d'un article très IA modérément économique. Pour une
+veille tenue par un économiste, ces deux articles n'ont pas le même intérêt,
+et le classement précédent les départageait par leur date, c'est-à-dire par un
+critère sans rapport avec ce qui est cherché.
+
+L'ordre est donc: score, `nb_eco`, mots-clés économiques du titre, date. La
+date ne disparaît pas, elle descend en dernier, où elle garantit un ordre
+total. Sans elle, deux entrées strictement équivalentes se classeraient selon
+leur position dans le fichier, donc selon l'ordre de collecte, ce qui est
+arbitraire sans être stable.
+
+Effet immédiat, et il valide la règle. Les deux articles à 6 du 17 août étaient
+départagés par la date, ce qui donnait *Making AI Tutoring Productive*. Le
+titre économique fait passer devant *Macrofinance meets AI: Evaluating
+alignment between LLMs and economists*, nettement plus proche de la veille
+qu'Ulrich tient.
+
+Une contrainte de données a orienté la mise en oeuvre. Le score se calcule sur
+le titre plus l'abstract anglais, or l'abstract n'est pas versé dans le flux:
+`publish.py` ne pouvait donc pas recalculer les comptes après coup. `curate.py`
+les conserve désormais dans chaque entrée, `compter_mots_cles` ayant été
+extrait de `score_heuristique` pour les exposer avant leur multiplication. Les
+entrées antérieures ne les portent pas et ne sont départagées que sur leur
+titre, ce qui reste exact faute d'être complet. Comme le signal se choisit
+d'abord parmi la récolte du jour, dont toutes les entrées porteront les champs,
+cette approximation ne concerne que les paliers de repli.
+
+`poids_economique_titre` importe `MOTS_CLES_ECO` depuis `curate.py` plutôt que
+d'en tenir une copie: deux listes qui dérivent l'une de l'autre feraient
+départager le signal sur un vocabulaire différent de celui qui l'a rendu
+éligible, et rien ne signalerait la divergence.
+
+Cet import a révélé un piège d'exécution qui ne se serait vu qu'en production.
+Le workflow lance `python pipeline/publish.py`, ce qui met `pipeline/` sur le
+chemin d'import, alors que les tests font `from pipeline import publish`, ce
+qui y met la racine du dépôt. Une seule des deux formes d'import casse l'autre,
+et la version qui passe les tests est justement celle qui échouerait le lundi
+suivant, en silence, dans une exécution planifiée. Les deux sont donc
+supportées.
+
+---
+
 ## 2026-08-17, surveiller l'absence de signal et mesurer les scores
 
 Suite immédiate de l'entrée ci-dessous, dont le correctif a ouvert un trou de

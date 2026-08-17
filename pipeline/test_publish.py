@@ -4,7 +4,7 @@ import unittest
 from datetime import date, timedelta
 from pathlib import Path
 
-from pipeline import publish
+from pipeline import curate, publish
 
 
 class SynchroniserSitemapTests(unittest.TestCase):
@@ -307,6 +307,90 @@ class DesignerSignalTests(unittest.TestCase):
 
     def test_flux_vide_ne_designe_rien(self):
         self.assertIsNone(publish.designer_signal([], [], self.REFERENCE))
+
+    def test_a_score_egal_le_plus_economique_passe_devant(self):
+        # Un 6 vaut 2 x 3 ou 3 x 2 : le score seul ne les distingue pas.
+        peu_eco = dict(self.entree("peu-eco", 6, 0), nb_eco=2, nb_ia=3)
+        tres_eco = dict(self.entree("tres-eco", 6, 0), nb_eco=3, nb_ia=2)
+
+        signal = publish.designer_signal(
+            [peu_eco, tres_eco],
+            ["peu-eco", "tres-eco"],
+            self.REFERENCE,
+        )
+
+        self.assertEqual(signal["id"], "tres-eco")
+
+    def test_a_poids_egal_le_titre_economique_tranche(self):
+        neutre = dict(
+            self.entree("neutre", 6, 0), nb_eco=3, titre="A Survey of Large Models",
+        )
+        economique = dict(
+            self.entree("economique", 6, 0),
+            nb_eco=3,
+            titre="Labor market effects of automation on wages",
+        )
+
+        signal = publish.designer_signal(
+            [neutre, economique],
+            ["neutre", "economique"],
+            self.REFERENCE,
+        )
+
+        self.assertEqual(signal["id"], "economique")
+
+    def test_la_date_ne_departage_qu_en_dernier(self):
+        recent_neutre = dict(
+            self.entree("recent", 6, 0), nb_eco=1, titre="A Survey of Large Models",
+        )
+        ancien_economique = dict(
+            self.entree("ancien", 6, 3), nb_eco=4, titre="Wages and productivity",
+        )
+
+        signal = publish.designer_signal(
+            [recent_neutre, ancien_economique],
+            ["recent", "ancien"],
+            self.REFERENCE,
+        )
+
+        self.assertEqual(signal["id"], "ancien")
+
+    def test_une_entree_sans_nb_eco_est_departagee_sur_son_titre(self):
+        # Les entrees publiees avant le 17 aout 2026 ne portent pas nb_eco,
+        # l'abstract sur lequel il se calcule n'etant pas verse dans le flux.
+        ancienne = self.entree("ancienne", 6, 0)
+        ancienne["titre"] = "Wages, growth and inequality under automation"
+        autre = self.entree("autre", 6, 0)
+        autre["titre"] = "A Survey of Large Models"
+
+        signal = publish.designer_signal(
+            [autre, ancienne],
+            ["autre", "ancienne"],
+            self.REFERENCE,
+        )
+
+        self.assertEqual(signal["id"], "ancienne")
+
+
+class PoidsEconomiqueTitreTests(unittest.TestCase):
+    def test_compte_les_mots_cles_economiques_du_titre(self):
+        self.assertEqual(
+            publish.poids_economique_titre("Wages and labor market policy"), 4,
+        )
+
+    def test_un_titre_sans_vocabulaire_economique_vaut_zero(self):
+        self.assertEqual(
+            publish.poids_economique_titre("A Survey of Large Models in Sports"), 0,
+        )
+
+    def test_titre_absent_ne_leve_pas(self):
+        self.assertEqual(publish.poids_economique_titre(None), 0)
+
+    def test_utilise_la_liste_de_curate_sans_copie(self):
+        # Deux listes qui derivent l'une de l'autre feraient departager le
+        # signal sur un vocabulaire different de celui qui l'a rendu eligible.
+        mot = curate.MOTS_CLES_ECO[0]
+        self.assertGreaterEqual(publish.poids_economique_titre(mot), 1)
 
 
 class CompleterDerniereExecutionTests(unittest.TestCase):

@@ -296,8 +296,12 @@ def est_source_economique(source):
     return any(marque in source_bas for marque in SOURCES_ECONOMIQUES)
 
 
-def score_heuristique(texte, source=None):
-    """Score de selection : nb de mots-cles economiques x nb de mots-cles IA.
+def compter_mots_cles(texte, source=None):
+    """Comptes economique et IA du texte, avant multiplication.
+
+    Extrait de score_heuristique pour que les deux comptes soient conservables
+    dans le flux : le score seul ne dit pas si un 6 vient de 2 x 3 ou de 3 x 2,
+    et publish.py departage sur ce detail les articles a score egal.
 
     Pour une source deja economique (voir SOURCES_ECONOMIQUES), le compte
     economique est plancher : la revue ou le comite scientifique a deja
@@ -311,6 +315,12 @@ def score_heuristique(texte, source=None):
     nb_ia = sum(1 for mot in MOTS_CLES_IA if mot_cle_present(texte_bas, mot))
     if est_source_economique(source):
         nb_eco = max(nb_eco, PLANCHER_ECO_SOURCE_ECONOMIQUE)
+    return nb_eco, nb_ia
+
+
+def score_heuristique(texte, source=None):
+    """Score de selection : nb de mots-cles economiques x nb de mots-cles IA."""
+    nb_eco, nb_ia = compter_mots_cles(texte, source)
     return min(nb_eco * nb_ia, 10)
 
 
@@ -685,6 +695,10 @@ def main():
             continue
 
         texte_complet = f"{candidat['titre']} {candidat.get('abstract', '')}"
+        # Les deux comptes sont conserves dans l'entree : l'abstract, seul
+        # texte anglais sur lequel le score se calcule, n'est pas verse dans
+        # le flux, donc publish.py ne pourrait pas les recalculer plus tard.
+        nb_eco, nb_ia = compter_mots_cles(texte_complet, candidat.get("source"))
         score = score_heuristique(texte_complet, candidat.get("source"))
 
         if score < SEUIL_PUBLICATION:
@@ -698,6 +712,8 @@ def main():
                 "date_publication": candidat.get("date_publication"),
                 "themes": themes_heuristique(texte_complet),
                 "score": score,
+                "nb_eco": nb_eco,
+                "nb_ia": nb_ia,
                 "auteurs": candidat.get("auteurs", ""),
                 "signal": False,
             })
@@ -747,6 +763,8 @@ def main():
             "angle_eco": angle_eco,
             "themes": themes_heuristique(texte_complet),
             "score": score,
+            "nb_eco": nb_eco,
+            "nb_ia": nb_ia,
             "auteurs": candidat.get("auteurs", ""),
             "signal": False,
         }

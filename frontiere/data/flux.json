@@ -68,7 +68,7 @@
     ],
     "score": 6,
     "auteurs": "Philip Oreopoulos, Michael Liut, Alp Sungu, Nina Low",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash"
   },
   {
@@ -106,7 +106,7 @@
     ],
     "score": 6,
     "auteurs": "Paola Ganum, Tohid Atashbar",
-    "signal": false,
+    "signal": true,
     "llm": "gemini-3.6-flash"
   },
   {
