@@ -1519,9 +1519,13 @@
             résumé source entraîne le rejet du texte.
           </p>
           <p>
-            Le signal de la semaine est l'article qui répond le mieux aux
-            critères de sélection, c'est-à-dire celui dont le score
-            thématique est le plus élevé dans la sélection en cours.
+            Le signal de la semaine est l'article dont le score thématique est
+            le plus élevé parmi ceux rapportés par la dernière collecte, et
+            non parmi les quatre-vingt-dix jours de la sélection : sans cette
+            contrainte de fraîcheur, un article bien noté garderait la place
+            pendant des semaines. Un plancher s'y ajoute. Quand aucun article
+            récent n'atteint un score suffisant, la section l'indique plutôt
+            que de mettre en avant un texte qui ne le mérite pas.
           </p>
           <p>
             Deux mots reviennent dans les étiquettes des entrées. Un
@@ -1543,6 +1547,7 @@
       <section class="frontiere-signal" id="signal-semaine" aria-labelledby="signal-titre" hidden>
         <div class="section-kicker">Signal de la semaine</div>
         <h2 id="signal-titre"></h2>
+        <p class="frontiere-signal-legende" id="signal-legende" hidden></p>
       </section>
 
       <section class="frontiere-stats" aria-label="Répartition thématique du flux">

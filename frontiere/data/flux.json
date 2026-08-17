@@ -68,7 +68,7 @@
     ],
     "score": 6,
     "auteurs": "Philip Oreopoulos, Michael Liut, Alp Sungu, Nina Low",
-    "signal": false,
+    "signal": true,
     "llm": "gemini-3.6-flash"
   },
   {
@@ -215,7 +215,7 @@
     ],
     "score": 9,
     "auteurs": "Sebastian Galiani, Federico Ariel López, Raul A. Sosa",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash"
   },
   {

@@ -1,7 +1,7 @@
 import json
 import tempfile
 import unittest
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 from pipeline import publish
@@ -243,6 +243,70 @@ class RepartirSelectionTests(unittest.TestCase):
 
         self.assertEqual([entree["id"] for entree in selection], ["selection"])
         self.assertEqual([entree["id"] for entree in archives], ["archive"])
+
+
+class DesignerSignalTests(unittest.TestCase):
+    """Dates construites par rapport a REFERENCE, jamais litterales.
+
+    designer_signal raisonne sur une fenetre glissante de 7 jours : une date
+    figee dans le code finirait par en sortir et ferait echouer ces tests un
+    mois plus tard, sur un commit sans rapport (voir
+    pipeline/verifier_dates_tests.py).
+    """
+
+    REFERENCE = date(2026, 8, 17)
+
+    def entree(self, identifiant, score, jours_avant):
+        return {
+            "id": identifiant,
+            "titre": identifiant,
+            "score": score,
+            "date_publication": (
+                self.REFERENCE - timedelta(days=jours_avant)
+            ).isoformat(),
+        }
+
+    def test_prefere_un_item_du_run_a_un_ancien_mieux_note(self):
+        ancien = self.entree("ancien", 9, 7)
+        frais = self.entree("frais", 6, 0)
+
+        signal = publish.designer_signal(
+            [ancien, frais],
+            ["frais"],
+            self.REFERENCE,
+        )
+
+        self.assertEqual(signal["id"], "frais")
+
+    def test_aucun_signal_si_le_run_reste_sous_le_plancher(self):
+        ancien = self.entree("ancien", 9, 7)
+        frais = self.entree("frais", publish.SEUIL_SIGNAL - 1, 0)
+
+        signal = publish.designer_signal(
+            [ancien, frais],
+            ["frais"],
+            self.REFERENCE,
+        )
+
+        self.assertIsNone(signal)
+
+    def test_replie_sur_la_semaine_quand_le_run_n_a_rien_rapporte(self):
+        vieux = self.entree("vieux", 9, publish.FENETRE_SIGNAL_JOURS + 1)
+        semaine = self.entree("semaine", publish.SEUIL_SIGNAL, 2)
+
+        signal = publish.designer_signal([vieux, semaine], [], self.REFERENCE)
+
+        self.assertEqual(signal["id"], "semaine")
+
+    def test_replie_sur_la_fenetre_quand_la_semaine_est_vide(self):
+        vieux = self.entree("vieux", 9, publish.FENETRE_SIGNAL_JOURS + 5)
+
+        signal = publish.designer_signal([vieux], [], self.REFERENCE)
+
+        self.assertEqual(signal["id"], "vieux")
+
+    def test_flux_vide_ne_designe_rien(self):
+        self.assertIsNone(publish.designer_signal([], [], self.REFERENCE))
 
 
 if __name__ == "__main__":
