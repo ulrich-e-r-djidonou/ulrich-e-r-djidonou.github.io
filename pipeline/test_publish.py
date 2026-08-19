@@ -10,30 +10,47 @@ from pipeline import curate, publish
 
 
 class SynchroniserSitemapTests(unittest.TestCase):
-    def test_met_a_jour_uniquement_la_date_de_la_frontiere(self):
-        with tempfile.TemporaryDirectory() as dossier:
-            racine = Path(dossier)
-            sitemap = racine / "sitemap.xml"
-            meta = racine / "meta.json"
-            sitemap.write_text(
-                """<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    # Reproduit la forme reellement publiee depuis la version anglaise : les
+    # deux entrees de La Frontiere portent leurs annotations hreflang entre
+    # <loc> et <lastmod>. Un sitemap sans xhtml:link laissait passer un motif
+    # qui ne matchait plus rien en production.
+    SITEMAP_BILINGUE = """<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://djidonou.com/</loc>
     <lastmod>2026-07-11</lastmod>
   </url>
   <url>
     <loc>https://djidonou.com/frontiere/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/frontiere/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/frontier/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/frontiere/"/>
+    <lastmod>2026-07-11</lastmod>
+  </url>
+  <url>
+    <loc>https://djidonou.com/en/frontier/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/frontiere/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/frontier/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/frontiere/"/>
     <lastmod>2026-07-11</lastmod>
   </url>
 </urlset>
-""",
-                encoding="utf-8",
-            )
-            meta.write_text(
-                json.dumps({"derniere_mise_a_jour": "2026-07-30"}),
-                encoding="utf-8",
-            )
+"""
+
+    def _bac_a_sable(self, dossier):
+        racine = Path(dossier)
+        sitemap = racine / "sitemap.xml"
+        meta = racine / "meta.json"
+        sitemap.write_text(self.SITEMAP_BILINGUE, encoding="utf-8")
+        meta.write_text(
+            json.dumps({"derniere_mise_a_jour": "2026-07-30"}), encoding="utf-8"
+        )
+        return sitemap, meta
+
+    def test_met_a_jour_uniquement_les_dates_de_la_frontiere(self):
+        with tempfile.TemporaryDirectory() as dossier:
+            sitemap, meta = self._bac_a_sable(dossier)
 
             publish.synchroniser_sitemap(sitemap, meta)
 
@@ -42,10 +59,35 @@ class SynchroniserSitemapTests(unittest.TestCase):
                 "<loc>https://djidonou.com/</loc>\n    <lastmod>2026-07-11</lastmod>",
                 resultat,
             )
-            self.assertIn(
-                "<loc>https://djidonou.com/frontiere/</loc>\n    <lastmod>2026-07-30</lastmod>",
-                resultat,
+            self.assertEqual(resultat.count("<lastmod>2026-07-30</lastmod>"), 2)
+
+    def test_met_a_jour_la_page_anglaise(self):
+        # La page anglaise sert le meme flux : sa date doit suivre, sinon le
+        # sitemap annonce une fraicheur fausse pour la moitie du site.
+        with tempfile.TemporaryDirectory() as dossier:
+            sitemap, meta = self._bac_a_sable(dossier)
+
+            publish.synchroniser_sitemap(sitemap, meta)
+
+            resultat = sitemap.read_text(encoding="utf-8")
+            _, apres_entree_anglaise = resultat.split(
+                "<loc>https://djidonou.com/en/frontier/</loc>", 1
             )
+            self.assertIn("<lastmod>2026-07-30</lastmod>", apres_entree_anglaise)
+
+    def test_echoue_si_une_des_deux_entrees_manque(self):
+        with tempfile.TemporaryDirectory() as dossier:
+            sitemap, meta = self._bac_a_sable(dossier)
+            sitemap.write_text(
+                self.SITEMAP_BILINGUE.replace(
+                    "https://djidonou.com/en/frontier/</loc>",
+                    "https://djidonou.com/en/frontiere/</loc>",
+                ),
+                encoding="utf-8",
+            )
+
+            with self.assertRaises(ValueError):
+                publish.synchroniser_sitemap(sitemap, meta)
 
 
 class GenererJsonldFluxTests(unittest.TestCase):
@@ -537,8 +579,15 @@ class MainTests(unittest.TestCase):
     )
     SITEMAP_MINIMAL = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
+        '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
         "  <url>\n    <loc>https://djidonou.com/frontiere/</loc>\n"
+        '    <xhtml:link rel="alternate" hreflang="en"'
+        ' href="https://djidonou.com/en/frontier/"/>\n'
+        "    <lastmod>2020-01-01</lastmod>\n  </url>\n"
+        "  <url>\n    <loc>https://djidonou.com/en/frontier/</loc>\n"
+        '    <xhtml:link rel="alternate" hreflang="fr"'
+        ' href="https://djidonou.com/frontiere/"/>\n'
         "    <lastmod>2020-01-01</lastmod>\n  </url>\n</urlset>\n"
     )
 

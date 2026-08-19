@@ -265,11 +265,14 @@ def generer_feed_rss(entrees):
 
 
 def synchroniser_sitemap(chemin_sitemap=None, chemin_meta=None):
-    """Aligne le lastmod de /frontiere/ sur la date inscrite dans meta.json.
+    """Aligne le lastmod des deux pages de La Frontiere sur meta.json.
 
     Les chemins se resolvent a l'appel et non dans la signature : lies par
     defaut, ils figeraient les vrais fichiers du site des l'import, et un test
     de main() reecrirait sitemap.xml au lieu de son bac a sable.
+
+    Les deux entrees publient le meme flux : laisser /en/frontier/ sur une date
+    figee ferait mentir le sitemap des la premiere execution du cron.
     """
     chemin_sitemap = chemin_sitemap or SITEMAP
     chemin_meta = chemin_meta or (DONNEES / "meta.json")
@@ -283,19 +286,26 @@ def synchroniser_sitemap(chemin_sitemap=None, chemin_meta=None):
         raise ValueError("derniere_mise_a_jour doit etre une date ISO") from erreur
 
     contenu = chemin_sitemap.read_text(encoding="utf-8")
-    motif = re.compile(
-        r"(<url>\s*<loc>https://djidonou\.com/frontiere/</loc>\s*<lastmod>)[^<]+(</lastmod>)"
-    )
-    contenu_modifie, nombre = motif.subn(
-        lambda correspondance: (
-            f"{correspondance.group(1)}{derniere_mise_a_jour}{correspondance.group(2)}"
-        ),
-        contenu,
-        count=1,
-    )
-    if nombre != 1:
-        raise ValueError("entree /frontiere/ introuvable ou invalide dans sitemap.xml")
-    chemin_sitemap.write_text(contenu_modifie, encoding="utf-8")
+    for chemin_page in ("frontiere/", "en/frontier/"):
+        # Les annotations hreflang s'intercalent entre <loc> et <lastmod> : le
+        # motif doit les traverser, sinon il ne matche plus rien des qu'une
+        # entree devient bilingue.
+        motif = re.compile(
+            r"(<url>\s*<loc>https://djidonou\.com/" + re.escape(chemin_page) + r"</loc>"
+            r"(?:\s*<xhtml:link[^>]*/>)*\s*<lastmod>)[^<]+(</lastmod>)"
+        )
+        contenu, nombre = motif.subn(
+            lambda correspondance: (
+                f"{correspondance.group(1)}{derniere_mise_a_jour}{correspondance.group(2)}"
+            ),
+            contenu,
+            count=1,
+        )
+        if nombre != 1:
+            raise ValueError(
+                f"entree /{chemin_page} introuvable ou invalide dans sitemap.xml"
+            )
+    chemin_sitemap.write_text(contenu, encoding="utf-8")
 
 
 def generer_jsonld_flux(entrees):

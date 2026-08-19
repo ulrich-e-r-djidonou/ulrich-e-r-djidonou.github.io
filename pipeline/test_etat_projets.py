@@ -25,6 +25,34 @@ class FormaterDateTests(unittest.TestCase):
             etat_projets.formater_date_francaise("2026-12-25"), "25 décembre 2026"
         )
 
+    def test_format_anglais(self):
+        # Les pages /en/ ecrivent « August 2, 2026 » : mois en toutes lettres,
+        # jour sans zero de tete, virgule avant l'annee.
+        self.assertEqual(
+            etat_projets.formater_date_anglaise("2026-08-02"), "August 2, 2026"
+        )
+
+    def test_format_anglais_sans_zero_ni_er(self):
+        # Le premier du mois ne prend ni « 1er » ni « 01 » : la regle
+        # francaise ne doit pas fuir dans la version anglaise.
+        self.assertEqual(
+            etat_projets.formater_date_anglaise("2026-09-01"), "September 1, 2026"
+        )
+
+    def test_format_anglais_couvre_les_douze_mois(self):
+        # Un decalage d'indice dans MOIS_EN ne se verrait que sur un mois
+        # precis, et seulement sur la page anglaise.
+        attendus = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December",
+        ]
+        for numero, nom in enumerate(attendus, start=1):
+            with self.subTest(mois=nom):
+                self.assertEqual(
+                    etat_projets.formater_date_anglaise(f"2026-{numero:02d}-15"),
+                    f"{nom} 15, 2026",
+                )
+
 
 class LireSourceTests(unittest.TestCase):
     source = {
