@@ -577,7 +577,9 @@
     "score": 4,
     "auteurs": "Jingbo Zhou, Yusai Zhao, Qi Bao, Jingjia Cao, Zhenghai Chen, Chang Gao, Kaiqi Guo, Muxin Guo, Mingxuan Li, Xinjiang Lu, Yanru Ma, Yixiong Xiao, Zenghui Zhang, Le Zhang, Hua Wu",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper introduces OmegaUse-OfficeVal, a benchmark of 100 long-horizon office-suite tasks paired with human labor time and price proxies to evaluate large language model agents with economic grounding. Evaluation results indicate that while frontier models are substantially cheaper and faster than human workers, they have not yet approached human-level deliverable quality.",
+    "angle_eco_en": "Evaluating automated agents on long-horizon office tasks using task-level economic signals like human labor time and price proxies demonstrates that while current frontier models are substantially cheaper and faster than human workers, they fall short of achieving human-level deliverable quality."
   },
   {
     "id": "bce-ww-ecb-europa-eu-pub-pdf-scpwps-ecb-wp3262-7169a94638-en-pdf",
