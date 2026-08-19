@@ -11,6 +11,16 @@ on:
         description: "Appliquer la relecture deja produite, sans rien rediger"
         type: boolean
         default: false
+      rattrapage_anglais:
+        # Second usage, ajoute le 19 aout 2026 avec la version anglaise du
+        # site. Les items publies avant que curate.py sache rediger l'anglais
+        # n'ont ni resume_en ni angle_eco_en, et /en/frontier/ leur sert du
+        # francais. Ce mode ajoute les champs manquants sans toucher au
+        # francais publie. Le budget d'appels vaut pour les deux modes, donc
+        # il faut plusieurs executions pour vider le lot.
+        description: "Completer les champs anglais des items publies, au lieu de reecrire le francais"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -33,18 +43,22 @@ jobs:
         # Chaque cle est unique (suffixe run_id) pour pouvoir en creer une
         # nouvelle a chaque sauvegarde : le cache GitHub est immuable pour une
         # cle donnee. restore-keys retombe sur la derniere sauvegardee, ce qui
-        # fait office de --reprendre d'une execution a l'autre.
+        # fait office de --reprendre d'une execution a l'autre. Les deux modes
+        # ont leur prefixe : un lot anglais qui reprendrait un releve francais
+        # croirait avoir deja traite des items qu'il n'a jamais vus.
         uses: actions/cache/restore@v4
         with:
           path: |
             pipeline/_regeneration.json
             pipeline/_regeneration.md
-          key: regeneration-legacy-${{ github.run_id }}
+            pipeline/_rattrapage_en.json
+            pipeline/_rattrapage_en.md
+          key: ${{ inputs.rattrapage_anglais && 'rattrapage-en' || 'regeneration-legacy' }}-${{ github.run_id }}
           restore-keys: |
-            regeneration-legacy-
+            ${{ inputs.rattrapage_anglais && 'rattrapage-en' || 'regeneration-legacy' }}-
 
       - name: Rediger le lot du jour, dans la limite du quota
-        if: ${{ !inputs.appliquer_seulement }}
+        if: ${{ !inputs.appliquer_seulement && !inputs.rattrapage_anglais }}
         env:
           FRONTIERE_LLM: api
           LLM_API_URL: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
@@ -62,12 +76,33 @@ jobs:
           LLM_API_CLE_REPLI: ${{ secrets.LLM_API_CLE_REPLI }}
         run: python -m pipeline.regenerer_flux --reprendre
 
+      - name: Completer les champs anglais du lot du jour
+        # Meme budget et meme repli que le mode francais : c'est le meme quota
+        # Gemini, partage avec la veille. Un item anglais coute au plus quatre
+        # appels, donc quatre items par execution.
+        if: ${{ !inputs.appliquer_seulement && inputs.rattrapage_anglais }}
+        env:
+          FRONTIERE_LLM: api
+          LLM_API_URL: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+          LLM_API_MODELE: gemini-3.6-flash
+          LLM_API_CLE: ${{ secrets.LLM_API_CLE }}
+          LLM_BUDGET_APPELS: "16"
+          LLM_API_URL_REPLI: https://api.anthropic.com/v1/chat/completions
+          LLM_API_MODELE_REPLI: claude-haiku-4-5
+          LLM_API_CLE_REPLI: ${{ secrets.LLM_API_CLE_REPLI }}
+        run: python -m pipeline.regenerer_flux --anglais --reprendre
+
       - name: Publier la relecture dans le resume de l'execution
         # !cancelled() plutot que la condition seule : sans fonction de statut,
         # GitHub ajoute un success() implicite et sauterait cette etape des que
         # la redaction s'interrompt, c'est-a-dire quand elle est le plus utile.
         if: ${{ !cancelled() && !inputs.appliquer_seulement }}
-        run: cat pipeline/_regeneration.md >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          if [ "${{ inputs.rattrapage_anglais }}" = "true" ]; then
+            cat pipeline/_rattrapage_en.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            cat pipeline/_regeneration.md >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       - name: Sauvegarder la relecture pour l'execution suivante
         # Meme raison : un lot interrompu par un quota ou une saturation doit
@@ -79,16 +114,24 @@ jobs:
           path: |
             pipeline/_regeneration.json
             pipeline/_regeneration.md
-          key: regeneration-legacy-${{ github.run_id }}
+            pipeline/_rattrapage_en.json
+            pipeline/_rattrapage_en.md
+          key: ${{ inputs.rattrapage_anglais && 'rattrapage-en' || 'regeneration-legacy' }}-${{ github.run_id }}
 
       - name: Appliquer les textes valides
         # --depuis-relecture ne rappelle jamais le modele : le texte publie est
         # exactement celui qui vient d'etre redige et valide. L'etape est sure
         # a repeter : ecrire_flux laisse intact tout item dont le texte courant
         # ne correspond plus a celui de la relecture, donc les items appliques
-        # les jours precedents ne sont pas reecrits.
+        # les jours precedents ne sont pas reecrits. Cote anglais, la meme
+        # garde tient : un item deja bilingue n'est jamais reecrit.
         if: ${{ !cancelled() }}
-        run: python -m pipeline.regenerer_flux --depuis-relecture
+        run: |
+          if [ "${{ inputs.rattrapage_anglais }}" = "true" ]; then
+            python -m pipeline.regenerer_flux --anglais --depuis-relecture
+          else
+            python -m pipeline.regenerer_flux --depuis-relecture
+          fi
 
       - name: Committer si le flux a change
         if: ${{ !cancelled() }}
@@ -100,7 +143,11 @@ jobs:
             echo "Rien a publier aujourd'hui : tous les items sont deja reecrits."
             exit 0
           fi
-          git commit -m "frontiere: reecriture des textes publies, lot du $(date -u +%F)"
+          if [ "${{ inputs.rattrapage_anglais }}" = "true" ]; then
+            git commit -m "frontiere: champs anglais des textes publies, lot du $(date -u +%F)"
+          else
+            git commit -m "frontiere: reecriture des textes publies, lot du $(date -u +%F)"
+          fi
           # La veille commite sur la meme branche les lundis et jeudis : se
           # rebaser evite un refus de poussee si les deux se croisent.
           git pull --rebase origin main
@@ -112,7 +159,7 @@ jobs:
         # L'assignation, pas l'ouverture seule, est ce qui declenche une
         # notification GitHub fiable independamment des reglages de suivi
         # du depot.
-        if: ${{ !cancelled() && hashFiles('pipeline/_regeneration_du_jour.md') != '' }}
+        if: ${{ !cancelled() && !inputs.rattrapage_anglais && hashFiles('pipeline/_regeneration_du_jour.md') != '' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -120,4 +167,18 @@ jobs:
             --repo "$GITHUB_REPOSITORY" \
             --title "La Frontiere : textes reecrits le $(date -u +%F)" \
             --body-file pipeline/_regeneration_du_jour.md \
+            --assignee ulrich-e-r-djidonou
+
+      - name: Notifier les champs anglais ajoutes
+        # Le mode anglais n'a pas de rapport du jour distinct : il n'ajoute que
+        # des champs absents, donc tout ce qu'il produit est nouveau et le
+        # releve complet suffit.
+        if: ${{ !cancelled() && inputs.rattrapage_anglais && hashFiles('pipeline/_rattrapage_en.md') != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "La Frontiere : champs anglais ajoutes le $(date -u +%F)" \
+            --body-file pipeline/_rattrapage_en.md \
             --assignee ulrich-e-r-djidonou
