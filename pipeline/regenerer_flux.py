@@ -36,6 +36,7 @@ import time
 from pathlib import Path
 
 from pipeline import curate
+from pipeline.publish import generer_jsonld_flux, injecter_jsonld_flux
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -195,6 +196,11 @@ def ecrire_flux(flux, releve, modele):
         nb_remplaces += 1
 
     FLUX.write_text(json.dumps(flux, ensure_ascii=False, indent=2), encoding="utf-8")
+    # Sans cette ligne, frontiere/index.html continuerait d'indexer les
+    # anciens resume_fr/angle_eco jusqu'a la prochaine execution de
+    # publish.py : le JSON-LD servi aux moteurs divergerait de flux.json,
+    # donc de ce que la page affiche reellement.
+    injecter_jsonld_flux(generer_jsonld_flux(flux))
     print(f"{nb_remplaces} items remplaces dans {FLUX}.")
     print("Les items rejetes gardent leur texte precedent.")
     for titre in ignores:
@@ -430,6 +436,11 @@ def ecrire_flux_anglais(flux, releve):
         nb_completes += 1
 
     FLUX.write_text(json.dumps(flux, ensure_ascii=False, indent=2), encoding="utf-8")
+    # Le JSON-LD ne porte que le francais (inLanguage "fr") : cet appel est
+    # sans effet visible tant que les champs anglais n'y entrent pas. Le
+    # rendre inconditionnel ne coute rien et garde ecrire_flux et
+    # ecrire_flux_anglais idempotents l'un vis-a-vis de l'autre.
+    injecter_jsonld_flux(generer_jsonld_flux(flux))
     print(f"{nb_completes} items completes en anglais dans {FLUX}.")
     for titre in ignores:
         print(f"Ignore, deja bilingue depuis la relecture : {titre}")

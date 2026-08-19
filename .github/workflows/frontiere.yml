@@ -85,6 +85,12 @@ jobs:
           git config user.email "actions@github.com"
           git add frontiere/ pipeline/seen.json sitemap.xml
           git diff --cached --quiet || git commit -m "frontiere: mise a jour automatique $(date -u +%F)"
+          # etat-projets.yml et regenerer-flux.yml commitent sur la meme
+          # branche : se rebaser evite un refus de poussee si les crons se
+          # croisent, apres que le budget LLM a deja ete consomme. Apres le
+          # commit, jamais avant : l'index ne doit pas etre en attente pendant
+          # le rebase. Sans rien a committer, le pull est sans effet.
+          git pull --rebase --quiet origin main
           git push
 
       - name: Rapporter les sources qui n'alimentent plus la veille

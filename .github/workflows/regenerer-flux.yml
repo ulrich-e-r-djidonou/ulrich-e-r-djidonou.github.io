@@ -138,7 +138,10 @@ jobs:
         run: |
           git config user.name "frontiere-bot"
           git config user.email "actions@github.com"
-          git add frontiere/data/flux.json
+          # Le script reinjecte aussi le JSON-LD de frontiere/index.html a
+          # partir du flux reecrit : sans le committer ici, la page indexee
+          # divergerait du flux jusqu'a la prochaine execution de publish.py.
+          git add frontiere/data/flux.json frontiere/index.html
           if git diff --cached --quiet; then
             echo "Rien a publier aujourd'hui : tous les items sont deja reecrits."
             exit 0

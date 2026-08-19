@@ -4,7 +4,17 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from pipeline import curate, regenerer_flux
+from pipeline import curate, publish, regenerer_flux
+
+# Bac a sable minimal pour injecter_jsonld_flux : sans le mocker sur
+# publish.FRONTIERE_INDEX, ecrire_flux_anglais ecrirait dans le vrai
+# frontiere/index.html du depot pendant les tests. C'est exactement ce qui
+# s'est produit une fois : 58 entrees reelles ecrasees par une seule entree de
+# test avant que le mock ci-dessous n'existe.
+GABARIT_FRONTIERE_INDEX = (
+    '<html><head><script type="application/ld+json" id="flux-jsonld">'
+    "[]</script></head><body></body></html>"
+)
 
 
 class ChargerAbstractsTests(unittest.TestCase):
@@ -124,6 +134,20 @@ class EstimerCoutTests(unittest.TestCase):
 
 
 class EcrireFluxAnglaisTests(unittest.TestCase):
+    def setUp(self):
+        # ecrire_flux_anglais reinjecte desormais le JSON-LD via
+        # publish.injecter_jsonld_flux, qui ecrit dans publish.FRONTIERE_INDEX
+        # par defaut. Sans ce mock, chaque test ecrirait dans le vrai
+        # frontiere/index.html du depot.
+        dossier = tempfile.TemporaryDirectory()
+        self.addCleanup(dossier.cleanup)
+        index = Path(dossier.name) / "index.html"
+        index.write_text(GABARIT_FRONTIERE_INDEX, encoding="utf-8")
+        patcheur = mock.patch.object(publish, "FRONTIERE_INDEX", index)
+        patcheur.start()
+        self.addCleanup(patcheur.stop)
+        self.index_frontiere = index
+
     def _flux_temporaire(self, contenu):
         dossier = tempfile.TemporaryDirectory()
         self.addCleanup(dossier.cleanup)
@@ -133,7 +157,10 @@ class EcrireFluxAnglaisTests(unittest.TestCase):
 
     def test_ajoute_les_champs_anglais_sans_toucher_au_francais(self):
         chemin = self._flux_temporaire([
-            {"id": "a", "resume_fr": "francais", "angle_eco": "angle"}
+            {
+                "id": "a", "titre": "Titre", "url": "https://x.example/a",
+                "resume_fr": "francais", "angle_eco": "angle",
+            }
         ])
         releve = [{
             "id": "a",
@@ -152,13 +179,19 @@ class EcrireFluxAnglaisTests(unittest.TestCase):
         self.assertEqual(ecrit[0]["angle_eco"], "angle")
         self.assertEqual(ecrit[0]["resume_en"], "English.")
         self.assertEqual(ecrit[0]["angle_eco_en"], "Angle.")
+        # Preuve que le mock du sandbox est bien celui utilise : le JSON-LD
+        # reinjecte porte l'item du test, pas celui du vrai site.
+        self.assertIn('"headline": "Titre"', self.index_frontiere.read_text(encoding="utf-8"))
 
     def test_n_ecrase_pas_un_item_devenu_bilingue_entre_temps(self):
         # Le pipeline a pu publier l'anglais de cet item pendant que le lot
         # de rattrapage attendait sa relecture. Son texte vient de l'abstract
         # courant : l'ecraser annulerait une publication en silence.
         chemin = self._flux_temporaire([
-            {"id": "a", "titre": "A", "resume_en": "publie par le pipeline"}
+            {
+                "id": "a", "titre": "A", "url": "https://x.example/a",
+                "resume_fr": "f", "resume_en": "publie par le pipeline",
+            }
         ])
         releve = [{
             "id": "a",
@@ -176,7 +209,12 @@ class EcrireFluxAnglaisTests(unittest.TestCase):
         self.assertEqual(ecrit[0]["resume_en"], "publie par le pipeline")
 
     def test_ignore_un_item_rejete(self):
-        chemin = self._flux_temporaire([{"id": "a", "resume_fr": "francais"}])
+        chemin = self._flux_temporaire([
+            {
+                "id": "a", "titre": "Titre", "url": "https://x.example/a",
+                "resume_fr": "francais",
+            }
+        ])
         releve = [{
             "id": "a",
             "titre": "A",
