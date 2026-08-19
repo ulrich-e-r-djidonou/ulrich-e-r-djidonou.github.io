@@ -4,17 +4,20 @@
     "fedspeak": {
       "etat": "Communiqués analysés jusqu'au 15 juillet 2026",
       "date_donnees": "2026-07-15",
-      "source": "https://raw.githubusercontent.com/ulrich-e-r-djidonou/bdc-fedspeak/main/data/processed/tone_index.csv"
+      "source": "https://raw.githubusercontent.com/ulrich-e-r-djidonou/bdc-fedspeak/main/data/processed/tone_index.csv",
+      "etat_en": "Press releases analyzed through July 15, 2026"
     },
     "geoecon": {
       "etat": "Mise à jour le 18 août 2026",
       "date_donnees": "2026-08-18",
-      "source": "https://ulrich-e-r-djidonou.github.io/geoecon-pulse/data/indicators.json"
+      "source": "https://ulrich-e-r-djidonou.github.io/geoecon-pulse/data/indicators.json",
+      "etat_en": "Updated on August 18, 2026"
     },
     "icie": {
       "etat": "Données jusqu'au 2 août 2026",
       "date_donnees": "2026-08-02",
-      "source": "https://ulrich-e-r-djidonou.github.io/icie-dashboard/etat.json"
+      "source": "https://ulrich-e-r-djidonou.github.io/icie-dashboard/etat.json",
+      "etat_en": "Data through August 2, 2026"
     }
   }
 }

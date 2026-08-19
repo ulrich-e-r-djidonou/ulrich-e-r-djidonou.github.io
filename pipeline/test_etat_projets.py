@@ -151,6 +151,15 @@ class SourcesDeclareesTests(unittest.TestCase):
                 rendu = source["gabarit"].format(date="2 août 2026")
                 self.assertIn("2 août 2026", rendu)
 
+    def test_chaque_source_a_son_gabarit_anglais(self):
+        # main() lit gabarit_en sans repli : une source ajoutee sans lui
+        # ferait echouer l'execution apres la lecture de la date, et la page
+        # anglaise garderait une etiquette perimee.
+        for identifiant, source in etat_projets.SOURCES.items():
+            with self.subTest(projet=identifiant):
+                rendu = source["gabarit_en"].format(date="August 2, 2026")
+                self.assertIn("August 2, 2026", rendu)
+
 
 class AppliquerEtatsTests(unittest.TestCase):
     page = (
@@ -171,6 +180,28 @@ class AppliquerEtatsTests(unittest.TestCase):
             html,
         )
         self.assertEqual(manquants, [])
+
+    def test_la_cle_choisit_la_langue_de_l_etiquette(self):
+        # La page anglaise porte les memes attributs data-projet. Sans le
+        # parametre, elle recevrait l'etiquette francaise.
+        html, manquants = etat_projets.appliquer_etats(
+            self.page,
+            {"icie": {"etat": "Données jusqu'au 30 septembre 2026",
+                      "etat_en": "Data through September 30, 2026"}},
+            "etat_en",
+        )
+        self.assertIn("Data through September 30, 2026", html)
+        self.assertNotIn("30 septembre 2026", html)
+        self.assertEqual(manquants, [])
+
+    def test_une_cle_absente_laisse_l_etiquette_en_place(self):
+        # Un projet du JSON qui n'a pas encore d'etat_en, par exemple juste
+        # apres l'ajout d'une source : mieux vaut une etiquette datee qu'une
+        # etiquette vide.
+        html, _ = etat_projets.appliquer_etats(
+            self.page, {"icie": {"etat": "Données jusqu'au 30 septembre 2026"}}, "etat_en"
+        )
+        self.assertIn("Données jusqu'au 2 août 2026", html)
 
     def test_les_autres_cartes_ne_bougent_pas(self):
         html, _ = etat_projets.appliquer_etats(
