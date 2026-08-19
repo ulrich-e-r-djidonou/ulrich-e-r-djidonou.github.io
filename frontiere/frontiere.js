@@ -161,6 +161,14 @@
     return LANG === "en" ? entree.angle_eco_en || entree.angle_eco : entree.angle_eco;
   }
 
+  // Vrai quand la page anglaise sert du francais faute de champ anglais.
+  // Sans marquage, la page est declaree lang="en" de bout en bout et un
+  // lecteur d'ecran prononce du francais avec une voix anglaise, tandis
+  // qu'un moteur indexe ce texte comme de l'anglais.
+  function estRepliFrancais(entree, champEn) {
+    return LANG === "en" && !entree[champEn];
+  }
+
   const etat = {
     flux: [],
     themeActif: null,
@@ -255,6 +263,7 @@
     if (texteResume) {
       const resume = document.createElement("p");
       resume.textContent = texteResume;
+      if (estRepliFrancais(entree, "resume_en")) resume.lang = "fr";
       carte.appendChild(resume);
     }
 
@@ -262,7 +271,18 @@
     if (texteAngle) {
       const angle = document.createElement("p");
       angle.className = "angle-eco";
-      angle.textContent = T.pourEconomiste(texteAngle);
+      if (estRepliFrancais(entree, "angle_eco_en")) {
+        // Le prefixe (« For the economist: ») reste dans la langue de la
+        // page : seul le texte repris du francais porte lang="fr", sinon on
+        // etiquetterait comme francais une phrase a moitie anglaise.
+        angle.textContent = T.pourEconomiste("");
+        const repli = document.createElement("span");
+        repli.lang = "fr";
+        repli.textContent = texteAngle;
+        angle.appendChild(repli);
+      } else {
+        angle.textContent = T.pourEconomiste(texteAngle);
+      }
       carte.appendChild(angle);
     }
 
