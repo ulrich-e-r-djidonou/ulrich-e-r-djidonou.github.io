@@ -32,11 +32,17 @@ jobs:
           # avant le mur ; porte a 20 le 5 aout 2026 pour garantir 5 articles
           # par execution, ce que le repli ci-dessous rend sans risque : la
           # marge n'est plus dans le budget, elle est dans le second
-          # fournisseur. Un article coute 2 appels quand ses deux champs sont
-          # valides du premier coup, 4 au pire (2 champs x 2 essais), donc ce
-          # budget rend 5 articles au pire et jusqu'a 9 au mieux. Les items
-          # non rediges ne sont pas marques vus et reviennent a l'execution
-          # suivante, le jeudi ou le lundi.
+          # fournisseur.
+          #
+          # Le cout par article a double le 19 aout 2026 avec la redaction des
+          # champs anglais (FRONTIERE_RESUME_EN, actif par defaut) : 4 champs
+          # au lieu de 2, donc 4 appels quand tout passe du premier coup et 8
+          # au pire. A budget constant, ce sont 2 articles garantis et jusqu'a
+          # 5 au mieux, contre 5 et 9 avant l'anglais. Les items non rediges ne
+          # sont pas marques vus et reviennent a l'execution suivante, le jeudi
+          # ou le lundi : le flux se remplit plus lentement, il ne se perd pas.
+          # Relever ce budget deborderait les 20 requetes gratuites et ferait
+          # payer le repli : decision d'Ulrich, pas un reglage a faire seul.
           LLM_BUDGET_APPELS: "20"
           # Repli si Gemini est en panne ou si son quota gratuit est epuise
           # (429, cas du 3 aout 2026) : curate.py bascule alors sur Claude
