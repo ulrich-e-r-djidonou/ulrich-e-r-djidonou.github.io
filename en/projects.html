@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://api.web3forms.com https://djidonougoatcounter.goatcounter.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects | Ulrich Djidonou</title>
+    <meta
+      name="description"
+      content="Public projects in quantitative economics: dashboards, applied econometrics, AI, and automated monitoring. Each project is public and verifiable."
+    >
+    <meta property="og:title" content="Projects | Ulrich Djidonou">
+    <meta property="og:description" content="Dashboards, applied econometrics, AI, and automated monitoring.">
+    <meta property="og:image" content="https://djidonou.com/assets/og-image.jpg">
+    <meta property="og:url" content="https://djidonou.com/en/projects.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:locale:alternate" content="fr_CA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Ulrich Djidonou">
+    <meta name="twitter:description" content="Dashboards, applied econometrics, AI, and automated monitoring.">
+    <meta name="twitter:image" content="https://djidonou.com/assets/og-image.jpg">
+    <meta name="twitter:creator" content="@UDjidonou">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://djidonou.com/en/projects.html">
+    <link rel="alternate" hreflang="fr" href="https://djidonou.com/projets.html">
+    <link rel="alternate" hreflang="en" href="https://djidonou.com/en/projects.html">
+    <link rel="alternate" hreflang="x-default" href="https://djidonou.com/projets.html">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/en/" aria-label="Back to home">
+        <img class="brand-photo" src="/assets/ulrich-djidonou-portrait.png" alt="Ulrich Djidonou" width="34" height="34">
+        Ulrich Djidonou
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/en/">Home</a>
+        <a href="/en/career.html">Career</a>
+        <a href="/en/projects.html" aria-current="page">Projects</a>
+        <a href="/en/frontier/">La Frontière</a>
+        <a href="/en/resources.html">Resources</a>
+        <a href="/en/faq.html">FAQ</a>
+        <a href="/en/contact.html">Contact</a>
+        <a class="lang-switch" href="/projets.html" hreflang="fr" lang="fr" aria-label="Voir cette page en francais">FR</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="page-hero" aria-labelledby="page-title">
+        <div class="section-kicker">Public projects</div>
+        <h1 id="page-title">Public projects in quantitative economics</h1>
+        <p class="lead">
+          Dashboards, applied econometrics, AI, and automated monitoring. Each
+          project is public and verifiable.
+        </p>
+        <div class="filter-chips" id="chips-projets" role="group" aria-label="Filter by field">
+          <button class="chip" type="button" data-tag-chip="dashboards">Dashboards</button>
+          <button class="chip" type="button" data-tag-chip="econometrie">Econometrics</button>
+          <button class="chip" type="button" data-tag-chip="ia">Applied AI</button>
+          <button class="chip" type="button" data-tag-chip="veille">Monitoring</button>
+          <button class="chip" type="button" data-tag-chip="vulgarisation">Popular science</button>
+        </div>
+      </section>
+
+      <section id="projects" class="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="sr-only">List of projects</h2>
+        <div class="project-grid" id="grille-projets">
+          <article class="project-card featured" data-tags="dashboards econometrie">
+            <img class="project-thumb" src="/assets/screenshots/icie.jpg" alt="Screenshot of the ICIE dashboard" loading="lazy" width="960" height="540">
+            <p class="project-type">Index and dashboard</p>
+            <h3>ICIE</h3>
+            <p>
+              Canadian economic uncertainty index based on Google Trends, with
+              sensitivity tests, external validation, and a public dashboard.
+            </p>
+            <!-- Etiquette ecrite par pipeline/etat_projets.py depuis
+                 data/projets.json : ne pas la modifier a la main, elle sera
+                 remplacee au prochain controle. -->
+            <p class="project-etat" data-projet="icie" data-vivant>Data through August 2, 2026</p>
+            <p class="project-langue">Site in French only</p>
+            <a href="https://ulrich-e-r-djidonou.github.io/icie-dashboard/">Open the dashboard</a>
+          </article>
+
+          <article class="project-card featured" data-tags="veille ia">
+            <img class="project-thumb" src="/assets/screenshots/frontiere.jpg" alt="Screenshot of the La Frontière page" loading="lazy" width="960" height="540">
+            <p class="project-type">Automated monitoring</p>
+            <h3>La Frontière</h3>
+            <p>
+              Monitoring at the intersection of AI, economics, and machine
+              learning, automatically updated via a Python pipeline, with a
+              library of durable resources and an RSS feed.
+            </p>
+            <p class="project-etat" data-vivant>Automatically updated twice a week</p>
+            <p class="project-langue">Site in French and English</p>
+            <a href="/en/frontier/">Open the monitoring feed</a>
+          </article>
+
+          <article class="project-card" data-tags="dashboards veille">
+            <img class="project-thumb" src="/assets/screenshots/geoecon-pulse.jpg" alt="Screenshot of the Geoecon Pulse dashboard" loading="lazy" width="960" height="540">
+            <p class="project-type">Economic intelligence</p>
+            <h3>Geoecon Pulse</h3>
+            <p>
+              Global geoeconomic monitoring dashboard covering Canada, the
+              United States, China, India, and the world, updated daily.
+            </p>
+            <p class="project-etat" data-projet="geoecon" data-vivant>Updated on August 16, 2026</p>
+            <p class="project-langue">Site in French and English</p>
+            <a href="https://djidonou.com/geoecon-pulse/">Open the dashboard</a>
+          </article>
+
+          <article class="project-card" data-tags="dashboards ia">
+            <img class="project-thumb" src="/assets/screenshots/ia-quebec-dashboard.jpg" alt="Screenshot of the AI Quebec dashboard" loading="lazy" width="960" height="540">
+            <p class="project-type">Public AI</p>
+            <h3>AI Quebec Dashboard</h3>
+            <p>
+              Interactive visualization of AI adoption in Quebec's public
+              administration, comparing 2024 vs. 2025.
+            </p>
+            <p class="project-etat">2024 and 2025 data</p>
+            <p class="project-langue">Site in French and English</p>
+            <a href="https://djidonou.com/ia-quebec-dashboard/en/">Open the dashboard</a>
+          </article>
+
+          <article class="project-card" data-tags="vulgarisation ia">
+            <img class="project-thumb" src="/assets/screenshots/ai-ca.jpg" alt="Screenshot of the AI for All Canada guide" loading="lazy" width="960" height="540">
+            <p class="project-type">Public AI</p>
+            <h3>AI for All Canada Guide</h3>
+            <p>
+              Bilingual interactive guide on Canada's national AI strategy, six
+              pillars, adoption trajectory simulator up to 60 percent.
+            </p>
+            <p class="project-etat">ISDE strategy of June 4, 2026</p>
+            <p class="project-langue">Site in French and English</p>
+            <a href="https://djidonou.com/AI-CA/">Open the guide</a>
+          </article>
+
+          <article class="project-card" data-tags="dashboards">
+            <img class="project-thumb" src="/assets/screenshots/pjd-mobilite.jpg" alt="Screenshot of the Jean-Drapeau Park cycling mobility dashboard" loading="lazy" width="960" height="540">
+            <p class="project-type">Urban mobility</p>
+            <h3>Bicycle mobility, Jean-Drapeau Park</h3>
+            <p>
+              Interactive dashboard analyzing bicycle mobility to Jean-Drapeau
+              Park, based on open data from the City of Montreal, 2023-2024.
+            </p>
+            <p class="project-etat">2023 and 2024 data</p>
+            <p class="project-langue">Site in French only</p>
+            <a href="https://djidonou.com/PJD-mobilite-cycliste/">Open the dashboard</a>
+          </article>
+
+          <article class="project-card" data-tags="ia econometrie">
+            <p class="project-type">Economic NLP</p>
+            <h3>BDC Fedspeak</h3>
+            <p>
+              Index measuring the hawkish or dovish tone of Bank of Canada
+              press releases, 2009-2026, with an event study.
+            </p>
+            <p class="project-etat" data-projet="fedspeak" data-vivant>Press releases analyzed through July 15, 2026</p>
+            <p class="project-langue">Repository documented in French</p>
+            <a href="https://github.com/ulrich-e-r-djidonou/bdc-fedspeak">View on GitHub</a>
+          </article>
+
+          <article class="project-card" data-tags="vulgarisation">
+            <img class="project-thumb" src="/assets/screenshots/chokepoints.jpg" alt="Screenshot of the Chokepoints game" loading="lazy" width="960" height="540">
+            <p class="project-type">Geoeconomics, popular science</p>
+            <h3>Chokepoints</h3>
+            <p>
+              Bilingual interactive card game on global geoeconomic chokepoints:
+              maritime, energy, technological, and financial.
+            </p>
+            <p class="project-etat">Fixed content, bilingual</p>
+            <p class="project-langue">Site in French and English</p>
+            <a href="https://chokepoints-game.netlify.app">Play online</a>
+          </article>
+        </div>
+        <p class="filtre-vide" id="grille-projets-vide" hidden>No projects match this combination of filters.</p>
+      </section>
+
+      <section class="secondary-projects" aria-labelledby="secondary-title">
+        <h2 id="secondary-title">Other useful evidence</h2>
+        <div class="evidence-list">
+          <a href="https://github.com/ulrich-e-r-djidonou/forecasting-chomage-canada">
+            Canada Unemployment Forecasting (repository in French)
+          </a>
+          <a href="https://djidonou.com/leave-network-explorer/">
+            Leave Network Explorer (site in English)
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="social-icons" data-social-icons></div>
+    </footer>
+
+    <script src="/assets/social-links.js" defer></script>
+    <script src="/assets/projets-filtres.js" defer></script>
+    <script data-goatcounter="https://djidonougoatcounter.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  </body>
+</html>

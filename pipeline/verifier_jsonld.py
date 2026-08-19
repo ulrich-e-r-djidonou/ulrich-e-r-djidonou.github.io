@@ -25,10 +25,15 @@ RACINE = Path(__file__).parent.parent
 # faq.html ajoutee le 2026-08-12 : la regle FAQPage existait dans
 # CHAMPS_REQUIS mais aucune page listee ici n'en portait, donc elle ne
 # s'appliquait a rien. Le bloc vivait sur parcours.html, hors couverture.
+# Les pages anglaises portent le meme balisage que leurs equivalentes
+# francaises : les omettre ici laisserait la moitie du site sans controle.
 PAGES = [
     RACINE / "index.html",
     RACINE / "faq.html",
     RACINE / "frontiere" / "index.html",
+    RACINE / "en" / "index.html",
+    RACINE / "en" / "faq.html",
+    RACINE / "en" / "frontier" / "index.html",
 ]
 
 CHAMPS_REQUIS = {

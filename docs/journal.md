@@ -16,6 +16,88 @@ absolu, avec le motif et le numéro de PR quand il en existe une.
 
 ---
 
+## 2026-08-19, version anglaise sous /en/, et ce qu'elle oblige à dire
+
+Le site est bilingue depuis aujourd'hui: le français reste à la racine,
+l'anglais vit sous `/en/`. Aucune détection de langue du navigateur, aucune
+redirection: le visiteur choisit par le lien FR/EN en fin de navigation, et
+chaque page pointe vers son équivalent exact plutôt que vers la racine de
+l'autre langue. Un recruteur anglophone qui arrive sur la page Projets par une
+recherche doit rester sur les projets quand il bascule.
+
+La traduction part du fichier `ENG_Site.md` fourni par Ulrich, pas d'une
+traduction produite ici. Trois passages y manquaient et ont été complétés: le
+titre anglais de la loi co-rédigée, la page Contact au-delà de son titre, et la
+page 404. Le titre de la loi reste à valider: la version française du site dit
+« Loi visant à améliorer la flexibilité de la conciliation famille-travail »,
+le rendu anglais retenu ici n'a pas été vérifié contre une source officielle.
+
+**Règle de la double langue.** Toute modification de contenu sur une page
+française entraîne la même modification sur la page anglaise correspondante,
+dans le même commit. Sans cette règle, les deux versions divergent en quelques
+semaines et la version anglaise devient un piège: elle affirme, avec l'autorité
+d'une page publiée, ce qui n'est plus vrai. `test_faq_coherence.py` en contrôle
+désormais une part, en vérifiant que les deux FAQ posent le même nombre de
+questions.
+
+Ce que le bilinguisme a forcé à regarder en face: **la plupart des projets ne
+sont pas bilingues.** Quatre sites sur dix le sont (Geoecon Pulse, le guide
+AI-CA, le tableau de bord IA Québec, Chokepoints), cinq sont en français seul,
+un en anglais seul. Une version anglaise qui renvoie sans prévenir vers huit
+pages françaises trahit sa promesse au premier clic. D'où l'étiquette de langue
+sur chaque carte projet, des deux côtés du site: elle dit la langue du site
+qu'elle ouvre, y compris quand la réponse est « français seulement ». Poser
+l'étiquette seulement sur les projets monolingues aurait été plus discret, mais
+aurait fait lire l'absence d'étiquette comme une promesse de bilinguisme.
+
+**La Frontière.** Le plan de juillet proposait trois options, de la simple
+mention à la génération de résumés anglais par le pipeline. La troisième a été
+retenue: `curate.py` rédige désormais `resume_en` et `angle_eco_en` à partir de
+l'abstract d'origine, qui est déjà en anglais, jamais par traduction du résumé
+français. Traduire une traduction accumule les écarts alors que le texte source
+est là.
+
+Deux garde-fous, décidés en écrivant le code. D'abord, la rédaction anglaise ne
+bloque jamais: elle tourne après que le français a été écrit et validé, elle est
+enveloppée dans un `except OllamaIndisponible`, et son échec laisse les champs
+absents plutôt que de retenir l'item. La page anglaise sert alors le texte
+français, ce qui vaut mieux qu'une carte vide. Ensuite, le budget d'appels par
+item passe de 4 à 8 quand l'anglais est actif: sans cela une exécution
+s'arrêterait au milieu d'un item et publierait du français privé de son anglais.
+Le drapeau `FRONTIERE_RESUME_EN=0` coupe la rédaction anglaise sans toucher au
+code.
+
+Un défaut relevé au passage, hors périmètre et non corrigé:
+`icie-dashboard/index.html` déclare un `hreflang="en"` qui pointe vers la page
+française elle-même, donc annonce à Google une version anglaise qui n'existe
+pas.
+
+**Relecture d'Ulrich, le même jour.** Six corrections de fond, appliquées des
+deux côtés quand elles touchaient les deux versions. Le titre au Conseil de
+gestion est *Research Officer*, pas *Research Fellow*. La Matinée RQAP 2024
+garde son nom propre en anglais, « 2024 QPIP Matinée », plutôt qu'une
+traduction descriptive. Le prix Le Philanthrope a été reçu à l'Assemblée
+nationale, pas remis par elle: la version française disait « prix remis »,
+l'anglais « award presented », les deux ont été refaites. Le mentorat Mitacs
+Globalink portait sur cinq stagiaires venus de l'Inde, de la France et du
+Mexique, précision qui manquait dans les deux langues. « La Frontière » s'écrit
+avec son accent en anglais aussi: c'est un nom propre, pas un mot à adapter, et
+les vingt-six occurrences sans accent des pages `/en/` ont été corrigées.
+
+La phrase d'introduction de la page Projets qui annonçait que les sites ne
+parlent pas tous les deux langues a été retirée, en français comme en anglais.
+Les étiquettes par carte restent: elles répondent à la question au moment où
+elle se pose, sur la carte qu'on s'apprête à ouvrir, alors que l'avertissement
+en tête de page faisait de l'unilinguisme des projets un sujet avant même la
+première fiche.
+
+Reste ouvert, à la demande d'Ulrich: rendre bilingues les sites de projets
+eux-mêmes, dans une seconde phase. Et le rattrapage de l'anglais sur les 58
+entrées déjà publiées de La Frontière, que `regenerer_flux.py` ne sait pas
+faire aujourd'hui: il régénère `resume` et `angle_eco`, jamais leurs champs
+anglais. Les nouvelles entrées, elles, sortiront bilingues dès la prochaine
+exécution du cron, sans clé à fournir.
+
 ## 2026-08-17, empêcher un lancement nu de détruire le signal
 
 Réponse aux deux fausses manoeuvres relevées dans l'entrée ci-dessous. Elles

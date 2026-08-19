@@ -125,9 +125,15 @@ def chemin_local(url):
 
 
 def pages_a_verifier():
-    """Toutes les pages HTML publiees, hors artefacts de travail."""
+    """Toutes les pages HTML publiees, hors artefacts de travail.
+
+    La version anglaise vit sous en/ depuis le 2026-08-19 : ses liens sont
+    verifies au meme titre que ceux des pages francaises, sinon un lien casse
+    ne serait vu que du cote francais du site."""
     pages = sorted(RACINE.glob("*.html"))
     pages += sorted((RACINE / "frontiere").glob("*.html"))
+    pages += sorted((RACINE / "en").glob("*.html"))
+    pages += sorted((RACINE / "en" / "frontier").glob("*.html"))
     return pages
 
 

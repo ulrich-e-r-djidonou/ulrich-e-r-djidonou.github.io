@@ -1,22 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- Chaque paire FR/EN se declare mutuellement par xhtml:link, y compris vers
+     elle-meme : Google ignore un groupe hreflang dont un membre ne se cite pas.
+     x-default pointe le francais, langue principale du site. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://djidonou.com/</loc>
-    <lastmod>2026-08-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/"/>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://djidonou.com/projets.html</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://djidonou.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/"/>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://djidonou.com/parcours.html</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://djidonou.com/projets.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/projets.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/projets.html"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://djidonou.com/en/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/projets.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/projets.html"/>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://djidonou.com/parcours.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/parcours.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/career.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/parcours.html"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://djidonou.com/en/career.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/parcours.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/career.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/parcours.html"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://djidonou.com/recherche.html</loc>
@@ -26,26 +66,74 @@
   </url>
   <url>
     <loc>https://djidonou.com/frontiere/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/frontiere/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/frontier/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/frontiere/"/>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://djidonou.com/en/frontier/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/frontiere/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/frontier/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/frontiere/"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://djidonou.com/ressources.html</loc>
-    <lastmod>2026-08-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/ressources.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/ressources.html"/>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://djidonou.com/en/resources.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/ressources.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/ressources.html"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://djidonou.com/faq.html</loc>
-    <lastmod>2026-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/faq.html"/>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://djidonou.com/en/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/faq.html"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://djidonou.com/contact.html</loc>
-    <lastmod>2026-08-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/contact.html"/>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://djidonou.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://djidonou.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://djidonou.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://djidonou.com/contact.html"/>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

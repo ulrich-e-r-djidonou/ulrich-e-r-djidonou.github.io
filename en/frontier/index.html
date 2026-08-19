@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Le contenu de La Frontière vient de flux tiers et est publie sans
+         relecture humaine. Meme politique que la version francaise. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://api.web3forms.com https://djidonougoatcounter.goatcounter.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>La Frontière | AI, economics, and machine learning monitoring | Ulrich Djidonou</title>
+    <meta
+      name="description"
+      content="La Frontière: automated monitoring at the intersection of artificial intelligence, economics, and machine learning, following thematic criteria defined by Ulrich Djidonou, economist."
+    >
+    <meta property="og:title" content="La Frontière | AI, economics, and machine learning monitoring">
+    <meta property="og:description" content="Automated monitoring at the intersection of AI, economics, and machine learning, updated twice a week.">
+    <meta property="og:image" content="https://djidonou.com/assets/og-image.jpg">
+    <meta property="og:url" content="https://djidonou.com/en/frontier/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:locale:alternate" content="fr_CA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La Frontière | AI, economics, and machine learning monitoring">
+    <meta name="twitter:description" content="Automated monitoring at the intersection of AI, economics, and machine learning, updated twice a week.">
+    <meta name="twitter:image" content="https://djidonou.com/assets/og-image.jpg">
+    <meta name="twitter:creator" content="@UDjidonou">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://djidonou.com/en/frontier/">
+    <link rel="alternate" hreflang="fr" href="https://djidonou.com/frontiere/">
+    <link rel="alternate" hreflang="en" href="https://djidonou.com/en/frontier/">
+    <link rel="alternate" hreflang="x-default" href="https://djidonou.com/frontiere/">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="La Frontière, RSS feed" href="https://djidonou.com/frontiere/feed.xml">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": "https://djidonou.com/en/frontier/#page",
+      "url": "https://djidonou.com/en/frontier/",
+      "name": "La Frontière",
+      "description": "Automated monitoring at the intersection of artificial intelligence, economics, and machine learning, following thematic criteria defined by an economist.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://djidonou.com/en/#website" },
+      "about": { "@id": "https://djidonou.com/#person" }
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/frontiere/frontiere.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/en/" aria-label="Back to home">
+        <img class="brand-photo" src="/assets/ulrich-djidonou-portrait.png" alt="Ulrich Djidonou" width="34" height="34">
+        Ulrich Djidonou
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/en/">Home</a>
+        <a href="/en/career.html">Career</a>
+        <a href="/en/projects.html">Projects</a>
+        <a href="/en/frontier/" aria-current="page">La Frontière</a>
+        <a href="/en/resources.html">Resources</a>
+        <a href="/en/faq.html">FAQ</a>
+        <a href="/en/contact.html">Contact</a>
+        <a class="lang-switch" href="/frontiere/" hreflang="fr" lang="fr" aria-label="Voir cette page en francais">FR</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="frontiere-hero">
+        <p class="eyebrow">Automated monitoring</p>
+        <h1>La Frontière</h1>
+        <p class="frontiere-definition-question"><em>What is La Frontière?</em></p>
+        <p class="lead">
+          La Frontière is an automated monitoring service that tracks articles
+          at the intersection of artificial intelligence, economics, and
+          machine learning.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="/frontiere/feed.xml">Follow La Frontière (RSS)</a>
+        </div>
+        <p class="frontiere-meta" id="derniere-maj">Loading...</p>
+        <div class="frontiere-liens">
+          <a href="/frontiere/feed.xml">RSS feed</a>
+          <a href="/frontiere/data/flux.json">Feed data (JSON)</a>
+          <a href="/en/resources.html">Resources</a>
+        </div>
+        <details class="frontiere-methode accordeon">
+          <summary class="frontiere-methode-titre">How this monitoring service is produced (click to read)</summary>
+          <div class="accordeon-contenu">
+          <p>
+            First, a Python pipeline collects new publications twice a week
+            (Mondays and Thursdays) from arXiv (econ.EM, econ.GN, cs.LG,
+            cs.CL, stat.ML, filtered for economics), the NBER, the journals of
+            the American Economic Association (AER, JEP, JEL, AEJ), VoxEU/CEPR,
+            the Bank of Canada, the U.S. Federal Reserve, the European Central
+            Bank, and the International Monetary Fund. It then assigns a
+            thematic score to each entry: the main selection includes those
+            with a score of at least 3.
+          </p>
+          <p>
+            Next, for recognized economic journals and institutions (AER, JEP,
+            JEL, AEJ, NBER, VoxEU/CEPR, Bank of Canada, U.S. Federal Reserve,
+            European Central Bank, International Monetary Fund), the economic
+            nature of the text is assumed: only the connection to artificial
+            intelligence remains to be evaluated, so as not to exclude an
+            article simply because its abstract lacks standard economic
+            vocabulary.
+          </p>
+          <p>
+            Finally, the summaries are generated by a language model (Gemini,
+            supplemented by Claude), then checked by automated validators: any
+            figure absent from the title or the source abstract causes the text
+            to be rejected. The English summaries are produced by the same
+            pipeline; when one is missing for an entry, the page falls back to
+            the French summary rather than leaving the card empty.
+          </p>
+          <p>
+            The signal of the week is the article with the highest thematic
+            score among those reported in the most recent collection, not among
+            the ninety days of the selection: without this freshness
+            requirement, a highly rated article would keep the spot for weeks.
+            A floor is also applied. When no recent article reaches a
+            sufficient score, the section says so rather than highlighting a
+            text that does not deserve it.
+          </p>
+          <p>
+            Two terms recur in the entry labels. A <strong>research paper</strong>
+            is a work released before publication, a preprint or a working
+            paper. A <strong>published article</strong> has appeared in a
+            peer-reviewed journal or in an editorial publication.
+          </p>
+          <p>
+            I also review what the pipeline produces as far as possible. If you
+            notice an anomaly or see room for improvement on any aspect,
+            <a href="/en/contact.html">write to me</a>: your feedback is
+            welcome.
+          </p>
+          </div>
+        </details>
+      </section>
+
+      <section class="frontiere-signal" id="signal-semaine" aria-labelledby="signal-titre" hidden>
+        <div class="section-kicker">Signal of the week</div>
+        <h2 id="signal-titre"></h2>
+        <p class="frontiere-signal-legende" id="signal-legende" hidden></p>
+      </section>
+
+      <section class="frontiere-stats" aria-label="Thematic breakdown of the feed">
+        <div class="section-kicker">Thematic breakdown, last 90 days</div>
+        <div id="barres-themes" class="barres-themes"></div>
+      </section>
+
+      <section class="frontiere-controles" aria-label="Feed filters">
+        <input
+          type="search"
+          id="recherche"
+          class="frontiere-recherche"
+          placeholder="Search the feed..."
+          aria-label="Search the feed"
+        >
+        <button type="button" id="retour-selection" class="chip" hidden>
+          Back to the main selection
+        </button>
+        <div class="frontiere-chips" id="chips-themes" role="group" aria-label="Filter by theme"></div>
+        <div class="frontiere-chips" id="chips-types" role="group" aria-label="Filter by type"></div>
+      </section>
+
+      <section class="frontiere-flux" aria-labelledby="flux-titre">
+        <div class="section-kicker">Current monitoring</div>
+        <h2 id="flux-titre">Main selection</h2>
+        <p>
+          This automatic selection includes entries with a thematic score of at
+          least 3.
+        </p>
+        <div id="liste-flux"></div>
+      </section>
+
+      <section class="frontiere-archives" aria-labelledby="archives-titre">
+        <div class="section-kicker">Archives</div>
+        <h2 id="archives-titre">Comprehensive archive</h2>
+        <p>
+          The archive retains every entry identified by the thematic
+          collection, including those that fall below the threshold of the main
+          selection.
+        </p>
+        <div id="liste-archives" class="frontiere-archives-liste"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="social-icons" data-social-icons></div>
+    </footer>
+
+    <script src="/assets/social-links.js" defer></script>
+    <script src="/frontiere/frontiere.js"></script>
+    <script data-goatcounter="https://djidonougoatcounter.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  </body>
+</html>

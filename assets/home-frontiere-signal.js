@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!signal || !signal.titre) {
         return;
       }
-      teaser.textContent = "Dernier signal : " + signal.titre;
+      teaser.textContent =
+        (document.documentElement.lang === "en" ? "Latest signal: " : "Dernier signal : ")
+        + signal.titre;
       teaser.removeAttribute("hidden");
     })
     .catch(() => {

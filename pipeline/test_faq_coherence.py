@@ -25,6 +25,9 @@ from pathlib import Path
 
 RACINE = Path(__file__).parent.parent
 PAGE_FAQ = RACINE / "faq.html"
+# La FAQ anglaise porte son propre bloc FAQPage : sans elle dans cette liste,
+# une divergence entre le visible et le JSON-LD anglais passerait inapercue.
+PAGES_FAQ = [PAGE_FAQ, RACINE / "en" / "faq.html"]
 
 MOTIF_BLOC_JSONLD = re.compile(
     r'<script type="application/ld\+json"[^>]*>\s*(.*?)\s*</script>', re.DOTALL
@@ -78,20 +81,30 @@ def lire_faq_visible(chemin=PAGE_FAQ):
 
 class FaqCoherenceTests(unittest.TestCase):
     def test_meme_nombre_de_questions(self):
-        self.assertEqual(len(lire_faq_visible()), len(lire_faqpage_json()))
+        for page in PAGES_FAQ:
+            with self.subTest(page=page.name):
+                self.assertEqual(len(lire_faq_visible(page)), len(lire_faqpage_json(page)))
 
     def test_questions_identiques_et_dans_le_meme_ordre(self):
-        visible = [question for question, _ in lire_faq_visible()]
-        json_ld = [question for question, _ in lire_faqpage_json()]
-        self.assertEqual(visible, json_ld)
+        for page in PAGES_FAQ:
+            with self.subTest(page=page.name):
+                visible = [question for question, _ in lire_faq_visible(page)]
+                json_ld = [question for question, _ in lire_faqpage_json(page)]
+                self.assertEqual(visible, json_ld)
 
     def test_reponses_identiques(self):
-        visible = lire_faq_visible()
-        json_ld = dict(lire_faqpage_json())
-        for question, reponse_visible in visible:
-            with self.subTest(question=question):
-                self.assertIn(question, json_ld)
-                self.assertEqual(reponse_visible, json_ld[question])
+        for page in PAGES_FAQ:
+            visible = lire_faq_visible(page)
+            json_ld = dict(lire_faqpage_json(page))
+            for question, reponse_visible in visible:
+                with self.subTest(page=page.name, question=question):
+                    self.assertIn(question, json_ld)
+                    self.assertEqual(reponse_visible, json_ld[question])
+
+    def test_les_deux_langues_posent_le_meme_nombre_de_questions(self):
+        """Parite FR/EN : une question ajoutee d'un seul cote se voit ici."""
+        comptes = {page.name: len(lire_faq_visible(page)) for page in PAGES_FAQ}
+        self.assertEqual(len(set(comptes.values())), 1, comptes)
 
 
 if __name__ == "__main__":

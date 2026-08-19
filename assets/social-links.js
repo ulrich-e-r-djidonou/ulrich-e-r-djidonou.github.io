@@ -40,7 +40,11 @@ const SOCIAL_ICON_DEFS = [
   },
   {
     key: "rss",
-    label: "Flux RSS de La Frontiere",
+    // Seul libelle social qui n'est pas un nom propre, donc le seul a traduire.
+    label:
+      document.documentElement.lang === "en"
+        ? "La Frontiere RSS feed"
+        : "Flux RSS de La Frontiere",
     markup:
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5c7.732 0 14 6.268 14 14M5 11.5c4.142 0 7.5 3.358 7.5 7.5"/><circle cx="6.2" cy="17.8" r="1.6" fill="currentColor" stroke="none"/></svg>',
   },
