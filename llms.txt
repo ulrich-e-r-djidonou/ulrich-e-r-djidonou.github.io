@@ -42,7 +42,8 @@ Traduction complète, pas un résumé. Le contenu est le même des deux côtés.
 
 - [La Frontière](https://djidonou.com/frontiere/) : veille automatisée sur
   l'intersection entre l'intelligence artificielle, l'économie et le machine
-  learning, mise à jour deux fois par semaine. Sélection par score
+  learning, mise à jour trois fois par semaine (lundi, jeudi, samedi).
+  Sélection par score
   heuristique déterministe (mots-clés), rédaction assistée par modèle de
   langage, jamais l'inverse : le modèle ne participe jamais à la sélection.
   Chaque entrée porte un résumé français (`resume_fr`, `angle_eco`) et, quand

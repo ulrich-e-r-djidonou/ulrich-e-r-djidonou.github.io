@@ -64,6 +64,36 @@
   const NOMS_THEMES = NOMS_THEMES_PAR_LANGUE[LANG];
   const NOMS_TYPES = NOMS_TYPES_PAR_LANGUE[LANG];
 
+  // Le champ `source` des entrees vient de pipeline/sources.yaml, redige en
+  // francais. Il etait rendu tel quel sur la page anglaise, qui affichait donc
+  // « Reserve federale americaine (Fed), working papers » sous une interface
+  // anglaise. Les cles sont les libelles francais exacts ; tout libelle absent
+  // de la table sort inchange, ce qui couvre les noms propres (arXiv, VoxEU)
+  // et les titres de revue qu'une entree porte parfois a la place de sa source.
+  const SOURCES_EN = {
+    "arXiv cs.LG / cs.CL / stat.ML (filtre economie)":
+      "arXiv cs.LG / cs.CL / stat.ML (economics filter)",
+    "NBER, nouveaux working papers": "NBER, new working papers",
+    "American Economic Association, revues":
+      "American Economic Association, journals",
+    "Fonds monetaire international (FMI), working papers":
+      "International Monetary Fund (IMF), working papers",
+    "Banque du Canada, publications": "Bank of Canada, publications",
+    "Banque du Canada, notes analytiques du personnel":
+      "Bank of Canada, staff analytical notes",
+    "Reserve federale americaine (Fed), working papers":
+      "U.S. Federal Reserve (Fed), working papers",
+    "Banque centrale europeenne (BCE), working papers":
+      "European Central Bank (ECB), working papers",
+    "Commits sur awesome-ai-for-economists":
+      "Commits on awesome-ai-for-economists",
+  };
+
+  function nomSource(source) {
+    if (LANG !== "en") return source;
+    return SOURCES_EN[source] || source;
+  }
+
   // Libelles d'interface. Les fonctions prennent leurs arguments plutot que
   // d'assembler des morceaux de phrase cote appelant : l'ordre des mots
   // differe d'une langue a l'autre.
@@ -193,7 +223,7 @@
     badge.textContent = NOMS_TYPES[entree.type] || entree.type;
     entete.appendChild(badge);
     const sourceEtDate = document.createElement("span");
-    sourceEtDate.textContent = `${entree.source} · ${formaterDate(entree.date_publication)}`;
+    sourceEtDate.textContent = `${nomSource(entree.source)} · ${formaterDate(entree.date_publication)}`;
     entete.appendChild(sourceEtDate);
     carte.appendChild(entete);
 
