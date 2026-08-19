@@ -2,7 +2,12 @@ name: frontiere
 
 on:
   schedule:
-    - cron: "0 11 * * 1,4"
+    # Lundi, jeudi et samedi. Le samedi est ajoute le 19 aout 2026 pour
+    # compenser le debit perdu par la redaction anglaise, qui double le cout
+    # d'un article. Le quota gratuit se renouvelle par jour : un jour de plus
+    # est un budget complet de plus, la ou relever LLM_BUDGET_APPELS ferait
+    # payer le fournisseur de repli. Revenir a "0 11 * * 1,4" suffit a annuler.
+    - cron: "0 11 * * 1,4,6"
   workflow_dispatch: {}
 
 permissions:
@@ -27,7 +32,12 @@ jobs:
           LLM_API_URL: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
           LLM_API_MODELE: gemini-3.6-flash
           LLM_API_CLE: ${{ secrets.LLM_API_CLE }}
-          # Le palier gratuit accorde 20 requetes par jour et par modele. Le
+          # Le chiffre de 20 requetes par jour et par modele vient du palier
+          # gratuit tel qu'il etait documente a la mise en place. Verifie le
+          # 19 aout 2026 : Google ne publie plus de chiffres et renvoie chacun
+          # a la page Rate limits de son propre projet dans AI Studio. Le
+          # budget ci-dessous n'est donc plus cale sur une limite connue.
+          # A verifier dans AI Studio avant de le relever. Le
           # budget etait a 16 (4 articles garantis) pour garder de la marge
           # avant le mur ; porte a 20 le 5 aout 2026 pour garantir 5 articles
           # par execution, ce que le repli ci-dessous rend sans risque : la

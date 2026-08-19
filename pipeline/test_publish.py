@@ -226,7 +226,7 @@ class EchappementBaliseScriptTests(unittest.TestCase):
     """Le titre d'un item vient brut du flux de la source. S'il contient
     </script>, le JSON-LD injecte dans frontiere/index.html fermerait la
     balise et le reste passerait pour du HTML executable, sur une page
-    committee deux fois par semaine sans relecture humaine."""
+    committee trois fois par semaine sans relecture humaine."""
 
     TITRE_PIEGE = "</script><img src=x onerror=alert(1)>"
 

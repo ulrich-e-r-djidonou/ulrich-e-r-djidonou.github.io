@@ -71,7 +71,7 @@ OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:3b")
 OLLAMA_TIMEOUT = 60
 PAUSE_AVANT_REPRISE = 2
 # Les paliers gratuits limitent le debit. Quelques essais espaces valent mieux
-# qu'un abandon : le lot est petit et ne tourne que deux fois par semaine.
+# qu'un abandon : le lot est petit et ne tourne que trois fois par semaine.
 TENTATIVES_API = 4
 PAUSE_MAX_DEBIT = 65
 # Saturation passagere du service, et non refus : le modele redevient
