@@ -55,6 +55,15 @@ FICHIER_PAGE = RACINE / "projets.html"
 # Sans elle ici, /en/projects.html figerait la date du jour de sa creation et
 # annoncerait, avec l'autorite d'une page publiee, une fraicheur perimee.
 FICHIER_PAGE_EN = RACINE / "en" / "projects.html"
+# Les deux accueils reprennent la carte ICIE, avec la meme etiquette de
+# fraicheur. Elles etaient hors du dispositif : la date y serait restee celle
+# du jour de la redaction pendant que projets.html avancait, et l'accueil est
+# la page la plus vue du site.
+FICHIER_ACCUEIL = RACINE / "index.html"
+FICHIER_ACCUEIL_EN = RACINE / "en" / "index.html"
+# Les accueils ne portent qu'une carte suivie : y chercher les autres
+# identifiants ferait remonter des absences qui n'en sont pas.
+PROJETS_ACCUEIL = frozenset({"icie"})
 TIMEOUT = 30
 
 MOIS = (
@@ -278,7 +287,16 @@ def main():
     # laisserait une page annoncer une fraicheur que l'autre dement, et
     # personne ne le verrait avant qu'un lecteur anglophone tombe dessus.
     manquants = []
-    for fichier, cle in ((FICHIER_PAGE, "etat"), (FICHIER_PAGE_EN, "etat_en")):
+    # `attendus` a None signifie « toutes les cartes suivies ». Les accueils
+    # n'en reprennent qu'une : restreindre evite de signaler comme manquantes
+    # des cartes qui n'ont jamais eu vocation a y figurer.
+    cibles = (
+        (FICHIER_PAGE, "etat", None),
+        (FICHIER_PAGE_EN, "etat_en", None),
+        (FICHIER_ACCUEIL, "etat", PROJETS_ACCUEIL),
+        (FICHIER_ACCUEIL_EN, "etat_en", PROJETS_ACCUEIL),
+    )
+    for fichier, cle, attendus in cibles:
         if not fichier.exists():
             echecs.append((fichier.name, "page absente"))
             print(f"{fichier.name} : page absente")
@@ -290,9 +308,12 @@ def main():
             print(f"{fichier.name} mis a jour.")
         else:
             print(f"{fichier.name} deja a jour.")
+        if attendus is not None:
+            absents = [i for i in absents if i in attendus]
         for identifiant in absents:
-            if (identifiant, fichier.name) not in manquants:
-                manquants.append((identifiant, fichier.name))
+            chemin_affiche = fichier.relative_to(RACINE).as_posix()
+            if (identifiant, chemin_affiche) not in manquants:
+                manquants.append((identifiant, chemin_affiche))
 
     for identifiant, nom_page in manquants:
         # Une carte renommee ou supprimee laisserait le JSON avancer pendant
