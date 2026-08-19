@@ -21,12 +21,16 @@
     <meta property="og:url" content="https://djidonou.com/">
     <meta property="og:type" content="profile">
     <meta property="og:locale" content="fr_CA">
+    <meta property="og:locale:alternate" content="en_CA">
     <meta property="og:site_name" content="Ulrich Djidonou">
     <meta property="profile:first_name" content="Ulrich">
     <meta property="profile:last_name" content="Djidonou">
     <meta name="author" content="Ulrich Djidonou">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://djidonou.com/">
+    <link rel="alternate" hreflang="fr" href="https://djidonou.com/">
+    <link rel="alternate" hreflang="en" href="https://djidonou.com/en/">
+    <link rel="alternate" hreflang="x-default" href="https://djidonou.com/">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="alternate" type="application/rss+xml" title="La Frontière, flux RSS" href="/frontiere/feed.xml">
 
@@ -54,8 +58,8 @@
           "@id": "https://djidonou.com/#person",
           "name": "Ulrich Djidonou",
           "url": "https://djidonou.com/",
-          "jobTitle": "Économiste",
-          "description": "Économiste spécialisé en économétrie, évaluation de politiques publiques et machine learning, basé à Québec.",
+          "jobTitle": { "@language": "fr", "@value": "Économiste" },
+          "description": { "@language": "fr", "@value": "Économiste spécialisé en économétrie, évaluation de politiques publiques et machine learning, basé à Québec." },
           "image": "https://djidonou.com/assets/ulrich-djidonou-portrait.png",
           "nationality": "Canada",
           "knowsAbout": ["Économie", "Économétrie", "Évaluation de politiques publiques", "Machine learning", "Intelligence artificielle appliquée", "Inférence causale", "Prévision économique", "Données administratives"],
@@ -97,6 +101,7 @@
         <a href="/ressources.html">Ressources</a>
         <a href="/faq.html">FAQ</a>
         <a href="/contact.html">Contact</a>
+        <a class="lang-switch" href="/en/" hreflang="en" lang="en" aria-label="View this page in English">EN</a>
       </nav>
     </header>
 
@@ -160,6 +165,7 @@
               avec tests de sensibilité, validation externe et tableau de bord public.
             </p>
             <p class="project-etat">Données jusqu'au 2 août 2026</p>
+            <p class="project-langue">Site en français seulement</p>
             <a href="https://ulrich-e-r-djidonou.github.io/icie-dashboard/">Ouvrir le tableau de bord</a>
           </article>
 
@@ -173,7 +179,8 @@
               de ressources durables et flux RSS.
             </p>
             <p class="frontiere-signal-teaser" data-frontiere-signal-teaser hidden></p>
-            <p class="project-etat" data-vivant>Mise à jour automatique, deux fois par semaine</p>
+            <p class="project-etat" data-vivant>Mise à jour automatique, trois fois par semaine</p>
+            <p class="project-langue">Site en français et en anglais</p>
             <a href="/frontiere/">Ouvrir la veille</a>
           </article>
 
@@ -186,6 +193,7 @@
               États-Unis, Chine, Inde et Monde avec mise à jour quotidienne.
             </p>
             <p class="project-etat" data-vivant>Mise à jour automatique, quotidienne</p>
+            <p class="project-langue">Site en français et en anglais</p>
             <a href="https://djidonou.com/geoecon-pulse/">Ouvrir le tableau de bord</a>
           </article>
         </div>

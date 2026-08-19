@@ -1215,3 +1215,44 @@ h1 {
   margin-top: 1.5rem;
   color: var(--muted);
 }
+
+/* Selecteur de langue, dernier element de la navigation. Separe des onglets
+   par un filet vertical plutot que par un ecart : la nav passe sur deux
+   lignes en mobile, un simple espace ne se lirait plus comme une frontiere.
+   Le lien porte lang et hreflang pour que le lecteur d'ecran prononce les
+   deux lettres dans la bonne langue. */
+.lang-switch {
+  padding-left: 1.1rem;
+  border-left: 1px solid var(--line);
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.lang-switch:hover {
+  color: var(--heading);
+}
+
+/* Langue du site de destination, sur les cartes projet. Quatre sites sur dix
+   sont bilingues : sans cette ligne, un visiteur anglophone clique et tombe
+   sur du francais sans preavis. Volontairement plus discrete que
+   .project-etat, qui porte la fraicheur des donnees et prime a la lecture. */
+.project-langue {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.04em;
+}
+
+.project-langue::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 0.5rem;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  opacity: 0.5;
+  vertical-align: middle;
+}

@@ -25,6 +25,34 @@ class FormaterDateTests(unittest.TestCase):
             etat_projets.formater_date_francaise("2026-12-25"), "25 décembre 2026"
         )
 
+    def test_format_anglais(self):
+        # Les pages /en/ ecrivent « August 2, 2026 » : mois en toutes lettres,
+        # jour sans zero de tete, virgule avant l'annee.
+        self.assertEqual(
+            etat_projets.formater_date_anglaise("2026-08-02"), "August 2, 2026"
+        )
+
+    def test_format_anglais_sans_zero_ni_er(self):
+        # Le premier du mois ne prend ni « 1er » ni « 01 » : la regle
+        # francaise ne doit pas fuir dans la version anglaise.
+        self.assertEqual(
+            etat_projets.formater_date_anglaise("2026-09-01"), "September 1, 2026"
+        )
+
+    def test_format_anglais_couvre_les_douze_mois(self):
+        # Un decalage d'indice dans MOIS_EN ne se verrait que sur un mois
+        # precis, et seulement sur la page anglaise.
+        attendus = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December",
+        ]
+        for numero, nom in enumerate(attendus, start=1):
+            with self.subTest(mois=nom):
+                self.assertEqual(
+                    etat_projets.formater_date_anglaise(f"2026-{numero:02d}-15"),
+                    f"{nom} 15, 2026",
+                )
+
 
 class LireSourceTests(unittest.TestCase):
     source = {
@@ -151,6 +179,15 @@ class SourcesDeclareesTests(unittest.TestCase):
                 rendu = source["gabarit"].format(date="2 août 2026")
                 self.assertIn("2 août 2026", rendu)
 
+    def test_chaque_source_a_son_gabarit_anglais(self):
+        # main() lit gabarit_en sans repli : une source ajoutee sans lui
+        # ferait echouer l'execution apres la lecture de la date, et la page
+        # anglaise garderait une etiquette perimee.
+        for identifiant, source in etat_projets.SOURCES.items():
+            with self.subTest(projet=identifiant):
+                rendu = source["gabarit_en"].format(date="August 2, 2026")
+                self.assertIn("August 2, 2026", rendu)
+
 
 class AppliquerEtatsTests(unittest.TestCase):
     page = (
@@ -171,6 +208,28 @@ class AppliquerEtatsTests(unittest.TestCase):
             html,
         )
         self.assertEqual(manquants, [])
+
+    def test_la_cle_choisit_la_langue_de_l_etiquette(self):
+        # La page anglaise porte les memes attributs data-projet. Sans le
+        # parametre, elle recevrait l'etiquette francaise.
+        html, manquants = etat_projets.appliquer_etats(
+            self.page,
+            {"icie": {"etat": "Données jusqu'au 30 septembre 2026",
+                      "etat_en": "Data through September 30, 2026"}},
+            "etat_en",
+        )
+        self.assertIn("Data through September 30, 2026", html)
+        self.assertNotIn("30 septembre 2026", html)
+        self.assertEqual(manquants, [])
+
+    def test_une_cle_absente_laisse_l_etiquette_en_place(self):
+        # Un projet du JSON qui n'a pas encore d'etat_en, par exemple juste
+        # apres l'ajout d'une source : mieux vaut une etiquette datee qu'une
+        # etiquette vide.
+        html, _ = etat_projets.appliquer_etats(
+            self.page, {"icie": {"etat": "Données jusqu'au 30 septembre 2026"}}, "etat_en"
+        )
+        self.assertIn("Données jusqu'au 2 août 2026", html)
 
     def test_les_autres_cartes_ne_bougent_pas(self):
         html, _ = etat_projets.appliquer_etats(

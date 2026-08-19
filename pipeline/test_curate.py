@@ -772,10 +772,14 @@ class BudgetAppelsTests(unittest.TestCase):
             self.assertFalse(curate.budget_epuise())
 
     def test_s_arrete_avant_de_depasser_le_quota(self):
+        """Le seuil se lit sur APPELS_MAX_PAR_ITEM, qui vaut 4 ou 8 selon que
+        les champs anglais sont rediges : un chiffre en dur ici rendrait le
+        test faux au prochain reglage plutot que de detecter une regression."""
+        cout_item = curate.APPELS_MAX_PAR_ITEM
         with patch.object(curate, "BUDGET_APPELS", 20):
-            curate._appels_effectues = 16
+            curate._appels_effectues = 20 - cout_item
             self.assertFalse(curate.budget_epuise())
-            curate._appels_effectues = 17
+            curate._appels_effectues = 20 - cout_item + 1
             self.assertTrue(curate.budget_epuise())
 
     def test_les_items_hors_budget_restent_non_vus(self):
@@ -962,6 +966,152 @@ class EnregistrerExecutionTests(unittest.TestCase):
                     nb_non_publies_validation=0,
                 )
             self.assertEqual(len(json.loads(sante.read_text(encoding="utf-8"))), 1)
+
+
+class ValidationResumeAnglaisTests(unittest.TestCase):
+    """Le resume anglais sert /en/frontier/. Il doit tenir les memes exigences
+    que son equivalent francais : deux phrases, troisieme personne, aucun
+    chiffre invente."""
+
+    RESUME_VALIDE = (
+        "The study estimates the effect of automation on regional employment. "
+        "Results point to a persistent decline in manufacturing hours."
+    )
+
+    def test_resume_conforme_passe(self):
+        self.assertEqual(curate.erreurs_resume_en(self.RESUME_VALIDE), [])
+
+    def test_texte_vide_rejete(self):
+        self.assertIn("texte_vide", curate.erreurs_resume_en(""))
+
+    def test_une_seule_phrase_rejetee(self):
+        self.assertIn(
+            "nombre_phrases",
+            curate.erreurs_resume_en("The study estimates the effect of automation."),
+        )
+
+    def test_premiere_personne_rejetee(self):
+        texte = (
+            "We estimate the effect of automation on regional employment. "
+            "Results point to a persistent decline in manufacturing hours."
+        )
+        self.assertIn("premiere_personne", curate.erreurs_resume_en(texte))
+
+    def test_tiret_cadratin_rejete(self):
+        texte = (
+            "The study estimates the effect of automation \u2014 a broad one. "
+            "Results point to a persistent decline in manufacturing hours."
+        )
+        self.assertIn("tiret_cadratin", curate.erreurs_resume_en(texte))
+
+    def test_reponse_en_francais_rejetee(self):
+        """Le modele repond parfois dans la langue de l'autre prompt."""
+        texte = (
+            "Cette etude mesure les effets de l'automatisation sur les regions. "
+            "Les resultats montrent une baisse durable dans les usines."
+        )
+        self.assertIn("francais_residuel", curate.erreurs_resume_en(texte))
+
+    def test_chiffre_absent_de_la_source_rejete(self):
+        texte = (
+            "The study covers 42 regions of the country. "
+            "Results point to a persistent decline in manufacturing hours."
+        )
+        source = "The study covers several regions of the country."
+        self.assertEqual(curate.erreurs_invention(texte, source), ["chiffre_invente"])
+
+
+class ValidationAngleAnglaisTests(unittest.TestCase):
+    def test_angle_conforme_passe(self):
+        texte = "Automation shifts labor demand toward tasks that resist codification."
+        self.assertEqual(curate.erreurs_angle_en(texte), [])
+
+    def test_formule_stereotypee_rejetee(self):
+        texte = "This paper shows that automation shifts labor demand."
+        self.assertIn("formule_stereotypee", curate.erreurs_angle_en(texte))
+
+    def test_deux_phrases_rejetees(self):
+        texte = "Automation shifts labor demand. It also raises wage dispersion."
+        self.assertIn("nombre_phrases", curate.erreurs_angle_en(texte))
+
+    def test_premiere_personne_rejetee(self):
+        texte = "Our results show that automation shifts labor demand."
+        self.assertIn("premiere_personne", curate.erreurs_angle_en(texte))
+
+
+class ChampsAnglaisNonBloquantsTests(unittest.TestCase):
+    """Un echec cote anglais ne doit jamais retenir un item dont le francais
+    est valide : la page anglaise retombe sur le francais."""
+
+    def test_drapeau_desactive_supprime_les_appels_anglais(self):
+        with patch.object(curate, "RESUME_EN_ACTIF", False):
+            self.assertFalse(curate.RESUME_EN_ACTIF)
+
+    def test_budget_par_item_double_quand_l_anglais_est_actif(self):
+        """Deux champs de plus, deux essais chacun : le budget doit suivre."""
+        self.assertEqual(curate.APPELS_MAX_PAR_ITEM, 8 if curate.RESUME_EN_ACTIF else 4)
+
+    def test_prompt_anglais_part_de_l_abstract_pas_du_resume_francais(self):
+        prompt = curate.construire_prompt_resume_en("Titre", "Original abstract text")
+        self.assertIn("Original abstract text", prompt)
+        self.assertIn("2 factual sentences in English", prompt)
+
+    def test_resume_anglais_sans_abstract_retourne_none(self):
+        self.assertIsNone(curate.resume_en_ollama("Titre", ""))
+
+    def test_panne_anglaise_ne_retient_pas_un_item_dont_le_francais_est_valide(self):
+        """Le francais est deja redige et valide quand l'anglais part. Une panne
+        a ce moment doit couter les deux champs anglais, pas l'item entier."""
+        candidat = {
+            "id": "test-panne-en",
+            "titre": "Economic policy with machine learning",
+            "url": "https://example.com/test-panne-en",
+            "source": "test",
+            "type": "papier",
+            "date_publication": "2026-08-01",
+            "abstract": "Economic policy and market analysis using machine learning.",
+            "auteurs": "Auteur Test",
+        }
+
+        with tempfile.TemporaryDirectory() as dossier:
+            racine = Path(dossier)
+            chemins = {
+                "ENTREE": racine / "candidats.json",
+                "SORTIE": racine / "cures.json",
+                "SORTIE_ARCHIVE": racine / "archives.json",
+                "SEEN": racine / "seen.json",
+                "SANTE": racine / "sante.json",
+            }
+            chemins["ENTREE"].write_text(json.dumps([candidat]), encoding="utf-8")
+            chemins["SEEN"].write_text("{}", encoding="utf-8")
+
+            with ExitStack() as pile:
+                for nom, chemin in chemins.items():
+                    pile.enter_context(patch.object(curate, nom, chemin))
+                pile.enter_context(patch.object(curate, "LLM_ACTIF", True))
+                pile.enter_context(patch.object(curate, "RESUME_EN_ACTIF", True))
+                pile.enter_context(patch.object(
+                    curate, "resume_ollama",
+                    return_value="Le texte mesure un effet sur l'emploi regional. "
+                                 "Les heures declinent dans le secteur manufacturier.",
+                ))
+                pile.enter_context(patch.object(
+                    curate, "angle_eco_ollama",
+                    return_value="L'automatisation deplace la demande de travail "
+                                 "vers les taches difficiles a codifier.",
+                ))
+                pile.enter_context(patch.object(
+                    curate, "resume_en_ollama",
+                    side_effect=curate.OllamaIndisponible("panne simulee"),
+                ))
+                curate.main()
+
+            publies = json.loads(chemins["SORTIE"].read_text(encoding="utf-8"))
+
+        self.assertEqual(len(publies), 1, "l'item doit etre publie malgre la panne")
+        self.assertTrue(publies[0]["resume_fr"])
+        self.assertNotIn("resume_en", publies[0])
+        self.assertNotIn("angle_eco_en", publies[0])
 
 
 if __name__ == "__main__":

@@ -7,8 +7,9 @@
 
 Ulrich Djidonou construit des outils publics (tableaux de bord, indices,
 veilles automatisées) et publie des analyses économétriques appliquées.
-Contenu en français, sauf mention contraire. Les pages ci-dessous portent
-leurs propres métadonnées structurées (schema.org : Person, WebSite,
+Le site existe en deux langues : le français à la racine, l'anglais sous
+/en/. Chaque page déclare son équivalent par hreflang. Les pages ci-dessous
+portent leurs propres métadonnées structurées (schema.org : Person, WebSite,
 CollectionPage, CreativeWork).
 
 ## Pages principales
@@ -25,14 +26,28 @@ CollectionPage, CreativeWork).
   FAQPage.
 - [Contact](https://djidonou.com/contact.html)
 
+## Version anglaise
+
+Traduction complète, pas un résumé. Le contenu est le même des deux côtés.
+
+- [Home](https://djidonou.com/en/)
+- [Career](https://djidonou.com/en/career.html)
+- [Projects](https://djidonou.com/en/projects.html)
+- [Resources](https://djidonou.com/en/resources.html)
+- [FAQ](https://djidonou.com/en/faq.html) : porte son propre balisage FAQPage.
+- [Contact](https://djidonou.com/en/contact.html)
+- [La Frontière](https://djidonou.com/en/frontier/)
+
 ## La Frontière
 
 - [La Frontière](https://djidonou.com/frontiere/) : veille automatisée sur
   l'intersection entre l'intelligence artificielle, l'économie et le machine
   learning, mise à jour deux fois par semaine. Sélection par score
-  heuristique déterministe (mots-clés), rédaction en français assistée par
-  modèle de langage, jamais l'inverse : le modèle ne participe jamais à la
-  sélection.
+  heuristique déterministe (mots-clés), rédaction assistée par modèle de
+  langage, jamais l'inverse : le modèle ne participe jamais à la sélection.
+  Chaque entrée porte un résumé français (`resume_fr`, `angle_eco`) et, quand
+  la rédaction anglaise a abouti, sa version anglaise (`resume_en`,
+  `angle_eco_en`). La page anglaise sert le français à défaut.
 - [Flux JSON](https://djidonou.com/frontiere/data/flux.json) : sélection
   courante, machine-readable.
 - [Flux RSS](https://djidonou.com/frontiere/feed.xml)

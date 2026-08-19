@@ -16,9 +16,17 @@ sans re-signaler chaque jour ce qui est deja en ligne depuis la veille.
 L'option --appliquer remplace les textes dans le flux, une fois la
 relecture faite ; --depuis-relecture fait de meme sans rien regenerer.
 
+L'option --anglais bascule sur un second usage, distinct du premier : au lieu
+de reecrire du francais publie, elle ajoute les champs anglais aux items
+publies avant que curate.py sache les rediger. Le francais n'est pas touche.
+--estimer chiffre le lot sans appeler le modele.
+
     python -m pipeline.regenerer_flux
     python -m pipeline.regenerer_flux --appliquer
     python -m pipeline.regenerer_flux --depuis-relecture
+    python -m pipeline.regenerer_flux --anglais --estimer
+    python -m pipeline.regenerer_flux --anglais --reprendre
+    python -m pipeline.regenerer_flux --anglais --depuis-relecture
 """
 
 import argparse
@@ -209,6 +217,364 @@ def appliquer_relecture():
     return 0
 
 
+# --- Rattrapage des champs anglais des items deja publies ---------------
+#
+# Le mode ci-dessus reecrit du francais deja en ligne : chaque item a un
+# avant et un apres, et la relecture sert a les comparer. Le rattrapage
+# anglais n'a pas d'avant. Il ajoute resume_en et angle_eco_en aux items
+# publies avant que curate.py sache les rediger, et ne touche jamais au
+# francais. D'ou un mode distinct, avec ses propres fichiers de relecture :
+# les melanger obligerait a accepter une reecriture francaise pour obtenir
+# un champ anglais.
+
+RATTRAPAGE_EN = Path(__file__).parent / "_rattrapage_en.json"
+RATTRAPAGE_EN_LISIBLE = Path(__file__).parent / "_rattrapage_en.md"
+CANDIDATS_BRUTS = Path(__file__).parent / "_candidats_bruts.json"
+
+# Tarifs du repli, releves le 24 juin 2026 : claude-haiku-4-5, 1 $ US par
+# million de tokens en entree et 5 $ en sortie. Le fournisseur principal
+# tourne sur un palier gratuit compte en requetes par jour, pas en tokens :
+# son cout se lit en jours de quota, jamais en dollars.
+PRIX_ENTREE_PAR_MTOKEN = 1.0
+PRIX_SORTIE_PAR_MTOKEN = 5.0
+# Approximation usuelle pour de l'anglais academique. Elle donne un ordre de
+# grandeur avant de lancer, elle ne facture rien.
+CARACTERES_PAR_TOKEN = 4
+# Le prompt reprend au plus 1500 caracteres d'abstract
+# (curate.construire_prompt_resume_en) et environ 600 de consignes. Deux
+# phrases en sortie tiennent dans 400 caracteres.
+ABSTRACT_MAX_DANS_PROMPT = 1500
+CARACTERES_CONSIGNES = 600
+CARACTERES_SORTIE = 400
+
+
+def charger_abstracts():
+    """Abstracts disponibles localement, la collecte recente d'abord.
+
+    Deux sources, aucune complete. Le corpus de benchmark couvre les items
+    figes au moment de sa reconstruction; ceux collectes depuis n'y sont pas.
+    _candidats_bruts.json rattrape une partie du reste, mais il est ecrase a
+    chaque collecte et ne garde donc que le dernier lot.
+
+    Rien n'est retelecharge ici. Un abstract recupere aujourd'hui ne serait
+    pas forcement celui qui a servi a rediger le francais publie, et l'ecart
+    entre les deux langues d'un meme item deviendrait invisible.
+    """
+    abstracts = {}
+    for fichier in (CORPUS, CANDIDATS_BRUTS):
+        if not fichier.exists():
+            continue
+        contenu = json.loads(fichier.read_text(encoding="utf-8"))
+        items = contenu["items"] if isinstance(contenu, dict) else contenu
+        for item in items:
+            if item.get("abstract") and item["id"] not in abstracts:
+                abstracts[item["id"]] = item["abstract"]
+    return abstracts
+
+
+def trier_pour_rattrapage(flux, abstracts):
+    """Repartit le flux en (a rediger, deja complets, sans abstract)."""
+    a_rediger, complets, sans_abstract = [], [], []
+    for entree in flux:
+        if entree.get("resume_en") and entree.get("angle_eco_en"):
+            complets.append(entree)
+        elif abstracts.get(entree["id"]):
+            a_rediger.append(entree)
+        else:
+            sans_abstract.append(entree)
+    return a_rediger, complets, sans_abstract
+
+
+def estimer_cout(a_rediger, abstracts):
+    """Cout d'un rattrapage complet, en appels, en tokens et en dollars.
+
+    Deux champs par item, un essai chacun au mieux, deux au pire quand le
+    validateur rejette et relance. C'est la borne haute qui compte : un
+    abstract long produit plus souvent un texte hors format.
+    """
+    appels_min = 2 * len(a_rediger)
+    appels_max = 4 * len(a_rediger)
+    caracteres_par_appel = sum(
+        min(len(abstracts[entree["id"]]), ABSTRACT_MAX_DANS_PROMPT)
+        + CARACTERES_CONSIGNES
+        for entree in a_rediger
+    )
+    # Deux champs, deux essais : le meme prompt part quatre fois par item.
+    tokens_entree_max = 4 * caracteres_par_appel / CARACTERES_PAR_TOKEN
+    tokens_sortie_max = appels_max * CARACTERES_SORTIE / CARACTERES_PAR_TOKEN
+    dollars_max = (
+        tokens_entree_max / 1e6 * PRIX_ENTREE_PAR_MTOKEN
+        + tokens_sortie_max / 1e6 * PRIX_SORTIE_PAR_MTOKEN
+    )
+    return {
+        "items": len(a_rediger),
+        "appels_min": appels_min,
+        "appels_max": appels_max,
+        "tokens_entree_max": int(tokens_entree_max),
+        "tokens_sortie_max": int(tokens_sortie_max),
+        "dollars_repli_max": round(dollars_max, 2),
+    }
+
+
+def afficher_estimation(flux, abstracts):
+    """Chiffre le rattrapage sans appeler le modele."""
+    a_rediger, complets, sans_abstract = trier_pour_rattrapage(flux, abstracts)
+    estimation = estimer_cout(a_rediger, abstracts)
+
+    print(f"Flux : {len(flux)} items publies.")
+    print(f"  deja bilingues : {len(complets)}")
+    print(f"  a rattraper : {estimation['items']}")
+    print(f"  sans abstract local, hors de portee : {len(sans_abstract)}")
+    print()
+    print(
+        f"Appels au modele : {estimation['appels_min']} au mieux, "
+        f"{estimation['appels_max']} au pire (2 champs, 1 ou 2 essais)."
+    )
+    print(
+        f"Tokens au pire : {estimation['tokens_entree_max']} en entree, "
+        f"{estimation['tokens_sortie_max']} en sortie."
+    )
+    print(
+        "Cout au pire si tout passe par le repli claude-haiku-4-5 : "
+        f"{estimation['dollars_repli_max']} $ US."
+    )
+    if curate.BUDGET_APPELS:
+        par_lot = curate.BUDGET_APPELS // curate.APPELS_MAX_ANGLAIS_SEUL
+        lots = -(-estimation["items"] // par_lot) if par_lot else 0
+        print(
+            f"Avec LLM_BUDGET_APPELS={curate.BUDGET_APPELS}, soit {par_lot} "
+            f"items par execution : {lots} executions au pire."
+        )
+    else:
+        print(
+            "LLM_BUDGET_APPELS n'est pas defini : le lot ira jusqu'au bout en "
+            "une fois, quitte a heurter le quota du fournisseur."
+        )
+    if sans_abstract:
+        print()
+        print(
+            f"Les {len(sans_abstract)} items sans abstract local gardent leur "
+            "seul francais, et la page anglaise sert ce francais en repli. "
+            "Les rattraper demanderait de retelecharger leur abstract."
+        )
+    return a_rediger, sans_abstract
+
+
+def rediger_anglais(titre, abstract):
+    """Retourne (resume_en, angle_en, journal des essais)."""
+    resume, essais_resume = generer_en_journalisant(
+        lambda: curate.resume_en_ollama(titre, abstract),
+        lambda texte: curate.erreurs_resume_en(texte)
+        + curate.erreurs_invention(texte, abstract),
+    )
+    angle, essais_angle = generer_en_journalisant(
+        lambda: curate.angle_eco_en_ollama(titre, abstract),
+        lambda texte: curate.erreurs_angle_en(texte)
+        + curate.erreurs_invention(texte, abstract),
+    )
+    return resume, angle, {"resume_en": essais_resume, "angle_en": essais_angle}
+
+
+def ecrire_rattrapage_lisible(releve, modele, duree):
+    valides = [ligne for ligne in releve if ligne.get("etat") == "valide"]
+    rejetes = [ligne for ligne in releve if ligne.get("etat") == "rejete"]
+    lignes = [
+        "# Rattrapage anglais de La Frontiere",
+        "",
+        f"Modele : `{modele}`. {len(valides)} items rediges, "
+        f"{len(rejetes)} rejetes, en {duree / 60:.1f} min.",
+        "",
+        "Le francais publie n'est pas touche. Un item rejete garde son "
+        "absence de champs anglais, et la page /en/ sert son texte francais.",
+        "",
+    ]
+    for ligne in valides:
+        lignes += [
+            f"## {ligne['titre']}",
+            "",
+            "**Summary**  ",
+            ligne["apres"]["resume_en"],
+            "",
+            "**Angle**  ",
+            ligne["apres"]["angle_eco_en"],
+            "",
+        ]
+    if rejetes:
+        lignes += ["## Rejetes", ""]
+        lignes += [f"- {ligne['titre']}" for ligne in rejetes]
+        lignes += [""]
+    RATTRAPAGE_EN_LISIBLE.write_text("\n".join(lignes), encoding="utf-8")
+
+
+def ecrire_flux_anglais(flux, releve):
+    """Ajoute les champs anglais valides, sans rien ecraser.
+
+    Un item qui a recu ses champs anglais entre-temps, par une execution
+    normale du pipeline, n'est pas retouche : son texte a ete redige depuis
+    l'abstract courant et vaut mieux que celui d'un lot de rattrapage.
+    """
+    par_id = {
+        ligne["id"]: ligne for ligne in releve if ligne.get("etat") == "valide"
+    }
+    nb_completes = 0
+    ignores = []
+    for entree in flux:
+        ligne = par_id.get(entree["id"])
+        if not ligne:
+            continue
+        if entree.get("resume_en") or entree.get("angle_eco_en"):
+            ignores.append(entree["titre"])
+            continue
+        entree["resume_en"] = ligne["apres"]["resume_en"]
+        entree["angle_eco_en"] = ligne["apres"]["angle_eco_en"]
+        nb_completes += 1
+
+    FLUX.write_text(json.dumps(flux, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"{nb_completes} items completes en anglais dans {FLUX}.")
+    for titre in ignores:
+        print(f"Ignore, deja bilingue depuis la relecture : {titre}")
+    return nb_completes
+
+
+def appliquer_rattrapage():
+    """Applique un rattrapage deja produit, sans rien rediger."""
+    if not RATTRAPAGE_EN.exists():
+        print(
+            f"{RATTRAPAGE_EN} est absent. Lancer d'abord le rattrapage.",
+            file=sys.stderr,
+        )
+        return 1
+    relecture = json.loads(RATTRAPAGE_EN.read_text(encoding="utf-8"))
+    flux = json.loads(FLUX.read_text(encoding="utf-8"))
+    print(f"Application du rattrapage produit avec {relecture['modele']}.")
+    ecrire_flux_anglais(flux, relecture["items"])
+    return 0
+
+
+def mode_anglais(arguments):
+    """Rattrape resume_en et angle_eco_en sur les items deja publies."""
+    flux = json.loads(FLUX.read_text(encoding="utf-8"))
+
+    if arguments.depuis_relecture:
+        return appliquer_rattrapage()
+
+    abstracts = charger_abstracts()
+
+    if arguments.estimer:
+        afficher_estimation(flux, abstracts)
+        print()
+        print("Estimation seule : aucun appel n'a ete fait.")
+        return 0
+
+    if not curate.LLM_ACTIF:
+        print(
+            "FRONTIERE_LLM doit valoir ollama ou api. Rien n'a ete fait.",
+            file=sys.stderr,
+        )
+        return 1
+
+    a_rediger, _ = afficher_estimation(flux, abstracts)
+    print()
+
+    deja_faits = {}
+    if arguments.reprendre and RATTRAPAGE_EN.exists():
+        precedent = json.loads(RATTRAPAGE_EN.read_text(encoding="utf-8"))
+        deja_faits = {
+            ligne["id"]: ligne
+            for ligne in precedent.get("items", [])
+            if ligne.get("etat") in ("valide", "rejete")
+        }
+        print(f"Reprise : {len(deja_faits)} items deja traites seront conserves.")
+
+    debut = time.monotonic()
+    releve = []
+    interrompu = None
+    budget_atteint = False
+    for rang, entree in enumerate(a_rediger, start=1):
+        if entree["id"] in deja_faits:
+            releve.append(dict(deja_faits[entree["id"]], nouveau=False))
+            print(f"[{rang}/{len(a_rediger)}] {entree['id']} : conserve")
+            continue
+
+        if curate.budget_epuise(curate.APPELS_MAX_ANGLAIS_SEUL):
+            budget_atteint = True
+            print(
+                f"[{rang}/{len(a_rediger)}] budget d'appels atteint, "
+                "le reste attend la prochaine execution"
+            )
+            break
+
+        try:
+            resume, angle, journal = rediger_anglais(
+                entree["titre"], abstracts[entree["id"]]
+            )
+        except curate.OllamaIndisponible as erreur:
+            interrompu = erreur
+            print(
+                f"[{rang}/{len(a_rediger)}] interruption : {erreur}",
+                file=sys.stderr,
+            )
+            break
+
+        valide = bool(resume and angle)
+        releve.append({
+            "id": entree["id"],
+            "titre": entree["titre"],
+            "etat": "valide" if valide else "rejete",
+            "nouveau": True,
+            "apres": {"resume_en": resume or "", "angle_eco_en": angle or ""},
+            "essais": journal,
+        })
+        print(
+            f"[{rang}/{len(a_rediger)}] {entree['id']} : "
+            f"{'valide' if valide else 'REJETE'}"
+        )
+
+    duree = time.monotonic() - debut
+    RATTRAPAGE_EN.write_text(
+        json.dumps(
+            {
+                "modele": curate.modele_actif(),
+                "duree_secondes": round(duree, 1),
+                "items": releve,
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+    ecrire_rattrapage_lisible(releve, curate.modele_actif(), duree)
+
+    nb_valides = sum(1 for ligne in releve if ligne.get("etat") == "valide")
+    print(
+        f"\n{nb_valides} items rediges en anglais en {duree / 60:.1f} min "
+        f"avec {curate.modele_actif()}."
+    )
+    print(f"Relecture : {RATTRAPAGE_EN_LISIBLE}")
+
+    if interrompu:
+        print(
+            "\nLot interrompu. Relancer avec --anglais --reprendre pour "
+            "continuer sans refaire le debut.",
+            file=sys.stderr,
+        )
+        return 2
+
+    if budget_atteint:
+        # Meme raison que dans le mode francais : arret prevu, pas panne. Un
+        # code de sortie non nul ferait passer l'execution au rouge alors que
+        # tout s'est deroule comme prevu.
+        print("\nLot du jour termine dans la limite du budget.")
+        return 0
+
+    if not arguments.appliquer:
+        print("Rien n'a ete ecrit. Relire, puis relancer avec --depuis-relecture.")
+        return 0
+
+    ecrire_flux_anglais(flux, releve)
+    return 0
+
+
 def main():
     analyseur = argparse.ArgumentParser()
     analyseur.add_argument(
@@ -226,6 +592,23 @@ def main():
         ),
     )
     analyseur.add_argument(
+        "--anglais",
+        action="store_true",
+        help=(
+            "rattrape resume_en et angle_eco_en sur les items deja publies, "
+            "sans toucher au francais. A combiner avec --estimer, "
+            "--reprendre, --appliquer ou --depuis-relecture."
+        ),
+    )
+    analyseur.add_argument(
+        "--estimer",
+        action="store_true",
+        help=(
+            "avec --anglais : compte les items a rattraper et le cout en "
+            "appels, en tokens et en dollars, sans appeler le modele."
+        ),
+    )
+    analyseur.add_argument(
         "--depuis-relecture",
         action="store_true",
         help=(
@@ -235,6 +618,9 @@ def main():
         ),
     )
     arguments = analyseur.parse_args()
+
+    if arguments.anglais:
+        return mode_anglais(arguments)
 
     if arguments.depuis_relecture:
         return appliquer_relecture()

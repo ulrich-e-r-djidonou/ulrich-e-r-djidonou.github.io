@@ -1,15 +1,38 @@
 (function () {
   "use strict";
 
-  const NOMS_THEMES = {
-    "inference-causale": "Inférence causale",
-    "llm": "LLM",
-    "prevision": "Prévision",
-    "travail-emploi": "Travail et emploi",
-    "politique-publique": "Politique publique",
-    "outils-recherche": "Outils de recherche",
-    "donnees": "Données",
-    "macro-finance": "Macro et finance",
+  // Ce fichier sert deux pages : /frontiere/ (fr) et /en/frontier/ (en).
+  // La langue se lit sur <html lang>, jamais sur l'URL : une page deplacee
+  // continue d'afficher la bonne langue. Tout ce qui suit est un libelle
+  // d'interface ; les donnees, elles, viennent de flux.json.
+  const LANG = document.documentElement.lang === "en" ? "en" : "fr";
+
+  // Les donnees vivent sous /frontiere/ quelle que soit la page qui les lit :
+  // chemin absolu obligatoire, sinon la page anglaise irait chercher
+  // /en/frontier/data/flux.json, qui n'existe pas.
+  const BASE_DONNEES = "/frontiere/data/";
+
+  const NOMS_THEMES_PAR_LANGUE = {
+    fr: {
+      "inference-causale": "Inférence causale",
+      "llm": "LLM",
+      "prevision": "Prévision",
+      "travail-emploi": "Travail et emploi",
+      "politique-publique": "Politique publique",
+      "outils-recherche": "Outils de recherche",
+      "donnees": "Données",
+      "macro-finance": "Macro et finance",
+    },
+    en: {
+      "inference-causale": "Causal inference",
+      "llm": "LLM",
+      "prevision": "Forecasting",
+      "travail-emploi": "Labor and employment",
+      "politique-publique": "Public policy",
+      "outils-recherche": "Research tools",
+      "donnees": "Data",
+      "macro-finance": "Macro and finance",
+    },
   };
 
   // « Papier » et « Article » ne se distinguaient pas a la lecture. La
@@ -19,14 +42,94 @@
   // Les cles restent inchangees : elles vivent dans flux.json et dans toutes
   // les archives mensuelles, les renommer casserait l'affichage des archives
   // et les filtres par type.
-  const NOMS_TYPES = {
-    "papier": "Papier de recherche",
-    "outil": "Outil",
-    "article": "Article publié",
-    "dataset": "Dataset",
-    "annonce": "Annonce",
-    "cours": "Cours",
+  const NOMS_TYPES_PAR_LANGUE = {
+    fr: {
+      "papier": "Papier de recherche",
+      "outil": "Outil",
+      "article": "Article publié",
+      "dataset": "Dataset",
+      "annonce": "Annonce",
+      "cours": "Cours",
+    },
+    en: {
+      "papier": "Research paper",
+      "outil": "Tool",
+      "article": "Published article",
+      "dataset": "Dataset",
+      "annonce": "Announcement",
+      "cours": "Course",
+    },
   };
+
+  const NOMS_THEMES = NOMS_THEMES_PAR_LANGUE[LANG];
+  const NOMS_TYPES = NOMS_TYPES_PAR_LANGUE[LANG];
+
+  // Libelles d'interface. Les fonctions prennent leurs arguments plutot que
+  // d'assembler des morceaux de phrase cote appelant : l'ordre des mots
+  // differe d'une langue a l'autre.
+  const TEXTES = {
+    fr: {
+      locale: "fr-CA",
+      dateInconnue: "date inconnue",
+      par: (auteurs) => `Par ${auteurs}`,
+      pourEconomiste: (angle) => `Pour l'économiste : ${angle}`,
+      aucuneEntree: "Aucune entrée ne correspond à ces filtres.",
+      semaineDu: (semaine) => `Semaine du ${semaine}`,
+      semaineRepliee: (semaine, n) =>
+        `Semaine du ${semaine} (${n} ${n > 1 ? "entrées" : "entrée"}, cliquer pour voir)`,
+      tout: "Tout",
+      selectionPrincipale: "Sélection principale",
+      archive: (mois) => `Archive ${mois}`,
+      boutonArchive: (mois, n) =>
+        n ? `${mois} (${n} ${n > 1 ? "entrées" : "entrée"})` : mois,
+      aucuneArchive: "Aucune archive pour l'instant.",
+      derniereMaj: (date) => `Dernière mise à jour : ${date}`,
+      majIndisponible: "Mise à jour indisponible pour le moment.",
+      aucunSignal: "Aucun article ne ressort du lot cette semaine.",
+      legendeAucunSignal:
+        "Les articles collectés depuis la dernière mise à jour touchent aux "
+        + "deux thèmes de la veille, économie et intelligence artificielle, "
+        + "trop faiblement pour qu'un seul soit mis en avant. La sélection "
+        + "complète reste ci-dessous.",
+    },
+    en: {
+      locale: "en-CA",
+      dateInconnue: "unknown date",
+      par: (auteurs) => `By ${auteurs}`,
+      pourEconomiste: (angle) => `For the economist: ${angle}`,
+      aucuneEntree: "No entry matches these filters.",
+      semaineDu: (semaine) => `Week of ${semaine}`,
+      semaineRepliee: (semaine, n) =>
+        `Week of ${semaine} (${n} ${n > 1 ? "entries" : "entry"}, click to view)`,
+      tout: "All",
+      selectionPrincipale: "Main selection",
+      archive: (mois) => `Archive ${mois}`,
+      boutonArchive: (mois, n) =>
+        n ? `${mois} (${n} ${n > 1 ? "entries" : "entry"})` : mois,
+      aucuneArchive: "No archive yet.",
+      derniereMaj: (date) => `Last updated: ${date}`,
+      majIndisponible: "Update unavailable at the moment.",
+      aucunSignal: "No article stands out this week.",
+      legendeAucunSignal:
+        "The articles collected since the last update touch the two themes of "
+        + "this monitoring service, economics and artificial intelligence, too "
+        + "weakly for a single one to be highlighted. The full selection "
+        + "remains below.",
+    },
+  };
+
+  const T = TEXTES[LANG];
+
+  // Resume et angle economique : la version anglaise est servie quand le
+  // pipeline l'a produite, sinon la version francaise prend le relais. Une
+  // carte sans texte serait pire qu'une carte dans l'autre langue.
+  function resumeDe(entree) {
+    return LANG === "en" ? entree.resume_en || entree.resume_fr : entree.resume_fr;
+  }
+
+  function angleDe(entree) {
+    return LANG === "en" ? entree.angle_eco_en || entree.angle_eco : entree.angle_eco;
+  }
 
   const etat = {
     flux: [],
@@ -66,17 +169,17 @@
     if (!iso) return "";
     const d = new Date(iso + "T00:00:00");
     if (Number.isNaN(d.getTime())) return iso;
-    return d.toLocaleDateString("fr-CA", { year: "numeric", month: "long", day: "numeric" });
+    return d.toLocaleDateString(T.locale, { year: "numeric", month: "long", day: "numeric" });
   }
 
   function debutDeSemaine(iso) {
-    if (!iso) return "date inconnue";
+    if (!iso) return T.dateInconnue;
     const d = new Date(iso + "T00:00:00");
-    if (Number.isNaN(d.getTime())) return "date inconnue";
+    if (Number.isNaN(d.getTime())) return T.dateInconnue;
     const jour = d.getDay();
     const decalage = (jour + 6) % 7; // lundi = debut de semaine
     d.setDate(d.getDate() - decalage);
-    return d.toLocaleDateString("fr-CA", { year: "numeric", month: "long", day: "numeric" });
+    return d.toLocaleDateString(T.locale, { year: "numeric", month: "long", day: "numeric" });
   }
 
   function creerCarte(entree) {
@@ -114,20 +217,22 @@
     if (entree.auteurs) {
       const ligneAuteurs = document.createElement("p");
       ligneAuteurs.className = "carte-auteurs";
-      ligneAuteurs.textContent = `Par ${entree.auteurs}`;
+      ligneAuteurs.textContent = T.par(entree.auteurs);
       carte.appendChild(ligneAuteurs);
     }
 
-    if (entree.resume_fr) {
+    const texteResume = resumeDe(entree);
+    if (texteResume) {
       const resume = document.createElement("p");
-      resume.textContent = entree.resume_fr;
+      resume.textContent = texteResume;
       carte.appendChild(resume);
     }
 
-    if (entree.angle_eco) {
+    const texteAngle = angleDe(entree);
+    if (texteAngle) {
       const angle = document.createElement("p");
       angle.className = "angle-eco";
-      angle.textContent = `Pour l'économiste : ${entree.angle_eco}`;
+      angle.textContent = T.pourEconomiste(texteAngle);
       carte.appendChild(angle);
     }
 
@@ -152,7 +257,7 @@
       if (etat.themeActif && !(e.themes || []).includes(etat.themeActif)) return false;
       if (etat.typeActif && e.type !== etat.typeActif) return false;
       if (q) {
-        const texte = `${e.titre} ${e.resume_fr || ""} ${e.angle_eco || ""}`.toLowerCase();
+        const texte = `${e.titre} ${e.resume_fr || ""} ${e.resume_en || ""} ${e.angle_eco || ""} ${e.angle_eco_en || ""}`.toLowerCase();
         if (!texte.includes(q)) return false;
       }
       return true;
@@ -167,7 +272,7 @@
     if (!entrees.length) {
       const vide = document.createElement("p");
       vide.className = "frontiere-vide";
-      vide.textContent = "Aucune entrée ne correspond à ces filtres.";
+      vide.textContent = T.aucuneEntree;
       conteneur.appendChild(vide);
       return;
     }
@@ -185,7 +290,7 @@
       if (rang === 0) {
         const titreSemaine = document.createElement("h3");
         titreSemaine.className = "semaine-titre";
-        titreSemaine.textContent = `Semaine du ${groupe.semaine}`;
+        titreSemaine.textContent = T.semaineDu(groupe.semaine);
         conteneur.appendChild(titreSemaine);
         groupe.entrees.forEach((entree) => conteneur.appendChild(creerCarte(entree)));
         return;
@@ -196,8 +301,7 @@
       const resume = document.createElement("summary");
       resume.className = "semaine-titre";
       const nombre = groupe.entrees.length;
-      resume.textContent =
-        `Semaine du ${groupe.semaine} (${nombre} ${nombre > 1 ? "entrées" : "entrée"}, cliquer pour voir)`;
+      resume.textContent = T.semaineRepliee(groupe.semaine, nombre);
       bloc.appendChild(resume);
       groupe.entrees.forEach((entree) => bloc.appendChild(creerCarte(entree)));
       conteneur.appendChild(bloc);
@@ -227,7 +331,7 @@
     const chipTout = document.createElement("button");
     chipTout.className = "chip";
     chipTout.type = "button";
-    chipTout.textContent = "Tout";
+    chipTout.textContent = T.tout;
     chipTout.setAttribute("aria-pressed", "true");
     chipTout.addEventListener("click", () => {
       etat[cle] = null;
@@ -289,12 +393,8 @@
         section.hidden = true;
         return;
       }
-      titre.textContent = "Aucun article ne ressort du lot cette semaine.";
-      legende.textContent =
-        "Les articles collectés depuis la dernière mise à jour touchent aux "
-        + "deux thèmes de la veille, économie et intelligence artificielle, "
-        + "trop faiblement pour qu'un seul soit mis en avant. La sélection "
-        + "complète reste ci-dessous.";
+      titre.textContent = T.aucunSignal;
+      legende.textContent = T.legendeAucunSignal;
       legende.hidden = false;
       section.hidden = false;
       return;
@@ -356,7 +456,7 @@
     if (!mois.length) {
       const vide = document.createElement("p");
       vide.className = "frontiere-vide";
-      vide.textContent = "Aucune archive pour l'instant.";
+      vide.textContent = T.aucuneArchive;
       conteneur.appendChild(vide);
       return;
     }
@@ -368,12 +468,10 @@
       // le 2026-08-12 ne le portent pas : le bouton retombe alors sur le seul
       // mois, plutot que d'afficher un nombre invente.
       const nombre = comptes[m];
-      bouton.textContent = nombre
-        ? `${m} (${nombre} ${nombre > 1 ? "entrées" : "entrée"})`
-        : m;
+      bouton.textContent = T.boutonArchive(m, nombre);
       bouton.addEventListener("click", async () => {
-        const archive = await chargerJSON(`data/archives/${m}.json`);
-        afficherJeuEntrees(archive, `Archive ${m}`, true);
+        const archive = await chargerJSON(`${BASE_DONNEES}archives/${m}.json`);
+        afficherJeuEntrees(archive, T.archive(m), true);
         document.getElementById("liste-flux").scrollIntoView({ behavior: "smooth" });
       });
       conteneur.appendChild(bouton);
@@ -382,17 +480,17 @@
 
   async function init() {
     const [flux, meta] = await Promise.all([
-      chargerJSON("data/flux.json"),
-      chargerJSON("data/meta.json"),
+      chargerJSON(`${BASE_DONNEES}flux.json`),
+      chargerJSON(`${BASE_DONNEES}meta.json`),
     ]);
 
     const fluxPrincipal = flux || [];
-    afficherJeuEntrees(fluxPrincipal, "Sélection principale", false);
+    afficherJeuEntrees(fluxPrincipal, T.selectionPrincipale, false);
 
     const majEl = document.getElementById("derniere-maj");
     majEl.textContent = meta && meta.derniere_mise_a_jour
-      ? `Dernière mise à jour : ${formaterDate(meta.derniere_mise_a_jour)}`
-      : "Mise à jour indisponible pour le moment.";
+      ? T.derniereMaj(formaterDate(meta.derniere_mise_a_jour))
+      : T.majIndisponible;
 
     rendreSignal(fluxPrincipal);
     rendreStats(meta);
@@ -402,7 +500,7 @@
       rendreFlux();
     });
     document.getElementById("retour-selection").addEventListener("click", () => {
-      afficherJeuEntrees(fluxPrincipal, "Sélection principale", false);
+      afficherJeuEntrees(fluxPrincipal, T.selectionPrincipale, false);
     });
 
     rendreArchives(meta);

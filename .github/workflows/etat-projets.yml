@@ -46,7 +46,9 @@ jobs:
         run: |
           git config user.name "frontiere-bot"
           git config user.email "actions@github.com"
-          git add data/projets.json projets.html
+          # en/projects.html porte les memes cartes : oubliee ici, la page
+          # anglaise garderait une date que la francaise a deja corrigee.
+          git add data/projets.json projets.html en/projects.html
           git diff --cached --quiet || git commit -m "projets: etiquettes de fraicheur au $(date -u +%F)"
           # Le pipeline de veille commit sur la meme branche. Les deux crons
           # sont espaces d'une heure, mais une execution longue ou relancee a

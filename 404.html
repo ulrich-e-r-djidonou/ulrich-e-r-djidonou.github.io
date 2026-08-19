@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://api.web3forms.com https://djidonougoatcounter.goatcounter.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page introuvable | Ulrich Djidonou</title>
-    <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex, follow">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="stylesheet" href="/styles.css">
   </head>
@@ -23,6 +23,7 @@
         <a href="/ressources.html">Ressources</a>
         <a href="/faq.html">FAQ</a>
         <a href="/contact.html">Contact</a>
+        <a class="lang-switch" href="/en/404.html" hreflang="en" lang="en" aria-label="View this page in English">EN</a>
       </nav>
     </header>
 
@@ -38,6 +39,14 @@
           <a class="button primary" href="/">Retour à l'accueil</a>
           <a class="button secondary" href="/projets.html">Voir les projets</a>
         </div>
+        <!-- GitHub Pages ne sert qu'un seul fichier 404, celui de la racine :
+             une adresse cassee sous /en/ aboutit ici, sur une page francaise.
+             Cette ligne evite le cul-de-sac pour un visiteur anglophone.
+             en/404.html existe et reste atteignable directement. -->
+        <p class="page-note" lang="en">
+          This page does not exist, or no longer does.
+          <a href="/en/">Go to the English home page</a>.
+        </p>
       </section>
     </main>
 

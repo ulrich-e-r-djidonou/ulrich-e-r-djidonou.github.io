@@ -3,126 +3,168 @@
     "titre": "What Economists Do: A Practical Map of Careers, Training, and PhD Pathways",
     "url": "/assets/documents/what-economists-do.pdf",
     "categorie": "Carrières en économie",
-    "description_fr": "Guide d'Abdoulaye Ndiaye (New York University, mis à jour le 28 décembre 2025) sur les parcours de carrière, la formation et les cheminements de doctorat en économie."
+    "description_fr": "Guide d'Abdoulaye Ndiaye (New York University, mis à jour le 28 décembre 2025) sur les parcours de carrière, la formation et les cheminements de doctorat en économie.",
+    "categorie_en": "Careers in economics",
+    "description_en": "A guide by Abdoulaye Ndiaye (New York University, updated December 28, 2025) on career paths, training, and PhD pathways in economics."
   },
   {
     "titre": "Elicit",
     "url": "https://elicit.com",
     "categorie": "Outils IA pour la recherche économique",
-    "description_fr": "Plateforme d'IA qui permet de chercher, résumer, extraire des données et dialoguer avec plus de 125 millions d'articles scientifiques."
+    "description_fr": "Plateforme d'IA qui permet de chercher, résumer, extraire des données et dialoguer avec plus de 125 millions d'articles scientifiques.",
+    "categorie_en": "AI tools for economic research",
+    "description_en": "An AI platform that allows users to search, summarize, extract data, and interact with over 125 million scientific articles."
   },
   {
     "titre": "Consensus",
     "url": "https://consensus.app",
     "categorie": "Outils IA pour la recherche économique",
-    "description_fr": "Moteur de recherche académique basé sur l'IA qui synthétise les résultats de la littérature scientifique pour répondre à une question de recherche."
+    "description_fr": "Moteur de recherche académique basé sur l'IA qui synthétise les résultats de la littérature scientifique pour répondre à une question de recherche.",
+    "categorie_en": "AI tools for economic research",
+    "description_en": "An AI-based academic search engine that synthesizes findings from the scientific literature to answer a research question."
   },
   {
     "titre": "Connected Papers",
     "url": "https://www.connectedpapers.com",
     "categorie": "Outils IA pour la recherche économique",
-    "description_fr": "Outil de visualisation qui cartographie les liens entre articles académiques pour explorer un champ de recherche à partir d'un papier de départ."
+    "description_fr": "Outil de visualisation qui cartographie les liens entre articles académiques pour explorer un champ de recherche à partir d'un papier de départ.",
+    "categorie_en": "AI tools for economic research",
+    "description_en": "A visualization tool that maps the links between academic articles to explore a research field starting from a single paper."
   },
   {
     "titre": "FRED API (Federal Reserve Economic Data)",
     "url": "https://fred.stlouisfed.org/docs/api/fred/",
     "categorie": "Serveurs MCP et accès données",
-    "description_fr": "API de la Réserve fédérale de St. Louis donnant accès à des centaines de milliers de séries économiques et financières américaines et internationales."
+    "description_fr": "API de la Réserve fédérale de St. Louis donnant accès à des centaines de milliers de séries économiques et financières américaines et internationales.",
+    "categorie_en": "MCP servers and data access",
+    "description_en": "An API from the Federal Reserve Bank of St. Louis providing access to hundreds of thousands of U.S. and international economic and financial time series."
   },
   {
     "titre": "Statistique Canada, Web Data Service (WDS)",
     "url": "https://www.statcan.gc.ca/en/developers/wds",
     "categorie": "Serveurs MCP et accès données",
-    "description_fr": "API officielle donnant accès programmatique aux données et métadonnées publiées chaque jour ouvrable par Statistique Canada."
+    "description_fr": "API officielle donnant accès programmatique aux données et métadonnées publiées chaque jour ouvrable par Statistique Canada.",
+    "categorie_en": "MCP servers and data access",
+    "description_en": "An official API providing programmatic access to data and metadata published every business day by Statistics Canada."
   },
   {
     "titre": "O*NET OnLine",
     "url": "https://www.onetonline.org/",
     "categorie": "Serveurs MCP et accès données",
-    "description_fr": "Base de données gouvernementale américaine décrivant plus de 900 professions, souvent utilisée pour mesurer l'exposition des emplois à l'automatisation et à l'IA."
+    "description_fr": "Base de données gouvernementale américaine décrivant plus de 900 professions, souvent utilisée pour mesurer l'exposition des emplois à l'automatisation et à l'IA.",
+    "categorie_en": "MCP servers and data access",
+    "description_en": "A U.S. government database describing more than 900 occupations, often used to measure the susceptibility of jobs to automation and AI."
   },
   {
     "titre": "Anthropic Economic Index",
     "url": "https://www.anthropic.com/economic-index",
     "categorie": "Serveurs MCP et accès données",
-    "description_fr": "Programme de recherche d'Anthropic qui documente comment l'IA générative est utilisée dans l'économie à partir de conversations Claude anonymisées."
+    "description_fr": "Programme de recherche d'Anthropic qui documente comment l'IA générative est utilisée dans l'économie à partir de conversations Claude anonymisées.",
+    "categorie_en": "MCP servers and data access",
+    "description_en": "A research program by Anthropic that documents how generative AI is used in the economy based on anonymized Claude conversations."
   },
   {
     "titre": "EconML",
     "url": "https://github.com/microsoft/EconML",
     "categorie": "Librairies causales et ML",
-    "description_fr": "Librairie Python de Microsoft qui estime les effets de traitement hétérogènes à partir de données observationnelles en combinant économétrie et machine learning."
+    "description_fr": "Librairie Python de Microsoft qui estime les effets de traitement hétérogènes à partir de données observationnelles en combinant économétrie et machine learning.",
+    "categorie_en": "Causal and ML libraries",
+    "description_en": "A Python library from Microsoft that estimates heterogeneous treatment effects from observational data by combining econometrics and machine learning."
   },
   {
     "titre": "DoWhy",
     "url": "https://github.com/py-why/dowhy",
     "categorie": "Librairies causales et ML",
-    "description_fr": "Librairie Python d'inférence causale qui rend explicites les hypothèses causales et permet de les tester avant d'estimer un effet."
+    "description_fr": "Librairie Python d'inférence causale qui rend explicites les hypothèses causales et permet de les tester avant d'estimer un effet.",
+    "categorie_en": "Causal and ML libraries",
+    "description_en": "A Python library for causal inference that makes causal assumptions explicit and allows them to be tested before estimating an effect."
   },
   {
     "titre": "PyFixest",
     "url": "https://github.com/py-econometrics/pyfixest",
     "categorie": "Librairies causales et ML",
-    "description_fr": "Librairie Python de régression à effets fixes de haute dimension, reprenant la syntaxe du package R fixest, activement maintenue."
+    "description_fr": "Librairie Python de régression à effets fixes de haute dimension, reprenant la syntaxe du package R fixest, activement maintenue.",
+    "categorie_en": "Causal and ML libraries",
+    "description_en": "A Python library for high-dimensional fixed-effects regression, modeled after the syntax of the R package fixest, and actively maintained."
   },
   {
     "titre": "XGBoost",
     "url": "https://xgboost.readthedocs.io/en/stable/",
     "categorie": "Librairies causales et ML",
-    "description_fr": "Librairie de gradient boosting distribuée, largement utilisée pour la prévision et la classification sur données économiques à grande échelle."
+    "description_fr": "Librairie de gradient boosting distribuée, largement utilisée pour la prévision et la classification sur données économiques à grande échelle.",
+    "categorie_en": "Causal and ML libraries",
+    "description_en": "A distributed gradient boosting library, widely used for forecasting and classification on large-scale economic data."
   },
   {
     "titre": "Prophet",
     "url": "https://facebook.github.io/prophet/",
     "categorie": "Librairies causales et ML",
-    "description_fr": "Librairie de prévision de séries temporelles à modèle additif, gérée par Meta, avec saisonnalités et effets de jours fériés."
+    "description_fr": "Librairie de prévision de séries temporelles à modèle additif, gérée par Meta, avec saisonnalités et effets de jours fériés.",
+    "categorie_en": "Causal and ML libraries",
+    "description_en": "An additive model-based time series forecasting library maintained by Meta, accounting for seasonality and holiday effects."
   },
   {
     "titre": "GPTs are GPTs (Eloundou, Manning, Mishkin, Rock, 2023)",
     "url": "https://arxiv.org/abs/2303.10130",
     "categorie": "Papiers fondateurs IA x économie",
-    "description_fr": "Étude d'OpenAI estimant qu'environ 80 pourcent de la main-d'œuvre américaine pourrait voir au moins 10 pourcent de ses tâches affectées par les grands modèles de langage."
+    "description_fr": "Étude d'OpenAI estimant qu'environ 80 pourcent de la main-d'œuvre américaine pourrait voir au moins 10 pourcent de ses tâches affectées par les grands modèles de langage.",
+    "categorie_en": "Foundational papers on AI and economics",
+    "description_en": "An OpenAI study estimating that approximately 80 percent of the U.S. workforce could see at least 10 percent of their tasks affected by large language models."
   },
   {
     "titre": "Anthropic Economic Index report: Uneven geographic and enterprise AI adoption",
     "url": "https://arxiv.org/abs/2511.15080",
     "categorie": "Papiers fondateurs IA x économie",
-    "description_fr": "Rapport documentant les usages de Claude dans plus de 150 pays et auprès d'entreprises, à partir de deux millions de conversations anonymisées."
+    "description_fr": "Rapport documentant les usages de Claude dans plus de 150 pays et auprès d'entreprises, à partir de deux millions de conversations anonymisées.",
+    "categorie_en": "Foundational papers on AI and economics",
+    "description_en": "A report documenting the uses of Claude in over 150 countries and across enterprises, based on two million anonymized conversations."
   },
   {
     "titre": "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations",
     "url": "https://arxiv.org/abs/2503.04761",
     "categorie": "Papiers fondateurs IA x économie",
-    "description_fr": "Analyse à grande échelle des tâches économiques réellement exécutées via des conversations avec Claude, classées selon la taxonomie O*NET."
+    "description_fr": "Analyse à grande échelle des tâches économiques réellement exécutées via des conversations avec Claude, classées selon la taxonomie O*NET.",
+    "categorie_en": "Foundational papers on AI and economics",
+    "description_en": "A large-scale analysis of economic tasks actually performed through conversations with Claude, classified according to the O*NET taxonomy."
   },
   {
     "titre": "The Economics of AI (Coursera, University of Virginia)",
     "url": "https://www.coursera.org/learn/economics-of-ai",
     "categorie": "Cours et formations",
-    "description_fr": "Cours en ligne de l'Université de Virginie sur les effets de l'IA avancée sur la croissance économique, les marchés du travail et les politiques publiques."
+    "description_fr": "Cours en ligne de l'Université de Virginie sur les effets de l'IA avancée sur la croissance économique, les marchés du travail et les politiques publiques.",
+    "categorie_en": "Courses and training",
+    "description_en": "An online course from the University of Virginia on the effects of advanced AI on economic growth, labor markets, and public policy."
   },
   {
     "titre": "Machine Learning & Causal Inference (Stanford GSB)",
     "url": "https://www.gsb.stanford.edu/faculty-research/labs-initiatives/sil/research/methods/ai-machine-learning/short-course",
     "categorie": "Cours et formations",
-    "description_fr": "Cours court de la Stanford Graduate School of Business combinant machine learning et inférence causale pour l'analyse d'essais randomisés."
+    "description_fr": "Cours court de la Stanford Graduate School of Business combinant machine learning et inférence causale pour l'analyse d'essais randomisés.",
+    "categorie_en": "Courses and training",
+    "description_en": "A short course from the Stanford Graduate School of Business combining machine learning and causal inference for the analysis of randomized trials."
   },
   {
     "titre": "Machine Learning & Data Science for Economists (NABE)",
     "url": "https://www.nabe.com/NABE/NABE/CBE/Courses/Machine_Learning___Data_Science_for_Economists_Course/Machine_Learning_Data_Science_Home_Page.aspx",
     "categorie": "Cours et formations",
-    "description_fr": "Cours pratique du National Association for Business Economics destiné aux économistes de terrain, mis à jour en 2026 avec Python et les agents de code."
+    "description_fr": "Cours pratique du National Association for Business Economics destiné aux économistes de terrain, mis à jour en 2026 avec Python et les agents de code.",
+    "categorie_en": "Courses and training",
+    "description_en": "A hands-on course from the National Association for Business Economics designed for practicing economists, updated in 2026 with Python and code agents."
   },
   {
     "titre": "Anthropic/EconomicIndex (Hugging Face)",
     "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
     "categorie": "Données",
-    "description_fr": "Jeu de données ouvert par Anthropic classant les usages de Claude selon la taxonomie des tâches O*NET, utilisé pour mesurer l'exposition des métiers à l'IA."
+    "description_fr": "Jeu de données ouvert par Anthropic classant les usages de Claude selon la taxonomie des tâches O*NET, utilisé pour mesurer l'exposition des métiers à l'IA.",
+    "categorie_en": "Data",
+    "description_en": "An open dataset from Anthropic that classifies uses of Claude according to the O*NET task taxonomy, used to measure occupations' exposure to AI."
   },
   {
     "titre": "awesome-ai-for-economists",
     "url": "https://github.com/hanlulong/awesome-ai-for-economists",
     "categorie": "Autres",
-    "description_fr": "Liste organisée d'outils, de librairies et de ressources IA transformant la recherche, l'enseignement et l'analyse de politiques en économie."
+    "description_fr": "Liste organisée d'outils, de librairies et de ressources IA transformant la recherche, l'enseignement et l'analyse de politiques en économie.",
+    "categorie_en": "Other",
+    "description_en": "An organized list of AI tools, libraries, and resources transforming research, teaching, and policy analysis in economics."
   }
 ]

@@ -71,7 +71,7 @@ OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:3b")
 OLLAMA_TIMEOUT = 60
 PAUSE_AVANT_REPRISE = 2
 # Les paliers gratuits limitent le debit. Quelques essais espaces valent mieux
-# qu'un abandon : le lot est petit et ne tourne que deux fois par semaine.
+# qu'un abandon : le lot est petit et ne tourne que trois fois par semaine.
 TENTATIVES_API = 4
 PAUSE_MAX_DEBIT = 65
 # Saturation passagere du service, et non refus : le modele redevient
@@ -99,8 +99,18 @@ REPLI_ACTIF = bool(API_URL_REPLI and API_MODELE_REPLI and API_CLE_REPLI)
 # items non rediges ne sont pas marques vus et reviennent a l'execution
 # suivante, exactement comme apres une panne.
 BUDGET_APPELS = int(os.environ.get("LLM_BUDGET_APPELS", "0") or 0)
-# Un item consomme au pire deux champs fois deux essais.
-APPELS_MAX_PAR_ITEM = 4
+# Redaction des champs anglais servis par /en/frontier/. Mettre la variable a
+# "0" les desactive sans toucher au code : le francais continue de sortir et la
+# page anglaise retombe alors sur le texte francais.
+RESUME_EN_ACTIF = os.environ.get("FRONTIERE_RESUME_EN", "1") not in ("0", "", "non", "false")
+# Un item consomme au pire deux champs fois deux essais, quatre champs quand
+# l'anglais est actif. Le budget doit refleter ce cout, sinon une execution
+# s'arrete au milieu d'un item et publie du francais prive de son anglais.
+APPELS_MAX_PAR_ITEM = 8 if RESUME_EN_ACTIF else 4
+# Cout d'un item pour un rattrapage anglais seul : deux champs, deux essais.
+# Le francais est deja ecrit et n'est pas retouche, donc reserver huit appels
+# ferait s'arreter le lot avec de quoi rediger deux items de plus.
+APPELS_MAX_ANGLAIS_SEUL = 4
 _appels_effectues = 0
 # Vrai une fois que le fournisseur principal a echoue et que la redaction est
 # passee sur le repli. Persiste pour le reste de l'execution : retenter un
@@ -113,11 +123,18 @@ def appels_effectues():
     return _appels_effectues
 
 
-def budget_epuise():
-    """Vrai s'il ne reste pas de quoi rediger un item entier."""
+def budget_epuise(appels_par_item=None):
+    """Vrai s'il ne reste pas de quoi rediger un item entier.
+
+    Le cout par item est par defaut celui d'une execution complete, francais
+    et anglais. Un appelant qui ne redige qu'une partie des champs passe le
+    sien : sinon le rattrapage anglais s'arreterait alors qu'il reste de quoi
+    traiter des items.
+    """
     if not BUDGET_APPELS:
         return False
-    return _appels_effectues + APPELS_MAX_PAR_ITEM > BUDGET_APPELS
+    cout = APPELS_MAX_PAR_ITEM if appels_par_item is None else appels_par_item
+    return _appels_effectues + cout > BUDGET_APPELS
 
 
 class OllamaIndisponible(RuntimeError):
@@ -439,6 +456,73 @@ def erreurs_angle(texte):
     return erreurs
 
 
+# Symetrique de PREMIERE_PERSONNE cote anglais : le flux resume les travaux
+# des autres, la premiere personne y ferait passer l'auteur du site pour
+# l'auteur du papier.
+PREMIERE_PERSONNE_EN = re.compile(r"\b(?:we|our|us)\b", re.IGNORECASE)
+
+# Mots outils francais. Le seuil de trois evite de rejeter un titre cite ou un
+# nom d'institution ("Banque de France") tout en attrapant une reponse rendue
+# dans la mauvaise langue.
+MOTS_OUTILS_FRANCAIS = {
+    "les", "des", "une", "qui", "dans", "pour", "avec", "cette", "ces",
+    "sont", "leur", "aux", "par", "sur", "est", "plus", "entre",
+}
+
+
+def _contient_francais_residuel(texte):
+    mots = re.findall(r"[a-z\u00e0-\u00ff]+", texte.casefold())
+    return sum(mot in MOTS_OUTILS_FRANCAIS for mot in mots) >= 3
+
+
+def erreurs_redaction_en(texte):
+    """Fautes de posture editoriale et de langue, cote anglais."""
+    erreurs = []
+    if PREMIERE_PERSONNE_EN.search(texte):
+        erreurs.append("premiere_personne")
+    if "\u2014" in texte:
+        erreurs.append("tiret_cadratin")
+    if _contient_francais_residuel(texte):
+        erreurs.append("francais_residuel")
+    if _contient_caracteres_non_latins(texte):
+        erreurs.append("caracteres_non_latins")
+    return erreurs
+
+
+def erreurs_resume_en(texte):
+    """Retourne les controles echoues pour un resume anglais produit par le LLM."""
+    if not texte:
+        return ["texte_vide"]
+    erreurs = []
+    if _nombre_phrases(texte) != 2:
+        erreurs.append("nombre_phrases")
+    if not texte.rstrip().endswith((".", "!", "?")):
+        erreurs.append("ponctuation_finale")
+    erreurs.extend(erreurs_redaction_en(texte))
+    return erreurs
+
+
+# Equivalent anglais de FORMULES_ANGLE_INTERDITES.
+FORMULES_ANGLE_EN_INTERDITES = (
+    "this paper", "this article", "this study", "this work",
+    "this research", "this analysis", "the authors", "in this paper",
+    "in this article", "in this study",
+)
+
+
+def erreurs_angle_en(texte):
+    """Retourne les controles echoues pour un angle economique anglais."""
+    if not texte:
+        return ["texte_vide"]
+    erreurs = []
+    if _nombre_phrases(texte) != 1:
+        erreurs.append("nombre_phrases")
+    if texte.lstrip().casefold().startswith(FORMULES_ANGLE_EN_INTERDITES):
+        erreurs.append("formule_stereotypee")
+    erreurs.extend(erreurs_redaction_en(texte))
+    return erreurs
+
+
 def _nombres(texte):
     """Valeurs numeriques d'un texte, francais ou anglais.
 
@@ -651,6 +735,55 @@ def construire_prompt_angle(titre, abstract):
     )
 
 
+def resume_en_ollama(titre, abstract):
+    """Resume anglais en 2 phrases, ou None si le service echoue.
+
+    Redige depuis l'abstract d'origine, qui est deja en anglais, jamais par
+    traduction du resume francais : traduire une traduction accumule les
+    ecarts alors que le texte source est disponible ici.
+    """
+    if not abstract:
+        return None
+    return _appel_ollama(construire_prompt_resume_en(titre, abstract))
+
+
+def construire_prompt_resume_en(titre, abstract):
+    return (
+        "You are summarizing a research paper in English for a busy economist. "
+        "You are not the author: write in the third person, never we, our or us. "
+        "The reader sees only your two sentences, so do not write these "
+        "difficulties or these problems without naming them first. "
+        "Write exactly 2 factual sentences in English. Do not invent any figure "
+        "or result absent from the source text. Add no prefix and no comment, "
+        "only the 2 sentences. Do not use an em dash.\n\n"
+        f"Title: {titre}\n"
+        f"Original abstract: {abstract[:1500]}\n\n"
+        "Summary in English (2 sentences):"
+    )
+
+
+def angle_eco_en_ollama(titre, abstract):
+    """Une phrase anglaise sur l'enjeu pour l'analyse economique, ou None."""
+    return _appel_ollama(construire_prompt_angle_en(titre, abstract))
+
+
+def construire_prompt_angle_en(titre, abstract):
+    return (
+        "Write a single English sentence on the mechanism or the issue the paper "
+        "raises for economic analysis. Start directly with that mechanism or "
+        "issue. Do not start with This paper, This article, This study or any "
+        "phrase announcing its interest to an economist. Do not repeat the title "
+        "word for word and do not invent any figure or result absent from the "
+        "source text. Add no prefix and no comment, and do not use an em dash. "
+        "You are not the author: never write we, our or us. The sentence is read "
+        "on its own, without the summary: do not write these difficulties or "
+        "these problems without naming them in the sentence itself.\n\n"
+        f"Title: {titre}\n"
+        f"Original abstract: {abstract[:1500]}\n\n"
+        "Sentence:"
+    )
+
+
 def enregistrer_execution(nb_eligibles, nb_publies, nb_reportes, nb_non_publies_validation):
     """Ajoute cette execution a l'historique lu par verifier_sante.py.
 
@@ -751,6 +884,36 @@ def main():
             nb_non_publies_validation += 1
             continue
 
+        # Champs anglais : jamais bloquants. Un echec de generation ou de
+        # validation laisse le champ absent et la page anglaise sert le texte
+        # francais (frontiere/frontiere.js, resumeDe). Publier un item complet
+        # en francais vaut mieux que le retenir pour un defaut cote anglais.
+        resume_en = None
+        angle_eco_en = None
+        if RESUME_EN_ACTIF:
+            # La panne du service est rattrapee ici, et seulement ici. Plus
+            # haut, elle doit remonter : un item sans francais n'est pas
+            # publiable. A ce point le francais est ecrit et valide, donc une
+            # panne survenue entre-temps ne doit pas le faire perdre.
+            try:
+                resume_en = _generer_avec_reprise(
+                    lambda: resume_en_ollama(
+                        candidat["titre"], candidat.get("abstract", "")
+                    ),
+                    lambda texte: not erreurs_resume_en(texte)
+                    and not erreurs_invention(texte, texte_complet),
+                )
+                angle_eco_en = _generer_avec_reprise(
+                    lambda: angle_eco_en_ollama(
+                        candidat["titre"], candidat.get("abstract", "")
+                    ),
+                    lambda texte: not erreurs_angle_en(texte)
+                    and not erreurs_invention(texte, texte_complet),
+                )
+            except OllamaIndisponible:
+                resume_en = None
+                angle_eco_en = None
+
         nouveaux_vus[candidat["id"]] = {"score": score, "traite": True}
         entree = {
             "id": candidat["id"],
@@ -769,6 +932,11 @@ def main():
             "signal": False,
         }
         entree["llm"] = modele_actif()
+        # Champs absents plutot que vides : frontiere.js teste leur presence.
+        if resume_en:
+            entree["resume_en"] = resume_en
+        if angle_eco_en:
+            entree["angle_eco_en"] = angle_eco_en
 
         cures.append(entree)
 
@@ -794,6 +962,9 @@ def main():
         )
     if LLM_ACTIF:
         print(f"Resumes rediges et valides : {nb_llm}/{len(cures)}")
+        if RESUME_EN_ACTIF:
+            nb_en = sum(1 for c in cures if c.get("resume_en"))
+            print(f"Resumes anglais rediges et valides : {nb_en}/{len(cures)}")
         budget = f" sur un budget de {BUDGET_APPELS}" if BUDGET_APPELS else ""
         print(f"Appels au modele : {appels_effectues()}{budget}")
     print(

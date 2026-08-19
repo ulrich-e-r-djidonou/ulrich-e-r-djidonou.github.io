@@ -51,11 +51,20 @@ if hasattr(sys.stdout, "reconfigure"):
 RACINE = Path(__file__).resolve().parent.parent
 FICHIER_ETATS = RACINE / "data" / "projets.json"
 FICHIER_PAGE = RACINE / "projets.html"
+# La page anglaise porte les memes cartes et les memes attributs data-projet.
+# Sans elle ici, /en/projects.html figerait la date du jour de sa creation et
+# annoncerait, avec l'autorite d'une page publiee, une fraicheur perimee.
+FICHIER_PAGE_EN = RACINE / "en" / "projects.html"
 TIMEOUT = 30
 
 MOIS = (
     "janvier", "février", "mars", "avril", "mai", "juin",
     "juillet", "août", "septembre", "octobre", "novembre", "décembre",
+)
+
+MOIS_EN = (
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
 )
 
 # Projets dont l'etiquette suit une donnee qui bouge. Les autres cartes
@@ -68,6 +77,7 @@ SOURCES = {
         "etat_json": "https://ulrich-e-r-djidonou.github.io/icie-dashboard/etat.json",
         "page": "https://ulrich-e-r-djidonou.github.io/icie-dashboard/",
         "gabarit": "Données jusqu'au {date}",
+        "gabarit_en": "Data through {date}",
     },
     "geoecon": {
         "lecteur": "champ_json",
@@ -76,6 +86,7 @@ SOURCES = {
         # « Mise a jour le » et non « Donnees jusqu'au » : ce champ date le
         # rafraichissement, pas la fin de la periode couverte.
         "gabarit": "Mise à jour le {date}",
+        "gabarit_en": "Updated on {date}",
     },
     "fedspeak": {
         "lecteur": "derniere_date_csv",
@@ -85,6 +96,7 @@ SOURCES = {
         ),
         "colonne": "date",
         "gabarit": "Communiqués analysés jusqu'au {date}",
+        "gabarit_en": "Press releases analyzed through {date}",
     },
 }
 
@@ -94,6 +106,12 @@ def formater_date_francaise(iso):
     jour = date.fromisoformat(iso)
     numero = "1er" if jour.day == 1 else str(jour.day)
     return f"{numero} {MOIS[jour.month - 1]} {jour.year}"
+
+
+def formater_date_anglaise(iso):
+    """2026-08-02 devient « August 2, 2026 », comme sur les pages /en/."""
+    jour = date.fromisoformat(iso)
+    return f"{MOIS_EN[jour.month - 1]} {jour.day}, {jour.year}"
 
 
 def date_depuis_etat_json(charge):
@@ -178,12 +196,16 @@ def charger_etats(chemin=FICHIER_ETATS):
     return json.loads(Path(chemin).read_text(encoding="utf-8"))
 
 
-def appliquer_etats(html, projets):
+def appliquer_etats(html, projets, cle="etat"):
     """Reecrit le texte de chaque `<p class="project-etat" data-projet="...">`.
 
     Le remplacement est ancre sur l'attribut `data-projet`, pas sur le texte
     en place : une etiquette deja fausse doit pouvoir etre corrigee, et le
     script ne doit pas dependre de ce qu'il a ecrit la fois precedente.
+
+    `cle` choisit la langue de l'etiquette, `etat` ou `etat_en`. Les deux
+    pages portent les memes attributs `data-projet`, donc la meme fonction
+    sert des deux cotes.
     """
     manquants = []
     for identifiant, etat in sorted(projets.items()):
@@ -194,7 +216,7 @@ def appliquer_etats(html, projets):
         # que le texte va dans le contenu d'un <p>, pas dans un attribut :
         # echapper l'apostrophe en &#x27; rendrait pareil a l'ecran mais
         # salirait le diff de chaque etiquette francaise ("Donnees jusqu'au").
-        texte = echapper_html(etat.get("etat", ""), quote=False)
+        texte = echapper_html(etat.get(cle, ""), quote=False)
         if not texte:
             continue
         motif = re.compile(
@@ -241,6 +263,9 @@ def main():
         precedent = projets.get(identifiant, {}).get("date_donnees")
         projets[identifiant] = {
             "etat": source["gabarit"].format(date=formater_date_francaise(iso)),
+            "etat_en": source["gabarit_en"].format(
+                date=formater_date_anglaise(iso)
+            ),
             "date_donnees": iso,
             "source": source.get("etat_json") or source["url"],
         }
@@ -249,19 +274,33 @@ def main():
 
     ecrire_etats(projets)
 
-    page = FICHIER_PAGE.read_text(encoding="utf-8")
-    reecrite, manquants = appliquer_etats(page, projets)
-    if reecrite != page:
-        FICHIER_PAGE.write_text(reecrite, encoding="utf-8")
-        print(f"{FICHIER_PAGE.name} mis a jour.")
-    else:
-        print(f"{FICHIER_PAGE.name} deja a jour.")
+    # Les deux langues sont ecrites dans la meme execution. Les separer
+    # laisserait une page annoncer une fraicheur que l'autre dement, et
+    # personne ne le verrait avant qu'un lecteur anglophone tombe dessus.
+    manquants = []
+    for fichier, cle in ((FICHIER_PAGE, "etat"), (FICHIER_PAGE_EN, "etat_en")):
+        if not fichier.exists():
+            echecs.append((fichier.name, "page absente"))
+            print(f"{fichier.name} : page absente")
+            continue
+        page = fichier.read_text(encoding="utf-8")
+        reecrite, absents = appliquer_etats(page, projets, cle)
+        if reecrite != page:
+            fichier.write_text(reecrite, encoding="utf-8")
+            print(f"{fichier.name} mis a jour.")
+        else:
+            print(f"{fichier.name} deja a jour.")
+        for identifiant in absents:
+            if (identifiant, fichier.name) not in manquants:
+                manquants.append((identifiant, fichier.name))
 
-    for identifiant in manquants:
+    for identifiant, nom_page in manquants:
         # Une carte renommee ou supprimee laisserait le JSON avancer pendant
         # que la page affiche une vieille date : le signaler evite ce silence.
-        echecs.append((identifiant, "aucune carte data-projet correspondante"))
-        print(f"{identifiant} : aucune carte data-projet correspondante dans la page")
+        echecs.append(
+            (identifiant, f"aucune carte data-projet dans {nom_page}")
+        )
+        print(f"{identifiant} : aucune carte data-projet dans {nom_page}")
 
     if not echecs:
         print("Etiquettes de fraicheur a jour.")

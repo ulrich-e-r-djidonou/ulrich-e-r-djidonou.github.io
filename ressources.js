@@ -5,6 +5,29 @@
 (function () {
   "use strict";
 
+  // Ce fichier sert /ressources.html (fr) et /en/resources.html (en). Les
+  // donnees restent un seul fichier, bibliotheque.json, avec un champ par
+  // langue : dupliquer le JSON ferait deriver les deux listes.
+  const LANG = document.documentElement.lang === "en" ? "en" : "fr";
+
+  const TEXTES = {
+    fr: { vide: "Les ressources ne sont pas disponibles pour le moment." },
+    en: { vide: "Resources are unavailable at the moment." },
+  };
+
+  const T = TEXTES[LANG];
+
+  // Repli sur le francais quand la traduction manque : une ressource sans
+  // description anglaise reste affichee, avec son texte francais, plutot que
+  // de disparaitre de la page anglaise.
+  function categorieDe(item) {
+    return LANG === "en" ? item.categorie_en || item.categorie : item.categorie;
+  }
+
+  function descriptionDe(item) {
+    return LANG === "en" ? item.description_en || item.description_fr : item.description_fr;
+  }
+
   // Meme garde que frontiere.js : data/bibliotheque.json est tenu a la main,
   // donc le risque est theorique ici, mais un href non http(s) ne doit jamais
   // devenir cliquable, quel que soit le fichier qui l'a fourni. Une URL
@@ -37,15 +60,16 @@
     if (!items || !items.length) {
       const vide = document.createElement("p");
       vide.className = "ressources-vide";
-      vide.textContent = "Les ressources ne sont pas disponibles pour le moment.";
+      vide.textContent = T.vide;
       conteneur.appendChild(vide);
       return;
     }
 
     const parCategorie = new Map();
     items.forEach((item) => {
-      if (!parCategorie.has(item.categorie)) parCategorie.set(item.categorie, []);
-      parCategorie.get(item.categorie).push(item);
+      const categorie = categorieDe(item);
+      if (!parCategorie.has(categorie)) parCategorie.set(categorie, []);
+      parCategorie.get(categorie).push(item);
     });
 
     parCategorie.forEach((liste, categorie) => {
@@ -78,7 +102,7 @@
           bloc.appendChild(nom);
         }
         const description = document.createElement("p");
-        description.textContent = item.description_fr;
+        description.textContent = descriptionDe(item);
         bloc.appendChild(description);
         contenu.appendChild(bloc);
       });
