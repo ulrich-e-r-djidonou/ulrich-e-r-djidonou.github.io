@@ -1,7 +1,11 @@
+import re
 import unittest
+from pathlib import Path
 from unittest import mock
 
 from pipeline import verifier_workflows
+
+RACINE = Path(__file__).resolve().parent.parent
 
 
 class SourceDepotsTests(unittest.TestCase):
@@ -262,6 +266,33 @@ class ExaminerDepotTests(unittest.TestCase):
         self.assertEqual(
             appels,
             [f"/repos/{verifier_workflows.PROPRIETAIRE}/gtrends/actions/workflows"],
+        )
+
+
+class ListeDesTestsEnCITests(unittest.TestCase):
+    # Ce module est deja liste dans tests.yml : c'est ce qui fait tourner ce
+    # garde-fou meme le jour ou un pipeline/test_nouveau.py, lui, ne l'est
+    # pas encore. Un garde-fou place dans le fichier qu'il devrait detecter
+    # ne se protegerait pas lui-meme. pipeline/ n'a pas de __init__.py (seul
+    # pipeline/benchmark/__init__.py existe) : pas de unittest discover
+    # fiable, d'ou la comparaison textuelle contre tests.yml.
+    def test_tests_yml_liste_tous_les_modules_de_test(self):
+        sur_disque = {
+            str(f.relative_to(RACINE)).replace("\\", "/")[:-3].replace("/", ".")
+            for f in list(RACINE.glob("pipeline/test_*.py"))
+            + list(RACINE.glob("pipeline/benchmark/test_*.py"))
+        }
+        yml = (RACINE / ".github" / "workflows" / "tests.yml").read_text(encoding="utf-8")
+        en_ci = set(re.findall(r"^\s*(pipeline(?:\.\w+)*\.test_\w+)\s*\\?$", yml, re.M))
+        self.assertEqual(
+            sur_disque - en_ci,
+            set(),
+            "module(s) de test absent(s) de .github/workflows/tests.yml",
+        )
+        self.assertEqual(
+            en_ci - sur_disque,
+            set(),
+            "module(s) liste(s) dans tests.yml sans fichier correspondant",
         )
 
 

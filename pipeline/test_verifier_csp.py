@@ -71,5 +71,19 @@ class VerifierCSPTests(unittest.TestCase):
         self.assertFalse(verifier_csp.est_page_exclue(chemin_index))
 
 
+class SiteTests(unittest.TestCase):
+    # Sans cette classe, seules des pages synthetiques etaient controlees :
+    # une page ajoutee au depot par copie d'un ancien gabarit (deja arrive
+    # avec faq.html, voir la docstring du module) pouvait perdre sa CSP sans
+    # que tests.yml ne le voie jamais, contrairement au controle equivalent
+    # de verifier_html.py.
+    def test_toutes_les_pages_publiees_ont_une_csp_valide(self):
+        pages = [p for p in verifier_csp.pages_du_site() if not verifier_csp.est_page_exclue(p)]
+        self.assertTrue(pages, "aucune page HTML trouvee")
+        for page in pages:
+            with self.subTest(page=page.name):
+                self.assertEqual(verifier_csp.verifier(page), [])
+
+
 if __name__ == "__main__":
     unittest.main()

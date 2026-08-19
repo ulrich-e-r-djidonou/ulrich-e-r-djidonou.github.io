@@ -13,6 +13,9 @@ on:
     paths:
       - "*.html"
       - "frontiere/*.html"
+      # Sans cette entree, un lien casse introduit dans une page anglaise
+      # attendait le controle hebdomadaire du lundi au lieu d'etre vu au push.
+      - "en/**"
       - "pipeline/verifier_liens.py"
       - ".github/workflows/verifier-liens.yml"
   workflow_dispatch: {}

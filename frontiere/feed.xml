@@ -9,210 +9,210 @@
       <title>Algorithm-Driven SVARs: Navigating the Wilderness of Big Data</title>
       <link>https://www.nber.org/papers/w35604#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35604-fromrss</guid>
-      <pubDate>2026-08-17</pubDate>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
       <description>Cette étude développe une méthodologie bayésienne pour sélectionner automatiquement les ensembles de variables dans les modèles SVAR à l'aide d'un critère hors échantillon, en retenant le plus grand système admissible. Les résultats montrent que la production réagit à la construction résidentielle plutôt qu'au seul crédit aux ménages, et que l'ajout de l'écart de taux d'entreprise sélectionné identifie le risque de défaut attendu comme un canal majeur de transmission de la politique monétaire.</description>
     </item>
     <item>
       <title>The Global Transition – The Impact of Demographics and AI on Economic Power</title>
       <link>https://www.nber.org/papers/w35618#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35618-fromrss</guid>
-      <pubDate>2026-08-17</pubDate>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
       <description>Cette étude s'appuie sur un modèle d'équilibre général dynamique couvrant 17 régions pour évaluer l'impact des évolutions démographiques mondiales au cours du XXIe siècle. Selon les simulations basées sur les dernières projections de l'ONU, le vieillissement démographique entraînera une surabondance de capital comprimant les rendements réels, une baisse de 10 % du PIB mondial en 2100, une nette hausse des cotisations sociales et une réorganisation majeure de l'hégémonie économique.</description>
     </item>
     <item>
       <title>One Click Away: AI Tutoring with Khanmigo in a Two-Year School Experiment</title>
       <link>https://www.nber.org/papers/w35620#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35620-fromrss</guid>
-      <pubDate>2026-08-17</pubDate>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
       <description>Un essai contrôlé randomisé mené pendant deux ans dans dix-huit collèges du Tennessee montre que l'accès au tuteur d'intelligence artificielle Khanmigo augmente les résultats en mathématiques des élèves de 0,06 à 0,08 écart-type sur une année scolaire. Cependant, ce progrès reste similaire à celui obtenu sans intelligence artificielle en raison d'une utilisation peu fréquente et superficielle par les élèves, ce qui indique que l'engagement réel des utilisateurs constitue la contrainte majeure.</description>
     </item>
     <item>
       <title>Making AI Tutoring Productive: Evidence from a Mastery-Based Math Practice Experiment</title>
       <link>https://www.nber.org/papers/w35621#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35621-fromrss</guid>
-      <pubDate>2026-08-17</pubDate>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
       <description>Une expérience aléatoire menée auprès de plus de 6 000 collégiens montre que l'utilisation d'un tuteur fondé sur l'intelligence artificielle ralentit la progression globale des élèves tout en améliorant la précision de leurs réponses après une erreur. Les évaluations différées révèlent que l'intégration de l'intelligence artificielle dans un parcours fondé sur la maîtrise engendre des gains sur le contenu révisé, confirmant que l'efficacité du tutorat automatique repose sur un encadrement structuré des erreurs.</description>
     </item>
     <item>
       <title>Taxpayer Behavior in the Age of AI: A Field Experiment on Property Tax Appeals</title>
       <link>https://www.nber.org/papers/w35632#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35632-fromrss</guid>
-      <pubDate>2026-08-17</pubDate>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
       <description>Une expérience de terrain menée auprès de 645 ménages du comté de Dallas montre que l'accès à un agent conversationnel d'intelligence artificielle augmente de 9,1 points de pourcentage la probabilité de contester son impôt foncier sans agent humain, la faisant passer de 41,4 % à 50,5 %. Bien que 78 % des ménages y ayant accès aient engagé une conversation avec l'outil, l'augmentation des contestations s'est avérée plus faible chez les foyers les moins favorisés, ce qui suggère un risque d'accroissement des disparités existantes.</description>
     </item>
     <item>
       <title>Macrofinance meets AI: Evaluating alignment between LLMs and economists</title>
       <link>https://cepr.org/voxeu/columns/macrofinance-meets-ai-evaluating-alignment-between-llms-and-economists</link>
       <guid isPermaLink="false">voxeu-ce-meets-ai-evaluating-alignment-between-llms-and-economists</guid>
-      <pubDate>2026-08-15</pubDate>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
       <description>En comparant plusieurs modèles GPT aux évaluations d'économistes du FMI sur des rapports au titre de l'Article IV, cette étude évalue les tâches d'analyse pouvant être déléguées à l'intelligence artificielle. Les résultats montrent que les meilleurs modèles actuels réussissent les tâches factuelles et structurées, mais restent moins fiables pour les évaluations nuancées exigeant le jugement d'experts humains.</description>
     </item>
     <item>
       <title>Whose doctor does the AI recommend? An algorithm audit of reputation and demographic signals in large language model-assisted physician choice</title>
       <link>https://arxiv.org/abs/2608.14399v1</link>
       <guid isPermaLink="false">arxiv-2608.14399v1</guid>
-      <pubDate>2026-08-14</pubDate>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
       <description>Un audit algorithmique mesurant les recommandations de médecins par sept grands modèles de langage montre que la réputation domine les choix, une hausse de note de 3,9 à 4,7 augmentant la probabilité de sélection de 31,4 points de pourcentage et une hausse du tarif de 90 à 190 dollars la réduisant de 20,0 points. L'analyse révèle également de légers biais favorisant les noms à consonance féminine (+2,5 points) et issus de minorités (+1,3 à +2,9 points), des effets qui demeurent totalement invisibles dans les auto-explications fournies par ces modèles.</description>
     </item>
     <item>
       <title>A Survey of Large Models in Sports</title>
       <link>https://arxiv.org/abs/2608.14377v1</link>
       <guid isPermaLink="false">arxiv-2608.14377v1</guid>
-      <pubDate>2026-08-14</pubDate>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
       <description>Cet article présente un panorama complet de l'application des grands modèles de langage multimodaux dans le domaine du sport, en détaillant les tâches, les applications, les jeux de données et les bancs d'essai existants. Les auteurs y abordent également les défis actuels et les orientations futures afin d'établir les bases de l'intelligence sportive guidée par ces modèles, tout en mettant à disposition un répertoire open-source.</description>
     </item>
     <item>
       <title>IFDP Paper: Occupational Complexity, Capital-Skill Complementarity, and the Evolution of U.S. Wage Inequality: A Quantitative Analysis</title>
       <link>https://www.federalreserve.gov/econres/ifdp/occupational-complexity-capital-skill-complementarity-and-the-evolution-of-u-s-wage-inequality.htm</link>
       <guid isPermaLink="false">fed-complementarity-and-the-evolution-of-u-s-wage-inequality-htm</guid>
-      <pubDate>2026-08-14</pubDate>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
       <description>Cette étude met en évidence une forte relation positive aux États-Unis entre la complexité de la résolution de problèmes dans une profession et sa croissance salariale depuis 1980, alors que les réallocations d'emplois vers les professions les plus complexes sont restées modestes. Au moyen d'un modèle d'équilibre général estimé quantitativement, l'analyse montre que l'augmentation de la prime de complexité s'expliquait par la complémentarité capital-compétence et le recul des prix du capital équipement jusqu'en 2000, avant d'être portée par une plus grande efficacité des professions à exploiter les compétences des travailleurs après 2000.</description>
     </item>
     <item>
       <title>Europe's regulatory double bind</title>
       <link>https://cepr.org/voxeu/columns/europes-regulatory-double-bind</link>
       <guid isPermaLink="false">voxeu-https-cepr-org-voxeu-columns-europes-regulatory-double-bind</guid>
-      <pubDate>2026-08-13</pubDate>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
       <description>Bien que le volet de transparence du règlement sur l'intelligence artificielle de l'Union européenne soit désormais en vigueur pour obliger les fournisseurs à informer les utilisateurs, l'application de son régime encadrant les systèmes à haut risque, qui devait prendre pleinement effet le 2 août 2026, a été retardée. Cette situation crée une double contrainte dans laquelle l'Europe perd sa souveraineté réglementaire, qu'elle choisisse d'appliquer ses propres règles ou d'y renoncer.</description>
     </item>
     <item>
       <title>Organizational Technology Ladders: Remote Work and Generative AI Adoption</title>
       <link>https://arxiv.org/abs/2608.11626v1</link>
       <guid isPermaLink="false">arxiv-2608.11626v1</guid>
-      <pubDate>2026-08-12</pubDate>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
       <description>À partir de données d'offres d'emploi américaines, cette étude estime qu'une hausse de 10 points de pourcentage des recrutements en télétravail en 2021-2022 augmente la part des offres mentionnant l'intelligence artificielle générative en 2023-2024 de 0,4 point de pourcentage entre les entreprises et de 0,7 point entre les professions au sein d'une même entreprise. Ce résultat illustre l'existence d'une échelle technologique organisationnelle, l'adoption du télétravail réorientant l'embauche vers des compétences techniques et managériales qui accélèrent l'adoption ultérieure de l'IA générative.</description>
     </item>
     <item>
       <title>AI Financial Advice: Supply, Demand, and Life Cycle Implications</title>
       <link>https://www.nber.org/papers/w35574#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35574-fromrss</guid>
-      <pubDate>2026-08-10</pubDate>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
       <description>En simulant les effets à long terme des conseils financiers générés par GPT-5.2 pour un échantillon représentatif, l'étude montre que suivre ces recommandations oriente les individus vers la théorie du cycle de vie, à travers une participation accrue aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus élevées. Bien que ces conseils varient selon la culture financière, l'expérience préalable en IA et le genre, deux tiers des écarts de part d'actions selon le sexe découlent des requêtes rédigées par les utilisateurs et un tiers de l'attribution d'étiquettes de genre à des requêtes identiques.</description>
     </item>
     <item>
       <title>Staged Access and Liability for Dual-Use Artificial Intelligence</title>
       <link>https://www.nber.org/papers/w35586#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35586-fromrss</guid>
-      <pubDate>2026-08-10</pubDate>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
       <description>L'étude montre que la responsabilité d'un développeur d'intelligence artificielle à double usage incite l'adversaire à intensifier sa recherche de failles logicielles, tandis que l'accès échelonné neutralise cette réaction stratégique, ce qui rend la responsabilité et l'accès échelonné complémentaires. Comme la recherche défensive consomme des ressources réelles et que la responsabilité financière ne permet pas d'imposer la date de sortie souhaitée par le régulateur, le taux de responsabilité optimal peut être inférieur à l'internalisation totale des dommages et doit s'accompagner d'un mandat temporel distinct.</description>
     </item>
     <item>
       <title>AI Agents and Prompt Engineering in Econometric Coding</title>
       <link>https://www.nber.org/papers/w35588#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35588-fromrss</guid>
-      <pubDate>2026-08-10</pubDate>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
       <description>L'étude évalue la génération de code économétrique par les grands modèles de langage et montre que le passage d'un simple agent conversationnel à un agent contraint augmente le taux de réussite des tâches de 74 à 96 %, pour un coût supplémentaire d'environ huit centimes par exécution. Pour les modèles Claude Sonnet 4.6 et GPT-5.4, l'incitation par quelques exemples et l'autonomie fonctionnent comme des substituts, tandis que les différences de performance selon le logiciel statistique disparaissent en grande partie avec l'agent contraint.</description>
     </item>
     <item>
       <title>Environmental and Economic Implications of Artificial Intelligence Data Centers in the United States</title>
       <link>https://arxiv.org/abs/2608.09882v1</link>
       <guid isPermaLink="false">arxiv-2608.09882v1</guid>
-      <pubDate>2026-08-10</pubDate>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
       <description>Une analyse des centres de données dédiés à l'intelligence artificielle aux États-Unis montre que leurs impacts environnementaux et économiques, notamment les émissions, la consommation d'eau et l'occupation des sols, dépendent principalement des réseaux électriques et des infrastructures régionales dans lesquels ils s'insèrent. Comme les structures réglementaires actuelles ne prennent pas totalement en compte les externalités temporelles et spatiales de ces infrastructures, des politiques intégrées combinant efficacité énergétique et planification territoriale sont nécessaires pour en optimiser le fonctionnement.</description>
     </item>
     <item>
       <title>AI feedback loops and the conditions for explosive growth</title>
       <link>https://cepr.org/voxeu/columns/ai-feedback-loops-and-conditions-explosive-growth</link>
       <guid isPermaLink="false">voxeu-eu-columns-ai-feedback-loops-and-conditions-explosive-growth</guid>
-      <pubDate>2026-08-09</pubDate>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 +0000</pubDate>
       <description>Ce papier présente un cadre d'analyse selon lequel l'utilisation de l'intelligence artificielle pour développer ses propres modèles futurs pourrait engendrer une explosion de l'intelligence et accélérer le progrès technologique par des boucles de rétroaction. Si le seuil de déclenchement d'une croissance explosive selon la part du travail, les rendements de la recherche et l'automatisation des tâches apparaît surprenamment bas, sa concrétisation dépendra des goulets d'étranglement humains, des contraintes physiques de calcul et du rythme d'automatisation.</description>
     </item>
     <item>
       <title>ResidencyRL: Reinforcement Learning in Simulated Clinical Environments</title>
       <link>https://arxiv.org/abs/2608.07418v1</link>
       <guid isPermaLink="false">arxiv-2608.07418v1</guid>
-      <pubDate>2026-08-07</pubDate>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
       <description>La méthode ResidencyRL utilise l'apprentissage par renforcement pour entraîner des agents d'intelligence artificielle clinique au travers de simulations de consultations médicales interactives. Lors des évaluations, cet entraînement améliore la précision diagnostique de 7,0 % en conditions adverses, réduit de 31 % le taux de signaux d'alerte manqués et obtient la préférence des cliniciens experts dans 87,6 % des comparaisons à l'aveugle.</description>
     </item>
     <item>
       <title>An AI4AI Framework for Visual Token Pruning</title>
       <link>https://arxiv.org/abs/2608.07193v1</link>
       <guid isPermaLink="false">arxiv-2608.07193v1</guid>
-      <pubDate>2026-08-07</pubDate>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
       <description>Afin de réduire le coût d'inférence des grands modèles de langage multimodaux, cette étude présente AutoPrune, un cadre sans entraînement qui permet aux modèles de langage de concevoir automatiquement des règles d'élagage de jetons visuels. Ce système s'appuie sur un langage spécifique composé de 131 atomes réutilisables représentant chaque état de recherche comme une modification résiduelle d'une politique de base performante.</description>
     </item>
     <item>
       <title>Time Travel on Professional Profiles</title>
       <link>https://www.nber.org/papers/w35546#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35546-fromrss</guid>
-      <pubDate>2026-08-05</pubDate>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
       <description>En analysant les données de Revelio Labs de 2020 à 2026, l'étude révèle que 19,7 % des utilisateurs américains établis de LinkedIn modifient rétroactivement l'intitulé ou la description d'un emploi déjà quitté, un comportement fortement associé aux changements d'employeur. Ces modifications rétroactives montrent une nette augmentation des termes liés à l'intelligence artificielle après 2022, un recul des mentions du travail à distance ou de la diversité, ainsi qu'une hausse de la rédaction assistée par de grands modèles de langage après l'arrivée de ChatGPT, en particulier chez les actifs moins diplômés et les titulaires de MBA issus de programmes moins bien classés.</description>
     </item>
     <item>
       <title>Predictive Risk Scores in the Public Sector: Experimental Evidence from Child-Protection Investigations</title>
       <link>https://www.nber.org/papers/w35540#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35540-fromrss</guid>
-      <pubDate>2026-08-05</pubDate>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
       <description>Une évaluation aléatoire portant sur 4 752 signalements d'enfants dans le comté de Northampton montre que l'accès des superviseurs de la protection de l'enfance à un score algorithmique de risque a augmenté les placements en famille d'accueil et les services destinés aux enfants au risque prédit le plus élevé. Cette intervention a réduit les signalements ultérieurs pour maltraitance sans accentuer les disparités raciales dans les décisions ou les résultats, ce qui montre que les algorithmes peuvent améliorer le ciblage tout en préservant le pouvoir d'appréciation humain.</description>
     </item>
     <item>
       <title>Detecting Critical Junctures as They Unfold: Foundations, Measurement, and Applications from 120 Years of Reporting</title>
       <link>https://www.nber.org/papers/w35545#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35545-fromrss</guid>
-      <pubDate>2026-08-05</pubDate>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
       <description>Pour éviter d'étudier les jonctions critiques uniquement de manière rétrospective, cette recherche développe une approche fondée sur un grand modèle de langage afin d'identifier l'incertitude institutionnelle directement dans le discours contemporain. Appliquée à l'archive du Times de Londres contenant 11,95 millions d'articles publiés entre 1800 et 2019, cette méthode permet de construire la première mesure textuelle à long terme de l'incertitude institutionnelle, ancrée dans l'analyse de 120 ans de reportages allant de 1900 à 2019.</description>
     </item>
     <item>
       <title>Replaceable but Employed: Automation and the Meaning of Work</title>
       <link>https://www.nber.org/papers/w35559#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35559-fromrss</guid>
-      <pubDate>2026-08-05</pubDate>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
       <description>Une alternative automatisée crédible peut réduire le sens que les travailleurs attribuent à leur contribution, ce qui augmente la compensation salariale exigée ou leur impose une perte de bien-être lorsqu'ils conservent leur emploi. La démonstration publique d'une telle technologie permet aux développeurs de stimuler la demande en dépréciant le travail humain, réduisant ainsi la valeur de l'emploi avant même sa suppression.</description>
     </item>
     <item>
       <title>Automation does not lower the labour share</title>
       <link>https://cepr.org/voxeu/columns/automation-does-not-lower-labour-share</link>
       <guid isPermaLink="false">voxeu-epr-org-voxeu-columns-automation-does-not-lower-labour-share</guid>
-      <pubDate>2026-08-04</pubDate>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
       <description>À partir de données couvrant la quasi-totalité des entreprises françaises entre 1994 et 2019, cette étude examine la relation entre l'automatisation et la part du revenu revenant au travail au niveau de l'entreprise. Les résultats montrent que bien que l'automatisation ait profondément transformé les emplois et la production, elle n'a pas nécessairement déplacé les revenus du travail vers le capital.</description>
     </item>
     <item>
       <title>When Predictions Become Regressors: A Split-Sample Correction for Biases in Downstream Inference</title>
       <link>https://arxiv.org/abs/2608.02909v1</link>
       <guid isPermaLink="false">arxiv-2608.02909v1</guid>
-      <pubDate>2026-08-03</pubDate>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
       <description>Pour corriger le biais d'estimation causé par l'usage de prédictions d'apprentissage automatique comme variables explicatives dans des régressions, les auteurs proposent une méthode de variables instrumentales construites sur des découpages indépendants des données. Des simulations indiquent que cette approche permet de retrouver des valeurs proches de la réalité même sur de petits échantillons, une efficacité illustrée par deux applications portant sur le Parlement allemand et la lutte contre la pauvreté en Chine.</description>
     </item>
     <item>
       <title>Navigating the skill diversity frontier: How skill complexity explains worker resilience</title>
       <link>https://arxiv.org/abs/2608.02102v1</link>
       <guid isPermaLink="false">arxiv-2608.02102v1</guid>
-      <pubDate>2026-08-03</pubDate>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
       <description>À partir de données longitudinales de LinkedIn portant sur 2,4 millions de travailleurs américains et 16 753 compétences distinctes, cette étude développe un cadre d'analyse réseau afin de mesurer la spécialisation, la diversité et la frontière de diversité des compétences. Si la spécialisation est principalement associée à des professions aux salaires plus élevés, les travailleurs les plus proches de la frontière de diversité ont une probabilité accrue d'acquérir de nouvelles compétences, de recevoir des promotions et de s'orienter vers des emplois moins exposés à l'automatisation.</description>
     </item>
     <item>
       <title>AI Financial Advice: Supply, Demand, and Life Cycle Implications</title>
       <link>https://arxiv.org/abs/2608.01607v1</link>
       <guid isPermaLink="false">arxiv-2608.01607v1</guid>
-      <pubDate>2026-08-03</pubDate>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
       <description>En simulant l'impact sur l'ensemble du cycle de vie des conseils financiers de GPT-5.2 sollicités par un échantillon représentatif, une étude montre que ces recommandations orientent les individus vers la théorie du cycle de vie, avec une participation élargie aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus élevées. Ces conseils varient selon la culture financière, l'expérience préalable de l'IA et le genre, deux tiers des divergences d'allocation en actions entre hommes et femmes découlant de la rédaction de requêtes différentes et un tiers provenant d'étiquettes de genre rattachées à des requêtes identiques.</description>
     </item>
     <item>
       <title>A New Theory of Value for Post-AGI Economics</title>
       <link>https://arxiv.org/abs/2608.01432v2</link>
       <guid isPermaLink="false">arxiv-2608.01432v2</guid>
-      <pubDate>2026-08-02</pubDate>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
       <description>Face à la divergence potentielle entre les prix du marché et le bien-être sociétal causée par l'automatisation du travail cognitif par l'intelligence artificielle générale, cet article introduit la théorie de la valeur de l'épanouissement. Cette théorie redéfinit la valeur comme la contribution aux capacités durables des personnes et des communautés à s'épanouir sous contraintes planétaires, et propose une architecture de gouvernance fondée sur le rendement de l'épanouissement.</description>
     </item>
     <item>
       <title>AI and Our Economic Future</title>
       <link>https://doi.org/10.1257/jep.20261505</link>
       <guid isPermaLink="false">aea-10-1257-jep-20261505</guid>
-      <pubDate>2026-08-01</pubDate>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
       <description>Bien que l'automatisation de l'intelligence puisse accélérer la croissance économique au-delà du taux historique américain de 2 % par an, cette accélération risque d'être freinée par la présence de maillons faibles non automatisés. La nécessité d'automatiser la grande majorité de ces maillons faibles retarde les importants gains de productivité, tout en risquant d'accélérer la survenue de dommages majeurs si une intelligence artificielle puissante est détournée à des fins malveillantes.</description>
     </item>
     <item>
       <title>The Emerging Market for Intelligence: How Firms Buy and Sell AI</title>
       <link>https://doi.org/10.1257/jep.20261506</link>
       <guid isPermaLink="false">aea-10-1257-jep-20261506</guid>
-      <pubDate>2026-08-01</pubDate>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
       <description>L'inférence de grands modèles de langage constitue désormais un marché de gros à part entière, où l'offre de modèles et de fournisseurs concurrents s'est multipliée rapidement grâce aux modèles ouverts. Le prix de cette intelligence a chuté d'environ mille fois, les modèles ouverts coûtant désormais près de 90% de moins que leurs équivalents propriétaires, dans un marché très dynamique où aucun acteur ne domine durablement.</description>
     </item>
     <item>
       <title>Public Debt, Wealth Inequality, and the Burden of Taxation</title>
       <link>https://doi.org/10.5089/9798229055925.001</link>
       <guid isPermaLink="false">fmi-10-5089-9798229055925-001</guid>
-      <pubDate>2026-08-01</pubDate>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
       <description>À partir d'un modèle de Diamond avec hétérogénéité des ménages et fiscalité progressive, cette étude démontre que la dette publique façonne la répartition des richesses en dictant la progressivité de l'impôt par le canal de la charge fiscale. Les données empiriques d'après-guerre confirment que la dette publique constitue un déterminant majeur des inégalités de patrimoine, son effet étant non linéaire selon le niveau de la charge fiscale et dépendant du régime de taux d'intérêt.</description>
     </item>
   </channel>

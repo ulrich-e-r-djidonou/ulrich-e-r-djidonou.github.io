@@ -18,7 +18,8 @@ alors que l'entree ne l'etait pas, le script s'arrete sans rien ecrire
 import json
 import re
 import sys
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
+from email.utils import format_datetime
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -240,14 +241,30 @@ def enregistrer_issue_signal(signal, entrees_du_run, aujourd_hui, chemin=None):
     chemin.write_text(contenu, encoding="utf-8")
 
 
+def date_rfc822(valeur):
+    """Convertit une date ISO en date RFC 822, seul format admis par RSS 2.0.
+
+    Le flux publiait la date ISO telle quelle. Selon l'agregateur, l'item
+    apparaissait sans date, date a l'heure de la recuperation, ou le flux
+    perdait son ordre chronologique. Une date absente ou illisible rend None :
+    l'appelant omet alors la balise, ce qui vaut mieux qu'une balise invalide.
+    """
+    try:
+        jour = datetime.strptime(valeur, "%Y-%m-%d")
+    except (TypeError, ValueError):
+        return None
+    return format_datetime(jour.replace(tzinfo=timezone.utc))
+
+
 def generer_feed_rss(entrees):
     items_xml = []
     for entree in entrees[:30]:
+        publiee = date_rfc822(entree.get("date_publication"))
+        ligne_date = f"\n      <pubDate>{publiee}</pubDate>" if publiee else ""
         items_xml.append(f"""    <item>
       <title>{escape(entree['titre'])}</title>
       <link>{escape(entree['url'])}</link>
-      <guid isPermaLink="false">{escape(entree['id'])}</guid>
-      <pubDate>{entree['date_publication']}</pubDate>
+      <guid isPermaLink="false">{escape(entree['id'])}</guid>{ligne_date}
       <description>{escape(entree.get('resume_fr', ''))}</description>
     </item>""")
     corps = "\n".join(items_xml)

@@ -90,6 +90,46 @@ class SynchroniserSitemapTests(unittest.TestCase):
                 publish.synchroniser_sitemap(sitemap, meta)
 
 
+class DateRfc822Tests(unittest.TestCase):
+    def test_convertit_une_date_iso(self):
+        # RSS 2.0 exige RFC 822 pour pubDate ; le flux publiait la date ISO
+        # telle quelle, ce qu'aucun agregateur strict n'accepte.
+        self.assertEqual(
+            publish.date_rfc822("2026-08-17"), "Mon, 17 Aug 2026 00:00:00 +0000"
+        )
+
+    def test_date_absente_rend_none(self):
+        self.assertIsNone(publish.date_rfc822(None))
+
+    def test_date_illisible_rend_none(self):
+        self.assertIsNone(publish.date_rfc822("bientot"))
+
+
+class GenererFeedRssTests(unittest.TestCase):
+    def test_pubdate_au_format_rfc822(self):
+        entrees = [{
+            "id": "x", "titre": "T", "url": "https://x.example/1",
+            "date_publication": "2026-08-17", "resume_fr": "R.",
+        }]
+
+        xml = publish.generer_feed_rss(entrees)
+
+        self.assertIn("<pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>", xml)
+
+    def test_omet_la_balise_si_la_date_est_illisible(self):
+        # Publier une balise vide ou invalide serait pire que ne pas la
+        # publier : certains agregateurs rejettent l'item entier sur une
+        # erreur de parsing plutot que d'ignorer un seul champ.
+        entrees = [{
+            "id": "x", "titre": "T", "url": "https://x.example/1",
+            "date_publication": "", "resume_fr": "R.",
+        }]
+
+        xml = publish.generer_feed_rss(entrees)
+
+        self.assertNotIn("<pubDate>", xml)
+
+
 class GenererJsonldFluxTests(unittest.TestCase):
     def test_distingue_la_redaction_du_travail_cite(self):
         entrees = [
