@@ -107,9 +107,32 @@
     ],
     "score": 6,
     "auteurs": "Paola Ganum, Tohid Atashbar",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash",
     "deja_signal": true
+  },
+  {
+    "id": "arxiv-2608.15339v1",
+    "titre": "Learning Sequential Mobility Choice: A Review of Route and Activity Choice through Inverse Reinforcement and Imitation Learning",
+    "url": "https://arxiv.org/abs/2608.15339v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-15",
+    "resume_fr": "Cette revue de littérature établit un cadre unifié reliant la modélisation comportementale des choix d'itinéraires et d'activités à l'apprentissage par renforcement inverse et à l'apprentissage par imitation. Elle montre que l'intégration des techniques d'apprentissage automatique dans une structure comportementale disciplinée améliore la prédictibilité et le passage à l'échelle sans sacrifier l'identification comportementale ni la pertinence pour les politiques publiques.",
+    "angle_eco": "L'intégration de l'apprentissage par renforcement inverse et par imitation dans la modélisation des choix séquentiels de mobilité permet d'améliorer la prédictibilité et le passage à l'échelle des modèles tout en préservant l'identification comportementale nécessaire à l'évaluation des politiques publiques.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "prevision"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Tien Mai",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "This review develops a unified framework connecting transportation choice modeling with inverse reinforcement learning and imitation learning, demonstrating that recursive logit, logit dynamic discrete choice, and maximum-entropy models share a soft Bellman representation. It concludes that integrating machine learning techniques within behaviorally disciplined choice frameworks improves scalability and predictive power without sacrificing behavioral identification or policy relevance.",
+    "angle_eco_en": "Integrating inverse reinforcement and imitation learning into sequential mobility choice modeling requires embedding data-driven algorithms within behaviorally disciplined frameworks to enhance scalability and predictive power without sacrificing structural identification, counterfactual policy evaluation, or interpretable behavioral trade-offs."
   },
   {
     "id": "arxiv-2608.14399v1",

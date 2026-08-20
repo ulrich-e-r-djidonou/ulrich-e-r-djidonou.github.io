@@ -48,6 +48,13 @@
       <description>En comparant plusieurs modèles GPT aux évaluations d'économistes du FMI sur des rapports au titre de l'Article IV, cette étude évalue les tâches d'analyse pouvant être déléguées à l'intelligence artificielle. Les résultats montrent que les meilleurs modèles actuels réussissent les tâches factuelles et structurées, mais restent moins fiables pour les évaluations nuancées exigeant le jugement d'experts humains.</description>
     </item>
     <item>
+      <title>Learning Sequential Mobility Choice: A Review of Route and Activity Choice through Inverse Reinforcement and Imitation Learning</title>
+      <link>https://arxiv.org/abs/2608.15339v1</link>
+      <guid isPermaLink="false">arxiv-2608.15339v1</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Cette revue de littérature établit un cadre unifié reliant la modélisation comportementale des choix d'itinéraires et d'activités à l'apprentissage par renforcement inverse et à l'apprentissage par imitation. Elle montre que l'intégration des techniques d'apprentissage automatique dans une structure comportementale disciplinée améliore la prédictibilité et le passage à l'échelle sans sacrifier l'identification comportementale ni la pertinence pour les politiques publiques.</description>
+    </item>
+    <item>
       <title>Whose doctor does the AI recommend? An algorithm audit of reputation and demographic signals in large language model-assisted physician choice</title>
       <link>https://arxiv.org/abs/2608.14399v1</link>
       <guid isPermaLink="false">arxiv-2608.14399v1</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="false">aea-10-1257-jep-20261506</guid>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
       <description>L'inférence de grands modèles de langage constitue désormais un marché de gros à part entière, où l'offre de modèles et de fournisseurs concurrents s'est multipliée rapidement grâce aux modèles ouverts. Le prix de cette intelligence a chuté d'environ mille fois, les modèles ouverts coûtant désormais près de 90% de moins que leurs équivalents propriétaires, dans un marché très dynamique où aucun acteur ne domine durablement.</description>
-    </item>
-    <item>
-      <title>Public Debt, Wealth Inequality, and the Burden of Taxation</title>
-      <link>https://doi.org/10.5089/9798229055925.001</link>
-      <guid isPermaLink="false">fmi-10-5089-9798229055925-001</guid>
-      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
-      <description>À partir d'un modèle de Diamond avec hétérogénéité des ménages et fiscalité progressive, cette étude démontre que la dette publique façonne la répartition des richesses en dictant la progressivité de l'impôt par le canal de la charge fiscale. Les données empiriques d'après-guerre confirment que la dette publique constitue un déterminant majeur des inégalités de patrimoine, son effet étant non linéaire selon le niveau de la charge fiscale et dépendant du régime de taux d'intérêt.</description>
     </item>
   </channel>
 </rss>
