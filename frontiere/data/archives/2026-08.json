@@ -1,5 +1,191 @@
 [
   {
+    "id": "arxiv-2608.19944v1",
+    "titre": "A Privacy Budgeting Framework for Online Experimentation",
+    "url": "https://arxiv.org/abs/2608.19944v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-20",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Gilian R. Ponte, Alina Ferecatu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.19634v1",
+    "titre": "Curvature-Calibrated Quasi-Bayesian Updating for Moment-Restricted Models",
+    "url": "https://arxiv.org/abs/2608.19634v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-20",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Masahiro Tanaka",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.20338v1",
+    "titre": "ConceptGuard: Benchmarking Context-Sensitive Unlearning in Large Language Models",
+    "url": "https://arxiv.org/abs/2608.20338v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-20",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Sahil Kale, Ian Harris",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.20322v1",
+    "titre": "A comparison between ceiling-mounted FMCW, IR-UWB and Wi-Fi radar for in-bedroom human activity monitoring and sleep interruption detection",
+    "url": "https://arxiv.org/abs/2608.20322v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-20",
+    "themes": [
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Anton Lambrecht, Reda El Hail, Xianjun Jiao, Pieter Crombez, Dominique Schreurs, Peter Karsmakers, Adnan Shahid, Eli De Poorter",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.20315v1",
+    "titre": "Explainable Transformer Models for Clinical Prediction Tasks on Structured Electronic Health Records",
+    "url": "https://arxiv.org/abs/2608.20315v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-20",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Jun Ni Du, Lukas Adamek, Maxim Kryukov, Flavio Dormont, Ziv Bar-Joseph, Sven Jager, Brandon Rufino",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.20285v1",
+    "titre": "Dynamic Structural Causal Modeling for Sleep",
+    "url": "https://arxiv.org/abs/2608.20285v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-20",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Ranveer Singh, Saurabh Mathur, Pranuthi Tenali, Arun Badi, Sriraam Natarajan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.20280v1",
+    "titre": "Which Eviction Policy Should an LLM Cache Use? A Systematic Study Across Workloads, Capacities, and Encoders",
+    "url": "https://arxiv.org/abs/2608.20280v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-20",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Yash Kulkarni, Shubham Harkare, Arvind Suresh Yogesh Babu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.20204v1",
+    "titre": "ContractScrub: A benchmark for final review of legal contracts",
+    "url": "https://arxiv.org/abs/2608.20204v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-20",
+    "themes": [
+      "llm"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Yejin Bang, Kirsty Fielding, Brandan Oliver, Brian Birke, Nabeel Seedat, Andrew M. Bean",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.20186v1",
+    "titre": "Decoding silent reading from non-invasive EEG",
+    "url": "https://arxiv.org/abs/2608.20186v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-20",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Ingo Marquardt, Anthilia Alchanat, Priyanka Jain",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.20025v1",
+    "titre": "CLaST: Context-aware Contrastive VAE for Probabilistic Time Series Forecasting",
+    "url": "https://arxiv.org/abs/2608.20025v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-20",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Alexander Marusov, Dmitry Anikin, Petr Sokerin, Vitaliy Pozdnyakov, Ilya Kuleshov, Alexey Zaytsev",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.19920v1",
+    "titre": "Learning how to Forget: Fine-tuning for Long-Context Sparse Attention",
+    "url": "https://arxiv.org/abs/2608.19920v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-20",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Matthias Seeger, Zeyu Zhang, Vihang Patil, Konstantinos Benidis, Sebastian Schelter",
+    "signal": false
+  },
+  {
     "id": "arxiv-2608.18973v1",
     "titre": "Don't Drop the Singletons: Efficient Inference for Pairwise Experiments with Independent Attrition",
     "url": "https://arxiv.org/abs/2608.18973v1",
