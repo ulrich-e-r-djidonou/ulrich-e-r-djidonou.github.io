@@ -1,5 +1,11 @@
 .venv/
 __pycache__/
+
+# Cles d'API en local. Le depot est public : un .env committe expose la cle a
+# l'instant du push, et la revoquer ne suffit pas, l'historique la garde. En
+# production les cles passent par les secrets GitHub, jamais par un fichier.
+.env
+.env.*
 pipeline/_candidats_bruts.json
 pipeline/_candidats_cures.json
 pipeline/_candidats_archives.json
