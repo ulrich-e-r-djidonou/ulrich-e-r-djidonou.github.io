@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   update:
@@ -133,3 +134,24 @@ jobs:
         # ce qui declenche la notification GitHub par defaut sur les
         # executions planifiees en echec.
         run: python pipeline/verifier_sante.py
+
+      - name: Preparer la notification de publication
+        # Apres le commit : ce qui est notifie doit etre en ligne. Le script
+        # n'ecrit rien quand l'execution n'a rien publie, et l'etape suivante
+        # est alors sautee plutot que d'ouvrir une issue vide.
+        if: always()
+        run: python -m pipeline.rendre_notification_publication
+
+      - name: Notifier ce qui vient d'etre publie
+        # Meme mecanisme que regenerer-flux.yml : c'est l'assignation, pas
+        # l'ouverture seule, qui declenche une notification GitHub fiable,
+        # donc une alerte sur l'application mobile avec les liens.
+        if: ${{ !cancelled() && hashFiles('pipeline/_publication_du_jour.md') != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "La Frontiere : publie le $(date -u +%F)" \
+            --body-file pipeline/_publication_du_jour.md \
+            --assignee ulrich-e-r-djidonou

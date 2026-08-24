@@ -3,6 +3,11 @@
 Toutes les modifications notables apportées à ce projet sont consignées dans ce document.
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/).
 
+## [2026-08-24] Notification de publication sur mobile
+
+### Ajouté
+- `pipeline/rendre_notification_publication.py` : rédige la liste des items réellement publiés par une exécution (croisement de `_candidats_cures.json` et du flux après publication, pour ne pas annoncer un candidat archivé ou écarté).
+- Étape de notification dans `.github/workflows/frontiere.yml` : ouvre une issue assignée à Ulrich avec les titres, les liens et les deux pages du site. L'assignation est ce qui déclenche l'alerte sur l'application GitHub mobile, comme dans `regenerer-flux.yml`. Le cron ne signalait jusqu'ici que ses échecs.
 ## [2026-08-24] Rattrapage bilingue de La Frontière
 
 ### Ajouté
