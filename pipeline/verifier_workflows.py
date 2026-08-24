@@ -5,13 +5,18 @@ GitHub envoie un courriel, qui se noie dans les autres. Trois projets ont
 ainsi passe des mois a ne plus se mettre a jour, et le defaut n'a ete
 decouvert qu'en lisant une notification par hasard.
 
-Trois signaux sont surveillés :
+Quatre signaux sont surveillés :
 
 1. Derniere execution en echec.
 2. Workflow desactive, notamment par la regle des 60 jours d'inactivite que
    GitHub applique aux taches planifiees.
 3. Workflow planifie qui n'a rien execute depuis trop longtemps : le cron a
    pu cesser de se declencher sans qu'aucune execution en echec ne le dise.
+4. Action figee sur une version que GitHub a deprecie. Celle-la ne casse
+   rien aujourd'hui : elle attend une date. L'avertissement ne vit que dans
+   les annotations d'execution, que personne ne lit, et le jour ou la
+   depreciation prend effet l'automatisation s'arrete d'un coup. Ce signal
+   ne couvre que le depot courant, dont les fichiers sont sur le disque.
 
 Le perimetre depend du jeton fourni :
 
@@ -34,8 +39,10 @@ est casse ») remonte sans publier le detail de projets fermes. En local,
 """
 
 import os
+import re
 import sys
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 import requests
 
@@ -50,6 +57,39 @@ TIMEOUT = 30
 # considere comme muet. Le cron mensuel le plus espace tourne tous les 30
 # jours : 50 laisse une marge d'un cycle manque sans crier au loup.
 SILENCE_MAX_JOURS = 50
+
+# Version majeure attendue pour chaque action utilisee dans le depot. En
+# dessous, l'action tourne sur un socle que GitHub a deja deprecie : elle
+# marche encore, mais son arret est decide et date.
+#
+# Cette table se met a jour a la main, quand GitHub annonce une nouvelle
+# depreciation. C'est volontaire : un controle qui exigerait toujours la
+# derniere majeure disponible ferait echouer le depot le jour d'une sortie,
+# pour une mise a niveau qui demande d'etre lue avant d'etre appliquee.
+#
+# Le 24 aout 2026, cinq des huit workflows etaient restes sur checkout@v4 et
+# setup-python@v5, cibles Node.js 20, pendant que trois autres etaient deja
+# passes a v5/v6. L'ecart ne vivait que dans les annotations d'execution,
+# que personne ne lit : d'ou ce controle.
+VERSIONS_MINIMALES = {
+    # Node.js 20 deprecie, ces actions sont deja forcees sur Node 24.
+    "actions/checkout": 5,
+    "actions/setup-python": 6,
+    # v3 annoncee pour retrait en decembre 2026 par GitHub.
+    "github/codeql-action/init": 4,
+    "github/codeql-action/analyze": 4,
+}
+
+# `uses: actions/checkout@v5`, avec ou sans guillemets, commentaire en fin
+# de ligne tolere. Une action epinglee sur un SHA n'est pas reconnue et
+# n'est donc pas signalee : c'est le cas d'un depot qui gere ses versions
+# autrement, pas un oubli a corriger ici.
+MOTIF_ACTION = re.compile(
+    r"""uses:\s*['"]?(?P<action>[\w.-]+/[\w./-]+?)@v(?P<version>\d+)""",
+    re.IGNORECASE,
+)
+
+DOSSIER_WORKFLOWS = Path(__file__).parent.parent / ".github" / "workflows"
 
 # Workflows de maintenance geres par GitHub, hors du perimetre : leurs
 # echecs relevent des mises a jour de dependances, pas de l'automatisation
@@ -268,6 +308,41 @@ def examiner_depot(depot, rang_prive=1):
     return problemes
 
 
+def actions_perimees(dossier=None):
+    """Actions dont la version majeure est passee sous le minimum attendu.
+
+    Ne couvre que le depot courant, dont les fichiers sont sur le disque :
+    les autres depots du proprietaire demanderaient un appel de contenu par
+    fichier, pour une dette qui ne casse rien avant sa date d'echeance. Le
+    rapport le dit plutot que de laisser croire a une couverture complete.
+
+    Retourne des problemes au meme format que `examiner_depot`, pour qu'ils
+    se rangent dans la meme liste et le meme tableau final.
+    """
+    dossier = Path(dossier) if dossier else DOSSIER_WORKFLOWS
+    if not dossier.is_dir():
+        return []
+
+    problemes = []
+    for fichier in sorted(dossier.glob("*.yml")) + sorted(dossier.glob("*.yaml")):
+        contenu = fichier.read_text(encoding="utf-8")
+        for correspondance in MOTIF_ACTION.finditer(contenu):
+            action = correspondance.group("action")
+            minimale = VERSIONS_MINIMALES.get(action)
+            if minimale is None:
+                continue
+            version = int(correspondance.group("version"))
+            if version < minimale:
+                problemes.append(
+                    (
+                        fichier.name,
+                        action,
+                        f"version v{version}, deprecie ; passer a v{minimale}",
+                    )
+                )
+    return problemes
+
+
 def resume_perimetre(depots, avec_jeton_personnel):
     """Phrase d'entete du rapport, qui dit ce qui n'est pas couvert."""
     if not avec_jeton_personnel:
@@ -300,6 +375,16 @@ def main():
         if depot.get("private"):
             rang_prive += 1
         problemes += examiner_depot(depot, rang_prive)
+
+    # Les versions d'actions ne se lisent que dans le depot courant, et le
+    # dire ici evite de faire passer ce controle pour ce qu'il n'est pas.
+    perimees = actions_perimees()
+    if perimees:
+        print(
+            f"{len(perimees)} action(s) sur une version deprecie dans ce depot. "
+            "Les autres depots ne sont pas couverts sur ce point."
+        )
+    problemes += perimees
 
     if not problemes:
         print("Aucune automatisation en panne.")
