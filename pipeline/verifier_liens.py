@@ -10,6 +10,18 @@ verification hebdomadaire.
 Ne verifie que les liens absolus (http/https) : les liens internes sont
 couverts par la construction du site elle-meme.
 
+Le perimetre couvre les pages HTML et les entrees de La Frontiere. Les
+secondes n'y etaient pas : frontiere.js les injecte depuis flux.json, donc
+leurs liens sortants n'apparaissent dans aucun fichier HTML et echappaient au
+controle. Ce sont pourtant les plus nombreux du site, les seuls a pointer
+vers des tiers que personne ne surveille, et les seuls a etre publies sans
+relecture humaine. Cas reel du 24 aout 2026 : le signal de la semaine menait
+a une page supprimee du FMI, decouvert en cliquant dessus.
+
+Les archives restent hors perimetre. Un lien d'archive qui meurt est une
+information perdue, pas une promesse rompue : la selection courante est ce
+que la page met en avant.
+
 Une redirection vers une page de connexion est traitee comme un echec, meme
 si elle repond 200 : pour un visiteur, un lien qui exige un compte n'est pas
 un lien public.
@@ -22,6 +34,7 @@ et n'echoue pas : il n'y a rien a corriger dans la page. Voir Probleme.
     python -m pipeline.verifier_liens --rapport-seul   # n'echoue jamais
 """
 
+import json
 import re
 import sys
 import time
@@ -35,6 +48,7 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 RACINE = Path(__file__).parent.parent
+FLUX = RACINE / "frontiere" / "data" / "flux.json"
 
 TIMEOUT = 30
 NAVIGATEUR = {
@@ -71,6 +85,15 @@ HOTES_IGNORES = (
     "x.com",
     "twitter.com",
 )
+
+# 403 ne dit pas qu'un lien est mort, seulement qu'un client automatise n'y a
+# pas droit. Les editeurs academiques le servent systematiquement : cepr.org
+# et pubs.aeaweb.org rendent 403 a ce controle et 200 dans un navigateur,
+# verifie le 24 aout 2026. Lister leurs hotes un a un serait une course
+# perdue, chaque nouvelle source du flux en ajoutant. Rapporte, jamais
+# bloquant : c'est la meme regle que pour un 503, appliquee a un refus qui
+# vise le robot et non le lien.
+CODES_REFUS_AUTOMATE = frozenset({401, 403})
 
 # Une URL contenant un de ces fragments signale que le lien mene a une
 # authentification plutot qu'au contenu annonce. La chaine de redirection
@@ -137,6 +160,28 @@ def pages_a_verifier():
     return pages
 
 
+def liens_du_flux(chemin_flux=None):
+    """Les URL externes des entrees publiees, avec leur origine.
+
+    Retourne une liste de (origine, url). L'origine nomme l'entree plutot que
+    le fichier : « flux.json » ne dirait pas laquelle des soixante corriger,
+    et le signal de la semaine merite d'etre reconnaissable puisque c'est
+    l'entree que la page met en avant.
+    """
+    chemin_flux = chemin_flux or FLUX
+    if not chemin_flux.exists():
+        return []
+    entrees = json.loads(chemin_flux.read_text(encoding="utf-8"))
+    liens = []
+    for entree in entrees:
+        url = entree.get("url")
+        if not url or not url.startswith(("http://", "https://")):
+            continue
+        marque = "signal de la semaine" if entree.get("signal") else "flux"
+        liens.append((f"{marque} : {entree.get('titre', entree.get('id', '?'))}", url))
+    return liens
+
+
 def extraire_liens(chemin):
     contenu = chemin.read_text(encoding="utf-8")
     return sorted(set(MOTIF_LIEN.findall(contenu)))
@@ -178,6 +223,12 @@ def verifier_par_le_reseau(url):
         )
 
     if reponse.status_code >= 400:
+        if reponse.status_code in CODES_REFUS_AUTOMATE:
+            return Probleme(
+                f"HTTP {reponse.status_code}, refus oppose aux clients "
+                "automatises plutot que lien mort",
+                bloquant=False,
+            )
         return Probleme(f"HTTP {reponse.status_code}", bloquant=True)
 
     parcourues = [etape.url for etape in reponse.history] + [reponse.url]
@@ -211,20 +262,27 @@ def main():
     indetermines = []
     deja_vus = {}
 
-    for page in pages_a_verifier():
-        for url in extraire_liens(page):
-            if hote_ignore(url):
-                continue
-            if url not in deja_vus:
-                deja_vus[url] = verifier(url)
-            probleme = deja_vus[url]
-            if probleme is None:
-                continue
-            entree = (page.relative_to(RACINE).as_posix(), url, probleme.raison)
-            (a_corriger if probleme.bloquant else indetermines).append(entree)
+    a_verifier = [
+        (page.relative_to(RACINE).as_posix(), url)
+        for page in pages_a_verifier()
+        for url in extraire_liens(page)
+    ]
+    liens_flux = liens_du_flux()
+    a_verifier += liens_flux
+
+    for origine, url in a_verifier:
+        if hote_ignore(url):
+            continue
+        if url not in deja_vus:
+            deja_vus[url] = verifier(url)
+        probleme = deja_vus[url]
+        if probleme is None:
+            continue
+        entree = (origine, url, probleme.raison)
+        (a_corriger if probleme.bloquant else indetermines).append(entree)
 
     print(f"{len(deja_vus)} liens absolus verifies sur "
-          f"{len(pages_a_verifier())} pages.")
+          f"{len(pages_a_verifier())} pages et {len(liens_flux)} entrees du flux.")
 
     # Rapporte avant le verdict : un lien qu'on n'a pas pu joindre reste une
     # information utile, meme s'il ne fait echouer personne.

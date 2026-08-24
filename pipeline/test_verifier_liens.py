@@ -8,6 +8,7 @@ vit dans chemin_local(), qui ne consulte que le disque.
     python -m unittest pipeline.test_verifier_liens
 """
 
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -146,8 +147,10 @@ class BloquantTests(unittest.TestCase):
         self.assertTrue(probleme.bloquant)
         self.assertIn("404", probleme.raison)
 
-    def test_un_403_bloque(self):
-        self.assertTrue(self._avec_reponse(403).bloquant)
+    def test_un_403_ne_bloque_plus(self):
+        # Change le 24 aout 2026 : 403 vise le client automatise, pas le lien.
+        # Voir RefusAutomateTests, qui porte le raisonnement complet.
+        self.assertFalse(self._avec_reponse(403).bloquant)
 
     def test_un_200_est_sain(self):
         self.assertIsNone(self._avec_reponse(200))
@@ -196,6 +199,85 @@ class ConfigurationTests(unittest.TestCase):
         """Sinon un lien reellement mort serait reessaye puis oublie."""
         self.assertNotIn(404, verifier_liens.CODES_TRANSITOIRES)
         self.assertNotIn(403, verifier_liens.CODES_TRANSITOIRES)
+
+
+class RefusAutomateTests(unittest.TestCase):
+    """403 vise le robot, pas le lien.
+
+    cepr.org et pubs.aeaweb.org rendent 403 a ce controle et 200 dans un
+    navigateur (verifie le 24 aout 2026). Les dix entrees du flux qui en
+    dependent feraient echouer la CI chaque semaine pour des liens valides.
+    """
+
+    def _avec_code(self, code):
+        original = verifier_liens.requests.get
+        dormir = verifier_liens.time.sleep
+        verifier_liens.requests.get = lambda *a, **k: SimpleNamespace(
+            status_code=code, history=[], url="https://exemple.invalid/p", close=lambda: None
+        )
+        verifier_liens.time.sleep = lambda _: None
+        try:
+            return verifier_liens.verifier("https://exemple.invalid/p")
+        finally:
+            verifier_liens.requests.get = original
+            verifier_liens.time.sleep = dormir
+
+    def test_un_403_est_signale_sans_bloquer(self):
+        probleme = self._avec_code(403)
+        self.assertIsNotNone(probleme)
+        self.assertFalse(probleme.bloquant)
+        self.assertIn("automatises", probleme.raison)
+
+    def test_un_404_reste_bloquant(self):
+        # Le point du controle : un lien reellement supprime doit sortir du
+        # bruit. Cas reel du 24 aout 2026, le signal de la semaine menait a
+        # une page retiree du FMI.
+        probleme = self._avec_code(404)
+        self.assertIsNotNone(probleme)
+        self.assertTrue(probleme.bloquant)
+
+
+class LiensDuFluxTests(unittest.TestCase):
+    """Les entrees du flux echappaient au controle : frontiere.js les injecte
+    depuis flux.json, donc leurs liens sortants n'existent dans aucun HTML."""
+
+    def _flux(self, entrees):
+        dossier = tempfile.TemporaryDirectory()
+        self.addCleanup(dossier.cleanup)
+        chemin = Path(dossier.name) / "flux.json"
+        chemin.write_text(json.dumps(entrees), encoding="utf-8")
+        return chemin
+
+    def test_le_signal_de_la_semaine_est_nomme_comme_tel(self):
+        # Sans cette distinction, un rapport dirait « flux.json » sans dire
+        # laquelle des soixante entrees corriger, ni que c'est celle que la
+        # page met en avant.
+        chemin = self._flux([
+            {"id": "a", "titre": "Ordinaire", "url": "https://exemple.test/a"},
+            {"id": "b", "titre": "Vedette", "url": "https://exemple.test/b", "signal": True},
+        ])
+        liens = verifier_liens.liens_du_flux(chemin)
+
+        self.assertEqual(len(liens), 2)
+        self.assertIn("signal de la semaine", dict((u, o) for o, u in liens)["https://exemple.test/b"])
+        self.assertIn("Vedette", dict((u, o) for o, u in liens)["https://exemple.test/b"])
+
+    def test_une_entree_sans_url_absolue_est_ignoree(self):
+        chemin = self._flux([
+            {"id": "a", "titre": "Relatif", "url": "/interne"},
+            {"id": "b", "titre": "Sans url"},
+        ])
+        self.assertEqual(verifier_liens.liens_du_flux(chemin), [])
+
+    def test_un_flux_absent_ne_fait_pas_echouer_le_controle(self):
+        # verifier_liens tourne aussi hors du pipeline, sur une copie sans
+        # donnees : lever ici ferait echouer un controle qui n'a rien vu de
+        # casse.
+        dossier = tempfile.TemporaryDirectory()
+        self.addCleanup(dossier.cleanup)
+        self.assertEqual(
+            verifier_liens.liens_du_flux(Path(dossier.name) / "absent.json"), []
+        )
 
 
 if __name__ == "__main__":
