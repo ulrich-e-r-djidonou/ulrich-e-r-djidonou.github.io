@@ -33,7 +33,9 @@ class ChargerAbstractsTests(unittest.TestCase):
             )
 
             with mock.patch.object(regenerer_flux, "CORPUS", corpus), \
-                    mock.patch.object(regenerer_flux, "CANDIDATS_BRUTS", bruts):
+                    mock.patch.object(regenerer_flux, "CANDIDATS_BRUTS", bruts),                     mock.patch.object(
+                        regenerer_flux, "ABSTRACTS_RATTRAPAGE", racine / "absent.json"
+                    ):
                 abstracts = regenerer_flux.charger_abstracts()
 
             self.assertEqual(
@@ -58,7 +60,9 @@ class ChargerAbstractsTests(unittest.TestCase):
             )
 
             with mock.patch.object(regenerer_flux, "CORPUS", corpus), \
-                    mock.patch.object(regenerer_flux, "CANDIDATS_BRUTS", bruts):
+                    mock.patch.object(regenerer_flux, "CANDIDATS_BRUTS", bruts),                     mock.patch.object(
+                        regenerer_flux, "ABSTRACTS_RATTRAPAGE", racine / "absent.json"
+                    ):
                 abstracts = regenerer_flux.charger_abstracts()
 
             self.assertEqual(abstracts["a"], "fige")
@@ -75,10 +79,42 @@ class ChargerAbstractsTests(unittest.TestCase):
             with mock.patch.object(regenerer_flux, "CORPUS", corpus), \
                     mock.patch.object(
                         regenerer_flux, "CANDIDATS_BRUTS", racine / "absent.json"
+                    ),                     mock.patch.object(
+                        regenerer_flux, "ABSTRACTS_RATTRAPAGE", racine / "absent.json"
                     ):
                 abstracts = regenerer_flux.charger_abstracts()
 
             self.assertEqual(abstracts, {"a": "seul"})
+
+
+    def test_le_rattrapage_ne_supplante_pas_les_sources_d_origine(self):
+        # Les abstracts retelecharges par collecter_abstracts_manquants
+        # comblent les trous, ils ne remplacent pas celui qui a servi a
+        # rediger le francais publie.
+        with tempfile.TemporaryDirectory() as dossier:
+            racine = Path(dossier)
+            corpus = racine / "corpus.json"
+            rattrapage = racine / "rattrapage.json"
+            corpus.write_text(
+                json.dumps({"items": [{"id": "a", "abstract": "fige"}]}),
+                encoding="utf-8",
+            )
+            rattrapage.write_text(
+                json.dumps([
+                    {"id": "a", "abstract": "retelecharge"},
+                    {"id": "b", "abstract": "trou comble"},
+                ]),
+                encoding="utf-8",
+            )
+
+            with mock.patch.object(regenerer_flux, "CORPUS", corpus),                     mock.patch.object(
+                        regenerer_flux, "CANDIDATS_BRUTS", racine / "absent.json"
+                    ),                     mock.patch.object(
+                        regenerer_flux, "ABSTRACTS_RATTRAPAGE", rattrapage
+                    ):
+                abstracts = regenerer_flux.charger_abstracts()
+
+            self.assertEqual(abstracts, {"a": "fige", "b": "trou comble"})
 
 
 class TrierPourRattrapageTests(unittest.TestCase):

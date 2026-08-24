@@ -45,6 +45,7 @@ if hasattr(sys.stdout, "reconfigure"):
 RACINE = Path(__file__).parent.parent
 FLUX = RACINE / "frontiere" / "data" / "flux.json"
 CORPUS = Path(__file__).parent / "benchmark" / "corpus.json"
+ABSTRACTS_RATTRAPAGE = Path(__file__).parent / "_abstracts_rattrapage.json"
 RELECTURE = Path(__file__).parent / "_regeneration.json"
 RELECTURE_LISIBLE = Path(__file__).parent / "_regeneration.md"
 RAPPORT_DU_JOUR = Path(__file__).parent / "_regeneration_du_jour.md"
@@ -269,9 +270,14 @@ def charger_abstracts():
     Rien n'est retelecharge ici. Un abstract recupere aujourd'hui ne serait
     pas forcement celui qui a servi a rediger le francais publie, et l'ecart
     entre les deux langues d'un meme item deviendrait invisible.
+
+    Troisieme source, _abstracts_rattrapage.json, produite a part par
+    pipeline.collecter_abstracts_manquants. Elle contient justement des
+    abstracts retelecharges, et elle vient en dernier pour que les deux
+    fichiers d'origine restent prioritaires quand ils couvrent l'item.
     """
     abstracts = {}
-    for fichier in (CORPUS, CANDIDATS_BRUTS):
+    for fichier in (CORPUS, CANDIDATS_BRUTS, ABSTRACTS_RATTRAPAGE):
         if not fichier.exists():
             continue
         contenu = json.loads(fichier.read_text(encoding="utf-8"))

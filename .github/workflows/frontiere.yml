@@ -79,6 +79,15 @@ jobs:
         # pas un simple manque isole a documenter apres coup.
         run: python -m pipeline.verifier_auteurs
 
+      - name: Verifier que la page anglaise ne retombe pas sur le francais
+        # Apres le commit, comme la sante du flux : un item sans champs
+        # anglais reste publiable, le francais lui sert de repli. Ce qui
+        # doit alerter, c'est la derive generale, pas l'item isole. Le
+        # rattrapage est manuel (voir pipeline/verifier_bilinguisme_flux.py)
+        # parce qu'il consomme du budget LLM hors du lot du jour.
+        continue-on-error: true
+        run: python -m pipeline.verifier_bilinguisme_flux
+
       - name: Committer si changements
         run: |
           git config user.name "frontiere-bot"
