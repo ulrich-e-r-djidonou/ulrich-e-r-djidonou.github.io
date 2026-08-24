@@ -17,6 +17,7 @@ pipeline/_rattrapage_en.json
 pipeline/_rattrapage_en.md
 pipeline/_abstracts_rattrapage.json
 pipeline/_publication_du_jour.md
+pipeline/_publication_du_jour_titre.txt
 
 # Installation locale du skill impeccable (outillage, non versionne)
 .claude/

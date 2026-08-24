@@ -7,6 +7,7 @@ Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/)
 
 ### Ajouté
 - `pipeline/rendre_notification_publication.py` : rédige la liste des items réellement publiés par une exécution (croisement de `_candidats_cures.json` et du flux après publication, pour ne pas annoncer un candidat archivé ou écarté).
+- Titre d'issue rendu par le script (`_publication_du_jour_titre.txt`) : nombre d'entrées, date et premier titre, tronqué à 120 caractères. C'est l'objet du courriel envoyé par GitHub, seul canal utilisé ici puisque l'application mobile n'est pas installée.
 - Étape de notification dans `.github/workflows/frontiere.yml` : ouvre une issue assignée à Ulrich avec les titres, les liens et les deux pages du site. L'assignation est ce qui déclenche l'alerte sur l'application GitHub mobile, comme dans `regenerer-flux.yml`. Le cron ne signalait jusqu'ici que ses échecs.
 ## [2026-08-24] Rattrapage bilingue de La Frontière
 

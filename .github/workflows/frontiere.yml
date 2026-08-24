@@ -144,14 +144,16 @@ jobs:
 
       - name: Notifier ce qui vient d'etre publie
         # Meme mecanisme que regenerer-flux.yml : c'est l'assignation, pas
-        # l'ouverture seule, qui declenche une notification GitHub fiable,
-        # donc une alerte sur l'application mobile avec les liens.
+        # l'ouverture seule, qui declenche une notification GitHub fiable.
+        # Ulrich la recoit par courriel (il n'a pas l'application mobile) :
+        # le titre de l'issue devient l'objet du courriel, d'ou le fichier
+        # de titre rendu par le script plutot qu'une date seule ici.
         if: ${{ !cancelled() && hashFiles('pipeline/_publication_du_jour.md') != '' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh issue create \
             --repo "$GITHUB_REPOSITORY" \
-            --title "La Frontiere : publie le $(date -u +%F)" \
+            --title "$(cat pipeline/_publication_du_jour_titre.txt)" \
             --body-file pipeline/_publication_du_jour.md \
             --assignee ulrich-e-r-djidonou

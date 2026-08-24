@@ -26,12 +26,41 @@ class ItemsPubliesTests(unittest.TestCase):
         self.assertEqual(notif.items_publies(cures, flux)[0]["titre"], "apres")
 
 
+class RendreTitreTests(unittest.TestCase):
+    def test_accorde_le_singulier(self):
+        self.assertTrue(
+            notif.rendre_titre([{"titre": "A"}], "2026-08-25").startswith(
+                "La Frontiere : 1 entree le"
+            )
+        )
+
+    def test_accorde_le_pluriel(self):
+        self.assertTrue(
+            notif.rendre_titre(
+                [{"titre": "A"}, {"titre": "B"}], "2026-08-25"
+            ).startswith("La Frontiere : 2 entrees le")
+        )
+
+    def test_tronque_un_titre_trop_long_pour_un_objet_de_courriel(self):
+        titre = notif.rendre_titre([{"titre": "M" * 300}], "2026-08-25")
+        self.assertLessEqual(len(titre), notif.LONGUEUR_TITRE)
+        self.assertTrue(titre.endswith("..."))
+
+    def test_se_passe_d_un_titre_absent(self):
+        self.assertEqual(
+            notif.rendre_titre([{"titre": "  "}], "2026-08-25"),
+            "La Frontiere : 1 entree le 2026-08-25",
+        )
+
+
 class MainTests(unittest.TestCase):
-    def _executer(self, cures, flux, sortie):
+    def _executer(self, cures, flux, sortie, titre=None):
+        titre = titre or sortie.with_name("titre.txt")
         with mock.patch.object(notif, "CURES", cures), \
                 mock.patch.object(notif, "FLUX", flux), \
-                mock.patch.object(notif, "SORTIE", sortie):
-            return notif.main()
+                mock.patch.object(notif, "SORTIE", sortie), \
+                mock.patch.object(notif, "SORTIE_TITRE", titre):
+            return notif.main(date="2026-08-25")
 
     def test_n_ecrit_rien_quand_il_n_y_a_rien_de_neuf(self):
         with tempfile.TemporaryDirectory() as dossier:
@@ -55,10 +84,13 @@ class MainTests(unittest.TestCase):
             sortie = racine / "sortie.md"
             cures.write_text("[]", encoding="utf-8")
             flux.write_text("[]", encoding="utf-8")
+            titre = racine / "titre.txt"
             sortie.write_text("# la veille", encoding="utf-8")
+            titre.write_text("titre de la veille", encoding="utf-8")
 
-            self.assertEqual(self._executer(cures, flux, sortie), 0)
+            self.assertEqual(self._executer(cures, flux, sortie, titre), 0)
             self.assertFalse(sortie.exists())
+            self.assertFalse(titre.exists())
 
     def test_ecrit_titre_lien_et_pages_du_site(self):
         with tempfile.TemporaryDirectory() as dossier:
@@ -87,6 +119,12 @@ class MainTests(unittest.TestCase):
             self.assertIn("Un mecanisme.", texte)
             self.assertIn(notif.PAGE, texte)
             self.assertIn(notif.PAGE_EN, texte)
+            # Les liens du site en tete : c'est l'apercu du courriel.
+            self.assertIn(notif.PAGE, texte.split("## ")[0])
+            self.assertEqual(
+                sortie.with_name("titre.txt").read_text(encoding="utf-8"),
+                "La Frontiere : 1 entree le 2026-08-25, Un papier",
+            )
 
     def test_fichiers_absents_ne_font_pas_echouer(self):
         with tempfile.TemporaryDirectory() as dossier:
