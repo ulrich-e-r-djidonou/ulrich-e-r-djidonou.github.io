@@ -137,6 +137,68 @@ def budget_epuise(appels_par_item=None):
     return _appels_effectues + cout > BUDGET_APPELS
 
 
+# Un lien mort n'est decouvert qu'en cliquant dessus, et l'entree la plus
+# cliquee est le signal de la semaine. Le 24 aout 2026, c'est exactement ce
+# qui est arrive : le FMI depose ses DOI chez Crossref par lots, six numeros
+# avant de publier les pages correspondantes, et la veille a mis en avant un
+# article dont la cible rendait 404 pendant trois jours.
+#
+# Le controle est ici et non dans collect.py : la collecte brasse des
+# centaines de candidats, la curation n'en garde qu'une dizaine. Et il passe
+# avant la redaction, donc un article fantome ne consomme pas non plus le
+# budget d'appels au modele.
+#
+# 403 et 401 ne comptent pas : ils visent le client automatise et non le lien.
+# cepr.org et pubs.aeaweb.org les servent a tout robot en rendant 200 dans un
+# navigateur. Les traiter comme des liens morts eliminerait dix des soixante
+# entrees du flux. Meme regle que dans verifier_liens.py.
+CODES_LIEN_MORT = frozenset({404, 410})
+TIMEOUT_LIEN = 15
+
+
+def lien_mort(url):
+    """Vrai seulement si la cible affirme que la ressource n'existe pas.
+
+    Le doute profite a l'article, toujours. Un reseau coupe, un delai depasse,
+    un hebergeur grognon ne sont pas des preuves d'absence, et ecarter un
+    article la-dessus le perdrait pour de bon : il serait marque vu a
+    l'execution suivante sans avoir jamais ete lu.
+
+    L'import est local, comme dans _appel_ollama : c'est ce qui permet aux
+    tests d'injecter leur propre module sans que ce controle sorte sur le
+    reseau. Un module injecte qui n'expose pas get() rend le controle
+    impossible, donc sans effet, ce qui est le bon comportement par defaut.
+    """
+    import requests
+
+    interroger = getattr(requests, "get", None)
+    if interroger is None:
+        return False
+    try:
+        reponse = interroger(
+            url,
+            timeout=TIMEOUT_LIEN,
+            headers={"User-Agent": NAVIGATEUR_LIEN},
+            allow_redirects=True,
+            stream=True,
+        )
+        fermer = getattr(reponse, "close", None)
+        if fermer is not None:
+            fermer()
+        code = reponse.status_code
+    except Exception:
+        # Large expres : toute impossibilite de verifier vaut « on ne sait
+        # pas », et « on ne sait pas » laisse passer l'article.
+        return False
+    return code in CODES_LIEN_MORT
+
+
+NAVIGATEUR_LIEN = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+)
+
+
 class OllamaIndisponible(RuntimeError):
     """Le service de redaction ne repond pas. Panne, pas defaut de redaction."""
 
@@ -821,6 +883,7 @@ def main():
     nb_eligibles = 0
     nb_non_publies_validation = 0
     nb_reportes = 0
+    nb_liens_morts = 0
 
     for candidat in candidats:
         if candidat["id"] in deja_vus:
@@ -852,6 +915,14 @@ def main():
             })
             continue
         nb_eligibles += 1
+
+        if lien_mort(candidat["url"]):
+            # Non marque vu, donc repris a l'execution suivante, comme un item
+            # reporte faute de quota : l'editeur publiera la page, et l'article
+            # reste pertinent. Le perdre serait pire que l'attendre.
+            nb_liens_morts += 1
+            print(f"  lien absent, article reporte : {candidat['titre']}")
+            continue
 
         if not LLM_ACTIF or budget_epuise():
             # Sans service de redaction, ou sans budget d'appels restant,
@@ -972,6 +1043,8 @@ def main():
         f"{nb_non_publies_validation}"
     )
     print(f"Items reportes au prochain run (non marques vus) : {nb_reportes}")
+    if nb_liens_morts:
+        print(f"Articles reportes faute de page publiee chez l'editeur : {nb_liens_morts}")
     print(f"Ecrits dans {SORTIE}")
     print(f"Ecrits dans {SORTIE_ARCHIVE}")
 

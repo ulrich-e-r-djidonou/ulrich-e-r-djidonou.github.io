@@ -9,6 +9,78 @@ from unittest.mock import patch
 
 from pipeline import curate
 
+# curate.lien_mort interroge la cible de chaque article retenu. Sans ce
+# neutralisant, la suite entiere sortirait sur le reseau, et les URL de test
+# en example.com repondent reellement 404 : les items disparaitraient des
+# assertions pour une raison qui n'a rien a voir avec ce qu'elles verifient.
+# Le controle a ses propres tests dans LienMortTests, ou il est eprouve pour
+# lui-meme.
+# Capturee a l'import, donc avant que setUpModule ne la remplace : c'est la
+# vraie fonction que LienMortTests doit eprouver, pas son neutralisant.
+LIEN_MORT_REEL = curate.lien_mort
+_lien_mort_neutralise = None
+
+
+def setUpModule():
+    global _lien_mort_neutralise
+    _lien_mort_neutralise = patch.object(curate, "lien_mort", return_value=False)
+    _lien_mort_neutralise.start()
+
+
+def tearDownModule():
+    _lien_mort_neutralise.stop()
+
+
+class LienMortTests(unittest.TestCase):
+    """Le doute profite a l'article : seule une reponse qui nie l'existence
+    de la ressource l'ecarte.
+
+    Cas reel du 24 aout 2026 : le FMI depose ses DOI chez Crossref six
+    numeros avant de publier les pages, et la veille a mis en avant comme
+    signal de la semaine un article dont la cible rendait 404.
+    """
+
+    def _avec(self, **module):
+        faux = types.ModuleType("requests")
+        for nom, valeur in module.items():
+            setattr(faux, nom, valeur)
+        return patch.dict(sys.modules, {"requests": faux})
+
+    def _reponse(self, code):
+        return types.SimpleNamespace(status_code=code, close=lambda: None)
+
+    def test_un_404_ecarte_l_article(self):
+        with self._avec(get=lambda *a, **k: self._reponse(404)):
+            self.assertTrue(LIEN_MORT_REEL("https://exemple.invalid/p"))
+
+    def test_un_410_ecarte_l_article(self):
+        with self._avec(get=lambda *a, **k: self._reponse(410)):
+            self.assertTrue(LIEN_MORT_REEL("https://exemple.invalid/p"))
+
+    def test_un_403_laisse_passer(self):
+        # cepr.org et pubs.aeaweb.org servent 403 a tout client automatise en
+        # rendant 200 dans un navigateur : dix des soixante entrees du flux
+        # en dependent.
+        with self._avec(get=lambda *a, **k: self._reponse(403)):
+            self.assertFalse(LIEN_MORT_REEL("https://exemple.invalid/p"))
+
+    def test_un_200_laisse_passer(self):
+        with self._avec(get=lambda *a, **k: self._reponse(200)):
+            self.assertFalse(LIEN_MORT_REEL("https://exemple.invalid/p"))
+
+    def test_une_panne_reseau_laisse_passer(self):
+        def _exploser(*_a, **_k):
+            raise OSError("reseau coupe")
+
+        with self._avec(get=_exploser):
+            self.assertFalse(LIEN_MORT_REEL("https://exemple.invalid/p"))
+
+    def test_un_module_sans_get_laisse_passer(self):
+        # Impossible de verifier vaut « on ne sait pas », et « on ne sait
+        # pas » laisse passer l'article.
+        with self._avec():
+            self.assertFalse(LIEN_MORT_REEL("https://exemple.invalid/p"))
+
 
 class ScoreSourceEconomiqueTests(unittest.TestCase):
     """Une revue d'economie publie de l'economie : le score ne doit pas le
