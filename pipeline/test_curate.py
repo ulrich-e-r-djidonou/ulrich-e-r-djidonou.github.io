@@ -1,3 +1,4 @@
+import io
 import json
 import sys
 import tempfile
@@ -1184,6 +1185,72 @@ class ChampsAnglaisNonBloquantsTests(unittest.TestCase):
         self.assertTrue(publies[0]["resume_fr"])
         self.assertNotIn("resume_en", publies[0])
         self.assertNotIn("angle_eco_en", publies[0])
+
+
+class JournalisationValidationTests(unittest.TestCase):
+    """Quand un essai echoue a la validation, le motif de rejet doit etre
+    affiche sur stderr pour ne pas laisser un echec muet dans les journaux."""
+
+    def test_journalise_sur_stderr_le_motif_de_rejet(self):
+        flux_stderr = io.StringIO()
+        reponses = iter(["Une seule phrase.", "Deux phrases valides. Voici la seconde."])
+
+        with patch("sys.stderr", flux_stderr):
+            texte = curate._generer_avec_reprise(
+                lambda: next(reponses),
+                curate.erreurs_resume,
+                nom_champ="resume_fr",
+                titre="Test Titre",
+            )
+
+        self.assertEqual(texte, "Deux phrases valides. Voici la seconde.")
+        journal = flux_stderr.getvalue()
+        self.assertIn("Rejet validation (resume_fr)", journal)
+        self.assertIn('"Test Titre"', journal)
+        self.assertIn("[essai 1/2]", journal)
+        self.assertIn("nombre_phrases", journal)
+
+    def test_double_echec_journalise_deux_essais_et_retourne_none(self):
+        flux_stderr = io.StringIO()
+
+        with patch("sys.stderr", flux_stderr):
+            texte = curate._generer_avec_reprise(
+                lambda: "Une seule phrase.",
+                curate.erreurs_resume,
+                nom_champ="resume_fr",
+                titre="Test Invalide",
+            )
+
+        self.assertIsNone(texte)
+        journal = flux_stderr.getvalue()
+        self.assertIn("[essai 1/2]", journal)
+        self.assertIn("[essai 2/2]", journal)
+
+    def test_reussite_immediate_n_ecrit_rien_sur_stderr(self):
+        flux_stderr = io.StringIO()
+
+        with patch("sys.stderr", flux_stderr):
+            texte = curate._generer_avec_reprise(
+                lambda: "Deux phrases valides. Voici la seconde.",
+                curate.erreurs_resume,
+                nom_champ="resume_fr",
+                titre="Test Direct",
+            )
+
+        self.assertEqual(texte, "Deux phrases valides. Voici la seconde.")
+        self.assertEqual(flux_stderr.getvalue(), "")
+
+    def test_compatible_avec_validateur_booleen(self):
+        flux_stderr = io.StringIO()
+
+        with patch("sys.stderr", flux_stderr):
+            texte = curate._generer_avec_reprise(
+                lambda: "Texte valide.",
+                lambda t: True,
+            )
+
+        self.assertEqual(texte, "Texte valide.")
+        self.assertEqual(flux_stderr.getvalue(), "")
 
 
 if __name__ == "__main__":

@@ -618,12 +618,34 @@ def erreurs_invention(texte, source):
     return ["chiffre_invente"] if inventes else []
 
 
-def _generer_avec_reprise(generateur, validateur):
-    """Tente deux generations au maximum et retourne la premiere sortie valide."""
-    for _ in range(2):
+def _generer_avec_reprise(generateur, fonction_erreurs, nom_champ=None, titre=None):
+    """Tente deux generations au maximum et retourne la premiere sortie valide.
+
+    Quand un essai echoue, affiche le motif de rejet sur stderr pour que le
+    journal du run rende compte de la cause au lieu de laisser un echec muet.
+    """
+    for essai in range(1, 3):
         texte = generateur()
-        if texte and validateur(texte):
+        if not texte:
+            erreurs = ["texte_vide"]
+        else:
+            res = fonction_erreurs(texte)
+            if isinstance(res, bool):
+                erreurs = [] if res else ["invalide"]
+            elif isinstance(res, (list, tuple, set)):
+                erreurs = list(res)
+            else:
+                erreurs = [] if res else ["invalide"]
+
+        if not erreurs:
             return texte
+
+        champ = f" ({nom_champ})" if nom_champ else ""
+        sur = f' pour "{titre}"' if titre else ""
+        print(
+            f"  Rejet validation{champ}{sur} [essai {essai}/2] : {', '.join(erreurs)}",
+            file=sys.stderr,
+        )
     return None
 
 
@@ -935,8 +957,10 @@ def main():
             lambda: resume_ollama(
                 candidat["titre"], candidat.get("abstract", "")
             ),
-            lambda texte: not erreurs_resume(texte)
-            and not erreurs_invention(texte, texte_complet),
+            lambda texte: erreurs_resume(texte)
+            + erreurs_invention(texte, texte_complet),
+            nom_champ="resume_fr",
+            titre=candidat["titre"],
         )
         if not resume_fr:
             nouveaux_vus[candidat["id"]] = {"score": score, "traite": True}
@@ -947,8 +971,10 @@ def main():
             lambda: angle_eco_ollama(
                 candidat["titre"], candidat.get("abstract", "")
             ),
-            lambda texte: not erreurs_angle(texte)
-            and not erreurs_invention(texte, texte_complet),
+            lambda texte: erreurs_angle(texte)
+            + erreurs_invention(texte, texte_complet),
+            nom_champ="angle_eco",
+            titre=candidat["titre"],
         )
         if not angle_eco:
             nouveaux_vus[candidat["id"]] = {"score": score, "traite": True}
@@ -971,15 +997,19 @@ def main():
                     lambda: resume_en_ollama(
                         candidat["titre"], candidat.get("abstract", "")
                     ),
-                    lambda texte: not erreurs_resume_en(texte)
-                    and not erreurs_invention(texte, texte_complet),
+                    lambda texte: erreurs_resume_en(texte)
+                    + erreurs_invention(texte, texte_complet),
+                    nom_champ="resume_en",
+                    titre=candidat["titre"],
                 )
                 angle_eco_en = _generer_avec_reprise(
                     lambda: angle_eco_en_ollama(
                         candidat["titre"], candidat.get("abstract", "")
                     ),
-                    lambda texte: not erreurs_angle_en(texte)
-                    and not erreurs_invention(texte, texte_complet),
+                    lambda texte: erreurs_angle_en(texte)
+                    + erreurs_invention(texte, texte_complet),
+                    nom_champ="angle_eco_en",
+                    titre=candidat["titre"],
                 )
             except OllamaIndisponible:
                 resume_en = None

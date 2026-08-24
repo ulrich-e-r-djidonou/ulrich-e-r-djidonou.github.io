@@ -6,7 +6,12 @@ import subprocess
 import sys
 from pathlib import Path
 
-from pipeline.curate import erreurs_angle, erreurs_resume
+from pipeline.curate import (
+    erreurs_angle,
+    erreurs_angle_en,
+    erreurs_resume,
+    erreurs_resume_en,
+)
 
 
 def charger_flux(chemin, git_ref):
@@ -52,6 +57,55 @@ def mesurer(entrees):
     return len(sorties), controles
 
 
+def mesurer_en(entrees):
+    sorties_en = [
+        entree for entree in entrees
+        if entree.get("resume_en") or entree.get("angle_eco_en")
+    ]
+    controles_en = {
+        "resume_en_nombre_phrases": 0,
+        "resume_en_ponctuation": 0,
+        "angle_en_nombre_phrases": 0,
+        "formule_stereotypee_en": 0,
+        "premiere_personne_en": 0,
+        "tiret_cadratin_en": 0,
+        "francais_residuel_en": 0,
+        "caracteres_non_latins_en": 0,
+        "au_moins_un_echec_en": 0,
+    }
+
+    for entree in sorties_en:
+        err_res = (
+            set(erreurs_resume_en(entree.get("resume_en", "")))
+            if entree.get("resume_en")
+            else set()
+        )
+        err_ang = (
+            set(erreurs_angle_en(entree.get("angle_eco_en", "")))
+            if entree.get("angle_eco_en")
+            else set()
+        )
+        controles_en["resume_en_nombre_phrases"] += "nombre_phrases" in err_res
+        controles_en["resume_en_ponctuation"] += "ponctuation_finale" in err_res
+        controles_en["angle_en_nombre_phrases"] += "nombre_phrases" in err_ang
+        controles_en["formule_stereotypee_en"] += "formule_stereotypee" in err_ang
+        controles_en["premiere_personne_en"] += bool(
+            "premiere_personne" in err_res or "premiere_personne" in err_ang
+        )
+        controles_en["tiret_cadratin_en"] += bool(
+            "tiret_cadratin" in err_res or "tiret_cadratin" in err_ang
+        )
+        controles_en["francais_residuel_en"] += bool(
+            "francais_residuel" in err_res or "francais_residuel" in err_ang
+        )
+        controles_en["caracteres_non_latins_en"] += bool(
+            "caracteres_non_latins" in err_res or "caracteres_non_latins" in err_ang
+        )
+        controles_en["au_moins_un_echec_en"] += bool(err_res or err_ang)
+
+    return len(sorties_en), controles_en
+
+
 def main():
     analyseur = argparse.ArgumentParser()
     analyseur.add_argument(
@@ -73,11 +127,20 @@ def main():
     )
     arguments = analyseur.parse_args()
 
-    total, controles = mesurer(charger_flux(arguments.chemin, arguments.git_ref))
-    print(f"Sorties LLM mesurées : {total}")
+    entrees = charger_flux(arguments.chemin, arguments.git_ref)
+    total, controles = mesurer(entrees)
+    print(f"Sorties LLM mesurées (français) : {total}")
     for controle, echecs in controles.items():
         taux = (echecs / total * 100) if total else 0.0
         print(f"{controle} : {echecs}/{total} ({taux:.1f} %)")
+
+    total_en, controles_en = mesurer_en(entrees)
+    if total_en:
+        print()
+        print(f"Sorties LLM mesurées (anglais) : {total_en}")
+        for controle, echecs in controles_en.items():
+            taux = (echecs / total_en * 100) if total_en else 0.0
+            print(f"{controle} : {echecs}/{total_en} ({taux:.1f} %)")
 
     taux_hors_formule = (
         controles["echec_hors_formule"] / total * 100 if total else 0.0
