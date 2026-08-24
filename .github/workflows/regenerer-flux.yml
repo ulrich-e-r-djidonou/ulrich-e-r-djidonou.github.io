@@ -21,6 +21,18 @@ on:
         description: "Completer les champs anglais des items publies, au lieu de reecrire le francais"
         type: boolean
         default: false
+      budget_appels:
+        # Plafond d'appels au modele pour cette execution, tous fournisseurs
+        # confondus. La valeur par defaut est calee sur le palier gratuit de
+        # Gemini (20 requetes par jour et par modele), avec de la marge : c'est
+        # le bon reglage tant que le lot avance a cout nul, un jour a la fois.
+        # La relever fait deborder sur le repli, qui est facture. Un rattrapage
+        # qu'on veut terminer le jour meme le justifie : 4 appels par item au
+        # pire, environ 0,004 $ US l'item sur claude-haiku-4-5. Au-dela de ce
+        # cas, laisser la valeur par defaut.
+        description: "Plafond d'appels au modele (16 = quota gratuit, plus = facture au repli)"
+        type: string
+        default: "16"
 
 permissions:
   contents: write
@@ -67,7 +79,7 @@ jobs:
           # Meme budget que la veille, pour la meme raison : s'arreter avant le
           # mur. Un quota atteint se paie deux fois, en requetes refusees puis
           # en tentatives de reprise qui consomment le quota du lendemain.
-          LLM_BUDGET_APPELS: "16"
+          LLM_BUDGET_APPELS: ${{ inputs.budget_appels }}
           # Meme repli que la veille : regenerer_flux.py passe par
           # curate._appel_ollama, donc la bascule vers Claude en cas de panne
           # ou de quota Gemini epuise s'applique ici sans code supplementaire.
@@ -86,7 +98,7 @@ jobs:
           LLM_API_URL: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
           LLM_API_MODELE: gemini-3.6-flash
           LLM_API_CLE: ${{ secrets.LLM_API_CLE }}
-          LLM_BUDGET_APPELS: "16"
+          LLM_BUDGET_APPELS: ${{ inputs.budget_appels }}
           LLM_API_URL_REPLI: https://api.anthropic.com/v1/chat/completions
           LLM_API_MODELE_REPLI: claude-haiku-4-5
           LLM_API_CLE_REPLI: ${{ secrets.LLM_API_CLE_REPLI }}
