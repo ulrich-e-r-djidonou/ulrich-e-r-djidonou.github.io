@@ -802,7 +802,9 @@
     "score": 4,
     "auteurs": "Michele Liberatore, Massimo Riccaboni",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Using product-level pharmaceutical data and double machine learning, the study shows that technology licensing increases overall project success probabilities, though market performance varies systematically between incremental and novel innovations. While licensing maintains competitive return equalization and positive selection for incremental projects, persistent information frictions cause this risk-return trade-off to break down for novel innovations.",
+    "angle_eco_en": "Lower information precision in novel pharmaceutical R&D relative to incremental projects generates lemons-type market frictions in technology licensing, causing competitive return equalization to hold for incremental innovations while breaking down for novel ones."
   },
   {
     "id": "arxiv-2607.20327v1",
@@ -821,7 +823,9 @@
     "score": 4,
     "auteurs": "Niqi Lyu, Pengtao Shi, Wei Qiu, Jianlin Zhong, Sicong Xia, Jianyao Ma, Yicheng Ding",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "PyroDash is a cost-aware framework that enables a small language model to internalize offloading decisions and request completion from a frozen large language model through a single token-level handoff. Across five mathematical reasoning benchmarks, PyroDash reduces inference costs by 20.4 percent while outperforming the baseline large language model in average accuracy, and can lower total costs from USD 49.36 to USD 1.78 depending on the cost-saving configuration.",
+    "angle_eco_en": "Internalizing token-level offloading decisions within a small language model balances reasoning accuracy against computational cost by selectively delegating generation tasks to an expensive large language model."
   },
   {
     "id": "arxiv-2607.20781v1",
@@ -838,7 +842,9 @@
     "score": 4,
     "auteurs": "Bonny Banerjee, Shreya Singh",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "This paper develops an analytical model of task allocation in hierarchical organizations that establishes the Human-AI Substitution Principle, formalizing the conditions under which artificial intelligence replaces human labor based on economic asymmetries between human skill acquisition and capability scaling. The findings demonstrate that artificial intelligence adoption can induce abrupt workforce transitions, create flatter managerial hierarchies with wider spans of control, and increase the automation vulnerability of middle managers and skilled workers below a specific skill threshold.",
+    "angle_eco_en": "The economic asymmetry between human skill acquisition and artificial intelligence capability scaling determines how risk-adjusted costs, skill thresholds, and deployment scale jointly drive human-AI labor substitution, abrupt workforce transitions, and flatter managerial hierarchies."
   },
   {
     "id": "arxiv-2607.18795v1",
@@ -856,7 +862,9 @@
     "score": 3,
     "auteurs": "C. Castaldi, F. Castellacci, A. Fronzetti Colladon, L. Segneri, F. Venturini",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Trademark data provides a timely and globally available source across all economic sectors that complements patents in measuring the development and diffusion of artificial intelligence. Using an empirical exploration of Italian firms, the research note illustrates how artificial intelligence trademarks reveal the ways businesses exploit these technologies to develop new goods and services.",
+    "angle_eco_en": "Trademark data can capture the commercialization and sectoral diffusion of artificial intelligence innovations that patent data alone may not reveal, offering a timely and globally comparable alternative for tracking how firms develop new goods and services incorporating AI technologies."
   },
   {
     "id": "arxiv-2607.17378v1",
@@ -874,7 +882,9 @@
     "score": 4,
     "auteurs": "Yuya Shimizu",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper establishes theoretical foundations for using pre-trained deep learning embeddings as covariates in economic analyses by providing sufficient conditions to address the challenges of domain mismatch between the pre-training task and target task, as well as the identification problem inherent in embedding functions. The authors derive convergence rates for machine learning models employing pre-trained embeddings and demonstrate applications including partially linear regression with unstructured controls, price elasticity estimation using image and text data on product quality, missing data imputation, and average treatment effect estimation with unstructured confounders.",
+    "angle_eco_en": "Using pre-trained embeddings from models developed for different datasets and tasks as covariates in economic analyses creates an identification problem that obscures the estimation error of the embedding function and its propagation to target economic parameters."
   },
   {
     "id": "arxiv-2607.15385v1",
@@ -929,7 +939,9 @@
     "score": 3,
     "auteurs": "Mohammad Rashid, Hema Yoganarasimhan",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A large-scale randomized field experiment on an Android app store with over five million users found that increasing sponsored ad slots from one to six raises revenue by up to 43% but reduces total search conversions by up to 5% and daily engagement by up to 2.2%, with substantial heterogeneity across query types depending on advertiser composition. The authors deployed an adaptive algorithm called exploration-augmented Locally Adaptive Ad Load (e-LAAL) that improved the revenue-conversion trade-off in a production deployment serving 22.3 million users and 77.6 million searches compared to static benchmarks.",
+    "angle_eco_en": "Increasing the number of sponsored advertisement slots in search results raises revenue but reduces user search conversions and engagement, with the magnitude of this trade-off varying substantially across queries depending on advertiser composition and user conversion propensity."
   },
   {
     "id": "arxiv-2607.09568v1",
@@ -948,7 +960,9 @@
     "score": 4,
     "auteurs": "Rui Yao, Kenan Zhang",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper introduces a perturbed utility Markovian equilibrium (PUME) framework that extends link-based Markovian traffic equilibrium models to accommodate boundary choice probabilities, undiscounted network loading, and general link interactions while maintaining computational scalability. The authors establish the theoretical foundations of PUME through a perturbed utility Markovian choice model with a convex surplus function, formulate equilibrium as a variational inequality problem with existence and uniqueness guarantees, and develop a modified policy iteration method for computation.",
+    "angle_eco_en": "Existing Markovian traffic equilibrium models lack the flexibility to handle boundary choice probabilities where unattractive links receive zero flow, non-separable cost structures, and asymmetric link interactions without imposing restrictive ex ante choice-set constraints."
   },
   {
     "id": "arxiv-2607.09461v1",
@@ -967,7 +981,9 @@
     "auteurs": "Xianhua Peng, Wu Guo, Songyan Wang, Jianfei Zhu",
     "signal": false,
     "llm": "gemini-3.6-flash",
-    "deja_signal": true
+    "deja_signal": true,
+    "resume_en": "The authors propose the certainty-equivalent first-order learning (CEFOL) algorithm, which uses separate neural networks to represent the certainty equivalent, value functions, policy functions, and Lagrange multipliers by exploiting Bellman equations and first-order optimality conditions to solve discrete-time dynamic programming problems with recursive utility. The algorithm is applied to risk-sensitive consumption-saving problems, robust-control problems, and a DSGE model with recursive preferences, achieving out-of-sample Bellman diagnostics and optimality residuals generally between 1.0e-4 and 1.0e-3 across relevant state regions.",
+    "angle_eco_en": "The nonlinear certainty equivalent that appears in the Bellman equation and first-order optimality conditions for recursive utility problems is difficult to evaluate directly within standard dynamic programming approaches."
   },
   {
     "id": "arxiv-2607.09616v1",
@@ -984,7 +1000,9 @@
     "score": 3,
     "auteurs": "Kangwei Xu, Bing Li, Ulf Schlichtmann",
     "signal": false,
-    "llm": "claude-haiku-4-5"
+    "llm": "claude-haiku-4-5",
+    "resume_en": "Large Language Models have demonstrated potential in Electronic Design Automation for front-end chip design, with applications including specification understanding, hardware description language generation, testbench construction, and design space exploration. The paper reviews LLM advances in circuit and testbench generation from specifications and design quality improvement in high-level synthesis workflows, while discussing challenges and future opportunities for integrating agentic AI systems into EDA.",
+    "angle_eco_en": "Increasing chip complexity and time-to-market pressures create a critical bottleneck in front-end design that large language models may help address through automated hardware description language generation, testbench construction, and design space exploration."
   },
   {
     "id": "arxiv-2607.09348v1",
@@ -1003,7 +1021,9 @@
     "score": 4,
     "auteurs": "Xin Li, Jin Li, Shoujin Wang, Kun Yu, Fang Chen",
     "signal": false,
-    "llm": "claude-haiku-4-5"
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The paper addresses causal discovery from unstructured data in high-expertise domains by proposing DKCD, a framework that integrates domain knowledge mining, knowledge-guided causal reasoning, and causal structure discovery to overcome limitations in identifying latent factors and annotating factors reliably. Experiments on two domain-specific datasets demonstrate that DKCD significantly improves performance in constructing causal graphs from unstructured data.",
+    "angle_eco_en": "Identifying latent causal factors from unstructured data in specialized domains like healthcare and finance remains difficult without domain-specific knowledge to guide the reasoning process that connects observable information to underlying causal structures."
   },
   {
     "id": "arxiv-2607.09316v1",
@@ -1022,7 +1042,9 @@
     "score": 3,
     "auteurs": "Miguel Arana-Catania, Gillian Pink, Glenn Roe",
     "signal": false,
-    "llm": "claude-haiku-4-5"
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The paper applies machine learning to automatic thematic indexing of Voltaire's Complete Works, framing the task as multi-label classification and comparing approaches ranging from encoder-based models to large language models fine-tuned via Low-Rank Adaptation. The best-performing model, a quantised Mistral variant, achieves F1 scores up to 0.67 and demonstrates semantic validity in predictions despite divergences from the print index, while the authors also evaluate cross-corpus generalisation and analyse model performance on literary and rhetorical features.",
+    "angle_eco_en": "The labour-intensive nature of manually assigning structured conceptual labels to sections of text in large literary and historical editions creates a need for automated approaches that can learn to replicate professional indexing decisions across multi-label classification tasks."
   },
   {
     "id": "arxiv-2607.08665v1",
@@ -1041,7 +1063,9 @@
     "auteurs": "Teng-Ruei Chen",
     "signal": false,
     "llm": "claude-haiku-4-5",
-    "deja_signal": true
+    "deja_signal": true,
+    "resume_en": "The paper addresses the problem of allocating a limited per-query budget between resampling from a committed large language model and rerouting to an alternative model, given an imperfect verifier for correctness. The authors propose an online resample-or-reroute policy that estimates marginal correctness per unit cost and demonstrate on four benchmarks that this approach achieves favorable cost-quality trade-offs compared to existing baselines including single-route, budget-aware best-of-K, and cascade methods.",
+    "angle_eco_en": "When a fixed cost budget is available per query to improve large language model responses, the allocation between resampling outputs from a committed model and rerouting to an alternative model must be optimized given an imperfect verifier that cannot provide correctness labels with certainty."
   },
   {
     "id": "arxiv-2607.08920v1",
@@ -1060,7 +1084,9 @@
     "score": 6,
     "auteurs": "Yang Yu, Martin Fleming, Lucy Hampton, Christophe Combemale, Neil Thompson",
     "signal": false,
-    "llm": "claude-haiku-4-5"
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The authors measure deep AI adoption among S&P 500 firms using SEC 10-K filings and find that 11% had AI deeply integrated into business processes by 2025, with adoption more than quadrupling from 5% in 2022, concentrated heavily in the technology sector. While firm profitability exhibits a J-curve pattern as firms move from no adoption to deep adoption, the study observes no differences in capital expenditure or productivity between adopting and non-adopting firms.",
+    "angle_eco_en": "The deep integration of artificial intelligence into business processes of large enterprises may initially reduce firm profitability before potentially improving it, yet shows no measurable effect on capital expenditure or productivity gains."
   },
   {
     "id": "arxiv-2607.08681v1",
@@ -1079,7 +1105,9 @@
     "score": 4,
     "auteurs": "Shilin Ou, Yifan Xu, Luyao Zhang",
     "signal": false,
-    "llm": "claude-haiku-4-5"
+    "llm": "claude-haiku-4-5",
+    "resume_en": "SolarChain-Eval is a physics-constrained benchmark that evaluates autonomous agents in decentralized energy markets across multiple dimensions including market utility, physical safety, slippage, action smoothness, spatial fairness, and auditability, with an LLM-based Planner/Auditor layer that defines action bounds and audits high-risk decisions. Experiments comparing static, random, myopic, reinforcement learning, and reinforcement learning plus LLM policies demonstrate a utility-safety trade-off where RL agents improve market utility but can produce unsafe behavior, while removing physics penalties causes reward-maximizing agents to exploit invalid generation and increase artificial liquidity, though the LLM Planner/Auditor improves auditability and mitigates selected risks.",
+    "angle_eco_en": "Autonomous agents operating in decentralized energy markets can improve market utility while simultaneously exploiting invalid physical data, creating artificial liquidity, and generating unstable governance decisions, creating a fundamental trade-off between economic performance and physical safety."
   },
   {
     "id": "fed-ne-learning-approaches-to-implied-volatility-forecasting-htm",
@@ -1115,7 +1143,9 @@
     "score": 6,
     "auteurs": "",
     "signal": false,
-    "llm": "claude (repassage manuel du 5 aout, colonne hors fenetre de collecte et cepr.org bloquant l'acces automatise ; source : extrait original archive + resume du papier sous-jacent via arxiv.org/abs/2608.01607, Choukhmane/de Silva/Lin/Akuzawa)"
+    "llm": "claude (repassage manuel du 5 aout, colonne hors fenetre de collecte et cepr.org bloquant l'acces automatise ; source : extrait original archive + resume du papier sous-jacent via arxiv.org/abs/2608.01607, Choukhmane/de Silva/Lin/Akuzawa)",
+    "resume_en": "The authors develop a method to evaluate financial advice from large language models by surveying adults about their spending and investing questions, then simulating lifetime financial outcomes under realistic market conditions. Applying this method to GPT-5.2 and Gemini 3 Flash, they find that following LLM advice would move most respondents closer to life cycle theory predictions, that academic prompts produce advice even more aligned with theory, and that advice varies systematically by individual characteristics such as gender and financial literacy, creating retirement wealth differences of 4-5% between groups.",
+    "angle_eco_en": "The financial guidance generated by large language models depends jointly on the characteristics of individuals seeking advice and the model's own responses, creating variation in lifetime wealth outcomes that reflects both heterogeneous demand for guidance and heterogeneous supply of recommendations across demographic groups."
   },
   {
     "id": "voxeu-org-voxeu-columns-ai-productivity-and-work-evidence-us-firms",
