@@ -202,11 +202,13 @@ class ConfigurationTests(unittest.TestCase):
 
 
 class RefusAutomateTests(unittest.TestCase):
-    """403 vise le robot, pas le lien.
+    """403 et 405 visent le robot, pas le lien.
 
     cepr.org et pubs.aeaweb.org rendent 403 a ce controle et 200 dans un
     navigateur (verifie le 24 aout 2026). Les dix entrees du flux qui en
     dependent feraient echouer la CI chaque semaine pour des liens valides.
+    Le meme jour, l'eLibrary du FMI a rendu 405 au runner GitHub sur un DOI
+    qui repond 200 ailleurs.
     """
 
     def _avec_code(self, code):
@@ -228,11 +230,31 @@ class RefusAutomateTests(unittest.TestCase):
         self.assertFalse(probleme.bloquant)
         self.assertIn("automatises", probleme.raison)
 
+    def test_un_405_est_signale_sans_bloquer(self):
+        # Cas reel du 24 aout 2026 : le DOI 10.5089/9798229055925.001 a fait
+        # echouer le controle hebdomadaire depuis le runner GitHub, tout en
+        # repondant 200 depuis un poste ordinaire. Meme lecture qu'un 403,
+        # un filtre a reconnu un client automatise.
+        probleme = self._avec_code(405)
+        self.assertIsNotNone(probleme)
+        self.assertFalse(probleme.bloquant)
+        self.assertIn("automatises", probleme.raison)
+
     def test_un_404_reste_bloquant(self):
         # Le point du controle : un lien reellement supprime doit sortir du
         # bruit. Cas reel du 24 aout 2026, le signal de la semaine menait a
         # une page retiree du FMI.
         probleme = self._avec_code(404)
+        self.assertIsNotNone(probleme)
+        self.assertTrue(probleme.bloquant)
+
+    def test_un_410_reste_bloquant(self):
+        """Elargir les refus tolerés ne doit pas emporter les suppressions.
+
+        410 est la disparition annoncee par l'hebergeur lui-meme : c'est le
+        signal le moins ambigu qu'un lien soit mort.
+        """
+        probleme = self._avec_code(410)
         self.assertIsNotNone(probleme)
         self.assertTrue(probleme.bloquant)
 
