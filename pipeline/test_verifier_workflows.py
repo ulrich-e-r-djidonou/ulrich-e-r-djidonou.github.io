@@ -1,4 +1,6 @@
 import re
+import shutil
+import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -293,6 +295,68 @@ class ListeDesTestsEnCITests(unittest.TestCase):
             en_ci - sur_disque,
             set(),
             "module(s) liste(s) dans tests.yml sans fichier correspondant",
+        )
+
+
+class ActionsPerimeesTests(unittest.TestCase):
+    def dossier(self, contenu, nom="essai.yml"):
+        """Ecrit un workflow jetable et retourne son dossier."""
+        dossier = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, dossier, True)
+        (dossier / nom).write_text(contenu, encoding="utf-8")
+        return dossier
+
+    def test_une_version_sous_le_minimum_est_signalee(self):
+        dossier = self.dossier("      - uses: actions/checkout@v4\n")
+        (fichier, action, probleme), = verifier_workflows.actions_perimees(dossier)
+        self.assertEqual(fichier, "essai.yml")
+        self.assertEqual(action, "actions/checkout")
+        self.assertIn("v4", probleme)
+        self.assertIn("v5", probleme)
+
+    def test_une_version_a_jour_ne_dit_rien(self):
+        dossier = self.dossier("      - uses: actions/checkout@v5\n")
+        self.assertEqual(verifier_workflows.actions_perimees(dossier), [])
+
+    def test_une_version_en_avance_ne_dit_rien(self):
+        """Le minimum est un plancher : depasser la table n'est pas une faute."""
+        dossier = self.dossier("      - uses: actions/checkout@v9\n")
+        self.assertEqual(verifier_workflows.actions_perimees(dossier), [])
+
+    def test_une_action_hors_table_est_ignoree(self):
+        """Sans version attendue, rien a dire : le silence vaut mieux qu'un
+        avertissement sur une action dont personne n'a decide du plancher."""
+        dossier = self.dossier("      - uses: actions/cache@v1\n")
+        self.assertEqual(verifier_workflows.actions_perimees(dossier), [])
+
+    def test_une_action_epinglee_sur_un_sha_est_ignoree(self):
+        dossier = self.dossier(
+            "      - uses: actions/checkout@8f4b7f8 # v4\n"
+        )
+        self.assertEqual(verifier_workflows.actions_perimees(dossier), [])
+
+    def test_les_guillemets_ne_masquent_pas_la_version(self):
+        dossier = self.dossier('      - uses: "actions/setup-python@v5"\n')
+        self.assertEqual(len(verifier_workflows.actions_perimees(dossier)), 1)
+
+    def test_un_dossier_absent_ne_fait_pas_echouer(self):
+        """Le controle tourne aussi hors d'un checkout complet."""
+        dossier = Path(tempfile.mkdtemp())
+        shutil.rmtree(dossier, True)
+        self.assertEqual(verifier_workflows.actions_perimees(dossier), [])
+
+    def test_le_depot_courant_n_a_aucune_action_perimee(self):
+        """Le controle sur le depot lui-meme, la ou il sert reellement.
+
+        Ce test echoue le jour ou un workflow revient a une version deprecie,
+        ou quand une nouvelle depreciation entre dans VERSIONS_MINIMALES sans
+        que les workflows aient suivi.
+        """
+        perimees = verifier_workflows.actions_perimees()
+        self.assertEqual(
+            perimees,
+            [],
+            "action(s) sur une version deprecie : " + str(perimees),
         )
 
 
