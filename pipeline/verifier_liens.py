@@ -93,7 +93,16 @@ HOTES_IGNORES = (
 # perdue, chaque nouvelle source du flux en ajoutant. Rapporte, jamais
 # bloquant : c'est la meme regle que pour un 503, appliquee a un refus qui
 # vise le robot et non le lien.
-CODES_REFUS_AUTOMATE = frozenset({401, 403})
+#
+# 405 releve du meme cas, verifie le 24 aout 2026 : le DOI
+# 10.5089/9798229055925.001 a fait echouer le controle hebdomadaire depuis
+# le runner GitHub tout en repondant 200 depuis un poste ordinaire, en HEAD
+# comme en GET. Un « methode non autorisee » sur la requete que ce module
+# emet deja depuis des mois ne dit rien de la vie du lien : il dit qu'un
+# filtre a l'entree a reconnu un client automatise. Le laisser bloquant
+# demanderait de « corriger » une adresse valide, ce que ce module existe
+# precisement pour eviter.
+CODES_REFUS_AUTOMATE = frozenset({401, 403, 405})
 
 # Une URL contenant un de ces fragments signale que le lien mene a une
 # authentification plutot qu'au contenu annonce. La chaine de redirection
