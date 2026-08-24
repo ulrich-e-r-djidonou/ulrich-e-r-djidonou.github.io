@@ -36,9 +36,12 @@ on:
         # Laisse en entree plutot qu'en dur : les identifiants de modele xAI
         # changent plus vite que ce fichier, et une valeur perimee ferait
         # echouer le lot sans autre recours qu'un commit.
-        description: "Identifiant du modele xAI (a confirmer dans la console xAI)"
+        # Verifie le 24 aout 2026 contre l'API : grok-4.6 est accepte,
+        # grok-4.6-latest renvoie "Model not found". Les alias en -latest
+        # documentes ailleurs n'existent pas sur l'endpoint chat/completions.
+        description: "Identifiant du modele xAI"
         type: string
-        default: grok-4-fast
+        default: grok-4.6
 
 permissions:
   contents: write
