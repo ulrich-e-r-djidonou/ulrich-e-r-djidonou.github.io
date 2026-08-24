@@ -1257,17 +1257,17 @@ h1 {
   vertical-align: middle;
 }
 
-/* Bandeau de maintenance de La Frontiere (frontiere/index.html et
-   en/frontier/index.html), temporaire. Pose en premier enfant de
-   .frontiere-hero : il herite des gouttieres du hero (3rem 4rem 2rem en
-   desktop, 1.25rem lateraux sous 980px dans frontiere/frontiere.css), donc
-   aucun point de rupture a redupliquer ici. Filet ambre a gauche sur fond
-   --white plutot qu'un aplat sature : l'avis se lit comme une note de service
-   et non comme le nouveau contenu principal de la page. Tout passe par les
-   tokens de :root, redefinis sous @media (prefers-color-scheme: dark), donc
-   le contraste suit le theme sans regle dediee. Retirer cette section en meme
-   temps que les deux blocs HTML. */
-.avis-maintenance {
+/* Note de langue de La Frontiere (en/frontier/index.html seulement, la page
+   francaise n'en a pas besoin). Posee en premier enfant de .frontiere-hero :
+   elle herite des gouttieres du hero (3rem 4rem 2rem en desktop, 1.25rem
+   lateraux sous 980px dans frontiere/frontiere.css), donc aucun point de
+   rupture a redupliquer ici. Filet ambre a gauche sur fond --white plutot
+   qu'un aplat sature : la note se lit comme une precision editoriale et non
+   comme le nouveau contenu principal de la page. Tout passe par les tokens de
+   :root, redefinis sous @media (prefers-color-scheme: dark), donc le contraste
+   suit le theme sans regle dediee. Retirer cette section en meme temps que le
+   bloc HTML, quand la part d'entrees sans anglais sera negligeable. */
+.note-langue {
   margin: 0 0 1.75rem;
   padding: 1rem 1.25rem;
   background: var(--white);
@@ -1276,7 +1276,7 @@ h1 {
   border-radius: 6px;
 }
 
-.avis-maintenance-titre {
+.note-langue-titre {
   margin: 0;
   color: var(--amber-text);
   font-family: "Trebuchet MS", Verdana, sans-serif;
@@ -1286,7 +1286,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.avis-maintenance-texte {
+.note-langue-texte {
   max-width: 62ch;
   margin: 0.45rem 0 0;
   color: var(--ink);
@@ -1294,6 +1294,6 @@ h1 {
   line-height: 1.6;
 }
 
-.avis-maintenance-texte a {
+.note-langue-texte a {
   color: var(--teal);
 }
