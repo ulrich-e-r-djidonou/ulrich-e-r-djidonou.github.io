@@ -150,13 +150,23 @@ jobs:
         run: |
           git config user.name "frontiere-bot"
           git config user.email "actions@github.com"
-          # Le script reinjecte aussi le JSON-LD de frontiere/index.html a
-          # partir du flux reecrit : sans le committer ici, la page indexee
-          # divergerait du flux jusqu'a la prochaine execution de publish.py.
-          git add frontiere/data/flux.json frontiere/index.html
+          # Le script reinjecte aussi le JSON-LD des pages du flux a partir du
+          # flux reecrit : sans les committer ici, la page indexee divergerait
+          # du flux jusqu'a la prochaine execution de publish.py. Les deux
+          # langues sont concernees, regenerer_flux boucle sur PAGES_FLUX.
+          git add frontiere/data/flux.json frontiere/index.html \
+            en/frontier/index.html
           if git diff --cached --quiet; then
             echo "Rien a publier aujourd'hui : tous les items sont deja reecrits."
             exit 0
+          fi
+          # Un fichier ecrit par le script mais absent du "git add" ci-dessus
+          # ferait echouer le rebase avec un message qui ne nomme pas le
+          # coupable, comme dans frontiere.yml le 24 aout 2026. Le nommer ici.
+          if ! git diff --quiet; then
+            echo "::error::Fichiers modifies hors du git add ci-dessus :"
+            git diff --name-only
+            exit 1
           fi
           if [ "${{ inputs.rattrapage_anglais }}" = "true" ]; then
             git commit -m "frontiere: champs anglais des textes publies, lot du $(date -u +%F)"

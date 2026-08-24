@@ -83,8 +83,22 @@ jobs:
         run: |
           git config user.name "frontiere-bot"
           git config user.email "actions@github.com"
-          git add frontiere/ pipeline/seen.json sitemap.xml
+          # en/frontier/index.html recoit son propre JSON-LD depuis publish.py
+          # (PAGES_FLUX couvre les deux langues). L'oublier ici laissait le
+          # fichier modifie hors de l'index : le rebase ci-dessous refusait
+          # alors de tourner ("cannot pull with rebase: You have unstaged
+          # changes") et le job echouait apres avoir depense le budget LLM.
+          git add frontiere/ en/frontier/index.html pipeline/seen.json sitemap.xml
           git diff --cached --quiet || git commit -m "frontiere: mise a jour automatique $(date -u +%F)"
+          # Un fichier ecrit par le pipeline mais absent du "git add" ci-dessus
+          # ferait echouer le rebase avec un message qui ne nomme pas le
+          # coupable. Le nommer ici : le prochain oubli se lit dans le journal
+          # au lieu de se deduire.
+          if ! git diff --quiet; then
+            echo "::error::Fichiers modifies hors du git add ci-dessus :"
+            git diff --name-only
+            exit 1
+          fi
           # etat-projets.yml et regenerer-flux.yml commitent sur la meme
           # branche : se rebaser evite un refus de poussee si les crons se
           # croisent, apres que le budget LLM a deja ete consomme. Apres le
