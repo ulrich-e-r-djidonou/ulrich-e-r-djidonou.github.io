@@ -661,7 +661,9 @@
     "score": 3,
     "auteurs": "Nicola Borri, Yukun Liu, Aleh Tsyvinski",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Analyzing 380 trillion tokens of realized artificial intelligence consumption, the study calculates stock sensitivity to growth in AI use and finds that firms with higher sensitivity earn higher subsequent returns. The resulting AI premium is highest for developed markets, frontier models, experienced users, and complex tasks, with equity markets associating the AI transition more positively with implementation, communication, and coordination work than with analytical and scientific tasks.",
+    "angle_eco_en": "The valuation of stock sensitivity to artificial intelligence growth by equity markets generates a return premium that favors developed markets, advanced models, experienced users, and work centered on implementation and communication over analytical tasks."
   },
   {
     "id": "arxiv-2607.23313v1",
@@ -680,7 +682,9 @@
     "score": 6,
     "auteurs": "Dana Golden, Brett Indelicato, Lav R. Varshney, Carlos D. Messina, Suzanne Thornsbury",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "To address the slow manual integration of fragmented economic models during energy crises, a large language model framework was developed to coordinate 16 existing models covering oil, natural gas, shipping, water, helium, fertilizer, and macroeconomic equilibrium. The system translates scenario assumptions into model-specific inputs, executes the underlying models in dependency order, and synthesizes traceable outputs for policymakers without generating any quantitative figures itself.",
+    "angle_eco_en": "Automating the orchestration of heterogeneous economic and physical models through a large language model framework overcomes the delays of manual model integration by translating scenario assumptions into model-specific inputs and executing existing models in dependency order for rapid energy crisis analysis."
   },
   {
     "id": "arxiv-2607.22465v1",
@@ -699,7 +703,9 @@
     "score": 4,
     "auteurs": "Ritik Raj, Souvik Kundu, Sarbartha Banerjee, Dheemanth Joshi, Ishita Vohra, Tushar Krishna",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Addressing the limitation of per-call routers in multi-step AI workflows, TRACE-Router assigns an entire task to a single large language model at admission and optimizes routing decisions using delayed, task-level feedback. Across three agentic benchmarks, the framework improves accuracy-latency trade-offs on the Pareto frontier, outperforming the strongest single-model baseline on Terminal-Bench by 7.1 accuracy points while reducing latency by 36 percent.",
+    "angle_eco_en": "Per-call model selection in long-horizon AI workflows creates a credit-assignment problem because delayed task-level feedback prevents individual routing choices from being correctly attributed to final outcomes, hindering optimal accuracy-latency and cost-quality trade-offs in enterprise deployments."
   },
   {
     "id": "arxiv-2607.22165v1",
@@ -718,7 +724,9 @@
     "score": 4,
     "auteurs": "Junming Chen, Junyang Jiang, Xu Chen, Zibo Liang, Kai Zheng",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The authors present DBA-Bench, a benchmark containing 106 PostgreSQL scenarios across seven task domains designed to evaluate database operations agents under realistic, live-environment conditions. Across 848 automated evaluation runs, overall Diagnosis, Outcome, and Safe Pass rates were 32.7%, 19.6%, and 12.4%, while the best automated baseline achieved a 17.9% Safe Pass rate versus 93.4% for a Human DBA reference.",
+    "angle_eco_en": "Evaluation gaps between simplified benchmarks and live production environments obscure the severe operational and safety risks of deploying autonomous AI agents for complex system management, as automated systems achieve a safe pass rate of only 17.9% compared to 93.4% for human experts."
   },
   {
     "id": "arxiv-2607.21826v1",
@@ -736,7 +744,9 @@
     "score": 3,
     "auteurs": "Marco Bianchetti, Camilla Ricci, Marco Scaringi",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "By combining Log Periodic Power Law models and Phillips, Shi, and Yu statistical tests, this study analyzes whether Bitcoin and Ether experienced financial bubbles between December 2016 and January 2018. The empirical findings detect bubble signals anticipating market crashes for Bitcoin in mid-December 2017 and early January 2018, as well as for Ether in June 2017 and January 2018, confirming that investor exuberance creates high risks of speculative bubbles.",
+    "angle_eco_en": "Investor sentiment driving cryptocurrency market prices far beyond fundamental values creates significant risks of speculative bubbles and subsequent market crashes, as confirmed by quantitative analyses of Bitcoin and Ether price dynamics."
   },
   {
     "id": "arxiv-2607.21459v1",
@@ -751,7 +761,9 @@
     "score": 3,
     "auteurs": "David M. Rothschild, Nicole Immorlica, Brendan Lucier, Markus Mobius, Aleksandrs Slivkins",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Digital search is transitioning from a human-driven process of evaluating keyword-based links to an artificial intelligence agent-mediated system of delegated decision-making based on natural language. Economic theory and early experimental evidence indicate that small design choices within agent-mediated marketplaces exert first-order effects on market competition, efficiency, and the welfare of consumers and firms.",
+    "angle_eco_en": "The transformation of digital search from human queries to AI agent-mediated decision-making reshapes market competition, transparency, and incentive alignment because subtle system design choices governing information access and action execution have first-order effects on market efficiency and stakeholder welfare."
   },
   {
     "id": "arxiv-2607.21268v1",
@@ -769,7 +781,9 @@
     "score": 3,
     "auteurs": "Chen Zhu, Xiaolu Wang, Weilong Zhang",
     "signal": false,
-    "llm": "gemini-3.6-flash"
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The pAI-Econ-claude framework introduces a gated, human-in-the-loop multi-agent architecture to improve reliability in AI-assisted economic theory development where outputs lack automated correctness signals. Evaluated against an ungated baseline across five economic-theory tasks, the gated architecture was preferred by blinded evaluators in four tasks, reducing mean failure severity from 1.58 to 1.16 and increasing overall usefulness from 2.60 to 3.10.",
+    "angle_eco_en": "The absence of cheap, machine-readable correctness signals in AI-assisted economic theory development creates a reliability problem that requires combining specialized diagnostic gates with human oversight checkpoints to catch flawed premises and refine complex theoretical claims."
   },
   {
     "id": "arxiv-2607.20365v1",
