@@ -45,6 +45,7 @@ CURES = Path(__file__).parent / "_candidats_cures.json"
 CANDIDATS_ARCHIVES = Path(__file__).parent / "_candidats_archives.json"
 SITEMAP = RACINE / "sitemap.xml"
 FRONTIERE_INDEX = RACINE / "frontiere" / "index.html"
+FRONTIER_INDEX_EN = RACINE / "en" / "frontier" / "index.html"
 
 FENETRE_JOURS = 90
 SEUIL_SELECTION_PRINCIPALE = 3
@@ -325,28 +326,73 @@ def synchroniser_sitemap(chemin_sitemap=None, chemin_meta=None):
     chemin_sitemap.write_text(contenu, encoding="utf-8")
 
 
-def generer_jsonld_flux(entrees):
+# Les deux pages qui servent le meme flux. Le JSON-LD de chacune doit pointer
+# vers sa propre URL et son propre @id : deux pages qui se declareraient la
+# meme ressource se feraient dedupliquer par un moteur, et l'une des deux
+# disparaitrait de l'index.
+#
+# Aucun chemin de fichier ici : il serait fige a l'import, et un test de main()
+# reecrirait les vrais fichiers du site au lieu de son bac a sable. Meme raison
+# que pour synchroniser_sitemap. Les chemins passent par index_de_page().
+PAGES_FLUX = {
+    "fr": {
+        "url": "https://djidonou.com/frontiere/",
+        "id": "https://djidonou.com/frontiere/#page",
+    },
+    "en": {
+        "url": "https://djidonou.com/en/frontier/",
+        "id": "https://djidonou.com/en/frontier/#page",
+    },
+}
+
+
+def index_de_page(langue):
+    """Chemin du fichier HTML d'une langue, resolu a l'appel."""
+    return FRONTIERE_INDEX if langue == "fr" else FRONTIER_INDEX_EN
+
+
+def textes_de_l_entree(entree, langue):
+    """Retourne (resume, angle, langue reelle du texte) pour une entree.
+
+    Reproduit le repli de frontiere.js : cote anglais, une entree sans
+    resume_en sert le francais. La troisieme valeur dit ce qui est reellement
+    servi, pour que l'appelant n'ait pas a le redeviner.
+    """
+    if langue == "en" and entree.get("resume_en"):
+        return entree["resume_en"], entree.get("angle_eco_en", ""), "en"
+    return entree.get("resume_fr", ""), entree.get("angle_eco", ""), "fr"
+
+
+def generer_jsonld_flux(entrees, langue="fr"):
     """Une entree schema.org CreativeWork par item du flux, en JSON-LD.
 
     Distingue la redaction (resume_fr, angle_eco), attribuee a Ulrich
     Djidonou, du travail original cite (titre, auteurs, url externe) : sans
     cette distinction, une IA qui lit le balisage attribuerait un papier
     externe a l'auteur du site plutot qu'a ses vrais auteurs.
+
+    Les deux pages publient le meme flux, chacune dans sa langue. Cote
+    anglais, une entree qui n'a pas encore ses champs anglais retombe sur le
+    francais, exactement comme la page le fait a l'ecran : son inLanguage
+    porte alors "fr" et non "en". Annoncer "en" sur un texte francais
+    tromperait le seul public de ce balisage, celui qui ne lit pas la page.
     """
+    page = PAGES_FLUX[langue]
     elements = []
     for position, entree in enumerate(entrees, start=1):
-        description = entree.get("resume_fr", "")
-        if entree.get("angle_eco"):
-            description = f"{description} {entree['angle_eco']}".strip()
+        resume, angle, langue_texte = textes_de_l_entree(entree, langue)
+        description = resume
+        if angle:
+            description = f"{description} {angle}".strip()
         oeuvre = {
             "@type": "CreativeWork",
             "headline": entree["titre"],
-            "url": "https://djidonou.com/frontiere/",
+            "url": page["url"],
             "datePublished": entree.get("date_publication"),
-            "inLanguage": "fr",
+            "inLanguage": langue_texte,
             "author": {"@id": "https://djidonou.com/#person"},
             "description": description,
-            "isPartOf": {"@id": "https://djidonou.com/frontiere/#page"},
+            "isPartOf": {"@id": page["id"]},
             "citation": {
                 "@type": "CreativeWork",
                 "name": entree["titre"],
@@ -429,7 +475,7 @@ def injecter_jsonld_flux(donnees_jsonld, chemin_index=None):
         count=1,
     )
     if nombre != 1:
-        raise ValueError("bloc flux-jsonld introuvable dans frontiere/index.html")
+        raise ValueError(f"bloc flux-jsonld introuvable dans {chemin_index}")
     chemin_index.write_text(contenu_modifie, encoding="utf-8")
 
 
@@ -531,7 +577,10 @@ def main():
         return
 
     (DONNEES / "flux.json").write_text(contenu_flux, encoding="utf-8")
-    injecter_jsonld_flux(generer_jsonld_flux(dans_fenetre))
+    for langue in PAGES_FLUX:
+        injecter_jsonld_flux(
+            generer_jsonld_flux(dans_fenetre, langue), index_de_page(langue)
+        )
 
     compte_par_theme = {theme: 0 for theme in THEMES_CONNUS}
     for entree in dans_fenetre:

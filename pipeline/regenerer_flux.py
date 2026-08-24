@@ -36,7 +36,8 @@ import time
 from pathlib import Path
 
 from pipeline import curate
-from pipeline.publish import generer_jsonld_flux, injecter_jsonld_flux
+from pipeline.publish import PAGES_FLUX, generer_jsonld_flux, injecter_jsonld_flux
+from pipeline.publish import index_de_page as publish_index_de_page
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -200,7 +201,10 @@ def ecrire_flux(flux, releve, modele):
     # anciens resume_fr/angle_eco jusqu'a la prochaine execution de
     # publish.py : le JSON-LD servi aux moteurs divergerait de flux.json,
     # donc de ce que la page affiche reellement.
-    injecter_jsonld_flux(generer_jsonld_flux(flux))
+    for langue in PAGES_FLUX:
+        injecter_jsonld_flux(
+            generer_jsonld_flux(flux, langue), publish_index_de_page(langue)
+        )
     print(f"{nb_remplaces} items remplaces dans {FLUX}.")
     print("Les items rejetes gardent leur texte precedent.")
     for titre in ignores:
@@ -440,7 +444,10 @@ def ecrire_flux_anglais(flux, releve):
     # sans effet visible tant que les champs anglais n'y entrent pas. Le
     # rendre inconditionnel ne coute rien et garde ecrire_flux et
     # ecrire_flux_anglais idempotents l'un vis-a-vis de l'autre.
-    injecter_jsonld_flux(generer_jsonld_flux(flux))
+    for langue in PAGES_FLUX:
+        injecter_jsonld_flux(
+            generer_jsonld_flux(flux, langue), publish_index_de_page(langue)
+        )
     print(f"{nb_completes} items completes en anglais dans {FLUX}.")
     for titre in ignores:
         print(f"Ignore, deja bilingue depuis la relecture : {titre}")

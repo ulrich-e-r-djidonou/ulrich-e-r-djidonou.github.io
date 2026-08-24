@@ -143,10 +143,18 @@ class EcrireFluxAnglaisTests(unittest.TestCase):
         self.addCleanup(dossier.cleanup)
         index = Path(dossier.name) / "index.html"
         index.write_text(GABARIT_FRONTIERE_INDEX, encoding="utf-8")
-        patcheur = mock.patch.object(publish, "FRONTIERE_INDEX", index)
-        patcheur.start()
-        self.addCleanup(patcheur.stop)
+        # Le JSON-LD est reinjecte dans les deux pages depuis qu'elles servent
+        # le meme flux : les deux chemins doivent etre detournes, pas seulement
+        # le francais, sinon le vrai en/frontier/index.html du depot recoit les
+        # entrees de test.
+        index_en = Path(dossier.name) / "index-en.html"
+        index_en.write_text(GABARIT_FRONTIERE_INDEX, encoding="utf-8")
+        for nom, valeur in (("FRONTIERE_INDEX", index), ("FRONTIER_INDEX_EN", index_en)):
+            patcheur = mock.patch.object(publish, nom, valeur)
+            patcheur.start()
+            self.addCleanup(patcheur.stop)
         self.index_frontiere = index
+        self.index_frontier_en = index_en
 
     def _flux_temporaire(self, contenu):
         dossier = tempfile.TemporaryDirectory()

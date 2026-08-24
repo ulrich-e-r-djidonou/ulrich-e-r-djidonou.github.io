@@ -660,6 +660,12 @@ class MainTests(unittest.TestCase):
         (racine / "frontiere" / "index.html").write_text(
             self.INDEX_MINIMAL, encoding="utf-8",
         )
+        # La page anglaise sert le meme flux et recoit le meme bloc : sans
+        # elle dans le bac a sable, main() ecrirait dans le vrai depot.
+        (racine / "en" / "frontier").mkdir(parents=True)
+        (racine / "en" / "frontier" / "index.html").write_text(
+            self.INDEX_MINIMAL, encoding="utf-8",
+        )
         (racine / "sitemap.xml").write_text(self.SITEMAP_MINIMAL, encoding="utf-8")
         (donnees / "flux.json").write_text(
             json.dumps(flux_existant, ensure_ascii=False), encoding="utf-8",
@@ -675,6 +681,7 @@ class MainTests(unittest.TestCase):
             "CANDIDATS_ARCHIVES": racine / "_candidats_archives.json",
             "SITEMAP": racine / "sitemap.xml",
             "FRONTIERE_INDEX": racine / "frontiere" / "index.html",
+            "FRONTIER_INDEX_EN": racine / "en" / "frontier" / "index.html",
         }.items():
             pile.enter_context(mock.patch.object(publish, nom, valeur))
         return racine, donnees
@@ -793,6 +800,74 @@ class MainTests(unittest.TestCase):
             flux = json.loads((donnees / "flux.json").read_text(encoding="utf-8"))
 
         self.assertEqual([e["id"] for e in flux], ["perime"])
+
+
+class JsonldBilingueTests(unittest.TestCase):
+    """Le meme flux, deux pages, chacune dans sa langue."""
+
+    ENTREES = [
+        {
+            "titre": "Bilingue",
+            "url": "https://exemple.org/a",
+            "resume_fr": "Resume francais.",
+            "angle_eco": "Angle francais.",
+            "resume_en": "English summary.",
+            "angle_eco_en": "English angle.",
+            "date_publication": "2026-08-01",
+        },
+        {
+            "titre": "Francais seul",
+            "url": "https://exemple.org/b",
+            "resume_fr": "Resume francais.",
+            "angle_eco": "Angle francais.",
+            "date_publication": "2026-08-02",
+        },
+    ]
+
+    def test_la_page_anglaise_pointe_vers_sa_propre_url_et_son_propre_id(self):
+        # Deux pages qui se declareraient la meme ressource se feraient
+        # dedupliquer par un moteur, et l'une des deux quitterait l'index.
+        donnees = publish.generer_jsonld_flux(self.ENTREES, "en")
+        oeuvre = donnees["itemListElement"][0]["item"]
+        self.assertEqual(oeuvre["url"], "https://djidonou.com/en/frontier/")
+        self.assertEqual(
+            oeuvre["isPartOf"]["@id"], "https://djidonou.com/en/frontier/#page"
+        )
+
+    def test_la_page_francaise_est_inchangee(self):
+        donnees = publish.generer_jsonld_flux(self.ENTREES)
+        oeuvre = donnees["itemListElement"][0]["item"]
+        self.assertEqual(oeuvre["url"], "https://djidonou.com/frontiere/")
+        self.assertEqual(oeuvre["inLanguage"], "fr")
+        self.assertIn("Resume francais.", oeuvre["description"])
+
+    def test_une_entree_bilingue_sert_son_anglais(self):
+        donnees = publish.generer_jsonld_flux(self.ENTREES, "en")
+        oeuvre = donnees["itemListElement"][0]["item"]
+        self.assertEqual(oeuvre["inLanguage"], "en")
+        self.assertIn("English summary.", oeuvre["description"])
+        self.assertIn("English angle.", oeuvre["description"])
+
+    def test_un_repli_francais_est_annonce_comme_francais(self):
+        # Le point du controle : annoncer "en" sur un texte francais
+        # tromperait le seul public de ce balisage, celui qui ne lit pas la
+        # page. Le repli est le meme qu'a l'ecran, il doit se declarer tel.
+        donnees = publish.generer_jsonld_flux(self.ENTREES, "en")
+        oeuvre = donnees["itemListElement"][1]["item"]
+        self.assertEqual(oeuvre["inLanguage"], "fr")
+        self.assertIn("Resume francais.", oeuvre["description"])
+
+    def test_les_deux_pages_du_site_portent_le_bloc_a_regenerer(self):
+        # Sans la balise, injecter_jsonld_flux leve : le cron passerait au
+        # rouge a la premiere execution suivant un renommage.
+        for langue in publish.PAGES_FLUX:
+            chemin = publish.index_de_page(langue)
+            contenu = chemin.read_text(encoding="utf-8")
+            self.assertIn('id="flux-jsonld"', contenu, chemin.name)
+
+    def test_langue_reelle_dun_item_sans_aucun_resume(self):
+        resume, angle, langue = publish.textes_de_l_entree({}, "en")
+        self.assertEqual((resume, angle, langue), ("", "", "fr"))
 
 
 if __name__ == "__main__":
