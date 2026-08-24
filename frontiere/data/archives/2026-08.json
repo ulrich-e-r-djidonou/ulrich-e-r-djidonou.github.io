@@ -1,5 +1,358 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35641-fromrss",
+    "titre": "Benchmark Mineability and the Financing of AI Innovation",
+    "url": "https://www.nber.org/papers/w35641#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Alex Chan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21334v1",
+    "titre": "Across-Design Uncertainty in Short Pricing Panels: Evidence from Simulated Price Trajectories",
+    "url": "https://arxiv.org/abs/2608.21334v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Pedro Cadahia Delgado",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21274v1",
+    "titre": "Recommendation Quality and the Concentration of Consumption: Experimental Evidence from Netflix",
+    "url": "https://arxiv.org/abs/2608.21274v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Guy Aridor, Winston Chou, Nathan Kallus, Antoine Scheid, Allen Tren, Kevin Zielincki",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21130v1",
+    "titre": "A Synthetic Benchmark Dataset with Endogenous Marketing Spend for Validating Marketing Mix Models",
+    "url": "https://arxiv.org/abs/2608.21130v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Niklas Heusch",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21128v1",
+    "titre": "Structural Estimation of Marketing Mix Model Parameters from Geo-Experiments",
+    "url": "https://arxiv.org/abs/2608.21128v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Niklas Heusch",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.20779v1",
+    "titre": "Candidate Set Size and Voting Behavior: A Front-Door Approach to Causal Moderation",
+    "url": "https://arxiv.org/abs/2608.20779v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Masayuki Haruhara",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.20698v1",
+    "titre": "Priority Transparency, Admission Chances, and Information Acquisition in School Choice",
+    "url": "https://arxiv.org/abs/2608.20698v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Georgy Artemov, Siqi Pan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21324v1",
+    "titre": "Time-Aware Tranformer-Based Prediction Model for AECOPD",
+    "url": "https://arxiv.org/abs/2608.21324v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Weihao Qu, Ling Zheng, Dongyang Wang, Jiacun Wang, Haowen Pan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21265v1",
+    "titre": "Memory Augmentation Unlocks Efficient Chain-of-Thought Reasoning",
+    "url": "https://arxiv.org/abs/2608.21265v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Simeng Zhang, Yilong Chen, Wenyuan Zhang, Zhenyu Zhang, Yao Chen, Junyuan Shang, Tingwen Liu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21254v1",
+    "titre": "On the Transferability of Agricultural Weed Detection Under Cross-Field Distribution Shift",
+    "url": "https://arxiv.org/abs/2608.21254v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Nikhilesh Prabhakar, Pranuthi Tenali, Wilfredo Abudeye Fernandez, Shekhar Borah, Athresh Karanam, Erik Blasch, Prabha Sundaravadivel, Sriraam Natarajan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21236v1",
+    "titre": "RARE: Decoupling Representation Steering from Expert Routing in Mixture-of-Experts Language Models",
+    "url": "https://arxiv.org/abs/2608.21236v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Zhibo Zhang, Zhen Ouyang, Ling Shi, Kailong Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21209v1",
+    "titre": "Personalized Privacy Control in LLMs via Attention Head Intervention",
+    "url": "https://arxiv.org/abs/2608.21209v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Junseok Kim, Nakyeong Yang, Kyomin Jung",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21204v1",
+    "titre": "Beyond Imitation: Self-Improving Robot Policies via Off-Policy Q-Planning",
+    "url": "https://arxiv.org/abs/2608.21204v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Varun Giridhar, Anant Khandelwal, Jeremy A. Collins, Ignat Georgiev, Animesh Garg",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21199v1",
+    "titre": "Tydra: An Efficient Hybrid Model for Tabular Data",
+    "url": "https://arxiv.org/abs/2608.21199v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Mieszko Komisarczyk, Saurabh Mathur, Maurice Kraus, Sriraam Natarajan, Kristian Kersting",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21137v1",
+    "titre": "BackDFL: A Unified Benchmark For Backdoor Attacks and Defenses In Decentralized Federated Learning",
+    "url": "https://arxiv.org/abs/2608.21137v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "travail-emploi"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Mouhamed Amine Bouchiha, Gregory Blanc, Yufei Han",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21096v1",
+    "titre": "FlatLand: Personalized Graph Federated Learning via Tailored Lorentz Space",
+    "url": "https://arxiv.org/abs/2608.21096v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jiahong Liu, Ram Samarth B B, Xinyu Fu, Menglin Yang, Weixi Zhang, Rex Ying, Irwin King",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21079v1",
+    "titre": "Causal Modeling of Adverse Pregnancy Outcomes via Adaptive LLM Proposals",
+    "url": "https://arxiv.org/abs/2608.21079v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Kavimayil P. Komarasamy, Saurabh Mathur, Ameet Soni, David M. Haas, Kristian Kersting, Sriraam Natarajan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21024v1",
+    "titre": "RODE: A Radial-Orthogonal Decoupled Engine for Optimization",
+    "url": "https://arxiv.org/abs/2608.21024v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "llm",
+      "macro-finance"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Guoxiang Xu, Bince Qu, Qi Sun, Cheng Zhuo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21021v1",
+    "titre": "Free-Text Evaluation of LLMs for 5G Domain Knowledge and Fault Analysis using LLM-as-Judge",
+    "url": "https://arxiv.org/abs/2608.21021v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Rishiraj Sengupta, Sotiris Chatzimiltis, Mohammad Shojafar, Xiatian Zhu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21012v1",
+    "titre": "From a Static Multi-Level Small Semantic Codebook to a Dynamic Single-Level Large Semantic Codebook for Generative Recommendation",
+    "url": "https://arxiv.org/abs/2608.21012v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Tianlu Xie, Xin Ku, Mingjie Sun, Yunhao Sha, Lixiang Wang, Peng Wang, Yiyu Wang, Wenjin Wu, Zhaojie Liu, Peng Jiang, Wenwu Ou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.20965v1",
+    "titre": "Training, learning and inference: unified dynamics of neural systems",
+    "url": "https://arxiv.org/abs/2608.20965v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [
+      "inference-causale",
+      "llm"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Mian Wang",
+    "signal": false
+  },
+  {
     "id": "arxiv-2608.19944v1",
     "titre": "A Privacy Budgeting Framework for Online Experimentation",
     "url": "https://arxiv.org/abs/2608.19944v1",
@@ -183,6 +536,22 @@
     "nb_eco": 1,
     "nb_ia": 0,
     "auteurs": "Matthias Seeger, Zeyu Zhang, Vihang Patil, Konstantinos Benidis, Sebastian Schelter",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.19944v2",
+    "titre": "A Privacy Budgeting Framework for Online Experimentation",
+    "url": "https://arxiv.org/abs/2608.19944v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-20",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Gilian R. Ponte, Alina Ferecatu",
     "signal": false
   },
   {

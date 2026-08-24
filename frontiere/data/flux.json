@@ -1,5 +1,27 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35637-fromrss",
+    "titre": "Political Entrepreneurs",
+    "url": "https://www.nber.org/papers/w35637#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "resume_fr": "Une analyse menée dans 26 États américains entre 2009 et 2023 montre que les propriétaires gérant activement une entreprise représentent plus de 40 % des parlementaires locaux et initient une proportion plus importante de projets de loi en tant que premiers ou uniques auteurs principaux. Plutôt que de soutenir indistinctement l'ensemble des mesures favorables aux affaires, ces élus promeuvent spécifiquement des législations réduisant les barrières à l'entrée pour les nouvelles entreprises, en se concentrant sur la dérégulation et l'innovation.",
+    "angle_eco": "La présence au pouvoir législatif d'entrepreneurs qui possèdent et gèrent activement leur entreprise oriente spécifiquement la politique publique vers la baisse des barrières à l'entrée au moyen de la déréglementation et de l'innovation, plutôt que vers la promotion d'un soutien généralisé aux entreprises.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Aaron Chatterji, Jorge Guzman, Joyce Ma, Ryan C. McDevitt",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "angle_eco_en": "Direct political representation by active business owners serves as an inside policy-making channel through which legislators selectively advance pro-entry legislation targeting deregulation and innovation rather than acting as generic pro-business advocates."
+  },
+  {
     "id": "fmi-10-5089-9798229059640-001",
     "titre": "Aging Economies and AI Adoption: Firm-Level Evidence from the World Bank Enterprise Surveys",
     "url": "https://www.imf.org/en/publications/wp/issues/2026/08/21/aging-economies-and-ai-adoption-firm-level-evidence-from-the-world-bank-enterprise-surveys-579050",
@@ -17,11 +39,34 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Ha Minh Nguyen",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash",
     "resume_en": "Using World Bank survey data covering 89,380 firms across 144 countries, the study demonstrates that a ten-percentage-point increase in the old-age dependency ratio raises the probability of firm-level AI and automation process adoption by approximately 0.6 percentage points. While broad adoption concentrates in manufacturing, large firms, and developing economies, explicit AI adoption is significantly higher among services firms, and demographic aging additionally drives the development of AI-enabled products across both sectors.",
     "angle_eco_en": "Demographic aging drives firm-level adoption of AI and automation technologies by increasing process adoption probabilities and product development, with rising old-age dependency ratios generating distinct sectoral patterns between hardware-based automation in manufacturing and software-based AI in services.",
     "deja_signal": true
+  },
+  {
+    "id": "arxiv-2608.21095v1",
+    "titre": "Trustworthy RAG: An Evaluation Agent for Detecting Misinformation and Knowledge Poisoning in Generative AI Systems",
+    "url": "https://arxiv.org/abs/2608.21095v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "resume_fr": "Pour remédier à la vulnérabilité des systèmes de génération augmentée par récupération face à l'empoisonnement des connaissances, des chercheurs ont développé un agent d'évaluation combinant la vérification factuelle et un détecteur de contamination basé sur un indice de confiance. Évalué avec le modèle Llama 3.3 70B sur le jeu de données TruthfulQA, cet agent atteint une exactitude de 91 % et une précision de 100 %, tout en bloquant l'injection d'instructions de conseils non sécurisés avec un score F1 de 92 % dans un cas d'usage en ingénierie logicielle.",
+    "angle_eco": "L'intégration d'un agent d'évaluation intermédiaire combinant la vérification factuelle et la détection d'empoisonnement de connaissances permet de sécuriser les systèmes d'intelligence artificielle générative contre l'injection d'informations malveillantes.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "outils-recherche"
+    ],
+    "score": 4,
+    "nb_eco": 1,
+    "nb_ia": 4,
+    "auteurs": "Balkrishna Giri, Md Toufique Hasan, Jussi Rasku, Muhammad Waseem, Pekka Abrahamsson",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "To address security vulnerabilities in Retrieval-Augmented Generation systems, researchers developed an Evaluation Agent middleware that combines factual verification, a five-signal poison detector, and a composite Trust Index to detect knowledge poisoning and misinformation. Evaluated on TruthfulQA with Llama 3.3 70B, the agent achieved 91% accuracy and 100% precision, while also blocking instruction injection of unsafe advice in a software engineering application with a 92% F1 score.",
+    "angle_eco_en": "An evaluation agent middleware combining natural language inference factual verification, a five-signal poison detector, and a dampener-adjusted Trust Index addresses the vulnerability of Retrieval-Augmented Generation systems to targeted knowledge poisoning and instruction injection."
   },
   {
     "id": "nber-https-www-nber-org-papers-w35604-fromrss",

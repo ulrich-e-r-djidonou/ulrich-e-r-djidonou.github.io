@@ -6,11 +6,25 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Political Entrepreneurs</title>
+      <link>https://www.nber.org/papers/w35637#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35637-fromrss</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Une analyse menée dans 26 États américains entre 2009 et 2023 montre que les propriétaires gérant activement une entreprise représentent plus de 40 % des parlementaires locaux et initient une proportion plus importante de projets de loi en tant que premiers ou uniques auteurs principaux. Plutôt que de soutenir indistinctement l'ensemble des mesures favorables aux affaires, ces élus promeuvent spécifiquement des législations réduisant les barrières à l'entrée pour les nouvelles entreprises, en se concentrant sur la dérégulation et l'innovation.</description>
+    </item>
+    <item>
       <title>Aging Economies and AI Adoption: Firm-Level Evidence from the World Bank Enterprise Surveys</title>
       <link>https://www.imf.org/en/publications/wp/issues/2026/08/21/aging-economies-and-ai-adoption-firm-level-evidence-from-the-world-bank-enterprise-surveys-579050</link>
       <guid isPermaLink="false">fmi-10-5089-9798229059640-001</guid>
       <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
       <description>À partir de données couvrant 89 380 entreprises réparties dans 144 pays, cette étude montre qu'une hausse de dix points de pourcentage du ratio de dépendance des personnes âgées augmente la probabilité d'adopter des technologies d'automatisation et d'intelligence artificielle d'environ 0,6 point de pourcentage. Si cet effet démographique stimule principalement l'adoption globale au sein des grandes entreprises manufacturières des pays en développement, les entreprises du secteur des services sont en revanche nettement plus susceptibles d'adopter spécifiquement l'intelligence artificielle logicielle.</description>
+    </item>
+    <item>
+      <title>Trustworthy RAG: An Evaluation Agent for Detecting Misinformation and Knowledge Poisoning in Generative AI Systems</title>
+      <link>https://arxiv.org/abs/2608.21095v1</link>
+      <guid isPermaLink="false">arxiv-2608.21095v1</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Pour remédier à la vulnérabilité des systèmes de génération augmentée par récupération face à l'empoisonnement des connaissances, des chercheurs ont développé un agent d'évaluation combinant la vérification factuelle et un détecteur de contamination basé sur un indice de confiance. Évalué avec le modèle Llama 3.3 70B sur le jeu de données TruthfulQA, cet agent atteint une exactitude de 91 % et une précision de 100 %, tout en bloquant l'injection d'instructions de conseils non sécurisés avec un score F1 de 92 % dans un cas d'usage en ingénierie logicielle.</description>
     </item>
     <item>
       <title>Algorithm-Driven SVARs: Navigating the Wilderness of Big Data</title>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">arxiv-2608.01607v1</guid>
       <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
       <description>En simulant l'impact sur l'ensemble du cycle de vie des conseils financiers de GPT-5.2 sollicités par un échantillon représentatif, une étude montre que ces recommandations orientent les individus vers la théorie du cycle de vie, avec une participation élargie aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus élevées. Ces conseils varient selon la culture financière, l'expérience préalable de l'IA et le genre, deux tiers des divergences d'allocation en actions entre hommes et femmes découlant de la rédaction de requêtes différentes et un tiers provenant d'étiquettes de genre rattachées à des requêtes identiques.</description>
-    </item>
-    <item>
-      <title>A New Theory of Value for Post-AGI Economics</title>
-      <link>https://arxiv.org/abs/2608.01432v2</link>
-      <guid isPermaLink="false">arxiv-2608.01432v2</guid>
-      <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Face à la divergence potentielle entre les prix du marché et le bien-être sociétal causée par l'automatisation du travail cognitif par l'intelligence artificielle générale, cet article introduit la théorie de la valeur de l'épanouissement. Cette théorie redéfinit la valeur comme la contribution aux capacités durables des personnes et des communautés à s'épanouir sous contraintes planétaires, et propose une architecture de gouvernance fondée sur le rendement de l'épanouissement.</description>
-    </item>
-    <item>
-      <title>AI and Our Economic Future</title>
-      <link>https://doi.org/10.1257/jep.20261505</link>
-      <guid isPermaLink="false">aea-10-1257-jep-20261505</guid>
-      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Bien que l'automatisation de l'intelligence puisse accélérer la croissance économique au-delà du taux historique américain de 2 % par an, cette accélération risque d'être freinée par la présence de maillons faibles non automatisés. La nécessité d'automatiser la grande majorité de ces maillons faibles retarde les importants gains de productivité, tout en risquant d'accélérer la survenue de dommages majeurs si une intelligence artificielle puissante est détournée à des fins malveillantes.</description>
     </item>
   </channel>
 </rss>

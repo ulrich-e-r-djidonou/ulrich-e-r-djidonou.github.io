@@ -2234,5 +2234,101 @@
   "fmi-10-5089-9798229059640-001": {
     "score": 6,
     "traite": true
+  },
+  "arxiv-2608.21334v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.21274v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.21130v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.21128v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.20779v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.20698v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.19944v2": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.21324v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.21265v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.21254v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.21236v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.21209v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.21204v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.21199v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.21137v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.21096v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.21095v1": {
+    "score": 4,
+    "traite": true
+  },
+  "arxiv-2608.21079v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.21024v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.21021v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.21012v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.20965v1": {
+    "score": 1,
+    "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35637-fromrss": {
+    "score": 3,
+    "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35641-fromrss": {
+    "score": 0,
+    "traite": true
   }
 }
