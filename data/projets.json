@@ -8,9 +8,9 @@
       "source": "https://raw.githubusercontent.com/ulrich-e-r-djidonou/bdc-fedspeak/main/data/processed/tone_index.csv"
     },
     "geoecon": {
-      "etat": "Mise à jour le 23 août 2026",
-      "etat_en": "Updated on August 23, 2026",
-      "date_donnees": "2026-08-23",
+      "etat": "Mise à jour le 24 août 2026",
+      "etat_en": "Updated on August 24, 2026",
+      "date_donnees": "2026-08-24",
       "source": "https://ulrich-e-r-djidonou.github.io/geoecon-pulse/data/indicators.json"
     },
     "icie": {
