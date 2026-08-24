@@ -1,0 +1,37 @@
+name: verifier-repli
+
+# Le repli LLM ne sert qu'en cas de panne du principal, donc quelques fois par
+# an. Entre deux, sa cle peut expirer ou avoir ete posee tronquee sans que rien
+# ne le signale, et le defaut n'apparait qu'au pire moment. Cas reel : la cle
+# rendait 401 depuis au moins le 24 aout 2026, decouvert par hasard.
+#
+# Le premier de chaque mois, avant la veille du matin. Un appel par mois, la
+# reponse la plus courte possible : le cout est negligeable devant une veille
+# qui echoue faute de repli.
+on:
+  schedule:
+    - cron: "0 9 1 * *"
+  workflow_dispatch: {}
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dependances
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Appeler le fournisseur de repli
+        # Bloquant, contrairement aux rapports informatifs de frontiere.yml :
+        # un repli muet est une panne a venir, pas un signal a surveiller. Un
+        # echec ici declenche la notification GitHub des executions planifiees.
+        env:
+          LLM_API_URL_REPLI: https://api.anthropic.com/v1/chat/completions
+          LLM_API_MODELE_REPLI: claude-haiku-4-5
+          LLM_API_CLE_REPLI: ${{ secrets.LLM_API_CLE_REPLI }}
+        run: python -m pipeline.verifier_repli

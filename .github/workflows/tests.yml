@@ -56,6 +56,7 @@ jobs:
             pipeline.test_relever_scores_signal \
             pipeline.test_verifier_fraicheur_sources \
             pipeline.test_verifier_liens \
+            pipeline.test_verifier_repli \
             pipeline.test_verifier_dates_tests \
             pipeline.test_verifier_auteurs \
             pipeline.test_migrer_etiquettes_types \
