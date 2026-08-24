@@ -128,19 +128,38 @@ def controler_rattrapage(anomalies):
         return
 
     detail = etapes(run["databaseId"])
-    for nom, attendu in (
-        ("Rediger le lot du jour, dans la limite du quota", "success"),
+
+    # Le workflow a deux modes exclusifs depuis le 19 aout 2026 : la reecriture
+    # du francais et le rattrapage des champs anglais. Chacun saute l'etape de
+    # l'autre par construction. Exiger les deux ferait crier l'anomalie a
+    # chaque execution, quel que soit le mode, et un controle qui alerte
+    # toujours n'alerte plus.
+    redaction_fr = "Rediger le lot du jour, dans la limite du quota"
+    redaction_en = "Completer les champs anglais du lot du jour"
+    mode_anglais = detail.get(redaction_en) == "success"
+    if mode_anglais:
+        print("   Mode anglais : l'etape de reecriture francaise est sautee, "
+              "c'est attendu.")
+
+    attendus = [
+        (redaction_en if mode_anglais else redaction_fr, "success"),
         ("Sauvegarder la relecture pour l'execution suivante", "success"),
         ("Appliquer les textes valides", "success"),
         ("Committer si le flux a change", "success"),
-    ):
+    ]
+    for nom, attendu in attendus:
         obtenu = detail.get(nom, "absente")
         marque = "ok" if obtenu == attendu else "ECHEC"
         print(f"   [{marque}] {nom} : {obtenu}")
         if obtenu != attendu:
             anomalies.append(f"etape '{nom}' en {obtenu}")
 
-    notification = detail.get("Notifier ce qui vient d'etre publie", "absente")
+    nom_notification = (
+        "Notifier les champs anglais ajoutes"
+        if mode_anglais
+        else "Notifier ce qui vient d'etre publie"
+    )
+    notification = detail.get(nom_notification, "absente")
     print(f"   Notification : {notification} "
           "(skipped est normal s'il n'y avait rien de neuf)")
 
