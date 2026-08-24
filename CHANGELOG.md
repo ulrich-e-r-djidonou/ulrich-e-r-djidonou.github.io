@@ -16,6 +16,9 @@ Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/)
 - Troisième source d'abstracts dans `regenerer_flux.charger_abstracts`, `_abstracts_rattrapage.json`, placée en dernier pour que le corpus figé garde la priorité.
 - `pipeline/verifier_bilinguisme_flux.py` : échoue quand plus de 10 % des items publiés sont servis en français sur `/en/frontier/`. Branché sur le cron de La Frontière en `continue-on-error` et sur la suite de tests en CI.
 
+### Retiré
+- La note de langue en tête de `/en/frontier/`, posée le 19 août 2026 pour annoncer que des entrées n'avaient qu'un résumé français. Elle en visait 35 sur 60 ; il en reste une sur 62, la proportion est devenue négligeable et son propre commentaire prévoyait ce retrait. Le marquage `lang="fr"` par entrée, lui, subsiste : c'est le signal honnête pour l'entrée restante.
+
 ### Corrigé
 - 60 items sur 62 n'avaient pas de `resume_en` ou d'`angle_eco_en` et la page anglaise servait leur texte français. Le flux en compte désormais 61 sur 62 en anglais. Le seul restant, `AI Financial Advice: Supply, Demand, and Life Cycle Implications`, n'a plus d'abstract récupérable chez aucune des sources interrogées.
 - Le JSON-LD de `en/frontier/index.html` annonçait `inLanguage: fr` sur 62 entrées ; il en annonce une seule aujourd'hui.
