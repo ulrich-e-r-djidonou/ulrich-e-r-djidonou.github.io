@@ -160,6 +160,14 @@ jobs:
             echo "Rien a publier aujourd'hui : tous les items sont deja reecrits."
             exit 0
           fi
+          # Un fichier ecrit par le script mais absent du "git add" ci-dessus
+          # ferait echouer le rebase avec un message qui ne nomme pas le
+          # coupable, comme dans frontiere.yml le 24 aout 2026. Le nommer ici.
+          if ! git diff --quiet; then
+            echo "::error::Fichiers modifies hors du git add ci-dessus :"
+            git diff --name-only
+            exit 1
+          fi
           if [ "${{ inputs.rattrapage_anglais }}" = "true" ]; then
             git commit -m "frontiere: champs anglais des textes publies, lot du $(date -u +%F)"
           else
