@@ -21,27 +21,6 @@ on:
         description: "Completer les champs anglais des items publies, au lieu de reecrire le francais"
         type: boolean
         default: false
-      fournisseur_anglais:
-        # Le rattrapage anglais est le seul lot qui reste a passer, et le quota
-        # gratuit de Gemini le fait durer une quinzaine d'executions manuelles
-        # (16 appels, soit 4 items par execution, pour 38 items a rattraper).
-        # Un fournisseur paye a l'usage vide le lot en une fois. xAI expose le
-        # meme format OpenAI que les autres : aucun code a changer, seules les
-        # trois variables LLM_API_* bougent.
-        description: "Fournisseur pour le rattrapage anglais"
-        type: choice
-        options: [grok, gemini]
-        default: grok
-      modele_grok:
-        # Laisse en entree plutot qu'en dur : les identifiants de modele xAI
-        # changent plus vite que ce fichier, et une valeur perimee ferait
-        # echouer le lot sans autre recours qu'un commit.
-        # Verifie le 24 aout 2026 contre l'API : grok-4.6 est accepte,
-        # grok-4.6-latest renvoie "Model not found". Les alias en -latest
-        # documentes ailleurs n'existent pas sur l'endpoint chat/completions.
-        description: "Identifiant du modele xAI"
-        type: string
-        default: grok-4.6
 
 permissions:
   contents: write
@@ -98,28 +77,16 @@ jobs:
         run: python -m pipeline.regenerer_flux --reprendre
 
       - name: Completer les champs anglais du lot du jour
-        # Un item anglais coute au plus quatre appels : deux champs, deux
-        # essais. Le budget ci-dessous est donc a lire en items, divise par
-        # quatre. Le repli reste Claude dans les deux cas.
+        # Meme budget et meme repli que le mode francais : c'est le meme quota
+        # Gemini, partage avec la veille. Un item anglais coute au plus quatre
+        # appels, donc quatre items par execution.
         if: ${{ !inputs.appliquer_seulement && inputs.rattrapage_anglais }}
         env:
           FRONTIERE_LLM: api
-          # Deux fournisseurs possibles, choisis au declenchement. Grok est paye
-          # a l'usage : il n'a pas de quota journalier a menager, donc le lot
-          # entier passe en une execution. Gemini reste disponible pour revenir
-          # au comportement d'avant sans toucher a ce fichier, mais il partage
-          # son quota gratuit avec la veille des lundis, jeudis et samedis.
-          LLM_API_URL: ${{ inputs.fournisseur_anglais == 'grok' && 'https://api.x.ai/v1/chat/completions' || 'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions' }}
-          LLM_API_MODELE: ${{ inputs.fournisseur_anglais == 'grok' && inputs.modele_grok || 'gemini-3.6-flash' }}
-          LLM_API_CLE: ${{ inputs.fournisseur_anglais == 'grok' && secrets.LLM_API_CLE_GROK || secrets.LLM_API_CLE }}
-          # 152 appels : la borne haute mesuree par --anglais --estimer le
-          # 23 aout 2026 pour les 38 items a rattraper (2 champs, 2 essais au
-          # pire). Sur Gemini, ce budget deborde le quota gratuit et bascule
-          # sur le repli ; c'est voulu, le repli est facture quelques cents.
-          # Le ramener a "16" retablit le rythme d'avant, 4 items par
-          # execution. Une fois le lot vide, ce budget n'a plus d'objet : le
-          # regime courant, c'est curate.py dans frontiere.yml.
-          LLM_BUDGET_APPELS: "152"
+          LLM_API_URL: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+          LLM_API_MODELE: gemini-3.6-flash
+          LLM_API_CLE: ${{ secrets.LLM_API_CLE }}
+          LLM_BUDGET_APPELS: "16"
           LLM_API_URL_REPLI: https://api.anthropic.com/v1/chat/completions
           LLM_API_MODELE_REPLI: claude-haiku-4-5
           LLM_API_CLE_REPLI: ${{ secrets.LLM_API_CLE_REPLI }}

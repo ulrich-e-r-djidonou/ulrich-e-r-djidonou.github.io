@@ -140,19 +140,7 @@ en a un second, distinct de celui du fournisseur principal:
 ```powershell
 gh secret set LLM_API_CLE
 gh secret set LLM_API_CLE_REPLI
-gh secret set LLM_API_CLE_GROK
 ```
-
-`LLM_API_CLE_GROK` ne sert qu'au rattrapage anglais de `regenerer-flux.yml`,
-et seulement quand l'entrée `fournisseur_anglais` vaut `grok`. xAI expose le
-même format OpenAI que les autres (`https://api.x.ai/v1/chat/completions`,
-en-tête `Authorization: Bearer`), donc le fournisseur se change sans toucher
-au code. Il est facturé à l'usage plutôt que plafonné à la journée: le lot de
-rattrapage passe en une exécution au lieu d'une quinzaine. La veille des
-lundis, jeudis et samedis reste sur Gemini, dont le quota gratuit lui suffit.
-L'identifiant du modèle se donne au déclenchement (`modele_grok`), à
-confirmer dans la console xAI avant de lancer: une valeur périmée ferait
-échouer le lot.
 
 Volume mesuré sur le banc: 942 jetons en entrée et 218 en sortie par item,
 soit environ 245 000 et 57 000 jetons par an à 5 items par semaine. Aux
