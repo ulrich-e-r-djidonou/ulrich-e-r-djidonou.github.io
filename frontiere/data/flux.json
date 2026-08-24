@@ -1,5 +1,29 @@
 [
   {
+    "id": "fmi-10-5089-9798229059640-001",
+    "titre": "Aging Economies and AI Adoption: Firm-Level Evidence from the World Bank Enterprise Surveys",
+    "url": "https://www.imf.org/en/publications/wp/issues/2026/08/21/aging-economies-and-ai-adoption-firm-level-evidence-from-the-world-bank-enterprise-surveys-579050",
+    "source": "IMF Working Papers",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "resume_fr": "À partir de données couvrant 89 380 entreprises réparties dans 144 pays, cette étude montre qu'une hausse de dix points de pourcentage du ratio de dépendance des personnes âgées augmente la probabilité d'adopter des technologies d'automatisation et d'intelligence artificielle d'environ 0,6 point de pourcentage. Si cet effet démographique stimule principalement l'adoption globale au sein des grandes entreprises manufacturières des pays en développement, les entreprises du secteur des services sont en revanche nettement plus susceptibles d'adopter spécifiquement l'intelligence artificielle logicielle.",
+    "angle_eco": "L'augmentation du ratio de dépendance des personnes âgées incite les entreprises à adopter des technologies d'automatisation et d'intelligence artificielle, le secteur manufacturier privilégiant l'automatisation matérielle tandis que le secteur des services se tourne davantage vers l'IA logicielle.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 6,
+    "nb_eco": 3,
+    "nb_ia": 2,
+    "auteurs": "Ha Minh Nguyen",
+    "signal": true,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Using World Bank survey data covering 89,380 firms across 144 countries, the study demonstrates that a ten-percentage-point increase in the old-age dependency ratio raises the probability of firm-level AI and automation process adoption by approximately 0.6 percentage points. While broad adoption concentrates in manufacturing, large firms, and developing economies, explicit AI adoption is significantly higher among services firms, and demographic aging additionally drives the development of AI-enabled products across both sectors.",
+    "angle_eco_en": "Demographic aging drives firm-level adoption of AI and automation technologies by increasing process adoption probabilities and product development, with rising old-age dependency ratios generating distinct sectoral patterns between hardware-based automation in manufacturing and software-based AI in services.",
+    "deja_signal": true
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35604-fromrss",
     "titre": "Algorithm-Driven SVARs: Navigating the Wilderness of Big Data",
     "url": "https://www.nber.org/papers/w35604#fromrss",
@@ -582,30 +606,6 @@
     "auteurs": "Moustafa Chatzouz",
     "signal": false,
     "llm": "gemini-3.6-flash"
-  },
-  {
-    "id": "fmi-10-5089-9798229059640-001",
-    "titre": "Aging Economies and AI Adoption",
-    "url": "https://doi.org/10.5089/9798229059640.001",
-    "source": "IMF Working Papers",
-    "type": "papier",
-    "date_publication": "2026-08-01",
-    "resume_fr": "À partir de données couvrant 89 380 entreprises réparties dans 144 pays, cette étude montre qu'une hausse de dix points de pourcentage du ratio de dépendance des personnes âgées augmente la probabilité d'adopter des technologies d'automatisation et d'intelligence artificielle d'environ 0,6 point de pourcentage. Si cet effet démographique stimule principalement l'adoption globale au sein des grandes entreprises manufacturières des pays en développement, les entreprises du secteur des services sont en revanche nettement plus susceptibles d'adopter spécifiquement l'intelligence artificielle logicielle.",
-    "angle_eco": "L'augmentation du ratio de dépendance des personnes âgées incite les entreprises à adopter des technologies d'automatisation et d'intelligence artificielle, le secteur manufacturier privilégiant l'automatisation matérielle tandis que le secteur des services se tourne davantage vers l'IA logicielle.",
-    "themes": [
-      "inference-causale",
-      "llm",
-      "travail-emploi"
-    ],
-    "score": 6,
-    "nb_eco": 3,
-    "nb_ia": 2,
-    "auteurs": "Ha Minh Nguyen",
-    "signal": true,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "Using World Bank survey data covering 89,380 firms across 144 countries, the study demonstrates that a ten-percentage-point increase in the old-age dependency ratio raises the probability of firm-level AI and automation process adoption by approximately 0.6 percentage points. While broad adoption concentrates in manufacturing, large firms, and developing economies, explicit AI adoption is significantly higher among services firms, and demographic aging additionally drives the development of AI-enabled products across both sectors.",
-    "angle_eco_en": "Demographic aging drives firm-level adoption of AI and automation technologies by increasing process adoption probabilities and product development, with rising old-age dependency ratios generating distinct sectoral patterns between hardware-based automation in manufacturing and software-based AI in services.",
-    "deja_signal": true
   },
   {
     "id": "arxiv-2607.27155v1",

@@ -6,6 +6,13 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Aging Economies and AI Adoption: Firm-Level Evidence from the World Bank Enterprise Surveys</title>
+      <link>https://www.imf.org/en/publications/wp/issues/2026/08/21/aging-economies-and-ai-adoption-firm-level-evidence-from-the-world-bank-enterprise-surveys-579050</link>
+      <guid isPermaLink="false">fmi-10-5089-9798229059640-001</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+      <description>À partir de données couvrant 89 380 entreprises réparties dans 144 pays, cette étude montre qu'une hausse de dix points de pourcentage du ratio de dépendance des personnes âgées augmente la probabilité d'adopter des technologies d'automatisation et d'intelligence artificielle d'environ 0,6 point de pourcentage. Si cet effet démographique stimule principalement l'adoption globale au sein des grandes entreprises manufacturières des pays en développement, les entreprises du secteur des services sont en revanche nettement plus susceptibles d'adopter spécifiquement l'intelligence artificielle logicielle.</description>
+    </item>
+    <item>
       <title>Algorithm-Driven SVARs: Navigating the Wilderness of Big Data</title>
       <link>https://www.nber.org/papers/w35604#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35604-fromrss</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="false">aea-10-1257-jep-20261505</guid>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
       <description>Bien que l'automatisation de l'intelligence puisse accélérer la croissance économique au-delà du taux historique américain de 2 % par an, cette accélération risque d'être freinée par la présence de maillons faibles non automatisés. La nécessité d'automatiser la grande majorité de ces maillons faibles retarde les importants gains de productivité, tout en risquant d'accélérer la survenue de dommages majeurs si une intelligence artificielle puissante est détournée à des fins malveillantes.</description>
-    </item>
-    <item>
-      <title>The Emerging Market for Intelligence: How Firms Buy and Sell AI</title>
-      <link>https://doi.org/10.1257/jep.20261506</link>
-      <guid isPermaLink="false">aea-10-1257-jep-20261506</guid>
-      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
-      <description>L'inférence de grands modèles de langage constitue désormais un marché de gros à part entière, où l'offre de modèles et de fournisseurs concurrents s'est multipliée rapidement grâce aux modèles ouverts. Le prix de cette intelligence a chuté d'environ mille fois, les modèles ouverts coûtant désormais près de 90% de moins que leurs équivalents propriétaires, dans un marché très dynamique où aucun acteur ne domine durablement.</description>
     </item>
   </channel>
 </rss>
