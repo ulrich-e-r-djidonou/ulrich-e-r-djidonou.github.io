@@ -6,6 +6,27 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Endogenous Selection and Spillovers: Bayesian Inference for Policy-Relevant Causal Effects</title>
+      <link>https://arxiv.org/abs/2608.25720v1</link>
+      <guid isPermaLink="false">arxiv-2608.25720v1</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Ce papier développe un cadre économétrique bayésien fondé sur un modèle de Roy avec effets de débordement afin d'identifier et d'estimer les effets causaux directs, indirects et totaux en présence de sélection endogène au traitement et d'interférences spatiales. Appliquée au programme américain des Opportunity Zones, l'étude révèle des effets directs positifs sur le développement du logement mais des bénéfices de débordement limités, ainsi que des rendements décroissants lors d'une expansion de cette politique.</description>
+    </item>
+    <item>
+      <title>AI worsens climate change, integrated assessment shows</title>
+      <link>https://arxiv.org/abs/2608.24670v1</link>
+      <guid isPermaLink="false">arxiv-2608.24670v1</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <description>En intégrant les impacts de l'intelligence artificielle sur les émissions, la production et les dommages climatiques au modèle DICE, cette étude montre que son développement accroît le réchauffement mondial de 0,1 °C à 0,8 °C d'ici 2100 dans un scénario de faible atténuation. Les coûts climatiques associés annulent environ un cinquième à un quart des gains économiques de cette technologie, bien que le respect de l'objectif de 2 °C s'avère complémentaire à son développement.</description>
+    </item>
+    <item>
+      <title>Dynamic Discrete Choice and Inverse Reinforcement Learning: Inferring Preferences and Beliefs From Human Behavior</title>
+      <link>https://arxiv.org/abs/2608.24362v1</link>
+      <guid isPermaLink="false">arxiv-2608.24362v1</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Cet article compare le choix discret dynamique en économétrie structurelle et l'apprentissage par renforcement inverse en apprentissage automatique, deux domaines qui cherchent à inférer les préférences des décideurs à partir de leurs comportements séquentiels observés. Après avoir démontré la proximité mathématique entre le cadre du soft Q-learning et les modèles économétriques à chocs de valeur extrême, cette étude souligne que la combinaison des méthodes de différence temporelle et des estimateurs classiques en deux étapes constitue une voie prometteuse.</description>
+    </item>
+    <item>
       <title>Political Entrepreneurs</title>
       <link>https://www.nber.org/papers/w35637#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35637-fromrss</guid>
@@ -193,27 +214,6 @@
       <guid isPermaLink="false">voxeu-epr-org-voxeu-columns-automation-does-not-lower-labour-share</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
       <description>À partir de données couvrant la quasi-totalité des entreprises françaises entre 1994 et 2019, cette étude examine la relation entre l'automatisation et la part du revenu revenant au travail au niveau de l'entreprise. Les résultats montrent que bien que l'automatisation ait profondément transformé les emplois et la production, elle n'a pas nécessairement déplacé les revenus du travail vers le capital.</description>
-    </item>
-    <item>
-      <title>When Predictions Become Regressors: A Split-Sample Correction for Biases in Downstream Inference</title>
-      <link>https://arxiv.org/abs/2608.02909v1</link>
-      <guid isPermaLink="false">arxiv-2608.02909v1</guid>
-      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Pour corriger le biais d'estimation causé par l'usage de prédictions d'apprentissage automatique comme variables explicatives dans des régressions, les auteurs proposent une méthode de variables instrumentales construites sur des découpages indépendants des données. Des simulations indiquent que cette approche permet de retrouver des valeurs proches de la réalité même sur de petits échantillons, une efficacité illustrée par deux applications portant sur le Parlement allemand et la lutte contre la pauvreté en Chine.</description>
-    </item>
-    <item>
-      <title>Navigating the skill diversity frontier: How skill complexity explains worker resilience</title>
-      <link>https://arxiv.org/abs/2608.02102v1</link>
-      <guid isPermaLink="false">arxiv-2608.02102v1</guid>
-      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
-      <description>À partir de données longitudinales de LinkedIn portant sur 2,4 millions de travailleurs américains et 16 753 compétences distinctes, cette étude développe un cadre d'analyse réseau afin de mesurer la spécialisation, la diversité et la frontière de diversité des compétences. Si la spécialisation est principalement associée à des professions aux salaires plus élevés, les travailleurs les plus proches de la frontière de diversité ont une probabilité accrue d'acquérir de nouvelles compétences, de recevoir des promotions et de s'orienter vers des emplois moins exposés à l'automatisation.</description>
-    </item>
-    <item>
-      <title>AI Financial Advice: Supply, Demand, and Life Cycle Implications</title>
-      <link>https://arxiv.org/abs/2608.01607v1</link>
-      <guid isPermaLink="false">arxiv-2608.01607v1</guid>
-      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
-      <description>En simulant l'impact sur l'ensemble du cycle de vie des conseils financiers de GPT-5.2 sollicités par un échantillon représentatif, une étude montre que ces recommandations orientent les individus vers la théorie du cycle de vie, avec une participation élargie aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus élevées. Ces conseils varient selon la culture financière, l'expérience préalable de l'IA et le genre, deux tiers des divergences d'allocation en actions entre hommes et femmes découlant de la rédaction de requêtes différentes et un tiers provenant d'étiquettes de genre rattachées à des requêtes identiques.</description>
     </item>
   </channel>
 </rss>

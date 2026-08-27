@@ -1,5 +1,471 @@
 [
   {
+    "id": "arxiv-2608.25972v1",
+    "titre": "The Dynamic Trade-Off of Dual-Class Shares",
+    "url": "https://arxiv.org/abs/2608.25972v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Hyunseob Kim, Doron Levit, Roni Michaely",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.25923v1",
+    "titre": "Efficient tensor bases for pairwise comparisons",
+    "url": "https://arxiv.org/abs/2608.25923v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Konrad Kułakowski, Ryszard Smarzewski",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.25901v1",
+    "titre": "Cross-Section Estimation of Long-Run Relations Using Time-Compressed Data",
+    "url": "https://arxiv.org/abs/2608.25901v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Serena Ng, Nikolay Gospodinov",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.25814v1",
+    "titre": "Nonparametric Bayesian Inference for Partially Identified Discrete Response Models",
+    "url": "https://arxiv.org/abs/2608.25814v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Elie Tamer, Christopher D. Walker",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.25678v1",
+    "titre": "Normative boundaries of AI in scientific work: Evidence from PhD researchers",
+    "url": "https://arxiv.org/abs/2608.25678v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Francesco Angelini, Johan Lyrvall",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.25488v1",
+    "titre": "Social Network Structure, Wealth, and Wealth Inequality Across Cultures",
+    "url": "https://arxiv.org/abs/2608.25488v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Eleanor A. Power, Monique Borgerhoff Mulder, Samuel Bowles, Matthew O. Jackson, Jeremy Koster, Daniel Redhead, Thomas Rutter, Sahana Subramanyam, Justin Weltz, Nurul Alam, Sarah Alami, Alexandra Alvergne, Curtis Atkisson, Michele Barnes, Bret Beheim, Christine M. Beitl, Madeline Brown, Mark Caudell, Wendy Chávez-Páez, Komal Chauhan, Joshua Cinner, Siobhán Cully, Augusto Dalla Ragione, Angelina L. DeMarco, Ivan Deschenaux, Federico Fernandez, Juan Pablo Ferreiro, Drew Gerkey, Matthew Gervais, Christopher Golden, Gianluca Grimalda, Werner Hertzog, Paul L. Hooper, Karen Kramer, Geoff Kushnick, Banrida Langstieh, Rodrigo Lazo, Sheina Lew-Levy, Shane Macfarlan, Emmanuel Maliti, Karl J. Mertens, Madalena Monteban, Rafael Morais Chiaravalloti, Daniel Murphy, Kathryn Oths, Alejandro Pérez Velilla, Emily Post, Sean Prall, Cody Ross, Anirudh Sankar, Brooke Scelza, Michael Schnegg, Edmond Seabright, Mary K. Shenk, Kathrine E. Starkweather, Chun-Yi Sum, Bram Tucker, Bapu Vaitla, Vivek Venkataraman, John P. Ziker",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.25304v1",
+    "titre": "SAUSS: Stochastic Approximation with Unbiased Simulated Scores for Limited Dependent Variable Models",
+    "url": "https://arxiv.org/abs/2608.25304v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Sokbae Lee, Yuan Liao, Myung Hwan Seo, Youngki Shin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.26093v1",
+    "titre": "Agentic Autoresearch for Cell-Edge Power Control: Radically Redefining the Researcher's Role",
+    "url": "https://arxiv.org/abs/2608.26093v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "travail-emploi"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Ahmad Khan, Akram Bin Sediq, Sara Azadegi Naeini, Raviraj S. Adve",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.26090v1",
+    "titre": "Finding and using interpretable latents in a neutrino foundation model with sparse autoencoders",
+    "url": "https://arxiv.org/abs/2608.26090v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Raphaël Bonnet-Guerrini, Johann Ioannou-Nikolaides, Inar Timiryasov, Vincenzo Piuri",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.26088v1",
+    "titre": "Planetary Prediction Engine: Autonomous Geospatial Prediction via Intelligent Data Selection and Foundation Model Embeddings",
+    "url": "https://arxiv.org/abs/2608.26088v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Evelyn Ma, Rama Kumar Pasumarthi, Kishwar Shafin, Mandar Sharma, Mimi Sun, Hamed Sadeghi, Dav M. Ebengo, Mbulayi Onesime, Rouslan Solomakhin, John Wamburu, William Ogallo, Aisha Walcott-Bryant, Sanxing Chen, Arbaaz Muslim, Yael Mayer, Ronald Ho, Roy Lee, Ruth Alcantara, Abdoulaye Diack, Monica Bharel, Lambert Rosique, Jeremy Amez-Droz, Christopher Haire, James Manyika, Yossi Matias, Niv Efron, Gautam Prasad, Shravya Shetty",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.26081v1",
+    "titre": "SwarmWorld: Stigmergic technological evolution in societies of language-model agents",
+    "url": "https://arxiv.org/abs/2608.26081v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Subhadeep Pal, Fiona Y. Wang, Markus J. Buehler",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.26069v1",
+    "titre": "Group-Shared Low-Rank Approximation for Mobile-Efficient Pointwise Convolutions in Large-Kernel CNNs",
+    "url": "https://arxiv.org/abs/2608.26069v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Hao Luo, Yiting Yang, Wenyi Zhao, Man Jiang, Zhijun Lin, Ghulam Mohiuddin, Ting Jiang, Kunming Luo, Zihao Zhang, Qingsen Yan, Guoqing Wang, Wei Dong, Peng Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.26043v1",
+    "titre": "Robust CurveMoE: Multi-Norm Adversarial Defense for Mixture-of-Experts Models via Mode Connectivity",
+    "url": "https://arxiv.org/abs/2608.26043v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Xu Zhang, Ren Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.26035v1",
+    "titre": "Beyond Local Surprise: Grounded Dialogue as Selective Belief Revision under Referential Uncertainty",
+    "url": "https://arxiv.org/abs/2608.26035v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Ziming Liu, Bhanu Chaitanya Jasti, Ziyang Xu, Hongyu Wu, Yi Wu, Jiqun Liu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.26019v1",
+    "titre": "DualOPSD: Adaptive Privileged Teachers for On-Policy Self-Distillation",
+    "url": "https://arxiv.org/abs/2608.26019v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yutong Chen, Guangfu Guo, Zhichao Xu, Kunpeng Liu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.26009v1",
+    "titre": "Imitation Learning for Connection-Tableau Construction",
+    "url": "https://arxiv.org/abs/2608.26009v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Fredrik Rømming, Mantas Bakšys, Martin S. Fixman, Sean B. Holden",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.26004v1",
+    "titre": "AsymSpec: Context-Asymmetric Speculative Decoding for Agentic LLMs",
+    "url": "https://arxiv.org/abs/2608.26004v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Sheng Liang, Yongyue Zhang, Nathanael Brian, Hang Lv, Hao Wang, Chen Zhang, Yong Liu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.25936v1",
+    "titre": "One Symptom, Three Levers: A Critical Review of On-Policy Self-Distillation",
+    "url": "https://arxiv.org/abs/2608.25936v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Justin Robert, Raheel Qader",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.25897v1",
+    "titre": "Towards A Unified Information Bottleneck Framework for Time Series Explanations",
+    "url": "https://arxiv.org/abs/2608.25897v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Xu Zheng, Zichuan Liu, Zhuomin Chen, Mayur Akewar, Janki Bhimani, Jason Liu, Mo Sha, Jingchao Ni, Wei Cheng, Dongsheng Luo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.25890v1",
+    "titre": "Scalable Multi-GPU Simulation of 3D Multicellular Growth with RNN-Based Workload Balancing",
+    "url": "https://arxiv.org/abs/2608.25890v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Matvey Moisseyev, Huijing Du, Dandan Zheng, Chi Zhang, Hongfeng Yu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.25871v1",
+    "titre": "CEDAR: Controlled and Event-Driven Demand Forecasting via Residual Decomposition",
+    "url": "https://arxiv.org/abs/2608.25871v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "llm",
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Junjie Meng, Ranxu Zhang, Zi-an Zhang, Shujun Liu, Xiaoning Qi, Xiaozhou Xu, Yanyong Zhang, Hui Xiong, Chao Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.25009v1",
+    "titre": "Theory as data compression",
+    "url": "https://arxiv.org/abs/2608.25009v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-25",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Carlos Cueva",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.24851v1",
+    "titre": "Learning Whom to Trust : Decision-Generated Credibility in Social Learning",
+    "url": "https://arxiv.org/abs/2608.24851v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-25",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Gabriel Bontemps, Abhishek Banerjee",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.24811v1",
+    "titre": "How does hazard exposure influence job choice? Evaluating time-dependent tradeoffs between salary and hazard risks",
+    "url": "https://arxiv.org/abs/2608.24811v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-25",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Richard Bernknopf, Leila Gonzales, Christopher Keane",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.24468v1",
+    "titre": "Dynamics of the Currency Composition of Central Bank Reserves",
+    "url": "https://arxiv.org/abs/2608.24468v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-25",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Deborah Gefang, Stephen G. Hall, George S. Tavlas",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.24457v1",
+    "titre": "Participation, selection and indicative bidding in auctions with costly entry",
+    "url": "https://arxiv.org/abs/2608.24457v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-25",
+    "themes": [
+      "prevision",
+      "travail-emploi"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Changxia Ke, Greg Kubitz, Yang Liu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23988v1",
+    "titre": "Estimation of Random-Coefficient Dynamic Panel Data Models with a Fixed T",
+    "url": "https://arxiv.org/abs/2608.23988v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-25",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Xun Tang, Pei Yu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23925v1",
+    "titre": "Repairing Locally Misspecified GMM: An Empirical Bayes Approach",
+    "url": "https://arxiv.org/abs/2608.23925v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-25",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Patrick Kline",
+    "signal": false
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35641-fromrss",
     "titre": "Benchmark Mineability and the Financing of AI Innovation",
     "url": "https://www.nber.org/papers/w35641#fromrss",
@@ -13,6 +479,355 @@
     "nb_eco": 3,
     "nb_ia": 0,
     "auteurs": "Alex Chan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23914v1",
+    "titre": "Groundwater Management: Combating the Sinking Feeling",
+    "url": "https://arxiv.org/abs/2608.23914v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Igor Cialenco, Mike Ludkovski",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23796v1",
+    "titre": "Accelerating the Adoption of Residential Solar Power Systems: Policy Analysis using a Dynamic Structural Model",
+    "url": "https://arxiv.org/abs/2608.23796v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Sebastián Souyris, Jason A. Duan, Anantaram Balakrishnan, Varun Rai",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23732v1",
+    "titre": "Principal Component Analysis for a Mix of Stationary and Nonstationary Variables",
+    "url": "https://arxiv.org/abs/2608.23732v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "James D. Hamilton, Xinwei Ma, Jin Xi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23524v1",
+    "titre": "The Measurement Revolution? Credible Measurement and Inference in the Age of AI",
+    "url": "https://arxiv.org/abs/2608.23524v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "prevision",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Melissa Dell, Ashesh Rambachan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23508v1",
+    "titre": "Testing selection on observables in parametric models with refreshment samples",
+    "url": "https://arxiv.org/abs/2608.23508v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Grigory Franguridi, Arie Kapteyn",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23420v2",
+    "titre": "Systematic Bias in Green Patent Classification: Silent Green and False Green",
+    "url": "https://arxiv.org/abs/2608.23420v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Hamid Bekamiri, Jan Auernhammer, Milad Abbasiharofteh, Jesper Lindgaard Christensen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23369v1",
+    "titre": "Culture and constitutional compliance",
+    "url": "https://arxiv.org/abs/2608.23369v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jerg Gutmann, Anna Lewczuk-Czerwińska, Jacek Lewkowicz, Stefan Voigt",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23315v1",
+    "titre": "Classification testing: A new framework for drawing qualitative conclusions from quantitative estimates",
+    "url": "https://arxiv.org/abs/2608.23315v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Andrew C. Eggers, Zikai Li",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23257v1",
+    "titre": "How Replicable Are Statistically Significant Findings?",
+    "url": "https://arxiv.org/abs/2608.23257v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Patrick Vu, Stefan Faridani",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23064v1",
+    "titre": "Sequentially valid inference for probabilistic inflation forecasts",
+    "url": "https://arxiv.org/abs/2608.23064v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Amadeo Grob, Maurizio Daniele, Johanna Ziegel",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.23051v1",
+    "titre": "Female Nomination and Party Vote Share in US Gubernatorial Elections",
+    "url": "https://arxiv.org/abs/2608.23051v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Paolo Verme",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.22957v1",
+    "titre": "Identification and Inference for Causal Effects in Extremes under General Conditions",
+    "url": "https://arxiv.org/abs/2608.22957v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Lisa Leimenstoll, Melanie Schienle",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.22890v1",
+    "titre": "Randomization tests for model specification in causal inference under network interference",
+    "url": "https://arxiv.org/abs/2608.22890v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Supriya Tiwari, Pallavi Basu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.22706v1",
+    "titre": "Double/Debiased Machine Learning for Functional-Form-Robust Spatial Autoregression",
+    "url": "https://arxiv.org/abs/2608.22706v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Jieun Lee",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.22697v1",
+    "titre": "Does Rank Still Matter? Position Bias When AI Agents Shop on Our Behalf",
+    "url": "https://arxiv.org/abs/2608.22697v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "themes": [
+      "llm",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Davood Wadi, Yu Ma",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.22608v1",
+    "titre": "Estimating Pathway Treatment Effects in the Presence of Intermediate Events with Multi-State Data",
+    "url": "https://arxiv.org/abs/2608.22608v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-23",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Yuhao Deng, Haoyu Wei, Donglin Zeng, Rui Song, Xiao-Hua Zhou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.22605v1",
+    "titre": "Closed-form estimation and uniform inference in additively separable triangular models with a nonseparable first stage",
+    "url": "https://arxiv.org/abs/2608.22605v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-23",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Keita Sunada",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.22499v1",
+    "titre": "Fixed-$T$ Dynamic Spatial Panel Model with Common Shocks",
+    "url": "https://arxiv.org/abs/2608.22499v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-23",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Jushan Bai, Jesse Chieh Chen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.22286v1",
+    "titre": "Uniform Inference on Quantile Effects under Network Interference",
+    "url": "https://arxiv.org/abs/2608.22286v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-23",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Zequn Jin, Gaoqian Xu, Zixin Yang, Zhengyu Zhang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.22002v1",
+    "titre": "Uniformly Valid Inference Under Interactive and High-Dimensional Constraints",
+    "url": "https://arxiv.org/abs/2608.22002v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-22",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Joseph Fry",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21843v1",
+    "titre": "Debt relief and remittances can offset foreign aid cuts for most countries, but some remain locked out",
+    "url": "https://arxiv.org/abs/2608.21843v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-22",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Andrea Vismara, Rafael Prieto-Curiel, Rosie Hayward",
     "signal": false
   },
   {
@@ -350,6 +1165,34 @@
     "nb_eco": 1,
     "nb_ia": 1,
     "auteurs": "Mian Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21691v1",
+    "titre": "Contextual Visual Distinctiveness in Online Product Search",
+    "url": "https://arxiv.org/abs/2608.21691v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Felicia Nguyen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.21619v1",
+    "titre": "Exact Rejection Sampling for Non-Gaussian State Space Models",
+    "url": "https://arxiv.org/abs/2608.21619v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-21",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Joshua C. C. Chan",
     "signal": false
   },
   {

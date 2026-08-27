@@ -100,5 +100,16 @@
     "nb_rejetes_validation": 0,
     "signal_designe": false,
     "score_max": null
+  },
+  {
+    "date": "2026-08-27",
+    "fournisseur": "api",
+    "bascule_repli": false,
+    "nb_eligibles": 5,
+    "nb_publies": 3,
+    "nb_reportes": 2,
+    "nb_rejetes_validation": 0,
+    "signal_designe": true,
+    "score_max": 6
   }
 ]

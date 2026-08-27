@@ -1,5 +1,73 @@
 [
   {
+    "id": "arxiv-2608.25720v1",
+    "titre": "Endogenous Selection and Spillovers: Bayesian Inference for Policy-Relevant Causal Effects",
+    "url": "https://arxiv.org/abs/2608.25720v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "resume_fr": "Ce papier développe un cadre économétrique bayésien fondé sur un modèle de Roy avec effets de débordement afin d'identifier et d'estimer les effets causaux directs, indirects et totaux en présence de sélection endogène au traitement et d'interférences spatiales. Appliquée au programme américain des Opportunity Zones, l'étude révèle des effets directs positifs sur le développement du logement mais des bénéfices de débordement limités, ainsi que des rendements décroissants lors d'une expansion de cette politique.",
+    "angle_eco": "La modélisation conjointe de la sélection endogène et des effets de débordement au moyen de l'inférence bayésienne permet de décomposer l'effet causal des politiques publiques en composantes directe et indirecte afin d'évaluer précisément l'impact de leur extension.",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 4,
+    "nb_eco": 4,
+    "nb_ia": 1,
+    "auteurs": "Duong Trinh",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "angle_eco_en": "Endogenous selection into treatment combined with spatial or network spillovers invalidates conventional causal inference methods, requiring joint modeling of latent treatment resistance and neighborhood exposure to decompose overall policy impacts into direct participation and spillover components."
+  },
+  {
+    "id": "arxiv-2608.24670v1",
+    "titre": "AI worsens climate change, integrated assessment shows",
+    "url": "https://arxiv.org/abs/2608.24670v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-25",
+    "resume_fr": "En intégrant les impacts de l'intelligence artificielle sur les émissions, la production et les dommages climatiques au modèle DICE, cette étude montre que son développement accroît le réchauffement mondial de 0,1 °C à 0,8 °C d'ici 2100 dans un scénario de faible atténuation. Les coûts climatiques associés annulent environ un cinquième à un quart des gains économiques de cette technologie, bien que le respect de l'objectif de 2 °C s'avère complémentaire à son développement.",
+    "angle_eco": "L'intégration des impacts de l'intelligence artificielle sur la production, les émissions et les dommages climatiques dans le modèle DICE montre que les coûts climatiques imputables à l'IA amputent d'un cinquième à un quart ses gains économiques et que l'arbitrage d'investissement entre IA et réduction des émissions dépend principalement des perspectives économiques de l'IA plutôt que de son empreinte carbone.",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Huiying Ye, Richard S. J. Tol, Fangzhi Wang",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Integrating artificial intelligence into the DICE model reveals that AI development is net polluting, with ICT-like and Industrial Revolution-like AI adding 0.1°C and 0.8°C to warming by 2100 under low abatement, offsetting roughly one-fifth and one-quarter of their economic gains, respectively. Meeting the 2°C warming target raises optimal 2100 AI investment rates from 3.3% to 3.7% for ICT-like AI and from 5.1% to 12.7% for IR-like AI, demonstrating that climate mitigation complements AI growth and that investment trade-offs are driven primarily by AI's economic prospects rather than its emissions footprint.",
+    "angle_eco_en": "The expansion of artificial intelligence generates net emissions and climate damages that offset roughly one-fifth to one-quarter of its economic gains, creating an investment trade-off with climate policy that is driven primarily by AI's economic prospects rather than its emissions footprint."
+  },
+  {
+    "id": "arxiv-2608.24362v1",
+    "titre": "Dynamic Discrete Choice and Inverse Reinforcement Learning: Inferring Preferences and Beliefs From Human Behavior",
+    "url": "https://arxiv.org/abs/2608.24362v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-25",
+    "resume_fr": "Cet article compare le choix discret dynamique en économétrie structurelle et l'apprentissage par renforcement inverse en apprentissage automatique, deux domaines qui cherchent à inférer les préférences des décideurs à partir de leurs comportements séquentiels observés. Après avoir démontré la proximité mathématique entre le cadre du soft Q-learning et les modèles économétriques à chocs de valeur extrême, cette étude souligne que la combinaison des méthodes de différence temporelle et des estimateurs classiques en deux étapes constitue une voie prometteuse.",
+    "angle_eco": "L'inférence des préférences décisionnelles à partir de comportements séquentiels repose sur la convergence mathématique entre les modèles d'économétrie structurelle à choix discrets dynamiques et l'apprentissage par renforcement inverse, ce qui permet de passer à l'échelle dans des espaces d'états de grande dimension.",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 6,
+    "nb_eco": 3,
+    "nb_ia": 2,
+    "auteurs": "Pranjal Rawat, John Rust",
+    "signal": true,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Dynamic discrete choice in structural econometrics and inverse reinforcement learning in machine learning both aim to infer individual preferences from observed sequential behavior within Markov decision process frameworks. The survey demonstrates that soft Q-learning in machine learning shares core mathematical formulations with econometric choice models under additive extreme value shocks, noting that combining model-free temporal difference estimators with econometric two-step methods offers a promising bridge between the disciplines.",
+    "angle_eco_en": "Inferring decision-maker preferences from sequential behavior in high-dimensional state spaces can be scaled by combining structural dynamic discrete choice models from econometrics with model-free inverse reinforcement learning techniques from machine learning.",
+    "deja_signal": true
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35637-fromrss",
     "titre": "Political Entrepreneurs",
     "url": "https://www.nber.org/papers/w35637#fromrss",
