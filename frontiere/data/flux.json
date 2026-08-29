@@ -1,5 +1,46 @@
 [
   {
+    "id": "aea-10-1257-aer-20241087",
+    "titre": "Manipulation-Robust Prediction",
+    "url": "https://doi.org/10.1257/aer.20241087",
+    "source": "American Economic Review",
+    "type": "article",
+    "date_publication": "2026-09-01",
+    "resume_fr": "Ce papier développe une approche empirique qui ajuste les algorithmes de décision pour anticiper la manipulation stratégique des individus, produisant ainsi des règles stables même lorsqu'elles sont totalement transparentes. Évaluée lors d'une vaste expérience de terrain au Kenya, cette approche montre que les règles de décision linéaires robustes à la manipulation surpassent les modèles linéaires standards comme LASSO.",
+    "angle_eco": "La modélisation explicite des incitations des individus à modifier stratégiquement leur comportement permet d'ajuster les algorithmes de décision afin de produire des règles stables face aux manipulations qui surpassent les modèles linéaires standards tels que LASSO.",
+    "themes": [
+      "prevision"
+    ],
+    "score": 6,
+    "nb_eco": 3,
+    "nb_ia": 2,
+    "auteurs": "Daniel Björkegren, Joshua E. Blumenstock, Samsun Knight",
+    "signal": true,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper proposes an empirical approach that adjusts decision algorithms to anticipate strategic behavior by explicitly modeling individuals' incentives to manipulate outcomes. When evaluated in a large field experiment in Kenya, the strategy-robust linear decision rules outperform standard linear models such as LASSO.",
+    "angle_eco_en": "Strategic manipulation of behavior by individuals seeking favorable algorithmic outcomes undermines model stability, a challenge that can be overcome by explicitly incorporating manipulation incentives into decision rules.",
+    "deja_signal": true
+  },
+  {
+    "id": "aea-10-1257-aeri-20240436",
+    "titre": "Pricing with Algorithms",
+    "url": "https://doi.org/10.1257/aeri.20240436",
+    "source": "American Economic Review: Insights",
+    "type": "article",
+    "date_publication": "2026-09-01",
+    "resume_fr": "Cet article étudie les équilibres de Markov parfaits dans un modèle de duopole répété où les vendeurs choisissent des algorithmes de fixation de prix en fonction du prix du concurrent. Les principaux résultats montrent que dans le modèle simple à deux prix, la tarification de monopole constitue l'unique équilibre, tandis que sur toute grille de prix finie, tous les équilibres se caractérisent par une tarification supraconcurrentielle sans communication directe entre les vendeurs.",
+    "angle_eco": "La capacité des algorithmes de prix à maintenir un équilibre de collusion tacite sans communication directe entre concurrents soulève un enjeu de régulation antitrust, puisque les équilibres parfaits de Markov dans un duopole répété où les vendeurs programment des algorithmes de réaction aux prix conduisent systématiquement à des tarifications supraconcurrentielles.",
+    "themes": [],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Rohit Lamba, Sergey Zhuk",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "In a repeated duopoly model where sellers set pricing algorithms that respond to competitors' prices, the unique equilibrium outcome in the simple two-price case is monopoly pricing. For any general finite price grid, all equilibrium outcomes exhibit supracompetitive pricing that can be sustained without direct communication between firms.",
+    "angle_eco_en": "Algorithms that automatically respond to competitors' prices can sustain supracompetitive pricing outcomes in repeated competition without explicit communication between firms."
+  },
+  {
     "id": "arxiv-2608.25720v1",
     "titre": "Endogenous Selection and Spillovers: Bayesian Inference for Policy-Relevant Causal Effects",
     "url": "https://arxiv.org/abs/2608.25720v1",
@@ -61,7 +102,7 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Pranjal Rawat, John Rust",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash",
     "resume_en": "Dynamic discrete choice in structural econometrics and inverse reinforcement learning in machine learning both aim to infer individual preferences from observed sequential behavior within Markov decision process frameworks. The survey demonstrates that soft Q-learning in machine learning shares core mathematical formulations with econometric choice models under additive extreme value shocks, noting that combining model-free temporal difference estimators with econometric two-step methods offers a promising bridge between the disciplines.",
     "angle_eco_en": "Inferring decision-maker preferences from sequential behavior in high-dimensional state spaces can be scaled by combining structural dynamic discrete choice models from econometrics with model-free inverse reinforcement learning techniques from machine learning.",
@@ -778,6 +819,27 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "A stylized model with household heterogeneity and progressive taxation formalizes how public debt dictates tax progressivity and affects the wealth distribution. Permanent debt expansions increase progressivity when interest rates are high but reduce progressivity when interest rates are low.",
     "angle_eco_en": "The endogeneity of tax progressivity to the public debt burden dictates how demographic and technological shocks affect the long-run distribution of wealth."
+  },
+  {
+    "id": "fmi-10-5089-9798229060783-001",
+    "titre": "Macroeconomic Impacts of China’s Energy Transition",
+    "url": "https://doi.org/10.5089/9798229060783.001",
+    "source": "IMF Working Papers",
+    "type": "papier",
+    "date_publication": "2026-08-01",
+    "resume_fr": "L'énergie solaire et éolienne dominent désormais les nouveaux ajouts de capacité électrique en Chine, et selon un modèle d'équilibre général calculable, cette transition énergétique entraîne une hausse modérée des prix de l'électricité à court terme suivie de baisses durables à long terme, tout en augmentant le PIB et en renforçant la sécurité énergétique. Le recours au stockage par batterie pour gérer la variabilité des énergies renouvelables s'avère plus performant qu'une dépendance continue au charbon, même face à la demande croissante d'électricité liée aux technologies émergentes, mais cette trajectoire de transition accroît le risque d'actifs échoués dans le secteur de la production électrique au charbon.",
+    "angle_eco": "La transition du système électrique chinois vers les énergies renouvelables implique des ajustements substantiels de l'offre et de l'investissement, mais génère une augmentation du PIB à long terme et renforce la sécurité énergétique, tandis que la flexibilité basée sur le stockage par batterie surpasse le recours continu aux centrales à charbon, bien qu'elle accroisse le risque d'actifs bloqués dans le secteur de la production charbonnière.",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Hugo Rojas-Romagosa, Gregor Schwerhoff, Sneha Thube, Sha Yu",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "A computable general equilibrium model shows that China's energy transition toward solar and wind power generates modest near-term electricity price increases followed by sustained declines as renewable shares rise, with battery storage proving more effective than coal-fired backup generation for managing system variability. The transition raises long-run GDP and strengthens energy security despite requiring substantial adjustments in electricity supply and investment, though it increases the risk of stranded assets in the coal power sector.",
+    "angle_eco_en": "The shift toward renewable electricity generation in China requires managing power system variability through either battery storage or coal-fired backup capacity, with implications for electricity prices, long-run GDP, energy security, and the potential obsolescence of coal power infrastructure."
   },
   {
     "id": "arxiv-2607.27155v1",

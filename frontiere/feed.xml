@@ -6,6 +6,20 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Manipulation-Robust Prediction</title>
+      <link>https://doi.org/10.1257/aer.20241087</link>
+      <guid isPermaLink="false">aea-10-1257-aer-20241087</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Ce papier développe une approche empirique qui ajuste les algorithmes de décision pour anticiper la manipulation stratégique des individus, produisant ainsi des règles stables même lorsqu'elles sont totalement transparentes. Évaluée lors d'une vaste expérience de terrain au Kenya, cette approche montre que les règles de décision linéaires robustes à la manipulation surpassent les modèles linéaires standards comme LASSO.</description>
+    </item>
+    <item>
+      <title>Pricing with Algorithms</title>
+      <link>https://doi.org/10.1257/aeri.20240436</link>
+      <guid isPermaLink="false">aea-10-1257-aeri-20240436</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Cet article étudie les équilibres de Markov parfaits dans un modèle de duopole répété où les vendeurs choisissent des algorithmes de fixation de prix en fonction du prix du concurrent. Les principaux résultats montrent que dans le modèle simple à deux prix, la tarification de monopole constitue l'unique équilibre, tandis que sur toute grille de prix finie, tous les équilibres se caractérisent par une tarification supraconcurrentielle sans communication directe entre les vendeurs.</description>
+    </item>
+    <item>
       <title>Endogenous Selection and Spillovers: Bayesian Inference for Policy-Relevant Causal Effects</title>
       <link>https://arxiv.org/abs/2608.25720v1</link>
       <guid isPermaLink="false">arxiv-2608.25720v1</guid>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35545-fromrss</guid>
       <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
       <description>Pour éviter d'étudier les jonctions critiques uniquement de manière rétrospective, cette recherche développe une approche fondée sur un grand modèle de langage afin d'identifier l'incertitude institutionnelle directement dans le discours contemporain. Appliquée à l'archive du Times de Londres contenant 11,95 millions d'articles publiés entre 1800 et 2019, cette méthode permet de construire la première mesure textuelle à long terme de l'incertitude institutionnelle, ancrée dans l'analyse de 120 ans de reportages allant de 1900 à 2019.</description>
-    </item>
-    <item>
-      <title>Replaceable but Employed: Automation and the Meaning of Work</title>
-      <link>https://www.nber.org/papers/w35559#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35559-fromrss</guid>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Une alternative automatisée crédible peut réduire le sens que les travailleurs attribuent à leur contribution, ce qui augmente la compensation salariale exigée ou leur impose une perte de bien-être lorsqu'ils conservent leur emploi. La démonstration publique d'une telle technologie permet aux développeurs de stimuler la demande en dépréciant le travail humain, réduisant ainsi la valeur de l'emploi avant même sa suppression.</description>
-    </item>
-    <item>
-      <title>Automation does not lower the labour share</title>
-      <link>https://cepr.org/voxeu/columns/automation-does-not-lower-labour-share</link>
-      <guid isPermaLink="false">voxeu-epr-org-voxeu-columns-automation-does-not-lower-labour-share</guid>
-      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>À partir de données couvrant la quasi-totalité des entreprises françaises entre 1994 et 2019, cette étude examine la relation entre l'automatisation et la part du revenu revenant au travail au niveau de l'entreprise. Les résultats montrent que bien que l'automatisation ait profondément transformé les emplois et la production, elle n'a pas nécessairement déplacé les revenus du travail vers le capital.</description>
     </item>
   </channel>
 </rss>

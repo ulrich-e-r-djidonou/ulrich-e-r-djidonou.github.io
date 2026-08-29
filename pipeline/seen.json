@@ -2546,5 +2546,121 @@
   "arxiv-2608.25871v1": {
     "score": 2,
     "traite": true
+  },
+  "arxiv-2608.27364v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.27155v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.26924v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.26606v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.26584v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.26522v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.26426v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.26358v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.27448v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.27428v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.27420v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2608.27409v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.27382v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.27380v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.27351v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.27343v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.27334v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.27291v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.27265v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.27259v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.27254v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.27229v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.27187v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.27167v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2608.27158v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2608.27128v1": {
+    "score": 0,
+    "traite": true
+  },
+  "aea-10-1257-aer-20241087": {
+    "score": 6,
+    "traite": true
+  },
+  "aea-10-1257-aeri-20240436": {
+    "score": 3,
+    "traite": true
+  },
+  "fmi-10-5089-9798229060783-001": {
+    "score": 3,
+    "traite": true
   }
 }
