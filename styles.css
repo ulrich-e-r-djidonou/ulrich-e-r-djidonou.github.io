@@ -718,6 +718,11 @@ h1 {
   color: var(--on-accent);
 }
 
+.chip:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 3px;
+}
+
 .filtre-vide {
   padding: 2rem 0;
   color: var(--muted);
