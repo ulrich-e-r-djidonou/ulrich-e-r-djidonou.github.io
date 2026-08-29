@@ -60,6 +60,7 @@ jobs:
             pipeline.test_verifier_dates_tests \
             pipeline.test_verifier_auteurs \
             pipeline.test_verifier_bilinguisme_flux \
+            pipeline.test_rendre_carrousel \
             pipeline.test_rendre_notification_publication \
             pipeline.test_migrer_etiquettes_types \
             pipeline.benchmark.test_benchmark \

@@ -68,6 +68,12 @@ jobs:
           python pipeline/curate.py
           python pipeline/publish.py
 
+      - name: Preparer le carrousel LinkedIn a valider
+        # Avant le commit : le plan ecrit dans carrousels/ doit partir avec
+        # le reste du lot. N'ecrit rien quand l'execution n'a publie aucun
+        # signal, et ne remplace jamais un plan deja retravaille.
+        run: python -m pipeline.rendre_carrousel
+
       - name: Verifier le balisage schema.org
         # Avant le commit, contrairement a la sante du flux : un JSON-LD casse
         # est une regression reelle (contenu invisible ou mal attribue pour
@@ -98,7 +104,7 @@ jobs:
           # fichier modifie hors de l'index : le rebase ci-dessous refusait
           # alors de tourner ("cannot pull with rebase: You have unstaged
           # changes") et le job echouait apres avoir depense le budget LLM.
-          git add frontiere/ en/frontier/index.html pipeline/seen.json sitemap.xml
+          git add frontiere/ en/frontier/index.html pipeline/seen.json sitemap.xml carrousels/
           git diff --cached --quiet || git commit -m "frontiere: mise a jour automatique $(date -u +%F)"
           # Un fichier ecrit par le pipeline mais absent du "git add" ci-dessus
           # ferait echouer le rebase avec un message qui ne nomme pas le
@@ -156,4 +162,19 @@ jobs:
             --repo "$GITHUB_REPOSITORY" \
             --title "$(cat pipeline/_publication_du_jour_titre.txt)" \
             --body-file pipeline/_publication_du_jour.md \
+            --assignee ulrich-e-r-djidonou
+
+      - name: Demander la validation du carrousel LinkedIn
+        # Issue distincte de la notification : celle-ci informe, celle-la
+        # demande une action. Ouverte seulement quand un signal a ete publie,
+        # pour qu'une mise a jour de routine ne reclame rien. Le PDF n'est
+        # jamais produit ici : la validation d'Ulrich passe avant.
+        if: ${{ !cancelled() && hashFiles('pipeline/_carrousel_du_jour.md') != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "$(cat pipeline/_carrousel_du_jour_titre.txt)" \
+            --body-file pipeline/_carrousel_du_jour.md \
             --assignee ulrich-e-r-djidonou
