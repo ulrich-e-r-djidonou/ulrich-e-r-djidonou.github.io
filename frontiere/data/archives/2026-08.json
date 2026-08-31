@@ -1,5 +1,258 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35688-fromrss",
+    "titre": "Designing AI-Augmented Peer Review",
+    "url": "https://www.nber.org/papers/w35688#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-31",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Joshua S. Gans",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28115v1",
+    "titre": "Causal Non-causal State Space Models and the Modelling of Financial Bubbles",
+    "url": "https://arxiv.org/abs/2608.28115v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Frederik Bjerg Krabbe",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28087v1",
+    "titre": "A Design Concept of Forecasting Software for Normalized Vector Autoregressions with Fat Tails and Stochastic Volatility",
+    "url": "https://arxiv.org/abs/2608.28087v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Fei Shang, Xiaolei Wang, Tomasz Woźniak",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.27980v1",
+    "titre": "The Race for Elite Destinations: Education Competition and Low Fertility in Korea",
+    "url": "https://arxiv.org/abs/2608.27980v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Dongwoo Kim",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28578v1",
+    "titre": "Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning",
+    "url": "https://arxiv.org/abs/2608.28578v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Nan Wang, Mohit Yadav, Jonathan Wulff, Aidan Rosenbaum, Kezhou Chen, Yuvan Sharma, Xu Dong, Yiwei Tao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28547v1",
+    "titre": "DARTS: Decoder-Aware Representation Tuning via Surgery for Model Merging",
+    "url": "https://arxiv.org/abs/2608.28547v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "inference-causale",
+      "llm"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Aaryan Ajay Sharma, Sai Nishanth Padala, Seganrasan Subramanian",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28499v1",
+    "titre": "REPLICANT: Learning Policies for Evading and Hardening Malware Detectors",
+    "url": "https://arxiv.org/abs/2608.28499v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Shae McFadden, Ilias Tsingenopoulos, Mario D'Onghia, Alexander Herzog, Myles Foley, Chris Hicks, Lorenzo Cavallaro, Fabio Pierazzi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28439v1",
+    "titre": "Fidelity Is Not Enough: Dispatch-Level Instrumentation for Agentic Datasheet Extraction",
+    "url": "https://arxiv.org/abs/2608.28439v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Qing Ye, Meng-Hsuan Lin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28432v1",
+    "titre": "Are These Modules Worth Their Cost? A Paradigm-Level Accuracy-Cost Analysis of In-context Learning Text-to-SQL",
+    "url": "https://arxiv.org/abs/2608.28432v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jiayan Lin, Yujia Liu, Zijin Hong, Zheng Yuan, Yilin Xiao, Hao Chen, Qinggang Zhang, Xiao Huang, Feiran Huang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28407v1",
+    "titre": "A Unified Framework to Elicit Structured Feedback for Interpretable Multi-Trait Essay Scoring",
+    "url": "https://arxiv.org/abs/2608.28407v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "llm",
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Shihang Yang, Sanwoo Lee, Ningning Zhao, Yunfang Wu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28393v1",
+    "titre": "Timing-Aware Repurchase Prediction for Web-Scale E-Commerce: Survival Models for Multi-Surface Grocery Recommendation",
+    "url": "https://arxiv.org/abs/2608.28393v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Akshay Kekuda, Shreeranjani Srirangamsridharan, Ishan Bhatt, Yanan Cao, Sinduja Subramaniam, Evren Korpeoglu, Kaushiki Nag, Kannan Achan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28379v1",
+    "titre": "Quantum Federated Learning Based on Bures--Uhlmann Geometry for Heterogeneous Noisy Clients",
+    "url": "https://arxiv.org/abs/2608.28379v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Haruki Emori, Masaki Uchihara, Yuuki Tokunaga",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28306v1",
+    "titre": "VISTA: Verifier-Informed Student-to-Teacher Adaptation for On-Policy Self-Distillation",
+    "url": "https://arxiv.org/abs/2608.28306v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Zewen Ding, Zezhong Wu, Zhou Tao, Shida Wang, Shizhuo Hou, YongXiang Hua, Haoyu Cao, Linli Xu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28276v1",
+    "titre": "Parser States Already Know: Structure-Conditioned KV Persistence for Structured Generation",
+    "url": "https://arxiv.org/abs/2608.28276v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Linze Wu, Xinrui Chen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.28245v1",
+    "titre": "I-FLOP: Fast Learning of Order and Parents from Interventional Data",
+    "url": "https://arxiv.org/abs/2608.28245v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-28",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Liuting Chen, Alex Markham",
+    "signal": false
+  },
+  {
     "id": "arxiv-2608.27364v1",
     "titre": "Sophistication in GenAI Use: Field Evidence from a Large Firm",
     "url": "https://arxiv.org/abs/2608.27364v1",
@@ -405,6 +658,39 @@
     "signal": false
   },
   {
+    "id": "arxiv-2608.27598v1",
+    "titre": "Do Customer Disclosures Affect Suppliers' Internal Capital Allocation Decisions?",
+    "url": "https://arxiv.org/abs/2608.27598v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-27",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Sangwook Nam",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.27538v1",
+    "titre": "Disaffection at Work: Employee Responses to Job-Related Information",
+    "url": "https://arxiv.org/abs/2608.27538v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-27",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Beatrice Braut, Mariele Macaluso, Vincenzo Mollisi",
+    "signal": false
+  },
+  {
     "id": "arxiv-2608.25972v1",
     "titre": "The Dynamic Trade-Off of Dual-Class Shares",
     "url": "https://arxiv.org/abs/2608.25972v1",
@@ -787,6 +1073,24 @@
     "nb_eco": 1,
     "nb_ia": 0,
     "auteurs": "Václav Kratochvíl, Radim Jiroušek, Klára Šimůnková, Simona Bažantová",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.25972v2",
+    "titre": "The Dynamic Trade-Off of Dual-Class Shares",
+    "url": "https://arxiv.org/abs/2608.25972v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-26",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Hyunseob Kim, Doron Levit, Roni Michaely",
     "signal": false
   },
   {

@@ -15,7 +15,7 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Daniel Björkegren, Joshua E. Blumenstock, Samsun Knight",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash",
     "resume_en": "The paper proposes an empirical approach that adjusts decision algorithms to anticipate strategic behavior by explicitly modeling individuals' incentives to manipulate outcomes. When evaluated in a large field experiment in Kenya, the strategy-robust linear decision rules outperform standard linear models such as LASSO.",
     "angle_eco_en": "Strategic manipulation of behavior by individuals seeking favorable algorithmic outcomes undermines model stability, a challenge that can be overcome by explicitly incorporating manipulation incentives into decision rules.",
@@ -39,6 +39,74 @@
     "llm": "claude-haiku-4-5",
     "resume_en": "In a repeated duopoly model where sellers set pricing algorithms that respond to competitors' prices, the unique equilibrium outcome in the simple two-price case is monopoly pricing. For any general finite price grid, all equilibrium outcomes exhibit supracompetitive pricing that can be sustained without direct communication between firms.",
     "angle_eco_en": "Algorithms that automatically respond to competitors' prices can sustain supracompetitive pricing outcomes in repeated competition without explicit communication between firms."
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35663-fromrss",
+    "titre": "CentaurBench: Benchmarking LLM Capabilities on Augmenting vs. Automating Real-World Work Tasks",
+    "url": "https://www.nber.org/papers/w35663#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-31",
+    "resume_fr": "Les auteurs présentent CentaurBench, un cadre d'évaluation mesurant la capacité des modèles de langage à automatiser des tâches professionnelles et à assister un agent de capacité inférieure sur sept travaux économiques réels. L'étude montre que la performance en automatisation constitue un indicateur incomplet de la qualité d'assistance, le modèle leader en automatisation étant dépassé en mode d'augmentation sur cinq des sept tâches.",
+    "angle_eco": "L'évaluation de l'aptitude des modèles d'intelligence artificielle à automatiser des tâches constitue un indicateur incomplet pour l'analyse économique, car la capacité à accomplir un travail de manière autonome s'avère peu corrélée à l'efficacité avec laquelle un modèle augmente la performance d'un autre agent dans un système collaboratif.",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 6,
+    "nb_eco": 3,
+    "nb_ia": 2,
+    "auteurs": "Pattaraphon Kenny Wongchamcharoen, Kris Gulati, Min Min Fong, Abhishek Nagaraj",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper introduces CentaurBench, a framework that evaluates large language models across seven real-world tasks on both their ability to automate work directly and their capacity to augment a lower-capacity worker agent. The evaluation reveals that automation rankings are only modestly correlated with augmentation performance, as the top automating model loses in the augmentation regime on five tasks and assistance frequently fails to outperform an unaided worker.",
+    "angle_eco_en": "Evaluating large language models solely on direct task automation fails to capture their capacity to augment lower-capacity workers, as automation performance correlates only modestly with assistance quality and AI guidance can even worsen output relative to working unaided."
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35677-fromrss",
+    "titre": "What Work Does Generative AI Do?",
+    "url": "https://www.nber.org/papers/w35677#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-31",
+    "resume_fr": "À partir d'une enquête nationale représentative reliant l'usage de l'IA générative à des professions et des tâches détaillées, cette étude établit les premiers indices d'adoption au niveau des tâches pour analyser son impact sur le marché du travail. Elle révèle que l'adoption actuelle est répandue mais superficielle, moins de la moitié des travailleurs l'utilisant au sein de la plupart des tâches, ce qui traduit une forte variabilité entre individus effectuant un travail similaire.",
+    "angle_eco": "La mesure de l'adoption de l'intelligence artificielle générative à l'échelle des tâches révèle une utilisation répandue mais superficielle sur le marché du travail, montrant que comprendre quels travailleurs l'adoptent importe autant que d'identifier les tâches que cette technologie assiste.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Alexander Bick, Adam Blandin, David J. Deming, Tyler R. Schumacher",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Based on a nationally representative survey, the paper creates task-level generative artificial intelligence adoption indexes and shows that theoretical exposure scores account for only part of the variation in actual adoption across occupations. The authors find that current adoption is widespread but shallow, as fewer than half of workers utilize generative artificial intelligence within most occupations and tasks where it is used.",
+    "angle_eco_en": "The widespread yet shallow adoption of generative AI produces substantial variation among workers performing similar tasks, demonstrating that evaluating labor market impacts requires understanding which individual workers adopt technology rather than relying solely on task exposure measures."
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35684-fromrss",
+    "titre": "Canaries in the Gold Mine: Early Productivity Gains from Artificial Intelligence Creating Organization Capital",
+    "url": "https://www.nber.org/papers/w35684#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-31",
+    "resume_fr": "Une mesure des investissements en intelligence artificielle fondée sur l'emploi qualifié montre que l'IA est associée à une croissance de la productivité des entreprises ces dernières années, alors que ce n'était pas le cas lors de la décennie précédente. Ces gains de productivité s'expliquent par l'accumulation d'un capital organisationnel, constitué de connaissances durables et propres à l'entreprise acquises par l'apprentissage par la pratique au sein des emplois spécialisés en IA.",
+    "angle_eco": "L'accumulation de capital organisationnel, sous la forme de savoirs durables et spécifiques à l'entreprise acquis par l'apprentissage par la pratique, constitue le mécanisme clé par lequel les investissements en intelligence artificielle stimulent la croissance de la productivité.",
+    "themes": [
+      "travail-emploi",
+      "macro-finance"
+    ],
+    "score": 6,
+    "nb_eco": 3,
+    "nb_ia": 2,
+    "auteurs": "Tania Babina, Alex X. He, Renhao Jiang",
+    "signal": true,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A study using a new measure of firm-level artificial intelligence investment shows that such investments are associated with productivity growth in recent years, but not over the previous decade. The research finds that productivity gains are driven by artificial intelligence-skilled jobs that build organization capital through durable, firm-specific knowledge acquired via learning-by-doing.",
+    "angle_eco_en": "The accumulation of organization capital, defined as durable firm-specific knowledge acquired through learning-by-doing in AI-skilled jobs, drives recent productivity growth from artificial intelligence investments.",
+    "deja_signal": true
   },
   {
     "id": "arxiv-2608.25720v1",

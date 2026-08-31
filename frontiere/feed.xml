@@ -20,6 +20,27 @@
       <description>Cet article étudie les équilibres de Markov parfaits dans un modèle de duopole répété où les vendeurs choisissent des algorithmes de fixation de prix en fonction du prix du concurrent. Les principaux résultats montrent que dans le modèle simple à deux prix, la tarification de monopole constitue l'unique équilibre, tandis que sur toute grille de prix finie, tous les équilibres se caractérisent par une tarification supraconcurrentielle sans communication directe entre les vendeurs.</description>
     </item>
     <item>
+      <title>CentaurBench: Benchmarking LLM Capabilities on Augmenting vs. Automating Real-World Work Tasks</title>
+      <link>https://www.nber.org/papers/w35663#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35663-fromrss</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs présentent CentaurBench, un cadre d'évaluation mesurant la capacité des modèles de langage à automatiser des tâches professionnelles et à assister un agent de capacité inférieure sur sept travaux économiques réels. L'étude montre que la performance en automatisation constitue un indicateur incomplet de la qualité d'assistance, le modèle leader en automatisation étant dépassé en mode d'augmentation sur cinq des sept tâches.</description>
+    </item>
+    <item>
+      <title>What Work Does Generative AI Do?</title>
+      <link>https://www.nber.org/papers/w35677#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35677-fromrss</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <description>À partir d'une enquête nationale représentative reliant l'usage de l'IA générative à des professions et des tâches détaillées, cette étude établit les premiers indices d'adoption au niveau des tâches pour analyser son impact sur le marché du travail. Elle révèle que l'adoption actuelle est répandue mais superficielle, moins de la moitié des travailleurs l'utilisant au sein de la plupart des tâches, ce qui traduit une forte variabilité entre individus effectuant un travail similaire.</description>
+    </item>
+    <item>
+      <title>Canaries in the Gold Mine: Early Productivity Gains from Artificial Intelligence Creating Organization Capital</title>
+      <link>https://www.nber.org/papers/w35684#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35684-fromrss</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Une mesure des investissements en intelligence artificielle fondée sur l'emploi qualifié montre que l'IA est associée à une croissance de la productivité des entreprises ces dernières années, alors que ce n'était pas le cas lors de la décennie précédente. Ces gains de productivité s'expliquent par l'accumulation d'un capital organisationnel, constitué de connaissances durables et propres à l'entreprise acquises par l'apprentissage par la pratique au sein des emplois spécialisés en IA.</description>
+    </item>
+    <item>
       <title>Endogenous Selection and Spillovers: Bayesian Inference for Policy-Relevant Causal Effects</title>
       <link>https://arxiv.org/abs/2608.25720v1</link>
       <guid isPermaLink="false">arxiv-2608.25720v1</guid>
@@ -193,27 +214,6 @@
       <guid isPermaLink="false">arxiv-2608.07193v1</guid>
       <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
       <description>Afin de réduire le coût d'inférence des grands modèles de langage multimodaux, cette étude présente AutoPrune, un cadre sans entraînement qui permet aux modèles de langage de concevoir automatiquement des règles d'élagage de jetons visuels. Ce système s'appuie sur un langage spécifique composé de 131 atomes réutilisables représentant chaque état de recherche comme une modification résiduelle d'une politique de base performante.</description>
-    </item>
-    <item>
-      <title>Time Travel on Professional Profiles</title>
-      <link>https://www.nber.org/papers/w35546#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35546-fromrss</guid>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-      <description>En analysant les données de Revelio Labs de 2020 à 2026, l'étude révèle que 19,7 % des utilisateurs américains établis de LinkedIn modifient rétroactivement l'intitulé ou la description d'un emploi déjà quitté, un comportement fortement associé aux changements d'employeur. Ces modifications rétroactives montrent une nette augmentation des termes liés à l'intelligence artificielle après 2022, un recul des mentions du travail à distance ou de la diversité, ainsi qu'une hausse de la rédaction assistée par de grands modèles de langage après l'arrivée de ChatGPT, en particulier chez les actifs moins diplômés et les titulaires de MBA issus de programmes moins bien classés.</description>
-    </item>
-    <item>
-      <title>Predictive Risk Scores in the Public Sector: Experimental Evidence from Child-Protection Investigations</title>
-      <link>https://www.nber.org/papers/w35540#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35540-fromrss</guid>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Une évaluation aléatoire portant sur 4 752 signalements d'enfants dans le comté de Northampton montre que l'accès des superviseurs de la protection de l'enfance à un score algorithmique de risque a augmenté les placements en famille d'accueil et les services destinés aux enfants au risque prédit le plus élevé. Cette intervention a réduit les signalements ultérieurs pour maltraitance sans accentuer les disparités raciales dans les décisions ou les résultats, ce qui montre que les algorithmes peuvent améliorer le ciblage tout en préservant le pouvoir d'appréciation humain.</description>
-    </item>
-    <item>
-      <title>Detecting Critical Junctures as They Unfold: Foundations, Measurement, and Applications from 120 Years of Reporting</title>
-      <link>https://www.nber.org/papers/w35545#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35545-fromrss</guid>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Pour éviter d'étudier les jonctions critiques uniquement de manière rétrospective, cette recherche développe une approche fondée sur un grand modèle de langage afin d'identifier l'incertitude institutionnelle directement dans le discours contemporain. Appliquée à l'archive du Times de Londres contenant 11,95 millions d'articles publiés entre 1800 et 2019, cette méthode permet de construire la première mesure textuelle à long terme de l'incertitude institutionnelle, ancrée dans l'analyse de 120 ans de reportages allant de 1900 à 2019.</description>
     </item>
   </channel>
 </rss>
