@@ -1,5 +1,28 @@
 [
   {
+    "id": "arxiv-2609.02580v1",
+    "titre": "Competitive Market Behavior of LLMs",
+    "url": "https://arxiv.org/abs/2609.02580v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "resume_fr": "En répliquant des expériences d'économie expérimentale de double enchère dans lesquelles les sujets humains sont remplacés par des agents fondés sur de grands modèles de langage, cette étude évalue leur compatibilité avec les mécanismes de marché. Les résultats montrent que les marchés composés de ces agents convergent plus lentement ou ne convergent pas vers l'équilibre, générant ainsi des allocations de ressources moins efficaces que les marchés humains.",
+    "angle_eco": "L'intégration d'agents fondés sur des grands modèles de langage dans des mécanismes d'enchères doubles permet d'évaluer leur alignement économique, révélant une convergence plus lente voire inexistante vers l'équilibre du marché et une allocation des ressources moins efficace qu'avec des participants humains.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 6,
+    "nb_eco": 3,
+    "nb_ia": 2,
+    "auteurs": "Pawel Struski, Jakub Swistak, Inez Okulska, Przemyslaw Biecek",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "By replicating double auction experiments with large language model agents, this study finds that markets populated by language models exhibit slower or no convergence toward market equilibrium, yielding less efficient resource allocations than human markets. Further analysis reveals substantial behavioral heterogeneity across model families and indicates that an agent's decision to execute a trade reflects a lexical shift from strategic considerations toward urgency.",
+    "angle_eco_en": "Deploying large language models as economic agents in double auction environments results in slower or absent convergence toward market equilibrium and lower allocative efficiency compared to markets populated by humans."
+  },
+  {
     "id": "aea-10-1257-aer-20241087",
     "titre": "Manipulation-Robust Prediction",
     "url": "https://doi.org/10.1257/aer.20241087",
@@ -39,6 +62,30 @@
     "llm": "claude-haiku-4-5",
     "resume_en": "In a repeated duopoly model where sellers set pricing algorithms that respond to competitors' prices, the unique equilibrium outcome in the simple two-price case is monopoly pricing. For any general finite price grid, all equilibrium outcomes exhibit supracompetitive pricing that can be sustained without direct communication between firms.",
     "angle_eco_en": "Algorithms that automatically respond to competitors' prices can sustain supracompetitive pricing outcomes in repeated competition without explicit communication between firms."
+  },
+  {
+    "id": "arxiv-2609.01263v1",
+    "titre": "AI and the Economy: An Economic Examination of Production, Distribution, Firms, Labor, and Welfare",
+    "url": "https://arxiv.org/abs/2609.01263v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-01",
+    "resume_fr": "L'étude analyse l'intelligence artificielle comme un phénomène économique majeur agissant simultanément en tant que capital, travail synthétique, technologie d'usage général et infrastructure pour stimuler la productivité. Elle montre que cette technologie transforme la croissance, les marchés du travail, la concurrence et le bien-être collectif, nécessitant des politiques publiques visant à maximiser ses avantages tout en atténuant ses effets indésirables.",
+    "angle_eco": "L'intelligence artificielle, agissant simultanément comme un capital, un travail synthétique, une technologie d'usage général et une infrastructure économique, stimule la productivité et reconfigure les marchés du travail ainsi que la concurrence, soulevant des enjeux majeurs pour l'orientation des politiques publiques et le bien-être collectif.",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 10,
+    "nb_eco": 7,
+    "nb_ia": 2,
+    "auteurs": "Ali Zeytoon-Nejad",
+    "signal": true,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The paper conceptualizes artificial intelligence as capital, synthetic labor, a general-purpose technology, and an economic infrastructure that drives productivity growth through automation, augmentation, prediction, and innovation. It analyzes the impact of artificial intelligence on labor markets, firm structures, and market concentration, while outlining policy considerations to maximize societal welfare and mitigate adverse economic consequences.",
+    "angle_eco_en": "Artificial Intelligence functions simultaneously as capital, synthetic labor, and general-purpose technology that drives productivity growth through automation, augmentation, optimization, prediction, and innovation while reshaping labor markets through substitution and complementarity effects and altering market concentration and competitive dynamics.",
+    "deja_signal": true
   },
   {
     "id": "nber-https-www-nber-org-papers-w35663-fromrss",
@@ -102,7 +149,7 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Tania Babina, Alex X. He, Renhao Jiang",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash",
     "resume_en": "A study using a new measure of firm-level artificial intelligence investment shows that such investments are associated with productivity growth in recent years, but not over the previous decade. The research finds that productivity gains are driven by artificial intelligence-skilled jobs that build organization capital through durable, firm-specific knowledge acquired via learning-by-doing.",
     "angle_eco_en": "The accumulation of organization capital, defined as durable firm-specific knowledge acquired through learning-by-doing in AI-skilled jobs, drives recent productivity growth from artificial intelligence investments.",

@@ -6,6 +6,13 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Competitive Market Behavior of LLMs</title>
+      <link>https://arxiv.org/abs/2609.02580v1</link>
+      <guid isPermaLink="false">arxiv-2609.02580v1</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      <description>En répliquant des expériences d'économie expérimentale de double enchère dans lesquelles les sujets humains sont remplacés par des agents fondés sur de grands modèles de langage, cette étude évalue leur compatibilité avec les mécanismes de marché. Les résultats montrent que les marchés composés de ces agents convergent plus lentement ou ne convergent pas vers l'équilibre, générant ainsi des allocations de ressources moins efficaces que les marchés humains.</description>
+    </item>
+    <item>
       <title>Manipulation-Robust Prediction</title>
       <link>https://doi.org/10.1257/aer.20241087</link>
       <guid isPermaLink="false">aea-10-1257-aer-20241087</guid>
@@ -18,6 +25,13 @@
       <guid isPermaLink="false">aea-10-1257-aeri-20240436</guid>
       <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
       <description>Cet article étudie les équilibres de Markov parfaits dans un modèle de duopole répété où les vendeurs choisissent des algorithmes de fixation de prix en fonction du prix du concurrent. Les principaux résultats montrent que dans le modèle simple à deux prix, la tarification de monopole constitue l'unique équilibre, tandis que sur toute grille de prix finie, tous les équilibres se caractérisent par une tarification supraconcurrentielle sans communication directe entre les vendeurs.</description>
+    </item>
+    <item>
+      <title>AI and the Economy: An Economic Examination of Production, Distribution, Firms, Labor, and Welfare</title>
+      <link>https://arxiv.org/abs/2609.01263v1</link>
+      <guid isPermaLink="false">arxiv-2609.01263v1</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <description>L'étude analyse l'intelligence artificielle comme un phénomène économique majeur agissant simultanément en tant que capital, travail synthétique, technologie d'usage général et infrastructure pour stimuler la productivité. Elle montre que cette technologie transforme la croissance, les marchés du travail, la concurrence et le bien-être collectif, nécessitant des politiques publiques visant à maximiser ses avantages tout en atténuant ses effets indésirables.</description>
     </item>
     <item>
       <title>CentaurBench: Benchmarking LLM Capabilities on Augmenting vs. Automating Real-World Work Tasks</title>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">voxeu-eu-columns-ai-feedback-loops-and-conditions-explosive-growth</guid>
       <pubDate>Sun, 09 Aug 2026 00:00:00 +0000</pubDate>
       <description>Ce papier présente un cadre d'analyse selon lequel l'utilisation de l'intelligence artificielle pour développer ses propres modèles futurs pourrait engendrer une explosion de l'intelligence et accélérer le progrès technologique par des boucles de rétroaction. Si le seuil de déclenchement d'une croissance explosive selon la part du travail, les rendements de la recherche et l'automatisation des tâches apparaît surprenamment bas, sa concrétisation dépendra des goulets d'étranglement humains, des contraintes physiques de calcul et du rythme d'automatisation.</description>
-    </item>
-    <item>
-      <title>ResidencyRL: Reinforcement Learning in Simulated Clinical Environments</title>
-      <link>https://arxiv.org/abs/2608.07418v1</link>
-      <guid isPermaLink="false">arxiv-2608.07418v1</guid>
-      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
-      <description>La méthode ResidencyRL utilise l'apprentissage par renforcement pour entraîner des agents d'intelligence artificielle clinique au travers de simulations de consultations médicales interactives. Lors des évaluations, cet entraînement améliore la précision diagnostique de 7,0 % en conditions adverses, réduit de 31 % le taux de signaux d'alerte manqués et obtient la préférence des cliniciens experts dans 87,6 % des comparaisons à l'aveugle.</description>
-    </item>
-    <item>
-      <title>An AI4AI Framework for Visual Token Pruning</title>
-      <link>https://arxiv.org/abs/2608.07193v1</link>
-      <guid isPermaLink="false">arxiv-2608.07193v1</guid>
-      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Afin de réduire le coût d'inférence des grands modèles de langage multimodaux, cette étude présente AutoPrune, un cadre sans entraînement qui permet aux modèles de langage de concevoir automatiquement des règles d'élagage de jetons visuels. Ce système s'appuie sur un langage spécifique composé de 131 atomes réutilisables représentant chaque état de recherche comme une modification résiduelle d'une politique de base performante.</description>
     </item>
   </channel>
 </rss>

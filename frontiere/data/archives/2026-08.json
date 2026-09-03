@@ -17,6 +17,153 @@
     "signal": false
   },
   {
+    "id": "arxiv-2609.00350v1",
+    "titre": "Manipulation Testing in Boundary Discontinuity Designs",
+    "url": "https://arxiv.org/abs/2609.00350v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-31",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Federico A. Bugni, Federico Crippa, Daniel Restrepo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.31085v1",
+    "titre": "Moments of Random Coefficients in Short Panels",
+    "url": "https://arxiv.org/abs/2608.31085v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-31",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Irene Botosaru, James L. Powell",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.31059v1",
+    "titre": "When Can We Work in Embedding Space? What Text Embeddings Preserve",
+    "url": "https://arxiv.org/abs/2608.31059v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-31",
+    "themes": [
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Simon Freyaldenhoven",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.30522v1",
+    "titre": "Tariff Threats, Macroeconomic Expectations, and Policy Communication Strategies: Experiments Based on a Multi-Agent System",
+    "url": "https://arxiv.org/abs/2608.30522v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-31",
+    "themes": [
+      "inference-causale",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 4,
+    "nb_ia": 0,
+    "auteurs": "Jianhao Lin, Lexuan Sun, Yixin Yan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.30225v1",
+    "titre": "Redefining Stablecoins from Nominal to Real Value: A Maximum Likelihood Approach",
+    "url": "https://arxiv.org/abs/2608.30225v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-31",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Tomonori Kanno, Kensuke Ito, Yushi Yoshimura, Kyohei Shibano",
+    "signal": false
+  },
+  {
+    "id": "voxeu-rg-voxeu-columns-europes-federated-democratic-learning-state",
+    "titre": "Europe’s federated democratic learning state",
+    "url": "https://cepr.org/voxeu/columns/europes-federated-democratic-learning-state",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-08-31",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Thiemo Fetzer",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.29843v1",
+    "titre": "The Price of Intelligence: A Quality-Adjusted Price Index for AI Services",
+    "url": "https://arxiv.org/abs/2608.29843v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-30",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Louis Yiven Zhu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.29818v1",
+    "titre": "Decarbonising price formation: unit-level evidence on battery storage and the imbalance price in the GB Balancing Mechanism",
+    "url": "https://arxiv.org/abs/2608.29818v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-30",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Robert Dalton, Aidan O'Sullivan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2608.29430v1",
+    "titre": "Content Exploration Beyond the Feed: Creator Supply and the Shared Corpus",
+    "url": "https://arxiv.org/abs/2608.29430v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-29",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Yuanyuan Shen, Yiren Yan, Wenjie Li, Chunhui Zhu",
+    "signal": false
+  },
+  {
     "id": "arxiv-2608.28115v1",
     "titre": "Causal Non-causal State Space Models and the Modelling of Financial Bubbles",
     "url": "https://arxiv.org/abs/2608.28115v1",

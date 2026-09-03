@@ -1,0 +1,313 @@
+[
+  {
+    "id": "arxiv-2609.02797v1",
+    "titre": "Dutch Books for Language Models",
+    "url": "https://arxiv.org/abs/2609.02797v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [
+      "prevision",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Isaiah Andrews, Suproteem Sarkar",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02756v1",
+    "titre": "Off-policy causal estimation in networks",
+    "url": "https://arxiv.org/abs/2609.02756v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Sahil Loomba, Dean Eckles",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02673v1",
+    "titre": "Estimation risk in conditional expectiles",
+    "url": "https://arxiv.org/abs/2609.02673v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Marcelo Fernandes, Vitor Henriques, Eduardo Fonseca Mendes",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02013v1",
+    "titre": "What Would it Cost to End Extreme Poverty?",
+    "url": "https://arxiv.org/abs/2609.02013v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Roshni Sahoo, Joshua Blumenstock, Paul Niehaus, Leo Selker, Stefan Wager",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02887v1",
+    "titre": "A Common Measure of Communication for Speech Brain-Computer Interfaces",
+    "url": "https://arxiv.org/abs/2609.02887v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Dulhan Jayalath, Benjamin Ballyk, Oiwi Parker Jones",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02876v1",
+    "titre": "GRADSOLVE: fast exact gradients for ODE ensembles on GPUs",
+    "url": "https://arxiv.org/abs/2609.02876v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Alessio Spurio Mancini",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02852v1",
+    "titre": "The Implications of Linguistic Illegibility for LLM Security",
+    "url": "https://arxiv.org/abs/2609.02852v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "James Mickens",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02817v1",
+    "titre": "Cliff: Learning Process Rewards from the First Mistake",
+    "url": "https://arxiv.org/abs/2609.02817v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Peixuan Han, Runhui Wang, Ketan Ramaneti, Jie Hao, Gerald Friedland, Chris Kong",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02790v1",
+    "titre": "Full-Model Optimality for Tunable Linear Generative Priors in Compressed Sensing",
+    "url": "https://arxiv.org/abs/2609.02790v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Zhaoming Li, Paul Hand",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02702v1",
+    "titre": "Trace as State: Reasoning Traces as Conditional States for Long-Context Transformers",
+    "url": "https://arxiv.org/abs/2609.02702v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Xu Zou, Jie Tang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02646v1",
+    "titre": "Differentiable Electricity-Market Clearing for Gradient-Based Planning",
+    "url": "https://arxiv.org/abs/2609.02646v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Luca Mungo, Maarten P. Scholl, Arnau Quera-Bofarull",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02566v1",
+    "titre": "Online Reinforcement Learning in the Met Office Unified Model through Distributed Model-Agent Coupling",
+    "url": "https://arxiv.org/abs/2609.02566v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Pritthijit Nath, Sebastian Schemm, Peter Haynes, Emily Shuckburgh, Mark Webb",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02548v1",
+    "titre": "Learn from Whoever Is Right: Answer-Verified Multi-Teacher Distillation for Multi-Domain LLMs",
+    "url": "https://arxiv.org/abs/2609.02548v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Xixiang He, Xingming Li, Baiqi Wu, Qiyao Sun, Xuanyu Ji, Ao Cheng, Qingyong Hu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.02507v1",
+    "titre": "Rethinking the Teacher-Student Framework for Test-Time Adaptation",
+    "url": "https://arxiv.org/abs/2609.02507v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Damian Sójka, Marc Masana, Bartłomiej Twardowski, Sebastian Cygert",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.01943v1",
+    "titre": "Headline Estimation with Multiple Research Designs",
+    "url": "https://arxiv.org/abs/2609.01943v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-01",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Vod Vilfort",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.01804v1",
+    "titre": "Robust Variance Estimation in Linear Regression: A Projection-Geometry Perspective",
+    "url": "https://arxiv.org/abs/2609.01804v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-01",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Yanping Chen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.01467v1",
+    "titre": "Which Policy Works, and Where? Estimation and Inference for State-Level Treatment Effects in Difference-in-Differences",
+    "url": "https://arxiv.org/abs/2609.01467v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-01",
+    "themes": [
+      "inference-causale",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Nichole Austin, Sunny R. Karim, Erin Strumpf, Matthew D. Webb",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.00943v1",
+    "titre": "Illiquidity at Risk",
+    "url": "https://arxiv.org/abs/2609.00943v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-01",
+    "themes": [
+      "prevision",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Demetrio Lacava, Paolo Santucci de Magistris",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.00541v1",
+    "titre": "Optimal Uniform Pricing for Multi-Interval Dispatch without Make-Whole Uplifts",
+    "url": "https://arxiv.org/abs/2609.00541v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-01",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Valentina Norambuena-Guzman, Cong Chen, Lang Tong, Timothy D. Mount",
+    "signal": false
+  }
+]
