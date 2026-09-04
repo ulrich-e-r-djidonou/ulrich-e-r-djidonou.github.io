@@ -106,7 +106,10 @@ Research Fellow | April 2024–April 2026
 - Co-organizer of the 2024 QPIP Morning Event: mobilizing researchers, validating content, coordinating with the communications department, etc.
 - Recipient of the Le Philanthrope Award, Distinction category (Entraide 2025 campaign), for leading the Entraide campaign at the Management Board; award presented at the Quebec National Assembly.
 
-Photo caption: Presentation of the Le Philanthrope Award, Entraide 2025 campaign.
+Photo (source: Gouvernement du Quebec, "Personnes ayant recu une marque de reconnaissance du Comite Entraide", anchor c441978, page in French).
+Title: Ulrich E. R. Djidonou - Recipient in the Distinction category.
+Text: Ulrich E. R. Djidonou, Conseil de gestion de l'assurance parentale.
+Caption: Left to right: Anne Racine, co-chair of the Comite Entraide, Ulrich E. R. Djidonou, recipient, and Roberto Bomba, co-chair of the Comite Entraide.
 
 **Quebec Ministry of Finance (MFQ)**
 Economist (internship, student job) | May 2020 to March 2024, part-time
