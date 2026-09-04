@@ -1184,6 +1184,34 @@ h1 {
   font-style: italic;
 }
 
+.distinction-figure--wide {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  max-width: 560px;
+}
+
+.distinction-figure--wide img {
+  width: 100%;
+}
+
+.distinction-figure--wide figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: none;
+  font-style: normal;
+}
+
+.distinction-figure__title {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.distinction-figure__source {
+  font-style: italic;
+}
+
 /* FAQ (accueil) */
 .faq-list {
   max-width: 62ch;
