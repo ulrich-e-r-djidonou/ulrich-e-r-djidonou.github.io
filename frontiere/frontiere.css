@@ -195,7 +195,7 @@
 .chip[aria-pressed="true"] {
   background: var(--teal);
   border-color: var(--teal);
-  color: var(--white);
+  color: var(--on-teal);
 }
 
 .frontiere-flux {

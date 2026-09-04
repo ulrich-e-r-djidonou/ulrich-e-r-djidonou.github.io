@@ -13,6 +13,7 @@ colors:
   white: "#fffdf8"
   heading: "#073f3d"
   on-accent: "#fffdf8"
+  on-teal: "#fffdf8"
   soft-bg: "#eef4ed"
   soft-border: "#bfd0b8"
   soft-text: "#31422c"
@@ -111,6 +112,8 @@ Palette de carnet : neutres papier et encre, un teal institutionnel dominant, ve
 ### Named Rules
 **La règle du liseré.** Le dégradé `linear-gradient(90deg, teal 0%, vert 55%, ambre 100%)` est le seul gradient autorisé du site. Il apparaît en filet fin (2 à 4px) : navigation active, signature-line, bordure du portrait, top de carte au survol, pied de page. Jamais en fond de bloc, jamais en texte.
 
+**La règle du texte sur teal.** `--on-accent` (#fffdf8) ne sert qu'aux fonds qui restent sombres dans les deux thèmes (bloc Méthode sur `--teal-dark`). Tout texte posé sur `--teal`, qui s'éclaircit en sombre (#4fc7bd), utilise `--on-teal` : #fffdf8 en clair, #08201e en sombre. Sans cette bascule, les boutons primaires et les chips actives tombent à 2.0:1 en mode sombre.
+
 **La règle du focus ambre.** Tout élément focusable reçoit `outline: 3px solid var(--amber); outline-offset: 3-4px`. Uniforme sur tout le site.
 
 ## Typography
@@ -169,6 +172,11 @@ Coins discrets : 4px (boutons, encadrés), 6px (cartes), 14px (portrait), 999px 
 - **Background:** blanc cassé; variante `featured` sur fond soft vert avec textes de la famille soft (non inversés en sombre).
 - **Shadow Strategy:** ombre carte ambiante; survol : -4px, bordure verte, liseré signature qui se déploie en haut (scaleX 0 vers 1, 220ms).
 - **Thumb:** image 16/9 en pleine largeur de carte (marges négatives).
+
+### Figure de distinction
+- **Variante par défaut** (`.distinction-figure`): image verticale de 130px à gauche, légende à droite, filet 1px et coins 6px.
+- **Variante large** (`.distinction-figure--wide`): photo paysage en pleine largeur (560px max), légende empilée dessous en colonne. Le premier segment (`__title`) reprend le titre de la source en encre pleine, les segments suivants restent en gris terrain, la ligne source (`__source`) est en italique et porte le lien externe.
+- **Règle de citation:** titre, description et légende sont repris mot pour mot de la source institutionnelle; la photo est hébergée localement pour survivre au retrait de la page d'origine.
 
 ### Navigation
 - **Style:** Trebuchet 0.88rem, gris terrain; page active en heading 700 avec soulignement liseré 2px. Header sticky, fond translucide flouté, filet bas 1px.

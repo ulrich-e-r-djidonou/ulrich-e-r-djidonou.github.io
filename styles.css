@@ -21,6 +21,9 @@
   /* Texte pose sur un fond accent sature (bouton primaire, bloc Methode,
      chip active) : reste clair quel que soit le theme. */
   --on-accent: #fffdf8;
+  /* Texte pose sur un fond --teal (qui s'eclaircit en sombre) : distinct de
+     --on-accent, reserve aux fonds --teal-dark qui restent sombres. */
+  --on-teal: #fffdf8;
 
   /* Puces d'accent a fond clair fixe (proof-strip, badges, cartes vedettes) :
      ne s'inversent jamais avec le theme, pour garder leur propre contraste. */
@@ -74,6 +77,7 @@
     --shadow: rgba(0, 0, 0, 0.45);
     --card-shadow: rgba(0, 0, 0, 0.35);
     --heading: #8fe0d6;
+    --on-teal: #08201e;
     --header-bg: rgba(16, 23, 22, 0.92);
   }
 }
@@ -289,7 +293,7 @@ h1 {
 
 .button.primary {
   background: var(--teal);
-  color: var(--on-accent);
+  color: var(--on-teal);
 }
 
 .button.secondary {
@@ -715,7 +719,7 @@ h1 {
 .chip[aria-pressed="true"] {
   background: var(--teal);
   border-color: var(--teal);
-  color: var(--on-accent);
+  color: var(--on-teal);
 }
 
 .chip:focus-visible {
