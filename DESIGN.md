@@ -17,6 +17,15 @@ colors:
   soft-bg: "#eef4ed"
   soft-border: "#bfd0b8"
   soft-text: "#31422c"
+  soft-muted: "#4b5a4f"
+  paper-dark: "#101716"
+  ink-dark: "#e8ece9"
+  muted-dark: "#9fada7"
+  teal-dark-theme: "#4fc7bd"
+  line-dark: "#2b3735"
+  white-dark: "#182220"
+  heading-dark: "#8fe0d6"
+  on-teal-dark: "#08201e"
 typography:
   display:
     fontFamily: "Georgia, 'Times New Roman', serif"
