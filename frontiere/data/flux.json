@@ -1,5 +1,73 @@
 [
   {
+    "id": "arxiv-2609.04061v1",
+    "titre": "When Models Edit Too Much: On the Fidelity of Minimal Code Edits",
+    "url": "https://arxiv.org/abs/2609.04061v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "resume_fr": "Une évaluation menée sur 400 problèmes de code montre que les grands modèles de langage ont tendance à réécrire excessivement le code lors de la correction de bugs, un comportement généralisé y compris chez des modèles performants comme GPT-5.5. L'ajout d'une instruction de préservation réduit la distance de Levenshtein excédentaire moyenne de 0,195 à 0,131 tout en augmentant le Pass@1 de 2,3 points, tandis que l'apprentissage par renforcement s'avère la méthode post-entraînement la plus efficace pour inciter les modèles à réaliser des modifications minimales.",
+    "angle_eco": "La sur-édition du code par les grands modèles de langage génère une complexité cognitive inutile lors des corrections, constituant un enjeu de fidélité d'édition que l'apprentissage par renforcement permet de résoudre plus efficacement que le réglage fin supervisé ou l'augmentation de la taille des modèles.",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "nb_eco": 1,
+    "nb_ia": 3,
+    "auteurs": "Tongyao Zhu, Wei Hern Lim, Min-Yen Kan",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Evaluating frontier large language models on 400 code-repair tasks reveals that models frequently rewrite code beyond what is required, adding unnecessary cognitive complexity despite high correctness scores. Adding a preservation instruction significantly reduces unnecessary code edits while boosting repair accuracy, and reinforcement learning achieves the best out-of-domain edit fidelity compared to supervised fine-tuning.",
+    "angle_eco_en": "The tendency of large language models to over-edit code beyond what is required to fix a bug increases unnecessary cognitive complexity despite high functional correctness, though explicit preservation instructions and reinforcement learning can significantly improve minimal edit fidelity."
+  },
+  {
+    "id": "arxiv-2609.04013v1",
+    "titre": "LLM4CKD: Large Language Models for Early Stage Chronic Kidney Disease Screening",
+    "url": "https://arxiv.org/abs/2609.04013v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "resume_fr": "Cette étude évalue l'efficacité des grands modèles de langage pour le dépistage précoce de la maladie rénale chronique sans entraînement spécifique, grâce à des invites structurées et des caractéristiques tabulaires cliniques. Les résultats montrent que ces modèles égalent ou dépassent les méthodes d'apprentissage automatique traditionnelles dans les contextes à faible volume de données, bien que leur stabilité diminue avec des entrées plus complexes.",
+    "angle_eco": "L'arbitrage entre l'économie de données annotées et la stabilité des prédictions caractérise l'utilisation des grands modèles de langage pour le dépistage précoce de la maladie rénale chronique, car leur capacité à fonctionner sans entraînement spécifique réduit les coûts d'apprentissage tout en offrant une alternative flexible mais moins stable que les méthodes traditionnelles d'apprentissage automatique face à des données complexes.",
+    "themes": [
+      "llm",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 5,
+    "nb_eco": 1,
+    "nb_ia": 5,
+    "auteurs": "Muhammad Ashad Kabir, Sirajam Munira",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The study evaluates a framework that applies large language models using structured prompt templates and clinically selected tabular features to screen for chronic kidney disease in zero-shot and few-shot settings without task-specific training. The findings demonstrate that while large language models match or outperform traditional machine learning methods when labeled data are limited, their performance is less stable and more model-dependent as input complexity increases.",
+    "angle_eco_en": "The trade-off between data efficiency and prediction stability when using large language models for early chronic kidney disease screening shows that zero-shot and few-shot learning can reduce reliance on labeled training data, even though performance remains less stable under higher input complexity than traditional machine learning models."
+  },
+  {
+    "id": "arxiv-2609.03851v1",
+    "titre": "Pushing the (Decision) Boundaries: Dynamically Calibrating Differentially Private Noise to Explainability in Federated Learning",
+    "url": "https://arxiv.org/abs/2609.03851v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "resume_fr": "Pour résoudre la dégradation des explications causée par le bruit de confidentialité différentielle en apprentissage fédéré, cet article présente XCal-FL, un algorithme qui ajuste dynamiquement ce bruit durant l'entraînement à partir de trois signaux d'explicabilité complémentaires. Des expériences menées sur trois jeux de données d'imagerie médicale montrent que cet algorithme améliore la performance prédictive de plus de 10 % et la fidélité des explications jusqu'à 5 fois par rapport aux méthodes à bruit statique, tout en optimisant l'efficacité du budget de confidentialité.",
+    "angle_eco": "La calibration dynamique du bruit de confidentialité différentielle à partir de la sensibilité des frontières de décision et de la cohérence de l'attention optimise l'usage du budget de confidentialité dans l'apprentissage fédéré, améliorant simultanément la précision des modèles distribués et la fidélité de leurs explications.",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "donnees"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Michael Khavkin, Kichang Lee, Jaeho Jin, JeongGil Ko, Eran Toch",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper introduces XCal-FL, a local training algorithm for cross-silo federated learning that dynamically calibrates differential privacy noise using prediction logit variations, counterfactual margins, and saliency concentration. Evaluated on medical imaging datasets, XCal-FL improves predictive performance by over 10 percent and enhances explanation fidelity by up to five times compared to static-noise federated learning approaches.",
+    "angle_eco_en": "The trade-off between data confidentiality and model explainability in federated learning can be mitigated by dynamically adjusting privacy-preserving noise during training based on prediction logit variations, counterfactual margins, and saliency concentration."
+  },
+  {
     "id": "arxiv-2609.02580v1",
     "titre": "Competitive Market Behavior of LLMs",
     "url": "https://arxiv.org/abs/2609.02580v1",
@@ -17,10 +85,11 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Pawel Struski, Jakub Swistak, Inez Okulska, Przemyslaw Biecek",
-    "signal": false,
+    "signal": true,
     "llm": "gemini-3.6-flash",
     "resume_en": "By replicating double auction experiments with large language model agents, this study finds that markets populated by language models exhibit slower or no convergence toward market equilibrium, yielding less efficient resource allocations than human markets. Further analysis reveals substantial behavioral heterogeneity across model families and indicates that an agent's decision to execute a trade reflects a lexical shift from strategic considerations toward urgency.",
-    "angle_eco_en": "Deploying large language models as economic agents in double auction environments results in slower or absent convergence toward market equilibrium and lower allocative efficiency compared to markets populated by humans."
+    "angle_eco_en": "Deploying large language models as economic agents in double auction environments results in slower or absent convergence toward market equilibrium and lower allocative efficiency compared to markets populated by humans.",
+    "deja_signal": true
   },
   {
     "id": "aea-10-1257-aer-20241087",
@@ -81,7 +150,7 @@
     "nb_eco": 7,
     "nb_ia": 2,
     "auteurs": "Ali Zeytoon-Nejad",
-    "signal": true,
+    "signal": false,
     "llm": "claude-haiku-4-5",
     "resume_en": "The paper conceptualizes artificial intelligence as capital, synthetic labor, a general-purpose technology, and an economic infrastructure that drives productivity growth through automation, augmentation, prediction, and innovation. It analyzes the impact of artificial intelligence on labor markets, firm structures, and market concentration, while outlining policy considerations to maximize societal welfare and mitigate adverse economic consequences.",
     "angle_eco_en": "Artificial Intelligence functions simultaneously as capital, synthetic labor, and general-purpose technology that drives productivity growth through automation, augmentation, optimization, prediction, and innovation while reshaping labor markets through substitution and complementarity effects and altering market concentration and competitive dynamics.",
@@ -154,6 +223,27 @@
     "resume_en": "A study using a new measure of firm-level artificial intelligence investment shows that such investments are associated with productivity growth in recent years, but not over the previous decade. The research finds that productivity gains are driven by artificial intelligence-skilled jobs that build organization capital through durable, firm-specific knowledge acquired via learning-by-doing.",
     "angle_eco_en": "The accumulation of organization capital, defined as durable firm-specific knowledge acquired through learning-by-doing in AI-skilled jobs, drives recent productivity growth from artificial intelligence investments.",
     "deja_signal": true
+  },
+  {
+    "id": "arxiv-2609.00089v1",
+    "titre": "Foundation models for electricity price forecasting and battery arbitrage: Can they replace market-specific forecasting models?",
+    "url": "https://arxiv.org/abs/2609.00089v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-31",
+    "resume_fr": "L'évaluation de neuf variantes de cinq familles de modèles fondationnels face à deux modèles de référence pour la prévision des prix de l'électricité en Allemagne, en Pologne et en Espagne entre 2021 et 2025 montre que seuls les modèles TabPFN surpassent systématiquement et significativement ces références sur le plan statistique. Toutefois, cette supériorité statistique ne garantit pas une dominance économique universelle dans l'arbitrage de stockage par batterie, car TabPFN est plus rentable avec des stratégies risquées tandis que le modèle de référence fondé sur un réseau de neurones profond distributionnel l'emporte lorsque la tolérance au risque est plus faible.",
+    "angle_eco": "La dominance statistique de certains modèles fondateurs pour la prévision des prix de l'électricité ne garantit pas une rentabilité supérieure dans l'arbitrage du stockage par batterie, car leur valeur économique dépend à la fois de la tolérance au risque, de la stratégie adoptée et du problème de décision considéré.",
+    "themes": [
+      "prevision"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Arkadiusz Lipiecki, Rafał Weron",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Evaluating nine foundation model variants across electricity markets in Germany, Poland, and Spain from 2021 to 2025, a study shows that only TabPFN models consistently outperform state-of-the-art market-specific benchmarks in statistical forecasting accuracy. However, foundation models cannot universally replace market-specific models because their economic value in battery storage arbitrage depends on risk tolerance, with a distributional deep neural network benchmark generating higher profits under lower risk preferences.",
+    "angle_eco_en": "The divergence between statistical forecasting accuracy in zero-shot foundation models and actual profitability in battery storage arbitrage demonstrates that statistical dominance does not guarantee economic superiority across different risk tolerances and decision strategies."
   },
   {
     "id": "arxiv-2608.25720v1",

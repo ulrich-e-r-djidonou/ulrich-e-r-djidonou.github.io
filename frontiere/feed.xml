@@ -6,6 +6,27 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>When Models Edit Too Much: On the Fidelity of Minimal Code Edits</title>
+      <link>https://arxiv.org/abs/2609.04061v1</link>
+      <guid isPermaLink="false">arxiv-2609.04061v1</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Une évaluation menée sur 400 problèmes de code montre que les grands modèles de langage ont tendance à réécrire excessivement le code lors de la correction de bugs, un comportement généralisé y compris chez des modèles performants comme GPT-5.5. L'ajout d'une instruction de préservation réduit la distance de Levenshtein excédentaire moyenne de 0,195 à 0,131 tout en augmentant le Pass@1 de 2,3 points, tandis que l'apprentissage par renforcement s'avère la méthode post-entraînement la plus efficace pour inciter les modèles à réaliser des modifications minimales.</description>
+    </item>
+    <item>
+      <title>LLM4CKD: Large Language Models for Early Stage Chronic Kidney Disease Screening</title>
+      <link>https://arxiv.org/abs/2609.04013v1</link>
+      <guid isPermaLink="false">arxiv-2609.04013v1</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Cette étude évalue l'efficacité des grands modèles de langage pour le dépistage précoce de la maladie rénale chronique sans entraînement spécifique, grâce à des invites structurées et des caractéristiques tabulaires cliniques. Les résultats montrent que ces modèles égalent ou dépassent les méthodes d'apprentissage automatique traditionnelles dans les contextes à faible volume de données, bien que leur stabilité diminue avec des entrées plus complexes.</description>
+    </item>
+    <item>
+      <title>Pushing the (Decision) Boundaries: Dynamically Calibrating Differentially Private Noise to Explainability in Federated Learning</title>
+      <link>https://arxiv.org/abs/2609.03851v1</link>
+      <guid isPermaLink="false">arxiv-2609.03851v1</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Pour résoudre la dégradation des explications causée par le bruit de confidentialité différentielle en apprentissage fédéré, cet article présente XCal-FL, un algorithme qui ajuste dynamiquement ce bruit durant l'entraînement à partir de trois signaux d'explicabilité complémentaires. Des expériences menées sur trois jeux de données d'imagerie médicale montrent que cet algorithme améliore la performance prédictive de plus de 10 % et la fidélité des explications jusqu'à 5 fois par rapport aux méthodes à bruit statique, tout en optimisant l'efficacité du budget de confidentialité.</description>
+    </item>
+    <item>
       <title>Competitive Market Behavior of LLMs</title>
       <link>https://arxiv.org/abs/2609.02580v1</link>
       <guid isPermaLink="false">arxiv-2609.02580v1</guid>
@@ -53,6 +74,13 @@
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35684-fromrss</guid>
       <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
       <description>Une mesure des investissements en intelligence artificielle fondée sur l'emploi qualifié montre que l'IA est associée à une croissance de la productivité des entreprises ces dernières années, alors que ce n'était pas le cas lors de la décennie précédente. Ces gains de productivité s'expliquent par l'accumulation d'un capital organisationnel, constitué de connaissances durables et propres à l'entreprise acquises par l'apprentissage par la pratique au sein des emplois spécialisés en IA.</description>
+    </item>
+    <item>
+      <title>Foundation models for electricity price forecasting and battery arbitrage: Can they replace market-specific forecasting models?</title>
+      <link>https://arxiv.org/abs/2609.00089v1</link>
+      <guid isPermaLink="false">arxiv-2609.00089v1</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <description>L'évaluation de neuf variantes de cinq familles de modèles fondationnels face à deux modèles de référence pour la prévision des prix de l'électricité en Allemagne, en Pologne et en Espagne entre 2021 et 2025 montre que seuls les modèles TabPFN surpassent systématiquement et significativement ces références sur le plan statistique. Toutefois, cette supériorité statistique ne garantit pas une dominance économique universelle dans l'arbitrage de stockage par batterie, car TabPFN est plus rentable avec des stratégies risquées tandis que le modèle de référence fondé sur un réseau de neurones profond distributionnel l'emporte lorsque la tolérance au risque est plus faible.</description>
     </item>
     <item>
       <title>Endogenous Selection and Spillovers: Bayesian Inference for Policy-Relevant Causal Effects</title>
@@ -186,34 +214,6 @@
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35574-fromrss</guid>
       <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
       <description>En simulant les effets à long terme des conseils financiers générés par GPT-5.2 pour un échantillon représentatif, l'étude montre que suivre ces recommandations oriente les individus vers la théorie du cycle de vie, à travers une participation accrue aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus élevées. Bien que ces conseils varient selon la culture financière, l'expérience préalable en IA et le genre, deux tiers des écarts de part d'actions selon le sexe découlent des requêtes rédigées par les utilisateurs et un tiers de l'attribution d'étiquettes de genre à des requêtes identiques.</description>
-    </item>
-    <item>
-      <title>Staged Access and Liability for Dual-Use Artificial Intelligence</title>
-      <link>https://www.nber.org/papers/w35586#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35586-fromrss</guid>
-      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
-      <description>L'étude montre que la responsabilité d'un développeur d'intelligence artificielle à double usage incite l'adversaire à intensifier sa recherche de failles logicielles, tandis que l'accès échelonné neutralise cette réaction stratégique, ce qui rend la responsabilité et l'accès échelonné complémentaires. Comme la recherche défensive consomme des ressources réelles et que la responsabilité financière ne permet pas d'imposer la date de sortie souhaitée par le régulateur, le taux de responsabilité optimal peut être inférieur à l'internalisation totale des dommages et doit s'accompagner d'un mandat temporel distinct.</description>
-    </item>
-    <item>
-      <title>AI Agents and Prompt Engineering in Econometric Coding</title>
-      <link>https://www.nber.org/papers/w35588#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35588-fromrss</guid>
-      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
-      <description>L'étude évalue la génération de code économétrique par les grands modèles de langage et montre que le passage d'un simple agent conversationnel à un agent contraint augmente le taux de réussite des tâches de 74 à 96 %, pour un coût supplémentaire d'environ huit centimes par exécution. Pour les modèles Claude Sonnet 4.6 et GPT-5.4, l'incitation par quelques exemples et l'autonomie fonctionnent comme des substituts, tandis que les différences de performance selon le logiciel statistique disparaissent en grande partie avec l'agent contraint.</description>
-    </item>
-    <item>
-      <title>Environmental and Economic Implications of Artificial Intelligence Data Centers in the United States</title>
-      <link>https://arxiv.org/abs/2608.09882v1</link>
-      <guid isPermaLink="false">arxiv-2608.09882v1</guid>
-      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Une analyse des centres de données dédiés à l'intelligence artificielle aux États-Unis montre que leurs impacts environnementaux et économiques, notamment les émissions, la consommation d'eau et l'occupation des sols, dépendent principalement des réseaux électriques et des infrastructures régionales dans lesquels ils s'insèrent. Comme les structures réglementaires actuelles ne prennent pas totalement en compte les externalités temporelles et spatiales de ces infrastructures, des politiques intégrées combinant efficacité énergétique et planification territoriale sont nécessaires pour en optimiser le fonctionnement.</description>
-    </item>
-    <item>
-      <title>AI feedback loops and the conditions for explosive growth</title>
-      <link>https://cepr.org/voxeu/columns/ai-feedback-loops-and-conditions-explosive-growth</link>
-      <guid isPermaLink="false">voxeu-eu-columns-ai-feedback-loops-and-conditions-explosive-growth</guid>
-      <pubDate>Sun, 09 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Ce papier présente un cadre d'analyse selon lequel l'utilisation de l'intelligence artificielle pour développer ses propres modèles futurs pourrait engendrer une explosion de l'intelligence et accélérer le progrès technologique par des boucles de rétroaction. Si le seuil de déclenchement d'une croissance explosive selon la part du travail, les rendements de la recherche et l'automatisation des tâches apparaît surprenamment bas, sa concrétisation dépendra des goulets d'étranglement humains, des contraintes physiques de calcul et du rythme d'automatisation.</description>
     </item>
   </channel>
 </rss>

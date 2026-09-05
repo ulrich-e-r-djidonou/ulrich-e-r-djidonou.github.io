@@ -1,5 +1,327 @@
 [
   {
+    "id": "arxiv-2609.04136v1",
+    "titre": "Natural Disasters and the Nonprofit Sector",
+    "url": "https://arxiv.org/abs/2609.04136v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Mayleen Cortez-Rodriguez",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.03227v1",
+    "titre": "Randomization Inference for Matched Pairs with Binary Outcomes",
+    "url": "https://arxiv.org/abs/2609.03227v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Bob Wilson",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04189v1",
+    "titre": "Robust PAC Learning of Concurrent Stochastic Games",
+    "url": "https://arxiv.org/abs/2609.04189v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Angel Y. He, David Parker",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04180v1",
+    "titre": "Knowledge Acquisition During Pre-training? Large Language Models Learn Better With Auxiliary Views",
+    "url": "https://arxiv.org/abs/2609.04180v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Joseph Lee, Yidi Huang, Dokyoon Kim, Shu Yang, Li Shen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04172v1",
+    "titre": "Rethinking On-Policy Distillation of Large Language Models II: One Training Example",
+    "url": "https://arxiv.org/abs/2609.04172v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Zixuan Fu, Bingxiang He, Yuxin Zuo, Haohuan Huang, Jinqian Zhang, Ruhang Xiao, Cheng Qian, Qinyu Luo, Huan-ang Gao, Yudong Wang, Zhiyuan Liu, Ning Ding, Chaojun Xiao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04168v1",
+    "titre": "Para-Pipe: Exploiting Hierarchical Operator Parallelism of ML Computational Graphs on SoCs",
+    "url": "https://arxiv.org/abs/2609.04168v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Yujie Zhang, Huiying Lan, Ehsan Aghapour, Zhiyuan Ning, Peng Zan, Weidong Shao, Anuj Pathania, Tulika Mitra",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04147v1",
+    "titre": "A Low-Cost, Open Platform for End-to-End Autonomous Driving on a Miniature Ackermann Vehicle",
+    "url": "https://arxiv.org/abs/2609.04147v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Gustavo Claudio Karl Couto, Eric Aislan Antonelo, Gabriel George Zipperer",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04108v1",
+    "titre": "Sequential Beats Joint: On the Interplay between On-Policy Distillation and RLVR",
+    "url": "https://arxiv.org/abs/2609.04108v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Boyan Li, Bingsen Chen, Chenghao Yang, Ping Nie, Chen Zhao, Xi Ye",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04105v1",
+    "titre": "Hardware-Aware FP4 FlashAttention-4",
+    "url": "https://arxiv.org/abs/2609.04105v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Robert Hu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04094v1",
+    "titre": "DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training",
+    "url": "https://arxiv.org/abs/2609.04094v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Shubham Gandhi, Saurabh Goyal, Kiran Kate, Yara Rizk",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04090v1",
+    "titre": "Conditioning Degenerate Diffusion Models",
+    "url": "https://arxiv.org/abs/2609.04090v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Uğur Aydın, Tamer Başar",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04066v1",
+    "titre": "Subspace Inference Enables Efficient Active Reward Learning from Preferences",
+    "url": "https://arxiv.org/abs/2609.04066v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Yutai Zhou, Erdem Bıyık",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04018v1",
+    "titre": "A location-invariant estimator of extremal quantile treatment effects for heavy-tailed distributions",
+    "url": "https://arxiv.org/abs/2609.04018v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Xin Yu, Shuwei Huang, Jicheng Liu, Jielin Tang, Bolin Wang, Yunxiao Zhang, Tian Zhao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.03955v1",
+    "titre": "Two-Stage Reinforcement Learning for Sound and Adversarial Test Generation in Code LLMs",
+    "url": "https://arxiv.org/abs/2609.03955v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Jiacheng Xu, Wentao Zhang, Zhiyi Lyu, Fuxiang Zhang, Chaojie Wang, Yang Liu, Bo An",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.03941v1",
+    "titre": "Headroom-Drift Replay: A Primitive for Principled Replay Control in GRPO",
+    "url": "https://arxiv.org/abs/2609.03941v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Hyun Bin Park, Du-Seong Chang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.03937v1",
+    "titre": "RATL: Learning from Retrieved Residuals for Robust Multivariate Time-Series Forecasting",
+    "url": "https://arxiv.org/abs/2609.03937v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "inference-causale",
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yuchen He, Yueyang Cang, Zhiyuan Ning, Ningyu Wang, Li Shi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.03923v1",
+    "titre": "Speak for Me: Giving LLMs the Situational Awareness to Participate in a Meeting",
+    "url": "https://arxiv.org/abs/2609.03923v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "llm",
+      "prevision",
+      "travail-emploi"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Muneeb Khan, Frederic Kirstein, Terry Ruas, Bela Gipp",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.03894v1",
+    "titre": "CROCODIL: Cross-Model Code Editing with LLMs",
+    "url": "https://arxiv.org/abs/2609.03894v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Linghan Zhong, Aditya Thimmaiah, Jayanth Srinivasa, Milos Gligoric, Junyi Jessy Li",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.03846v1",
+    "titre": "EF1-Constrained Nash Social Welfare with Identical Additive Valuations: Complexity, Guarantees, and Experiments",
+    "url": "https://arxiv.org/abs/2609.03846v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Zih-Sian Yang, Yi-Hao Chen, Yu-Te Kuan, Cheng-Jui Wu, Chuang-Chieh Lin, Po-An Chen",
+    "signal": false
+  },
+  {
     "id": "arxiv-2609.02797v1",
     "titre": "Dutch Books for Language Models",
     "url": "https://arxiv.org/abs/2609.02797v1",
