@@ -6,6 +6,27 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>The Utility of AI Tools in Auditing Adherence to Pre-Analysis Plans</title>
+      <link>https://www.nber.org/papers/w35719#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35719-fromrss</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs proposent d'utiliser les grands modèles de langage pour évaluer de manière efficace et systématique le respect des plans d'analyse préalables, qui visent à améliorer la reproductibilité de la recherche en limitant les degrés de liberté des chercheurs. Bien que cette approche réduise considérablement le travail humain requis pour identifier les choix de conception préengagés et diagnostiquer les lacunes de la préspécification, la variabilité des résultats entre les modèles souligne l'importance persistante du jugement humain.</description>
+    </item>
+    <item>
+      <title>PRICE: A Systematic Study of LLM Adaptation Choices for Bitcoin Price Forecasting</title>
+      <link>https://arxiv.org/abs/2609.05235v1</link>
+      <guid isPermaLink="false">arxiv-2609.05235v1</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs présentent PRICE, une approche structurée d'adaptation des modèles de langage de grande taille pour la prévision à court terme du prix du Bitcoin, combinant l'ajustement paramétrique efficace avec adaptation de bas rang, l'inférence récursive multi-étapes, la représentation numérique arrondie à l'entier, l'incitation au format contexte-tâche et le décodage à température zéro. Les études d'ablation montrent que chaque composant contribue à la précision des prévisions, et l'évaluation comparative révèle que PRICE atteint les erreurs de prévision les plus faibles sur les ensembles de validation et de test par rapport à huit modèles fondamentaux basés sur les transformateurs et les séries temporelles.</description>
+    </item>
+    <item>
+      <title>Can Large Language Models Anticipate Behavioral Responses to Social Policies? A Case of Pension Enrollment Prediction among China's Flexible Workers</title>
+      <link>https://arxiv.org/abs/2609.05189v1</link>
+      <guid isPermaLink="false">arxiv-2609.05189v1</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs proposent d'utiliser des modèles de langage de grande taille comme outils d'évaluation des politiques sociales et présentent FlexPension-LLM, un modèle spécialisé pour prédire l'adhésion aux régimes de retraite parmi les travailleurs flexibles en Chine, en injectant dans les invites des indices fondés sur la politique incluant les effets marginaux dérivés d'un Probit et les règles de retraite selon le hukou et la province. Sur l'ensemble de test en aveugle de l'enquête CHFS 2019, FlexPension-LLM atteint un F1 composite de 0,9316, surpassant son modèle enseignant Claude Sonnet 4.5 et 15 des 17 modèles de référence, tandis que l'analyse des composantes montre que les gains proviennent principalement de l'injection d'indices fondés sur la politique et de la supervision filtrée par les erreurs.</description>
+    </item>
+    <item>
       <title>When Models Edit Too Much: On the Fidelity of Minimal Code Edits</title>
       <link>https://arxiv.org/abs/2609.04061v1</link>
       <guid isPermaLink="false">arxiv-2609.04061v1</guid>
@@ -193,27 +214,6 @@
       <guid isPermaLink="false">fed-complementarity-and-the-evolution-of-u-s-wage-inequality-htm</guid>
       <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
       <description>Cette étude met en évidence une forte relation positive aux États-Unis entre la complexité de la résolution de problèmes dans une profession et sa croissance salariale depuis 1980, alors que les réallocations d'emplois vers les professions les plus complexes sont restées modestes. Au moyen d'un modèle d'équilibre général estimé quantitativement, l'analyse montre que l'augmentation de la prime de complexité s'expliquait par la complémentarité capital-compétence et le recul des prix du capital équipement jusqu'en 2000, avant d'être portée par une plus grande efficacité des professions à exploiter les compétences des travailleurs après 2000.</description>
-    </item>
-    <item>
-      <title>Europe's regulatory double bind</title>
-      <link>https://cepr.org/voxeu/columns/europes-regulatory-double-bind</link>
-      <guid isPermaLink="false">voxeu-https-cepr-org-voxeu-columns-europes-regulatory-double-bind</guid>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Bien que le volet de transparence du règlement sur l'intelligence artificielle de l'Union européenne soit désormais en vigueur pour obliger les fournisseurs à informer les utilisateurs, l'application de son régime encadrant les systèmes à haut risque, qui devait prendre pleinement effet le 2 août 2026, a été retardée. Cette situation crée une double contrainte dans laquelle l'Europe perd sa souveraineté réglementaire, qu'elle choisisse d'appliquer ses propres règles ou d'y renoncer.</description>
-    </item>
-    <item>
-      <title>Organizational Technology Ladders: Remote Work and Generative AI Adoption</title>
-      <link>https://arxiv.org/abs/2608.11626v1</link>
-      <guid isPermaLink="false">arxiv-2608.11626v1</guid>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-      <description>À partir de données d'offres d'emploi américaines, cette étude estime qu'une hausse de 10 points de pourcentage des recrutements en télétravail en 2021-2022 augmente la part des offres mentionnant l'intelligence artificielle générative en 2023-2024 de 0,4 point de pourcentage entre les entreprises et de 0,7 point entre les professions au sein d'une même entreprise. Ce résultat illustre l'existence d'une échelle technologique organisationnelle, l'adoption du télétravail réorientant l'embauche vers des compétences techniques et managériales qui accélèrent l'adoption ultérieure de l'IA générative.</description>
-    </item>
-    <item>
-      <title>AI Financial Advice: Supply, Demand, and Life Cycle Implications</title>
-      <link>https://www.nber.org/papers/w35574#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35574-fromrss</guid>
-      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
-      <description>En simulant les effets à long terme des conseils financiers générés par GPT-5.2 pour un échantillon représentatif, l'étude montre que suivre ces recommandations oriente les individus vers la théorie du cycle de vie, à travers une participation accrue aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus élevées. Bien que ces conseils varient selon la culture financière, l'expérience préalable en IA et le genre, deux tiers des écarts de part d'actions selon le sexe découlent des requêtes rédigées par les utilisateurs et un tiers de l'attribution d'étiquettes de genre à des requêtes identiques.</description>
     </item>
   </channel>
 </rss>

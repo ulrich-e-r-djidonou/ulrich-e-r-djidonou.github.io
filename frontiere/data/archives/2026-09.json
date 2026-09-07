@@ -1,5 +1,292 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35720-fromrss",
+    "titre": "Does AI Assistance Enhance or Erode Expertise? Evidence from a Three-Month Field Experiment in Patent Drafting",
+    "url": "https://www.nber.org/papers/w35720#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-09-07",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "David Autor, Tanya Rodchenko, Josh Martin, Zanna Iscenko, Scott Strand, David Pearl, Melissa Ferere",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05372v1",
+    "titre": "Does p-Hacking Mitigate or Exacerbate the Effects of Publication Bias?",
+    "url": "https://arxiv.org/abs/2609.05372v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Yong Cai, Agathe Pernoud, Boli Xu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05115v1",
+    "titre": "Creators Have Difficulty Abandoning Ideas They Generated",
+    "url": "https://arxiv.org/abs/2609.05115v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Jin Kim, George E. Newman",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04994v1",
+    "titre": "Identification and Estimation of Intergenerational Income Mobility Measures",
+    "url": "https://arxiv.org/abs/2609.04994v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Alejandro Puerta-Cuartas",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05363v1",
+    "titre": "Distill Globally, Adapt Locally: Reasoning Distillation and Product-Type Test-Time Training for Scalable Trade-Up Recommendation",
+    "url": "https://arxiv.org/abs/2609.05363v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Siliang Liu, Mohammad Ghasemi, Sapan Patel, Amin Banitalebi-Dehkordi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05334v1",
+    "titre": "Lightweight Vision Transformer Compression for On-Device Plant Disease Detection in Resource-Constrained Agricultural Field Conditions",
+    "url": "https://arxiv.org/abs/2609.05334v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Mahadev Sunil Kumar, Bhavika Gondi, Desaisetty Venkata Satya Sai Swapnith, Gangireddy Rahul Jogi, Sudheesh Manalil, Arnab Raha, Amitava Mukherjee, Parthasarathy Seethapathy, G. Gopakumar",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05298v1",
+    "titre": "Online Change-point Detection for Cooperative Multi-Agent Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2609.05298v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Fatemeh Saberi Khomami, Julita Vassileva",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05274v1",
+    "titre": "How to Speculate about Uncertainty in Agentic Coding? A Draft-Model Gate Method",
+    "url": "https://arxiv.org/abs/2609.05274v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Konstantin Grotov, Valentin Malykh",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05262v1",
+    "titre": "Self-Supervised Lexical Representation Learning for Fast, Large-Scale Phylogenetic Inference",
+    "url": "https://arxiv.org/abs/2609.05262v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Tim Wientzek",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05221v1",
+    "titre": "A Verifier-Guided Explainable Reasoning Framework with Gold-Anchored QLoRA, Task-Aware Mixture-of-Experts, and Group-Relative RLVR",
+    "url": "https://arxiv.org/abs/2609.05221v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Thi Kim Trang Vo, Nam Tien Le, Thi Kim Nguyet Vo, Minh Khang Tran, Duy Phuong Tran",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05212v1",
+    "titre": "PAC-Bayesian Reconstruction Guarantees for Time Series Variational Autoencoders",
+    "url": "https://arxiv.org/abs/2609.05212v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Chloé Hashimoto-Cullen, Ghislain Agoua, Benjamin Guedj, Sylvain Le Corff",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05150v1",
+    "titre": "Beyond Stationarity in Time Series: Discovering Causal Structures and Latent Regimes via Markov Blankets",
+    "url": "https://arxiv.org/abs/2609.05150v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Lei Zan, Charles K. Assaad, Emilie Devijver, Eric Gaussier",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05149v1",
+    "titre": "From Vision to Language: Investigating Causal Information Flow in Multimodal Decision-Making",
+    "url": "https://arxiv.org/abs/2609.05149v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "inference-causale",
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Davide Testa, Hugh Mee Wong, Alessandro Lenci, Bernardo Magnini, Albert Gatt",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05136v1",
+    "titre": "MomentQuant: an even more minimalist interval method with linear time complexity for time series classification",
+    "url": "https://arxiv.org/abs/2609.05136v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Johann Faouzi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05097v1",
+    "titre": "NEAT-POCKET: Pocket-Conditioned Autoregressive 3D Molecular Generation with a Neighborhood-Guided Set Transformer",
+    "url": "https://arxiv.org/abs/2609.05097v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Roxane Axel Jacob, Daniel Rose, Thierry Langer, Johannes Kirchmair",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05063v1",
+    "titre": "Beyond Co-purchase Relation: Evolution of Complementary Recommendations at Allegro",
+    "url": "https://arxiv.org/abs/2609.05063v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "llm",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Aleksandra Osowska-Kurczab, Klaudia Nazarko, Eliška Kosturová, Lidia Wojciechowska, Michał Bień",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05041v1",
+    "titre": "Reconciling Universal and Uniform Learning with $Q$-Aggregation",
+    "url": "https://arxiv.org/abs/2609.05041v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-04",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Mikael Møller Høgsgaard, Patrick Rebeschini, Tobias Wegel",
+    "signal": false
+  },
+  {
     "id": "arxiv-2609.04136v1",
     "titre": "Natural Disasters and the Nonprofit Sector",
     "url": "https://arxiv.org/abs/2609.04136v1",
@@ -319,6 +606,24 @@
     "nb_eco": 2,
     "nb_ia": 0,
     "auteurs": "Zih-Sian Yang, Yi-Hao Chen, Yu-Te Kuan, Cheng-Jui Wu, Chuang-Chieh Lin, Po-An Chen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.04356v1",
+    "titre": "Blockchain-Enabled Secure Logging for Fiscal Electronic Mechanisms: Evaluation of the Greek eSEND and myDATA Tax Systems",
+    "url": "https://arxiv.org/abs/2609.04356v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-03",
+    "themes": [
+      "outils-recherche",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Panagiotis Mavridis, Anargyros Baklezos, Christos Nikolopoulos",
     "signal": false
   },
   {
