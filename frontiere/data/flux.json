@@ -1,5 +1,28 @@
 [
   {
+    "id": "arxiv-2609.08485v1",
+    "titre": "AI Innovation and Firm Performance in the Medical Device Industry",
+    "url": "https://arxiv.org/abs/2609.08485v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "resume_fr": "En s'appuyant sur les données d'homologation de la FDA, cette étude montre que les collaborations externes de recherche en intelligence artificielle stimulent l'introduction de dispositifs médicaux dotés d'IA, avec un impact plus fort pour les petites entreprises et les partenariats industriels ou cliniques. Par la suite, la commercialisation de ces dispositifs améliore la productivité du travail et les marges bénéficiaires des entreprises, un effet bénéfique qui s'accumule au fil des lancements successifs.",
+    "angle_eco": "La collaboration de recherche externe en intelligence artificielle stimule l'introduction de dispositifs homologués sur le marché, ce qui accroît la productivité du travail des entreprises, en particulier au sein des petites structures dont elle compense les capacités limitées de recherche et développement.",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 4,
+    "nb_eco": 4,
+    "nb_ia": 1,
+    "auteurs": "Fazliddin Shermatov, Stephane Robin, Aldo Geuna",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "By linking regulatory clearances with patent, publication, and financial data, the study finds that external AI research collaboration drives the introduction of AI-enabled devices, with the strongest effects arising from industry and clinical partnerships. The study also demonstrates that firms bringing AI devices to market achieve higher labor productivity, an effect that is robust for small firms and accumulates across successive device introductions.",
+    "angle_eco_en": "External AI research collaborations drive the introduction of artificial intelligence devices by substituting for limited internal R&D capacity, which subsequently generates cumulative gains in firm labor productivity."
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35719-fromrss",
     "titre": "The Utility of AI Tools in Auditing Adherence to Pre-Analysis Plans",
     "url": "https://www.nber.org/papers/w35719#fromrss",
@@ -17,11 +40,34 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Jeffrey Clemens, Anwita Mahajan",
-    "signal": true,
+    "signal": false,
     "llm": "claude-haiku-4-5",
     "resume_en": "Large language models can provide an efficient and scalable method for authors and reviewers to assess adherence to pre-analysis plans by systematically identifying precommitted design choices, evaluating deviations, and diagnosing gaps in pre-specification. Variability in audit output across different LLMs indicates that human judgment remains essential in AI-assisted pre-analysis plan auditing.",
     "angle_eco_en": "Large language models can reduce the labor required to systematically identify precommitted design choices, evaluate deviations from them, and diagnose gaps in pre-specification, though variability in audit output across different models indicates that human judgment remains necessary for assessing adherence to pre-analysis plans.",
     "deja_signal": true
+  },
+  {
+    "id": "arxiv-2609.07944v1",
+    "titre": "CausalVerify: An Execution-Grounded Benchmark for LLM Causal Inference Workflows",
+    "url": "https://arxiv.org/abs/2609.07944v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-07",
+    "resume_fr": "Le benchmark CausalVerify évalue la capacité des grands modèles de langage à exécuter des flux de travail d'inférence causale en économétrie en associant 259 articles publiés à 100 scénarios synthétiques. L'expérimentation d'exécution du code R généré montre que sept modèles obtiennent des taux de réussite d'estimation exacte compris entre 10 % et 88 %, tout en révélant que 15,5 % des programmes qui s'exécutent renvoient une estimation causale erronée.",
+    "angle_eco": "L'évaluation empirique des modèles de langage appliqués aux flux de travail d'inférence causale exige de vérifier que le code généré restitue l'effet de traitement exact sur des designs économétriques cibles, la seule exécution sans erreur d'un programme ne garantissant pas la justesse de l'estimation.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Yonghong Zhang, Ricardo Correia, Isabel M. Parra, Yong Xie",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The CausalVerify benchmark evaluates whether large language models can generate R code that correctly recovers target causal estimates by combining text from 259 published economics papers with 100 synthetic data scenarios. Across seven tested models, pass rates for producing correct causal estimates ranged from 10% to 88%, with 15.5% of executing workflows returning incorrect estimates and code execution performance aligning far better with estimate correctness than text-direction scoring.",
+    "angle_eco_en": "Evaluating large language models in econometric analysis based solely on code execution or textual description obscures the fact that executable workflows frequently fail to recover the true quantitative causal estimate."
   },
   {
     "id": "arxiv-2609.05235v1",
@@ -64,10 +110,11 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Yumiao Li, Peixin Liu, Donglin Di, Chen Li, Runhuan Feng",
-    "signal": false,
+    "signal": true,
     "llm": "claude-haiku-4-5",
     "resume_en": "The authors develop FlexPension-LLM, a specialized large language model designed to predict pension enrollment decisions among China's flexible workers by incorporating policy-grounded cues such as marginal effects and hukou-province pension rules into the model training process. On a blind test split from the China Household Finance Survey 2019, the model achieves a Composite F1 score of 0.9316, outperforming most baselines and performing comparably to Claude Opus 4.6, while demonstrating consistent performance across external surveys with an average Composite F1 of 0.7549.",
-    "angle_eco_en": "Predicting how flexible workers will respond to changes in pension enrollment policies presents difficulties for policymakers who cannot reliably extrapolate from econometric models or afford the costs of field pilot programs."
+    "angle_eco_en": "Predicting how flexible workers will respond to changes in pension enrollment policies presents difficulties for policymakers who cannot reliably extrapolate from econometric models or afford the costs of field pilot programs.",
+    "deja_signal": true
   },
   {
     "id": "arxiv-2609.04061v1",
@@ -225,6 +272,27 @@
     "resume_en": "The paper conceptualizes artificial intelligence as capital, synthetic labor, a general-purpose technology, and an economic infrastructure that drives productivity growth through automation, augmentation, prediction, and innovation. It analyzes the impact of artificial intelligence on labor markets, firm structures, and market concentration, while outlining policy considerations to maximize societal welfare and mitigate adverse economic consequences.",
     "angle_eco_en": "Artificial Intelligence functions simultaneously as capital, synthetic labor, and general-purpose technology that drives productivity growth through automation, augmentation, optimization, prediction, and innovation while reshaping labor markets through substitution and complementarity effects and altering market concentration and competitive dynamics.",
     "deja_signal": true
+  },
+  {
+    "id": "aea-10-1257-jel-64-3-1058-r4",
+    "titre": "Gans, Joshua. The Microeconomics of Artificial Intelligence",
+    "url": "https://doi.org/10.1257/jel.64.3.1058.r4",
+    "source": "Journal of Economic Literature",
+    "type": "article",
+    "date_publication": "2026-09-01",
+    "resume_fr": "Cet ouvrage de Joshua Gans examine l'impact économique de l'intelligence artificielle. L'auteur y propose des stratégies d'identification pour analyser les marchés où l'intelligence artificielle joue un rôle significatif, tout en offrant un guide pour les développements théoriques et les hypothèses empiriques.",
+    "angle_eco": "L'analyse de l'impact économique de l'intelligence artificielle nécessite des stratégies d'identification propres aux marchés où cette technologie joue un rôle central, servant ainsi de guide pour les développements théoriques et les hypothèses empiriques.",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Maximilian Kasy",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Maximilian Kasy of the University of Oxford reviews Joshua Gans's book, \"The Microeconomics of Artificial Intelligence,\" which addresses the economic impact of artificial intelligence. The book focuses on providing identification strategies for analyzing markets where artificial intelligence plays a significant role and serving as a guidepost for theoretical developments and empirical hypotheses.",
+    "angle_eco_en": "Identification strategies for analyzing markets where artificial intelligence plays a significant role serve as guideposts for theoretical developments and empirical hypotheses regarding its economic impact."
   },
   {
     "id": "nber-https-www-nber-org-papers-w35663-fromrss",

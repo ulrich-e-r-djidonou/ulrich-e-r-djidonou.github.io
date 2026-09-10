@@ -1,5 +1,518 @@
 [
   {
+    "id": "arxiv-2609.10380v1",
+    "titre": "High Volume Low Complexity Surgical Hubs in England: Can They Improve Physician Productivity?",
+    "url": "https://arxiv.org/abs/2609.10380v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Zecharias Anteneh, Adriana Castelli, Peter Sivey, Andrew Street, Jinglin Wen, Joy Adamson",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10227v1",
+    "titre": "Italian Business-to-Business Invoicing Data: A Network Analysis",
+    "url": "https://arxiv.org/abs/2609.10227v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Valerio Astuti, Daniele Piras",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10074v1",
+    "titre": "Strategic communication of narratives: An experiment",
+    "url": "https://arxiv.org/abs/2609.10074v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Gerrit Bauch, Arthur Dolgopolov, Manuel Foerster",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10053v1",
+    "titre": "Do wind and solar curtail at negative electricity prices? Incentives and evidence across two decades of German renewable support schemes",
+    "url": "https://arxiv.org/abs/2609.10053v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Lion Hirth",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.09859v1",
+    "titre": "How an Economy Shrinks in Space: Concavity-on-Jobs and Upward Consolidation under Demographic Decline",
+    "url": "https://arxiv.org/abs/2609.09859v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Tomoya Mori, Miki Ogawa",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.09673v1",
+    "titre": "Reducing Prescription Errors Through Information Intervention: A Field Experiment in Healthcare Operations",
+    "url": "https://arxiv.org/abs/2609.09673v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Xiaodan Shao, Vivek Choudhary, Arnab Majumdar",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10514v1",
+    "titre": "Optimal Low-Rank Quantum State Tomography with Bounded-Sample Joint Measurements",
+    "url": "https://arxiv.org/abs/2609.10514v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Ashwin Nayak, Xingyu Zhou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10479v1",
+    "titre": "Deep Learning-Based Detection of Electrical Faults and Power Quality Disturbances in Aerospace Power Systems",
+    "url": "https://arxiv.org/abs/2609.10479v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Ian C. Guzmán, Radu Babiceanu, Berker Peköz",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10439v1",
+    "titre": "Forgetting Only What Matters: Layer-Selective Unlearning toward Robust LLMs",
+    "url": "https://arxiv.org/abs/2609.10439v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Ravi Ranjan, Olivera Kotevska, Agoritsa Polyzou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10433v1",
+    "titre": "Multi-Agent Reinforcement Learning for Autonomous UAV Exploration in Wildfire Response",
+    "url": "https://arxiv.org/abs/2609.10433v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Caden Chandra, Jerry Ng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10410v1",
+    "titre": "Can Foundation Models Moderate Online Content? Evaluating Instruction- vs. Example-Driven Policy Operationalization",
+    "url": "https://arxiv.org/abs/2609.10410v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Ayan Majumdar, Shounak Paul, Pushpdeep Singh, Ines Abdelaziz, Sayeh Jarollahi, Seungeon Lee, Krishna P. Gummadi, Ingmar Weber, Abhisek Dash",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10404v1",
+    "titre": "HybridFLow: SDN-Orchestrated Client Partitioning for Hybrid Federated Learning",
+    "url": "https://arxiv.org/abs/2609.10404v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Osama Abu Hamdan, Rabin Pandey, Hao Che, Engin Arslan, Md Arifuzzaman",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10321v1",
+    "titre": "On-Policy Distillation for Vision-Language Model Adaptation, an Effective Paradigm on Low-Quality Multimodal Data",
+    "url": "https://arxiv.org/abs/2609.10321v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Hongyuan Zhang, Xianda Guo, Yanlun Peng, Qianlong Yang, Yubin Guo, Pinhan Fu, Mulin Chen, Xiaozhen Qiao, Ping Luo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10315v1",
+    "titre": "TRACE: Training Reasoning Agents for Causal Exploration with Synthesized Rewards",
+    "url": "https://arxiv.org/abs/2609.10315v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Rui Sun, Zhan Shi, Bing He",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10225v1",
+    "titre": "Hierarchical and Permutation-Invariant Feature Transformation Learning via Policy-Guided Embedding Search",
+    "url": "https://arxiv.org/abs/2609.10225v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Rui Liu, Tao Zhe, Yanyong Huang, Sankha Narayan Guria, Xiao Luo, Wei Fan, Yanjie Fu, Dongjie Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10198v1",
+    "titre": "Politics of Feelings: Emotional Expression and Legislative Effectiveness in the U.S. Congress",
+    "url": "https://arxiv.org/abs/2609.10198v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Segun Aroyehun",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10196v1",
+    "titre": "An Exponential Deterministic--Randomized Gap in ERM-Oracle Complexity for Thresholds on an Unknown Order",
+    "url": "https://arxiv.org/abs/2609.10196v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Xuan Li",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10154v1",
+    "titre": "CompassOPD: Cross-Family On-Policy Distillation via Within-Family Likelihood Shifts",
+    "url": "https://arxiv.org/abs/2609.10154v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Naibin Gu, Qingyi Si, Chenxu Yang, Chuanyu Qin, Junhao Zhou, Peng Fu, Zheng Lin, Weiping Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10141v1",
+    "titre": "The Sample Complexity of Quantum Entanglement Allocation",
+    "url": "https://arxiv.org/abs/2609.10141v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-09",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Nathan Roll",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.09544v1",
+    "titre": "When is statistical evidence strong enough? Using hypothesis tests to value data collection",
+    "url": "https://arxiv.org/abs/2609.09544v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Aristotelis Epanomeritakis, Davide Viviano",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.09488v1",
+    "titre": "Two Margins in Difference-in-Differences with a Continuous Treatment",
+    "url": "https://arxiv.org/abs/2609.09488v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Fangzhou Yu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.09337v1",
+    "titre": "Credible Discourse on Climate Policy: Beyond Dueling Certitudes",
+    "url": "https://arxiv.org/abs/2609.09337v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 4,
+    "nb_ia": 0,
+    "auteurs": "Charles F. Manski",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.09323v1",
+    "titre": "Buy Now, Pay Later: Academic Insights and Open Policy Questions",
+    "url": "https://arxiv.org/abs/2609.09323v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 5,
+    "nb_ia": 0,
+    "auteurs": "Benedict Guttman-Kenney, Walter W. Zhang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.09046v1",
+    "titre": "Going Beyond the In-/Out-Group Dichotomy: Investigating Altruism towards Middle-Groups",
+    "url": "https://arxiv.org/abs/2609.09046v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Leon Houf, Christiane Schwieren",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.09039v1",
+    "titre": "Covariate Adjustment in Randomized Experiments: A Unified Framework for Decision and Practice",
+    "url": "https://arxiv.org/abs/2609.09039v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Jiawei Fu, Donald P. Green",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.08929v1",
+    "titre": "The consequences of high SMR operating costs in electricity markets",
+    "url": "https://arxiv.org/abs/2609.08929v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Pradyumna Rao, Daniel T. Kaffine, Bri-Mathias Hodge",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.08411v1",
+    "titre": "Policy Gains or Household Need? The Allocation Logic of China's Dibao Program",
+    "url": "https://arxiv.org/abs/2609.08411v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [
+      "politique-publique",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Haojie Liu, Jiyuan Ling, Zihan Lin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.08335v1",
+    "titre": "Designing Spatial Treatments",
+    "url": "https://arxiv.org/abs/2609.08335v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Stefan Faridani, Michael P. Leung",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.08198v1",
+    "titre": "Self-Fulfilling Prophecies, Quasi Nonergodicity, and Wealth Inequality: A Comment",
+    "url": "https://arxiv.org/abs/2609.08198v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Alexis Akira Toda",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.08166v1",
+    "titre": "AI for AI: Optimizing Additional Infrastructure Build-out to Power Artificial Intelligence Data Centers",
+    "url": "https://arxiv.org/abs/2609.08166v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Alexander Crosier, Kyle Onghai, Ronnie Sircar",
+    "signal": false
+  },
+  {
+    "id": "voxeu-change-ai-and-future-economic-research-galileo-back-socrates",
+    "titre": "Plus ça change. AI and the future of economic research: From Galileo back to Socrates",
+    "url": "https://cepr.org/voxeu/columns/plus-ca-change-ai-and-future-economic-research-galileo-back-socrates",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-09-08",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Isabel Vansteenkiste",
+    "signal": false
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35720-fromrss",
     "titre": "Does AI Assistance Enhance or Erode Expertise? Evidence from a Three-Month Field Experiment in Patent Drafting",
     "url": "https://www.nber.org/papers/w35720#fromrss",
@@ -11,6 +524,296 @@
     "nb_eco": 3,
     "nb_ia": 0,
     "auteurs": "David Autor, Tanya Rodchenko, Josh Martin, Zanna Iscenko, Scott Strand, David Pearl, Melissa Ferere",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.07902v1",
+    "titre": "Measuring DeFi Risk",
+    "url": "https://arxiv.org/abs/2609.07902v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-07",
+    "themes": [
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jeremy Bertomeu, Xiumin Martin, Ibrahima Sall",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.07888v1",
+    "titre": "Median-based Splitting Rules for Causal Trees and Forests",
+    "url": "https://arxiv.org/abs/2609.07888v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-07",
+    "themes": [
+      "inference-causale",
+      "travail-emploi",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Lennard Maßmann, Karolina Gliszczyńska-Schroeder",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.07731v1",
+    "titre": "The Profit Alignment Problem: How Profit Mandates Induce Alignment Failures in LLMs",
+    "url": "https://arxiv.org/abs/2609.07731v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-07",
+    "themes": [
+      "llm"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Eric So",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.07633v1",
+    "titre": "Robust A/B Decisions",
+    "url": "https://arxiv.org/abs/2609.07633v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-07",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Max H. Farrell, Malika Korganbekova, Sanjog Misra",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.07358v1",
+    "titre": "Access to Live AI Advice and Behavior Under Risk: An Incentivized Experiment",
+    "url": "https://arxiv.org/abs/2609.07358v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-07",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Paul Althaus, Leon Houf, Christiane Schwieren",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.07207v1",
+    "titre": "Filtering without recursion and some of its uses in financial economics",
+    "url": "https://arxiv.org/abs/2609.07207v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-07",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Simon Donker van Heel, Neil Shephard",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.07033v1",
+    "titre": "Choosing the Dictionary and Penalty for IV-LASSO",
+    "url": "https://arxiv.org/abs/2609.07033v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-07",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yukun Ma, Manu Navjeevan, Bogdan Salahub",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.07011v1",
+    "titre": "An evidence review of worker retraining",
+    "url": "https://arxiv.org/abs/2609.07011v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-07",
+    "themes": [
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "David Roodman, Maxim Massenkoff",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.06907v1",
+    "titre": "Sign Restrictions and Supply-demand Decompositions of Inflation",
+    "url": "https://arxiv.org/abs/2609.06907v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-07",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Matthew Read",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.06827v1",
+    "titre": "Beyond Aggregate VARs: A Bayesian Benchmark for HANK Models",
+    "url": "https://arxiv.org/abs/2609.06827v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-06",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Florian Huber, Gary Koop, Christian Matthes",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.06739v1",
+    "titre": "The profit-bias identity in sports betting: bookmaker profit as the public's prediction error",
+    "url": "https://arxiv.org/abs/2609.06739v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-06",
+    "themes": [
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jacek P. Dmochowski",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.06308v1",
+    "titre": "Housing Price Appreciation, Housing Affordability, and the Spatial Restructuring of Toronto Commuting",
+    "url": "https://arxiv.org/abs/2609.06308v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-05",
+    "themes": [
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Shawn Berry",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.06277v1",
+    "titre": "Optimal Transport in Economics",
+    "url": "https://arxiv.org/abs/2609.06277v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-05",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Amine Fahli, Alfred Galichon",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.06123v1",
+    "titre": "Optimal harvesting under annuity and compound interest laws: economic-ecological trade-offs in a logistic growth model",
+    "url": "https://arxiv.org/abs/2609.06123v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-05",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 4,
+    "nb_ia": 0,
+    "auteurs": "Anurag Sau, Sujayan Gupta, Uttam Ghosh, Sabyasachi Bhattacharya",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05883v1",
+    "titre": "Fixed-smoothing Uniform Inference for Quantile Regression",
+    "url": "https://arxiv.org/abs/2609.05883v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-05",
+    "themes": [
+      "prevision",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Kaicheng Chen, Antonio F. Galvao, Seunghwa Rho, Timothy J. Vogelsang, Jungmo Yoon",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05804v1",
+    "titre": "Why China Succeeds: A Road to Prosperity",
+    "url": "https://arxiv.org/abs/2609.05804v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-05",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Qingjie Xia",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.05792v1",
+    "titre": "Scalable Clustered Network Connectedness with Control Variables: Theory and Application to Global Banking",
+    "url": "https://arxiv.org/abs/2609.05792v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-05",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Bastien Buchwalter, Francis X. Diebold, Kamil Yilmaz",
     "signal": false
   },
   {
