@@ -110,7 +110,7 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Yumiao Li, Peixin Liu, Donglin Di, Chen Li, Runhuan Feng",
-    "signal": true,
+    "signal": false,
     "llm": "claude-haiku-4-5",
     "resume_en": "The authors develop FlexPension-LLM, a specialized large language model designed to predict pension enrollment decisions among China's flexible workers by incorporating policy-grounded cues such as marginal effects and hukou-province pension rules into the model training process. On a blind test split from the China Household Finance Survey 2019, the model achieves a Composite F1 score of 0.9316, outperforming most baselines and performing comparably to Claude Opus 4.6, while demonstrating consistent performance across external surveys with an average Composite F1 of 0.7549.",
     "angle_eco_en": "Predicting how flexible workers will respond to changes in pension enrollment policies presents difficulties for policymakers who cannot reliably extrapolate from econometric models or afford the costs of field pilot programs.",
@@ -183,6 +183,27 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "The paper introduces XCal-FL, a local training algorithm for cross-silo federated learning that dynamically calibrates differential privacy noise using prediction logit variations, counterfactual margins, and saliency concentration. Evaluated on medical imaging datasets, XCal-FL improves predictive performance by over 10 percent and enhances explanation fidelity by up to five times compared to static-noise federated learning approaches.",
     "angle_eco_en": "The trade-off between data confidentiality and model explainability in federated learning can be mitigated by dynamically adjusting privacy-preserving noise during training based on prediction logit variations, counterfactual margins, and saliency concentration."
+  },
+  {
+    "id": "voxeu--ai-fragmenting-world-why-connector-economies-can-still-gain",
+    "titre": "AI in a fragmenting world: Why ‘connector’ economies can still gain",
+    "url": "https://cepr.org/voxeu/columns/ai-fragmenting-world-why-connector-economies-can-still-gain",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-09-03",
+    "resume_fr": "L'innovation en intelligence artificielle se concentre dans un petit nombre d'économies, tandis que les gains qui en découlent reposent sur la circulation transfrontalière de technologies, d'intrants intermédiaires, de données, d'investissements et de savoir-faire dans une économie mondiale de plus en plus fragmentée. Cette fragmentation façonne ainsi l'ampleur et la répartition des bénéfices mondiaux de l'intelligence artificielle, faisant du maintien de liens économiques diversifiés une option précieuse pour les pays éloignés de la frontière technologique.",
+    "angle_eco": "La fragmentation de l'économie mondiale et la concentration de l'innovation en intelligence artificielle déterminent l'ampleur et la répartition des gains globaux, rendant la préservation de liens transfrontaliers diversifiés essentielle pour les pays situés en dehors de la frontière technologique.",
+    "themes": [
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Barry Eichengreen, Jingyuan Cui, Asmaa El-Ganainy, Yevgeniya Korniyenko, Elyad Shojaei, Li Zeng, Shihangyin Zhang",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Artificial intelligence innovation is concentrated in a small number of economies, even as obtaining the benefits from AI requires cross-border movements of technology, intermediate inputs, data, investment, and know-how. Because global economic fragmentation shapes both the size and international distribution of AI benefits, preserving diversified cross-border links provides valuable economic optionality for countries not at the technological frontier.",
+    "angle_eco_en": "Global economic fragmentation alters the scale and distribution of gains from concentrated artificial intelligence innovation by restricting cross-border movements of inputs, data, and know-how, making diversified trade links valuable for non-frontier economies."
   },
   {
     "id": "arxiv-2609.02580v1",
@@ -293,6 +314,47 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "Maximilian Kasy of the University of Oxford reviews Joshua Gans's book, \"The Microeconomics of Artificial Intelligence,\" which addresses the economic impact of artificial intelligence. The book focuses on providing identification strategies for analyzing markets where artificial intelligence plays a significant role and serving as a guidepost for theoretical developments and empirical hypotheses.",
     "angle_eco_en": "Identification strategies for analyzing markets where artificial intelligence plays a significant role serve as guideposts for theoretical developments and empirical hypotheses regarding its economic impact."
+  },
+  {
+    "id": "aea-10-1257-jel-20261794",
+    "titre": "Deep Learning for Solving Economic Models",
+    "url": "https://doi.org/10.1257/jel.20261794",
+    "source": "Journal of Economic Literature",
+    "type": "article",
+    "date_publication": "2026-09-01",
+    "resume_fr": "Les méthodes numériques traditionnelles appliquées aux modèles économiques dynamiques se heurtent à la malédiction de la dimensionnalité lorsque le nombre de variables d'état augmente. L'apprentissage profond offre une alternative flexible capable de traiter des problèmes en haute dimension en minimisant les résidus des conditions d'équilibre, une approche illustrée par l'application au modèle de croissance néoclassique.",
+    "angle_eco": "La minimisation des résidus des conditions d'équilibre par l'apprentissage profond permet de résoudre efficacement des modèles économiques dynamiques à haute dimension en surmontant le fléau de la dimensionnalité propre aux méthodes numériques traditionnelles.",
+    "themes": [
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Jesús Fernández-Villaverde",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Traditional numerical methods for solving dynamic economic models suffer from the curse of dimensionality, which makes global solutions computationally infeasible as the number of state variables increases. Deep learning offers a flexible alternative by solving high-dimensional dynamic models through the minimization of residuals in equilibrium conditions, an approach illustrated using the neoclassical growth model.",
+    "angle_eco_en": "Deep learning overcomes the curse of dimensionality inherent in traditional numerical methods for dynamic economic models by offering flexible tools that minimize residuals in equilibrium conditions."
+  },
+  {
+    "id": "fmi-10-5089-9798229057349-001",
+    "titre": "Relative Development and the Intelligence Divide",
+    "url": "https://doi.org/10.5089/9798229057349.001",
+    "source": "IMF Working Papers",
+    "type": "papier",
+    "date_publication": "2026-09-01",
+    "resume_fr": "Cette étude montre que le rattrapage économique dépend moins de l'accès aux technologies que de la capacité à convertir le savoir en productivité, le temps nécessaire pour sortir du niveau de plus faible productivité étant d'environ 65 ans pour les économies sous le seuil de capital humain, contre environ 25 ans pour celles situées au-dessus. Ainsi, l'intelligence artificielle renforcera les écarts existants si elle bénéficie principalement aux travailleurs qualifiés, mais elle favorisera la convergence si elle réduit les coûts d'apprentissage et d'adaptation des économies aux capacités plus faibles.",
+    "angle_eco": "La capacité des économies en développement à transformer les nouvelles connaissances en productivité grâce à leur capital humain détermine si l'intelligence artificielle favorisera la convergence économique mondiale ou accentuera les écarts existants.",
+    "themes": [],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Patrick Imam, Jonathan Temple",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper shows that human capital functions as absorptive capacity, with economies below an estimated human-capital threshold taking about 65 years to exit the lowest-productivity state compared with about 25 years for those above it. Whether artificial intelligence promotes economic convergence depends on whether it lowers learning and implementation costs in weaker-capability economies rather than primarily augmenting skilled workers and capable firms.",
+    "angle_eco_en": "Whether artificial intelligence promotes global economic convergence depends less on technological access than on an economy's human-capital-driven absorptive capacity to turn new knowledge into productivity."
   },
   {
     "id": "nber-https-www-nber-org-papers-w35663-fromrss",
@@ -1183,6 +1245,28 @@
     "llm": "claude-haiku-4-5",
     "resume_en": "A computable general equilibrium model shows that China's energy transition toward solar and wind power generates modest near-term electricity price increases followed by sustained declines as renewable shares rise, with battery storage proving more effective than coal-fired backup generation for managing system variability. The transition raises long-run GDP and strengthens energy security despite requiring substantial adjustments in electricity supply and investment, though it increases the risk of stranded assets in the coal power sector.",
     "angle_eco_en": "The shift toward renewable electricity generation in China requires managing power system variability through either battery storage or coal-fired backup capacity, with implications for electricity prices, long-run GDP, energy security, and the potential obsolescence of coal power infrastructure."
+  },
+  {
+    "id": "fmi-10-5089-9798229060196-001",
+    "titre": "Jurisdictional Capital and AI Regulation",
+    "url": "https://doi.org/10.5089/9798229060196.001",
+    "source": "IMF Working Papers",
+    "type": "papier",
+    "date_publication": "2026-08-01",
+    "resume_fr": "En analysant les réactions boursières à la proposition de règlement européen sur l'intelligence artificielle d'avril 2021, cette étude montre que les entreprises combinant une présence approfondie dans l'UE et des recrutements rapides dans l'IA enregistrent des rendements plus élevés lors de l'annonce. Ce résultat suggère que les marchés valorisent le capital juridictionnel lié à l'expérience réglementaire européenne, ce qui permet à ces entreprises d'accroître leur part de revenus au sein de l'UE face à des concurrents moins implantés, un effet particulièrement fort pour l'IA à haut risque.",
+    "angle_eco": "L'expérience préalable dans l'environnement réglementaire européen constitue un capital juridictionnel qui accroît la valorisation boursière et la part de marché des entreprises développant l'intelligence artificielle en leur facilitant l'adaptation aux nouvelles réglementations du secteur.",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Yi Chen, Zhe Wang, Jing Zhou",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "An event study around the April 2021 European Union Artificial Intelligence Act proposal shows that firms combining a deeper European Union presence with faster artificial intelligence hiring earned higher announcement returns. The findings indicate that markets value jurisdictional capital, which allows embedded firms to increase their European Union revenue share when competing against less embedded peers, particularly in high-risk applications or among firms with prior compliance experience.",
+    "angle_eco_en": "Jurisdictional capital, accumulated through prior compliance experience and deep local presence within a regulatory environment, enables AI-expanding firms to navigate comprehensive new regulations more effectively, yielding higher market valuations and larger local revenue shares relative to less embedded competitors."
   },
   {
     "id": "arxiv-2607.27155v1",

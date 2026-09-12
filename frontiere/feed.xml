@@ -62,6 +62,13 @@
       <description>Pour résoudre la dégradation des explications causée par le bruit de confidentialité différentielle en apprentissage fédéré, cet article présente XCal-FL, un algorithme qui ajuste dynamiquement ce bruit durant l'entraînement à partir de trois signaux d'explicabilité complémentaires. Des expériences menées sur trois jeux de données d'imagerie médicale montrent que cet algorithme améliore la performance prédictive de plus de 10 % et la fidélité des explications jusqu'à 5 fois par rapport aux méthodes à bruit statique, tout en optimisant l'efficacité du budget de confidentialité.</description>
     </item>
     <item>
+      <title>AI in a fragmenting world: Why ‘connector’ economies can still gain</title>
+      <link>https://cepr.org/voxeu/columns/ai-fragmenting-world-why-connector-economies-can-still-gain</link>
+      <guid isPermaLink="false">voxeu--ai-fragmenting-world-why-connector-economies-can-still-gain</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>L'innovation en intelligence artificielle se concentre dans un petit nombre d'économies, tandis que les gains qui en découlent reposent sur la circulation transfrontalière de technologies, d'intrants intermédiaires, de données, d'investissements et de savoir-faire dans une économie mondiale de plus en plus fragmentée. Cette fragmentation façonne ainsi l'ampleur et la répartition des bénéfices mondiaux de l'intelligence artificielle, faisant du maintien de liens économiques diversifiés une option précieuse pour les pays éloignés de la frontière technologique.</description>
+    </item>
+    <item>
       <title>Competitive Market Behavior of LLMs</title>
       <link>https://arxiv.org/abs/2609.02580v1</link>
       <guid isPermaLink="false">arxiv-2609.02580v1</guid>
@@ -95,6 +102,20 @@
       <guid isPermaLink="false">aea-10-1257-jel-64-3-1058-r4</guid>
       <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
       <description>Cet ouvrage de Joshua Gans examine l'impact économique de l'intelligence artificielle. L'auteur y propose des stratégies d'identification pour analyser les marchés où l'intelligence artificielle joue un rôle significatif, tout en offrant un guide pour les développements théoriques et les hypothèses empiriques.</description>
+    </item>
+    <item>
+      <title>Deep Learning for Solving Economic Models</title>
+      <link>https://doi.org/10.1257/jel.20261794</link>
+      <guid isPermaLink="false">aea-10-1257-jel-20261794</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Les méthodes numériques traditionnelles appliquées aux modèles économiques dynamiques se heurtent à la malédiction de la dimensionnalité lorsque le nombre de variables d'état augmente. L'apprentissage profond offre une alternative flexible capable de traiter des problèmes en haute dimension en minimisant les résidus des conditions d'équilibre, une approche illustrée par l'application au modèle de croissance néoclassique.</description>
+    </item>
+    <item>
+      <title>Relative Development and the Intelligence Divide</title>
+      <link>https://doi.org/10.5089/9798229057349.001</link>
+      <guid isPermaLink="false">fmi-10-5089-9798229057349-001</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Cette étude montre que le rattrapage économique dépend moins de l'accès aux technologies que de la capacité à convertir le savoir en productivité, le temps nécessaire pour sortir du niveau de plus faible productivité étant d'environ 65 ans pour les économies sous le seuil de capital humain, contre environ 25 ans pour celles situées au-dessus. Ainsi, l'intelligence artificielle renforcera les écarts existants si elle bénéficie principalement aux travailleurs qualifiés, mais elle favorisera la convergence si elle réduit les coûts d'apprentissage et d'adaptation des économies aux capacités plus faibles.</description>
     </item>
     <item>
       <title>CentaurBench: Benchmarking LLM Capabilities on Augmenting vs. Automating Real-World Work Tasks</title>
@@ -193,27 +214,6 @@
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35621-fromrss</guid>
       <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
       <description>Une expérience aléatoire menée auprès de plus de 6 000 collégiens montre que l'utilisation d'un tuteur fondé sur l'intelligence artificielle ralentit la progression globale des élèves tout en améliorant la précision de leurs réponses après une erreur. Les évaluations différées révèlent que l'intégration de l'intelligence artificielle dans un parcours fondé sur la maîtrise engendre des gains sur le contenu révisé, confirmant que l'efficacité du tutorat automatique repose sur un encadrement structuré des erreurs.</description>
-    </item>
-    <item>
-      <title>Taxpayer Behavior in the Age of AI: A Field Experiment on Property Tax Appeals</title>
-      <link>https://www.nber.org/papers/w35632#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35632-fromrss</guid>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Une expérience de terrain menée auprès de 645 ménages du comté de Dallas montre que l'accès à un agent conversationnel d'intelligence artificielle augmente de 9,1 points de pourcentage la probabilité de contester son impôt foncier sans agent humain, la faisant passer de 41,4 % à 50,5 %. Bien que 78 % des ménages y ayant accès aient engagé une conversation avec l'outil, l'augmentation des contestations s'est avérée plus faible chez les foyers les moins favorisés, ce qui suggère un risque d'accroissement des disparités existantes.</description>
-    </item>
-    <item>
-      <title>Macrofinance meets AI: Evaluating alignment between LLMs and economists</title>
-      <link>https://cepr.org/voxeu/columns/macrofinance-meets-ai-evaluating-alignment-between-llms-and-economists</link>
-      <guid isPermaLink="false">voxeu-ce-meets-ai-evaluating-alignment-between-llms-and-economists</guid>
-      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
-      <description>En comparant plusieurs modèles GPT aux évaluations d'économistes du FMI sur des rapports au titre de l'Article IV, cette étude évalue les tâches d'analyse pouvant être déléguées à l'intelligence artificielle. Les résultats montrent que les meilleurs modèles actuels réussissent les tâches factuelles et structurées, mais restent moins fiables pour les évaluations nuancées exigeant le jugement d'experts humains.</description>
-    </item>
-    <item>
-      <title>Learning Sequential Mobility Choice: A Review of Route and Activity Choice through Inverse Reinforcement and Imitation Learning</title>
-      <link>https://arxiv.org/abs/2608.15339v1</link>
-      <guid isPermaLink="false">arxiv-2608.15339v1</guid>
-      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Cette revue de littérature établit un cadre unifié reliant la modélisation comportementale des choix d'itinéraires et d'activités à l'apprentissage par renforcement inverse et à l'apprentissage par imitation. Elle montre que l'intégration des techniques d'apprentissage automatique dans une structure comportementale disciplinée améliore la prédictibilité et le passage à l'échelle sans sacrifier l'identification comportementale ni la pertinence pour les politiques publiques.</description>
     </item>
   </channel>
 </rss>

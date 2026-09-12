@@ -1,5 +1,398 @@
 [
   {
+    "id": "arxiv-2609.11915v1",
+    "titre": "Generative Marketing Mix Modeling: A Causal Inference Framework Linking GEO and GEM to Business Impact",
+    "url": "https://arxiv.org/abs/2609.11915v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Masahiro Kato, Daiki Honma, Taka Kato",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11575v1",
+    "titre": "Market-Informed Networks for Modeling and Forecast Evaluation of Financial Extremes",
+    "url": "https://arxiv.org/abs/2609.11575v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Ayla Jungbluth, Johannes Lederer, Simon Trimborn",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11222v1",
+    "titre": "Optimal Covariate Adjustment beyond the Average Treatment Effect: Treated-Population and Overlap-Weighted Estimands",
+    "url": "https://arxiv.org/abs/2609.11222v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Shoki Okubo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10971v1",
+    "titre": "Experimental Design for Policy Choice",
+    "url": "https://arxiv.org/abs/2609.10971v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Samuel D. Higbee",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10925v1",
+    "titre": "Identification in Linear Quantile Panel Models",
+    "url": "https://arxiv.org/abs/2609.10925v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Shakeeb Khan, Elie Tamer",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11900v1",
+    "titre": "MindTopo: Can Foundation Models Reason in Topological Space?",
+    "url": "https://arxiv.org/abs/2609.11900v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Yunfei Ge, Anbang Liu, Qineng Wang, Johnalbert Garnica, Jianwen Lyu, Zihan Wang, Reuben Tan, Jianfeng Gao, Ruohan Zhang, Yining Hong, Jiajun Wu, Manling Li",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11897v1",
+    "titre": "CausalArena: Benchmarking Causal Discovery in the Foundation Model Era",
+    "url": "https://arxiv.org/abs/2609.11897v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Zi-Rong Li, Si-Yang Liu, Tian-Zuo Wang, Han-Jia Ye",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11877v1",
+    "titre": "Biology-in-the-loop: Amortized Adaptive Hit Discovery in CRISPR Screens",
+    "url": "https://arxiv.org/abs/2609.11877v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Carl Edwards, Edward De Brouwer, Xiner Li, Namkyeong Lee, Ehsan Hajiramezanali, Anne Biton, Sara Mostafavi, Gabriele Scalia",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11870v1",
+    "titre": "Augustinian BabyLM: What Ostensive Definition Can and Cannot Teach a Small Language Model",
+    "url": "https://arxiv.org/abs/2609.11870v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "inference-causale",
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Lisa Bylinina",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11865v1",
+    "titre": "Epistemic orientation predicts legislative effectiveness among members of the US Congress",
+    "url": "https://arxiv.org/abs/2609.11865v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Segun Aroyehun, Stephan Lewandowsky, David Garcia",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11864v1",
+    "titre": "RetroThinker: Enabling Retrospective Thinking in Speech LLMs",
+    "url": "https://arxiv.org/abs/2609.11864v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "llm",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Yi-Jen Shih, Puyuan Peng, Abdelrahman Mohamed, David Harwath",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11777v1",
+    "titre": "Differentially Private EEG Feature Anonymization: A Privacy-Utility Case Study in Clinical Neurophysiology",
+    "url": "https://arxiv.org/abs/2609.11777v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Noman Sadiq, Mohsen Toorani",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11768v1",
+    "titre": "A Unified Per-Token Gating Family for On-Policy Distillation: FKL/RKL Mixing with Multi-Channel and Bias Coefficients",
+    "url": "https://arxiv.org/abs/2609.11768v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Suwan Wu, Yumeng Lin, Pengcheng Yuan, Xiaolong Jiang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11752v1",
+    "titre": "SIRF: A Spec-Internalized Risk Foundation Model for Industrial Content Risk Control",
+    "url": "https://arxiv.org/abs/2609.11752v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Suwan Wu, Yumeng Lin, Pengcheng Yuan, Xiaolong Jiang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11749v1",
+    "titre": "Sparsity Regularized and Robust Mean Variance Portfolio Selection Under Ellipsoidal Uncertainty",
+    "url": "https://arxiv.org/abs/2609.11749v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Deniz Akkaya, Emre Can Yayla, Buse Şen, Mustafa Ç. Pınar",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11744v1",
+    "titre": "Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs",
+    "url": "https://arxiv.org/abs/2609.11744v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "llm"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Joseph Kanichai, Tiziano De Matteis, Animesh Trivedi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11733v1",
+    "titre": "Reflex-Informed Neuromuscular Reinforcement Learning for Muscle-Driven Locomotion",
+    "url": "https://arxiv.org/abs/2609.11733v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jian Zhou, Xingyu Zhang, Rui Ma, Yu Cao, Shane Xie, Zhi-qiang Zhang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11716v1",
+    "titre": "Why Does Post-Training Quantization Work?",
+    "url": "https://arxiv.org/abs/2609.11716v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "llm",
+      "prevision",
+      "macro-finance"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Yuxiang Chen, Michael Beyer, Jun Zhu, Jianfei Chen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11699v1",
+    "titre": "Negative Self-Distillation: Learning to Reason by Avoiding Flaws",
+    "url": "https://arxiv.org/abs/2609.11699v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Rongcan Pei, Zhepei Wei, Shuyao Xu, Xinyu Zhu, Wei-Lin Chen, Yu Meng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11689v1",
+    "titre": "Geospatial Foundation Models Capture Health-Relevant Dimensions of Place Beyond Conventional Social Risk Indices",
+    "url": "https://arxiv.org/abs/2609.11689v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Nathaniel Hendrix, Carl Y. Zhang, Chris Heitzig, Andrew Bazemore, David H. Rehkopf",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11656v1",
+    "titre": "Learnware and AI Model Management System",
+    "url": "https://arxiv.org/abs/2609.11656v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Zhi-Hua Zhou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11655v1",
+    "titre": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+    "url": "https://arxiv.org/abs/2609.11655v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "llm",
+      "macro-finance"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Zhuanghua Liu, Menglian Wang, Luo Luo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.11639v1",
+    "titre": "LoaDiff: Conditional Generation of Electricity Consumption Time Series for Energy Analytics",
+    "url": "https://arxiv.org/abs/2609.11639v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-10",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Mariia Baranova, Adrien Petralia, Etienne Le Naour, Nathan Etourneau, Guillaume Hofmann, Themis Palpanas",
+    "signal": false
+  },
+  {
     "id": "arxiv-2609.10380v1",
     "titre": "High Volume Low Complexity Surgical Hubs in England: Can They Improve Physician Productivity?",
     "url": "https://arxiv.org/abs/2609.10380v1",
@@ -513,6 +906,42 @@
     "signal": false
   },
   {
+    "id": "arxiv-2609.10617v1",
+    "titre": "Average Treatment Effect Localization: Projection Methods in Synthetic Control",
+    "url": "https://arxiv.org/abs/2609.10617v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Ruei-Chi Lee",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10615v1",
+    "titre": "ACT, WAIT, or EXPERIMENT: A Causal Governance Framework for Retail Price Optimization Under Abstentions",
+    "url": "https://arxiv.org/abs/2609.10615v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-08",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Pedro Cadahia",
+    "signal": false
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35720-fromrss",
     "titre": "Does AI Assistance Enhance or Erode Expertise? Evidence from a Three-Month Field Experiment in Patent Drafting",
     "url": "https://www.nber.org/papers/w35720#fromrss",
@@ -710,6 +1139,20 @@
     "nb_eco": 1,
     "nb_ia": 0,
     "auteurs": "Jacek P. Dmochowski",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.10587v1",
+    "titre": "Expected Shortfall Factor Models: Common Tail Losses and Expected Returns",
+    "url": "https://arxiv.org/abs/2609.10587v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-06",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Yujie Hou, Xinbing Kong, Yalin Wang, Bin Wu",
     "signal": false
   },
   {
