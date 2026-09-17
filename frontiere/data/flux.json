@@ -1,5 +1,25 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35747-fromrss",
+    "titre": "Automation and Optimal Taxation: A Task-Based Theory",
+    "url": "https://www.nber.org/papers/w35747#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-09-17",
+    "resume_fr": "Les auteurs caractérisent la fiscalité optimale du travail et du capital dans un modèle où l'automatisation rend les travailleurs et les machines parfaitement substituables dans les tâches automatisables, situées jusqu'à un seuil de la distribution des compétences, tandis que les formules fiscales optimales conservent des formes canoniques bien que l'automatisation modifie substantiellement les taux optimaux en rendant les salaires et les rendements du capital endogènes. Le calibrage sur la distribution des salaires américains révèle que la classe moyenne subit l'automatisation la plus intense, avec une intensité machine maximale autour du 40e percentile de salaire, ce qui implique un barème fiscal du travail plus progressif avec un crédit d'impôt plus important en bas, des impôts réduits au milieu et des impôts plus élevés en haut, tandis que l'impôt optimal sur le capital reste substantiel mais inaffecté par l'automatisation.",
+    "angle_eco": "L'automatisation des tâches modifie les taux d'imposition optimaux sur le travail et le capital en rendant endogènes les salaires et les rendements du capital, ce qui justifie une structure fiscale plus progressive avec un crédit d'impôt sur le revenu plus généreux en bas de l'échelle des salaires, des impôts réduits au milieu et des impôts plus élevés au sommet.",
+    "themes": [
+      "travail-emploi"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Henrik Kleven, Owen M. Zidar",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "angle_eco_en": "Automation that substitutes machines for workers in lower-skill tasks alters the endogenous wage and capital return distributions in ways that change the optimal progressivity of labor taxation even though the canonical tax formulas remain structurally unchanged."
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35744-fromrss",
     "titre": "The Measurement Revolution? Credible Measurement and Inference in the Age of AI",
     "url": "https://www.nber.org/papers/w35744#fromrss",
@@ -20,6 +40,30 @@
     "llm": "claude-haiku-4-5",
     "resume_en": "Artificial intelligence models transform economic measurement by converting unstructured data into structured variables at low cost, shifting the methodological bottleneck from finding scalable measures to choosing among multiple plausible options. This paper provides guidance across three stages of the measurement pipeline and demonstrates how appropriately designed validation samples enable valid inference even when artificial intelligence predictions are arbitrarily biased.",
     "angle_eco_en": "When artificial intelligence generates multiple plausible measures of the same economic phenomenon from unstructured data, researchers face the challenge of selecting among alternatives that may yield different empirical conclusions without explicit validation criteria to anchor measurement to observable outcomes."
+  },
+  {
+    "id": "arxiv-2609.14750v1",
+    "titre": "Redistributive Policies for the Times of Transformative AI",
+    "url": "https://arxiv.org/abs/2609.14750v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-13",
+    "resume_fr": "L'arrivée d'une intelligence artificielle transformatrice devrait réduire la part du travail et accroître les inégalités de revenus et de richesse, tandis que la croissance économique s'accélère mais profite principalement à un groupe restreint d'individus et d'entreprises. Les auteurs examinent les politiques redistributives proposées pour cette ère, notamment le revenu de base universel, le capital de base universel, et diverses taxes sur le capital, les robots et la richesse, en arguant que les politiques capables de distribuer largement les rentes du capital, comme le capital de base universel ou le revenu de base universel financé par des impôts sur le capital, sont les plus susceptibles de réduire durablement les inégalités.",
+    "angle_eco": "L'automatisation généralisée attendue après l'arrivée d'une intelligence artificielle transformatrice risque de réduire la part du travail dans le revenu et d'accroître les inégalités de revenus et de richesse, ce qui justifie d'examiner les politiques redistributives capables de distribuer largement les rentes du capital, notamment celles provenant du calcul informatique et des robots.",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 10,
+    "nb_eco": 6,
+    "nb_ia": 2,
+    "auteurs": "Jakub Growiec, Klaus Prettner, Maciej Szkróbka",
+    "signal": true,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The paper surveys redistributive policies designed to address the expected increase in income and wealth inequality following the arrival of transformative artificial intelligence, which is anticipated to accelerate economic growth while concentrating gains among a narrow group. The authors argue that policies enabling broad distribution of capital rents, such as universal basic capital or universal basic income financed through capital taxes, are most likely to achieve lasting inequality reductions in an economy dominated by transformative AI.",
+    "angle_eco_en": "Transformative artificial intelligence is expected to concentrate economic gains among a narrow group of individuals and firms while decreasing the labor share and increasing income and wealth inequality, creating a need to evaluate redistributive mechanisms such as universal basic income, universal basic capital, and various forms of taxation on capital and automation technologies.",
+    "deja_signal": true
   },
   {
     "id": "arxiv-2609.08485v1",

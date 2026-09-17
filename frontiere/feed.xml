@@ -6,11 +6,25 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Automation and Optimal Taxation: A Task-Based Theory</title>
+      <link>https://www.nber.org/papers/w35747#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35747-fromrss</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs caractérisent la fiscalité optimale du travail et du capital dans un modèle où l'automatisation rend les travailleurs et les machines parfaitement substituables dans les tâches automatisables, situées jusqu'à un seuil de la distribution des compétences, tandis que les formules fiscales optimales conservent des formes canoniques bien que l'automatisation modifie substantiellement les taux optimaux en rendant les salaires et les rendements du capital endogènes. Le calibrage sur la distribution des salaires américains révèle que la classe moyenne subit l'automatisation la plus intense, avec une intensité machine maximale autour du 40e percentile de salaire, ce qui implique un barème fiscal du travail plus progressif avec un crédit d'impôt plus important en bas, des impôts réduits au milieu et des impôts plus élevés en haut, tandis que l'impôt optimal sur le capital reste substantiel mais inaffecté par l'automatisation.</description>
+    </item>
+    <item>
       <title>The Measurement Revolution? Credible Measurement and Inference in the Age of AI</title>
       <link>https://www.nber.org/papers/w35744#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35744-fromrss</guid>
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
       <description>L'intelligence artificielle transforme la mesure en économie en convertissant des données non structurées en variables à faible coût, déplaçant le défi de la faisabilité vers le choix entre plusieurs mesures plausibles aux conclusions parfois divergentes. Cet article décrit les trois étapes de l'intégration de l'IA dans la mesure et montre qu'une inférence crédible exige des échantillons de validation ancrés sur des critères explicites pour garantir des résultats valides, même lorsque les prédictions sont biaisées.</description>
+    </item>
+    <item>
+      <title>Redistributive Policies for the Times of Transformative AI</title>
+      <link>https://arxiv.org/abs/2609.14750v1</link>
+      <guid isPermaLink="false">arxiv-2609.14750v1</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
+      <description>L'arrivée d'une intelligence artificielle transformatrice devrait réduire la part du travail et accroître les inégalités de revenus et de richesse, tandis que la croissance économique s'accélère mais profite principalement à un groupe restreint d'individus et d'entreprises. Les auteurs examinent les politiques redistributives proposées pour cette ère, notamment le revenu de base universel, le capital de base universel, et diverses taxes sur le capital, les robots et la richesse, en arguant que les politiques capables de distribuer largement les rentes du capital, comme le capital de base universel ou le revenu de base universel financé par des impôts sur le capital, sont les plus susceptibles de réduire durablement les inégalités.</description>
     </item>
     <item>
       <title>AI Innovation and Firm Performance in the Medical Device Industry</title>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35604-fromrss</guid>
       <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
       <description>Cette étude développe une méthodologie bayésienne pour sélectionner automatiquement les ensembles de variables dans les modèles SVAR à l'aide d'un critère hors échantillon, en retenant le plus grand système admissible. Les résultats montrent que la production réagit à la construction résidentielle plutôt qu'au seul crédit aux ménages, et que l'ajout de l'écart de taux d'entreprise sélectionné identifie le risque de défaut attendu comme un canal majeur de transmission de la politique monétaire.</description>
-    </item>
-    <item>
-      <title>The Global Transition – The Impact of Demographics and AI on Economic Power</title>
-      <link>https://www.nber.org/papers/w35618#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35618-fromrss</guid>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Cette étude s'appuie sur un modèle d'équilibre général dynamique couvrant 17 régions pour évaluer l'impact des évolutions démographiques mondiales au cours du XXIe siècle. Selon les simulations basées sur les dernières projections de l'ONU, le vieillissement démographique entraînera une surabondance de capital comprimant les rendements réels, une baisse de 10 % du PIB mondial en 2100, une nette hausse des cotisations sociales et une réorganisation majeure de l'hégémonie économique.</description>
-    </item>
-    <item>
-      <title>One Click Away: AI Tutoring with Khanmigo in a Two-Year School Experiment</title>
-      <link>https://www.nber.org/papers/w35620#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35620-fromrss</guid>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Un essai contrôlé randomisé mené pendant deux ans dans dix-huit collèges du Tennessee montre que l'accès au tuteur d'intelligence artificielle Khanmigo augmente les résultats en mathématiques des élèves de 0,06 à 0,08 écart-type sur une année scolaire. Cependant, ce progrès reste similaire à celui obtenu sans intelligence artificielle en raison d'une utilisation peu fréquente et superficielle par les élèves, ce qui indique que l'engagement réel des utilisateurs constitue la contrainte majeure.</description>
     </item>
   </channel>
 </rss>
