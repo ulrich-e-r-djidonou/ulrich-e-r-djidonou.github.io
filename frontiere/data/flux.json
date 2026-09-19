@@ -20,6 +20,28 @@
     "angle_eco_en": "Automation that substitutes machines for workers in lower-skill tasks alters the endogenous wage and capital return distributions in ways that change the optimal progressivity of labor taxation even though the canonical tax formulas remain structurally unchanged."
   },
   {
+    "id": "arxiv-2609.19418v1",
+    "titre": "Stable Policy Learning",
+    "url": "https://arxiv.org/abs/2609.19418v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-16",
+    "resume_fr": "Cet article montre que la stabilité algorithmique joue un rôle central pour arbitrer entre le bien-être espéré d'une décision publique et le risque d'échantillonnage lié aux données expérimentales. Pour réduire ce risque, l'étude propose le « policy-vote bagging », une méthode agrégeant les décisions de nombreux sous-échantillons afin de préserver le bien-être espéré tout en augmentant l'utilité d'un chercheur averse au risque.",
+    "angle_eco": "L'agrégation des votes issus de multiples sous-échantillons expérimentaux permet de stabiliser l'apprentissage des politiques publiques, réduisant ainsi le risque d'échantillonnage tout en préservant le bien-être attendu au profit d'un chercheur averse au risque.",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Harvey Barnhard, Giacomo Opocher, Rahul Singh",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper demonstrates that algorithmic stability plays a central role in managing the trade-off between expected welfare and sampling risk in policy learning. To address this trade-off, the authors introduce policy-vote bagging, a method that averages treatment decisions across subsamples to preserve expected welfare while improving expected utility for risk-averse researchers.",
+    "angle_eco_en": "Random sampling in policy-learning experiments introduces welfare-damaging sampling risk, an issue that can be managed by using policy-vote bagging across multiple subsamples to achieve algorithmic stability and preserve expected welfare while reducing welfare variation for risk-averse decision-makers."
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35744-fromrss",
     "titre": "The Measurement Revolution? Credible Measurement and Inference in the Age of AI",
     "url": "https://www.nber.org/papers/w35744#fromrss",
@@ -59,7 +81,7 @@
     "nb_eco": 6,
     "nb_ia": 2,
     "auteurs": "Jakub Growiec, Klaus Prettner, Maciej Szkróbka",
-    "signal": true,
+    "signal": false,
     "llm": "claude-haiku-4-5",
     "resume_en": "The paper surveys redistributive policies designed to address the expected increase in income and wealth inequality following the arrival of transformative artificial intelligence, which is anticipated to accelerate economic growth while concentrating gains among a narrow group. The authors argue that policies enabling broad distribution of capital rents, such as universal basic capital or universal basic income financed through capital taxes, are most likely to achieve lasting inequality reductions in an economy dominated by transformative AI.",
     "angle_eco_en": "Transformative artificial intelligence is expected to concentrate economic gains among a narrow group of individuals and firms while decreasing the labor share and increasing income and wealth inequality, creating a need to evaluate redistributive mechanisms such as universal basic income, universal basic capital, and various forms of taxation on capital and automation technologies.",
@@ -270,6 +292,29 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "Artificial intelligence innovation is concentrated in a small number of economies, even as obtaining the benefits from AI requires cross-border movements of technology, intermediate inputs, data, investment, and know-how. Because global economic fragmentation shapes both the size and international distribution of AI benefits, preserving diversified cross-border links provides valuable economic optionality for countries not at the technological frontier.",
     "angle_eco_en": "Global economic fragmentation alters the scale and distribution of gains from concentrated artificial intelligence innovation by restricting cross-border movements of inputs, data, and know-how, making diversified trade links valuable for non-frontier economies."
+  },
+  {
+    "id": "voxeu-oxeu-columns-generative-ai-learning-penalty-secondary-school",
+    "titre": "The generative AI learning penalty in secondary school",
+    "url": "https://cepr.org/voxeu/columns/generative-ai-learning-penalty-secondary-school",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-09-03",
+    "resume_fr": "Une étude portant sur plus de 25 000 élèves du secondaire en Chine montre que l'utilisation autonome de l'intelligence artificielle générative réduit le temps consacré aux devoirs et améliore leurs notes, mais entraîne une baisse de leurs résultats aux examens. Bien que cet impact négatif soit initialement faible, il s'amplifie à mesure que les élèves maîtrisent ces outils et assimilent la suite du programme, ce qui suggère que les études de courte durée sous-estiment les coûts d'apprentissage à long terme de l'IA générative.",
+    "angle_eco": "L'utilisation de l'intelligence artificielle générative pour les devoirs scolaires réduit le temps de travail et augmente les notes immédiates, mais elle détériore progressivement les performances des élèves aux examens, révélant un coût d'apprentissage à long terme que les études de courte durée sous-estiment.",
+    "themes": [
+      "llm",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "David Strömberg, Victor Lei, Yanhui Wu",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Analyzing data from over 25,000 7th to 12th grade students in China, the paper finds that self-directed use of generative AI reduced homework time and increased homework scores, but ultimately decreased exam scores. This negative impact on exam performance expands as students become more proficient with AI tools, suggesting that short-duration studies may underestimate the long-run learning costs of generative AI.",
+    "angle_eco_en": "Self-directed use of generative artificial intelligence reduces students' homework time and raises their homework scores while ultimately lowering their exam scores, generating long-run learning costs that grow with tool proficiency and accumulated course material."
   },
   {
     "id": "arxiv-2609.02580v1",
@@ -510,6 +555,29 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "Evaluating nine foundation model variants across electricity markets in Germany, Poland, and Spain from 2021 to 2025, a study shows that only TabPFN models consistently outperform state-of-the-art market-specific benchmarks in statistical forecasting accuracy. However, foundation models cannot universally replace market-specific models because their economic value in battery storage arbitrage depends on risk tolerance, with a distributional deep neural network benchmark generating higher profits under lower risk preferences.",
     "angle_eco_en": "The divergence between statistical forecasting accuracy in zero-shot foundation models and actual profitability in battery storage arbitrage demonstrates that statistical dominance does not guarantee economic superiority across different risk tolerances and decision strategies."
+  },
+  {
+    "id": "voxeu--exposure-predicting-ai-adoption-based-comparative-advantage",
+    "titre": "Beyond exposure: Predicting AI adoption based on comparative advantage",
+    "url": "https://cepr.org/voxeu/columns/beyond-exposure-predicting-ai-adoption-based-comparative-advantage",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-08-29",
+    "resume_fr": "Les prédictions sur l'impact de l'intelligence artificielle sur le marché du travail se fondent généralement sur les capacités technologiques mesurées par l'exposition des métiers à l'IA, mais l'adoption dépend aussi de la rentabilité relative de l'IA par rapport au travail humain. À partir de données représentatives sur les travailleurs allemands, l'auteur montre que l'avantage comparatif est un bien meilleur prédicteur de l'adoption de l'IA que l'avantage absolu fondé sur l'exposition seule.",
+    "angle_eco": "L'adoption de l'intelligence artificielle dépend non seulement de l'exposition technologique des métiers mais aussi de l'avantage comparatif de l'IA par rapport au travail humain.",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Ilse Lindenlaub, Ryungha Oh, Maria Alejandra Rodriguez, Laura Veldkamp",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "Predictions of artificial intelligence's workplace impact typically rely on occupational exposure to the technology, but analysis of German worker data demonstrates that adoption decisions also depend on the relative cost-effectiveness of AI compared to human labour. Comparative advantage proves to be a substantially stronger predictor of AI adoption than absolute advantage measured by exposure alone.",
+    "angle_eco_en": "Comparative advantage in the relative productivity of artificial intelligence versus human labour predicts occupational adoption of AI technology better than exposure measures based solely on what the technology can accomplish."
   },
   {
     "id": "arxiv-2608.25720v1",
