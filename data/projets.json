@@ -1,5 +1,5 @@
 {
-  "derniere_verification": "2026-09-20",
+  "derniere_verification": "2026-09-21",
   "projets": {
     "fedspeak": {
       "etat": "Communiqués analysés jusqu'au 2 septembre 2026",
@@ -8,9 +8,9 @@
       "source": "https://raw.githubusercontent.com/ulrich-e-r-djidonou/bdc-fedspeak/main/data/processed/tone_index.csv"
     },
     "geoecon": {
-      "etat": "Mise à jour le 19 septembre 2026",
-      "etat_en": "Updated on September 19, 2026",
-      "date_donnees": "2026-09-19",
+      "etat": "Mise à jour le 20 septembre 2026",
+      "etat_en": "Updated on September 20, 2026",
+      "date_donnees": "2026-09-20",
       "source": "https://ulrich-e-r-djidonou.github.io/geoecon-pulse/data/indicators.json"
     },
     "icie": {
