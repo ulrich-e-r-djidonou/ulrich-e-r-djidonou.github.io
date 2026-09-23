@@ -6,6 +6,20 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>The AI transformation</title>
+      <link>https://www.bankofcanada.ca/2026/09/the-ai-transformation/</link>
+      <guid isPermaLink="false">banque-canada-https-www-bankofcanada-ca-2026-09-the-ai-transformation-</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <description>L'intelligence artificielle modifie la quantité de ce qui est produit et la nature du travail humain. Cependant, l'ensemble des façons dont cette technologie affectera l'économie reste encore méconnu.</description>
+    </item>
+    <item>
+      <title>FEDS Paper: Premiums or Peril</title>
+      <link>https://www.federalreserve.gov/econres/feds/premiums-or-peril.htm</link>
+      <guid isPermaLink="false">fed-ps-www-federalreserve-gov-econres-feds-premiums-or-peril-htm</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <description>En analysant 465 000 ventes de logements en Floride sur douze ans à l'aide de méthodes d'apprentissage automatique, cette étude montre que les prix immobiliers sont négativement liés aux pertes météorologiques attendues, aux primes d'assurance et à l'exposition aux ouragans récents. Les pertes attendues exercent l'impact le plus fort en étant intégrées de manière rationnelle dans les évaluations immobilières, tandis que les primes d'assurance ont un effet économique plus modeste et l'exposition récente aux ouragans une influence seulement marginale.</description>
+    </item>
+    <item>
       <title>Automation and Optimal Taxation: A Task-Based Theory</title>
       <link>https://www.nber.org/papers/w35747#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35747-fromrss</guid>
@@ -111,6 +125,13 @@
       <description>En répliquant des expériences d'économie expérimentale de double enchère dans lesquelles les sujets humains sont remplacés par des agents fondés sur de grands modèles de langage, cette étude évalue leur compatibilité avec les mécanismes de marché. Les résultats montrent que les marchés composés de ces agents convergent plus lentement ou ne convergent pas vers l'équilibre, générant ainsi des allocations de ressources moins efficaces que les marchés humains.</description>
     </item>
     <item>
+      <title>FEDS Paper: Linear and Nonlinear Econometric Models versus Machine-Learning Models: Evidence from Realized-Volatility Forecasting(Revised)</title>
+      <link>https://www.federalreserve.gov/econres/feds/linear-and-nonlinear-econometric-models-against-machine-learning-models.htm</link>
+      <guid isPermaLink="false">fed-inear-econometric-models-against-machine-learning-models-htm</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Cette étude compare l'efficacité de modèles économétriques linéaires et non linéaires à celle d'algorithmes d'apprentissage automatique pour prévoir la volatilité réalisée de l'indice S&amp;P 500 et de quarante actions américaines. Les résultats révèlent que la performance dépend principalement de l'horizon de prévision, le modèle HAR à changement de régime dominant à court terme et le modèle ARFIMA à l'horizon mensuel, sans que l'apprentissage automatique ne surpasse systématiquement l'ensemble des modèles économétriques.</description>
+    </item>
+    <item>
       <title>Manipulation-Robust Prediction</title>
       <link>https://doi.org/10.1257/aer.20241087</link>
       <guid isPermaLink="false">aea-10-1257-aer-20241087</guid>
@@ -193,27 +214,6 @@
       <guid isPermaLink="false">arxiv-2608.25720v1</guid>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
       <description>Ce papier développe un cadre économétrique bayésien fondé sur un modèle de Roy avec effets de débordement afin d'identifier et d'estimer les effets causaux directs, indirects et totaux en présence de sélection endogène au traitement et d'interférences spatiales. Appliquée au programme américain des Opportunity Zones, l'étude révèle des effets directs positifs sur le développement du logement mais des bénéfices de débordement limités, ainsi que des rendements décroissants lors d'une expansion de cette politique.</description>
-    </item>
-    <item>
-      <title>AI worsens climate change, integrated assessment shows</title>
-      <link>https://arxiv.org/abs/2608.24670v1</link>
-      <guid isPermaLink="false">arxiv-2608.24670v1</guid>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
-      <description>En intégrant les impacts de l'intelligence artificielle sur les émissions, la production et les dommages climatiques au modèle DICE, cette étude montre que son développement accroît le réchauffement mondial de 0,1 °C à 0,8 °C d'ici 2100 dans un scénario de faible atténuation. Les coûts climatiques associés annulent environ un cinquième à un quart des gains économiques de cette technologie, bien que le respect de l'objectif de 2 °C s'avère complémentaire à son développement.</description>
-    </item>
-    <item>
-      <title>Dynamic Discrete Choice and Inverse Reinforcement Learning: Inferring Preferences and Beliefs From Human Behavior</title>
-      <link>https://arxiv.org/abs/2608.24362v1</link>
-      <guid isPermaLink="false">arxiv-2608.24362v1</guid>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Cet article compare le choix discret dynamique en économétrie structurelle et l'apprentissage par renforcement inverse en apprentissage automatique, deux domaines qui cherchent à inférer les préférences des décideurs à partir de leurs comportements séquentiels observés. Après avoir démontré la proximité mathématique entre le cadre du soft Q-learning et les modèles économétriques à chocs de valeur extrême, cette étude souligne que la combinaison des méthodes de différence temporelle et des estimateurs classiques en deux étapes constitue une voie prometteuse.</description>
-    </item>
-    <item>
-      <title>Political Entrepreneurs</title>
-      <link>https://www.nber.org/papers/w35637#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35637-fromrss</guid>
-      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Une analyse menée dans 26 États américains entre 2009 et 2023 montre que les propriétaires gérant activement une entreprise représentent plus de 40 % des parlementaires locaux et initient une proportion plus importante de projets de loi en tant que premiers ou uniques auteurs principaux. Plutôt que de soutenir indistinctement l'ensemble des mesures favorables aux affaires, ces élus promeuvent spécifiquement des législations réduisant les barrières à l'entrée pour les nouvelles entreprises, en se concentrant sur la dérégulation et l'innovation.</description>
     </item>
   </channel>
 </rss>

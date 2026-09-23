@@ -1,5 +1,45 @@
 [
   {
+    "id": "banque-canada-https-www-bankofcanada-ca-2026-09-the-ai-transformation-",
+    "titre": "The AI transformation",
+    "url": "https://www.bankofcanada.ca/2026/09/the-ai-transformation/",
+    "source": "Banque du Canada, publications",
+    "type": "article",
+    "date_publication": "2026-09-18",
+    "resume_fr": "L'intelligence artificielle modifie la quantité de ce qui est produit et la nature du travail humain. Cependant, l'ensemble des façons dont cette technologie affectera l'économie reste encore méconnu.",
+    "angle_eco": "L'intelligence artificielle modifie les volumes de production et la nature du travail humain, tout en laissant subsister une incertitude quant à l'ensemble de ses répercussions sur l'économie.",
+    "themes": [],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Artificial intelligence is changing total production output and the nature of human labor. However, the full extent of how artificial intelligence will affect the economy remains unknown.",
+    "angle_eco_en": "Artificial intelligence is reshaping production levels and human labor, leaving the full scope of its economic impacts unknown."
+  },
+  {
+    "id": "fed-ps-www-federalreserve-gov-econres-feds-premiums-or-peril-htm",
+    "titre": "FEDS Paper: Premiums or Peril",
+    "url": "https://www.federalreserve.gov/econres/feds/premiums-or-peril.htm",
+    "source": "Reserve federale americaine (Fed), working papers",
+    "type": "papier",
+    "date_publication": "2026-09-18",
+    "resume_fr": "En analysant 465 000 ventes de logements en Floride sur douze ans à l'aide de méthodes d'apprentissage automatique, cette étude montre que les prix immobiliers sont négativement liés aux pertes météorologiques attendues, aux primes d'assurance et à l'exposition aux ouragans récents. Les pertes attendues exercent l'impact le plus fort en étant intégrées de manière rationnelle dans les évaluations immobilières, tandis que les primes d'assurance ont un effet économique plus modeste et l'exposition récente aux ouragans une influence seulement marginale.",
+    "angle_eco": "La capitalisation du risque climatique dans les prix immobiliers s'opère principalement par l'intégration rationnelle des pertes météorologiques futures attendues, tandis que les primes d'assurance et la survenance récente d'ouragans n'exercent qu'une influence négative respectivement modérée et marginale sur la valeur des logements.",
+    "themes": [
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Erik Heitfield, Mallick Hossain, and Katie Merritt",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Analyzing 465,000 Florida home sales over twelve years using semiparametric machine learning, the paper finds that home prices are negatively related to property-level expected weather losses, insurance premiums, and recent hurricane exposure. Expected weather losses display the strongest negative association with property valuations, whereas insurance premiums have an economically modest impact and recent hurricane exposure has only a marginal effect.",
+    "angle_eco_en": "The differential capitalization of weather-related risk factors into property valuations reveals that housing markets strongly discount long-run expected catastrophe losses while treating insurance premiums as relatively transitory and recent hurricane exposure as conveying little new information."
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35747-fromrss",
     "titre": "Automation and Optimal Taxation: A Task-Based Theory",
     "url": "https://www.nber.org/papers/w35747#fromrss",
@@ -339,6 +379,26 @@
     "resume_en": "By replicating double auction experiments with large language model agents, this study finds that markets populated by language models exhibit slower or no convergence toward market equilibrium, yielding less efficient resource allocations than human markets. Further analysis reveals substantial behavioral heterogeneity across model families and indicates that an agent's decision to execute a trade reflects a lexical shift from strategic considerations toward urgency.",
     "angle_eco_en": "Deploying large language models as economic agents in double auction environments results in slower or absent convergence toward market equilibrium and lower allocative efficiency compared to markets populated by humans.",
     "deja_signal": true
+  },
+  {
+    "id": "fed-inear-econometric-models-against-machine-learning-models-htm",
+    "titre": "FEDS Paper: Linear and Nonlinear Econometric Models versus Machine-Learning Models: Evidence from Realized-Volatility Forecasting(Revised)",
+    "url": "https://www.federalreserve.gov/econres/feds/linear-and-nonlinear-econometric-models-against-machine-learning-models.htm",
+    "source": "Reserve federale americaine (Fed), working papers",
+    "type": "papier",
+    "date_publication": "2026-09-02",
+    "resume_fr": "Cette étude compare l'efficacité de modèles économétriques linéaires et non linéaires à celle d'algorithmes d'apprentissage automatique pour prévoir la volatilité réalisée de l'indice S&P 500 et de quarante actions américaines. Les résultats révèlent que la performance dépend principalement de l'horizon de prévision, le modèle HAR à changement de régime dominant à court terme et le modèle ARFIMA à l'horizon mensuel, sans que l'apprentissage automatique ne surpasse systématiquement l'ensemble des modèles économétriques.",
+    "angle_eco": "L'efficacité de la prévision de la volatilité réalisée repose principalement sur la modélisation de la persistance et des dynamiques non linéaires adaptées à chaque horizon temporel, un domaine où les modèles économétriques spécialisés rivalisent avantageusement avec les méthodes d'apprentissage automatique.",
+    "themes": [
+      "prevision"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Rehim Kilic",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "angle_eco_en": "Realized-volatility forecasting performance depends on whether models adequately capture the persistence and nonlinear dynamics that vary across prediction horizons, with Markov-switching specifications excelling at short horizons, ARFIMA at monthly horizons, and machine-learning approaches failing to consistently outperform econometric models designed for long memory and regime dependence."
   },
   {
     "id": "aea-10-1257-aer-20241087",
