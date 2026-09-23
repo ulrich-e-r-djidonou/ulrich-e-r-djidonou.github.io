@@ -130,6 +130,9 @@ sources:
     # Les documents de travail passent par staff-working-papers, flux qui repond
     # mais reste vide au 12 aout 2026. La recherche du personnel arrive par la
     # source banque-canada-notes ci-dessous.
+    # Sans auteur par nature : les pages ne portent aucune signature (verifie
+    # le 22 septembre 2026 sur « The AI transformation », type Explainers).
+    # Source inscrite a SOURCES_SANS_AUTEURS_CONNUES dans verifier_auteurs.py.
     type_item: article
     url: "https://www.bankofcanada.ca/content_type/publications/feed/"
     requiert_mot_cle_ia: true

@@ -35,6 +35,11 @@ FLUX = RACINE / "frontiere" / "data" / "flux.json"
 # auteur : c'est l'etat normal, pas une regression.
 SOURCES_SANS_AUTEURS_CONNUES = {
     "Banque centrale europeenne (BCE), working papers",
+    # Publications institutionnelles, sans auteur par nature (voir la
+    # config de la source dans sources.yaml). Premier item retenu le
+    # 2026-09-21, une fiche « Explainers » sans signature, qui a fait
+    # echouer le run et bloque la publication du flux.
+    "Banque du Canada, publications",
 }
 
 
