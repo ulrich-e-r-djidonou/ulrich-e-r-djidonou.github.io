@@ -1,5 +1,432 @@
 [
   {
+    "id": "arxiv-2609.27732v1",
+    "titre": "Do Drug Consumption Rooms Reduce Drug-Related Hospitalizations? Evidence from Switzerland",
+    "url": "https://arxiv.org/abs/2609.27732v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Ana Armendariz",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.27727v1",
+    "titre": "Sovereign Grassroots Currencies: A CBDC Architecture for Credit and Monetary Policy (Full Version)",
+    "url": "https://arxiv.org/abs/2609.27727v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Ehud Shapiro",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.27691v1",
+    "titre": "Testing for Heterogeneous Treatment Effects in Regression Discontinuity Designs",
+    "url": "https://arxiv.org/abs/2609.27691v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Xiaojun Song, Haojiao Zhao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.27404v1",
+    "titre": "When Trust Attracts Fraud: AI and Trust Arbitrage",
+    "url": "https://arxiv.org/abs/2609.27404v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "llm"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Xieyu Yin, Fenghua Wen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.27200v1",
+    "titre": "Local Optimality and Rigidity of Frobenius Tests for Dense High-Dimensional Covariance Alternatives",
+    "url": "https://arxiv.org/abs/2609.27200v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Peter Reinhard Hansen, Werner Ploberger, Chen Tong",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28459v1",
+    "titre": "Even Sharper Bounds for Transductive Learning and Its Applications",
+    "url": "https://arxiv.org/abs/2609.28459v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yingzhen Yang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28385v1",
+    "titre": "When and Where to Trust the Teacher: Unifying On-Policy Distillation and GRPO through Entropy-Calibrated Credit Assignment",
+    "url": "https://arxiv.org/abs/2609.28385v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jie Zhang, Jingxiao Yang, Zhehao Huang, Yuhang Liu, Xiaolin Huang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28378v1",
+    "titre": "ForgetMimic: Motion Unlearning for Reinforcement Learning Humanoid Control",
+    "url": "https://arxiv.org/abs/2609.28378v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Xukun Luan, Zhongxiang Lei, Chen Gong, Shaowei Li, Yuanguo Bi, Jinyan Liu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28364v1",
+    "titre": "LEAP-CBF: A Safety Filter for Uncertain Systems with Least-Effort Adversarial Potentials",
+    "url": "https://arxiv.org/abs/2609.28364v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Oswin So, Eric Yu, Chuchu Fan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28322v1",
+    "titre": "Learning the Cost of Reliable Inference",
+    "url": "https://arxiv.org/abs/2609.28322v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "llm"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Dimitrios Rontogiannis, Ander Artola Velasco, Manuel Gomez Rodriguez",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28290v1",
+    "titre": "Computation Over Geometry: Meaning Identity Is Computed, Not Shipped in the Embeddings",
+    "url": "https://arxiv.org/abs/2609.28290v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "inference-causale",
+      "llm"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Jiaqi Deng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28273v1",
+    "titre": "Non-Commutative State Tracking with Input-Dependent Low-Rank Updates in Mamba-3",
+    "url": "https://arxiv.org/abs/2609.28273v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Hiroki Fujii, Masaki Yamakita",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28272v1",
+    "titre": "Towards Efficient Reasoning: Learning Causal Shortcuts for Diffusion Language Models",
+    "url": "https://arxiv.org/abs/2609.28272v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Dian Jin, Kairong Han, Baohong Li, Xinpeng Dong, Zijing Hu, Nuanqiao Shan, Fei Wu, Kun Kuang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28250v1",
+    "titre": "Complementary Roles of Activation and Parametric Memory in Few-Shot Learning",
+    "url": "https://arxiv.org/abs/2609.28250v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Miaohe Niu, Runsong Zhao, Xinyu Liu, Bo Jin, Yucheng Qiao, Chunliang Zhang, Jingbo Zhu, Tong Xiao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28194v1",
+    "titre": "Geospatial embeddings detect old-growth forests but buffered spatial validation narrows their advantage over Sentinel features",
+    "url": "https://arxiv.org/abs/2609.28194v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "prevision",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Thomas Ratsakatika, Mihai Zotta, Srinivasan Keshav, Emily R. Lines",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28145v1",
+    "titre": "RL Starts before RL: On Policy Distillation for Better Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2609.28145v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Shuai Dong, Yongfu Zhu, Yuqi Xu, Weichu Xie,  Liuwenpu, Ziyue Wang, Kaiwen Tuo, Congcong Wang, Siyuan Wang, Wenqi Shao, Shuai Yang, Ji Zhao, Caoyuan Ma, Wenzheng Chang, Taiqiang Wu, Xinlei Yu, Hongrui Wu, Xiaoxuan He, Fangke Chen, Dianyi Wang, Kanghui Tian, Sirry Chen, Xingyu Liu, Xiangnan Wu, Jiawei Guo, Haowen Hou, LingHan Chen, Zhongyu Wei, Jiaqi Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28117v1",
+    "titre": "Scaling Attention Head Analysis via Gradient-Based Attribution in Context-Aware Machine Translation",
+    "url": "https://arxiv.org/abs/2609.28117v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Paweł Mąka, Yusuf Can Semerci, Jan Scholtes, Gerasimos Spanakis",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28107v1",
+    "titre": "Distillation for Efficient Multitask Manipulation Policies via Conditional Flow Matching",
+    "url": "https://arxiv.org/abs/2609.28107v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Shreya Deshmukh, Imen Mahdi, Nick Heppert, Abhinav Valada",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28105v1",
+    "titre": "Fed-ReMasker: Federated Tabular Imputation under Feature-Level Missingness",
+    "url": "https://arxiv.org/abs/2609.28105v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Ioannis Papathanail, Rooholla Poursoleymani, Lubnaa Abdur Rahman, Stavroula Georgia Mougiakakou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28085v1",
+    "titre": "Curriculum Learning with GNN-based Reinforcement Learning for Job Shop Scheduling",
+    "url": "https://arxiv.org/abs/2609.28085v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Jayakrishnan K. Vasudevan, Jonathan Hoss, Noah Klarmann",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.26994v1",
+    "titre": "Nonlinear Drivers of Macroeconomic Tail Risk: A Threshold Stochastic Volatility-in-Mean VAR with Regime-Dependent Leverage",
+    "url": "https://arxiv.org/abs/2609.26994v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-22",
+    "themes": [
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Haroon Mumtaz, Sofia Velasco",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.26604v1",
+    "titre": "The network advantage: benefits of interregional scientific knowledge spillovers on AI patenting",
+    "url": "https://arxiv.org/abs/2609.26604v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-22",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Saverio Barabuffi, Jacopo Cricchio, Alberto Di Minin, Guido Pialli",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.26303v1",
+    "titre": "Target alignment, dilution and forecast selection when cross-sectional forecasts share a common target",
+    "url": "https://arxiv.org/abs/2609.26303v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-22",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Masoud Soleimani",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.25924v1",
+    "titre": "Conditional Tensor Diffusion: Distributional Counterfactual Learning and Inference",
+    "url": "https://arxiv.org/abs/2609.25924v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-22",
+    "themes": [
+      "inference-causale",
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Xinbing Kong, Zeyu Li, Junfan Mao, Bin Wu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.25677v1",
+    "titre": "Seeing Is Not Perceiving: When Synthetic Consumers Can and Cannot Pretest Visual Marketing",
+    "url": "https://arxiv.org/abs/2609.25677v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-22",
+    "themes": [
+      "llm"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Yi-Lin Tsai,  Yung-Hsiu,  Lai",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.26840v1",
+    "titre": "Positive weight Hermite and Legendre quadrature rules",
+    "url": "https://arxiv.org/abs/2609.26840v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-22",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Joris Pinkse",
+    "signal": false
+  },
+  {
     "id": "arxiv-2609.24181v1",
     "titre": "Firm Valuation When AI Shapes the Business Model: A Milestone-Based Real-Options Framework for the AI Valuation Uncertainty Problem",
     "url": "https://arxiv.org/abs/2609.24181v1",
@@ -392,6 +819,22 @@
     "id": "arxiv-2609.23303v1",
     "titre": "Uniform Inference for Parameters Identified by Conditional Quantile Restrictions",
     "url": "https://arxiv.org/abs/2609.23303v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-20",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Xuqing Lin, Xiaojun Song",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.23303v2",
+    "titre": "Uniform Inference for Parameters Identified by Conditional Quantile Restrictions",
+    "url": "https://arxiv.org/abs/2609.23303v2",
     "source": "arXiv econ.EM / econ.GN",
     "type": "papier",
     "date_publication": "2026-09-20",

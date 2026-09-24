@@ -1,5 +1,73 @@
 [
   {
+    "id": "arxiv-2609.28372v1",
+    "titre": "Shopping by algorithm: How agentic AI deploys human heuristics as a surrogate consumer",
+    "url": "https://arxiv.org/abs/2609.28372v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "resume_fr": "Les auteurs examinent comment les modèles de langage de grande taille agissant en tant que consommateurs délégués réagissent aux signaux tarifaires du marketing, en utilisant une méthode de traçage qui rend coûteux l'accès aux attributs des produits, et constatent que sous contrainte de coûts et avec des objectifs vagues, ces agents omettent les informations diagnostiques nécessaires pour calculer le prix unitaire et font des choix sous-optimaux similaires aux heuristiques humaines. Contrairement à un objectif spécifique qui préserve principalement la recherche diagnostique et l'optimalité des choix, un objectif vague sous contrainte crée une vulnérabilité médiatisée par la recherche, ce qui suggère que les heuristiques marketing dans les achats délégués à l'IA sont gouvernées par l'architecture informationnelle de la vitrine plutôt que par des défauts immuables des modèles de langage.",
+    "angle_eco": "Les stratégies tarifaires du marketing, telles que la fixation de prix juste en dessous d'un seuil ou la présentation promotionnelle, influencent les modèles de langage de grande taille agissant comme agents d'achat en les conduisant à négliger les attributs diagnostiques nécessaires au calcul du prix unitaire lorsque l'acquisition d'information est coûteuse et l'objectif formulé de manière vague, révélant une vulnérabilité médiatisée par la recherche plutôt que par des défauts immuables du modèle.",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "nb_eco": 1,
+    "nb_ia": 3,
+    "auteurs": "Davood Wadi, Yu Ma",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "When Large Language Models act as surrogate consumers under information acquisition costs and vague goal prompts, they omit diagnostic attributes needed to compute unit prices and make suboptimal choices that resemble human heuristics, whereas specific goal prompts largely preserve diagnostic search and choice optimality. The study of eight commercially deployed LLMs shows that marketing pricing cues such as just-below pricing and promotional framing create vulnerabilities in AI shopping agents through search-mediated effects governed by information architecture rather than inherent model limitations.",
+    "angle_eco_en": "When consumers delegate purchasing decisions to language models operating under information acquisition constraints and vague objectives, marketing pricing cues can induce these AI agents to omit diagnostic attributes and make suboptimal choices that mirror human heuristic biases rather than reflecting inherent limitations of the models themselves."
+  },
+  {
+    "id": "arxiv-2609.27686v1",
+    "titre": "Mining Meaning: Measurement Error in AI-Assisted Literature Reviews",
+    "url": "https://arxiv.org/abs/2609.27686v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "resume_fr": "Les auteurs étudient la fiabilité des modèles de langage de grande taille pour automatiser les tâches de lecture, classification et synthèse de la littérature académique, en les traitant comme des systèmes de mesure et en analysant comment leurs erreurs affectent les conclusions en aval. Ils constatent que si les modèles performent bien sur les tâches de classification binaire, leur performance se détériore avec les tâches demandant une plus grande interprétation contextuelle, et que l'erreur de mesure affecte davantage les conclusions au niveau des articles individuels qu'au niveau des tendances générales de la littérature.",
+    "angle_eco": "La fiabilité des modèles de langage pour automatiser l'examen de la littérature académique dépend de la complexité de l'interprétation contextuelle requise et du type de conclusions que les données doivent soutenir, de sorte que les erreurs de mesure affectent substantiellement les affirmations au niveau des articles individuels tout en ayant peu d'effet sur les conclusions plus larges concernant l'ensemble de la littérature.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 4,
+    "nb_eco": 1,
+    "nb_ia": 4,
+    "auteurs": "Jeffrey D. Michler, Kieran Douglas, Anna Josephson",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The authors evaluate the reliability of large language models for automating literature reviews by testing three ChatGPT implementations on the task of identifying economics papers using rainfall as an instrumental variable and extracting their metadata. They find that while LLMs perform well on binary classification tasks, their performance declines with tasks requiring greater contextual interpretation, and measurement errors have disproportionately large effects on paper-level claims despite having minimal impact on broader literature-level conclusions.",
+    "angle_eco_en": "Measurement error in large language model outputs affects the reliability of literature review conclusions differently depending on whether researchers make claims about individual papers or about broader patterns across a literature."
+  },
+  {
+    "id": "arxiv-2609.26861v1",
+    "titre": "Rule-Based Pricing Algorithms and Market Outcomes: An Experimental Study",
+    "url": "https://arxiv.org/abs/2609.26861v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-22",
+    "resume_fr": "Les auteurs étudient expérimentalement comment la conception d'outils de tarification algorithmique affecte les résultats de marché en faisant concourir des participants qui construisent des algorithmes de prix dans un jeu de Bertrand séquentiel. La plupart des variations de conception testées, notamment les avertissements sur les guerres de prix, les stratégies préconfigurées et les conseils d'un modèle de langage de grande taille, augmentent les prix de marché en raison de prix de départ plus élevés et de conceptions d'algorithmes plus coopératives.",
+    "angle_eco": "La conception des outils de tarification automatisée, notamment par l'inclusion d'avertissements sur les guerres de prix, de stratégies préconfigurées ou de conseils d'intelligence artificielle, tend à élever les prix de marché en favorisant des algorithmes plus coopératifs et des prix d'entrée plus élevés.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Adrian Hillenbrand, Hans-Theo Normann, Matthias Potarca, Tobias Werner",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The study examines how design features of rule-based pricing algorithms affect market outcomes through a controlled experiment where participants build competing pricing algorithms in a sequential Bertrand game. Most design variations tested, including price war warnings, pre-configured strategies, and large language model advice, increased market prices primarily by raising starting prices and encouraging more cooperative algorithm designs.",
+    "angle_eco_en": "Rule-based pricing tools used in digital commerce may facilitate higher market prices and reduce competitive intensity through their design features such as warnings about price wars, pre-configured strategies, and algorithmic advice."
+  },
+  {
     "id": "banque-canada-https-www-bankofcanada-ca-2026-09-the-ai-transformation-",
     "titre": "The AI transformation",
     "url": "https://www.bankofcanada.ca/2026/09/the-ai-transformation/",

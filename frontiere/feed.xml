@@ -6,6 +6,27 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Shopping by algorithm: How agentic AI deploys human heuristics as a surrogate consumer</title>
+      <link>https://arxiv.org/abs/2609.28372v1</link>
+      <guid isPermaLink="false">arxiv-2609.28372v1</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs examinent comment les modèles de langage de grande taille agissant en tant que consommateurs délégués réagissent aux signaux tarifaires du marketing, en utilisant une méthode de traçage qui rend coûteux l'accès aux attributs des produits, et constatent que sous contrainte de coûts et avec des objectifs vagues, ces agents omettent les informations diagnostiques nécessaires pour calculer le prix unitaire et font des choix sous-optimaux similaires aux heuristiques humaines. Contrairement à un objectif spécifique qui préserve principalement la recherche diagnostique et l'optimalité des choix, un objectif vague sous contrainte crée une vulnérabilité médiatisée par la recherche, ce qui suggère que les heuristiques marketing dans les achats délégués à l'IA sont gouvernées par l'architecture informationnelle de la vitrine plutôt que par des défauts immuables des modèles de langage.</description>
+    </item>
+    <item>
+      <title>Mining Meaning: Measurement Error in AI-Assisted Literature Reviews</title>
+      <link>https://arxiv.org/abs/2609.27686v1</link>
+      <guid isPermaLink="false">arxiv-2609.27686v1</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs étudient la fiabilité des modèles de langage de grande taille pour automatiser les tâches de lecture, classification et synthèse de la littérature académique, en les traitant comme des systèmes de mesure et en analysant comment leurs erreurs affectent les conclusions en aval. Ils constatent que si les modèles performent bien sur les tâches de classification binaire, leur performance se détériore avec les tâches demandant une plus grande interprétation contextuelle, et que l'erreur de mesure affecte davantage les conclusions au niveau des articles individuels qu'au niveau des tendances générales de la littérature.</description>
+    </item>
+    <item>
+      <title>Rule-Based Pricing Algorithms and Market Outcomes: An Experimental Study</title>
+      <link>https://arxiv.org/abs/2609.26861v1</link>
+      <guid isPermaLink="false">arxiv-2609.26861v1</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs étudient expérimentalement comment la conception d'outils de tarification algorithmique affecte les résultats de marché en faisant concourir des participants qui construisent des algorithmes de prix dans un jeu de Bertrand séquentiel. La plupart des variations de conception testées, notamment les avertissements sur les guerres de prix, les stratégies préconfigurées et les conseils d'un modèle de langage de grande taille, augmentent les prix de marché en raison de prix de départ plus élevés et de conceptions d'algorithmes plus coopératives.</description>
+    </item>
+    <item>
       <title>The AI transformation</title>
       <link>https://www.bankofcanada.ca/2026/09/the-ai-transformation/</link>
       <guid isPermaLink="false">banque-canada-https-www-bankofcanada-ca-2026-09-the-ai-transformation-</guid>
@@ -193,27 +214,6 @@
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35684-fromrss</guid>
       <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
       <description>Une mesure des investissements en intelligence artificielle fondée sur l'emploi qualifié montre que l'IA est associée à une croissance de la productivité des entreprises ces dernières années, alors que ce n'était pas le cas lors de la décennie précédente. Ces gains de productivité s'expliquent par l'accumulation d'un capital organisationnel, constitué de connaissances durables et propres à l'entreprise acquises par l'apprentissage par la pratique au sein des emplois spécialisés en IA.</description>
-    </item>
-    <item>
-      <title>Foundation models for electricity price forecasting and battery arbitrage: Can they replace market-specific forecasting models?</title>
-      <link>https://arxiv.org/abs/2609.00089v1</link>
-      <guid isPermaLink="false">arxiv-2609.00089v1</guid>
-      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
-      <description>L'évaluation de neuf variantes de cinq familles de modèles fondationnels face à deux modèles de référence pour la prévision des prix de l'électricité en Allemagne, en Pologne et en Espagne entre 2021 et 2025 montre que seuls les modèles TabPFN surpassent systématiquement et significativement ces références sur le plan statistique. Toutefois, cette supériorité statistique ne garantit pas une dominance économique universelle dans l'arbitrage de stockage par batterie, car TabPFN est plus rentable avec des stratégies risquées tandis que le modèle de référence fondé sur un réseau de neurones profond distributionnel l'emporte lorsque la tolérance au risque est plus faible.</description>
-    </item>
-    <item>
-      <title>Beyond exposure: Predicting AI adoption based on comparative advantage</title>
-      <link>https://cepr.org/voxeu/columns/beyond-exposure-predicting-ai-adoption-based-comparative-advantage</link>
-      <guid isPermaLink="false">voxeu--exposure-predicting-ai-adoption-based-comparative-advantage</guid>
-      <pubDate>Sat, 29 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Les prédictions sur l'impact de l'intelligence artificielle sur le marché du travail se fondent généralement sur les capacités technologiques mesurées par l'exposition des métiers à l'IA, mais l'adoption dépend aussi de la rentabilité relative de l'IA par rapport au travail humain. À partir de données représentatives sur les travailleurs allemands, l'auteur montre que l'avantage comparatif est un bien meilleur prédicteur de l'adoption de l'IA que l'avantage absolu fondé sur l'exposition seule.</description>
-    </item>
-    <item>
-      <title>Endogenous Selection and Spillovers: Bayesian Inference for Policy-Relevant Causal Effects</title>
-      <link>https://arxiv.org/abs/2608.25720v1</link>
-      <guid isPermaLink="false">arxiv-2608.25720v1</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Ce papier développe un cadre économétrique bayésien fondé sur un modèle de Roy avec effets de débordement afin d'identifier et d'estimer les effets causaux directs, indirects et totaux en présence de sélection endogène au traitement et d'interférences spatiales. Appliquée au programme américain des Opportunity Zones, l'étude révèle des effets directs positifs sur le développement du logement mais des bénéfices de débordement limités, ainsi que des rendements décroissants lors d'une expansion de cette politique.</description>
     </item>
   </channel>
 </rss>
