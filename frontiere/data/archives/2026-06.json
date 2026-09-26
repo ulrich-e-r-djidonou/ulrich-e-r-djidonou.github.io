@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "voxeu-org-voxeu-columns-ai-productivity-and-work-evidence-us-firms",
+    "titre": "AI, productivity, and work: Evidence from US firms",
+    "url": "https://cepr.org/voxeu/columns/ai-productivity-and-work-evidence-us-firms",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-06-26",
+    "resume_fr": "Les auteurs analysent les effets de l'intelligence artificielle sur la productivité et l'emploi à partir d'une enquête auprès de près de 750 dirigeants d'entreprises américaines, révélant une adoption hétérogène de l'IA selon les secteurs et les tailles d'entreprises, avec des gains de productivité du travail positifs attendus en 2026 particulièrement dans les services à haut niveau de compétences et la finance. Ils documentent un paradoxe de productivité où les gains perçus dépassent les gains mesurés, et identifient peu de déclin d'emploi agrégé à court terme malgré une réallocation compositionnelle du travail marquée par le déclin des postes de secrétariat de routine et une demande accrue pour les rôles techniques qualifiés.",
+    "angle_eco": "L'adoption hétérogène de l'intelligence artificielle par les entreprises américaines génère des gains de productivité du travail concentrés dans les services à forte intensité de compétences et la finance, portés par l'innovation et l'augmentation des revenus plutôt que par l'approfondissement du capital, tandis que les marchés du travail connaissent une réallocation compositionnelle des emplois vers les rôles techniques qualifiés au détriment des fonctions administratives de routine.",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 3,
+    "auteurs": "",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "A survey of nearly 750 corporate executives reveals substantial heterogeneity in artificial intelligence adoption across firms, generating positive labor productivity gains that are expected to strengthen in 2026. While aggregate employment shows little evidence of near-term declines, there is a compositional reallocation of labor featuring a decrease in routine clerical roles and an increasing relative demand for skilled technical roles.",
+    "angle_eco_en": "Firm-level adoption of artificial intelligence drives labor productivity growth through revenue-based total factor productivity improvements rather than capital deepening, simultaneously triggering a compositional reallocation of workforce skills."
+  }
+]

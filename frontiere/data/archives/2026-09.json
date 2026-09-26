@@ -1,5 +1,354 @@
 [
   {
+    "id": "arxiv-2609.30007v1",
+    "titre": "First as Tragedy? Second as What? Estimating Dynamic Effects of Recurrent Events",
+    "url": "https://arxiv.org/abs/2609.30007v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "travail-emploi",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Agnes Norris Keiller",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.29958v1",
+    "titre": "Multi-Dimensional Matching",
+    "url": "https://arxiv.org/abs/2609.29958v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Irene Aldridge",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.29905v1",
+    "titre": "Decision-Relevant Information in Partially Observed Production Networks",
+    "url": "https://arxiv.org/abs/2609.29905v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Shaowen Luo, Kwok Ping Tsang, Zichao Yang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.29440v1",
+    "titre": "Kernel Balancing in Tree-based Methods",
+    "url": "https://arxiv.org/abs/2609.29440v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Karolina Gliszczyńska-Schroeder",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.29249v1",
+    "titre": "Generic Covariate Adjustment for Regression Discontinuity Designs",
+    "url": "https://arxiv.org/abs/2609.29249v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Jun Ma, Yuya Sasaki, Zhengfei Yu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.29080v1",
+    "titre": "Don't Fake It If You Can't Make It: Driver Misconduct in Last-Mile Delivery",
+    "url": "https://arxiv.org/abs/2609.29080v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "inference-causale",
+      "travail-emploi",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Srishti Arora, Vivek Choudhary, Pavel Kireyev",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28947v1",
+    "titre": "Why Does Misinformation Propagate Faster? An Algorithmic Perspective on X",
+    "url": "https://arxiv.org/abs/2609.28947v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Pan Li, Shuang Gao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28871v1",
+    "titre": "Panel Conditioning in Fixed-Effects Models: Identification and Bias Propagation",
+    "url": "https://arxiv.org/abs/2609.28871v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Shoki Okubo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30258v1",
+    "titre": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2609.30258v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Sudip Bhujel, Shanghao Shi, Ruiquan Huang, Ning Zhang, Yang Xiao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30250v1",
+    "titre": "Agentic Detection of Online Conspiracies",
+    "url": "https://arxiv.org/abs/2609.30250v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Lior Biton, Oren Tsur",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30226v1",
+    "titre": "PoEM: Predicting RL Outcomes from Existing Policies",
+    "url": "https://arxiv.org/abs/2609.30226v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Kimia Hamidieh, Giannis Daras, Antonio Torralba",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30185v1",
+    "titre": "Intrinsic-Extrinsic Coupling in Learning Dynamics",
+    "url": "https://arxiv.org/abs/2609.30185v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Qinyou Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30184v1",
+    "titre": "ARGUS: Role-Aware Event Knowledge Graphs for U.S. Employment-Discrimination Complaints",
+    "url": "https://arxiv.org/abs/2609.30184v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Sriram Kannan, Swetha Saseendran, Vishnu Vardhan Reddy Kandi, Leslie Barrett, Madhavan Seshadri, Enrico Santus",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30150v1",
+    "titre": "Graph-Based Inference and Topology-Aware Multi-Agent Reinforcement Learning for Large-Scale Railway Network Management",
+    "url": "https://arxiv.org/abs/2609.30150v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Giacomo Arcieri, Gregory Duthé, Christophe Muller, Konstantinos G. Papakonstantinou, Daniel Straub, Eleni Chatzi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30105v1",
+    "titre": "On the SoS Certifiability of Log-Concave Distributions",
+    "url": "https://arxiv.org/abs/2609.30105v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Aleksandr Storozhenko",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30100v1",
+    "titre": "R-DEIM Net: An Efficient Rationale-Augmented Dual-Expert Interaction Model for Paraphrase Detection",
+    "url": "https://arxiv.org/abs/2609.30100v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "llm",
+      "prevision",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": " Pushp, Vaibhav Prajapati, Himangshu Sarma",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30087v1",
+    "titre": "Return or Revise? Learning When Revision Helps Retrieval-Augmented QA",
+    "url": "https://arxiv.org/abs/2609.30087v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Nicholas Kashani Motlagh, Tim Anderson, Jeremy Gwinnup, Grant Erdmann",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30009v1",
+    "titre": "Automated Regulatory Compliance Question Answering in Financial Services with Domain-Adapted Retrieval-Augmented Generation",
+    "url": "https://arxiv.org/abs/2609.30009v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "llm"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Tobias Deußer, Abhishek Pillai, Aurelio F. Bariviera, Dhananjay Bhardwaj, Lorenz Sparrenberg, David Berghaus, Christian Bauckhage, Rafet Sifa",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.29999v1",
+    "titre": "GHOST-Q: Towards Studying Grounding Hallucinations Overlooked Under Same-score TradeOffs in Quantized VLMS",
+    "url": "https://arxiv.org/abs/2609.29999v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Saim Rehman, Muhammad Shafique",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.29974v1",
+    "titre": "Diverse Geometries, Frozen Weights: Robust Heterogeneous Treatment-Effect Estimation via Causal Expert Ensembles",
+    "url": "https://arxiv.org/abs/2609.29974v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "travail-emploi"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Ali Haghpanah Jahromi, Mohammad Taheri",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.29952v1",
+    "titre": "Augur: A Synthetic Decision Lab for Rehearsing Reactions to Product and Policy Changes",
+    "url": "https://arxiv.org/abs/2609.29952v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Rahul Khedar, Mayank Malhotra, Avinash Karn",
+    "signal": false
+  },
+  {
     "id": "arxiv-2609.27732v1",
     "titre": "Do Drug Consumption Rooms Reduce Drug-Related Hospitalizations? Evidence from Switzerland",
     "url": "https://arxiv.org/abs/2609.27732v1",
@@ -326,6 +675,108 @@
     "nb_eco": 1,
     "nb_ia": 1,
     "auteurs": "Jayakrishnan K. Vasudevan, Jonathan Hoss, Noah Klarmann",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28841v1",
+    "titre": "Reduced-Rank Autoregressive Models for Matrix Time Series",
+    "url": "https://arxiv.org/abs/2609.28841v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "outils-recherche",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Han Xiao, Yuefeng Han, Rong Chen, Ama Ampadu-Kissi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28681v1",
+    "titre": "Improving Today, Narrowing Tomorrow: Collective Learning, Diversity, and Generativity",
+    "url": "https://arxiv.org/abs/2609.28681v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "llm"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Esteve Almirall, Chris Tucci",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28678v1",
+    "titre": "Heterogeneous Policy Effects in Comparative Case Studies with Treated-Unit Microdata",
+    "url": "https://arxiv.org/abs/2609.28678v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Carl Bonander",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28675v1",
+    "titre": "From Individual to Social Imitation: How Communities Expand Organizational Search",
+    "url": "https://arxiv.org/abs/2609.28675v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "travail-emploi"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Esteve Almirall, Christopher Tucci",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.27727v2",
+    "titre": "Sovereign Grassroots Currencies: A CBDC Architecture for Credit and Monetary Policy (Full Version)",
+    "url": "https://arxiv.org/abs/2609.27727v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Ehud Shapiro",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.28549v1",
+    "titre": "Do Female Directors Raise ESG Ratings? A Meta-Analysis",
+    "url": "https://arxiv.org/abs/2609.28549v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-23",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Karolina Hozova, Tomas Havranek, Zuzana Irsova",
     "signal": false
   },
   {

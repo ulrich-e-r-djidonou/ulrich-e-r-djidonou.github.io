@@ -6,6 +6,13 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Learning and interpreting policies for simultaneous entanglement requests in quantum networks</title>
+      <link>https://arxiv.org/abs/2609.30157v1</link>
+      <guid isPermaLink="false">arxiv-2609.30157v1</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Cette étude recourt à l'apprentissage par renforcement profond pour élaborer des politiques d'allocation de l'intrication quantique capables de gérer des demandes simultanées dans un réseau. Les politiques obtenues maintiennent un taux de réussite de 100 % avec une probabilité d'activation des liaisons jusqu'à 71 % inférieure à celle des heuristiques de référence, et conservent au moins 80 % de succès sous contraintes matérielles pour une probabilité jusqu'à 59 % plus faible.</description>
+    </item>
+    <item>
       <title>Shopping by algorithm: How agentic AI deploys human heuristics as a surrogate consumer</title>
       <link>https://arxiv.org/abs/2609.28372v1</link>
       <guid isPermaLink="false">arxiv-2609.28372v1</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35677-fromrss</guid>
       <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
       <description>À partir d'une enquête nationale représentative reliant l'usage de l'IA générative à des professions et des tâches détaillées, cette étude établit les premiers indices d'adoption au niveau des tâches pour analyser son impact sur le marché du travail. Elle révèle que l'adoption actuelle est répandue mais superficielle, moins de la moitié des travailleurs l'utilisant au sein de la plupart des tâches, ce qui traduit une forte variabilité entre individus effectuant un travail similaire.</description>
-    </item>
-    <item>
-      <title>Canaries in the Gold Mine: Early Productivity Gains from Artificial Intelligence Creating Organization Capital</title>
-      <link>https://www.nber.org/papers/w35684#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35684-fromrss</guid>
-      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Une mesure des investissements en intelligence artificielle fondée sur l'emploi qualifié montre que l'IA est associée à une croissance de la productivité des entreprises ces dernières années, alors que ce n'était pas le cas lors de la décennie précédente. Ces gains de productivité s'expliquent par l'accumulation d'un capital organisationnel, constitué de connaissances durables et propres à l'entreprise acquises par l'apprentissage par la pratique au sein des emplois spécialisés en IA.</description>
     </item>
   </channel>
 </rss>
