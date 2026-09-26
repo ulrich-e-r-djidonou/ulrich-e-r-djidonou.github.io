@@ -1,6 +1,6 @@
 # Ulrich Djidonou
 
-> Économiste basé à Québec, Canada. Économétrie, évaluation de
+> Économiste basé au Québec, Canada. Économétrie, évaluation de
 > politiques publiques, machine learning et intelligence artificielle
 > appliquée à des questions économiques. Ancien passages : CGAP, Ministère
 > des Finances du Québec, ENAP.

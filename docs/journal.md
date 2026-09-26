@@ -351,3 +351,38 @@ sur `entrees[0]`, donc aurait présenté le dernier article collecté comme
 `rendreSignal` lisait l'état du jeu affiché, archives comprises: le message du
 plancher se serait affiché en consultant une archive, qui par construction n'a
 jamais de signal.
+
+## 26 septembre 2026 : poste au Commissaire, avertissement et retrait de la ville
+
+Trois changements seulement, sur une base revenue à HEAD. La proposition
+locale du 12 septembre (refonte de l'accueil, notes de démarche, étiquettes
+de projets) a été retirée du répertoire de travail à la demande d'Ulrich et
+conservée dans `stash@{0}`, récupérable par `git stash apply`.
+
+Le parcours ouvre sur le poste de conseiller en analyse stratégique et en
+transformation sociale au Commissaire au bien-être et aux droits des enfants,
+d'août 2026 à ce jour. La ligne de contexte précise le rôle d'économiste au
+sein d'une équipe multidisciplinaire : c'est l'expertise qui distingue dans
+l'équipe, pas l'intitulé du poste. Les trois contributions reprennent le texte
+fourni par Ulrich. `en/career.html` suit la même structure.
+
+Un avertissement éditorial apparaît au pied des dix-sept pages, en français
+sur les pages françaises et en anglais sous `/en/` : les opinions exprimées
+n'engagent aucune organisation d'affiliation. Le pied de page passe en colonne
+pour l'accueillir sous les pastilles sociales.
+
+Les métadonnées ne nomment plus la ville de Québec. Dix mentions corrigées
+dans `index.html`, `en/index.html`, `en/contact.html` et `llms.txt` :
+« à Québec » devient « au Québec », « in Quebec City » devient
+« in Québec, Canada ». La province, jamais la ville.
+
+Validation : 61 tests ciblés réussis, HTML des 19 pages valide, CSP des 17
+pages et hreflang des 7 paires valides. Contrastes mesurés au navigateur :
+avertissement à 5,12:1 en clair et 7,79:1 en sombre, ligne de poste à 8,85:1,
+ligne de contexte à 7,79:1. Aucun débordement horizontal à 320 pixels. Le
+détecteur Impeccable (version locale 4.1.3, la plus récente publiée sur npm
+est 4.1.0) ne relève que des constats préexistants : kickers de section,
+liseré de carte, bordure fine avec ombre large, tous documentés comme choix
+assumés dans DESIGN.md. Aucun constat nouveau issu de ces trois changements.
+Aucun commit : la branche feat/signature-economiste attend la validation
+d'Ulrich.
