@@ -103,7 +103,7 @@ Le système est theme-aware (clair et sombre via `prefers-color-scheme`), avec u
 Palette de carnet : neutres papier et encre, un teal institutionnel dominant, vert et ambre en appuis rares.
 
 ### Primary
-- **Teal frontière** (#0b5c5a): accent principal; boutons primaires, liens de carte, pastilles de timeline, kickers. En sombre il s'éclaircit (#4fc7bd).
+- **Teal frontière** (#0b5c5a): accent principal; boutons primaires, liens de carte, pastilles de timeline, kickers de La Frontière. En sombre il s'éclaircit (#4fc7bd).
 - **Teal profond** (#073f3d): titres (`--heading` en clair) et fond du bloc Méthode. Reste fixe entre thèmes quand il sert de fond.
 
 ### Secondary
@@ -140,7 +140,7 @@ Palette de carnet : neutres papier et encre, un teal institutionnel dominant, ve
 - **Headline** (2.35rem / 1.12, `--fs-h2`): titres de section.
 - **Title** (1.45rem, `--fs-title`): titres de carte projet; 1.35rem pour les entrées de parcours.
 - **Body** (1.16rem / 1.55, `--fs-base`): texte courant, gris terrain, largeurs max 55-62ch. Chapeau (lead) : 1.28rem.
-- **Label** (0.8rem, 700, 0.08em, uppercase, `--fs-2xs`): kickers et étiquettes; navigation à 0.88rem sans uppercase.
+- **Label** (0.8rem, 700, 0.08em, uppercase, `--fs-2xs`): étiquettes et kickers de La Frontière; navigation à 0.88rem sans uppercase.
 
 ### Named Rules
 **La règle des steps.** Quinze tailles littérales ont été regroupées en steps nommés; ne jamais réintroduire une taille littérale dans une règle.
@@ -187,11 +187,17 @@ Coins discrets : 4px (boutons, encadrés), 6px (cartes), 14px (portrait), 999px 
 - **Variante large** (`.distinction-figure--wide`): photo paysage en pleine largeur (560px max), légende empilée dessous en colonne. Le premier segment (`__title`) reprend le titre de la source en encre pleine, les segments suivants restent en gris terrain, la ligne source (`__source`) est en italique et porte le lien externe.
 - **Règle de citation:** titre, description et légende sont repris mot pour mot de la source institutionnelle; la photo est hébergée localement pour survivre au retrait de la page d'origine.
 
+### Notes de démarche
+- **Page projets** (`#demarches`, `#approaches` en anglais) : une colonne de 65ch, un filet 1px entre les notes, titre au step `--fs-title`, nom du projet en Trebuchet teal.
+- **Structure** : liste de définitions Question, Démarche, Limites de lecture ; `dt` en encre de titre 700, `dd` en gris terrain.
+- **Lien d'action** : même voix que les liens de carte (Trebuchet 700, teal, `--fs-sm`).
+- **Depuis l'accueil** : chaque carte ajoute sous son lien principal un lien secondaire vers sa note (`.project-note-link`, `--fs-xs`, graisse 400, gris terrain ; `--soft-muted` dans les cartes vedettes, qui ne s'inversent pas).
+
 ### Navigation
 - **Style:** Trebuchet 0.88rem, gris terrain; page active en heading 700 avec soulignement liseré 2px. Header sticky, fond translucide flouté, filet bas 1px.
 
 ### Le liseré (signature)
-Filet dégradé teal-vert-ambre décliné en : signature-line du hero (4.5rem x 3px), tiret des kickers (1.6rem x 3px), soulignement de nav active, border-image du portrait et du pied de page, top de carte au survol.
+Filet dégradé teal-vert-ambre décliné en : signature-line du hero (4.5rem x 3px), tiret des kickers de La Frontière (1.6rem x 3px), soulignement de nav active, border-image du portrait et du pied de page, top de carte au survol.
 
 ## Do's and Don'ts
 
@@ -202,6 +208,7 @@ Filet dégradé teal-vert-ambre décliné en : signature-line du hero (4.5rem x 
 - **Do** garder le focus ambre 3px sur tout élément interactif ajouté.
 
 ### Don't:
+- **Don't** poser de petite étiquette majuscule (kicker) au-dessus d'un titre : le titre porte son propre poids, et si l'étiquette dit quelque chose, cela passe dans le titre ou le texte. Seule exception : La Frontière, où le pipeline remplit certains titres par JavaScript et où le kicker reste le seul libellé statique.
 - **Don't** introduire de bordure latérale épaisse comme accent (l'ancienne timeline 3px a été retirée exprès).
 - **Don't** utiliser le dégradé en fond de bloc ou en texte (`background-clip: text` interdit).
 - **Don't** ajouter d'autre famille de police ni de taille littérale hors échelle.

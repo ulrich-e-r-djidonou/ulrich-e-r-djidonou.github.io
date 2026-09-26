@@ -49,7 +49,6 @@
 
     <main id="top">
       <section class="page-hero" aria-labelledby="page-title">
-        <div class="section-kicker">Projets publics</div>
         <h1 id="page-title">Projets publics en économie quantitative</h1>
         <p class="lead">
           Tableaux de bord, économétrie appliquée, IA et veille automatisée. Chaque
@@ -178,6 +177,41 @@
           </article>
         </div>
         <p class="filtre-vide" id="grille-projets-vide" hidden>Aucun projet pour cette combinaison de filtres.</p>
+      </section>
+
+      <section id="demarches" class="positioning project-notes" aria-labelledby="notes-title">
+        <h2 id="notes-title">Notes de démarche</h2>
+        <p>Par Ulrich Djidonou. La question de départ, la démarche et les limites de trois projets publics.</p>
+        <article id="demarche-icie" class="project-note" aria-labelledby="note-icie-title">
+          <h3 id="note-icie-title">Mesurer l'incertitude économique</h3>
+          <p class="note-project">ICIE</p>
+          <dl>
+            <dt>Question</dt><dd>Que peut-on apprendre des recherches en ligne sur l'incertitude économique au Canada ?</dd>
+            <dt>Démarche</dt><dd>Je présente un indice fondé sur Google Trends, ses tests de sensibilité et sa validation externe dans un tableau de bord public.</dd>
+            <dt>Limites de lecture</dt><dd>L'indice mesure un signal issu des recherches en ligne. Il ne mesure pas directement toute l'incertitude vécue par les ménages et les entreprises, et ne suffit pas à établir une relation causale.</dd>
+          </dl>
+          <a href="https://ulrich-e-r-djidonou.github.io/icie-dashboard/">Consulter les résultats et la méthode</a>
+        </article>
+        <article id="demarche-frontiere" class="project-note" aria-labelledby="note-frontiere-title">
+          <h3 id="note-frontiere-title">Automatiser la veille, garder le jugement</h3>
+          <p class="note-project">La Frontière</p>
+          <dl>
+            <dt>Question</dt><dd>Comment repérer les travaux qui relient économie, intelligence artificielle et machine learning ?</dd>
+            <dt>Démarche</dt><dd>La veille associe collecte Python, sélection thématique, résumés générés par IA et contrôles automatiques. Les liens vers les textes d'origine permettent de revenir à la source.</dd>
+            <dt>Limites de lecture</dt><dd>La sélection et les résumés sont automatisés ; ils peuvent manquer un article ou en simplifier le propos. Ils servent au repérage, puis la lecture du texte source permet d'évaluer la méthode et les résultats.</dd>
+          </dl>
+          <a href="/frontiere/">Lire la veille et sa méthode</a>
+        </article>
+        <article id="demarche-geoecon" class="project-note" aria-labelledby="note-geoecon-title">
+          <h3 id="note-geoecon-title">Relier les nouvelles aux données</h3>
+          <p class="note-project">GeoEcon Pulse</p>
+          <dl>
+            <dt>Question</dt><dd>Comment suivre les évolutions géoéconomiques de plusieurs régions dans un même outil ?</dd>
+            <dt>Démarche</dt><dd>Le tableau de bord rassemble indicateurs et actualités pour le Canada, les États-Unis, la Chine, l'Inde et le monde. Il permet de passer de la vue d'ensemble aux sources.</dd>
+            <dt>Limites de lecture</dt><dd>Une actualisation du tableau de bord ne signifie pas que tous les indicateurs portent sur la même période. La juxtaposition de nouvelles et d'indicateurs ne démontre pas un lien de causalité.</dd>
+          </dl>
+          <a href="https://djidonou.com/geoecon-pulse/">Explorer les données et les sources</a>
+        </article>
       </section>
 
       <section class="secondary-projects" aria-labelledby="secondary-title">

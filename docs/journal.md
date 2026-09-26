@@ -386,3 +386,36 @@ liseré de carte, bordure fine avec ombre large, tous documentés comme choix
 assumés dans DESIGN.md. Aucun constat nouveau issu de ces trois changements.
 Aucun commit : la branche feat/signature-economiste attend la validation
 d'Ulrich.
+
+## 26 septembre 2026 : reprise partielle de la proposition du 12 septembre
+
+Trois éléments de la proposition du 12 septembre (conservée dans `stash@{0}`)
+sont repris ; le reste attend la validation d'Ulrich.
+
+Les kickers au-dessus des titres sont retirés de quinze pages (31 au total).
+Deux portaient une information que leur titre ne disait pas : « Erreur 404 »
+passe en tête du chapeau de la page 404, et « Expérience professionnelle »
+devient le début du titre de section du parcours. La Frontière garde ses
+kickers : certains titres y sont remplis par JavaScript et `publish.py` gère
+ces blocs, le kicker y est donc le seul libellé statique.
+
+Les notes de démarche (question, démarche, limites de lecture) de ICIE, La
+Frontière et GeoEcon Pulse arrivent sur la page projets, en français et en
+anglais, reprises mot pour mot de la proposition. Chaque carte de l'accueil
+y renvoie par un lien secondaire, sous son lien principal. Les descriptions
+factuelles des cartes sont conservées, contrairement à la proposition qui les
+remplaçait par des questions.
+
+Le titre de la section projets de l'accueil devient « Travaux sélectionnés »
+(« Selected work » en anglais).
+
+Corrections après contrôle visuel : espaces insécables avant ? ; : dans les
+notes françaises (un point d'interrogation tombait seul en fin de ligne), liens
+des notes alignés sur les liens de carte, lien secondaire des cartes atténué
+pour ne pas concurrencer l'action principale.
+
+Validation : 61 tests ciblés réussis, HTML 19 pages, CSP 17 pages, hreflang
+7 paires, ancres des six liens vérifiées. Contrastes : lien secondaire
+6,54:1 dans les deux thèmes, notes 7,94:1 et 6,99:1 en sombre. Aucun
+débordement à 390 pixels. Le détecteur Impeccable ne signale plus aucun kicker
+hors La Frontière.

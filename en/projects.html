@@ -49,7 +49,6 @@
 
     <main id="top">
       <section class="page-hero" aria-labelledby="page-title">
-        <div class="section-kicker">Public projects</div>
         <h1 id="page-title">Public projects in quantitative economics</h1>
         <p class="lead">
           Dashboards, applied econometrics, AI, and automated monitoring. Each
@@ -175,6 +174,41 @@
           </article>
         </div>
         <p class="filtre-vide" id="grille-projets-vide" hidden>No projects match this combination of filters.</p>
+      </section>
+
+      <section id="approaches" class="positioning project-notes" aria-labelledby="notes-title">
+        <h2 id="notes-title">Method notes</h2>
+        <p>By Ulrich Djidonou. The question, approach, and limitations behind three public projects.</p>
+        <article id="approach-icie" class="project-note" aria-labelledby="note-icie-title">
+          <h3 id="note-icie-title">Measuring economic uncertainty</h3>
+          <p class="note-project">ICIE</p>
+          <dl>
+            <dt>Question</dt><dd>What can online searches tell us about economic uncertainty in Canada?</dd>
+            <dt>Approach</dt><dd>I present an index based on Google Trends, its sensitivity tests and external validation in a public dashboard.</dd>
+            <dt>Interpretation limits</dt><dd>The index measures a signal from online searches. It does not directly measure all the uncertainty experienced by households and firms, nor does it establish a causal relationship.</dd>
+          </dl>
+          <a href="https://ulrich-e-r-djidonou.github.io/icie-dashboard/">Explore the results and methodology (French)</a>
+        </article>
+        <article id="approach-frontiere" class="project-note" aria-labelledby="note-frontiere-title">
+          <h3 id="note-frontiere-title">Automating monitoring, retaining judgment</h3>
+          <p class="note-project">La Frontière</p>
+          <dl>
+            <dt>Question</dt><dd>How can we identify research connecting economics, artificial intelligence, and machine learning?</dd>
+            <dt>Approach</dt><dd>The monitoring workflow combines Python collection, thematic selection, AI-generated summaries, and automated checks. Links to original texts let readers return to the source.</dd>
+            <dt>Interpretation limits</dt><dd>Selection and summaries are automated; they may miss a paper or simplify its argument. They help identify relevant work; reading the source is necessary to assess its methods and findings.</dd>
+          </dl>
+          <a href="/en/frontier/">Read the feed and its methodology</a>
+        </article>
+        <article id="approach-geoecon" class="project-note" aria-labelledby="note-geoecon-title">
+          <h3 id="note-geoecon-title">Connecting news and data</h3>
+          <p class="note-project">GeoEcon Pulse</p>
+          <dl>
+            <dt>Question</dt><dd>How can we follow geoeconomic developments across several regions in one tool?</dd>
+            <dt>Approach</dt><dd>The dashboard brings together indicators and news for Canada, the United States, China, India, and the world. Readers can move from the overview to the sources.</dd>
+            <dt>Interpretation limits</dt><dd>An updated dashboard does not mean all indicators cover the same period. Placing news alongside indicators does not establish a causal link.</dd>
+          </dl>
+          <a href="https://djidonou.com/geoecon-pulse/">Explore the data and sources</a>
+        </article>
       </section>
 
       <section class="secondary-projects" aria-labelledby="secondary-title">
