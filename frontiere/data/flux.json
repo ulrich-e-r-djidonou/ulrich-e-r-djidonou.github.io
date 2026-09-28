@@ -1,5 +1,28 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35782-fromrss",
+    "titre": "An LLM Workflow That Reproduces, Improves, and Extends Published Economics Research",
+    "url": "https://www.nber.org/papers/w35782#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-09-28",
+    "resume_fr": "Ce travail présente un flux de travail en accès libre utilisant un modèle de langage pour reproduire, améliorer et étendre des publications en économie, révélant des divergences dans 3 460 articles sur 4 452 dossiers de réplication examinés. L'outil parvient également à diviser le temps de calcul par plus de 10 pour 496 articles et propose des extensions méthodologiques pertinentes pour 923 d'entre eux.",
+    "angle_eco": "L'utilisation d'un flux de travail open source basé sur les grands modèles de langage permet d'automatiser la reproduction des calculs d'articles d'économie, d'en accélérer l'exécution algorithmique et de formuler des extensions scientifiques inédites à partir de leurs packages de réplication.",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 6,
+    "nb_eco": 3,
+    "nb_ia": 2,
+    "auteurs": "Matthew Schwartz, Isaiah Andrews, Jesse M. Shapiro",
+    "signal": true,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The authors introduce an open-source workflow that uses large language models to reproduce, improve, and extend economics research by processing published replication packages, finding discrepancies in 3,460 of 4,452 articles across five economics journals and performing automated sensitivity analysis. The workflow also improves computational efficiency in 496 articles by reducing calculation time by more than a factor of 10 while maintaining accuracy, and develops novel extensions aligned with original research goals in 923 articles.",
+    "angle_eco_en": "Large language models can identify computational discrepancies, inefficiencies, and unexplored analytical extensions in published economics research by systematically processing replication packages.",
+    "deja_signal": true
+  },
+  {
     "id": "arxiv-2609.30157v1",
     "titre": "Learning and interpreting policies for simultaneous entanglement requests in quantum networks",
     "url": "https://arxiv.org/abs/2609.30157v1",
@@ -2080,24 +2103,5 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "A machine-learning framework using regression trees partitions the option surface along both moneyness and maturity dimensions to identify data-driven regions where distinct forecasting models perform best. Empirical analysis of S&P 500 options shows that this boosted tree-based specification reduces one-month-ahead root mean squared error by 13 percent compared to a benchmark model, with improvements being particularly pronounced during stress periods.",
     "angle_eco_en": "Incorporating data-driven heterogeneity into implied volatility forecasting models significantly improves out-of-sample pricing accuracy and uncovers distinct persistence dynamics across option moneyness and maturity dimensions."
-  },
-  {
-    "id": "voxeu-lumns-chatgpts-financial-advice-supply-demand-and-life-cycle",
-    "titre": "ChatGPT's financial advice: Supply, demand, and the life cycle",
-    "url": "https://cepr.org/voxeu/columns/chatgpts-financial-advice-supply-demand-and-life-cycle",
-    "source": "VoxEU / CEPR",
-    "type": "article",
-    "date_publication": "2026-06-29",
-    "resume_fr": "Suivre les conseils financiers générés par de grands modèles de langage rapprocherait les ménages des prescriptions de la théorie du cycle de vie, avec une participation accrue aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus importantes. Les recommandations varient selon le genre, les deux tiers de cet écart provenant de la façon dont hommes et femmes formulent leurs requêtes, l'autre tiers provenant de l'étiquette de genre associée à des requêtes par ailleurs identiques.",
-    "angle_eco": "La part de l'écart de recommandation attribuable à la manière dont hommes et femmes formulent leurs demandes, plutôt qu'à l'étiquette de genre associée à une requête identique, éclaire une source additionnelle de biais dans les conseils financiers générés par l'intelligence artificielle.",
-    "themes": [
-      "llm"
-    ],
-    "score": 6,
-    "auteurs": "",
-    "signal": false,
-    "llm": "claude (repassage manuel du 5 aout, colonne hors fenetre de collecte et cepr.org bloquant l'acces automatise ; source : extrait original archive + resume du papier sous-jacent via arxiv.org/abs/2608.01607, Choukhmane/de Silva/Lin/Akuzawa)",
-    "resume_en": "The authors develop a method to evaluate financial advice from large language models by surveying adults about their spending and investing questions, then simulating lifetime financial outcomes under realistic market conditions. Applying this method to GPT-5.2 and Gemini 3 Flash, they find that following LLM advice would move most respondents closer to life cycle theory predictions, that academic prompts produce advice even more aligned with theory, and that advice varies systematically by individual characteristics such as gender and financial literacy, creating retirement wealth differences of 4-5% between groups.",
-    "angle_eco_en": "The financial guidance generated by large language models depends jointly on the characteristics of individuals seeking advice and the model's own responses, creating variation in lifetime wealth outcomes that reflects both heterogeneous demand for guidance and heterogeneous supply of recommendations across demographic groups."
   }
 ]

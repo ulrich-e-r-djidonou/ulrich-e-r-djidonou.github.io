@@ -1,5 +1,373 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35796-fromrss",
+    "titre": "The Early Impacts of AI on Employment among Recent College Graduates",
+    "url": "https://www.nber.org/papers/w35796#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-09-28",
+    "themes": [
+      "inference-causale",
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Robert W. Fairlie, Jane Wu",
+    "signal": false
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35828-fromrss",
+    "titre": "Liability and Pricing of Dual-Use AI",
+    "url": "https://www.nber.org/papers/w35828#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-09-28",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Joshua S. Gans",
+    "signal": false
+  },
+  {
+    "id": "voxeu-g-frontier-ai-models-cyber-defence-and-eu-strategic-autonomy",
+    "titre": "The cost of not innovating: Frontier AI models, cyber defence, and EU strategic autonomy",
+    "url": "https://cepr.org/voxeu/columns/cost-not-innovating-frontier-ai-models-cyber-defence-and-eu-strategic-autonomy",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-09-27",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Eric Törnqvist, Jerzy Kopiński",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31561v1",
+    "titre": "Orthogonal Moments in Likelihood Models",
+    "url": "https://arxiv.org/abs/2609.31561v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Stéphane Bonhomme, Koen Jochmans, Martin Weidner",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31512v1",
+    "titre": "Tolerable Inflation, Intolerable Uncertainty",
+    "url": "https://arxiv.org/abs/2609.31512v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "prevision",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Eric Vansteenberghe",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31468v1",
+    "titre": "PriceBench: A Diagnostic Benchmark for Price, Quality, and Brand Preferences in LLM Booking Agents",
+    "url": "https://arxiv.org/abs/2609.31468v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "llm"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Pavel Kireyev",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31442v1",
+    "titre": "Improved Bootstrap Inference for Dynamic Panel Data models with Interactive Effects",
+    "url": "https://arxiv.org/abs/2609.31442v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Arturas Juodis, Ovidijus Stauskas, Sander Tromp",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31236v1",
+    "titre": "Catch-Up and Come Home: Economic Convergence and Return Migration",
+    "url": "https://arxiv.org/abs/2609.31236v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Kinga Varga, Bence Kollányi, Johannes Wachs",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31603v1",
+    "titre": "User Model Extraction via Belief Self-Distillation",
+    "url": "https://arxiv.org/abs/2609.31603v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Ali Holmov, Yiran Huang, Kirill Bykov, Zeynep Akata",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31589v1",
+    "titre": "Common-Mode Collapse and Recovery in Direct Feedback Alignment",
+    "url": "https://arxiv.org/abs/2609.31589v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Varun Reddy, Bernardo L. Sabatini, Houman Safaai",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31547v1",
+    "titre": "Two Conformal Constructions for Adaptive Within-Document AI-Text Screening",
+    "url": "https://arxiv.org/abs/2609.31547v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Marco Mandap, Jerahmeel Hipolito, Arcel Galvez, Charlie Margaret Balagtas, Michael Joshua Buluran, Jeff Roel Durmiendo, Rizzette E. Lopez",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31546v1",
+    "titre": "BeatGraph: Self-Supervised Heartbeat Graphs for Infant ECG Representations from the Home Environment",
+    "url": "https://arxiv.org/abs/2609.31546v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "inference-causale",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Mohammad Nur Hossain Khan, M. S. Krafczyk, Beverly G. Bolster, Nancy McElwain, Mark A. Hasegawa-Johnson, Bashima Islam",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31539v1",
+    "titre": "NEXT: Physics-Informed Neuro-Spectral Exponential Time Differencing Architectures",
+    "url": "https://arxiv.org/abs/2609.31539v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Márcio Marques, Leonardo Mendonça, Leonardo M. Moreira, Christian Júnior de Oliveira, Vitor Balestro, Tiago Novello, Daniel Yukimura, Pavel Petrov, Lucas Nissenbaum",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31518v1",
+    "titre": "Retrainable physics-integrated neural differentiable modeling of sintering across material systems",
+    "url": "https://arxiv.org/abs/2609.31518v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Zeping Chen, Ani Aprahamian, Khachatur V. Manukyan, Tengfei Luo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31511v1",
+    "titre": "Muslim: A Deployed Arabic Voice AI Platform for Grounded Islamic Knowledge",
+    "url": "https://arxiv.org/abs/2609.31511v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Yahya Mohamed Elnawasany",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31498v1",
+    "titre": "Retail Product Search: A Practical Approach at Target",
+    "url": "https://arxiv.org/abs/2609.31498v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Darshan Sonagara, Qujiaheng Zhang, Ankit Singh, Alex Li",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31397v1",
+    "titre": "Intent2Tc: Automated Intent-to-Traffic Control Translation with Language Models",
+    "url": "https://arxiv.org/abs/2609.31397v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Andrea Masini, Sudipta Acharya, Paolo Bellavista, Luca Foschini, Burak Kantarci",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31383v1",
+    "titre": "Guiding End-to-End Driving Models with Endpoint-Constrained Trajectory Optimization",
+    "url": "https://arxiv.org/abs/2609.31383v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "inference-causale",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Brayden Zhang, Mahsa Golchoubian, Igor Gilitschenski, Boris Ivanovic, Kashyap Chitta",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31342v1",
+    "titre": "Stale-Document Poisoning: When Outdated Retrieval Overrides Correct Model Answers",
+    "url": "https://arxiv.org/abs/2609.31342v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Md Shamim Ahmed, Lukas Galke Poech, Richard Röttger",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31341v1",
+    "titre": "The Right Information Extraction Pipeline Depends on the Document: Accuracy-Energy Trade-offs for Small, Local Models",
+    "url": "https://arxiv.org/abs/2609.31341v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Christoph Walser, Mauricio Fadel Argerich, Jonathan Fürst",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31329v1",
+    "titre": "Bridging Body and Brain: Gene-Driven Morphology--Control Co-Design",
+    "url": "https://arxiv.org/abs/2609.31329v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Fu Feng, Ruixiao Shi, Yucheng Xie, Jing Wang, Xin Geng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.31315v1",
+    "titre": "LUCID: Learning Under Confounding for Inference and Discovery in Time Series",
+    "url": "https://arxiv.org/abs/2609.31315v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-09-25",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Mohammad Fesanghary",
+    "signal": false
+  },
+  {
     "id": "arxiv-2609.30007v1",
     "titre": "First as Tragedy? Second as What? Estimating Dynamic Effects of Recurrent Events",
     "url": "https://arxiv.org/abs/2609.30007v1",
@@ -346,6 +714,73 @@
     "nb_eco": 2,
     "nb_ia": 0,
     "auteurs": "Rahul Khedar, Mayank Malhotra, Avinash Karn",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30617v1",
+    "titre": "Risk-Averse Welfare Maximization via Marginal Treatment Effects",
+    "url": "https://arxiv.org/abs/2609.30617v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Jarrod Burgh, Emerson Melo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30528v1",
+    "titre": "When Do Surrogate Metrics Work? A Finite-Sample Comparison Under Realistic Failure Modes",
+    "url": "https://arxiv.org/abs/2609.30528v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Zihao Chen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30504v1",
+    "titre": "A Characterization of the $M$-tests Under Nearly Integrated Nearly White Noise",
+    "url": "https://arxiv.org/abs/2609.30504v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Aidan Wardak, Sayar Karmakar",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.30481v1",
+    "titre": "Do Third-Party Web Traffic Estimates Preserve Causal Variation?",
+    "url": "https://arxiv.org/abs/2609.30481v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-24",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Mehrzad Khosravi, Hema Yoganarasimhan",
     "signal": false
   },
   {

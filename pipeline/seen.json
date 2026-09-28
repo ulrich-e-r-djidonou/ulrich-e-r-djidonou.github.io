@@ -4150,5 +4150,113 @@
   "fmi-10-5089-9798229061599-001": {
     "score": 4,
     "traite": true
+  },
+  "arxiv-2609.31561v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.31512v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.31468v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2609.31442v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.31236v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.30617v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.30528v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.30504v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.30481v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.31603v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2609.31589v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.31547v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2609.31546v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2609.31539v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2609.31518v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2609.31511v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2609.31498v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.31397v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2609.31383v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.31342v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.31341v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.31329v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2609.31315v1": {
+    "score": 1,
+    "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35782-fromrss": {
+    "score": 6,
+    "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35796-fromrss": {
+    "score": 0,
+    "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35828-fromrss": {
+    "score": 0,
+    "traite": true
+  },
+  "voxeu-g-frontier-ai-models-cyber-defence-and-eu-strategic-autonomy": {
+    "score": 0,
+    "traite": true
   }
 }

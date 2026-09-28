@@ -6,6 +6,13 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>An LLM Workflow That Reproduces, Improves, and Extends Published Economics Research</title>
+      <link>https://www.nber.org/papers/w35782#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35782-fromrss</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Ce travail présente un flux de travail en accès libre utilisant un modèle de langage pour reproduire, améliorer et étendre des publications en économie, révélant des divergences dans 3 460 articles sur 4 452 dossiers de réplication examinés. L'outil parvient également à diviser le temps de calcul par plus de 10 pour 496 articles et propose des extensions méthodologiques pertinentes pour 923 d'entre eux.</description>
+    </item>
+    <item>
       <title>Learning and interpreting policies for simultaneous entanglement requests in quantum networks</title>
       <link>https://arxiv.org/abs/2609.30157v1</link>
       <guid isPermaLink="false">arxiv-2609.30157v1</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35663-fromrss</guid>
       <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
       <description>Les auteurs présentent CentaurBench, un cadre d'évaluation mesurant la capacité des modèles de langage à automatiser des tâches professionnelles et à assister un agent de capacité inférieure sur sept travaux économiques réels. L'étude montre que la performance en automatisation constitue un indicateur incomplet de la qualité d'assistance, le modèle leader en automatisation étant dépassé en mode d'augmentation sur cinq des sept tâches.</description>
-    </item>
-    <item>
-      <title>What Work Does Generative AI Do?</title>
-      <link>https://www.nber.org/papers/w35677#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35677-fromrss</guid>
-      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
-      <description>À partir d'une enquête nationale représentative reliant l'usage de l'IA générative à des professions et des tâches détaillées, cette étude établit les premiers indices d'adoption au niveau des tâches pour analyser son impact sur le marché du travail. Elle révèle que l'adoption actuelle est répandue mais superficielle, moins de la moitié des travailleurs l'utilisant au sein de la plupart des tâches, ce qui traduit une forte variabilité entre individus effectuant un travail similaire.</description>
     </item>
   </channel>
 </rss>
