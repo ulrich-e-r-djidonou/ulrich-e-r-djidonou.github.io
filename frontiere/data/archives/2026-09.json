@@ -1,5 +1,22 @@
 [
   {
+    "id": "voxeu-ll-street-drifts-main-street-consumption-anchor-stock-prices",
+    "titre": "When Wall Street drifts from Main Street: Consumption as an anchor for stock prices",
+    "url": "https://cepr.org/voxeu/columns/when-wall-street-drifts-main-street-consumption-anchor-stock-prices",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-09-29",
+    "themes": [
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 4,
+    "nb_ia": 0,
+    "auteurs": "Carlo A. Favero, Alessandro Melone, Sean Myers, Andrea Tamoni",
+    "signal": false
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35796-fromrss",
     "titre": "The Early Impacts of AI on Employment among Recent College Graduates",
     "url": "https://www.nber.org/papers/w35796#fromrss",
@@ -29,6 +46,22 @@
     "nb_eco": 3,
     "nb_ia": 0,
     "auteurs": "Joshua S. Gans",
+    "signal": false
+  },
+  {
+    "id": "voxeu-cepr-org-voxeu-columns-better-work-not-always-better-workers",
+    "titre": "Better work, not always better workers",
+    "url": "https://cepr.org/voxeu/columns/better-work-not-always-better-workers",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-09-28",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "David Autor, Tanya Rodchenko, Josh Martin, Zanna Iscenko, Scott Strand, David Pearl, Melissa Ferere",
     "signal": false
   },
   {

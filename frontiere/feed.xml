@@ -6,6 +6,27 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>(How) Do We Teach Emotions?</title>
+      <link>https://www.nber.org/papers/w35789#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35789-fromrss</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs examinent le contenu émotionnel des manuels scolaires et de la littérature jeunesse à l'aide d'outils d'apprentissage automatique et d'intelligence artificielle générative, révélant un décalage marqué : les textes exposent les enfants à une large gamme d'émotions tandis que les images dépeignent de manière écrasante le bonheur et le calme, indépendamment des émotions décrites dans le texte de la même page. Les achats de ménages et les inventaires de bibliothèques suggèrent que ce contenu pourrait être façonné par la demande des consommateurs favorisant une imagerie de couverture « positive », ce qui implique que les forces du marché réduisent le paysage émotionnel auquel les enfants sont exposés.</description>
+    </item>
+    <item>
+      <title>The Macroeconomic Effect of AI: Sizing the Software Engineering Channel</title>
+      <link>https://www.nber.org/papers/w35793#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35793-fromrss</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs mesurent l'impact de l'intelligence artificielle sur l'économie à travers ses effets sur la productivité de l'ingénierie logicielle, en utilisant les informations des marchés financiers pour développer un indicateur prospectif disponible en temps réel. Entre novembre 2022 et décembre 2025, l'IA aurait augmenté la valeur présente attendue par le marché de la productivité de l'ingénierie logicielle de l'équivalent d'une augmentation permanente de 32,6%, ce qui correspondrait à un effet sur le PIB de 3,6% en scénario de base et de 6,5% si la productivité accrue de l'ingénierie logicielle stimule également la productivité de la recherche et développement.</description>
+    </item>
+    <item>
+      <title>Deep Learning as a Projection Method for Solving Economic Models</title>
+      <link>https://www.nber.org/papers/w35806#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35806-fromrss</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs montrent que les solveurs de réseaux de neurones présentés comme un nouveau paradigme en économie sont en réalité des méthodes de projection par moindres carrés avec une paramétrisation non linéaire adaptative, ce qui remet en question la dichotomie entre apprentissage profond et méthodes classiques. Ils proposent une approche unifiée où le choix entre diverses méthodes d'approximation, critères résiduels et designs d'évaluation dépend des caractéristiques du modèle, les méthodes linéaires et sur grilles creuses s'avérant souvent supérieures en dimensions faibles à modérées tandis qu'un choix approprié de l'espace de fonctions peut éviter la malédiction de la dimensionnalité en dimensions élevées.</description>
+    </item>
+    <item>
       <title>An LLM Workflow That Reproduces, Improves, and Extends Published Economics Research</title>
       <link>https://www.nber.org/papers/w35782#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35782-fromrss</guid>
@@ -193,27 +214,6 @@
       <guid isPermaLink="false">aea-10-1257-jel-64-3-1058-r4</guid>
       <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
       <description>Cet ouvrage de Joshua Gans examine l'impact économique de l'intelligence artificielle. L'auteur y propose des stratégies d'identification pour analyser les marchés où l'intelligence artificielle joue un rôle significatif, tout en offrant un guide pour les développements théoriques et les hypothèses empiriques.</description>
-    </item>
-    <item>
-      <title>Deep Learning for Solving Economic Models</title>
-      <link>https://doi.org/10.1257/jel.20261794</link>
-      <guid isPermaLink="false">aea-10-1257-jel-20261794</guid>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Les méthodes numériques traditionnelles appliquées aux modèles économiques dynamiques se heurtent à la malédiction de la dimensionnalité lorsque le nombre de variables d'état augmente. L'apprentissage profond offre une alternative flexible capable de traiter des problèmes en haute dimension en minimisant les résidus des conditions d'équilibre, une approche illustrée par l'application au modèle de croissance néoclassique.</description>
-    </item>
-    <item>
-      <title>Relative Development and the Intelligence Divide</title>
-      <link>https://doi.org/10.5089/9798229057349.001</link>
-      <guid isPermaLink="false">fmi-10-5089-9798229057349-001</guid>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Cette étude montre que le rattrapage économique dépend moins de l'accès aux technologies que de la capacité à convertir le savoir en productivité, le temps nécessaire pour sortir du niveau de plus faible productivité étant d'environ 65 ans pour les économies sous le seuil de capital humain, contre environ 25 ans pour celles situées au-dessus. Ainsi, l'intelligence artificielle renforcera les écarts existants si elle bénéficie principalement aux travailleurs qualifiés, mais elle favorisera la convergence si elle réduit les coûts d'apprentissage et d'adaptation des économies aux capacités plus faibles.</description>
-    </item>
-    <item>
-      <title>CentaurBench: Benchmarking LLM Capabilities on Augmenting vs. Automating Real-World Work Tasks</title>
-      <link>https://www.nber.org/papers/w35663#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35663-fromrss</guid>
-      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Les auteurs présentent CentaurBench, un cadre d'évaluation mesurant la capacité des modèles de langage à automatiser des tâches professionnelles et à assister un agent de capacité inférieure sur sept travaux économiques réels. L'étude montre que la performance en automatisation constitue un indicateur incomplet de la qualité d'assistance, le modèle leader en automatisation étant dépassé en mode d'augmentation sur cinq des sept tâches.</description>
     </item>
   </channel>
 </rss>

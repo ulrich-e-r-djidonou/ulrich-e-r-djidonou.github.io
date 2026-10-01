@@ -1,5 +1,72 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35789-fromrss",
+    "titre": "(How) Do We Teach Emotions?",
+    "url": "https://www.nber.org/papers/w35789#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "resume_fr": "Les auteurs examinent le contenu émotionnel des manuels scolaires et de la littérature jeunesse à l'aide d'outils d'apprentissage automatique et d'intelligence artificielle générative, révélant un décalage marqué : les textes exposent les enfants à une large gamme d'émotions tandis que les images dépeignent de manière écrasante le bonheur et le calme, indépendamment des émotions décrites dans le texte de la même page. Les achats de ménages et les inventaires de bibliothèques suggèrent que ce contenu pourrait être façonné par la demande des consommateurs favorisant une imagerie de couverture « positive », ce qui implique que les forces du marché réduisent le paysage émotionnel auquel les enfants sont exposés.",
+    "angle_eco": "L'écart entre la diversité émotionnelle transmise par le texte des manuels scolaires et littérature jeunesse et la prédominance de l'happiness et du calme dans leurs illustrations révèle comment les forces de marché façonnent l'exposition des enfants au spectre émotionnel.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 6,
+    "nb_eco": 3,
+    "nb_ia": 2,
+    "auteurs": "Anjali Adukia, Matthew Bonci, Paula Dastres Gallardo, Emileigh Harrison, Jake Nicoll, Teodora Szasz",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "Using machine learning and generative AI tools, researchers examined emotional content in public-school textbooks and children's literature, finding that text exposes children to a broad emotional range while images overwhelmingly depict happiness and calm. Nearly half of pages show zero overlap between the emotions described in text and those shown in images, a pattern that persists across time, contexts, and identities, with evidence suggesting that consumer demand for positive cover imagery may be narrowing the emotional landscape children encounter.",
+    "angle_eco_en": "Educational materials present children with a disconnect between the emotional range described in text and the predominantly positive emotions shown in accompanying images, potentially limiting their exposure to the full spectrum of human emotional experience."
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35793-fromrss",
+    "titre": "The Macroeconomic Effect of AI: Sizing the Software Engineering Channel",
+    "url": "https://www.nber.org/papers/w35793#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "resume_fr": "Les auteurs mesurent l'impact de l'intelligence artificielle sur l'économie à travers ses effets sur la productivité de l'ingénierie logicielle, en utilisant les informations des marchés financiers pour développer un indicateur prospectif disponible en temps réel. Entre novembre 2022 et décembre 2025, l'IA aurait augmenté la valeur présente attendue par le marché de la productivité de l'ingénierie logicielle de l'équivalent d'une augmentation permanente de 32,6%, ce qui correspondrait à un effet sur le PIB de 3,6% en scénario de base et de 6,5% si la productivité accrue de l'ingénierie logicielle stimule également la productivité de la recherche et développement.",
+    "angle_eco": "L'impact macroéconomique de l'intelligence artificielle peut être mesuré en temps réel par la sensibilité des rendements boursiers des entreprises à un indice d'IA, pondérée par la part de leurs dépenses de personnel consacrée à l'ingénierie logicielle, ce qui permet d'estimer les gains de productivité dans ce secteur et leurs effets sur le PIB.",
+    "themes": [
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Alex Blumenfeld, Jonathon Hazell, Chen Lian, Andreas Schaab",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The authors measure AI's macroeconomic impact through its effect on software engineering productivity by analyzing how firm stock returns correlate with an AI index, weighted by each firm's software engineering payroll share. From November 2022 to December 2025, AI increased the market's expected present value of software engineering productivity by the equivalent of a permanent 32.6% productivity increase, corresponding to a 3.6% baseline effect on GDP level or 6.5% when accounting for spillovers to R&D productivity.",
+    "angle_eco_en": "Artificial intelligence affects macroeconomic output through improvements in software engineering productivity, which can be measured using stock market valuations of firms with varying exposure to AI and different intensities of software engineering employment."
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35806-fromrss",
+    "titre": "Deep Learning as a Projection Method for Solving Economic Models",
+    "url": "https://www.nber.org/papers/w35806#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "resume_fr": "Les auteurs montrent que les solveurs de réseaux de neurones présentés comme un nouveau paradigme en économie sont en réalité des méthodes de projection par moindres carrés avec une paramétrisation non linéaire adaptative, ce qui remet en question la dichotomie entre apprentissage profond et méthodes classiques. Ils proposent une approche unifiée où le choix entre diverses méthodes d'approximation, critères résiduels et designs d'évaluation dépend des caractéristiques du modèle, les méthodes linéaires et sur grilles creuses s'avérant souvent supérieures en dimensions faibles à modérées tandis qu'un choix approprié de l'espace de fonctions peut éviter la malédiction de la dimensionnalité en dimensions élevées.",
+    "angle_eco": "Les solveurs de réseaux de neurones utilisés en économie constituent des méthodes de projection par moindres carrés avec paramétrisation non linéaire adaptative, ce qui remet en question la présentation du deep learning comme un paradigme distinct des méthodes classiques de projection numérique et suggère plutôt un cadre unifié où le choix entre approximations linéaires, grilles creuses ou réseaux de neurones dépend des caractéristiques dimensionnelles du modèle économique considéré.",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 6,
+    "nb_eco": 3,
+    "nb_ia": 2,
+    "auteurs": "Kenneth L. Judd, Karl Schmedders",
+    "signal": true,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The authors argue that deep learning solvers for economic models are fundamentally least-squares projection methods with adaptive nonlinear parameterization rather than a distinct paradigm superseding classical projection methods. In low and moderate dimensions, linear-basis and sparse-grid methods typically outperform trained neural networks in accuracy, speed, and verifiability, while in high dimensions the choice of function space can mitigate the curse of dimensionality.",
+    "angle_eco_en": "Neural-network solvers for dynamic economic models function as least-squares projection methods with adaptive nonlinear parameterization rather than representing a fundamentally distinct paradigm from classical projection techniques.",
+    "deja_signal": true
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35782-fromrss",
     "titre": "An LLM Workflow That Reproduces, Improves, and Extends Published Economics Research",
     "url": "https://www.nber.org/papers/w35782#fromrss",
@@ -16,7 +83,7 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Matthew Schwartz, Isaiah Andrews, Jesse M. Shapiro",
-    "signal": true,
+    "signal": false,
     "llm": "claude-haiku-4-5",
     "resume_en": "The authors introduce an open-source workflow that uses large language models to reproduce, improve, and extend economics research by processing published replication packages, finding discrepancies in 3,460 of 4,452 articles across five economics journals and performing automated sensitivity analysis. The workflow also improves computational efficiency in 496 articles by reducing calculation time by more than a factor of 10 while maintaining accuracy, and develops novel extensions aligned with original research goals in 923 articles.",
     "angle_eco_en": "Large language models can identify computational discrepancies, inefficiencies, and unexplored analytical extensions in published economics research by systematically processing replication packages.",
