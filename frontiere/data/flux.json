@@ -60,7 +60,7 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Kenneth L. Judd, Karl Schmedders",
-    "signal": true,
+    "signal": false,
     "llm": "claude-haiku-4-5",
     "resume_en": "The authors argue that deep learning solvers for economic models are fundamentally least-squares projection methods with adaptive nonlinear parameterization rather than a distinct paradigm superseding classical projection methods. In low and moderate dimensions, linear-basis and sparse-grid methods typically outperform trained neural networks in accuracy, speed, and verifiability, while in high dimensions the choice of function space can mitigate the curse of dimensionality.",
     "angle_eco_en": "Neural-network solvers for dynamic economic models function as least-squares projection methods with adaptive nonlinear parameterization rather than representing a fundamentally distinct paradigm from classical projection techniques.",
@@ -87,6 +87,53 @@
     "llm": "claude-haiku-4-5",
     "resume_en": "The authors introduce an open-source workflow that uses large language models to reproduce, improve, and extend economics research by processing published replication packages, finding discrepancies in 3,460 of 4,452 articles across five economics journals and performing automated sensitivity analysis. The workflow also improves computational efficiency in 496 articles by reducing calculation time by more than a factor of 10 while maintaining accuracy, and develops novel extensions aligned with original research goals in 923 articles.",
     "angle_eco_en": "Large language models can identify computational discrepancies, inefficiencies, and unexplored analytical extensions in published economics research by systematically processing replication packages.",
+    "deja_signal": true
+  },
+  {
+    "id": "arxiv-2609.35448v1",
+    "titre": "AI-based matching improves refugee employment in a double-blind randomized trial",
+    "url": "https://arxiv.org/abs/2609.35448v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-28",
+    "resume_fr": "Entre janvier 2020 et juin 2023, le Secrétariat d'État aux migrations en Suisse a mené un essai randomisé en double aveugle auprès d'environ 2 000 réfugiés pour tester un algorithme orientant leur placement cantonal en fonction de leurs perspectives d'emploi. L'affectation algorithmique a augmenté la proportion de mois travaillés durant les trois premières années de 2,2 points de pourcentage sur l'ensemble de la période, soit une hausse d'environ 10 % par rapport au groupe témoin, ce gain atteignant 3,9 points de pourcentage pour les cohortes de 2022-2023.",
+    "angle_eco": "L'optimisation algorithmique de la répartition géographique des réfugiés selon leurs caractéristiques individuelles permet d'accroître leur taux d'emploi grâce à un meilleur appariement avec les marchés du travail locaux à quotas constants.",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 6,
+    "nb_eco": 3,
+    "nb_ia": 2,
+    "auteurs": "Kirk Bansak, Jens Hainmueller, Dominik Hangartner, Jeremy Ferwerda, Elisabeth Paulson, Angie Delevoye, Nicholas Adams-Cohen, Ashwin Ramaswami, Selina Kurer, Joelle Pianzola, Michael Hotard",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Between January 2020 and June 2023, the Swiss State Secretariat for Migration conducted a double-blind randomized trial assigning approximately 2,000 refugee cases to receive either an algorithmically optimized canton placement recommendation or a control recommendation approximating standard procedures. The algorithmic placement recommendations increased the pooled intention-to-treat share of months employed during the first three years by 2.2 percentage points above the 22.3 percent control mean, with the effect rising to 3.9 percentage points for the 2022 to 2023 cohorts.",
+    "angle_eco_en": "Algorithmic geographic assignment using machine learning and administrative data addresses placement officers' information limitations, improving refugee employment by optimizing refugee-location match quality within fixed quota constraints."
+  },
+  {
+    "id": "arxiv-2609.32476v1",
+    "titre": "Economic Governance of Autonomous Agents and Robots: Factor-Origin Accounting and Social Automation Funds",
+    "url": "https://arxiv.org/abs/2609.32476v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-26",
+    "resume_fr": "La diffusion rapide de l'intelligence artificielle et de la robotique érode les bases fiscales fondées sur le travail humain et accentue la concentration des revenus du capital. Ce papier présente CivicDividendOS, un cadre budgétaire computationnel qui rattache l'activité automatisée aux entreprises bénéficiaires, calcule la contribution marginale de chaque facteur et prélève une contribution dynamique sur la valeur ajoutée automatisée.",
+    "angle_eco": "L'érosion des assiettes fiscales basées sur le travail humain face à l'essor des systèmes autonomes nécessite de tracer la contribution marginale de chaque facteur de production pour prélever une contribution dynamique sur la valeur ajoutée automatisée.",
+    "themes": [
+      "inference-causale",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 10,
+    "nb_eco": 7,
+    "nb_ia": 2,
+    "auteurs": "Toqeer Ali Syed, Ali Akarma, Adeel Ahmad, Muhammad Umair Younus",
+    "signal": true,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper introduces CivicDividendOS, a computational fiscal framework created to address the erosion of traditional tax bases and rising capital-income concentration caused by advancing automation. This architecture anchors machine activity to corporate beneficiaries using an Autonomous Economic Activity Passport and employs a Factor-Origin Ledger to levy a dynamic Social Automation Contribution on automated value added while offering offset credits for worker upskilling.",
+    "angle_eco_en": "The decoupling of economic output from human labor hours through autonomous software and robotics erodes traditional tax bases, complicating the attribution of value across mixed human-machine workflows and the assignment of corporate fiscal liability.",
     "deja_signal": true
   },
   {

@@ -1,5 +1,106 @@
 [
   {
+    "id": "arxiv-2610.00782v1",
+    "titre": "Can we create a `race to the top' for weather forecasts to inform smallholder farmer decisions?",
+    "url": "https://arxiv.org/abs/2610.00782v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-30",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Colin Aitken, Michael K. Tippett, Pedram Hassanzadeh, Katherine Kowal, Rendani Mbuvha, John H. Marsham, Shruti Nath, Ousmane Ndiaye, Douglas J. Parker, Caroline M Wainwright, Michael Kremer, William R. Boos",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.00581v1",
+    "titre": "The Anatomy of Commodity Risk: Micro, Market, and Economy-Wide Sources",
+    "url": "https://arxiv.org/abs/2610.00581v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-30",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Nektarios Aslanidis, Aurelio Bariviera, George Kapetanios, Vasilis Sarafidis, Alexia Ventouri",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.40156v1",
+    "titre": "Partial identification with entropy regularized optimal transport",
+    "url": "https://arxiv.org/abs/2609.40156v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-30",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Bruno N. Costa, Florian F. Gunsilius",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.39932v1",
+    "titre": "Food Insecurity Among Military Veterans",
+    "url": "https://arxiv.org/abs/2609.39932v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-30",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Senan Hogan-Hennessy, Seungmin Lee, Christopher B. Barrett, John Hoddinott, Matthew P. Rabbitt",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.38875v1",
+    "titre": "Optimal Allocation and Volume under Surface",
+    "url": "https://arxiv.org/abs/2609.38875v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-30",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Kai Feng, Han Hong, Jessie Li, Wenshi Wei",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.38692v1",
+    "titre": "Imputation is all you need: double robustness, semiparametric efficiency, and automatic covariate balance for estimating the average treatment effect",
+    "url": "https://arxiv.org/abs/2609.38692v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-30",
+    "themes": [
+      "inference-causale",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Fang Han, Peng Ding",
+    "signal": false
+  },
+  {
     "id": "voxeu-ll-street-drifts-main-street-consumption-anchor-stock-prices",
     "titre": "When Wall Street drifts from Main Street: Consumption as an anchor for stock prices",
     "url": "https://cepr.org/voxeu/columns/when-wall-street-drifts-main-street-consumption-anchor-stock-prices",
@@ -14,6 +115,152 @@
     "nb_eco": 4,
     "nb_ia": 0,
     "auteurs": "Carlo A. Favero, Alessandro Melone, Sean Myers, Andrea Tamoni",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.38459v1",
+    "titre": "Maintaining Human Verification Capacity under Automation",
+    "url": "https://arxiv.org/abs/2609.38459v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-29",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Li Gan, Eric Gan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.37957v1",
+    "titre": "Multiscale Reconstruction of Weighted Networks from Coarse-Grained Data",
+    "url": "https://arxiv.org/abs/2609.37957v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-29",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Mattia Marzi, Frank P. Pijpers, Diego Garlaschelli",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.37820v1",
+    "titre": "Information Games: Strategic Crowding and Firm Repositioning in Language-Model Space",
+    "url": "https://arxiv.org/abs/2609.37820v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-29",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Marcus Gawronsky, Chun-Sung Huang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.37412v1",
+    "titre": "Debiased Inference for Bounding Wage Inequality with Many Controls",
+    "url": "https://arxiv.org/abs/2609.37412v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-29",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Yaroslav Korobka, Vira Semenova",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.37343v1",
+    "titre": "Classification as Search Infrastructure: How Category Creation, Addition and Cleanup Shape Knowledge Retrieval",
+    "url": "https://arxiv.org/abs/2609.37343v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-29",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Kerstin Hötte, Nicolò Barbieri, Su Jung Jee",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.37168v1",
+    "titre": "Are there asymmetries in euro area monetary policy transmission?",
+    "url": "https://arxiv.org/abs/2609.37168v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-29",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Michael Pfarrhofer, Anna Stelzer",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.37051v1",
+    "titre": "Beyond the Coast: an Empirical Assessment of the Kaldor-Verdoorn Law in Chinese Provinces",
+    "url": "https://arxiv.org/abs/2609.37051v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-29",
+    "themes": [
+      "politique-publique",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Maria Cristina Barbieri Góes, Saverio Barabuffi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.36824v1",
+    "titre": "Testing for Unobserved Heterogeneity in Censored Duration Models: EM Approach",
+    "url": "https://arxiv.org/abs/2609.36824v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-29",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Hiroyuki Kasahara, Hirokazu Matsuyama, Katsumi Shimotsu, Shota Takeishi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.36445v1",
+    "titre": "Continuously Updating GMM in Linear IV Models: A Polynomial Approach",
+    "url": "https://arxiv.org/abs/2609.36445v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-29",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Marcelo J. Moreira, Whitney K. Newey, Mahrad Sharifvaghefi",
     "signal": false
   },
   {
@@ -65,6 +312,92 @@
     "signal": false
   },
   {
+    "id": "arxiv-2609.36349v1",
+    "titre": "Ranking the wrong places: vulnerability assessment, flood losses and risk sharing in Italy and Europe",
+    "url": "https://arxiv.org/abs/2609.36349v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-28",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Stefano Blando",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.36280v1",
+    "titre": "Probabilistic Seasonality",
+    "url": "https://arxiv.org/abs/2609.36280v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-28",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Feras A. Saad, Todd B. Walker",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.35470v1",
+    "titre": "Representation Risk in Pretrained Image Encoders",
+    "url": "https://arxiv.org/abs/2609.35470v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-28",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Ardyn Nordstrom, Morgan Nordstrom, Vamuyan Sesay, Matthew D. Webb",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.35111v1",
+    "titre": "The missing price feedback: Why studies overstate local peaks from synchronized home batteries under dynamic pricing",
+    "url": "https://arxiv.org/abs/2609.35111v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-28",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Lion Hirth",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.35011v1",
+    "titre": "Price Stability in the European Union: A Systemic Approach Using Random Matrix Theory",
+    "url": "https://arxiv.org/abs/2609.35011v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-28",
+    "themes": [
+      "politique-publique",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Sami Diaf",
+    "signal": false
+  },
+  {
     "id": "voxeu-g-frontier-ai-models-cyber-defence-and-eu-strategic-autonomy",
     "titre": "The cost of not innovating: Frontier AI models, cyber defence, and EU strategic autonomy",
     "url": "https://cepr.org/voxeu/columns/cost-not-innovating-frontier-ai-models-cyber-defence-and-eu-strategic-autonomy",
@@ -78,6 +411,180 @@
     "nb_eco": 3,
     "nb_ia": 0,
     "auteurs": "Eric Törnqvist, Jerzy Kopiński",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.33859v1",
+    "titre": "The Potential of Nighttime Light Imagery for Detailed Local Economic Analysis",
+    "url": "https://arxiv.org/abs/2609.33859v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-27",
+    "themes": [
+      "travail-emploi",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Shoichi Otomo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.37477v1",
+    "titre": "Calibrated Order-Randomized Rosenblatt Tests",
+    "url": "https://arxiv.org/abs/2609.37477v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-27",
+    "themes": [
+      "prevision",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Mehrdad Pournaderi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.33471v1",
+    "titre": "A One-Saddle 1/5 Approximation Algorithm for Common-Kernel Bimatrix Games: Recognition, Exact Segment Optimization, Sharp Selector Bounds, and Certified Robustness",
+    "url": "https://arxiv.org/abs/2609.33471v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-27",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Davit Gondauri",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.33418v1",
+    "titre": "An adaptive $L_2$-type test for high-dimensional white noise",
+    "url": "https://arxiv.org/abs/2609.33418v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-27",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Jinyuan Chang, Jing He, Weiming Li, Chen Lin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.33064v1",
+    "titre": "The Accommodation Trap: Survival Dependence, Communication, and the Allocation of Invisible Work",
+    "url": "https://arxiv.org/abs/2609.33064v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-27",
+    "themes": [
+      "travail-emploi"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Samiha Tariq",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.33058v1",
+    "titre": "Evolution of Market Microstructure in the Age of AI",
+    "url": "https://arxiv.org/abs/2609.33058v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-27",
+    "themes": [
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Irene Aldridge",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.32925v1",
+    "titre": "Skill, Luck, or Imitation? What Actually Pays in Creator Markets",
+    "url": "https://arxiv.org/abs/2609.32925v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-26",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Samiha Tariq",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.32880v1",
+    "titre": "The Influence of the Vocal Few: Evidence from Social Media Comments",
+    "url": "https://arxiv.org/abs/2609.32880v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-26",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Dante Donati, Lena Song",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.32859v1",
+    "titre": "When Less Is More: Managing AI Adoption with Adaptive Incentive Design",
+    "url": "https://arxiv.org/abs/2609.32859v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-26",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Jie Gong, Jiayi Hou, Jin Li, Fei Pu, Xinjue Yao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.32725v1",
+    "titre": "Minimax Choice of Projection Geometry under Linear Inequality Constraints",
+    "url": "https://arxiv.org/abs/2609.32725v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-26",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Joachim Freyberger, Julius Kappenberg",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2609.32377v1",
+    "titre": "Who Pays When Shared Infrastructure Fails? Zero Liquid Discharge, the Utilisation Trap, and the Incidence of Compliance Cost in India's Textile and Tannery Clusters",
+    "url": "https://arxiv.org/abs/2609.32377v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-09-26",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Mihika Singhania",
     "signal": false
   },
   {

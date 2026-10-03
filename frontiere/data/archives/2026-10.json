@@ -1,0 +1,388 @@
+[
+  {
+    "id": "voxeu-lumns-hiding-mean-ai-adding-jobs-and-removing-them-same-time",
+    "titre": "Hiding in the mean: AI is adding jobs and removing them at the same time",
+    "url": "https://cepr.org/voxeu/columns/hiding-mean-ai-adding-jobs-and-removing-them-same-time",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "travail-emploi"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Benjamin Verschuere, Angus Cameron",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.01935v1",
+    "titre": "Pragmatic DML with AI-Learned Representations",
+    "url": "https://arxiv.org/abs/2610.01935v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Andres Aradillas Fernandez, Victor Chernozhukov, Carlos Cinelli, Sven Klaassen, Whitney Newey, Martin Spindler, Jan Teichert-Kluge, Suhas Vijaykumar",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.01897v1",
+    "titre": "Shared Models, Selective Trading, and Order Flow",
+    "url": "https://arxiv.org/abs/2610.01897v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Victoria Ruojie Li, Arka Prava Bandyopadhyay",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.01654v1",
+    "titre": "Identifying Panel Conditioning with Refreshment Samples: Sharp Bounds and Design Assumptions",
+    "url": "https://arxiv.org/abs/2610.01654v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Shoki Okubo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.01465v1",
+    "titre": "A distributional modelling approach with application to electricity price forecasting",
+    "url": "https://arxiv.org/abs/2610.01465v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Aitor Ciarreta, Peru Muniain, Ainhoa Zarraga",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.01464v1",
+    "titre": "Inference after data-driven control-unit selection in difference-in-differences with estimated covariance",
+    "url": "https://arxiv.org/abs/2610.01464v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Ryoya Nakano, Takahiro Hoshino",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.01264v1",
+    "titre": "Strategic Optimization of Bus Systems with Stochastic Ridership",
+    "url": "https://arxiv.org/abs/2610.01264v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Haoran Zhao, Andres Fielbaum",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.01008v1",
+    "titre": "Modeling Shipping Emissions: Machine Learning, Engineering, and Policy Counterfactuals",
+    "url": "https://arxiv.org/abs/2610.01008v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Hiroyuki Kasahara, Allen Peters, Oliver Xu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02198v1",
+    "titre": "FERPO: Forward Entropy-Regularized Policy Optimization",
+    "url": "https://arxiv.org/abs/2610.02198v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Sebastian Sanokowski, Alireza Sarmadi, Majid Khadiv",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02179v1",
+    "titre": "From Gradients to Capabilities: Understanding Multi-Teacher On-Policy Distillation",
+    "url": "https://arxiv.org/abs/2610.02179v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Siqi Zhu, Suozhi Huang, Kaixuan Zhang, Yuheng Yang, Zhanyang Jin, Yihang Sun, Jiaxuan You",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02173v1",
+    "titre": "Every Ablation Is a Dose: Counterweights and the Semblance of Self-Repair",
+    "url": "https://arxiv.org/abs/2610.02173v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "inference-causale",
+      "llm"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Areeb Ahmad, Pratinav Seth, Vinay Kumar Sankarapu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02163v1",
+    "titre": "AutoCompact: Learning When to Compact Context in Long-Horizon Coding Agents",
+    "url": "https://arxiv.org/abs/2610.02163v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Xuan Zhang, Longtao Zheng, Cunxiao Du, Bo An, Xin Dong",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02140v1",
+    "titre": "Finetuning with Sampling: SFT Learns Better Than You Think",
+    "url": "https://arxiv.org/abs/2610.02140v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Aayush Karan, Sitan Chen, Yilun Du",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02131v1",
+    "titre": "Linear Programming Representations and Strongly Polynomial Algorithms for Robust Markov Decision Processes",
+    "url": "https://arxiv.org/abs/2610.02131v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Han Zhong, Yinyu Ye",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02128v1",
+    "titre": "Sample complexity bounds for categorical Markov random fields via Discrete Diffusions",
+    "url": "https://arxiv.org/abs/2610.02128v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Shivam Kumar, Nabarun Deb",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02122v1",
+    "titre": "Argo-Bench: Evaluating Data Agents on Enterprise-Scale Workflows",
+    "url": "https://arxiv.org/abs/2610.02122v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Gabriel Tomitsuka, Arman Raayatsanati, Emma Xing, Duke Gand, Joseph J Ma",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02117v1",
+    "titre": "Where-OPD: Spatially Guided On-Policy Self-Distillation of MLLMs with Synthetic Scenes",
+    "url": "https://arxiv.org/abs/2610.02117v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Sophia Sirko-Galouchenko, Monika Wysoczanska, Andrei Bursuc, Nicolas Thome, Spyros Gidaris",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02092v1",
+    "titre": "Scalable, Transferable Meta-network for Data Selection Requires a Different Loss (and Why the Obvious Choice is Problematic)",
+    "url": "https://arxiv.org/abs/2610.02092v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "llm",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Zilin Du, Bowen Yang, Boyang Albert Li",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02068v1",
+    "titre": "Sequential Capacity of Quantum Processes with Finite Memory",
+    "url": "https://arxiv.org/abs/2610.02068v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yibin Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02043v1",
+    "titre": "Distributionally Robust Schrödinger Bridge",
+    "url": "https://arxiv.org/abs/2610.02043v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Jinhwan Sul, Panagiotis Theodoropoulos, Vincent Pacelli, Jaemoo Choi, Evangelos Theodorou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02039v1",
+    "titre": "CARM: Cancellation-Aware Response Masking for LLM Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2610.02039v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Yafei Zhang, Songshuo Lu, Sicong Liao, Zhi Chen, Yaohua Tang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02019v1",
+    "titre": "Controllable Multi-label Video Safety Detection via Adaptive Tversky Policy Optimization",
+    "url": "https://arxiv.org/abs/2610.02019v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Guangyu Yang, Jingbiao Mei, Mingsheng Sun, Jinghong Chen, Yingtong Bu, Pengda Qin, Da Chen, Bill Byrne",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.01981v1",
+    "titre": "Universal interpolation for deep residual self-attention networks",
+    "url": "https://arxiv.org/abs/2610.01981v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Sibylle Marcotte, Joan Bruna",
+    "signal": false
+  }
+]
