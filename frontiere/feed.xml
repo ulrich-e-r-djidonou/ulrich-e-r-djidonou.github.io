@@ -6,6 +6,20 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Large Language Models as Voting Mechanisms</title>
+      <link>https://www.nber.org/papers/w35839#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35839-fromrss</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+      <description>En développant un cadre microéconomique, cette étude démontre qu'un grand modèle de langage fonctionne comme une règle de vote où le texte d'entrée constitue une élection et les probabilités de sortie représentent des parts de voix. Cette structure peut générer des cycles de Condorcet entraînant des recommandations d'investissement intransitives, comme le montre l'identification de millions de cycles chez ChatGPT-4o sur les entreprises du S&amp;P 100.</description>
+    </item>
+    <item>
+      <title>Metropolis-Hastings Dominates Importance Resampling for Policy Composition</title>
+      <link>https://arxiv.org/abs/2610.03480v1</link>
+      <guid isPermaLink="false">arxiv-2610.03480v1</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      <description>La composition de politiques au moment du décodage permet d'ajuster les compromis entre différentes récompenses dans les grands modèles de langage sans réentraînement coûteux, bien que l'association standard des probabilités par jeton introduise un biais d'échantillonnage. Cette étude démontre qu'une correction iterative fondée sur l'algorithme de Metropolis-Hastings produit, pour tout budget de simulation, une distribution au moins aussi proche de la cible que le rééchantillonnage par importance selon toute f-divergence convexe, tout en caractérisant les erreurs d'échantillonnage dans plusieurs régimes asymptotiques.</description>
+    </item>
+    <item>
       <title>(How) Do We Teach Emotions?</title>
       <link>https://www.nber.org/papers/w35789#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35789-fromrss</guid>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">fed-inear-econometric-models-against-machine-learning-models-htm</guid>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
       <description>Cette étude compare l'efficacité de modèles économétriques linéaires et non linéaires à celle d'algorithmes d'apprentissage automatique pour prévoir la volatilité réalisée de l'indice S&amp;P 500 et de quarante actions américaines. Les résultats révèlent que la performance dépend principalement de l'horizon de prévision, le modèle HAR à changement de régime dominant à court terme et le modèle ARFIMA à l'horizon mensuel, sans que l'apprentissage automatique ne surpasse systématiquement l'ensemble des modèles économétriques.</description>
-    </item>
-    <item>
-      <title>Manipulation-Robust Prediction</title>
-      <link>https://doi.org/10.1257/aer.20241087</link>
-      <guid isPermaLink="false">aea-10-1257-aer-20241087</guid>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Ce papier développe une approche empirique qui ajuste les algorithmes de décision pour anticiper la manipulation stratégique des individus, produisant ainsi des règles stables même lorsqu'elles sont totalement transparentes. Évaluée lors d'une vaste expérience de terrain au Kenya, cette approche montre que les règles de décision linéaires robustes à la manipulation surpassent les modèles linéaires standards comme LASSO.</description>
-    </item>
-    <item>
-      <title>Pricing with Algorithms</title>
-      <link>https://doi.org/10.1257/aeri.20240436</link>
-      <guid isPermaLink="false">aea-10-1257-aeri-20240436</guid>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Cet article étudie les équilibres de Markov parfaits dans un modèle de duopole répété où les vendeurs choisissent des algorithmes de fixation de prix en fonction du prix du concurrent. Les principaux résultats montrent que dans le modèle simple à deux prix, la tarification de monopole constitue l'unique équilibre, tandis que sur toute grille de prix finie, tous les équilibres se caractérisent par une tarification supraconcurrentielle sans communication directe entre les vendeurs.</description>
     </item>
   </channel>
 </rss>

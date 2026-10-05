@@ -1,5 +1,51 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35839-fromrss",
+    "titre": "Large Language Models as Voting Mechanisms",
+    "url": "https://www.nber.org/papers/w35839#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-10-05",
+    "resume_fr": "En développant un cadre microéconomique, cette étude démontre qu'un grand modèle de langage fonctionne comme une règle de vote où le texte d'entrée constitue une élection et les probabilités de sortie représentent des parts de voix. Cette structure peut générer des cycles de Condorcet entraînant des recommandations d'investissement intransitives, comme le montre l'identification de millions de cycles chez ChatGPT-4o sur les entreprises du S&P 100.",
+    "angle_eco": "Le fonctionnement des grands modèles de langage en tant que règles de vote agrégeant leur corpus d'entraînement génère des cycles de Condorcet, entraînant des recommandations financières intransitives exposées à une exploitation par pompe à monnaie.",
+    "themes": [
+      "llm",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 9,
+    "nb_eco": 3,
+    "nb_ia": 3,
+    "auteurs": "Raša Karapandža, Yaw Nyarko",
+    "signal": true,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper develops a microeconomic framework proving that large language models operate as voting rules, where input texts represent elections, possible continuations serve as candidates, and output probabilities reflect vote shares derived from training data. Using ChatGPT-4o, the authors identify millions of Condorcet cycles in pairwise investment choices among S&P 100 firms, demonstrating that such voting rules produce intransitive recommendations that are generally infeasible to correct ex post.",
+    "angle_eco_en": "Operating as implicit voting rules derived from training data, large language models generate Condorcet cycles that produce intransitive pairwise recommendations, leaving economic advice vulnerable to money-pump exploitation that cannot easily be corrected ex post.",
+    "deja_signal": true
+  },
+  {
+    "id": "arxiv-2610.03480v1",
+    "titre": "Metropolis-Hastings Dominates Importance Resampling for Policy Composition",
+    "url": "https://arxiv.org/abs/2610.03480v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "resume_fr": "La composition de politiques au moment du décodage permet d'ajuster les compromis entre différentes récompenses dans les grands modèles de langage sans réentraînement coûteux, bien que l'association standard des probabilités par jeton introduise un biais d'échantillonnage. Cette étude démontre qu'une correction iterative fondée sur l'algorithme de Metropolis-Hastings produit, pour tout budget de simulation, une distribution au moins aussi proche de la cible que le rééchantillonnage par importance selon toute f-divergence convexe, tout en caractérisant les erreurs d'échantillonnage dans plusieurs régimes asymptotiques.",
+    "angle_eco": "La correction itérative de la composition de politiques lors du décodage par l'algorithme de Metropolis-Hastings réduit le biais d'échantillonnage des modèles de langage en garantissant une distribution au moins aussi proche de la cible que le rééchantillonnage par importance, pour tout budget de simulation et toute f-divergence convexe.",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Alexey Kurennoy, Ramil Yarullin, Fergal Reid",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Combining reward-specific policies at inference time allows large language models to manage multi-reward trade-offs without costly retraining, though standard next-token probability combinations introduce sampling bias relative to the target response distribution. Mathematical analysis demonstrates that an independence Metropolis-Hastings correction produces an output distribution at least as close to the target target distribution as sampling-importance-resampling under every convex f-divergence for any given rollout budget.",
+    "angle_eco_en": "Combining reward-specific policies at inference time by multiplying next-token probabilities introduces sampling bias relative to the target distribution over complete responses, a problem that an iterative Metropolis-Hastings correction reduces at least as effectively as sampling-importance-resampling across all rollout budgets."
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35789-fromrss",
     "titre": "(How) Do We Teach Emotions?",
     "url": "https://www.nber.org/papers/w35789#fromrss",
@@ -130,7 +176,7 @@
     "nb_eco": 7,
     "nb_ia": 2,
     "auteurs": "Toqeer Ali Syed, Ali Akarma, Adeel Ahmad, Muhammad Umair Younus",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash",
     "resume_en": "The paper introduces CivicDividendOS, a computational fiscal framework created to address the erosion of traditional tax bases and rising capital-income concentration caused by advancing automation. This architecture anchors machine activity to corporate beneficiaries using an Autonomous Economic Activity Passport and employs a Factor-Origin Ledger to levy a dynamic Social Automation Contribution on automated value added while offering offset credits for worker upskilling.",
     "angle_eco_en": "The decoupling of economic output from human labor hours through autonomous software and robotics erodes traditional tax bases, complicating the attribution of value across mixed human-machine workflows and the assignment of corporate fiscal liability.",

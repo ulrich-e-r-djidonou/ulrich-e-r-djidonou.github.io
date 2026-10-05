@@ -1,5 +1,22 @@
 [
   {
+    "id": "voxeu--border-data-regulation-international-trade-digital-services",
+    "titre": "The impact of AI and cross-border data regulation on international trade in digital services",
+    "url": "https://cepr.org/voxeu/columns/impact-ai-and-cross-border-data-regulation-international-trade-digital-services",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-10-03",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Ruiqi Sun, Daniel Trefler",
+    "signal": false
+  },
+  {
     "id": "voxeu-lumns-hiding-mean-ai-adding-jobs-and-removing-them-same-time",
     "titre": "Hiding in the mean: AI is adding jobs and removing them at the same time",
     "url": "https://cepr.org/voxeu/columns/hiding-mean-ai-adding-jobs-and-removing-them-same-time",
@@ -13,6 +30,295 @@
     "nb_eco": 3,
     "nb_ia": 0,
     "auteurs": "Benjamin Verschuere, Angus Cameron",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03250v1",
+    "titre": "No Women No Innovation? The Effect of Women on Boards on Hard and Soft Innovation in SMEs",
+    "url": "https://arxiv.org/abs/2610.03250v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Francesca Pascale, Saverio Barabuffi, Giulio Ferrigno",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02944v1",
+    "titre": "Cross-Fitting Under Nonregularity: Normality and Inference via Locality",
+    "url": "https://arxiv.org/abs/2610.02944v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 2,
+    "auteurs": "Bruno Fava",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02938v1",
+    "titre": "Evaluating Threshold Policies in Randomized Threshold Designs: A Cautionary Tale for Regression Discontinuity Designs",
+    "url": "https://arxiv.org/abs/2610.02938v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Shunsuke Imai, Koshi Nishida, Yuta Okamoto",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03667v1",
+    "titre": "Planning to Learn",
+    "url": "https://arxiv.org/abs/2610.03667v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Ian Osband",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03662v1",
+    "titre": "Forecasting from Counterfactual Simulator Rollouts: A Sim2Real Evaluation",
+    "url": "https://arxiv.org/abs/2610.03662v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Angel Wang, Dominique Perrault-Joncas, Alvaro Maggiar, Dean Foster, Carson Eisenach",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03650v1",
+    "titre": "PoCoFL: POlicy-COmpliant Federated Learning",
+    "url": "https://arxiv.org/abs/2610.03650v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Dominik Roy George, Varesh Mishra, Aysajan Abidin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03642v1",
+    "titre": "On the Convergence of Success Conditioning for Policy Optimization",
+    "url": "https://arxiv.org/abs/2610.03642v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Matthew Brun, Xu Andy Sun",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03641v1",
+    "titre": "IDRF: Inverse-Distilled Reward Fine-tuning of Masked Discrete Diffusion Models",
+    "url": "https://arxiv.org/abs/2610.03641v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Vladislav Gromadskii, David Li, Samson Gourevitch, Yazid Janati, Eric Moulines, Maxim Panov, Alexander Korotin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03632v1",
+    "titre": "World Embedding Benchmark",
+    "url": "https://arxiv.org/abs/2610.03632v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yiqi Liu, Ruifeng Yuan, Yang Wang, Long Li, Fengyu Cai, Hou Pong Chan, Jialin Yu, Hao Zhang, Chenghua Lin, Chenghao Xiao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03620v1",
+    "titre": "UniIntervene++: An Adaptive Intervention Agent for Efficient Real-World Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2610.03620v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yudong Lin, Haoyuan Deng, Zhuoxuan Yuan, Zaijia Yang, Yuanjiang Xue, Ziwei Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03585v1",
+    "titre": "Threat-Preserving Representation Sensitivity in Agent-Security Benchmarks",
+    "url": "https://arxiv.org/abs/2610.03585v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Neeraj Karamchandani, Piyush Nagasubramaniam, Xinhong Xie, Sencun Zhu, Dinghao Wu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03529v1",
+    "titre": "Divergence controls entropy in distillation",
+    "url": "https://arxiv.org/abs/2610.03529v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Nicolas Zucchet, Scott W. Linderman",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03515v1",
+    "titre": "Learning from Repaired Reasoning: Root-Cause-Guided On-Policy Distillation",
+    "url": "https://arxiv.org/abs/2610.03515v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Chenglei Shen, Haoyang Yao, Weijie Yu, Song Jin, Xiao Zhang, Jun Xu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03475v1",
+    "titre": "Single or Multiple Policies for Phase-Structured Reinforcement Learning?",
+    "url": "https://arxiv.org/abs/2610.03475v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Guilhem Loussouarn, Nancy Nayak, Kin K. Leung",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03458v1",
+    "titre": "A Near-Zero Monitor Readout Is Not Evidence of Behavioral Control",
+    "url": "https://arxiv.org/abs/2610.03458v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Zhe Zhou, Tianhua Tao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03454v1",
+    "titre": "Measure Less, Know More: Self-Supervised Test-Time Feature Acquisition",
+    "url": "https://arxiv.org/abs/2610.03454v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Eeshaan Jain, Linus Bleistein, Bart Deplancke, Charlotte Bunne",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.03452v1",
+    "titre": "Causal Representation Learning with Instantaneous and Lagged Relations via Nonstationarity",
+    "url": "https://arxiv.org/abs/2610.03452v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-02",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Tatsuya Yamada, Hiroshi Morioka, Yoshinobu Kawahara",
     "signal": false
   },
   {
@@ -383,6 +689,58 @@
     "nb_eco": 1,
     "nb_ia": 0,
     "auteurs": "Sibylle Marcotte, Joan Bruna",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02492v1",
+    "titre": "Right Order, Wrong Scale: Auditing LLM Judges for Occupational AI Measurement",
+    "url": "https://arxiv.org/abs/2610.02492v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "llm",
+      "prevision",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Harry Lyu, Neil Thompson",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.02290v1",
+    "titre": "Expected Utility Regret Rule: Minimax and Bayes Optimal Portfolio Choice",
+    "url": "https://arxiv.org/abs/2610.02290v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Masahiro Kato",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.01935v2",
+    "titre": "Pragmatic DML with AI-Learned Representations",
+    "url": "https://arxiv.org/abs/2610.01935v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Andres Aradillas Fernandez, Victor Chernozhukov, Carlos Cinelli, Sven Klaassen, Whitney Newey, Martin Spindler, Jan Teichert-Kluge, Suhas Vijaykumar",
     "signal": false
   }
 ]
