@@ -584,6 +584,69 @@
     "signal": false
   },
   {
+    "id": "arxiv-2607.08665v1",
+    "titre": "Resample or Reroute? Budget-Aware Test-Time Model Selection for Large Language Models",
+    "url": "https://arxiv.org/abs/2607.08665v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-09",
+    "resume_fr": "Les auteurs formulent un problème de sélection de modèle au moment du test avec budget limité, où chaque unité de budget doit être allouée entre le rééchantillonnage du modèle engagé et le réacheminement vers un modèle alternatif afin de maximiser la justesse attendue. Une politique d'allocation en ligne basée sur la justesse marginale estimée par unité de coût est proposée et validée sur un ensemble de onze modèles en poids ouvert sur quatre benchmarks, montrant des gains particulièrement importants sur les ensembles les plus hétérogènes par rapport aux approches de base.",
+    "angle_eco": "L'allocation d'un budget de calcul limité par requête entre le rééchantillonnage du modèle engagé et le routage vers un modèle alternatif constitue un arbitrage central pour maximiser la qualité des réponses d'un système de sélection de modèles de langage au moment de l'inférence.",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 4,
+    "auteurs": "Teng-Ruei Chen",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "deja_signal": true,
+    "resume_en": "The paper addresses the problem of allocating a limited per-query budget between resampling from a committed large language model and rerouting to an alternative model, given an imperfect verifier for correctness. The authors propose an online resample-or-reroute policy that estimates marginal correctness per unit cost and demonstrate on four benchmarks that this approach achieves favorable cost-quality trade-offs compared to existing baselines including single-route, budget-aware best-of-K, and cascade methods.",
+    "angle_eco_en": "When a fixed cost budget is available per query to improve large language model responses, the allocation between resampling outputs from a committed model and rerouting to an alternative model must be optimized given an imperfect verifier that cannot provide correctness labels with certainty."
+  },
+  {
+    "id": "arxiv-2607.08920v1",
+    "titre": "AI Adoption in S&P 500 Firms",
+    "url": "https://arxiv.org/abs/2607.08920v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-09",
+    "resume_fr": "Les auteurs étudient l'adoption de l'intelligence artificielle par les entreprises du S&P 500 entre 2016 et 2025 en développant une mesure fondée sur les dépôts réglementaires auprès de la SEC, et constatent qu'en 2025, 11% de ces entreprises avaient intégré profondément l'IA dans leurs processus métier tandis que 10% supplémentaires l'utilisaient dans la production et la livraison de services. L'adoption a plus que quadruplé depuis 5% en 2022, avec une accélération lente dans les secteurs non technologiques mais très agressive dans le secteur technologique qui représente les deux tiers de l'adoption profonde, tandis que la rentabilité des entreprises suit une courbe en J sans différences observées en matière de dépenses d'investissement ou de productivité.",
+    "angle_eco": "La mesure de l'intégration profonde de l'intelligence artificielle dans les processus métier des grandes entreprises à partir des déclarations réglementaires permet de distinguer l'adoption réelle de l'effet de mode et de documenter une accélération de cette adoption depuis 2022, particulièrement prononcée dans le secteur technologique.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 6,
+    "auteurs": "Yang Yu, Martin Fleming, Lucy Hampton, Christophe Combemale, Neil Thompson",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The authors measure deep AI adoption among S&P 500 firms using SEC 10-K filings and find that 11% had AI deeply integrated into business processes by 2025, with adoption more than quadrupling from 5% in 2022, concentrated heavily in the technology sector. While firm profitability exhibits a J-curve pattern as firms move from no adoption to deep adoption, the study observes no differences in capital expenditure or productivity between adopting and non-adopting firms.",
+    "angle_eco_en": "The deep integration of artificial intelligence into business processes of large enterprises may initially reduce firm profitability before potentially improving it, yet shows no measurable effect on capital expenditure or productivity gains."
+  },
+  {
+    "id": "arxiv-2607.08681v1",
+    "titre": "SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets",
+    "url": "https://arxiv.org/abs/2607.08681v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-09",
+    "resume_fr": "Les auteurs proposent SolarChain-Eval, un benchmark contraint par la physique pour évaluer des agents économiques fiables sur les marchés décentralisés d'énergie, en formulant la gouvernance de marché comme un processus de décision de Markov compatible avec Gymnasium et en évaluant les politiques selon plusieurs dimensions incluant l'utilité du marché, la sécurité physique, le glissement de prix, la fluidité des actions, l'équité spatiale et l'auditabilité. Les expériences montrent un compromis clair entre utilité et sécurité, les agents par apprentissage par renforcement améliorant l'utilité du marché mais pouvant produire des comportements non sûrs, tandis qu'une couche Planificateur/Auditeur basée sur un modèle de langage améliore l'auditabilité et atténue certains risques.",
+    "angle_eco": "L'évaluation des agents économiques autonomes dans les marchés décentralisés d'énergie doit concilier l'amélioration de l'utilité du marché avec la prévention des comportements non sûrs tels que l'exploitation de données physiques invalides, la création de liquidité artificielle et les décisions de gouvernance instables.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 4,
+    "auteurs": "Shilin Ou, Yifan Xu, Luyao Zhang",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "SolarChain-Eval is a physics-constrained benchmark that evaluates autonomous agents in decentralized energy markets across multiple dimensions including market utility, physical safety, slippage, action smoothness, spatial fairness, and auditability, with an LLM-based Planner/Auditor layer that defines action bounds and audits high-risk decisions. Experiments comparing static, random, myopic, reinforcement learning, and reinforcement learning plus LLM policies demonstrate a utility-safety trade-off where RL agents improve market utility but can produce unsafe behavior, while removing physics penalties causes reward-maximizing agents to exploit invalid generation and increase artificial liquidity, though the LLM Planner/Auditor improves auditability and mitigates selected risks.",
+    "angle_eco_en": "Autonomous agents operating in decentralized energy markets can improve market utility while simultaneously exploiting invalid physical data, creating artificial liquidity, and generating unstable governance decisions, creating a fundamental trade-off between economic performance and physical safety."
+  },
+  {
     "id": "arxiv-2607.05792v1",
     "titre": "Estimating Causal Effects from Data Generated by Stochastic Algorithms",
     "url": "https://arxiv.org/abs/2607.05792v1",
@@ -600,6 +663,27 @@
     "score": 2,
     "auteurs": "Susan Athey, Guido Imbens, Zoe Ji",
     "signal": false
+  },
+  {
+    "id": "fed-ne-learning-approaches-to-implied-volatility-forecasting-htm",
+    "titre": "FEDS Paper: Capturing Heterogeneity: Machine Learning Approaches to Implied Volatility Forecasting",
+    "url": "https://www.federalreserve.gov/econres/feds/capturing-heterogeneity-machine-learning-approaches-to-implied-volatility-forecasting.htm",
+    "source": "Reserve federale americaine (Fed), working papers",
+    "type": "papier",
+    "date_publication": "2026-07-07",
+    "resume_fr": "Hyung Joo Kim et Dong Hwan Oh développent un cadre d'apprentissage automatique fondé sur des arbres de régression pour étendre le modèle SHAR, permettant aux paramètres de prévision de la volatilité implicite de varier selon la maturité et la monneyness des options. L'analyse empirique menée sur les options du S&P 500 montre que la spécification par arbres boostés réduit la RMSE à un mois de 13 % par rapport au modèle SHAR de référence, atteignant les erreurs de prévision hors échantillon les plus faibles à tous les horizons.",
+    "angle_eco": "L'utilisation d'arbres de régression pour segmenter la surface des options selon leur maturité et leur position par rapport au prix d'exercice permet d'adapter les paramètres des modèles autorégressifs à l'hétérogénéité de la volatilité implicite, réduisant ainsi l'erreur de prévision à un mois de 13 % par rapport au modèle de référence.",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 3,
+    "auteurs": "Hyung Joo Kim, Dong Hwan Oh",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A machine-learning framework using regression trees partitions the option surface along both moneyness and maturity dimensions to identify data-driven regions where distinct forecasting models perform best. Empirical analysis of S&P 500 options shows that this boosted tree-based specification reduces one-month-ahead root mean squared error by 13 percent compared to a benchmark model, with improvements being particularly pronounced during stress periods.",
+    "angle_eco_en": "Incorporating data-driven heterogeneity into implied volatility forecasting models significantly improves out-of-sample pricing accuracy and uncovers distinct persistence dynamics across option moneyness and maturity dimensions."
   },
   {
     "id": "arxiv-2607.05291v1",

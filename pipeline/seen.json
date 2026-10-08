@@ -4594,5 +4594,237 @@
   "voxeu--border-data-regulation-international-trade-digital-services": {
     "score": 0,
     "traite": true
+  },
+  "arxiv-2610.10506v1": {
+    "score": 4,
+    "traite": true
+  },
+  "arxiv-2610.10476v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10356v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10069v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10043v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.09601v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.09351v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.08729v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.08558v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2610.08467v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.08455v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.08447v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.08409v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2610.08302v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.08275v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2610.08264v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2610.08194v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.08004v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.07974v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.07589v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.07363v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.07239v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.06827v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.06774v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.06562v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.06412v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.06374v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.07097v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2610.06119v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.06088v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.06007v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.05823v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2610.05705v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.05618v1": {
+    "score": 3,
+    "traite": true
+  },
+  "arxiv-2610.05535v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.05486v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.05405v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.05251v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.07003v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.04982v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10536v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10526v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2610.10460v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10459v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10447v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10437v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10426v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10407v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10395v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2610.10393v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10381v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10367v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2610.10362v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10340v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2610.10326v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2610.10323v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.10311v1": {
+    "score": 2,
+    "traite": true
+  },
+  "voxeu-r-managed-firms-can-curb-inequality-and-protect-free-markets": {
+    "score": 0,
+    "traite": true
   }
 }

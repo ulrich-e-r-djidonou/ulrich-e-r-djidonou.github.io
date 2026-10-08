@@ -6,11 +6,25 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Validity Without Ground Truth: What Stated-Preference Economics Offers the Evaluation of Language Models</title>
+      <link>https://arxiv.org/abs/2610.10506v1</link>
+      <guid isPermaLink="false">arxiv-2610.10506v1</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+      <description>L'économie des préférences déclarées offre un cadre d'évaluation applicable aux modèles de langage pour les questions sans réponse correcte, fondé sur la validité de contenu, de construit et de critère, ainsi que sur la fiabilité et la compatibilité incitative. En appliquant ce cadre à une enquête économique sur la qualité de l'eau administrée à six modèles, les tests de validité théorique révèlent des différences marquées entre les modèles, les deux plus récents passant tous les tests de validité théorique tandis que les deux plus anciens échouent aux tests les plus élémentaires.</description>
+    </item>
+    <item>
       <title>Large Language Models as Voting Mechanisms</title>
       <link>https://www.nber.org/papers/w35839#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35839-fromrss</guid>
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
       <description>En développant un cadre microéconomique, cette étude démontre qu'un grand modèle de langage fonctionne comme une règle de vote où le texte d'entrée constitue une élection et les probabilités de sortie représentent des parts de voix. Cette structure peut générer des cycles de Condorcet entraînant des recommandations d'investissement intransitives, comme le montre l'identification de millions de cycles chez ChatGPT-4o sur les entreprises du S&amp;P 100.</description>
+    </item>
+    <item>
+      <title>Causal Lag Structure Discovery in Confounded Time Series via Orthogonalized Adaptive Estimation</title>
+      <link>https://arxiv.org/abs/2610.05618v1</link>
+      <guid isPermaLink="false">arxiv-2610.05618v1</guid>
+      <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
+      <description>ORACLE-VARX est une méthode qui combine l'apprentissage automatique débiaisé pour éliminer les effets de confusion non linéaires, l'estimation adaptative des décalages causaux par tests de significativité séquentiels, et la correction de Benjamini-Hochberg pour contrôler le taux de fausses découvertes dans l'inférence causale sur séries temporelles multivariées. Sur données synthétiques avec structure variable et confusion non linéaire, la méthode surpasse les approches existantes en suivi de l'ordre de décalage vrai et en contrôle du taux de fausses découvertes, tandis que sur neuf ETF sectoriels américains avec variables macroéconomiques de confusion, elle produit des graphes causaux interprétables dont l'ordre de décalage augmente en régimes de forte volatilité.</description>
     </item>
     <item>
       <title>Metropolis-Hastings Dominates Importance Resampling for Policy Composition</title>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">voxeu-oxeu-columns-generative-ai-learning-penalty-secondary-school</guid>
       <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
       <description>Une étude portant sur plus de 25 000 élèves du secondaire en Chine montre que l'utilisation autonome de l'intelligence artificielle générative réduit le temps consacré aux devoirs et améliore leurs notes, mais entraîne une baisse de leurs résultats aux examens. Bien que cet impact négatif soit initialement faible, il s'amplifie à mesure que les élèves maîtrisent ces outils et assimilent la suite du programme, ce qui suggère que les études de courte durée sous-estiment les coûts d'apprentissage à long terme de l'IA générative.</description>
-    </item>
-    <item>
-      <title>Competitive Market Behavior of LLMs</title>
-      <link>https://arxiv.org/abs/2609.02580v1</link>
-      <guid isPermaLink="false">arxiv-2609.02580v1</guid>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
-      <description>En répliquant des expériences d'économie expérimentale de double enchère dans lesquelles les sujets humains sont remplacés par des agents fondés sur de grands modèles de langage, cette étude évalue leur compatibilité avec les mécanismes de marché. Les résultats montrent que les marchés composés de ces agents convergent plus lentement ou ne convergent pas vers l'équilibre, générant ainsi des allocations de ressources moins efficaces que les marchés humains.</description>
-    </item>
-    <item>
-      <title>FEDS Paper: Linear and Nonlinear Econometric Models versus Machine-Learning Models: Evidence from Realized-Volatility Forecasting(Revised)</title>
-      <link>https://www.federalreserve.gov/econres/feds/linear-and-nonlinear-econometric-models-against-machine-learning-models.htm</link>
-      <guid isPermaLink="false">fed-inear-econometric-models-against-machine-learning-models-htm</guid>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Cette étude compare l'efficacité de modèles économétriques linéaires et non linéaires à celle d'algorithmes d'apprentissage automatique pour prévoir la volatilité réalisée de l'indice S&amp;P 500 et de quarante actions américaines. Les résultats révèlent que la performance dépend principalement de l'horizon de prévision, le modèle HAR à changement de régime dominant à court terme et le modèle ARFIMA à l'horizon mensuel, sans que l'apprentissage automatique ne surpasse systématiquement l'ensemble des modèles économétriques.</description>
     </item>
   </channel>
 </rss>

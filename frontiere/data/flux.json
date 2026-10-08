@@ -1,5 +1,28 @@
 [
   {
+    "id": "arxiv-2610.10506v1",
+    "titre": "Validity Without Ground Truth: What Stated-Preference Economics Offers the Evaluation of Language Models",
+    "url": "https://arxiv.org/abs/2610.10506v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-07",
+    "resume_fr": "L'économie des préférences déclarées offre un cadre d'évaluation applicable aux modèles de langage pour les questions sans réponse correcte, fondé sur la validité de contenu, de construit et de critère, ainsi que sur la fiabilité et la compatibilité incitative. En appliquant ce cadre à une enquête économique sur la qualité de l'eau administrée à six modèles, les tests de validité théorique révèlent des différences marquées entre les modèles, les deux plus récents passant tous les tests de validité théorique tandis que les deux plus anciens échouent aux tests les plus élémentaires.",
+    "angle_eco": "Le cadre conceptuel de la validité développé par l'économie des préférences déclarées, qui évalue les réponses sans connaître la vraie valeur par des tests de cohérence théorique et empirique, peut servir de méthode générale pour évaluer les réponses des modèles de langage à des questions sans réponse correcte.",
+    "themes": [
+      "llm",
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Daniel Robert Kling Alexander, Catherine Louise Kling",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The paper proposes that stated-preference economics, which evaluates survey responses without ground truth, offers a framework for assessing large language models on subjective questions where no correct answer exists. When the authors applied validity tests from economic theory to six models using a water-quality valuation survey, the two newest models passed all theoretical validity tests while older models failed basic economic predictions, though passing these tests indicates coherence rather than correctness.",
+    "angle_eco_en": "Evaluating language model responses to questions lacking objectively correct answers requires frameworks from stated-preference economics that assess validity through internal consistency with economic theory rather than correspondence to ground truth."
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35839-fromrss",
     "titre": "Large Language Models as Voting Mechanisms",
     "url": "https://www.nber.org/papers/w35839#fromrss",
@@ -17,11 +40,33 @@
     "nb_eco": 3,
     "nb_ia": 3,
     "auteurs": "Raša Karapandža, Yaw Nyarko",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash",
     "resume_en": "The paper develops a microeconomic framework proving that large language models operate as voting rules, where input texts represent elections, possible continuations serve as candidates, and output probabilities reflect vote shares derived from training data. Using ChatGPT-4o, the authors identify millions of Condorcet cycles in pairwise investment choices among S&P 100 firms, demonstrating that such voting rules produce intransitive recommendations that are generally infeasible to correct ex post.",
     "angle_eco_en": "Operating as implicit voting rules derived from training data, large language models generate Condorcet cycles that produce intransitive pairwise recommendations, leaving economic advice vulnerable to money-pump exploitation that cannot easily be corrected ex post.",
     "deja_signal": true
+  },
+  {
+    "id": "arxiv-2610.05618v1",
+    "titre": "Causal Lag Structure Discovery in Confounded Time Series via Orthogonalized Adaptive Estimation",
+    "url": "https://arxiv.org/abs/2610.05618v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-04",
+    "resume_fr": "ORACLE-VARX est une méthode qui combine l'apprentissage automatique débiaisé pour éliminer les effets de confusion non linéaires, l'estimation adaptative des décalages causaux par tests de significativité séquentiels, et la correction de Benjamini-Hochberg pour contrôler le taux de fausses découvertes dans l'inférence causale sur séries temporelles multivariées. Sur données synthétiques avec structure variable et confusion non linéaire, la méthode surpasse les approches existantes en suivi de l'ordre de décalage vrai et en contrôle du taux de fausses découvertes, tandis que sur neuf ETF sectoriels américains avec variables macroéconomiques de confusion, elle produit des graphes causaux interprétables dont l'ordre de décalage augmente en régimes de forte volatilité.",
+    "angle_eco": "L'identification simultanée des relations causales entre variables dans des séries temporelles multivariées, de leurs délais et de l'ajustement des facteurs de confusion non linéaires, tout en contrôlant le taux de fausses découvertes, requiert une approche intégrant l'apprentissage automatique débiaisé, la sélection adaptative de l'ordre de décalage et des tests multiples corrigés.",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Hong Kiat Tan, Isaac-Neil Zanoria, James Chen, Haoyang Lyu, Mihai Cucuringu",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "angle_eco_en": "Identifying causal relationships and their lag structures in multivariate time series requires simultaneously addressing nonlinear confounding, data-driven lag selection, and control of false discovery rates, which existing methods cannot accomplish together."
   },
   {
     "id": "arxiv-2610.03480v1",
@@ -63,10 +108,11 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Anjali Adukia, Matthew Bonci, Paula Dastres Gallardo, Emileigh Harrison, Jake Nicoll, Teodora Szasz",
-    "signal": false,
+    "signal": true,
     "llm": "claude-haiku-4-5",
     "resume_en": "Using machine learning and generative AI tools, researchers examined emotional content in public-school textbooks and children's literature, finding that text exposes children to a broad emotional range while images overwhelmingly depict happiness and calm. Nearly half of pages show zero overlap between the emotions described in text and those shown in images, a pattern that persists across time, contexts, and identities, with evidence suggesting that consumer demand for positive cover imagery may be narrowing the emotional landscape children encounter.",
-    "angle_eco_en": "Educational materials present children with a disconnect between the emotional range described in text and the predominantly positive emotions shown in accompanying images, potentially limiting their exposure to the full spectrum of human emotional experience."
+    "angle_eco_en": "Educational materials present children with a disconnect between the emotional range described in text and the predominantly positive emotions shown in accompanying images, potentially limiting their exposure to the full spectrum of human emotional experience.",
+    "deja_signal": true
   },
   {
     "id": "nber-https-www-nber-org-papers-w35793-fromrss",
@@ -2179,89 +2225,5 @@
     "llm": "claude-haiku-4-5",
     "resume_en": "The paper applies machine learning to automatic thematic indexing of Voltaire's Complete Works, framing the task as multi-label classification and comparing approaches ranging from encoder-based models to large language models fine-tuned via Low-Rank Adaptation. The best-performing model, a quantised Mistral variant, achieves F1 scores up to 0.67 and demonstrates semantic validity in predictions despite divergences from the print index, while the authors also evaluate cross-corpus generalisation and analyse model performance on literary and rhetorical features.",
     "angle_eco_en": "The labour-intensive nature of manually assigning structured conceptual labels to sections of text in large literary and historical editions creates a need for automated approaches that can learn to replicate professional indexing decisions across multi-label classification tasks."
-  },
-  {
-    "id": "arxiv-2607.08665v1",
-    "titre": "Resample or Reroute? Budget-Aware Test-Time Model Selection for Large Language Models",
-    "url": "https://arxiv.org/abs/2607.08665v1",
-    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
-    "type": "papier",
-    "date_publication": "2026-07-09",
-    "resume_fr": "Les auteurs formulent un problème de sélection de modèle au moment du test avec budget limité, où chaque unité de budget doit être allouée entre le rééchantillonnage du modèle engagé et le réacheminement vers un modèle alternatif afin de maximiser la justesse attendue. Une politique d'allocation en ligne basée sur la justesse marginale estimée par unité de coût est proposée et validée sur un ensemble de onze modèles en poids ouvert sur quatre benchmarks, montrant des gains particulièrement importants sur les ensembles les plus hétérogènes par rapport aux approches de base.",
-    "angle_eco": "L'allocation d'un budget de calcul limité par requête entre le rééchantillonnage du modèle engagé et le routage vers un modèle alternatif constitue un arbitrage central pour maximiser la qualité des réponses d'un système de sélection de modèles de langage au moment de l'inférence.",
-    "themes": [
-      "llm",
-      "politique-publique"
-    ],
-    "score": 4,
-    "auteurs": "Teng-Ruei Chen",
-    "signal": false,
-    "llm": "claude-haiku-4-5",
-    "deja_signal": true,
-    "resume_en": "The paper addresses the problem of allocating a limited per-query budget between resampling from a committed large language model and rerouting to an alternative model, given an imperfect verifier for correctness. The authors propose an online resample-or-reroute policy that estimates marginal correctness per unit cost and demonstrate on four benchmarks that this approach achieves favorable cost-quality trade-offs compared to existing baselines including single-route, budget-aware best-of-K, and cascade methods.",
-    "angle_eco_en": "When a fixed cost budget is available per query to improve large language model responses, the allocation between resampling outputs from a committed model and rerouting to an alternative model must be optimized given an imperfect verifier that cannot provide correctness labels with certainty."
-  },
-  {
-    "id": "arxiv-2607.08920v1",
-    "titre": "AI Adoption in S&P 500 Firms",
-    "url": "https://arxiv.org/abs/2607.08920v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-09",
-    "resume_fr": "Les auteurs étudient l'adoption de l'intelligence artificielle par les entreprises du S&P 500 entre 2016 et 2025 en développant une mesure fondée sur les dépôts réglementaires auprès de la SEC, et constatent qu'en 2025, 11% de ces entreprises avaient intégré profondément l'IA dans leurs processus métier tandis que 10% supplémentaires l'utilisaient dans la production et la livraison de services. L'adoption a plus que quadruplé depuis 5% en 2022, avec une accélération lente dans les secteurs non technologiques mais très agressive dans le secteur technologique qui représente les deux tiers de l'adoption profonde, tandis que la rentabilité des entreprises suit une courbe en J sans différences observées en matière de dépenses d'investissement ou de productivité.",
-    "angle_eco": "La mesure de l'intégration profonde de l'intelligence artificielle dans les processus métier des grandes entreprises à partir des déclarations réglementaires permet de distinguer l'adoption réelle de l'effet de mode et de documenter une accélération de cette adoption depuis 2022, particulièrement prononcée dans le secteur technologique.",
-    "themes": [
-      "llm",
-      "travail-emploi",
-      "politique-publique"
-    ],
-    "score": 6,
-    "auteurs": "Yang Yu, Martin Fleming, Lucy Hampton, Christophe Combemale, Neil Thompson",
-    "signal": false,
-    "llm": "claude-haiku-4-5",
-    "resume_en": "The authors measure deep AI adoption among S&P 500 firms using SEC 10-K filings and find that 11% had AI deeply integrated into business processes by 2025, with adoption more than quadrupling from 5% in 2022, concentrated heavily in the technology sector. While firm profitability exhibits a J-curve pattern as firms move from no adoption to deep adoption, the study observes no differences in capital expenditure or productivity between adopting and non-adopting firms.",
-    "angle_eco_en": "The deep integration of artificial intelligence into business processes of large enterprises may initially reduce firm profitability before potentially improving it, yet shows no measurable effect on capital expenditure or productivity gains."
-  },
-  {
-    "id": "arxiv-2607.08681v1",
-    "titre": "SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets",
-    "url": "https://arxiv.org/abs/2607.08681v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-09",
-    "resume_fr": "Les auteurs proposent SolarChain-Eval, un benchmark contraint par la physique pour évaluer des agents économiques fiables sur les marchés décentralisés d'énergie, en formulant la gouvernance de marché comme un processus de décision de Markov compatible avec Gymnasium et en évaluant les politiques selon plusieurs dimensions incluant l'utilité du marché, la sécurité physique, le glissement de prix, la fluidité des actions, l'équité spatiale et l'auditabilité. Les expériences montrent un compromis clair entre utilité et sécurité, les agents par apprentissage par renforcement améliorant l'utilité du marché mais pouvant produire des comportements non sûrs, tandis qu'une couche Planificateur/Auditeur basée sur un modèle de langage améliore l'auditabilité et atténue certains risques.",
-    "angle_eco": "L'évaluation des agents économiques autonomes dans les marchés décentralisés d'énergie doit concilier l'amélioration de l'utilité du marché avec la prévention des comportements non sûrs tels que l'exploitation de données physiques invalides, la création de liquidité artificielle et les décisions de gouvernance instables.",
-    "themes": [
-      "llm",
-      "politique-publique",
-      "donnees"
-    ],
-    "score": 4,
-    "auteurs": "Shilin Ou, Yifan Xu, Luyao Zhang",
-    "signal": false,
-    "llm": "claude-haiku-4-5",
-    "resume_en": "SolarChain-Eval is a physics-constrained benchmark that evaluates autonomous agents in decentralized energy markets across multiple dimensions including market utility, physical safety, slippage, action smoothness, spatial fairness, and auditability, with an LLM-based Planner/Auditor layer that defines action bounds and audits high-risk decisions. Experiments comparing static, random, myopic, reinforcement learning, and reinforcement learning plus LLM policies demonstrate a utility-safety trade-off where RL agents improve market utility but can produce unsafe behavior, while removing physics penalties causes reward-maximizing agents to exploit invalid generation and increase artificial liquidity, though the LLM Planner/Auditor improves auditability and mitigates selected risks.",
-    "angle_eco_en": "Autonomous agents operating in decentralized energy markets can improve market utility while simultaneously exploiting invalid physical data, creating artificial liquidity, and generating unstable governance decisions, creating a fundamental trade-off between economic performance and physical safety."
-  },
-  {
-    "id": "fed-ne-learning-approaches-to-implied-volatility-forecasting-htm",
-    "titre": "FEDS Paper: Capturing Heterogeneity: Machine Learning Approaches to Implied Volatility Forecasting",
-    "url": "https://www.federalreserve.gov/econres/feds/capturing-heterogeneity-machine-learning-approaches-to-implied-volatility-forecasting.htm",
-    "source": "Reserve federale americaine (Fed), working papers",
-    "type": "papier",
-    "date_publication": "2026-07-07",
-    "resume_fr": "Hyung Joo Kim et Dong Hwan Oh développent un cadre d'apprentissage automatique fondé sur des arbres de régression pour étendre le modèle SHAR, permettant aux paramètres de prévision de la volatilité implicite de varier selon la maturité et la monneyness des options. L'analyse empirique menée sur les options du S&P 500 montre que la spécification par arbres boostés réduit la RMSE à un mois de 13 % par rapport au modèle SHAR de référence, atteignant les erreurs de prévision hors échantillon les plus faibles à tous les horizons.",
-    "angle_eco": "L'utilisation d'arbres de régression pour segmenter la surface des options selon leur maturité et leur position par rapport au prix d'exercice permet d'adapter les paramètres des modèles autorégressifs à l'hétérogénéité de la volatilité implicite, réduisant ainsi l'erreur de prévision à un mois de 13 % par rapport au modèle de référence.",
-    "themes": [
-      "prevision",
-      "outils-recherche",
-      "donnees"
-    ],
-    "score": 3,
-    "auteurs": "Hyung Joo Kim, Dong Hwan Oh",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "A machine-learning framework using regression trees partitions the option surface along both moneyness and maturity dimensions to identify data-driven regions where distinct forecasting models perform best. Empirical analysis of S&P 500 options shows that this boosted tree-based specification reduces one-month-ahead root mean squared error by 13 percent compared to a benchmark model, with improvements being particularly pronounced during stress periods.",
-    "angle_eco_en": "Incorporating data-driven heterogeneity into implied volatility forecasting models significantly improves out-of-sample pricing accuracy and uncovers distinct persistence dynamics across option moneyness and maturity dimensions."
   }
 ]
