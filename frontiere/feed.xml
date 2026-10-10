@@ -6,6 +6,20 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>How Heavily Are PhD Students Offloading Their Scientific Writing to AI? Evidence from US STEM PhD Dissertations</title>
+      <link>https://www.nber.org/papers/w35859#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35859-fromrss</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Une étude portant sur la quasi-totalité des diplômés de doctorat en STEM aux États-Unis de 2019 à 2026 montre que la rédaction par intelligence artificielle, absente avant 2023, concerne 29 % des thèses en 2026 et progresse rapidement, avec un usage plus fréquent chez les étudiants issus de pays non anglophones et dans les programmes les moins bien classés. À programme et cohorte identiques, les diplômés recourant à l'intelligence artificielle sont moins susceptibles d'entamer une carrière dans la recherche académique et s'orientent davantage vers l'industrie ou des postes hors voie de titularisation, ce qui suggère un déplacement d'une part importante du travail développant l'expertise scientifique.</description>
+    </item>
+    <item>
+      <title>Financing the AI Buildout</title>
+      <link>https://www.nber.org/papers/w35865#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35865-fromrss</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+      <description>L'expansion des centres de données et des infrastructures énergétiques destinées à l'intelligence artificielle aux États-Unis pourrait nécessiter près de 9 mille milliards de dollars d'investissements d'ici 2032, soit 3,2 % du PIB annuel entre 2025 et 2032. Les dépenses dépassant la trésorerie interne des acteurs technologiques, le financement s'oriente vers la titrisation, le crédit privé et les véhicules ad hoc, ce qui accroît la capacité de capital mais augmente le levier financier tout en masquant des obligations contingentes.</description>
+    </item>
+    <item>
       <title>Validity Without Ground Truth: What Stated-Preference Economics Offers the Evaluation of Language Models</title>
       <link>https://arxiv.org/abs/2610.10506v1</link>
       <guid isPermaLink="false">arxiv-2610.10506v1</guid>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">arxiv-2609.03851v1</guid>
       <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
       <description>Pour résoudre la dégradation des explications causée par le bruit de confidentialité différentielle en apprentissage fédéré, cet article présente XCal-FL, un algorithme qui ajuste dynamiquement ce bruit durant l'entraînement à partir de trois signaux d'explicabilité complémentaires. Des expériences menées sur trois jeux de données d'imagerie médicale montrent que cet algorithme améliore la performance prédictive de plus de 10 % et la fidélité des explications jusqu'à 5 fois par rapport aux méthodes à bruit statique, tout en optimisant l'efficacité du budget de confidentialité.</description>
-    </item>
-    <item>
-      <title>AI in a fragmenting world: Why ‘connector’ economies can still gain</title>
-      <link>https://cepr.org/voxeu/columns/ai-fragmenting-world-why-connector-economies-can-still-gain</link>
-      <guid isPermaLink="false">voxeu--ai-fragmenting-world-why-connector-economies-can-still-gain</guid>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <description>L'innovation en intelligence artificielle se concentre dans un petit nombre d'économies, tandis que les gains qui en découlent reposent sur la circulation transfrontalière de technologies, d'intrants intermédiaires, de données, d'investissements et de savoir-faire dans une économie mondiale de plus en plus fragmentée. Cette fragmentation façonne ainsi l'ampleur et la répartition des bénéfices mondiaux de l'intelligence artificielle, faisant du maintien de liens économiques diversifiés une option précieuse pour les pays éloignés de la frontière technologique.</description>
-    </item>
-    <item>
-      <title>The generative AI learning penalty in secondary school</title>
-      <link>https://cepr.org/voxeu/columns/generative-ai-learning-penalty-secondary-school</link>
-      <guid isPermaLink="false">voxeu-oxeu-columns-generative-ai-learning-penalty-secondary-school</guid>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Une étude portant sur plus de 25 000 élèves du secondaire en Chine montre que l'utilisation autonome de l'intelligence artificielle générative réduit le temps consacré aux devoirs et améliore leurs notes, mais entraîne une baisse de leurs résultats aux examens. Bien que cet impact négatif soit initialement faible, il s'amplifie à mesure que les élèves maîtrisent ces outils et assimilent la suite du programme, ce qui suggère que les études de courte durée sous-estiment les coûts d'apprentissage à long terme de l'IA générative.</description>
     </item>
   </channel>
 </rss>

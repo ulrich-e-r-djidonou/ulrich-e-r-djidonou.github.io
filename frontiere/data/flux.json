@@ -1,5 +1,48 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35859-fromrss",
+    "titre": "How Heavily Are PhD Students Offloading Their Scientific Writing to AI? Evidence from US STEM PhD Dissertations",
+    "url": "https://www.nber.org/papers/w35859#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-10-10",
+    "resume_fr": "Une étude portant sur la quasi-totalité des diplômés de doctorat en STEM aux États-Unis de 2019 à 2026 montre que la rédaction par intelligence artificielle, absente avant 2023, concerne 29 % des thèses en 2026 et progresse rapidement, avec un usage plus fréquent chez les étudiants issus de pays non anglophones et dans les programmes les moins bien classés. À programme et cohorte identiques, les diplômés recourant à l'intelligence artificielle sont moins susceptibles d'entamer une carrière dans la recherche académique et s'orientent davantage vers l'industrie ou des postes hors voie de titularisation, ce qui suggère un déplacement d'une part importante du travail développant l'expertise scientifique.",
+    "angle_eco": "La délégation de la rédaction des thèses à l'intelligence artificielle risque de compromettre le développement de l'expertise scientifique tout en réduisant la probabilité pour les doctorants d'embrasser une carrière de recherche académique au profit du secteur privé ou de postes non titularisables.",
+    "themes": [
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Daniel P. Gross, Dror Shvadron, Hansen Zhang",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "angle_eco_en": "Delegating dissertation writing to large language models creates a trade-off between short-term research productivity gains and the long-term acquisition of scientific expertise, with AI adoption ultimately associated with a lower likelihood of STEM PhD graduates entering academic research careers."
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35865-fromrss",
+    "titre": "Financing the AI Buildout",
+    "url": "https://www.nber.org/papers/w35865#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-10-10",
+    "resume_fr": "L'expansion des centres de données et des infrastructures énergétiques destinées à l'intelligence artificielle aux États-Unis pourrait nécessiter près de 9 mille milliards de dollars d'investissements d'ici 2032, soit 3,2 % du PIB annuel entre 2025 et 2032. Les dépenses dépassant la trésorerie interne des acteurs technologiques, le financement s'oriente vers la titrisation, le crédit privé et les véhicules ad hoc, ce qui accroît la capacité de capital mais augmente le levier financier tout en masquant des obligations contingentes.",
+    "angle_eco": "Le dépassement des flux de trésorerie internes des grands acteurs technologiques par les dépenses d'infrastructure en intelligence artificielle oriente le financement vers le crédit privé et des véhicules ad hoc, augmentant le levier financier au niveau des actifs tout en occultant des obligations contingentes.",
+    "themes": [
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Stijn Van Nieuwerburgh",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A projected 188-gigawatt artificial intelligence buildout in the United States by 2032 would require nearly $9 trillion in total investment, representing 3.2 percent of annual GDP from 2025 to 2032 with a single 1-gigawatt campus costing about $41 billion. Because hyperscaler capital expenditures exceed internal cash flow, financing is shifting toward structures such as leases, project debt, and special-purpose vehicles, which expand funding capacity but raise asset-level leverage, obscure contingent obligations, and expose investors to risks including technological obsolescence, execution delays, and tenant concentration.",
+    "angle_eco_en": "The massive capital required for the expansion of artificial intelligence infrastructure is shifting financing from internal cash flow to complex structures like leases, private credit, and special-purpose vehicles, which increases asset-level leverage, obscures contingent obligations, and exposes investors to risks such as technological obsolescence, execution delays, and tenant concentration."
+  },
+  {
     "id": "arxiv-2610.10506v1",
     "titre": "Validity Without Ground Truth: What Stated-Preference Economics Offers the Evaluation of Language Models",
     "url": "https://arxiv.org/abs/2610.10506v1",
@@ -108,7 +151,7 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Anjali Adukia, Matthew Bonci, Paula Dastres Gallardo, Emileigh Harrison, Jake Nicoll, Teodora Szasz",
-    "signal": true,
+    "signal": false,
     "llm": "claude-haiku-4-5",
     "resume_en": "Using machine learning and generative AI tools, researchers examined emotional content in public-school textbooks and children's literature, finding that text exposes children to a broad emotional range while images overwhelmingly depict happiness and calm. Nearly half of pages show zero overlap between the emotions described in text and those shown in images, a pattern that persists across time, contexts, and identities, with evidence suggesting that consumer demand for positive cover imagery may be narrowing the emotional landscape children encounter.",
     "angle_eco_en": "Educational materials present children with a disconnect between the emotional range described in text and the predominantly positive emotions shown in accompanying images, potentially limiting their exposure to the full spectrum of human emotional experience.",
@@ -2122,108 +2165,5 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "A large-scale randomized field experiment on an Android app store with over five million users found that increasing sponsored ad slots from one to six raises revenue by up to 43% but reduces total search conversions by up to 5% and daily engagement by up to 2.2%, with substantial heterogeneity across query types depending on advertiser composition. The authors deployed an adaptive algorithm called exploration-augmented Locally Adaptive Ad Load (e-LAAL) that improved the revenue-conversion trade-off in a production deployment serving 22.3 million users and 77.6 million searches compared to static benchmarks.",
     "angle_eco_en": "Increasing the number of sponsored advertisement slots in search results raises revenue but reduces user search conversions and engagement, with the magnitude of this trade-off varying substantially across queries depending on advertiser composition and user conversion propensity."
-  },
-  {
-    "id": "arxiv-2607.09568v1",
-    "titre": "Perturbed utility Markovian traffic equilibrium: theory and computation",
-    "url": "https://arxiv.org/abs/2607.09568v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-10",
-    "resume_fr": "L'article développe un cadre d'équilibre marcovien à utilité perturbée pour l'affectation du trafic à grande échelle, capable d'attribuer des flux nuls aux tronçons peu attractifs sans imposer de restriction préalable sur l'ensemble des choix. Formulé sous la forme d'une inégalité variationnelle sur l'espace des coûts duaux, ce modèle garantit l'existence et l'unicité de l'équilibre pour des structures de coûts non séparables et asymétriques, tout en introduisant une méthode d'itération sur les politiques modifiée pour son calcul.",
-    "angle_eco": "L'intégration d'une fonction de surplus convexe au sein d'un modèle de choix markovien permet d'attribuer des flux nuls aux tronçons non attractifs sans restriction préalable des options, tout en garantissant l'existence et l'unicité d'un équilibre de trafic à grande échelle aux structures de coûts non séparables.",
-    "themes": [
-      "llm",
-      "politique-publique",
-      "outils-recherche"
-    ],
-    "score": 4,
-    "auteurs": "Rui Yao, Kenan Zhang",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "The paper introduces a perturbed utility Markovian equilibrium (PUME) framework that extends link-based Markovian traffic equilibrium models to accommodate boundary choice probabilities, undiscounted network loading, and general link interactions while maintaining computational scalability. The authors establish the theoretical foundations of PUME through a perturbed utility Markovian choice model with a convex surplus function, formulate equilibrium as a variational inequality problem with existence and uniqueness guarantees, and develop a modified policy iteration method for computation.",
-    "angle_eco_en": "Existing Markovian traffic equilibrium models lack the flexibility to handle boundary choice probabilities where unattractive links receive zero flow, non-separable cost structures, and asymmetric link interactions without imposing restrictive ex ante choice-set constraints."
-  },
-  {
-    "id": "arxiv-2607.09461v1",
-    "titre": "Deep Learning for Dynamic Programming with Recursive Utility Using First-order Conditions",
-    "url": "https://arxiv.org/abs/2607.09461v1",
-    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
-    "type": "papier",
-    "date_publication": "2026-07-10",
-    "resume_fr": "L'article présente l'algorithme CEFOL, une méthode d'apprentissage profond conçue pour la programmation dynamique en temps discret à utilité récursive qui utilise des réseaux de neurones pour représenter l'équivalent certain, la fonction de valeur, les règles de décision et les multiplicateurs de Lagrange. En s'appuyant sur les conditions d'optimalité du premier ordre et de Karush-Kuhn-Tucker, cet algorithme intègre directement les contraintes d'inégalité sans fonction de pénalité et affiche des résidus d'optimalité hors échantillon compris entre 1,0e-4 et 1,0e-3 sur des modèles d'épargne et des modèles DSGE.",
-    "angle_eco": "L'utilisation de réseaux de neurones distincts pour approximer l'équivalent certain et minimiser les résidus des conditions de premier ordre permet de résoudre directement les problèmes d'optimisation dynamique à utilité récursive soumis à des contraintes d'égalité et d'inégalité, y compris lorsqu'elles sont occasionnellement saturées.",
-    "themes": [
-      "llm",
-      "politique-publique"
-    ],
-    "score": 8,
-    "auteurs": "Xianhua Peng, Wu Guo, Songyan Wang, Jianfei Zhu",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "deja_signal": true,
-    "resume_en": "The authors propose the certainty-equivalent first-order learning (CEFOL) algorithm, which uses separate neural networks to represent the certainty equivalent, value functions, policy functions, and Lagrange multipliers by exploiting Bellman equations and first-order optimality conditions to solve discrete-time dynamic programming problems with recursive utility. The algorithm is applied to risk-sensitive consumption-saving problems, robust-control problems, and a DSGE model with recursive preferences, achieving out-of-sample Bellman diagnostics and optimality residuals generally between 1.0e-4 and 1.0e-3 across relevant state regions.",
-    "angle_eco_en": "The nonlinear certainty equivalent that appears in the Bellman equation and first-order optimality conditions for recursive utility problems is difficult to evaluate directly within standard dynamic programming approaches."
-  },
-  {
-    "id": "arxiv-2607.09616v1",
-    "titre": "LLM for EDA in Front-End Design: Challenges and Opportunities",
-    "url": "https://arxiv.org/abs/2607.09616v1",
-    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
-    "type": "papier",
-    "date_publication": "2026-07-10",
-    "resume_fr": "Les modèles de langage de grande taille montrent un potentiel significatif en automatisation de la conception électronique, notamment pour la génération de langages de description matérielle, la construction de bancs d'essai et l'exploration de l'espace de conception, tandis que l'émergence d'une intelligence artificielle agentive ouvre une nouvelle voie pour l'évolution de l'automatisation de la conception électronique vers une exécution autonome. Cet article examine les avancées des modèles de langage dans la conception avant-projet en se concentrant sur la génération de circuits et de bancs d'essai à partir d'une spécification commune, ainsi que sur l'amélioration de la qualité de conception, tout en identifiant les défis clés et les opportunités futures pour intégrer ces modèles dans les outils d'automatisation de la conception électronique.",
-    "angle_eco": "L'intégration des modèles de langage de grande taille dans l'automatisation de la conception électronique pourrait transformer la conception front-end en passant d'une assistance localisée à une exécution autonome capable de générer des descriptions matérielles, de construire des bancs de test et d'explorer l'espace de conception à partir d'une spécification partagée.",
-    "themes": [
-      "llm"
-    ],
-    "score": 3,
-    "auteurs": "Kangwei Xu, Bing Li, Ulf Schlichtmann",
-    "signal": false,
-    "llm": "claude-haiku-4-5",
-    "resume_en": "Large Language Models have demonstrated potential in Electronic Design Automation for front-end chip design, with applications including specification understanding, hardware description language generation, testbench construction, and design space exploration. The paper reviews LLM advances in circuit and testbench generation from specifications and design quality improvement in high-level synthesis workflows, while discussing challenges and future opportunities for integrating agentic AI systems into EDA.",
-    "angle_eco_en": "Increasing chip complexity and time-to-market pressures create a critical bottleneck in front-end design that large language models may help address through automated hardware description language generation, testbench construction, and design space exploration."
-  },
-  {
-    "id": "arxiv-2607.09348v1",
-    "titre": "DKCD: Domain Knowledge-Enhanced Causal Discovery from Unstructured Data",
-    "url": "https://arxiv.org/abs/2607.09348v1",
-    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
-    "type": "papier",
-    "date_publication": "2026-07-10",
-    "resume_fr": "Les auteurs proposent DKCD, un cadre de découverte causale à partir de données non structurées dans des domaines à haute expertise comme la santé et la finance, qui intègre des connaissances spécifiques au domaine pour identifier les facteurs latents implicites dans les données et améliorer l'annotation fiable des facteurs. Le framework combine trois composantes interconnectées : l'extraction de connaissances du domaine, le raisonnement causal guidé par ces connaissances pour découvrir les facteurs causaux latents, et la construction de graphes causaux basée sur un ensemble de facteurs plus complet et des annotations plus précises.",
-    "angle_eco": "L'identification insuffisante des facteurs latents implicites dans les données non structurées et l'annotation peu fiable de ces facteurs, dues à l'absence de connaissances spécifiques au domaine, constituent des obstacles majeurs à la découverte causale dans les secteurs à haute expertise comme la santé, la finance et l'éducation.",
-    "themes": [
-      "inference-causale",
-      "llm",
-      "outils-recherche"
-    ],
-    "score": 4,
-    "auteurs": "Xin Li, Jin Li, Shoujin Wang, Kun Yu, Fang Chen",
-    "signal": false,
-    "llm": "claude-haiku-4-5",
-    "resume_en": "The paper addresses causal discovery from unstructured data in high-expertise domains by proposing DKCD, a framework that integrates domain knowledge mining, knowledge-guided causal reasoning, and causal structure discovery to overcome limitations in identifying latent factors and annotating factors reliably. Experiments on two domain-specific datasets demonstrate that DKCD significantly improves performance in constructing causal graphs from unstructured data.",
-    "angle_eco_en": "Identifying latent causal factors from unstructured data in specialized domains like healthcare and finance remains difficult without domain-specific knowledge to guide the reasoning process that connects observable information to underlying causal structures."
-  },
-  {
-    "id": "arxiv-2607.09316v1",
-    "titre": "Automatic Thematic Indexing of Large Literary Corpora: A Machine Learning Approach to Voltaire's Complete Works",
-    "url": "https://arxiv.org/abs/2607.09316v1",
-    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
-    "type": "papier",
-    "date_publication": "2026-07-10",
-    "resume_fr": "Les auteurs appliquent l'apprentissage automatique à l'indexation thématique de deux sous-corpus importants des Œuvres complètes de Voltaire, en formulant la tâche comme un problème de classification multi-étiquettes où un modèle doit assigner les entrées d'index qu'un indexeur professionnel appliquerait à une page de texte donnée. Le meilleur modèle, issu de la famille Mistral en configuration quantifiée 4-bit, atteint des scores F1 jusqu'à 0,67, les auteurs arguant que ces résultats constituent des bornes inférieures compte tenu de la subjectivité inhérente à l'indexation professionnelle et de la fréquence à laquelle les prédictions du modèle s'avèrent sémantiquement valides malgré des divergences avec l'index imprimé.",
-    "angle_eco": "L'automatisation de l'indexation thématique des grands corpus littéraires par apprentissage automatique pourrait réduire le caractère manuel et intensif en travail de cette pratique essentielle à l'accès savant aux éditions historiques et littéraires de grande envergure.",
-    "themes": [
-      "llm",
-      "prevision",
-      "travail-emploi"
-    ],
-    "score": 3,
-    "auteurs": "Miguel Arana-Catania, Gillian Pink, Glenn Roe",
-    "signal": false,
-    "llm": "claude-haiku-4-5",
-    "resume_en": "The paper applies machine learning to automatic thematic indexing of Voltaire's Complete Works, framing the task as multi-label classification and comparing approaches ranging from encoder-based models to large language models fine-tuned via Low-Rank Adaptation. The best-performing model, a quantised Mistral variant, achieves F1 scores up to 0.67 and demonstrates semantic validity in predictions despite divergences from the print index, while the authors also evaluate cross-corpus generalisation and analyse model performance on literary and rhetorical features.",
-    "angle_eco_en": "The labour-intensive nature of manually assigning structured conceptual labels to sections of text in large literary and historical editions creates a need for automated approaches that can learn to replicate professional indexing decisions across multi-label classification tasks."
   }
 ]

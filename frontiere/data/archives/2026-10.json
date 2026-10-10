@@ -1,5 +1,405 @@
 [
   {
+    "id": "voxeu-g-voxeu-columns-financing-ai-buildout-risks-go-balance-sheet",
+    "titre": "Financing the AI buildout before the risks go off balance sheet",
+    "url": "https://cepr.org/voxeu/columns/financing-ai-buildout-risks-go-balance-sheet",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Stijn Van Nieuwerburgh",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12350v1",
+    "titre": "The Panel Information Matrix Test",
+    "url": "https://arxiv.org/abs/2610.12350v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Martin Schumann",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12186v1",
+    "titre": "Microfinance Competition in the Presence of Moneylenders: Theory and Evidence",
+    "url": "https://arxiv.org/abs/2610.12186v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Shyamal Chowdhury, Prabal Roy Chowdhury, Joeri Smits",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12049v1",
+    "titre": "The Myth of Restrictive Working-Time Agreements: Firms' Working-Time Adjustment after Exit from Collective Bargaining",
+    "url": "https://arxiv.org/abs/2610.12049v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Vinzenz Pyka, André Rieder",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12025v1",
+    "titre": "Rolling Window Selection in FAR Models with Structural Instabilities",
+    "url": "https://arxiv.org/abs/2610.12025v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Antoine A. Djogbenou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.11898v1",
+    "titre": "Inference in Panel SVARs with Two-Way Dependence",
+    "url": "https://arxiv.org/abs/2610.11898v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Lennart Empting, Saskia Öztürk, Simone Maxand, Konstantin Wagner",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.11256v1",
+    "titre": "Who Leads and Who Collects:Algorithmic Collusion in Markets of Heterogeneous Language Models",
+    "url": "https://arxiv.org/abs/2610.11256v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "llm"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Jun Yeong Lee",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.11093v1",
+    "titre": "Risk Ceilings and Development Deadlines: Pacing AI under Uncertain Safety Productivity",
+    "url": "https://arxiv.org/abs/2610.11093v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Li Gan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12465v1",
+    "titre": "A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control",
+    "url": "https://arxiv.org/abs/2610.12465v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Octi Zhang, Mateo Guaman Castro, Patrick Yin, Ignacio Dagnino, Abhishek Gupta, Rosario Scalise, Byron Boots",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12435v1",
+    "titre": "VioLA: Learning Generalist Humanoid Control Policies from Human Data",
+    "url": "https://arxiv.org/abs/2610.12435v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Mert Albaba, Jens Beißwenger, Anna Manasyan, Daniel Marta, Michael J. Black, Wieland Brendel, Andreas Krause, Georg Martius, Martin Riedmiller",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12432v1",
+    "titre": "FAITH: Feasibility-Aware Safety-Filtered RL for High-Dimensional Systems",
+    "url": "https://arxiv.org/abs/2610.12432v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Songyuan Zhang, Baljeet Singh, Sarthak Ranjeet Kaingade, Chuchu Fan, Bryan Trinh",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12428v1",
+    "titre": "Toward Joint Optimization of Circuit Depth and Training Data Size in Adaptively Grown Quantum Classifiers",
+    "url": "https://arxiv.org/abs/2610.12428v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Saeefa Rubaiyet Nowmi, Md Mahmuduzzaman Kamol, Mohammad Saidur Rahman",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12420v1",
+    "titre": "A Unified Bellman Operator for Safety-Critical Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2610.12420v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Nishanth Arun Rao, Royina Karegoudra Jayanth, Benjamin Eysenbach, Jaime Fernández Fisac",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12403v1",
+    "titre": "ViSkill: Reinforcing VLM Agents with Evolving Visual-Native Skills",
+    "url": "https://arxiv.org/abs/2610.12403v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Hongxing Li, Dingming Li, Yixin Li, Yong Du, Wenqi Zhang, Weiming Lu, Jun Xiao, Yueting Zhuang, Yongliang Shen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12390v1",
+    "titre": "Long Text to Predictive Features: LLM-Guided Blockwise Feature Engineering via Executable Program Search",
+    "url": "https://arxiv.org/abs/2610.12390v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "llm",
+      "prevision",
+      "travail-emploi"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Ziming Dai, Dabiao Ma, Ziheng Guo, Jack Dong, Zimu Zhou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12375v1",
+    "titre": "OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport",
+    "url": "https://arxiv.org/abs/2610.12375v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Babak Barazandeh, Connor Swanson, Chinmay Kulkarni, Nikhil Mungel",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12367v1",
+    "titre": "Which Skill to Distill? SGUID: Selecting a Compact Skill Bank for Model-Skill Co-Evolution",
+    "url": "https://arxiv.org/abs/2610.12367v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Yuhan Liu, Xiyao Ma, Zhongkai Sun, Xu Han, Chengyuan Ma, Benjamin Z. Yao, Chenlei Guo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12362v1",
+    "titre": "Closing the Horizon Gap in Policy Optimization for Adversarial MDPs",
+    "url": "https://arxiv.org/abs/2610.12362v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Mingyi Li, Taira Tsuchiya",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12341v1",
+    "titre": "Can AI Agents Learn Their Way to the Top? Evaluating Heuristic Learning in a Long-Running Game Agent Competition",
+    "url": "https://arxiv.org/abs/2610.12341v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Kaisen Yang, Qingle Liu, Kejin Wang, Yicheng Zhao, Jieming Li, Shenghan Zheng, Ruize Yang, Bojun Yang, Heng Gong, Xiang Gao, Lanyue Zhang, Kaiyu Zhong, Zhuo Liu, Shaoxuan Li, Chengxi Li, Yong Yan, Weixuan Zhang, Tianwei Luo, Situ Wang, Youjie Zheng, Sihan Zhao, Shengyuan Wang, Huan-ang Gao, Jiazheng Xu, Xiaohui Xie, Wentao Han, Hongning Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12321v1",
+    "titre": "Spatial Pattern Formation from Multi-Agent Learning in Public Goods Dilemmas",
+    "url": "https://arxiv.org/abs/2610.12321v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yefei Zhang, Yuxuan Zhao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12313v1",
+    "titre": "Verdict Without the Rule: Diagnosing and Auditing Regulatory Rule Sensitivity in LLM Compliance Systems",
+    "url": "https://arxiv.org/abs/2610.12313v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "llm",
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Saisab Sadhu, Aadit Sengupta, Vinay kumar Sankarapu, Pratinav Seth",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12232v1",
+    "titre": "Training on the Future: A Delay-Aware Audit of Test-Time Adaptation for Time-Series Forecasting",
+    "url": "https://arxiv.org/abs/2610.12232v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Mohamed Readh Fentazi, Mazene Ameur, Adlen Ksentini",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12211v1",
+    "titre": "Verification with Transfer: Exact Information Frontiers and Their Price in Calls",
+    "url": "https://arxiv.org/abs/2610.12211v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "inference-causale",
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Hazar Yueksel",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12201v1",
+    "titre": "SteerablePlex: Can We Steer Full-Duplex Models?",
+    "url": "https://arxiv.org/abs/2610.12201v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Haolong Zheng, Maike Züfle, Dominik Macháček, Peter Polák, Xulin Fan, Xavier Sumba, Siyin Wang, Ondřej Klejch, Mark Hasegawa-Johnson",
+    "signal": false
+  },
+  {
     "id": "arxiv-2610.10476v1",
     "titre": "From a Hierarchy of Stochastic Differential Equations to a Hierarchy of Generalized Beta Distributions",
     "url": "https://arxiv.org/abs/2610.10476v1",
@@ -377,6 +777,36 @@
     "nb_eco": 1,
     "nb_ia": 2,
     "auteurs": "Trevor McCourt, Ila R. Fiete, Isaac L. Chuang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.10873v1",
+    "titre": "When Does Inexact Matching Ensure Balance and Inference without Adjustment?",
+    "url": "https://arxiv.org/abs/2610.10873v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-07",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Ying Jin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.10606v1",
+    "titre": "The Gendered Impacts of Perceived Skin Tone: Evidence from African American Siblings in 1870-1940",
+    "url": "https://arxiv.org/abs/2610.10606v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-07",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Ran Abramitzky, Jacob Conway, Roy Mill, Luke C. D. Stein",
     "signal": false
   },
   {

@@ -518,6 +518,109 @@
     "llm": "qwen2.5:3b"
   },
   {
+    "id": "arxiv-2607.09568v1",
+    "titre": "Perturbed utility Markovian traffic equilibrium: theory and computation",
+    "url": "https://arxiv.org/abs/2607.09568v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "L'article développe un cadre d'équilibre marcovien à utilité perturbée pour l'affectation du trafic à grande échelle, capable d'attribuer des flux nuls aux tronçons peu attractifs sans imposer de restriction préalable sur l'ensemble des choix. Formulé sous la forme d'une inégalité variationnelle sur l'espace des coûts duaux, ce modèle garantit l'existence et l'unicité de l'équilibre pour des structures de coûts non séparables et asymétriques, tout en introduisant une méthode d'itération sur les politiques modifiée pour son calcul.",
+    "angle_eco": "L'intégration d'une fonction de surplus convexe au sein d'un modèle de choix markovien permet d'attribuer des flux nuls aux tronçons non attractifs sans restriction préalable des options, tout en garantissant l'existence et l'unicité d'un équilibre de trafic à grande échelle aux structures de coûts non séparables.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 4,
+    "auteurs": "Rui Yao, Kenan Zhang",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper introduces a perturbed utility Markovian equilibrium (PUME) framework that extends link-based Markovian traffic equilibrium models to accommodate boundary choice probabilities, undiscounted network loading, and general link interactions while maintaining computational scalability. The authors establish the theoretical foundations of PUME through a perturbed utility Markovian choice model with a convex surplus function, formulate equilibrium as a variational inequality problem with existence and uniqueness guarantees, and develop a modified policy iteration method for computation.",
+    "angle_eco_en": "Existing Markovian traffic equilibrium models lack the flexibility to handle boundary choice probabilities where unattractive links receive zero flow, non-separable cost structures, and asymmetric link interactions without imposing restrictive ex ante choice-set constraints."
+  },
+  {
+    "id": "arxiv-2607.09461v1",
+    "titre": "Deep Learning for Dynamic Programming with Recursive Utility Using First-order Conditions",
+    "url": "https://arxiv.org/abs/2607.09461v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "L'article présente l'algorithme CEFOL, une méthode d'apprentissage profond conçue pour la programmation dynamique en temps discret à utilité récursive qui utilise des réseaux de neurones pour représenter l'équivalent certain, la fonction de valeur, les règles de décision et les multiplicateurs de Lagrange. En s'appuyant sur les conditions d'optimalité du premier ordre et de Karush-Kuhn-Tucker, cet algorithme intègre directement les contraintes d'inégalité sans fonction de pénalité et affiche des résidus d'optimalité hors échantillon compris entre 1,0e-4 et 1,0e-3 sur des modèles d'épargne et des modèles DSGE.",
+    "angle_eco": "L'utilisation de réseaux de neurones distincts pour approximer l'équivalent certain et minimiser les résidus des conditions de premier ordre permet de résoudre directement les problèmes d'optimisation dynamique à utilité récursive soumis à des contraintes d'égalité et d'inégalité, y compris lorsqu'elles sont occasionnellement saturées.",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 8,
+    "auteurs": "Xianhua Peng, Wu Guo, Songyan Wang, Jianfei Zhu",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "deja_signal": true,
+    "resume_en": "The authors propose the certainty-equivalent first-order learning (CEFOL) algorithm, which uses separate neural networks to represent the certainty equivalent, value functions, policy functions, and Lagrange multipliers by exploiting Bellman equations and first-order optimality conditions to solve discrete-time dynamic programming problems with recursive utility. The algorithm is applied to risk-sensitive consumption-saving problems, robust-control problems, and a DSGE model with recursive preferences, achieving out-of-sample Bellman diagnostics and optimality residuals generally between 1.0e-4 and 1.0e-3 across relevant state regions.",
+    "angle_eco_en": "The nonlinear certainty equivalent that appears in the Bellman equation and first-order optimality conditions for recursive utility problems is difficult to evaluate directly within standard dynamic programming approaches."
+  },
+  {
+    "id": "arxiv-2607.09616v1",
+    "titre": "LLM for EDA in Front-End Design: Challenges and Opportunities",
+    "url": "https://arxiv.org/abs/2607.09616v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "Les modèles de langage de grande taille montrent un potentiel significatif en automatisation de la conception électronique, notamment pour la génération de langages de description matérielle, la construction de bancs d'essai et l'exploration de l'espace de conception, tandis que l'émergence d'une intelligence artificielle agentive ouvre une nouvelle voie pour l'évolution de l'automatisation de la conception électronique vers une exécution autonome. Cet article examine les avancées des modèles de langage dans la conception avant-projet en se concentrant sur la génération de circuits et de bancs d'essai à partir d'une spécification commune, ainsi que sur l'amélioration de la qualité de conception, tout en identifiant les défis clés et les opportunités futures pour intégrer ces modèles dans les outils d'automatisation de la conception électronique.",
+    "angle_eco": "L'intégration des modèles de langage de grande taille dans l'automatisation de la conception électronique pourrait transformer la conception front-end en passant d'une assistance localisée à une exécution autonome capable de générer des descriptions matérielles, de construire des bancs de test et d'explorer l'espace de conception à partir d'une spécification partagée.",
+    "themes": [
+      "llm"
+    ],
+    "score": 3,
+    "auteurs": "Kangwei Xu, Bing Li, Ulf Schlichtmann",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "Large Language Models have demonstrated potential in Electronic Design Automation for front-end chip design, with applications including specification understanding, hardware description language generation, testbench construction, and design space exploration. The paper reviews LLM advances in circuit and testbench generation from specifications and design quality improvement in high-level synthesis workflows, while discussing challenges and future opportunities for integrating agentic AI systems into EDA.",
+    "angle_eco_en": "Increasing chip complexity and time-to-market pressures create a critical bottleneck in front-end design that large language models may help address through automated hardware description language generation, testbench construction, and design space exploration."
+  },
+  {
+    "id": "arxiv-2607.09348v1",
+    "titre": "DKCD: Domain Knowledge-Enhanced Causal Discovery from Unstructured Data",
+    "url": "https://arxiv.org/abs/2607.09348v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "Les auteurs proposent DKCD, un cadre de découverte causale à partir de données non structurées dans des domaines à haute expertise comme la santé et la finance, qui intègre des connaissances spécifiques au domaine pour identifier les facteurs latents implicites dans les données et améliorer l'annotation fiable des facteurs. Le framework combine trois composantes interconnectées : l'extraction de connaissances du domaine, le raisonnement causal guidé par ces connaissances pour découvrir les facteurs causaux latents, et la construction de graphes causaux basée sur un ensemble de facteurs plus complet et des annotations plus précises.",
+    "angle_eco": "L'identification insuffisante des facteurs latents implicites dans les données non structurées et l'annotation peu fiable de ces facteurs, dues à l'absence de connaissances spécifiques au domaine, constituent des obstacles majeurs à la découverte causale dans les secteurs à haute expertise comme la santé, la finance et l'éducation.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 4,
+    "auteurs": "Xin Li, Jin Li, Shoujin Wang, Kun Yu, Fang Chen",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The paper addresses causal discovery from unstructured data in high-expertise domains by proposing DKCD, a framework that integrates domain knowledge mining, knowledge-guided causal reasoning, and causal structure discovery to overcome limitations in identifying latent factors and annotating factors reliably. Experiments on two domain-specific datasets demonstrate that DKCD significantly improves performance in constructing causal graphs from unstructured data.",
+    "angle_eco_en": "Identifying latent causal factors from unstructured data in specialized domains like healthcare and finance remains difficult without domain-specific knowledge to guide the reasoning process that connects observable information to underlying causal structures."
+  },
+  {
+    "id": "arxiv-2607.09316v1",
+    "titre": "Automatic Thematic Indexing of Large Literary Corpora: A Machine Learning Approach to Voltaire's Complete Works",
+    "url": "https://arxiv.org/abs/2607.09316v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-10",
+    "resume_fr": "Les auteurs appliquent l'apprentissage automatique à l'indexation thématique de deux sous-corpus importants des Œuvres complètes de Voltaire, en formulant la tâche comme un problème de classification multi-étiquettes où un modèle doit assigner les entrées d'index qu'un indexeur professionnel appliquerait à une page de texte donnée. Le meilleur modèle, issu de la famille Mistral en configuration quantifiée 4-bit, atteint des scores F1 jusqu'à 0,67, les auteurs arguant que ces résultats constituent des bornes inférieures compte tenu de la subjectivité inhérente à l'indexation professionnelle et de la fréquence à laquelle les prédictions du modèle s'avèrent sémantiquement valides malgré des divergences avec l'index imprimé.",
+    "angle_eco": "L'automatisation de l'indexation thématique des grands corpus littéraires par apprentissage automatique pourrait réduire le caractère manuel et intensif en travail de cette pratique essentielle à l'accès savant aux éditions historiques et littéraires de grande envergure.",
+    "themes": [
+      "llm",
+      "prevision",
+      "travail-emploi"
+    ],
+    "score": 3,
+    "auteurs": "Miguel Arana-Catania, Gillian Pink, Glenn Roe",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The paper applies machine learning to automatic thematic indexing of Voltaire's Complete Works, framing the task as multi-label classification and comparing approaches ranging from encoder-based models to large language models fine-tuned via Low-Rank Adaptation. The best-performing model, a quantised Mistral variant, achieves F1 scores up to 0.67 and demonstrates semantic validity in predictions despite divergences from the print index, while the authors also evaluate cross-corpus generalisation and analyse model performance on literary and rhetorical features.",
+    "angle_eco_en": "The labour-intensive nature of manually assigning structured conceptual labels to sections of text in large literary and historical editions creates a need for automated approaches that can learn to replicate professional indexing decisions across multi-label classification tasks."
+  },
+  {
     "id": "arxiv-2607.08610v1",
     "titre": "Sharing economy in the era of full automation: Evidence from autonomous vehicle on-demand mobility services",
     "url": "https://arxiv.org/abs/2607.08610v1",
