@@ -6,6 +6,20 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Indirect Variational Inference: Applications to Earnings Dynamics</title>
+      <link>https://www.nber.org/papers/w35877#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35877-fromrss</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+      <description>L'inférence variationnelle permet de traiter l'intraitabilité des intégrations dans les modèles à variables latentes, mais elle induit un biais si la famille variationnelle manque de flexibilité, ce que l'inférence variationnelle indirecte corrige en utilisant l'approche variationnelle comme modèle auxiliaire. Sans nécessiter le calcul de la vraisemblance, cette méthode conserve la faisabilité computationnelle de l'inférence variationnelle et fournit des estimations fiables lorsqu'elle est appliquée à des modèles de dynamique des revenus comportant de la persistance non linéaire, des chocs non gaussiens et de l'hétérogénéité latente.</description>
+    </item>
+    <item>
+      <title>Explaining Realized Returns: Roll’s R2 40 Years Later</title>
+      <link>https://www.nber.org/papers/w35885#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35885-fromrss</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Les variables macroéconomiques, de flux de trésorerie et de flux conventionnelles produisent des R2 hors échantillon souvent négatifs ou inférieurs à 10% pour les rendements mensuels des actions américaines, tandis que l'intelligence artificielle générative appliquée aux résumés du Wall Street Journal permet d'extraire les raisons énoncées des mouvements de prix et d'expliquer environ 30 à 40% des rendements quotidiens et mensuels hors échantillon. Ces raisons extraites correspondent à des thèmes interprétables incluant l'actualité des entreprises, les conditions macroéconomiques, la politique monétaire, le sentiment de marché et la géopolitique.</description>
+    </item>
+    <item>
       <title>How Heavily Are PhD Students Offloading Their Scientific Writing to AI? Evidence from US STEM PhD Dissertations</title>
       <link>https://www.nber.org/papers/w35859#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35859-fromrss</guid>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">arxiv-2609.04061v1</guid>
       <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
       <description>Une évaluation menée sur 400 problèmes de code montre que les grands modèles de langage ont tendance à réécrire excessivement le code lors de la correction de bugs, un comportement généralisé y compris chez des modèles performants comme GPT-5.5. L'ajout d'une instruction de préservation réduit la distance de Levenshtein excédentaire moyenne de 0,195 à 0,131 tout en augmentant le Pass@1 de 2,3 points, tandis que l'apprentissage par renforcement s'avère la méthode post-entraînement la plus efficace pour inciter les modèles à réaliser des modifications minimales.</description>
-    </item>
-    <item>
-      <title>LLM4CKD: Large Language Models for Early Stage Chronic Kidney Disease Screening</title>
-      <link>https://arxiv.org/abs/2609.04013v1</link>
-      <guid isPermaLink="false">arxiv-2609.04013v1</guid>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Cette étude évalue l'efficacité des grands modèles de langage pour le dépistage précoce de la maladie rénale chronique sans entraînement spécifique, grâce à des invites structurées et des caractéristiques tabulaires cliniques. Les résultats montrent que ces modèles égalent ou dépassent les méthodes d'apprentissage automatique traditionnelles dans les contextes à faible volume de données, bien que leur stabilité diminue avec des entrées plus complexes.</description>
-    </item>
-    <item>
-      <title>Pushing the (Decision) Boundaries: Dynamically Calibrating Differentially Private Noise to Explainability in Federated Learning</title>
-      <link>https://arxiv.org/abs/2609.03851v1</link>
-      <guid isPermaLink="false">arxiv-2609.03851v1</guid>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Pour résoudre la dégradation des explications causée par le bruit de confidentialité différentielle en apprentissage fédéré, cet article présente XCal-FL, un algorithme qui ajuste dynamiquement ce bruit durant l'entraînement à partir de trois signaux d'explicabilité complémentaires. Des expériences menées sur trois jeux de données d'imagerie médicale montrent que cet algorithme améliore la performance prédictive de plus de 10 % et la fidélité des explications jusqu'à 5 fois par rapport aux méthodes à bruit statique, tout en optimisant l'efficacité du budget de confidentialité.</description>
     </item>
   </channel>
 </rss>

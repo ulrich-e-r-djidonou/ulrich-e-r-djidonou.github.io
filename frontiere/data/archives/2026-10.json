@@ -1,5 +1,81 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35878-fromrss",
+    "titre": "When Does Randomized Oversight Align AI Agents That Can Conceal?",
+    "url": "https://www.nber.org/papers/w35878#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-10-12",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Joshua S. Gans, Richard T. Holden",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-28a555e437",
+    "titre": "Mise a jour de la liste awesome : Add Invokely to MCP Servers for Economic Data",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/28a555e437a531e2af1353fc16c19768beb5c52b",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-10-12",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Lu Han",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-1bfbee602d",
+    "titre": "Mise a jour de la liste awesome : Restructure and refresh the list (October 2026 review)",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/1bfbee602d15fa8ae09f1b18b3f46117a602f51f",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-10-12",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Lu Han",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-0ccf6cd3d6",
+    "titre": "Mise a jour de la liste awesome : Add Equibles MCP to MCP Servers for Economic Data (#20)",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/0ccf6cd3d61e9ae58da9590f64e06176fa06d257",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-10-12",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Daniel Oliveira",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-aea75db690",
+    "titre": "Mise a jour de la liste awesome : Add StatCite to MCP Servers for Economic Data (#13)",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/aea75db690c13b151709f14ef825834db9f1470b",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-10-12",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "asokore",
+    "signal": false
+  },
+  {
     "id": "voxeu-g-voxeu-columns-financing-ai-buildout-risks-go-balance-sheet",
     "titre": "Financing the AI buildout before the risks go off balance sheet",
     "url": "https://cepr.org/voxeu/columns/financing-ai-buildout-risks-go-balance-sheet",
@@ -13,6 +89,391 @@
     "nb_eco": 3,
     "nb_ia": 0,
     "auteurs": "Stijn Van Nieuwerburgh",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13785v1",
+    "titre": "Linear Demand Systems are Consistent with Discrete Choice",
+    "url": "https://arxiv.org/abs/2610.13785v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Afonso Rodrigues",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13446v1",
+    "titre": "Realized Tail-Risk Conditional Autoregressive Expectile Models: Accurate and Stable Forecasting Performance",
+    "url": "https://arxiv.org/abs/2610.13446v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "prevision",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Keisuke Sasaki, Yasuhiro Omori",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13269v1",
+    "titre": "Intentionally Overidentifying Local Projections",
+    "url": "https://arxiv.org/abs/2610.13269v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Junjie Guo, Endong Wang, Ke-Li Xu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12917v1",
+    "titre": "AI-Mediation in Retail Markets: Revenue Effects and Assortment Optimization",
+    "url": "https://arxiv.org/abs/2610.12917v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Omar El Housni, Marouane Ibn Brahim",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12875v1",
+    "titre": "The Financing of Debt Relief: Intermediary Liquidity and the Value of Borrower Information",
+    "url": "https://arxiv.org/abs/2610.12875v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Arka P. Bandyopadhyay",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12873v1",
+    "titre": "An efficient stochastic generalized method of moments estimator for nonlinear moment models",
+    "url": "https://arxiv.org/abs/2610.12873v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Duy Nguyen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12824v1",
+    "titre": "GMM for Panel Data Quantile Regression",
+    "url": "https://arxiv.org/abs/2610.12824v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Antonio F. Galvao, Ulrich Hounyo, Jiahao Lin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13924v1",
+    "titre": "KL Before and After Mixing: A Round-Complexity Separation in Parallel Sampling",
+    "url": "https://arxiv.org/abs/2610.13924v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Tianyi Wu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13923v1",
+    "titre": "Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2610.13923v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Sajjad Baghaeea, Aimin Lib, Shanmugarajan Balasubramanian, Elif Uysal",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13912v1",
+    "titre": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
+    "url": "https://arxiv.org/abs/2610.13912v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Taoyong Cui, Pinxian Zeng, Wanghan Xu, Hao Xiao, Shuhan Xue, Qiang Gao, Wanli Ouyang, Pheng Ann Heng, Zhenfei Yin, Yingcheng Wu, Ling Yang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13910v1",
+    "titre": "When VLMs Destroy What They Know: Spatial Representations Fall Below Lexical Priors",
+    "url": "https://arxiv.org/abs/2610.13910v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Shubh Garg, Chen Shani",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13901v1",
+    "titre": "Hitting-Time Bounds for Asynchronous Q-Learning",
+    "url": "https://arxiv.org/abs/2610.13901v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yang Peng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13871v1",
+    "titre": "Partially Informed Stochastic Optimization via Zeroth-Order Residual Tracking",
+    "url": "https://arxiv.org/abs/2610.13871v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "El Mahdi Chayti, Alireza Mirrokni, Martin Jaggi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13855v1",
+    "titre": "SLICE: Sequential Likelihood-Free Inference via Conformal E-Values",
+    "url": "https://arxiv.org/abs/2610.13855v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "llm",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Stefano Cortinovis, Laura Battaglia, François Caron",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13821v1",
+    "titre": "Can Language Models Learn When to Abstain? Policy Learning and Calibrated Answer Selection",
+    "url": "https://arxiv.org/abs/2610.13821v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Juan Terven, Diana-Margarita Córdova-Esparza, Ruben Gomez, Carlos Miranda Rocha, Julio-Alejandro Romero-González, Edgar Chavez-Urbiola",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13816v1",
+    "titre": "Dream to Remember: Continual Steering of Generalist Robot Policies with World Models",
+    "url": "https://arxiv.org/abs/2610.13816v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Bahey Tharwat, Iman Nematollahi, Marvin Alles, Xingyuan Zhang, Akshay L Chandra, Abhinav Valada",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13810v1",
+    "titre": "Tracing and Taming Hallucinated Terms via Subsequence-Association Filtering and Breadth-Aware Selection for LLM Query Expansion",
+    "url": "https://arxiv.org/abs/2610.13810v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "llm"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Amit Kumar Jaiswal, Sagar Uprety, Prayag Tiwari",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13804v1",
+    "titre": "Constrained Probabilistic Numerics: Gaussian Process Solvers for Linear PDEs under Linear Inequality Constraints",
+    "url": "https://arxiv.org/abs/2610.13804v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Boyuan Deng, Kshitiz Upadhyay, Michael Shields",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13755v1",
+    "titre": "Matched-Context Group Policy Optimization for LLM Agent Training",
+    "url": "https://arxiv.org/abs/2610.13755v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Chenxu Zhang, Yaorui Shi, Wenlong Zhang, Jianchao Tan, Zihan Wang, Yiming Cheng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13744v1",
+    "titre": "A Privileged Teacher That Only Scores Cannot Search: Critique-Conditioned On-Policy Self-Distillation for Reasoning",
+    "url": "https://arxiv.org/abs/2610.13744v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Mayug Maniparambil, Ayush Rai, Ekansh Verma, Noel E. O'Connor, Fergal Reid",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13740v1",
+    "titre": "SmolWAM: A Latent World-Action Model for Robotic Manipulation on Edge Devices",
+    "url": "https://arxiv.org/abs/2610.13740v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Timi Owolabi, Hikmah Olawore, Frances Adelakun, Ayotomiwa Oyewumi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13737v1",
+    "titre": "SafeDiSTL: Decomposing Joint Constraints for Safe Multi-Agent Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2610.13737v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Hongrui Zheng, Aditya Singh, Rahul Mangharam",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.13724v1",
+    "titre": "Amortized Counterfactual Prediction with Graph Neural Networks",
+    "url": "https://arxiv.org/abs/2610.13724v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-09",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Hendrik Stumpf, Francesco Quinzan",
     "signal": false
   },
   {
@@ -397,6 +858,36 @@
     "nb_eco": 1,
     "nb_ia": 1,
     "auteurs": "Haolong Zheng, Maike Züfle, Dominik Macháček, Peter Polák, Xulin Fan, Xavier Sumba, Siyin Wang, Ondřej Klejch, Mark Hasegawa-Johnson",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12674v1",
+    "titre": "Simple Standard Errors for Complicated (Quasi-)Experimental Designs",
+    "url": "https://arxiv.org/abs/2610.12674v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Sylvia Klosin, Jonathan Roth",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12587v1",
+    "titre": "On the Optimality of Mental Accounting",
+    "url": "https://arxiv.org/abs/2610.12587v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-08",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jarrod Burgh, Emerson Melo, Matthew Shum",
     "signal": false
   },
   {
@@ -810,6 +1301,22 @@
     "signal": false
   },
   {
+    "id": "arxiv-2610.10606v2",
+    "titre": "The Gendered Impacts of Perceived Skin Tone: Evidence from African American Siblings in 1870-1940",
+    "url": "https://arxiv.org/abs/2610.10606v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-07",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Ran Abramitzky, Jacob Conway, Roy Mill, Luke C. D. Stein",
+    "signal": false
+  },
+  {
     "id": "arxiv-2610.08729v1",
     "titre": "Ownership and Non-Neutral Technological Change: Evidence from China's State-Owned Enterprise Privatization",
     "url": "https://arxiv.org/abs/2610.08729v1",
@@ -1031,6 +1538,22 @@
     "nb_eco": 3,
     "nb_ia": 0,
     "auteurs": "Francesco Caselli",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.12509v1",
+    "titre": "Early Investment Snowballs for Low-Skill Children: Average Marginal Returns and the Dynamics of Skill Formation",
+    "url": "https://arxiv.org/abs/2610.12509v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-06",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Liam Puknys",
     "signal": false
   },
   {
