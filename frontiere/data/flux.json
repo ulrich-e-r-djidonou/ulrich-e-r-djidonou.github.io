@@ -243,6 +243,69 @@
     "deja_signal": true
   },
   {
+    "id": "aea-10-1257-app-20240586",
+    "titre": "Do Workfare Programs Live Up to Their Promises? Experimental Evidence from Côte d'Ivoire",
+    "url": "https://doi.org/10.1257/app.20240586",
+    "source": "American Economic Journal: Applied Economics",
+    "type": "article",
+    "date_publication": "2026-10-01",
+    "resume_fr": "Les auteurs étudient les effets d'un programme de travaux publics en Côte d'Ivoire offrant sept mois d'emploi aux jeunes urbains au salaire minimum formel avec formation complémentaire en entrepreneuriat ou recherche d'emploi, et constatent que pendant le programme le taux d'emploi n'augmente que légèrement mais qu'il y a un déplacement vers les emplois salariés, des gains de revenus et d'épargne ainsi que des améliorations dans les habitudes de travail et le bien-être. Après la fin du programme, les auteurs ne trouvent aucun effet durable sur l'emploi ou les comportements, avec seulement des gains limités en revenus provenant d'activités indépendantes, et montrent par apprentissage automatique que des approches de ciblage alternatives pourraient améliorer substantiellement le bien-être.",
+    "angle_eco": "L'absence d'effets durables sur l'emploi et les comportements après la fin d'un programme de travaux publics offrant sept mois d'emploi rémunéré au salaire minimum avec formation en entrepreneuriat ou recherche d'emploi contraste avec les améliorations observées pendant le programme, notamment une réorientation vers les emplois salariés, des gains de revenus et d'épargne, et des changements positifs dans les habitudes de travail et le bien-être.",
+    "themes": [
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Marianne Bertrand, Bruno Crépon, Alicia Marguerie, Patrick Premand",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "A public works program in Côte d'Ivoire providing seven months of employment and training to urban youth increased the employment rate only slightly during program participation, but generated shifts toward wage jobs, higher earnings, savings, and improved work habits and well-being. After program completion, the employment gains and behavioral improvements did not persist, with only modest earnings increases from self-employment activities remaining, though machine learning analysis identified alternative targeting strategies that could substantially enhance program welfare outcomes.",
+    "angle_eco_en": "Public works programs that provide temporary employment and training may fail to generate sustained improvements in labor market outcomes after the intervention ends, despite producing immediate gains in earnings and employment quality during the program period."
+  },
+  {
+    "id": "aea-10-1257-app-20240232",
+    "titre": "Detection of Collusive Networks in Multistage Auctions",
+    "url": "https://doi.org/10.1257/app.20240232",
+    "source": "American Economic Journal: Applied Economics",
+    "type": "article",
+    "date_publication": "2026-10-01",
+    "resume_fr": "Les auteurs développent une méthode de détection des cartels dans les enchères multistades en classant les paires d'entreprises comme collusives lorsqu'elles ne révisent pas leurs offres l'une contre l'autre malgré des offres initiales proches qui créent normalement des incitations fortes à se concurrencer. L'algorithme prédit efficacement les sanctions du Comité antimonopole ukrainien puisque les paires classées comme collusives sont neuf fois plus susceptibles d'être sanctionnées.",
+    "angle_eco": "L'identification des cartels dans les enchères multistages repose sur la détection de paires d'entreprises qui, malgré des offres initiales proches créant des incitations fortes à se concurrencer lors des révisions, s'abstiennent de réduire leurs offres l'une contre l'autre contrairement aux autres paires en situation similaire.",
+    "themes": [],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Bruno Baránek, Leon Musolff, Vítězslav Titl",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The authors develop a method to detect cartels in multistage auctions where bidders submit initial bids that can be revised downward, classifying firm pairs as collusive if they fail to update bids against each other despite having similarly close initial bids that would create incentives to undercut rivals. The algorithm successfully predicts Ukraine's Antimonopoly Committee sanctions, with classified collusive pairs being nine times more likely to be sanctioned.",
+    "angle_eco_en": "In multistage auctions where bidders can revise initial bids downward, firms with similarly close initial bids face strong incentives to undercut each other, yet some firm pairs may collude by failing to update bids against one another despite these competitive pressures."
+  },
+  {
+    "id": "aea-10-1257-app-20210064",
+    "titre": "The Long-Term Effects of Cash Assistance",
+    "url": "https://doi.org/10.1257/app.20210064",
+    "source": "American Economic Journal: Applied Economics",
+    "type": "article",
+    "date_publication": "2026-10-01",
+    "resume_fr": "Les auteurs étudient les effets à long terme d'une aide en espèces sur les bénéficiaires et leurs enfants dans le cadre d'une expérience aléatoire menée à Seattle et Denver dans les années 1970, où les familles traitées ont reçu des milliers de dollars en prestations gouvernementales supplémentaires pendant trois ou cinq ans. En appairant les données expérimentales aux registres de l'administration de la sécurité sociale, ils constatent que le traitement a réduit les gains annuels postexpérimentaux des adultes de 1 800 dollars et augmenté leurs demandes de prestations d'invalidité, avec des effets plus prononcés à l'approche de l'âge de la retraite, tandis que les enfants n'ont connu aucun effet significatif sur leurs revenus ou leurs interactions avec le système d'invalidité.",
+    "angle_eco": "L'allocation en espèces versée pendant trois ou cinq ans aux familles de l'expérience de maintien du revenu de Seattle-Denver dans les années 1970 a réduit les gains annuels postérieurs des adultes traités et augmenté leurs demandes de prestations d'invalidité, particulièrement à l'approche de l'âge de la retraite, sans produire d'effets significatifs sur les revenus ou l'utilisation du système d'invalidité chez leurs enfants.",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "David J. Price, Jae Song",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The Seattle-Denver Income Maintenance Experiment provided thousands of dollars in extra government benefits to treated families for three to five years during the 1970s, and subsequent matching of experimental records to Social Security Administration data revealed that treatment reduced adults' postexperimental annual earnings by $1,800 and increased their disability benefit applications, with effects concentrated around retirement age. In contrast, the children of treated families experienced no significant effects on earnings or disability system engagement.",
+    "angle_eco_en": "Cash assistance programs may reduce long-term labor supply among adult recipients through occupational shifts that increase their subsequent reliance on disability benefits, while leaving their children's future earnings unaffected."
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35782-fromrss",
     "titre": "An LLM Workflow That Reproduces, Improves, and Extends Published Economics Research",
     "url": "https://www.nber.org/papers/w35782#fromrss",
@@ -2145,66 +2208,5 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "The paper establishes theoretical foundations for using pre-trained deep learning embeddings as covariates in economic analyses by providing sufficient conditions to address the challenges of domain mismatch between the pre-training task and target task, as well as the identification problem inherent in embedding functions. The authors derive convergence rates for machine learning models employing pre-trained embeddings and demonstrate applications including partially linear regression with unstructured controls, price elasticity estimation using image and text data on product quality, missing data imputation, and average treatment effect estimation with unstructured confounders.",
     "angle_eco_en": "Using pre-trained embeddings from models developed for different datasets and tasks as covariates in economic analyses creates an identification problem that obscures the estimation error of the embedding function and its propagation to target economic parameters."
-  },
-  {
-    "id": "arxiv-2607.15385v1",
-    "titre": "Algorithmic Intermediation and the International Transmission of U.S. Monetary Policy",
-    "url": "https://arxiv.org/abs/2607.15385v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-16",
-    "resume_fr": "Ce papier montre que le mimétisme algorithmique amplifie les sorties de capitaux des marchés émergents après un choc de politique monétaire américaine uniquement en période de forte volatilité, en raison de la similitude des modèles d'investissement. À partir des flux de portefeuilles d'actions vers dix-neuf marchés émergents de 2000 à 2024, les résultats indiquent que les politiques publiques doivent préserver la diversité des modèles plutôt que de limiter la taille de l'intermédiation non bancaire.",
-    "angle_eco": "La similitude des modèles de gestion algorithmique amplifie les sorties de capitaux des marchés émergents après un choc de politique monétaire américaine en période de forte volatilité, alors que la diversité des algorithmes permet de compenser les erreurs individuelles et de stabiliser les flux financiers.",
-    "themes": [
-      "prevision",
-      "politique-publique",
-      "outils-recherche"
-    ],
-    "score": 4,
-    "auteurs": "Fernando Toledo, Luis Dimotta Bré, Gabriel Montes-Rojas",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "A two-region macro-financial framework was tested using equity portfolio flows to nineteen emerging markets from 2000 to 2024 to examine how algorithmic fund management shapes international monetary transmission. The evidence shows that algorithmic herding amplifies capital outflows after United States monetary shocks in high-volatility regimes due to the similarity of models making correlated errors.",
-    "angle_eco_en": "Algorithmic homogeneity in asset management creates correlated trading errors that amplify capital flow volatility and exacerbate the international transmission of monetary policy shocks during periods of market stress."
-  },
-  {
-    "id": "voxeu-higher-utilisation-explains-recent-surge-productivity-growth",
-    "titre": "Higher utilisation explains the recent surge in productivity growth",
-    "url": "https://cepr.org/voxeu/columns/higher-utilisation-explains-recent-surge-productivity-growth",
-    "source": "VoxEU / CEPR",
-    "type": "article",
-    "date_publication": "2026-07-15",
-    "resume_fr": "Aux États-Unis, la production par heure a augmenté d'environ 2,5 % par an entre la fin de 2022 et le début de 2026, dépassant de 1 point de pourcentage son rythme d'avant la pandémie. Cette accélération de la productivité s'explique principalement par une utilisation plus intensive du travail et du capital déjà en place, l'intelligence artificielle y ayant contribué par une forte demande et une incertitude accrue plutôt que par des gains d'efficacité.",
-    "angle_eco": "L'accélération récente de la productivité du travail aux États-Unis s'explique principalement par une utilisation plus intensive du capital et de la main-d'œuvre déjà en place, stimulée par une forte demande et une incertitude accrue, plutôt que par des gains d'efficacité directe apportés par l'intelligence artificielle.",
-    "themes": [
-      "travail-emploi",
-      "donnees",
-      "macro-finance"
-    ],
-    "score": 3,
-    "auteurs": "",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "United States labor productivity has accelerated, with output per hour growing around 2.5 percent per year from the end of 2022 to the start of 2026, exceeding its pre-pandemic pace by 1 percentage point. Data suggests this recent acceleration is largely driven by a more intense utilization of existing labor and capital rather than increased production efficiency from artificial intelligence.",
-    "angle_eco_en": "Distinguishing between structural efficiency gains and cyclical factor utilization is critical to correctly attributing recent labor productivity growth to technological adoption versus aggregate demand fluctuations."
-  },
-  {
-    "id": "arxiv-2607.14418v1",
-    "titre": "Adaptive Ad Load Design for Sponsored Search Markets: Evidence, Theory, and Deployment",
-    "url": "https://arxiv.org/abs/2607.14418v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-15",
-    "resume_fr": "Un essai randomisé à grande échelle sur un magasin d'applications Android montre que l'augmentation du nombre d'emplacements publicitaires accroît les revenus jusqu'à 43 %, mais réduit les conversions de recherche jusqu'à 5 % et l'engagement quotidien jusqu'à 2,2 %. Pour optimiser cet arbitrage fortement hétérogène selon les requêtes, un algorithme adaptatif nommé e-LAAL a été déployé auprès de 22,3 millions d'utilisateurs et sur 77,6 millions de recherches, améliorant le compromis entre revenus et conversions par rapport aux références statiques.",
-    "angle_eco": "L'arbitrage économique entre l'augmentation des recettes publicitaires et la dégradation de l'expérience des utilisateurs peut être optimisé par un ajustement adaptatif du nombre d'annonces affichées selon l'hétérogénéité des requêtes et la composition des annonceurs.",
-    "themes": [
-      "politique-publique"
-    ],
-    "score": 3,
-    "auteurs": "Mohammad Rashid, Hema Yoganarasimhan",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "A large-scale randomized field experiment on an Android app store with over five million users found that increasing sponsored ad slots from one to six raises revenue by up to 43% but reduces total search conversions by up to 5% and daily engagement by up to 2.2%, with substantial heterogeneity across query types depending on advertiser composition. The authors deployed an adaptive algorithm called exploration-augmented Locally Adaptive Ad Load (e-LAAL) that improved the revenue-conversion trade-off in a production deployment serving 22.3 million users and 77.6 million searches compared to static benchmarks.",
-    "angle_eco_en": "Increasing the number of sponsored advertisement slots in search results raises revenue but reduces user search conversions and engagement, with the magnitude of this trade-off varying substantially across queries depending on advertiser composition and user conversion propensity."
   }
 ]
