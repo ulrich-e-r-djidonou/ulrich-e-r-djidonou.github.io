@@ -1,5 +1,315 @@
 [
   {
+    "id": "arxiv-2610.21296v1",
+    "titre": "On the fairness of single round-robin tournaments: Evidence from European football",
+    "url": "https://arxiv.org/abs/2610.21296v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "László Csató, Diána Ivett Fűrész, Zsolt Havran",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22336v1",
+    "titre": "Robust Reinforcement Learning for Dynamic Treatment Regimes under Model and Measurement Uncertainty",
+    "url": "https://arxiv.org/abs/2610.22336v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Chengze Xie, Xuan Wang, Ying Ding, Hairong Wang, Yan Li",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22322v1",
+    "titre": "Learning Self-Orchestration in Decentralized Agent Swarms",
+    "url": "https://arxiv.org/abs/2610.22322v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Guowei Xu, Zhenting Qi, Amani Kiruga, Himabindu Lakkaraju, Yilun Du",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22314v1",
+    "titre": "MindEval2: Clinically Grounded Patients and Rubrics for Evaluating Language Models in Mental Health Support",
+    "url": "https://arxiv.org/abs/2610.22314v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "John Mendonça, Daniel Tschernutter, José Pombal, Areti Vassilopoulos, Catarina Botelho, Ignacio Sarasua, Maya D'Eon, Nuno Guerreiro, Ricardo Rei",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22294v1",
+    "titre": "Multi-Target Few-Shot Prompting with Diffusion Language Models",
+    "url": "https://arxiv.org/abs/2610.22294v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Anton Xue, Alan Li, Rahul Saha",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22293v1",
+    "titre": "Towards Continual Learning: Mitigating Forgetting With Subspace Tuning",
+    "url": "https://arxiv.org/abs/2610.22293v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Arnav Chavan, Kusha Sareen, Rishabh Tiwari, Abhranil Chandra, Johan Obando-Ceron, Kurt Keutzer, Scott Niekum, Inderjit S Dhillon, Devvrit Khatri",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22273v1",
+    "titre": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries",
+    "url": "https://arxiv.org/abs/2610.22273v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Anikait Singh, Teresa Zhang, Yoonho Lee, Roshen Sanjay Nair, Aviral Kumar, Chelsea Finn",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22263v1",
+    "titre": "Baselines and Score Centering in Policy Gradient Estimation",
+    "url": "https://arxiv.org/abs/2610.22263v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Shuo Han, Ziqing Hu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22252v1",
+    "titre": "Explore Once, Evaluate Many: Multiple Policy Evaluation for Stochastic Linear Bandits",
+    "url": "https://arxiv.org/abs/2610.22252v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Spyros Dragazis, Yilei Chen, Aldo Pacchiano",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22236v1",
+    "titre": "Training-Free On-Policy Distillation",
+    "url": "https://arxiv.org/abs/2610.22236v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Bangji Yang, Jiajun Fan, Zhaoyu Zhu, Hongbo Ma, Ge Liu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22234v1",
+    "titre": "OS-Helix: Unifying GUI Interaction and Code Execution in Native Computer-Using Agents",
+    "url": "https://arxiv.org/abs/2610.22234v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Bowen Yang, Kaiming Jin, Zichen Ding, Zhenyu Wu, Zehao Li, Zhoumianze Liu, Kanzhi Cheng, Fangzhi Xu, Yanan Sun, Qiushi Sun, Yu Qiao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22196v1",
+    "titre": "Hy-Memory-30B-A3B: Attributed Reinforcement Learning for Long-Term Memory Writing",
+    "url": "https://arxiv.org/abs/2610.22196v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Tianxiang Fei, Jiazheng Kang, Mao Zheng, Xingyan He, Xiang Yu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22186v1",
+    "titre": "EVA-Cap: Optimizing Audiovisual Video Captioning via Event-Centric Alignment",
+    "url": "https://arxiv.org/abs/2610.22186v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jiapeng Shi, Qiuxia Hou, Jiaqi Leng, Junke Wang, Yanhao Zhang, Haonan Lu, Ziyi Ye, Zuxuan Wu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22184v1",
+    "titre": "Whole-Body Dexterity",
+    "url": "https://arxiv.org/abs/2610.22184v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Conor Mc Gartoll, An Dang, Pranay Thangeda, Arjun Gupta, Carolina Higuera, Nima Fazeli, Mustafa Mukadam, Manikantan Nambi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22178v1",
+    "titre": "REKI: Registering Knowledge in VLAs",
+    "url": "https://arxiv.org/abs/2610.22178v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Juliette Marrie, Paul Pacaud, Adrien Ramanana Rahary, Shizhe Chen, Moritz Böhle",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22152v1",
+    "titre": "Specification Gaming and a Constrained Reinforcement Learning Mitigation in a Cleaning Gridworld",
+    "url": "https://arxiv.org/abs/2610.22152v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Hilda Adwubi Osei",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22131v1",
+    "titre": "Intern-Decision: Efficient Multimodal Decision Making with Autoregressive Masked Language Modeling",
+    "url": "https://arxiv.org/abs/2610.22131v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "inference-causale",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Tong Zhu, Zhe Xu, Zefeng He, Yunkai Chai, Xuyang Hu, Dehong Zheng, Yun Luo, Yafu Li, Qi Zhang, Yu Cheng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22127v1",
+    "titre": "Explaining the Roles of Experts in Mixture-of-Experts LLMs for Personalization",
+    "url": "https://arxiv.org/abs/2610.22127v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Sekh Mainul Islam, Pepa Atanasova, Isabelle Augenstein",
+    "signal": false
+  },
+  {
     "id": "arxiv-2610.20125v1",
     "titre": "Auction-based allocation of routes in capacity-constrained networks",
     "url": "https://arxiv.org/abs/2610.20125v1",
@@ -381,6 +691,22 @@
     "nb_eco": 3,
     "nb_ia": 0,
     "auteurs": "Anselm Küsters",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.21019v1",
+    "titre": "Testing Tail-Index Homogeneity via Exceedance-Covariate Independence",
+    "url": "https://arxiv.org/abs/2610.21019v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-14",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Thomas T. Yang",
     "signal": false
   },
   {
@@ -776,6 +1102,22 @@
     "nb_eco": 0,
     "nb_ia": 0,
     "auteurs": "Peter Reinhard Hansen, Chen Tong",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.14969v2",
+    "titre": "Allocative Efficiency and the Returns to Innovation",
+    "url": "https://arxiv.org/abs/2610.14969v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-10",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Koki Okumura",
     "signal": false
   },
   {

@@ -6,6 +6,27 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Locally Robust Inference with Outcomes Predicted by Machine Learning</title>
+      <link>https://arxiv.org/abs/2610.21756v1</link>
+      <guid isPermaLink="false">arxiv-2610.21756v1</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Ce papier développe un cadre de méthode des moments généralisés localement robuste en trois étapes afin de garantir la validité de l'inférence économétrique lorsque la variable dépendante est générée par l'apprentissage automatique. En augmentant la condition de moment identifiante avec des fonctions d'influence pour neutraliser les biais de régularisation et de sélection de modèle, les auteurs établissent la consistance et la normalité asymptotique de l'estimateur, puis appliquent cette approche aux données hypothécaires américaines.</description>
+    </item>
+    <item>
+      <title>MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering</title>
+      <link>https://arxiv.org/abs/2610.22344v1</link>
+      <guid isPermaLink="false">arxiv-2610.22344v1</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Pour automatiser l'ingénierie de l'apprentissage automatique sur de longs horizons, les chercheurs ont développé MLExpert, un modèle agentique à mélange d'experts de 35 milliards de paramètres. Sa méthode de post-entraînement combine un ajustement supervisé hiérarchique guidé par les résultats et un apprentissage par renforcement par fenêtres d'interaction qui attribue une récompense partagée à partir des retours d'exécution.</description>
+    </item>
+    <item>
+      <title>Learning to Steer LLM Agents and Multi-Agent Systems</title>
+      <link>https://arxiv.org/abs/2610.22316v1</link>
+      <guid isPermaLink="false">arxiv-2610.22316v1</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Pour corriger la dérive d'objectif qui écarte les agents basés sur de grands modèles de langage de leur but lors de tâches complexes, cette étude propose un agent de guidage qui surveille l'exécution en temps réel afin d'intervenir de manière ciblée. Entraîné par apprentissage par renforcement, cet agent améliore la performance et l'efficacité des systèmes mono-agents et multi-agents tout en se généralisant à de nouveaux exécuteurs et tâches.</description>
+    </item>
+    <item>
       <title>Indirect Variational Inference: Applications to Earnings Dynamics</title>
       <link>https://www.nber.org/papers/w35877#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35877-fromrss</guid>
@@ -193,27 +214,6 @@
       <guid isPermaLink="false">arxiv-2609.14750v1</guid>
       <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
       <description>L'arrivée d'une intelligence artificielle transformatrice devrait réduire la part du travail et accroître les inégalités de revenus et de richesse, tandis que la croissance économique s'accélère mais profite principalement à un groupe restreint d'individus et d'entreprises. Les auteurs examinent les politiques redistributives proposées pour cette ère, notamment le revenu de base universel, le capital de base universel, et diverses taxes sur le capital, les robots et la richesse, en arguant que les politiques capables de distribuer largement les rentes du capital, comme le capital de base universel ou le revenu de base universel financé par des impôts sur le capital, sont les plus susceptibles de réduire durablement les inégalités.</description>
-    </item>
-    <item>
-      <title>AI Innovation and Firm Performance in the Medical Device Industry</title>
-      <link>https://arxiv.org/abs/2609.08485v1</link>
-      <guid isPermaLink="false">arxiv-2609.08485v1</guid>
-      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
-      <description>En s'appuyant sur les données d'homologation de la FDA, cette étude montre que les collaborations externes de recherche en intelligence artificielle stimulent l'introduction de dispositifs médicaux dotés d'IA, avec un impact plus fort pour les petites entreprises et les partenariats industriels ou cliniques. Par la suite, la commercialisation de ces dispositifs améliore la productivité du travail et les marges bénéficiaires des entreprises, un effet bénéfique qui s'accumule au fil des lancements successifs.</description>
-    </item>
-    <item>
-      <title>The Utility of AI Tools in Auditing Adherence to Pre-Analysis Plans</title>
-      <link>https://www.nber.org/papers/w35719#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35719-fromrss</guid>
-      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Les auteurs proposent d'utiliser les grands modèles de langage pour évaluer de manière efficace et systématique le respect des plans d'analyse préalables, qui visent à améliorer la reproductibilité de la recherche en limitant les degrés de liberté des chercheurs. Bien que cette approche réduise considérablement le travail humain requis pour identifier les choix de conception préengagés et diagnostiquer les lacunes de la préspécification, la variabilité des résultats entre les modèles souligne l'importance persistante du jugement humain.</description>
-    </item>
-    <item>
-      <title>CausalVerify: An Execution-Grounded Benchmark for LLM Causal Inference Workflows</title>
-      <link>https://arxiv.org/abs/2609.07944v1</link>
-      <guid isPermaLink="false">arxiv-2609.07944v1</guid>
-      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Le benchmark CausalVerify évalue la capacité des grands modèles de langage à exécuter des flux de travail d'inférence causale en économétrie en associant 259 articles publiés à 100 scénarios synthétiques. L'expérimentation d'exécution du code R généré montre que sept modèles obtiennent des taux de réussite d'estimation exacte compris entre 10 % et 88 %, tout en révélant que 15,5 % des programmes qui s'exécutent renvoient une estimation causale erronée.</description>
     </item>
   </channel>
 </rss>

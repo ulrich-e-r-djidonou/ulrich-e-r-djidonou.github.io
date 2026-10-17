@@ -1,5 +1,74 @@
 [
   {
+    "id": "arxiv-2610.21756v1",
+    "titre": "Locally Robust Inference with Outcomes Predicted by Machine Learning",
+    "url": "https://arxiv.org/abs/2610.21756v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "resume_fr": "Ce papier développe un cadre de méthode des moments généralisés localement robuste en trois étapes afin de garantir la validité de l'inférence économétrique lorsque la variable dépendante est générée par l'apprentissage automatique. En augmentant la condition de moment identifiante avec des fonctions d'influence pour neutraliser les biais de régularisation et de sélection de modèle, les auteurs établissent la consistance et la normalité asymptotique de l'estimateur, puis appliquent cette approche aux données hypothécaires américaines.",
+    "angle_eco": "L'intégration de fonctions d'influence dans les conditions de moment d'une méthode des moments généralisée permet de préserver la validité de l'inférence économétrique en la rendant insensible aux biais de régularisation et de sélection de modèle propres aux variables dépendantes prédites par l'apprentissage automatique.",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Juan Carlos Escanciano, Alejandro Puerta-Cuartas",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "This paper proposes a three-step locally robust Generalized Method of Moments framework for valid econometric inference when dependent variables are predicted by machine learning. By augmenting the identifying moment with first- and second-step influence functions, the resulting estimator achieves consistency and asymptotic normality while remaining locally insensitive to regularization and model selection biases.",
+    "angle_eco_en": "Treating outcomes predicted by machine learning as observed variables in standard econometric estimations invalidates downstream inference due to regularization and model selection biases, which can be corrected by using debiased moment conditions within a three-step locally robust GMM framework."
+  },
+  {
+    "id": "arxiv-2610.22344v1",
+    "titre": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
+    "url": "https://arxiv.org/abs/2610.22344v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "resume_fr": "Pour automatiser l'ingénierie de l'apprentissage automatique sur de longs horizons, les chercheurs ont développé MLExpert, un modèle agentique à mélange d'experts de 35 milliards de paramètres. Sa méthode de post-entraînement combine un ajustement supervisé hiérarchique guidé par les résultats et un apprentissage par renforcement par fenêtres d'interaction qui attribue une récompense partagée à partir des retours d'exécution.",
+    "angle_eco": "L'optimisation d'agents autonomes pour l'ingénierie en apprentissage automatique sur de longs horizons repose sur l'extraction de supervisions pertinentes issues de trajectoires d'interaction et sur l'attribution de récompenses fondées sur les résultats d'expérimentations coûteuses.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 4,
+    "nb_eco": 1,
+    "nb_ia": 4,
+    "auteurs": "Shangheng Du, Jinxin Shi, Shuaiyu Zhang, Yiming Wu, Junpeng Zhao, Shiyang Feng, Xin Li, Liang He, Xiangchao Yan, Bo Zhang",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "To address the challenge of selecting effective supervision from long interaction trajectories in autonomous machine learning engineering, researchers developed a post-training method to train MLExpert, a 35-billion parameter Mixture-of-Experts agentic model. The training framework incorporates the Kaggle-MLE Factory for task construction along with hierarchical supervised fine-tuning and Windowed Interaction Reinforcement Learning to guide multi-turn decisions using outcome-based rewards.",
+    "angle_eco_en": "High experimentation costs and feedback that aggregates multiple preceding decisions complicate optimization in long-horizon autonomous processes, requiring training methods that group multi-turn decisions into discrete execution windows assigned shared outcome-based rewards."
+  },
+  {
+    "id": "arxiv-2610.22316v1",
+    "titre": "Learning to Steer LLM Agents and Multi-Agent Systems",
+    "url": "https://arxiv.org/abs/2610.22316v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "resume_fr": "Pour corriger la dérive d'objectif qui écarte les agents basés sur de grands modèles de langage de leur but lors de tâches complexes, cette étude propose un agent de guidage qui surveille l'exécution en temps réel afin d'intervenir de manière ciblée. Entraîné par apprentissage par renforcement, cet agent améliore la performance et l'efficacité des systèmes mono-agents et multi-agents tout en se généralisant à de nouveaux exécuteurs et tâches.",
+    "angle_eco": "La supervision en temps réel des agents basés sur des grands modèles de langage par un agent de contrôle à deux voies, entraîné par apprentissage par renforcement, permet de corriger les dérives d'objectifs afin de réduire le gaspillage de ressources et d'améliorer l'efficacité d'exécution des systèmes.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Leyang Shen, Yaxin Gong, Yang Zhang, Chenxiao Fan, Jiakai Wang, Dong Wang, Yang Liu, Fuli Feng, Chun Kai Ling, Tat-Seng Chua",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "To prevent large language model agents from suffering goal drift during complex tasks, researchers developed a steering agent that monitors execution in real time and intervenes using dual fast- and slow-path decision mechanisms. Trained using reinforcement learning, the steering agent improves performance and efficiency in single- and multi-agent systems while successfully generalizing to out-of-domain tasks and unseen executors.",
+    "angle_eco_en": "Goal drift during long-horizon task execution in multi-agent systems leads to wasted resources, which can be mitigated by a supervisory agent trained via reinforcement learning to dynamically balance low-cost context monitoring with high-cost corrective interventions."
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35877-fromrss",
     "titre": "Indirect Variational Inference: Applications to Earnings Dynamics",
     "url": "https://www.nber.org/papers/w35877#fromrss",
