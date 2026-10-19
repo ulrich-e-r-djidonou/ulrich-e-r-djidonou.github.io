@@ -1,5 +1,309 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35905-fromrss",
+    "titre": "Credit Markets with New Screening Technologies",
+    "url": "https://www.nber.org/papers/w35905#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-10-19",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Maryam Farboodi, Péter Kondor, Pablo Kurlat",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23391v1",
+    "titre": "Input-output analysis with a sphere packing approach",
+    "url": "https://arxiv.org/abs/2610.23391v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Munkhbayar Byambadash, Tumendelger Lkhagvasuren, Enkhbat Rentsen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23283v1",
+    "titre": "Market Efficiency in a Changing Asset Population: Mobility, Entry, and Survival over Cryptocurrency's Full History",
+    "url": "https://arxiv.org/abs/2610.23283v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Antonis Ballis, Christos Ioannidis",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23119v1",
+    "titre": "Online Conditional Vine Copulas: Forecasting Electricity Demand",
+    "url": "https://arxiv.org/abs/2610.23119v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "prevision",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Christian Jobelius Schulz, Christoph Hanck, Simon Hirsch, Florian Ziel",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22864v1",
+    "titre": "The Source of Data Value: Consumer Disclosure, Access Design, and Platform Monetization",
+    "url": "https://arxiv.org/abs/2610.22864v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Hexiao Liu, Lijian Lu, Mingzheng Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22830v1",
+    "titre": "Bystander on the Fence: Sanctions in a Multipolar World",
+    "url": "https://arxiv.org/abs/2610.22830v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Jan Morgan, Anchi Xia",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23839v1",
+    "titre": "DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses",
+    "url": "https://arxiv.org/abs/2610.23839v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "llm",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Jianyuan Zhong, Chenwei Wu, Zhaochen Yu, Xixian Jiang, Xuewei Li, Hao Xiao, Xilin Dai, Junyang Wang, Jiaru Zou, Zhiqing Cui, Boyuan Zheng, Jing Xiong, Zhen Zhang, Qiang Gao, Michael Morley, Luis Nakayama, Qiang Xu, Liyue Shen, Tao Gui, Leo Anthony Celi, James Zou, Zhenfei Yin, Yingcheng Wu, Ling Yang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23830v1",
+    "titre": "Waiting Buys Exactly Two Moments: Endogenous Identification in Prediction-Driven Allocation",
+    "url": "https://arxiv.org/abs/2610.23830v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "inference-causale",
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Rama AlHamidi, Rasul Khanbayov, Erchin Serpedin, Hasan Kurban",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23820v1",
+    "titre": "CocoRNA: Collective RNA Design with Cooperative Multi-agent Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2610.23820v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Tianmeng Hu, Biao Luo, Ke Li",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23812v1",
+    "titre": "Learning Personalized Memory Gating from Delayed One-Sided Feedback",
+    "url": "https://arxiv.org/abs/2610.23812v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Kaixuan Ji, Zixiang Chen, Wenting Zhao, Cheng Qian, Heng Wang, Weizhi Zhang, Jielin Qiu, Liangwei Yang, Quanquan Gu, Silvio Savarese, Shelby Heinecke, Huan Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23787v1",
+    "titre": "DLite: History-free Speculative Decoding for Agentic AI",
+    "url": "https://arxiv.org/abs/2610.23787v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "prevision"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Jiaming Xu, Hanzhen Wang, Tianlang Zhao, Jiewen Xiao, Chengze Yuan, Jiayi Pan, Yongkang Zhou, Jiancai Ye, Yu Wang, Guohao Dai",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23729v1",
+    "titre": "Escaping Parameter Space: Tight Generalization Bounds via Representation Quality",
+    "url": "https://arxiv.org/abs/2610.23729v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Niclas Göring, Shuofeng Zhang, Branton DeMoss, Ard A. Louis",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23685v1",
+    "titre": "HardEval: An Execution-Verified Benchmark for AI-Driven Security Hardening and Compliance Remediation",
+    "url": "https://arxiv.org/abs/2610.23685v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Manohar Vellala, Soumya Banerjee, Sandip Roy, Ross Gore, Sachin Shetty",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23661v1",
+    "titre": "An Efficient Approach to Beetle Damage Detection of Banana Using Deep Learning",
+    "url": "https://arxiv.org/abs/2610.23661v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Md. Mehedi Hasan Naeem, Ishtiyak Ahmmad Araf, Md. Arefin Haque Mahir, Tushar Kanti Saha",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23650v1",
+    "titre": "JAXtari: High-Throughput and Easy-to-Modify Arcade Learning Environment",
+    "url": "https://arxiv.org/abs/2610.23650v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Quentin Delfosse, Raban Emunds, Paul Seitz, Sebastian Wette, Jannis Blüml, Daniel Kirn, Dominik Mandok, Kristian Kersting",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23638v1",
+    "titre": "Deep LLM layers expose passage-level context in EEG during silent reading",
+    "url": "https://arxiv.org/abs/2610.23638v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "prevision"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Ingo Marquardt, Anthilia Alchanat, Priyanka Jain",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23623v1",
+    "titre": "Deconstructing Multi-Task Active Learning: The Paradox of Gradient Conflict and Orthogonal Decomposition",
+    "url": "https://arxiv.org/abs/2610.23623v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Juho Jung, Seongjae Kang, Jinyoung Han",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.23613v1",
+    "titre": "Trajectory-Triggered Sparse Collaborative Decoding",
+    "url": "https://arxiv.org/abs/2610.23613v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "themes": [
+      "prevision",
+      "travail-emploi"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Amit Ranjan Trivedi, Sruthikesh Surineni, Kyong Ho Lee, Mohit Mittal, Steven Li, Rex Hill",
+    "signal": false
+  },
+  {
     "id": "arxiv-2610.21296v1",
     "titre": "On the fairness of single round-robin tournaments: Evidence from European football",
     "url": "https://arxiv.org/abs/2610.21296v1",
@@ -307,6 +611,39 @@
     "nb_eco": 1,
     "nb_ia": 2,
     "auteurs": "Sekh Mainul Islam, Pepa Atanasova, Isabelle Augenstein",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.22522v1",
+    "titre": "Agentic AI in Automated Markets",
+    "url": "https://arxiv.org/abs/2610.22522v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Irene Aldridge, Lourenco Belleau-Bhowmik, James Chan, Josh Chang, Kelly Deng, Pranav Dhingra, Xinda Ding, Haodong Fang, Satya Hanumanchi, Carter He, Shuang He, Yadong Hou, Vallab Karanam, Rithvik Kasarla, Tishya Khanna, Jihyun Kim, Sarah Konety, Abhinav Kotta, Anderson Lo, Jake Luther, Omar Mian, Ishan Patwardhan, Matteo Perona, Chenyue Qi, Shashank Ramachandran, Shubham Rateria, Jake Swain, David Thai, Michael Twersky, Susan Wu, Dean Xu, Helenna Yin, Jiachun Zheng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.21711v1",
+    "titre": "How language model agents reshape price competition",
+    "url": "https://arxiv.org/abs/2610.21711v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-15",
+    "themes": [
+      "llm"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Martin Bichler, Philip Hierhager, Kassian Köck, Fabian Pieroth",
     "signal": false
   },
   {
@@ -1118,6 +1455,23 @@
     "nb_eco": 2,
     "nb_ia": 0,
     "auteurs": "Koki Okumura",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.14617v1",
+    "titre": "Cointegrated Regressors: Where Folded Concave Penalties Go Beyond LASSO",
+    "url": "https://arxiv.org/abs/2610.14617v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-10",
+    "themes": [
+      "prevision",
+      "travail-emploi"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Hongqi Chen, Chengwang Liao, Ziwei Mei, Zhentao Shi",
     "signal": false
   },
   {

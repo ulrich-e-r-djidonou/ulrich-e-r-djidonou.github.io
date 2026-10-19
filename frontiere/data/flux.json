@@ -1,5 +1,49 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35924-fromrss",
+    "titre": "Too Little too Late? Nationwide Carbon Trading in China",
+    "url": "https://www.nber.org/papers/w35924#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-10-19",
+    "resume_fr": "Le marché carbone chinois lancé en 2021 repose sur une intensité d'émissions plutôt qu'un plafond absolu, ce qui a incité les centrales électriques à haut rendement à augmenter leur production d'électricité et leurs émissions de CO2 d'environ 5% par rapport aux centrales à faible rendement. Cette augmentation des émissions des centrales efficaces a dépassé la réduction provenant du déplacement vers les centrales moins efficaces, dégradant la qualité de l'air dans les régions relativement propres de Chine et suggérant que le système actuel devrait être renforcé pour atteindre l'objectif de réduction des émissions de carbone.",
+    "angle_eco": "Le marché du carbone chinois fondé sur l'intensité plutôt que sur un plafond absolu a stimulé la production des centrales électriques efficaces, augmentant leurs émissions de CO2 d'environ 5% par rapport aux centrales moins efficaces, sans réduire différentiellement l'intensité carbone et au détriment de la qualité de l'air dans les régions initialement moins polluées.",
+    "themes": [
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Shuang Zhang, Douglas Almond",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "China's nationwide rate-based carbon market launched in 2021 induced high-efficiency power plants to increase electricity generation and CO2 emissions by approximately 5% relative to low-efficiency plants, with no evidence of differential reduction in emission intensity across plant types. The emissions increases from high-efficiency plants exceeded any substitution away from low-efficiency plants, resulting in worsened air quality downwind of high-efficiency facilities relative to low-efficiency ones.",
+    "angle_eco_en": "Rate-based carbon markets that regulate emissions intensity rather than absolute emissions may incentivize increased production by high-efficiency firms, causing aggregate emissions to rise when efficiency gains outpace substitution away from less efficient competitors."
+  },
+  {
+    "id": "arxiv-2610.23625v1",
+    "titre": "PresenceBench: An Exploratory Evaluation of Large Language Model Adaptation to User State",
+    "url": "https://arxiv.org/abs/2610.23625v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-16",
+    "resume_fr": "Le cadre d'évaluation PresenceBench a été conçu pour mesurer la capacité des grands modèles de langage à adapter leurs réponses à l'état fonctionnel de l'utilisateur, comme sa disponibilité ou sa stabilité. L'évaluation de quatre modèles montre que la fourniture d'un état utilisateur améliore les estimations de préférence humaine au-dessus de 0,5 pour chacun d'eux, bien que la spécificité de cette amélioration par rapport à une instruction générique ne soit pas encore établie.",
+    "angle_eco": "L'adaptation dynamique de la couche d'intelligence des modèles de langage à l'état fonctionnel de l'utilisateur, caractérisé par sa disponibilité, son état de flux ou sa stabilité, constitue un enjeu majeur pour optimiser la qualité de l'assistance tout en préservant la sécurité lors de l'exécution des tâches.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "politique-publique"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Peña Arroyo Gallego, Mauro Ruiz Moreno, Alejandro Acien, Sergio Romero-Tapiador, Teresa Arroyo-Gallego",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The study introduces PresenceBench, a benchmark designed to measure how large language models adapt their performance to a user's functional state. An exploratory evaluation across four models found that supplying a synthetic user state produced human-preference point estimates above 0.5, though the specificity of the response improvements remained unresolved.",
+    "angle_eco_en": "Disentangling whether an artificial intelligence system's performance gains when provided with a user's functional state stem from genuine state adaptation or merely from processing generic additional context presents a major challenge in evaluating personalized AI capabilities."
+  },
+  {
     "id": "arxiv-2610.21756v1",
     "titre": "Locally Robust Inference with Outcomes Predicted by Machine Learning",
     "url": "https://arxiv.org/abs/2610.21756v1",
@@ -2257,25 +2301,5 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "Trademark data provides a timely and globally available source across all economic sectors that complements patents in measuring the development and diffusion of artificial intelligence. Using an empirical exploration of Italian firms, the research note illustrates how artificial intelligence trademarks reveal the ways businesses exploit these technologies to develop new goods and services.",
     "angle_eco_en": "Trademark data can capture the commercialization and sectoral diffusion of artificial intelligence innovations that patent data alone may not reveal, offering a timely and globally comparable alternative for tracking how firms develop new goods and services incorporating AI technologies."
-  },
-  {
-    "id": "arxiv-2607.17378v1",
-    "titre": "Econometrics with Pre-Trained Embeddings for Unstructured Data",
-    "url": "https://arxiv.org/abs/2607.17378v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-19",
-    "resume_fr": "L'utilisation en économie de représentations vectorielles (*embeddings*) issues de modèles d'apprentissage profond pré-entraînés pose des défis théoriques majeurs dus aux différences de tâches d'entraînement et aux problèmes d'identification de la fonction de plongement. Cet article fournit des conditions suffisantes pour surmonter ces défis théoriques, dérive la vitesse de convergence des modèles d'apprentissage automatique intégrant des plongements pré-entraînés et illustre la théorie par des applications d'apprentissage automatique double.",
-    "angle_eco": "L'utilisation de représentations vectorielles issues de modèles d'apprentissage profond pré-entraînés pour analyser des données non structurées en économétrie soulève des problèmes d'identification et de transférabilité entre tâches différentes, nécessitant la définition de conditions suffisantes pour garantir la convergence des modèles cibles.",
-    "themes": [
-      "inference-causale",
-      "donnees"
-    ],
-    "score": 4,
-    "auteurs": "Yuya Shimizu",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "The paper establishes theoretical foundations for using pre-trained deep learning embeddings as covariates in economic analyses by providing sufficient conditions to address the challenges of domain mismatch between the pre-training task and target task, as well as the identification problem inherent in embedding functions. The authors derive convergence rates for machine learning models employing pre-trained embeddings and demonstrate applications including partially linear regression with unstructured controls, price elasticity estimation using image and text data on product quality, missing data imputation, and average treatment effect estimation with unstructured confounders.",
-    "angle_eco_en": "Using pre-trained embeddings from models developed for different datasets and tasks as covariates in economic analyses creates an identification problem that obscures the estimation error of the embedding function and its propagation to target economic parameters."
   }
 ]

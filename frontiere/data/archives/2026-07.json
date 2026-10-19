@@ -242,6 +242,26 @@
     "llm": "qwen2.5:3b"
   },
   {
+    "id": "arxiv-2607.17378v1",
+    "titre": "Econometrics with Pre-Trained Embeddings for Unstructured Data",
+    "url": "https://arxiv.org/abs/2607.17378v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-07-19",
+    "resume_fr": "L'utilisation en économie de représentations vectorielles (*embeddings*) issues de modèles d'apprentissage profond pré-entraînés pose des défis théoriques majeurs dus aux différences de tâches d'entraînement et aux problèmes d'identification de la fonction de plongement. Cet article fournit des conditions suffisantes pour surmonter ces défis théoriques, dérive la vitesse de convergence des modèles d'apprentissage automatique intégrant des plongements pré-entraînés et illustre la théorie par des applications d'apprentissage automatique double.",
+    "angle_eco": "L'utilisation de représentations vectorielles issues de modèles d'apprentissage profond pré-entraînés pour analyser des données non structurées en économétrie soulève des problèmes d'identification et de transférabilité entre tâches différentes, nécessitant la définition de conditions suffisantes pour garantir la convergence des modèles cibles.",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 4,
+    "auteurs": "Yuya Shimizu",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper establishes theoretical foundations for using pre-trained deep learning embeddings as covariates in economic analyses by providing sufficient conditions to address the challenges of domain mismatch between the pre-training task and target task, as well as the identification problem inherent in embedding functions. The authors derive convergence rates for machine learning models employing pre-trained embeddings and demonstrate applications including partially linear regression with unstructured controls, price elasticity estimation using image and text data on product quality, missing data imputation, and average treatment effect estimation with unstructured confounders.",
+    "angle_eco_en": "Using pre-trained embeddings from models developed for different datasets and tasks as covariates in economic analyses creates an identification problem that obscures the estimation error of the embedding function and its propagation to target economic parameters."
+  },
+  {
     "id": "arxiv-2607.16184v1",
     "titre": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
     "url": "https://arxiv.org/abs/2607.16184v1",
