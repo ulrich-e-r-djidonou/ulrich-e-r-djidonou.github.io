@@ -6,6 +6,20 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Quant-Arena: Benchmarking LLM Agents for Quantitative Trading Research</title>
+      <link>https://arxiv.org/abs/2610.30113v1</link>
+      <guid isPermaLink="false">arxiv-2610.30113v1</guid>
+      <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Les chercheurs présentent Quant-Arena, un banc d'essai mesurant la capacité des grands modèles de langage à mener de bout en bout une recherche quantitative sur des données réelles du marché chinois des actions A. Parmi les neuf modèles de pointe évalués, GPT-6 Astra obtient le score le plus élevé, mais aucun ne parvient à surpasser le marché équipondéré sur l'année de test 2024.</description>
+    </item>
+    <item>
+      <title>TIDE: Tree-Induced Fine-Grained Diagnostic Evaluation from Model Behaviors</title>
+      <link>https://arxiv.org/abs/2610.29985v1</link>
+      <guid isPermaLink="false">arxiv-2610.29985v1</guid>
+      <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs proposent TIDE, une méthode de diagnostic fin des capacités des grands modèles de langage qui construit récursivement un arbre hiérarchique de compétences à partir des échantillons de test et des scores des modèles, en utilisant un gain d'information basé sur les comportements pour sélectionner les divisions optimales. L'application de TIDE à cinq modèles sur quatre benchmarks révèle des contrastes de capacités invisibles au niveau agrégé, comme Claude Opus 4.6 qui atteint 100% en raisonnement microéconomique là où GPT-5.4 obtient 83,3%, mais obtient 77,8% en raisonnement contractuel contre 88,9% pour GPT-5.4.</description>
+    </item>
+    <item>
       <title>Too Little too Late? Nationwide Carbon Trading in China</title>
       <link>https://www.nber.org/papers/w35924#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35924-fromrss</guid>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">fed-ps-www-federalreserve-gov-econres-feds-premiums-or-peril-htm</guid>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
       <description>En analysant 465 000 ventes de logements en Floride sur douze ans à l'aide de méthodes d'apprentissage automatique, cette étude montre que les prix immobiliers sont négativement liés aux pertes météorologiques attendues, aux primes d'assurance et à l'exposition aux ouragans récents. Les pertes attendues exercent l'impact le plus fort en étant intégrées de manière rationnelle dans les évaluations immobilières, tandis que les primes d'assurance ont un effet économique plus modeste et l'exposition récente aux ouragans une influence seulement marginale.</description>
-    </item>
-    <item>
-      <title>Automation and Optimal Taxation: A Task-Based Theory</title>
-      <link>https://www.nber.org/papers/w35747#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35747-fromrss</guid>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Les auteurs caractérisent la fiscalité optimale du travail et du capital dans un modèle où l'automatisation rend les travailleurs et les machines parfaitement substituables dans les tâches automatisables, situées jusqu'à un seuil de la distribution des compétences, tandis que les formules fiscales optimales conservent des formes canoniques bien que l'automatisation modifie substantiellement les taux optimaux en rendant les salaires et les rendements du capital endogènes. Le calibrage sur la distribution des salaires américains révèle que la classe moyenne subit l'automatisation la plus intense, avec une intensité machine maximale autour du 40e percentile de salaire, ce qui implique un barème fiscal du travail plus progressif avec un crédit d'impôt plus important en bas, des impôts réduits au milieu et des impôts plus élevés en haut, tandis que l'impôt optimal sur le capital reste substantiel mais inaffecté par l'automatisation.</description>
-    </item>
-    <item>
-      <title>Stable Policy Learning</title>
-      <link>https://arxiv.org/abs/2609.19418v1</link>
-      <guid isPermaLink="false">arxiv-2609.19418v1</guid>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Cet article montre que la stabilité algorithmique joue un rôle central pour arbitrer entre le bien-être espéré d'une décision publique et le risque d'échantillonnage lié aux données expérimentales. Pour réduire ce risque, l'étude propose le « policy-vote bagging », une méthode agrégeant les décisions de nombreux sous-échantillons afin de préserver le bien-être espéré tout en augmentant l'utilité d'un chercheur averse au risque.</description>
     </item>
   </channel>
 </rss>

@@ -1,15 +1,15 @@
 {
-  "derniere_mise_a_jour": "2026-10-19",
-  "nb_entrees_flux": 107,
+  "derniere_mise_a_jour": "2026-10-22",
+  "nb_entrees_flux": 102,
   "compte_par_theme": {
-    "inference-causale": 20,
-    "llm": 53,
-    "prevision": 16,
-    "travail-emploi": 29,
-    "politique-publique": 41,
+    "inference-causale": 19,
+    "llm": 52,
+    "prevision": 15,
+    "travail-emploi": 27,
+    "politique-publique": 39,
     "outils-recherche": 38,
-    "donnees": 31,
-    "macro-finance": 12
+    "donnees": 30,
+    "macro-finance": 11
   },
   "mois_archives": [
     "2026-06",
@@ -20,9 +20,9 @@
   ],
   "compte_par_archive": {
     "2026-06": 2,
-    "2026-07": 48,
+    "2026-07": 55,
     "2026-08": 335,
     "2026-09": 371,
-    "2026-10": 246
+    "2026-10": 299
   }
 }

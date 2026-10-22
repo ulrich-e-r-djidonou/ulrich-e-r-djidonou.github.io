@@ -1,5 +1,50 @@
 [
   {
+    "id": "arxiv-2610.30113v1",
+    "titre": "Quant-Arena: Benchmarking LLM Agents for Quantitative Trading Research",
+    "url": "https://arxiv.org/abs/2610.30113v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-21",
+    "resume_fr": "Les chercheurs présentent Quant-Arena, un banc d'essai mesurant la capacité des grands modèles de langage à mener de bout en bout une recherche quantitative sur des données réelles du marché chinois des actions A. Parmi les neuf modèles de pointe évalués, GPT-6 Astra obtient le score le plus élevé, mais aucun ne parvient à surpasser le marché équipondéré sur l'année de test 2024.",
+    "angle_eco": "La capacité des modèles de langage à boucler complètement le processus itératif de recherche quantitative, depuis la formulation d'une hypothèse de marché jusqu'à la production d'une stratégie de trading robuste au-delà de la période d'entraînement, reste un enjeu central que les benchmarks existants ne permettaient pas d'évaluer.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 1,
+    "nb_ia": 3,
+    "auteurs": "Houde Qian, Zheng Jiang, Wenyi Li, Chenxi Xu, Xinjie Lin, Yuzhao Peng, Ruoyu Han, Youjie Zheng, Kaisen Yang, Qinhuai Na, You Fu, Calvin Xiao",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "Quant-Arena is a benchmark that evaluates large language models on end-to-end quantitative trading research using real A-share market data, where models construct features and trading strategies based on 2022-2023 feedback and are assessed on sealed 2024 data with realistic trading constraints and market impact costs. Among nine frontier models tested, GPT-6 Astra achieved the highest score, yet none of the evaluated models outperformed the equal-weight market baseline in 2024.",
+    "angle_eco_en": "The iterative nature of quantitative research, in which a researcher proposes a hypothesis, implements it as a testable signal, evaluates it on historical data, and selects strategies to retain, creates a challenge for assessing whether large language models can complete this full loop and produce strategies that generalize to out-of-sample periods rather than merely optimizing formulas or individual trading decisions on past data."
+  },
+  {
+    "id": "arxiv-2610.29985v1",
+    "titre": "TIDE: Tree-Induced Fine-Grained Diagnostic Evaluation from Model Behaviors",
+    "url": "https://arxiv.org/abs/2610.29985v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-21",
+    "resume_fr": "Les auteurs proposent TIDE, une méthode de diagnostic fin des capacités des grands modèles de langage qui construit récursivement un arbre hiérarchique de compétences à partir des échantillons de test et des scores des modèles, en utilisant un gain d'information basé sur les comportements pour sélectionner les divisions optimales. L'application de TIDE à cinq modèles sur quatre benchmarks révèle des contrastes de capacités invisibles au niveau agrégé, comme Claude Opus 4.6 qui atteint 100% en raisonnement microéconomique là où GPT-5.4 obtient 83,3%, mais obtient 77,8% en raisonnement contractuel contre 88,9% pour GPT-5.4.",
+    "angle_eco": "La construction d'arbres de décision hiérarchiques à partir des comportements des modèles de langage permet d'identifier des contrastes fins de capacités invisibles dans les scores agrégés de performance.",
+    "themes": [
+      "llm"
+    ],
+    "score": 6,
+    "nb_eco": 2,
+    "nb_ia": 3,
+    "auteurs": "Jiayi Chen, Hui Li, Yujiong Shen, Qiyuan Peng, Yanxin Li, Chenhao Huang, Shaofan Liu, Guoqiang Zhang, Junjie Ye, Shihan Dou, Ming Zhang, Maxm Pan, Tao Gui, Qi Zhang, Xuanjing Huang",
+    "signal": true,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The authors propose Tree-Induced Diagnostic Evaluation (TIDE), a method that builds hierarchical capability trees from benchmark samples and model scores using decision-tree induction to provide fine-grained diagnostic insights beyond aggregate performance metrics. When applied to five models across four benchmarks, TIDE reveals capability contrasts invisible at the aggregate level, such as Claude Opus 4.6 achieving 100% on microeconomic market reasoning compared to GPT-5.4's 83.3%, while trailing on contract law reasoning with 77.8% versus 88.9%.",
+    "angle_eco_en": "Aggregate benchmark scores mask fine-grained differences in model capabilities across specific domains, preventing detailed understanding of where different language models excel or underperform relative to one another.",
+    "deja_signal": true
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35924-fromrss",
     "titre": "Too Little too Late? Nationwide Carbon Trading in China",
     "url": "https://www.nber.org/papers/w35924#fromrss",
@@ -2163,143 +2208,5 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "The authors present DBA-Bench, a benchmark containing 106 PostgreSQL scenarios across seven task domains designed to evaluate database operations agents under realistic, live-environment conditions. Across 848 automated evaluation runs, overall Diagnosis, Outcome, and Safe Pass rates were 32.7%, 19.6%, and 12.4%, while the best automated baseline achieved a 17.9% Safe Pass rate versus 93.4% for a Human DBA reference.",
     "angle_eco_en": "Evaluation gaps between simplified benchmarks and live production environments obscure the severe operational and safety risks of deploying autonomous AI agents for complex system management, as automated systems achieve a safe pass rate of only 17.9% compared to 93.4% for human experts."
-  },
-  {
-    "id": "arxiv-2607.21826v1",
-    "titre": "Are cryptocurrencies real financial bubbles? Evidence from quantitative analyses",
-    "url": "https://arxiv.org/abs/2607.21826v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-23",
-    "resume_fr": "En combinant le modèle LPPL et les tests statistiques PSY sur la période du 1er décembre 2016 au 16 janvier 2018, cette étude évalue la présence de bulles financières dans les cours du Bitcoin et de l'Ether. Les résultats identifient des signaux caractéristiques de bulles ayant anticipé les krachs du Bitcoin à la mi-décembre 2017 et début janvier 2018, ainsi que ceux de l'Ether en juin 2017 et janvier 2018, confirmant le risque spéculatif élevé entretenu par le sentiment des investisseurs.",
-    "angle_eco": "L'application combinée de modèles log-périodiques et de tests statistiques permet de détecter l'exubérance des investisseurs et d'anticiper la formation de bulles et les krachs spéculatifs sur les cours du Bitcoin et de l'Ether.",
-    "themes": [
-      "llm",
-      "macro-finance"
-    ],
-    "score": 3,
-    "auteurs": "Marco Bianchetti, Camilla Ricci, Marco Scaringi",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "By combining Log Periodic Power Law models and Phillips, Shi, and Yu statistical tests, this study analyzes whether Bitcoin and Ether experienced financial bubbles between December 2016 and January 2018. The empirical findings detect bubble signals anticipating market crashes for Bitcoin in mid-December 2017 and early January 2018, as well as for Ether in June 2017 and January 2018, confirming that investor exuberance creates high risks of speculative bubbles.",
-    "angle_eco_en": "Investor sentiment driving cryptocurrency market prices far beyond fundamental values creates significant risks of speculative bubbles and subsequent market crashes, as confirmed by quantitative analyses of Bitcoin and Ether price dynamics."
-  },
-  {
-    "id": "arxiv-2607.21459v1",
-    "titre": "The Evolution of Digital Search: From Blue Links to Delegated Decision-Making",
-    "url": "https://arxiv.org/abs/2607.21459v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-23",
-    "resume_fr": "La recherche numérique évolue d'un modèle traditionnel centré sur les liens vers un système d'agents d'intelligence artificielle auxquels la prise de décision est déléguée, modifiant ainsi la transparence, la concurrence et la monétisation. La théorie économique et de premières preuves expérimentales indiquent que les choix d'architecture de ces systèmes d'agents ont un impact déterminant sur l'efficacité des marchés, la concurrence et le bien-être des consommateurs comme des entreprises.",
-    "angle_eco": "Le passage de la recherche numérique guidée par l'utilisateur à une prise de décision déléguée à des agents autonomes transforme la structure des marchés, car les choix de conception régissant l'accès à l'information et l'exécution des actions déterminent directement la concurrence, l'alignement des incitations et le bien-être des acteurs économiques.",
-    "themes": [],
-    "score": 3,
-    "auteurs": "David M. Rothschild, Nicole Immorlica, Brendan Lucier, Markus Mobius, Aleksandrs Slivkins",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "Digital search is transitioning from a human-driven process of evaluating keyword-based links to an artificial intelligence agent-mediated system of delegated decision-making based on natural language. Economic theory and early experimental evidence indicate that small design choices within agent-mediated marketplaces exert first-order effects on market competition, efficiency, and the welfare of consumers and firms.",
-    "angle_eco_en": "The transformation of digital search from human queries to AI agent-mediated decision-making reshapes market competition, transparency, and incentive alignment because subtle system design choices governing information access and action execution have first-order effects on market efficiency and stakeholder welfare."
-  },
-  {
-    "id": "arxiv-2607.21268v1",
-    "titre": "pAI-Econ-claude: A Gated Human-in-the-Loop Multi-Agent Architecture for AI-Assisted Economic Theory Development",
-    "url": "https://arxiv.org/abs/2607.21268v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-23",
-    "resume_fr": "Afin de pallier le manque de vérification automatisée dans le développement de théories économiques par des agents autonomes, les chercheurs ont conçu pAI-Econ-claude, une architecture multi-agents associant des portes de contrôle spécialisées et une supervision humaine. Testée sur cinq tâches économiques face à un système sans filtrage, cette architecture a réduit la sévérité moyenne des défaillances de 1,58 à 1,16 tout en portant l'utilité globale de 2,60 à 3,10, obtenant la préférence des évaluateurs dans quatre cas sur cinq.",
-    "angle_eco": "L'intégration d'un espace de travail partagé, de filtres spécialisés diagnostiquant les défaillances et de points de contrôle humains au sein d'une architecture multi-agents permet d'améliorer l'auditabilité et la fiabilité du développement de théories économiques assisté par intelligence artificielle.",
-    "themes": [
-      "llm",
-      "politique-publique"
-    ],
-    "score": 3,
-    "auteurs": "Chen Zhu, Xiaolu Wang, Weilong Zhang",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "The pAI-Econ-claude framework introduces a gated, human-in-the-loop multi-agent architecture to improve reliability in AI-assisted economic theory development where outputs lack automated correctness signals. Evaluated against an ungated baseline across five economic-theory tasks, the gated architecture was preferred by blinded evaluators in four tasks, reducing mean failure severity from 1.58 to 1.16 and increasing overall usefulness from 2.60 to 3.10.",
-    "angle_eco_en": "The absence of cheap, machine-readable correctness signals in AI-assisted economic theory development creates a reliability problem that requires combining specialized diagnostic gates with human oversight checkpoints to catch flawed premises and refine complex theoretical claims."
-  },
-  {
-    "id": "arxiv-2607.20365v1",
-    "titre": "Licensing and Innovation Regimes in Pharmaceutical R&D",
-    "url": "https://arxiv.org/abs/2607.20365v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-22",
-    "resume_fr": "Cette étude analyse l'impact de l'octroi de licences sur la recherche et développement pharmaceutique en distinguant les innovations incrémentales, caractérisées par une information plus précise, des innovations novatrices. À l'aide de méthodes d'apprentissage automatique double et de variables instrumentales, l'analyse montre que les licences augmentent la probabilité globale de succès, mais que l'égalisation concurrentielle des rendements ne s'observe que pour les innovations incrémentales et s'effondre pour les projets novateurs.",
-    "angle_eco": "L'impact des accords de licence sur l'efficience de la R&D pharmaceutique dépend du type d'innovation, la meilleure précision de l'information assurant une égalisation concurrentielle des rendements pour les projets incrémentaux, tandis que des imperfections de marché persistent pour les innovations novatrices.",
-    "themes": [
-      "inference-causale",
-      "prevision",
-      "donnees"
-    ],
-    "score": 4,
-    "auteurs": "Michele Liberatore, Massimo Riccaboni",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "Using product-level pharmaceutical data and double machine learning, the study shows that technology licensing increases overall project success probabilities, though market performance varies systematically between incremental and novel innovations. While licensing maintains competitive return equalization and positive selection for incremental projects, persistent information frictions cause this risk-return trade-off to break down for novel innovations.",
-    "angle_eco_en": "Lower information precision in novel pharmaceutical R&D relative to incremental projects generates lemons-type market frictions in technology licensing, causing competitive return equalization to hold for incremental innovations while breaking down for novel ones."
-  },
-  {
-    "id": "arxiv-2607.20327v1",
-    "titre": "PyroDash: Cost-Efficient Token-Level Small-Large Language Model Collaborative Inference",
-    "url": "https://arxiv.org/abs/2607.20327v1",
-    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
-    "type": "papier",
-    "date_publication": "2026-07-22",
-    "resume_fr": "Les chercheurs proposent PyroDash, un cadre d'inférence collaborative dans lequel un petit modèle de langage apprend à déléguer la génération de texte à un grand modèle gelé via un jeton de contrôle afin de réduire les coûts d'utilisation. Évalué sur cinq benchmarks de raisonnement mathématique, PyroDash surpasse l'exactitude du grand modèle seul de 6,36 points de pourcentage tout en réduisant le coût de 20,4 %, ou réduit le coût total de 49,36 à 1,78 dollar US selon la configuration retenue.",
-    "angle_eco": "L'optimisation du compromis entre le coût d'inférence et la précision du raisonnement repose sur une délégation dynamique au niveau des jetons, où un petit modèle de langage peu coûteux déclenche le transfert de la génération vers un grand modèle plus cher uniquement lorsque cela est nécessaire.",
-    "themes": [
-      "llm",
-      "travail-emploi",
-      "politique-publique"
-    ],
-    "score": 4,
-    "auteurs": "Niqi Lyu, Pengtao Shi, Wei Qiu, Jianlin Zhong, Sicong Xia, Jianyao Ma, Yicheng Ding",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "PyroDash is a cost-aware framework that enables a small language model to internalize offloading decisions and request completion from a frozen large language model through a single token-level handoff. Across five mathematical reasoning benchmarks, PyroDash reduces inference costs by 20.4 percent while outperforming the baseline large language model in average accuracy, and can lower total costs from USD 49.36 to USD 1.78 depending on the cost-saving configuration.",
-    "angle_eco_en": "Internalizing token-level offloading decisions within a small language model balances reasoning accuracy against computational cost by selectively delegating generation tasks to an expensive large language model."
-  },
-  {
-    "id": "arxiv-2607.20781v1",
-    "titre": "The Human-AI Substitution Principle: When will you be replaced by AI in your organization?",
-    "url": "https://arxiv.org/abs/2607.20781v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-22",
-    "resume_fr": "Ce papier introduit un modèle analytique d'allocation des tâches entre l'humain et l'IA qui formalise l'asymétrie économique entre l'acquisition de compétences humaines et la montée en échelle de l'IA au sein d'organisations hiérarchiques. En établissant un principe de substitution précis, l'étude démontre que l'adoption de l'IA engendre des transitions d'effectifs brutales, des hiérarchies plus plates et une vulnérabilité accrue des cadres intermédiaires.",
-    "angle_eco": "L'asymétrie économique entre l'acquisition de compétences par les salariés et la mise à l'échelle des capacités de l'intelligence artificielle détermine la manière dont les coûts ajustés du risque, la profondeur organisationnelle et le niveau de qualification régissent la substitution du travail humain, le risque d'automatisation des cadres intermédiaires et le resserrement des hiérarchies d'entreprise.",
-    "themes": [
-      "travail-emploi"
-    ],
-    "score": 4,
-    "auteurs": "Bonny Banerjee, Shreya Singh",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "This paper develops an analytical model of task allocation in hierarchical organizations that establishes the Human-AI Substitution Principle, formalizing the conditions under which artificial intelligence replaces human labor based on economic asymmetries between human skill acquisition and capability scaling. The findings demonstrate that artificial intelligence adoption can induce abrupt workforce transitions, create flatter managerial hierarchies with wider spans of control, and increase the automation vulnerability of middle managers and skilled workers below a specific skill threshold.",
-    "angle_eco_en": "The economic asymmetry between human skill acquisition and artificial intelligence capability scaling determines how risk-adjusted costs, skill thresholds, and deployment scale jointly drive human-AI labor substitution, abrupt workforce transitions, and flatter managerial hierarchies."
-  },
-  {
-    "id": "arxiv-2607.18795v1",
-    "titre": "Measuring AI innovation with trademark data",
-    "url": "https://arxiv.org/abs/2607.18795v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-21",
-    "resume_fr": "Les données relatives aux marques déposées constituent une source d'information opportune et mondiale couvrant tous les secteurs économiques, permettant de compléter les brevets pour mesurer la façon dont les entreprises exploitent l'intelligence artificielle pour développer de nouveaux biens et services. Une exploration empirique d'entreprises italiennes montre comment ces données peuvent être utilisées à différents niveaux d'analyse pour étudier le développement et la diffusion de l'intelligence artificielle.",
-    "angle_eco": "L'exploitation des données relatives aux marques commerciales permet de compléter l'étude des brevets afin de mesurer l'intégration concrète de l'intelligence artificielle dans de nouveaux biens et services, en offrant un suivi réactif et mondial de sa diffusion dans l'ensemble des secteurs économiques.",
-    "themes": [
-      "politique-publique",
-      "donnees"
-    ],
-    "score": 3,
-    "auteurs": "C. Castaldi, F. Castellacci, A. Fronzetti Colladon, L. Segneri, F. Venturini",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "Trademark data provides a timely and globally available source across all economic sectors that complements patents in measuring the development and diffusion of artificial intelligence. Using an empirical exploration of Italian firms, the research note illustrates how artificial intelligence trademarks reveal the ways businesses exploit these technologies to develop new goods and services.",
-    "angle_eco_en": "Trademark data can capture the commercialization and sectoral diffusion of artificial intelligence innovations that patent data alone may not reveal, offering a timely and globally comparable alternative for tracking how firms develop new goods and services incorporating AI technologies."
   }
 ]
