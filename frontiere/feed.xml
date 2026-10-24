@@ -6,6 +6,13 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Cost-Aware Abstention for LLM-Based IT Ticket Classification</title>
+      <link>https://arxiv.org/abs/2610.31657v1</link>
+      <guid isPermaLink="false">arxiv-2610.31657v1</guid>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Cette étude évalue une stratégie d'abstention basée sur les coûts pour la classification automatique de tickets informatiques, démontrant qu'une régression logistique à seuil calibré réduit le coût de test de 38,1 % et fait chuter les erreurs d'orientation de 15,3 % à 3,5 %. Les politiques sélectionnées par calibration surpassent le routage ou le transfert systématiques dans 14 des 16 configurations analysées, tandis que les modèles affinés comme DistilBERT s'avèrent nettement plus performants que les grands modèles de langage guidés par des invites.</description>
+    </item>
+    <item>
       <title>Quant-Arena: Benchmarking LLM Agents for Quantitative Trading Research</title>
       <link>https://arxiv.org/abs/2610.30113v1</link>
       <guid isPermaLink="false">arxiv-2610.30113v1</guid>
@@ -153,6 +160,20 @@
       <description>Les auteurs étudient les effets à long terme d'une aide en espèces sur les bénéficiaires et leurs enfants dans le cadre d'une expérience aléatoire menée à Seattle et Denver dans les années 1970, où les familles traitées ont reçu des milliers de dollars en prestations gouvernementales supplémentaires pendant trois ou cinq ans. En appairant les données expérimentales aux registres de l'administration de la sécurité sociale, ils constatent que le traitement a réduit les gains annuels postexpérimentaux des adultes de 1 800 dollars et augmenté leurs demandes de prestations d'invalidité, avec des effets plus prononcés à l'approche de l'âge de la retraite, tandis que les enfants n'ont connu aucun effet significatif sur leurs revenus ou leurs interactions avec le système d'invalidité.</description>
     </item>
     <item>
+      <title>The Global Fiscal Actions (GFA) Dataset</title>
+      <link>https://doi.org/10.5089/9798229062329.001</link>
+      <guid isPermaLink="false">fmi-10-5089-9798229062329-001</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Le jeu de données Global Fiscal Actions (GFA) constitue la première base narrative trimestrielle globale sur les mesures discrétionnaires de politique budgétaire, couvrant 142 pays depuis 1990 grâce à la combinaison des rapports de l'Economist Intelligence Unit et de grands modèles de langage. Validée par des évaluations d'économistes, des agrégats budgétaires et des données existantes, cette base apporte de nouveaux éléments sur l'efficacité des politiques budgétaires en analysant notamment leur cyclicité et leurs multiplicateurs par pays.</description>
+    </item>
+    <item>
+      <title>How is Labor Demand Changing as AI Improves? New Global Evidence</title>
+      <link>https://doi.org/10.5089/9798229061551.001</link>
+      <guid isPermaLink="false">fmi-10-5089-9798229061551-001</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <description>À partir de plus de 700 millions d'offres d'emploi dans 110 économies, l'étude montre que la demande de travail a diminué de près de 10 % dans les professions les plus exposées à l'intelligence artificielle, bien que cet impact se soit ensuite stabilisé. Ce phénomène s'explique par une hausse rapide de la demande de compétences en intelligence artificielle, les entreprises qui recherchent ces qualifications enregistrant une croissance plus forte de leurs recrutements et créant ainsi de nouvelles opportunités.</description>
+    </item>
+    <item>
       <title>An LLM Workflow That Reproduces, Improves, and Extends Published Economics Research</title>
       <link>https://www.nber.org/papers/w35782#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35782-fromrss</guid>
@@ -193,27 +214,6 @@
       <guid isPermaLink="false">arxiv-2609.27686v1</guid>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
       <description>Les auteurs étudient la fiabilité des modèles de langage de grande taille pour automatiser les tâches de lecture, classification et synthèse de la littérature académique, en les traitant comme des systèmes de mesure et en analysant comment leurs erreurs affectent les conclusions en aval. Ils constatent que si les modèles performent bien sur les tâches de classification binaire, leur performance se détériore avec les tâches demandant une plus grande interprétation contextuelle, et que l'erreur de mesure affecte davantage les conclusions au niveau des articles individuels qu'au niveau des tendances générales de la littérature.</description>
-    </item>
-    <item>
-      <title>Rule-Based Pricing Algorithms and Market Outcomes: An Experimental Study</title>
-      <link>https://arxiv.org/abs/2609.26861v1</link>
-      <guid isPermaLink="false">arxiv-2609.26861v1</guid>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Les auteurs étudient expérimentalement comment la conception d'outils de tarification algorithmique affecte les résultats de marché en faisant concourir des participants qui construisent des algorithmes de prix dans un jeu de Bertrand séquentiel. La plupart des variations de conception testées, notamment les avertissements sur les guerres de prix, les stratégies préconfigurées et les conseils d'un modèle de langage de grande taille, augmentent les prix de marché en raison de prix de départ plus élevés et de conceptions d'algorithmes plus coopératives.</description>
-    </item>
-    <item>
-      <title>The AI transformation</title>
-      <link>https://www.bankofcanada.ca/2026/09/the-ai-transformation/</link>
-      <guid isPermaLink="false">banque-canada-https-www-bankofcanada-ca-2026-09-the-ai-transformation-</guid>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-      <description>L'intelligence artificielle modifie la quantité de ce qui est produit et la nature du travail humain. Cependant, l'ensemble des façons dont cette technologie affectera l'économie reste encore méconnu.</description>
-    </item>
-    <item>
-      <title>FEDS Paper: Premiums or Peril</title>
-      <link>https://www.federalreserve.gov/econres/feds/premiums-or-peril.htm</link>
-      <guid isPermaLink="false">fed-ps-www-federalreserve-gov-econres-feds-premiums-or-peril-htm</guid>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-      <description>En analysant 465 000 ventes de logements en Floride sur douze ans à l'aide de méthodes d'apprentissage automatique, cette étude montre que les prix immobiliers sont négativement liés aux pertes météorologiques attendues, aux primes d'assurance et à l'exposition aux ouragans récents. Les pertes attendues exercent l'impact le plus fort en étant intégrées de manière rationnelle dans les évaluations immobilières, tandis que les primes d'assurance ont un effet économique plus modeste et l'exposition récente aux ouragans une influence seulement marginale.</description>
     </item>
   </channel>
 </rss>

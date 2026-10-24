@@ -1,5 +1,28 @@
 [
   {
+    "id": "arxiv-2610.31657v1",
+    "titre": "Cost-Aware Abstention for LLM-Based IT Ticket Classification",
+    "url": "https://arxiv.org/abs/2610.31657v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "resume_fr": "Cette étude évalue une stratégie d'abstention basée sur les coûts pour la classification automatique de tickets informatiques, démontrant qu'une régression logistique à seuil calibré réduit le coût de test de 38,1 % et fait chuter les erreurs d'orientation de 15,3 % à 3,5 %. Les politiques sélectionnées par calibration surpassent le routage ou le transfert systématiques dans 14 des 16 configurations analysées, tandis que les modèles affinés comme DistilBERT s'avèrent nettement plus performants que les grands modèles de langage guidés par des invites.",
+    "angle_eco": "L'arbitrage explicite entre le coût du tri humain et celui d'un mauvais routage automatique des tickets d'assistance informatique permet, grâce à un mécanisme d'abstention calibré selon les coûts, de réduire le coût financier global en réorientant les cas incertains vers le tri humain.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 4,
+    "nb_eco": 1,
+    "nb_ia": 4,
+    "auteurs": "Sachin Gupta",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "This paper evaluates cost-aware abstention policies for IT support ticket classification, comparing four non-large-language-model classifiers against four prompted large language models across a 47,837-ticket dataset to minimize misrouting expenses relative to human triage. Under an explicit cost structure, a TF-IDF logistic regression policy selected on calibration data reduced test costs by 38.1% and lowered misroute rates from 15.3% to 3.5%, while fine-tuned DistilBERT achieved 0.879 accuracy compared to a maximum of 0.477 for prompted language models.",
+    "angle_eco_en": "Deferring automated decisions to human triage when classification confidence falls below explicit cost-based thresholds minimizes total decision costs under misrouting risks, highlighting how poor calibration in prompted large language models can impede cost-effective automation compared to traditional calibrated classifiers."
+  },
+  {
     "id": "arxiv-2610.30113v1",
     "titre": "Quant-Arena: Benchmarking LLM Agents for Quantitative Trading Research",
     "url": "https://arxiv.org/abs/2610.30113v1",
@@ -38,7 +61,7 @@
     "nb_eco": 2,
     "nb_ia": 3,
     "auteurs": "Jiayi Chen, Hui Li, Yujiong Shen, Qiyuan Peng, Yanxin Li, Chenhao Huang, Shaofan Liu, Guoqiang Zhang, Junjie Ye, Shihan Dou, Ming Zhang, Maxm Pan, Tao Gui, Qi Zhang, Xuanjing Huang",
-    "signal": true,
+    "signal": false,
     "llm": "claude-haiku-4-5",
     "resume_en": "The authors propose Tree-Induced Diagnostic Evaluation (TIDE), a method that builds hierarchical capability trees from benchmark samples and model scores using decision-tree induction to provide fine-grained diagnostic insights beyond aggregate performance metrics. When applied to five models across four benchmarks, TIDE reveals capability contrasts invisible at the aggregate level, such as Claude Opus 4.6 achieving 100% on microeconomic market reasoning compared to GPT-5.4's 83.3%, while trailing on contract law reasoning with 77.8% versus 88.9%.",
     "angle_eco_en": "Aggregate benchmark scores mask fine-grained differences in model capabilities across specific domains, preventing detailed understanding of where different language models excel or underperform relative to one another.",
@@ -462,6 +485,51 @@
     "llm": "claude-haiku-4-5",
     "resume_en": "The Seattle-Denver Income Maintenance Experiment provided thousands of dollars in extra government benefits to treated families for three to five years during the 1970s, and subsequent matching of experimental records to Social Security Administration data revealed that treatment reduced adults' postexperimental annual earnings by $1,800 and increased their disability benefit applications, with effects concentrated around retirement age. In contrast, the children of treated families experienced no significant effects on earnings or disability system engagement.",
     "angle_eco_en": "Cash assistance programs may reduce long-term labor supply among adult recipients through occupational shifts that increase their subsequent reliance on disability benefits, while leaving their children's future earnings unaffected."
+  },
+  {
+    "id": "fmi-10-5089-9798229062329-001",
+    "titre": "The Global Fiscal Actions (GFA) Dataset",
+    "url": "https://doi.org/10.5089/9798229062329.001",
+    "source": "IMF Working Papers",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "resume_fr": "Le jeu de données Global Fiscal Actions (GFA) constitue la première base narrative trimestrielle globale sur les mesures discrétionnaires de politique budgétaire, couvrant 142 pays depuis 1990 grâce à la combinaison des rapports de l'Economist Intelligence Unit et de grands modèles de langage. Validée par des évaluations d'économistes, des agrégats budgétaires et des données existantes, cette base apporte de nouveaux éléments sur l'efficacité des politiques budgétaires en analysant notamment leur cyclicité et leurs multiplicateurs par pays.",
+    "angle_eco": "La classification systématique des mesures budgétaires discrétionnaires de 142 pays depuis 1990, combinant des rapports d'expertise pays et des grands modèles de langage, permet de mieux évaluer la cyclicalité des finances publiques et l'efficacité des multiplicateurs budgétaires nationaux.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Hites Ahir, Miyoko Asai, Matthieu Bellon, Maria Chiara Cavalleri, Shuvam Das, Davide Furceri, Faizaan Kisat, Aiko Mineshima, Irene Rausell Moreno, Nikhil Patel, Adrian Peralta-Alva",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The Global Fiscal Actions dataset provides a quarterly narrative database of discretionary fiscal policy actions across 142 countries since 1990 by combining Economist Intelligence Unit country reports with large language models. Validated against economists' assessments, existing narrative datasets, fiscal aggregates, and repeated AI extractions, the database systematically classifies tax and spending measures to provide new evidence on fiscal cyclicality and country-specific fiscal multipliers.",
+    "angle_eco_en": "Evaluating the conduct and effectiveness of discretionary fiscal policy, including fiscal cyclicality and country-specific multipliers, requires systematic quarterly cross-country tracking of tax and spending measures alongside their underlying motivations and timing."
+  },
+  {
+    "id": "fmi-10-5089-9798229061551-001",
+    "titre": "How is Labor Demand Changing as AI Improves? New Global Evidence",
+    "url": "https://doi.org/10.5089/9798229061551.001",
+    "source": "IMF Working Papers",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "resume_fr": "À partir de plus de 700 millions d'offres d'emploi dans 110 économies, l'étude montre que la demande de travail a diminué de près de 10 % dans les professions les plus exposées à l'intelligence artificielle, bien que cet impact se soit ensuite stabilisé. Ce phénomène s'explique par une hausse rapide de la demande de compétences en intelligence artificielle, les entreprises qui recherchent ces qualifications enregistrant une croissance plus forte de leurs recrutements et créant ainsi de nouvelles opportunités.",
+    "angle_eco": "L'essor de l'intelligence artificielle générative reconfigure le marché du travail mondial en réduisant les recrutements dans les professions les plus exposées tout en générant de nouvelles opportunités pour les travailleurs possédant des compétences spécialisées en IA, ce qui conduit à une stabilisation de l'impact global sur l'emploi.",
+    "themes": [
+      "travail-emploi",
+      "macro-finance"
+    ],
+    "score": 4,
+    "nb_eco": 4,
+    "nb_ia": 1,
+    "auteurs": "Sakai Ando, Divya Kirti, Willa Lin, Assyifa Szami Ilman",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Analyzing over 700 million online job postings across 110 economies, the paper finds that labor demand declined by nearly 10 percent in occupations more exposed to artificial intelligence, although this drop stabilized even as AI capabilities advanced. Concurrently, demand for emerging AI skills grew rapidly, and firms seeking these skills experienced faster growth in job postings even within highly exposed occupations.",
+    "angle_eco_en": "Generative artificial intelligence reshapes labor markets by simultaneously reducing hiring in highly exposed occupations and expanding opportunities for workers who possess specialized AI skills."
   },
   {
     "id": "nber-https-www-nber-org-papers-w35782-fromrss",
@@ -2145,68 +2213,5 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "Analyzing 380 trillion tokens of realized artificial intelligence consumption, the study calculates stock sensitivity to growth in AI use and finds that firms with higher sensitivity earn higher subsequent returns. The resulting AI premium is highest for developed markets, frontier models, experienced users, and complex tasks, with equity markets associating the AI transition more positively with implementation, communication, and coordination work than with analytical and scientific tasks.",
     "angle_eco_en": "The valuation of stock sensitivity to artificial intelligence growth by equity markets generates a return premium that favors developed markets, advanced models, experienced users, and work centered on implementation and communication over analytical tasks."
-  },
-  {
-    "id": "arxiv-2607.23313v1",
-    "titre": "Agentic AI Orchestration of Heterogeneous Economic Models for Rapid, Multi-scenario Analysis of Energy Crises",
-    "url": "https://arxiv.org/abs/2607.23313v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-07-25",
-    "resume_fr": "Pour pallier la fragmentation des modèles économiques et répondre à l'urgence des crises énergétiques, les auteurs ont conçu une architecture fondée sur les grands modèles linguistiques capable d'automatiser leur orchestration. Ce cadre coordonne seize modèles sectoriels et macroéconomiques à travers cinq scénarios d'analyse, tout en garantissant que chaque donnée chiffrée provient exclusivement de l'exécution des modèles sous-jacents et non de l'intelligence artificielle.",
-    "angle_eco": "L'automatisation de l'intégration et de l'exécution séquentielle de modèles économiques et physiques hétérogènes par un grand modèle de langage permet de produire rapidement des analyses prospectives multiscénarios et traçables pour guider les prises de décision lors de crises énergétiques.",
-    "themes": [
-      "llm",
-      "politique-publique",
-      "outils-recherche"
-    ],
-    "score": 6,
-    "auteurs": "Dana Golden, Brett Indelicato, Lav R. Varshney, Carlos D. Messina, Suzanne Thornsbury",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "To address the slow manual integration of fragmented economic models during energy crises, a large language model framework was developed to coordinate 16 existing models covering oil, natural gas, shipping, water, helium, fertilizer, and macroeconomic equilibrium. The system translates scenario assumptions into model-specific inputs, executes the underlying models in dependency order, and synthesizes traceable outputs for policymakers without generating any quantitative figures itself.",
-    "angle_eco_en": "Automating the orchestration of heterogeneous economic and physical models through a large language model framework overcomes the delays of manual model integration by translating scenario assumptions into model-specific inputs and executing existing models in dependency order for rapid energy crisis analysis."
-  },
-  {
-    "id": "arxiv-2607.22465v1",
-    "titre": "TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI",
-    "url": "https://arxiv.org/abs/2607.22465v1",
-    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
-    "type": "papier",
-    "date_publication": "2026-07-24",
-    "resume_fr": "Pour pallier l'incapacité des routeurs par appel à traiter le retour d'information différé des flux de travail d'agents, le cadre TRACE-Router attribue chaque tâche à un modèle unique dès son admission via un bandit contextuel. Évaluée sur trois bancs d'essai, cette approche améliore le compromis entre précision et latence, surpassant le meilleur modèle unique sur Terminal-Bench de 7,1 points de précision tout en réduisant la latence de 36 %.",
-    "angle_eco": "L'optimisation du compromis entre précision et latence dans les flux de travail d'intelligence artificielle repose sur l'allocation globale de chaque tâche à un modèle unique dès son admission, guidée par la récompense terminale obtenue à la fin de l'exécution plutôt que par des décisions d'aiguillage indépendantes à chaque appel.",
-    "themes": [
-      "llm",
-      "politique-publique",
-      "outils-recherche"
-    ],
-    "score": 4,
-    "auteurs": "Ritik Raj, Souvik Kundu, Sarbartha Banerjee, Dheemanth Joshi, Ishita Vohra, Tushar Krishna",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "Addressing the limitation of per-call routers in multi-step AI workflows, TRACE-Router assigns an entire task to a single large language model at admission and optimizes routing decisions using delayed, task-level feedback. Across three agentic benchmarks, the framework improves accuracy-latency trade-offs on the Pareto frontier, outperforming the strongest single-model baseline on Terminal-Bench by 7.1 accuracy points while reducing latency by 36 percent.",
-    "angle_eco_en": "Per-call model selection in long-horizon AI workflows creates a credit-assignment problem because delayed task-level feedback prevents individual routing choices from being correctly attributed to final outcomes, hindering optimal accuracy-latency and cost-quality trade-offs in enterprise deployments."
-  },
-  {
-    "id": "arxiv-2607.22165v1",
-    "titre": "DBA-Bench: A Production-Fidelity Benchmark for LLM-Based Database Operations Agents",
-    "url": "https://arxiv.org/abs/2607.22165v1",
-    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
-    "type": "papier",
-    "date_publication": "2026-07-24",
-    "resume_fr": "Pour évaluer la capacité des agents d'intelligence artificielle à gérer des bases de données en conditions réelles, le benchmark DBA-Bench propose 106 scénarios complexes répartis sur sept domaines opérationnels au sein d'environnements PostgreSQL. L'évaluation de plusieurs systèmes sur 848 exécutions révèle un taux de réussite sécurisé moyen de seulement 12,4 %, le meilleur agent automatisé atteignant 17,9 % contre 93,4 % pour un administrateur humain.",
-    "angle_eco": "L'automatisation de la gestion des bases de données par des modèles de langage se heurte à d'importantes limites de sécurité et d'efficacité en environnement de production, le meilleur système autonome n'atteignant que 17,9 % de résolutions sûres contre 93,4 % pour un administrateur humain.",
-    "themes": [
-      "inference-causale",
-      "llm",
-      "politique-publique"
-    ],
-    "score": 4,
-    "auteurs": "Junming Chen, Junyang Jiang, Xu Chen, Zibo Liang, Kai Zheng",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "The authors present DBA-Bench, a benchmark containing 106 PostgreSQL scenarios across seven task domains designed to evaluate database operations agents under realistic, live-environment conditions. Across 848 automated evaluation runs, overall Diagnosis, Outcome, and Safe Pass rates were 32.7%, 19.6%, and 12.4%, while the best automated baseline achieved a 17.9% Safe Pass rate versus 93.4% for a Human DBA reference.",
-    "angle_eco_en": "Evaluation gaps between simplified benchmarks and live production environments obscure the severe operational and safety risks of deploying autonomous AI agents for complex system management, as automated systems achieve a safe pass rate of only 17.9% compared to 93.4% for human experts."
   }
 ]

@@ -1,5 +1,386 @@
 [
   {
+    "id": "arxiv-2610.31537v1",
+    "titre": "Causal inference in staggered adoption panels: The correct comparison set depends on your intervention",
+    "url": "https://arxiv.org/abs/2610.31537v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Ian Lundberg, Yaling Xu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31159v1",
+    "titre": "Beyond city pairs: Higher-order information in urban growth across borders",
+    "url": "https://arxiv.org/abs/2610.31159v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Cillian Hourican, Debraj Roy",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31106v1",
+    "titre": "Testing for peer effects in short panels without identifying the network structure",
+    "url": "https://arxiv.org/abs/2610.31106v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Tom Boot, Artūras Juodis",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.30886v1",
+    "titre": "The Reaction of Financial Markets to the Releases of DeepSeek R1 and Kimi K3: A Critical Analysis",
+    "url": "https://arxiv.org/abs/2610.30886v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 4,
+    "nb_ia": 0,
+    "auteurs": "Marco Taboga",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.30858v1",
+    "titre": "Joules-to-GDP: How Much Economic Value Do AI Systems Produce per Unit of Energy?",
+    "url": "https://arxiv.org/abs/2610.30858v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Amirreza Zeinali, Jon Saad-Falcon, Avanika Narayan, Mersad Abbasi, Jonathan S. Hartley, John Hennessy, Christopher Re, Azalia Mirhoseini",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.30752v1",
+    "titre": "The Delegation Divide: An Open Index of AI-Agent Delegability across Occupations and Countries",
+    "url": "https://arxiv.org/abs/2610.30752v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Cristian Espinal Maya, Santiago Jiménez Londoño",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31670v1",
+    "titre": "Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success",
+    "url": "https://arxiv.org/abs/2610.31670v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Yunfei Xie, Howard H. Qian, Shiyi Lan, Kaiyu Hang, Chen Wei",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31667v1",
+    "titre": "Direct Pass@$k$ Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning",
+    "url": "https://arxiv.org/abs/2610.31667v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Mahdi Salmani, Adel Javanmard, Devansh Gupta, Meisam Razaviyayn",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31659v1",
+    "titre": "SpectralCanary: Embarrassingly Simple Low-Frequency Traces for T2I Dataset-Use Auditing",
+    "url": "https://arxiv.org/abs/2610.31659v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Sy-Tuyen Ho, Anirudh Satheesh, Soham Chawathe, Huy Nghiem, Yongkyun Lee, Andrew Adams Schoen, Furong Huang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31656v1",
+    "titre": "METTA: Memory-Enhanced Test-Time Adaptation for Meta-Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2610.31656v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Ali Najar, Hosein Hasani, Amir Kooshan Fattah, Yasamin Rajabi, Mahdieh Soleymani Baghshah",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31642v1",
+    "titre": "A Fix for Softmax and Cross-Entropy",
+    "url": "https://arxiv.org/abs/2610.31642v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jonathan T. Barron, Dan Gnanapragasam, Michael Tschannen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31639v1",
+    "titre": "Causal Chain of Thought: Mitigating Attention Leakage via Context Isolation",
+    "url": "https://arxiv.org/abs/2610.31639v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Gabriele Dominici, Teague McMillan, Fazl Barez, Marc Langheinrich, Martin Gjoreski",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31616v1",
+    "titre": "OP-Print: Tracing Membership Imprints in On-Policy Self-Distillation",
+    "url": "https://arxiv.org/abs/2610.31616v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Qi Li, Xinchao Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31612v1",
+    "titre": "Efficient and Optimal Learning of Discrete Distributions with Person-Level Privacy",
+    "url": "https://arxiv.org/abs/2610.31612v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Gautam Kamath, Mahbod Majid, Ankur Moitra, Argyris Mouzakis, Jonathan Ullman",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31563v1",
+    "titre": "When to Follow the Teacher: Advantage-Based On-Policy Distillation",
+    "url": "https://arxiv.org/abs/2610.31563v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Mahdi Sabbaghi, George Pappas, Hamed Hassani, Adel Javanmard",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31544v1",
+    "titre": "Same Luck, Different Choice: Twin-World Credit Assignment for Agentic Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2610.31544v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Zeropy Surio, Tobias Engel, Mei-Lin Chou, Anika Raman, Samuel Okafor",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31520v1",
+    "titre": "The Geometry of Metaphor: Probing and Steering Metaphor Representations in Large Language Models",
+    "url": "https://arxiv.org/abs/2610.31520v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "inference-causale",
+      "llm"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Shihui Li, Mette Andersen, Martha Lewis",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31512v1",
+    "titre": "Towards User Simulators That Stay On Task And Still Sound Natural",
+    "url": "https://arxiv.org/abs/2610.31512v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "llm"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Mustafa Omer Gul, Philippe Laban, Tanya Goyal, Jennifer Neville",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31459v1",
+    "titre": "How Different, or Different How? Stance Granularity in Viewpoint Selection for Dialog Systems that Engage Users with Alternative Views",
+    "url": "https://arxiv.org/abs/2610.31459v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Morita Tarvirdians, Reeve Lorena, Catharine Oertel",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31438v1",
+    "titre": "DIAL: Steerable Language Models with Distilled Instruction-Adherence Levels",
+    "url": "https://arxiv.org/abs/2610.31438v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Thanh Q. Tran, John Russell Himawan, Arun Verma, Kiwan Wong, Wei Xiao, Daniela Rus, Bryan Kian Hsiang Low",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31421v1",
+    "titre": "How Depth Growth and Looping Shape In-Context Learning in Language Models",
+    "url": "https://arxiv.org/abs/2610.31421v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "prevision",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Ferdinand Kapl, Kaitlin Maile, Stefan Bauer, Johannes von Oswald",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31412v1",
+    "titre": "SQuAT: Spherical Lattice Vector Quantization-Aware Training",
+    "url": "https://arxiv.org/abs/2610.31412v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "llm"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Sebastian Loeschcke, Ivan Koryakovskiy, Tycho F. A. van der Ouderaa, Riccardo Del Chiaro, Mart van Baalen, Paul N. Whatmough, Markus Nagel",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31407v1",
+    "titre": "Same Entity, Different Script: Diagnosing Cross-Script Entity Matching Failures in Language Models",
+    "url": "https://arxiv.org/abs/2610.31407v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Athira Gopal, Patil Prathamesh Pravin, Ankush Kadu, Arpit Jain, Ashwanth Krishnan",
+    "signal": false
+  },
+  {
     "id": "arxiv-2610.29600v1",
     "titre": "Demand Estimation for Rationally Inattentive Consumers",
     "url": "https://arxiv.org/abs/2610.29600v1",
@@ -296,6 +677,58 @@
     "nb_eco": 1,
     "nb_ia": 0,
     "auteurs": "Julian Silva, Jaliya Kodithuwakku, Navindu Sirimanna, Shaveen Herath, Wageesha N. Manamperi, Joshua P. Kulasingham",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.30527v1",
+    "titre": "Austerity, Gender, and Multidimensional Deprivation Among Older Europeans: Evidence from SHARE",
+    "url": "https://arxiv.org/abs/2610.30527v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-21",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Nita Handastya",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.30487v1",
+    "titre": "Monetary Policy Forecast Errors and Inflation Compensation under Sovereign Stress in Brazil",
+    "url": "https://arxiv.org/abs/2610.30487v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-21",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": " Giovana,  Tommy",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.30307v1",
+    "titre": "The Customer Is the Builder: How AI Coding Agents Are Rewriting the Economics of Software",
+    "url": "https://arxiv.org/abs/2610.30307v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-21",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Ripon Chandra Malo, Zimeng Yu, Tong Qiu",
     "signal": false
   },
   {
