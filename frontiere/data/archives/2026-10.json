@@ -1,5 +1,329 @@
 [
   {
+    "id": "arxiv-2610.32846v1",
+    "titre": "Local Polynomial Estimation in Irregular Correlated Random Coefficient Panel Data Models",
+    "url": "https://arxiv.org/abs/2610.32846v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yelong Chen, Hua Jin, Yuxuan Ren",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32735v1",
+    "titre": "Optimal Treatment Assignment Rules on Networked Populations",
+    "url": "https://arxiv.org/abs/2610.32735v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Abhishek Ananth",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32455v1",
+    "titre": "Delayed Retirement, Intergenerational Transfers, and Fertility",
+    "url": "https://arxiv.org/abs/2610.32455v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 5,
+    "nb_ia": 0,
+    "auteurs": "Yi Fan, Shuangshuang Song, Yewen Yu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32355v1",
+    "titre": "AI-Augmented Research: Free to Write, Costly to Read",
+    "url": "https://arxiv.org/abs/2610.32355v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Wolfgang Kuhle",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32969v1",
+    "titre": "DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection",
+    "url": "https://arxiv.org/abs/2610.32969v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Amber Xie, Jiawei Fu, Xiaofeng Guo, Carmelo Sferrazza, Guanya Shi, Haozhi Qi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32941v1",
+    "titre": "If at First You Don't Succeed, Backtrack: Lightweight Recovery for Frozen VLAs",
+    "url": "https://arxiv.org/abs/2610.32941v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Thomas Landeg, Thierry Tambe",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32919v1",
+    "titre": "SemantEq: Faithful Bidirectional Equivalence of Formal Statements",
+    "url": "https://arxiv.org/abs/2610.32919v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Xinrui Li, Pawan Sasanka Ammanamanchi, Siddharth Bhat, Rianna Jamdar, Yongxi Lin, Stella Biderman",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32914v1",
+    "titre": "A Tutorial on Physics Constrained Machine Learning for Hybrid Modeling, Optimization, and Control",
+    "url": "https://arxiv.org/abs/2610.32914v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Rahul Golder, Bimol Nath Roy, MM Faruque Hasan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32910v1",
+    "titre": "Recommender regret for improving regularised RL estimation with bandits and MCTS",
+    "url": "https://arxiv.org/abs/2610.32910v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Danilo Vucetic, Alexandre Larouche, Mohammad Pedramfar, Audrey Durand, Gauthier Gidel",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32894v1",
+    "titre": "LoCA: Enabling Multi-Modality in Geospatial Location Encoders",
+    "url": "https://arxiv.org/abs/2610.32894v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "prevision",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Panagiotis Koromilas, Eleanna Vali, Diogenis Antonopoulos, Eleni Saka, Dimitris Christofis, Nikolaos Ioannis Bountos, Konstantin Klemmer, Ioannis Papoutsis, Yannis Panagakis, Mihalis A. Nicolaou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32887v1",
+    "titre": "Reinforcement Learning with Multi-Step Transition Predictions: A Bellman Theory",
+    "url": "https://arxiv.org/abs/2610.32887v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Chenbei Lu, Zaiwei Chen, Tongxin Li, Chenye Wu, Adam Wierman",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32866v1",
+    "titre": "Interpretable sparse fine-tuning with TopKLoRA enables faithful circuit discovery",
+    "url": "https://arxiv.org/abs/2610.32866v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Marek Masiak, Andrzej Szablewski, Nicola Cancedda, Constantin Venhoff",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32855v1",
+    "titre": "Regularised RL improves sim-to-real transfer",
+    "url": "https://arxiv.org/abs/2610.32855v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Danilo Vucetic, Mohamad H. Danesh, Florence Clerc, Hsiu-Chin Lin, Jonathan Tremblay",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32817v1",
+    "titre": "KrishokTech: A Bengali Agricultural Advisory System with Explicit Authorization Controls",
+    "url": "https://arxiv.org/abs/2610.32817v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Khan Raiyan Ibne Reza, Sanjana Aktar Maria, Shakil Ahmed, Faiyad Hossain, Sumaiya Tabassum Nimi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32802v1",
+    "titre": "Frontier-OPD: Discovering the Edge of Agent Capability and Teaching Agents to Go Beyond",
+    "url": "https://arxiv.org/abs/2610.32802v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Zheng Jiang, Yiming Chen, Houde Qian, Ling Li, Chaoyang Li, Lifeng Sun",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32781v1",
+    "titre": "Every Edge Needs a Quote: Building a Quote-Grounded Knowledge Graph of Healthcare Software Adoption with Language-Model Agents",
+    "url": "https://arxiv.org/abs/2610.32781v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Juan Felipe Duran, Arthur Tobler, Martin Vallières",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32774v1",
+    "titre": "Deep Learning-Based Prediction of HER2 Status from Whole-Brain MRI in Breast Cancer Brain Metastases",
+    "url": "https://arxiv.org/abs/2610.32774v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Sara Early, Chris Kang, Vibujithan Vigneshwaran, Kimberly Amador, Roger Y. Tsang, Nils D. Forkert",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32772v1",
+    "titre": "Direction-Aware Token Credit Assignment with Reward-Model Gradients",
+    "url": "https://arxiv.org/abs/2610.32772v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yikuan Hu, Jifeng Zhu, Minle Su, Jiaqin Yue, Gujie Shao, Yanzhe Chen, Haoxuan Jia, Haoran Xu, Wangzhou Dai",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.32770v1",
+    "titre": "On-Policy Self-Training: Data-Free Self-Improvement in Large Language Models",
+    "url": "https://arxiv.org/abs/2610.32770v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Leon Sick, Lukas Hoyer, Yannick Strümpler, Christian Reisswig, Timo Ropinski, Federico Tombari",
+    "signal": false
+  },
+  {
     "id": "arxiv-2610.31537v1",
     "titre": "Causal inference in staggered adoption panels: The correct comparison set depends on your intervention",
     "url": "https://arxiv.org/abs/2610.31537v1",
@@ -378,6 +702,23 @@
     "nb_eco": 1,
     "nb_ia": 0,
     "auteurs": "Athira Gopal, Patil Prathamesh Pravin, Ankush Kadu, Arpit Jain, Ashwanth Krishnan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31978v1",
+    "titre": "Parallel Trends as a Spectrum",
+    "url": "https://arxiv.org/abs/2610.31978v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-22",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Kyle Schindl, Joseph Fry, Florian Gunsilius, Larry Wasserman",
     "signal": false
   },
   {
@@ -932,6 +1273,20 @@
     "nb_eco": 0,
     "nb_ia": 0,
     "auteurs": "Seung Jin Cho, Jun Yeong Lee",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.31693v1",
+    "titre": "When AI Gets Cheaper, Do Prices Follow? Information Delays and Algorithmic Pricing",
+    "url": "https://arxiv.org/abs/2610.31693v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-20",
+    "themes": [],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Krish Tadigotla",
     "signal": false
   },
   {

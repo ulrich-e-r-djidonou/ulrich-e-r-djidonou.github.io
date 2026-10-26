@@ -1,5 +1,48 @@
 [
   {
+    "id": "arxiv-2610.32300v1",
+    "titre": "Jawboning the Fed: Do Markets Listen When Administrations Talk?",
+    "url": "https://arxiv.org/abs/2610.32300v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "resume_fr": "L'analyse des dépêches de Reuters de 1988 à 2025 montre que les pressions politiques accommodantes sur la Réserve fédérale réduisent les anticipations de taux d'intérêt à court terme d'environ un point de base par événement, ce qui s'accompagne d'une dépréciation du dollar. Cet effet s'estompe au-delà d'un horizon de trois mois, persiste même en excluant les présidences Trump, et s'interprète comme l'anticipation par les marchés d'un assouplissement monétaire plutôt que comme une perte de crédibilité de l'ancrage nominal.",
+    "angle_eco": "Les pressions politiques exercées sur la Réserve fédérale en faveur d'un assouplissement monétaire réduisent les anticipations de taux d'intérêt à court terme et font déprécier le dollar, révélant que les marchés financiers intègrent une accommodation monétaire future plutôt qu'une remise en cause de la crédibilité de l'ancrage nominal.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Michela Baretti, Umberto Collodel, Jacopo Zacché",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "arxiv-2610.32951v1",
+    "titre": "Where Rounding Happens Matters: Rounding-Location Alignment Stabilizes LLM Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2610.32951v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-23",
+    "resume_fr": "L'apprentissage par renforcement des grands modèles de langage souffre d'instabilités dues aux différences d'implémentation entre l'inférence et l'entraînement, même avec des poids identiques et des tenseurs en BF16, ce qui peut transformer une mise à jour censée être on-policy en mise à jour off-policy. Les auteurs montrent que l'alignement des emplacements d'arrondi en BF16 dans trois régions spécifiques (RoPE, SwiGLU et residual RMSNorm) en conservant certains intermédiaires en FP32 jusqu'à leur conversion en BF16 prévient l'effondrement observé sur la ligne de base BF16 par défaut, et que seul l'alignement du chemin RoPE suffit dans les expériences menées sur quatre modèles de la famille Qwen.",
+    "angle_eco": "Les divergences numériques entre les systèmes d'inférence et d'entraînement en précision BF16 peuvent déstabiliser l'apprentissage par renforcement des modèles de langage, mais aligner sélectivement les emplacements d'arrondi dans certains chemins de calcul comme RoPE, SwiGLU et residual RMSNorm suffit à prévenir cet effondrement sans modifier le moteur d'inférence ni l'objectif d'apprentissage.",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 3,
+    "nb_eco": 1,
+    "nb_ia": 3,
+    "auteurs": "Yijing Ke, Tianle Cai, Ruosong Wang",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The authors demonstrate that aligning rounding locations between inference and training systems in three specific computational regions (RoPE, SwiGLU, and residual RMSNorm) stabilizes reinforcement learning for large language models using BF16 precision. Across four Qwen-family models, this targeted alignment prevents training collapse while preserving the inference engine, matrix-multiplication kernels, attention mechanisms, and learning objective unchanged.",
+    "angle_eco_en": "Numerical discrepancies between inference and training implementations in bfloat16 precision can cause reinforcement learning updates intended to be on-policy to become off-policy and destabilize training, even when model weights are identical across both systems."
+  },
+  {
     "id": "arxiv-2610.31657v1",
     "titre": "Cost-Aware Abstention for LLM-Based IT Ticket Classification",
     "url": "https://arxiv.org/abs/2610.31657v1",
