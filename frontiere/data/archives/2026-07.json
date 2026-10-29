@@ -75,6 +75,66 @@
     "llm": "qwen2.5:3b"
   },
   {
+    "id": "arxiv-2607.27155v1",
+    "titre": "OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding",
+    "url": "https://arxiv.org/abs/2607.27155v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-07-29",
+    "resume_fr": "Le benchmark open source OmegaUse-OfficeVal évalue les agents basés sur des grands modèles de langage à travers 100 tâches bureautiques nécessitant en moyenne 2,32 heures de travail humain, en intégrant des indicateurs économiques de temps et de coût. Bien que les modèles évalués soient nettement plus rapides et moins chers que les travailleurs humains, la qualité de leurs livrables n'atteint pas encore le niveau humain.",
+    "angle_eco": "L'appariement de tâches bureautiques complexes à des indicateurs de temps de travail humain et de coût permet de comparer directement les coûts d'inférence des agents autonomes à ceux de la main-d'œuvre, montrant que ces modèles sont nettement plus rapides et moins chers mais n'atteignent pas encore la qualité des prestations humaines.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 4,
+    "auteurs": "Jingbo Zhou, Yusai Zhao, Qi Bao, Jingjia Cao, Zhenghai Chen, Chang Gao, Kaiqi Guo, Muxin Guo, Mingxuan Li, Xinjiang Lu, Yanru Ma, Yixiong Xiao, Zenghui Zhang, Le Zhang, Hua Wu",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The paper introduces OmegaUse-OfficeVal, a benchmark of 100 long-horizon office-suite tasks paired with human labor time and price proxies to evaluate large language model agents with economic grounding. Evaluation results indicate that while frontier models are substantially cheaper and faster than human workers, they have not yet approached human-level deliverable quality.",
+    "angle_eco_en": "Evaluating automated agents on long-horizon office tasks using task-level economic signals like human labor time and price proxies demonstrates that while current frontier models are substantially cheaper and faster than human workers, they fall short of achieving human-level deliverable quality."
+  },
+  {
+    "id": "bce-ww-ecb-europa-eu-pub-pdf-scpwps-ecb-wp3262-7169a94638-en-pdf",
+    "titre": "A SPOT in the dark: using AI to assess financial stability risks",
+    "url": "https://www.ecb.europa.eu//pub/pdf/scpwps/ecb.wp3262~7169a94638.en.pdf",
+    "source": "Banque centrale europeenne (BCE), working papers",
+    "type": "papier",
+    "date_publication": "2026-07-29",
+    "resume_fr": "Afin d'évaluer la sévérité et la probabilité des événements déclencheurs de risques pour la stabilité financière, cette étude emploie des grands modèles de langage pour construire l'indicateur SPOT à partir d'articles de presse publiés entre 2005 et 2026. L'indicateur SPOT augmente avant les principaux événements déclencheurs historiques, identifie correctement leurs sources et améliore la prévision des risques baissiers pesant sur l'économie, démontrant le potentiel de l'intelligence artificielle pour le suivi de la stabilité financière.",
+    "angle_eco": "L'analyse textuelle par des modèles d'intelligence artificielle appliquée à la presse financière permet de mesurer la sévérité et la probabilité d'événements déclencheurs potentiels, améliorant ainsi l'évaluation des risques baissiers pour l'économie et le suivi de la stabilité financière.",
+    "themes": [
+      "llm",
+      "donnees"
+    ],
+    "score": 3,
+    "auteurs": "",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Large language models were used to process a vast dataset of financial news articles from 2005 to 2026 to extract information about the severity and probability of potential trigger events. The resulting indicator increases ahead of major historical trigger events, correctly identifies trigger sources, and improves forward-looking model estimates of downside risks to the economy.",
+    "angle_eco_en": "Extracting quantitative signals from text regarding the probability and severity of potential trigger events improves the macroprudential monitoring of financial stability risks."
+  },
+  {
+    "id": "voxeu-https-cepr-org-voxeu-columns-ai-premium",
+    "titre": "The AI premium",
+    "url": "https://cepr.org/voxeu/columns/ai-premium",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-07-28",
+    "resume_fr": "En s'appuyant sur la consommation réalisée de 380 mille milliards de tokens d'intelligence artificielle, l'étude démontre que les entreprises dont les actions sont les plus sensibles à la croissance de cet usage obtiennent des rendements ultérieurs plus élevés. Cette prime boursière est particulièrement élevée pour les marchés développés, les modèles de pointe et les tâches complexes, les marchés financiers associant plus positivement cette transition aux travaux de mise en œuvre, de communication et de coordination qu'aux activités analytiques ou scientifiques.",
+    "angle_eco": "L'analyse de la sensibilité des actions à la croissance de l'utilisation de l'intelligence artificielle, établie à partir de 380 mille milliards de tokens consommés, révèle l'existence d'une prime boursière générant des rendements ultérieurs plus élevés pour les entreprises exposées, en particulier sur les marchés développés et pour les activités de mise en œuvre, de communication et de coordination.",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 3,
+    "auteurs": "Nicola Borri, Yukun Liu, Aleh Tsyvinski",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Analyzing 380 trillion tokens of realized artificial intelligence consumption, the study calculates stock sensitivity to growth in AI use and finds that firms with higher sensitivity earn higher subsequent returns. The resulting AI premium is highest for developed markets, frontier models, experienced users, and complex tasks, with equity markets associating the AI transition more positively with implementation, communication, and coordination work than with analytical and scientific tasks.",
+    "angle_eco_en": "The valuation of stock sensitivity to artificial intelligence growth by equity markets generates a return premium that favors developed markets, advanced models, experienced users, and work centered on implementation and communication over analytical tasks."
+  },
+  {
     "id": "arxiv-2607.23313v1",
     "titre": "Agentic AI Orchestration of Heterogeneous Economic Models for Rapid, Multi-scenario Analysis of Energy Crises",
     "url": "https://arxiv.org/abs/2607.23313v1",

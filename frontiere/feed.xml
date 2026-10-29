@@ -6,6 +6,20 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>HouseholdBench: Evaluating Large Language Models as Predictors of Household Economic Behavior</title>
+      <link>https://www.nber.org/papers/w35927#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35927-fromrss</guid>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs introduisent HouseholdBench, une plateforme d'évaluation unifiant six enquêtes auprès des ménages américains et trente-deux tâches de prédiction afin de tester la capacité de treize grands modèles de langage à prévoir les comportements économiques individuels. Bien que les arbres de décision augmentés par gradient obtiennent les meilleurs résultats globaux, le meilleur modèle de langage réduit l'erreur pour les variables numériques de 12,2 % par rapport à une référence sans changement, et un modèle ouvert de quatre milliards de paramètres égale les modèles propriétaires grâce au réglage fin et à l'agrégation de prédictions.</description>
+    </item>
+    <item>
+      <title>An LLM Workflow for Functional Form Sensitivity Analysis</title>
+      <link>https://www.nber.org/papers/w35947#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35947-fromrss</guid>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Ce travail présente une procédure fondée sur un modèle de langage (LLM) pour évaluer la sensibilité d'une estimation à la forme fonctionnelle retenue, mesurée par la variation maximale de cette estimation qui ne dégrade pas l'ajustement du modèle aux données. La méthode recherche d'abord une solution analytique puis emploie une approximation numérique sous contrainte d'ajustement pour fournir une borne inférieure vérifiable de la sensibilité dans l'échantillon, avec une application au coût de la sélection adverse en assurance santé.</description>
+    </item>
+    <item>
       <title>Jawboning the Fed: Do Markets Listen When Administrations Talk?</title>
       <link>https://arxiv.org/abs/2610.32300v1</link>
       <guid isPermaLink="false">arxiv-2610.32300v1</guid>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">arxiv-2609.35448v1</guid>
       <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
       <description>Entre janvier 2020 et juin 2023, le Secrétariat d'État aux migrations en Suisse a mené un essai randomisé en double aveugle auprès d'environ 2 000 réfugiés pour tester un algorithme orientant leur placement cantonal en fonction de leurs perspectives d'emploi. L'affectation algorithmique a augmenté la proportion de mois travaillés durant les trois premières années de 2,2 points de pourcentage sur l'ensemble de la période, soit une hausse d'environ 10 % par rapport au groupe témoin, ce gain atteignant 3,9 points de pourcentage pour les cohortes de 2022-2023.</description>
-    </item>
-    <item>
-      <title>Economic Governance of Autonomous Agents and Robots: Factor-Origin Accounting and Social Automation Funds</title>
-      <link>https://arxiv.org/abs/2609.32476v1</link>
-      <guid isPermaLink="false">arxiv-2609.32476v1</guid>
-      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
-      <description>La diffusion rapide de l'intelligence artificielle et de la robotique érode les bases fiscales fondées sur le travail humain et accentue la concentration des revenus du capital. Ce papier présente CivicDividendOS, un cadre budgétaire computationnel qui rattache l'activité automatisée aux entreprises bénéficiaires, calcule la contribution marginale de chaque facteur et prélève une contribution dynamique sur la valeur ajoutée automatisée.</description>
-    </item>
-    <item>
-      <title>Learning and interpreting policies for simultaneous entanglement requests in quantum networks</title>
-      <link>https://arxiv.org/abs/2609.30157v1</link>
-      <guid isPermaLink="false">arxiv-2609.30157v1</guid>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Cette étude recourt à l'apprentissage par renforcement profond pour élaborer des politiques d'allocation de l'intrication quantique capables de gérer des demandes simultanées dans un réseau. Les politiques obtenues maintiennent un taux de réussite de 100 % avec une probabilité d'activation des liaisons jusqu'à 71 % inférieure à celle des heuristiques de référence, et conservent au moins 80 % de succès sous contraintes matérielles pour une probabilité jusqu'à 59 % plus faible.</description>
     </item>
   </channel>
 </rss>
