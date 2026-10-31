@@ -1,16 +1,5 @@
 [
   {
-    "date": "2026-10-03",
-    "fournisseur": "api",
-    "bascule_repli": false,
-    "nb_eligibles": 12,
-    "nb_publies": 2,
-    "nb_reportes": 10,
-    "nb_rejetes_validation": 0,
-    "signal_designe": true,
-    "score_max": 10
-  },
-  {
     "date": "2026-10-05",
     "fournisseur": "api",
     "bascule_repli": false,
@@ -130,5 +119,16 @@
     "nb_rejetes_validation": 0,
     "signal_designe": true,
     "score_max": 6
+  },
+  {
+    "date": "2026-10-31",
+    "fournisseur": "api",
+    "bascule_repli": true,
+    "nb_eligibles": 18,
+    "nb_publies": 3,
+    "nb_reportes": 15,
+    "nb_rejetes_validation": 0,
+    "signal_designe": false,
+    "score_max": 4
   }
 ]

@@ -1,5 +1,49 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35949-fromrss",
+    "titre": "Generative AI, Managerial Expectations, and Economic Activity",
+    "url": "https://www.nber.org/papers/w35949#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-10-31",
+    "resume_fr": "Les auteurs extraient les attentes économiques des dirigeants à partir de plus de 120 000 transcriptions d'appels de conférence d'entreprises en utilisant l'intelligence artificielle générative, et construisent un indice d'économie fondé sur ces attentes qui prédit la croissance du PIB, la production, l'emploi et les salaires cinq trimestres ou plus à l'avance, au-delà des prévisions d'enquêtes et d'autres mesures existantes. La prévisibilité se concentre parmi les dirigeants historiquement plus précis et moins biaisés, ce qui suggère que les attentes managériales offrent des informations supplémentaires sur l'activité économique avec des implications pour la prise de décision macroéconomique et microéconomique.",
+    "angle_eco": "L'extraction par intelligence artificielle générative des attentes économiques des dirigeants à partir de plus de 120 000 transcriptions d'appels de conférence d'entreprises permet de prédire la croissance du PIB, la production, l'emploi et les salaires à un horizon de cinq trimestres ou plus, au-delà des prévisions d'enquêtes et des indicateurs existants.",
+    "themes": [
+      "llm",
+      "prevision",
+      "travail-emploi"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Manish Jha, Jialin Qian, Michael Weber, Baozhong Yang",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The authors use generative AI to extract economic expectations from over 120,000 corporate conference call transcripts and construct an AI Economy Score that predicts GDP growth, production, employment, and wages five or more quarters ahead, outperforming survey forecasts and existing measures. The predictive power concentrates among historically more accurate and less biased managers, suggesting that managerial expectations provide incremental information about future economic activity.",
+    "angle_eco_en": "Managerial expectations extracted from corporate conference calls contain information about future economic activity that is not fully captured by existing survey forecasts and macroeconomic indicators."
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35950-fromrss",
+    "titre": "Training Your Replacement: Worker Incentives and the Pace of Automation",
+    "url": "https://www.nber.org/papers/w35950#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-10-31",
+    "resume_fr": "Les auteurs modélisent une situation où une entreprise demande à un travailleur de former un système d'IA qui le remplacera, en montrant que le travailleur peut choisir de coopérer, de s'abstenir ou d'entraver la formation tout en restant productif, ce qui affaiblit la menace de licenciement comme sanction et oblige l'entreprise à augmenter la rente du travailleur. Ils démontrent que l'IA peut créer des emplois rémunérés au-delà de leur productivité et en éliminer d'autres sans jamais les automatiser, mais qu'un bonus de fin de formation crédible égal à la rente du travailleur sans IA peut éliminer à la fois le gain du travailleur et le ralentissement de la formation.",
+    "angle_eco": "L'incitation des travailleurs à former les systèmes d'IA qui les remplaceront crée un problème moral puisque le licenciement cesse d'être une sanction efficace contre le shirking quand la formation elle-même met fin à l'emploi, ce qui oblige l'entreprise à augmenter la rente du travailleur et peut ralentir l'adoption de l'automatisation si seuls les salaires sont versés.",
+    "themes": [
+      "travail-emploi"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Joshua S. Gans, Peter Landry",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The paper models a firm's dilemma when asking workers to train AI systems that will replace them, showing that workers can shirk or obstruct training while maintaining productivity, which weakens dismissal as a penalty and forces firms to raise worker compensation. The analysis demonstrates that AI can create higher-paying jobs while eliminating others, and that a completion bonus equal to the worker's rent without AI can eliminate both the worker's gain from replacement and any firm-induced slowdown in training.",
+    "angle_eco_en": "When firms require workers to train the AI systems destined to replace them, the threat of dismissal loses its deterrent power against shirking because job termination occurs regardless of whether training succeeds, creating a moral hazard problem that can lead firms to offer higher rents to incentivize cooperation and potentially slow the pace of automation adoption."
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35927-fromrss",
     "titre": "HouseholdBench: Evaluating Large Language Models as Predictors of Household Economic Behavior",
     "url": "https://www.nber.org/papers/w35927#fromrss",
@@ -17,7 +61,7 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Jin Huang, Diego Ferreras Garrucho, Yutong Xie, Walter M. Yuan, Qiaozhu Mei, Chen Lian, Jonathon Hazell",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash",
     "angle_eco_en": "Deploying large language models to predict quantitative household economic decisions and policy adjustments exposes systematic prediction biases and performance lags compared to gradient-boosted trees, though fine-tuning and prediction aggregation can bridge this gap.",
     "deja_signal": true
@@ -43,6 +87,29 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "This paper introduces a large language model workflow that measures functional form sensitivity by assessing how much an estimated object of interest changes under alternative functional forms without compromising model fit. By attempting an analytic solution before using fit-constrained numerical methods, the workflow yields a verifiable lower bound on in-sample sensitivity and is illustrated using an application to the welfare cost of adverse selection in health insurance.",
     "angle_eco_en": "The sensitivity of model estimates to arbitrary functional form assumptions can be evaluated using a large language model workflow that calculates how much an estimated object of interest varies without degrading data fit, relying on analytic solutions or fit-constrained numerical optimization to establish a verifiable lower bound."
+  },
+  {
+    "id": "arxiv-2610.38883v1",
+    "titre": "Can Artificial Intelligence Forecast Treatment Effects in Economics?",
+    "url": "https://arxiv.org/abs/2610.38883v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-28",
+    "resume_fr": "L'auteur évalue la capacité de grands modèles de langage à prédire 673 effets de traitement issus de 33 études expérimentales préenregistrées et publiées à partir de 2026, en utilisant des modèles dont la date de fin d'entraînement précède la parution de ces travaux. Le meilleur modèle affiche une erreur absolue médiane de 0,054 écart-type et surpasse nettement les prédictions de référence estimant un effet nul ou moyen, démontrant le potentiel de l'intelligence artificielle pour éclairer la recherche et la décision publique.",
+    "angle_eco": "Les modèles de langage de grande taille peuvent extraire des questions de prévision à partir de plans d'analyse préenregistrés et générer des prévisions d'effets de traitement pour des études économiques dont les résultats n'étaient pas disponibles lors de leur entraînement, avec une performance mesurée par une erreur absolue médiane de 0,054 écart-type pour le meilleur modèle, surpassant les prévisions naïves de zéro effet ou de l'effet moyen observé dans d'autres études.",
+    "themes": [
+      "llm",
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Eva Vivalt",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The author uses large language models to forecast treatment effects from 33 pre-registered economic studies with results disclosed in January 2026 or later, extracting forecasting questions from pre-analysis plans to generate predictions in standardized units. The best-performing model achieves a median absolute forecast error of 0.054 standard deviations and substantially outperforms benchmarks that forecast zero effects or mean effects from other studies in the same period.",
+    "angle_eco_en": "Large language models can forecast the magnitude of treatment effects from randomized controlled trials with median absolute errors of 0.054 standard deviations, substantially outperforming naive benchmarks that assume zero effects or rely on average effects from contemporaneous studies."
   },
   {
     "id": "arxiv-2610.32300v1",
@@ -2137,109 +2204,5 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "A new framework called Flourishing Value Theory is developed to define value as the distribution-sensitive contribution of an entity to the durable capabilities of persons and communities within planetary constraints. This approach treats societal value as multidimensional and non-compensatory at critical thresholds, retaining traditional metrics like price, profit, productivity, and gross domestic product only as partial signals of progress rather than final measures.",
     "angle_eco_en": "The potential for widely automatable cognitive work weakens traditional labor and expertise scarcities, requiring a fundamental shift in economic valuation from market-based pricing to multidimensional capability enhancement and governed abundance."
-  },
-  {
-    "id": "aea-10-1257-jep-20261505",
-    "titre": "AI and Our Economic Future",
-    "url": "https://doi.org/10.1257/jep.20261505",
-    "source": "Journal of Economic Perspectives",
-    "type": "article",
-    "date_publication": "2026-08-01",
-    "resume_fr": "Bien que l'automatisation de l'intelligence puisse accélérer la croissance économique au-delà du taux historique américain de 2 % par an, cette accélération risque d'être freinée par la présence de maillons faibles non automatisés. La nécessité d'automatiser la grande majorité de ces maillons faibles retarde les importants gains de productivité, tout en risquant d'accélérer la survenue de dommages majeurs si une intelligence artificielle puissante est détournée à des fins malveillantes.",
-    "angle_eco": "L'automatisation des tâches cognitives et physiques par l'intelligence artificielle pourrait accélérer la croissance économique, bien que la présence de maillons faibles non automatisés retarde la réalisation des gains de productivité tout en accélérant l'émergence de risques majeurs.",
-    "themes": [
-      "outils-recherche",
-      "macro-finance"
-    ],
-    "score": 3,
-    "auteurs": "Charles I. Jones",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "Although United States growth rates have been stable at roughly 2 percent per year for 150 years, automating intelligence could lead to an acceleration in economic growth. However, this acceleration is likely to be delayed because humans remain weak links in decision-making processes, which must also be automated away to achieve large productivity gains.",
-    "angle_eco_en": "The automation of cognitive and physical tasks has the potential to permanently accelerate long-run economic growth, but aggregate productivity gains face severe bottleneck constraints from non-automated complementary human inputs."
-  },
-  {
-    "id": "aea-10-1257-jep-20261506",
-    "titre": "The Emerging Market for Intelligence: How Firms Buy and Sell AI",
-    "url": "https://doi.org/10.1257/jep.20261506",
-    "source": "Journal of Economic Perspectives",
-    "type": "article",
-    "date_publication": "2026-08-01",
-    "resume_fr": "L'inférence de grands modèles de langage constitue désormais un marché de gros à part entière, où l'offre de modèles et de fournisseurs concurrents s'est multipliée rapidement grâce aux modèles ouverts. Le prix de cette intelligence a chuté d'environ mille fois, les modèles ouverts coûtant désormais près de 90% de moins que leurs équivalents propriétaires, dans un marché très dynamique où aucun acteur ne domine durablement.",
-    "angle_eco": "La chute des prix de l'inférence et la multiplication des fournisseurs concurrents dessinent un marché de l'intelligence artificielle proche des télécommunications ou de l'électricité à leurs débuts, où aucun fournisseur ne conserve longtemps son avantage.",
-    "themes": [
-      "llm",
-      "donnees"
-    ],
-    "score": 3,
-    "auteurs": "Mert Demirer, Andrey Fradkin, Nadav Tadelis",
-    "signal": false,
-    "llm": "claude (ajout manuel demande par Ulrich, score heuristique reel 2, sous le seuil de 3)",
-    "resume_en": "Data from OpenRouter reveals that the emerging market for large language model inference is experiencing rapid supply expansion driven heavily by open-source entrants. Alongside high market dynamism and frequent turnover among leading models, the price of intelligence has fallen roughly a thousandfold, with open-source models costing about 90 percent less than comparable closed-source alternatives.",
-    "angle_eco_en": "The rapid commercialization of artificial intelligence models exhibits classic features of a general-purpose technology market, including extreme price compression and substantial horizontal differentiation where no single product dominates all use cases."
-  },
-  {
-    "id": "fmi-10-5089-9798229055925-001",
-    "titre": "Public Debt, Wealth Inequality, and the Burden of Taxation",
-    "url": "https://doi.org/10.5089/9798229055925.001",
-    "source": "IMF Working Papers",
-    "type": "papier",
-    "date_publication": "2026-08-01",
-    "resume_fr": "À partir d'un modèle de Diamond avec hétérogénéité des ménages et fiscalité progressive, cette étude démontre que la dette publique façonne la répartition des richesses en dictant la progressivité de l'impôt par le canal de la charge fiscale. Les données empiriques d'après-guerre confirment que la dette publique constitue un déterminant majeur des inégalités de patrimoine, son effet étant non linéaire selon le niveau de la charge fiscale et dépendant du régime de taux d'intérêt.",
-    "angle_eco": "La dette publique modifie l'inégalité des patrimoines en déterminant endogènement la progressivité de la fiscalité à travers le fardeau fiscal, ce qui en fait un canal central par lequel les chocs structurels se transmettent à la répartition de la richesse.",
-    "themes": [
-      "prevision",
-      "politique-publique",
-      "outils-recherche"
-    ],
-    "score": 3,
-    "auteurs": "Moustafa Chatzouz",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "A stylized model with household heterogeneity and progressive taxation formalizes how public debt dictates tax progressivity and affects the wealth distribution. Permanent debt expansions increase progressivity when interest rates are high but reduce progressivity when interest rates are low.",
-    "angle_eco_en": "The endogeneity of tax progressivity to the public debt burden dictates how demographic and technological shocks affect the long-run distribution of wealth."
-  },
-  {
-    "id": "fmi-10-5089-9798229060783-001",
-    "titre": "Macroeconomic Impacts of China’s Energy Transition",
-    "url": "https://doi.org/10.5089/9798229060783.001",
-    "source": "IMF Working Papers",
-    "type": "papier",
-    "date_publication": "2026-08-01",
-    "resume_fr": "L'énergie solaire et éolienne dominent désormais les nouveaux ajouts de capacité électrique en Chine, et selon un modèle d'équilibre général calculable, cette transition énergétique entraîne une hausse modérée des prix de l'électricité à court terme suivie de baisses durables à long terme, tout en augmentant le PIB et en renforçant la sécurité énergétique. Le recours au stockage par batterie pour gérer la variabilité des énergies renouvelables s'avère plus performant qu'une dépendance continue au charbon, même face à la demande croissante d'électricité liée aux technologies émergentes, mais cette trajectoire de transition accroît le risque d'actifs échoués dans le secteur de la production électrique au charbon.",
-    "angle_eco": "La transition du système électrique chinois vers les énergies renouvelables implique des ajustements substantiels de l'offre et de l'investissement, mais génère une augmentation du PIB à long terme et renforce la sécurité énergétique, tandis que la flexibilité basée sur le stockage par batterie surpasse le recours continu aux centrales à charbon, bien qu'elle accroisse le risque d'actifs bloqués dans le secteur de la production charbonnière.",
-    "themes": [
-      "macro-finance"
-    ],
-    "score": 3,
-    "nb_eco": 3,
-    "nb_ia": 1,
-    "auteurs": "Hugo Rojas-Romagosa, Gregor Schwerhoff, Sneha Thube, Sha Yu",
-    "signal": false,
-    "llm": "claude-haiku-4-5",
-    "resume_en": "A computable general equilibrium model shows that China's energy transition toward solar and wind power generates modest near-term electricity price increases followed by sustained declines as renewable shares rise, with battery storage proving more effective than coal-fired backup generation for managing system variability. The transition raises long-run GDP and strengthens energy security despite requiring substantial adjustments in electricity supply and investment, though it increases the risk of stranded assets in the coal power sector.",
-    "angle_eco_en": "The shift toward renewable electricity generation in China requires managing power system variability through either battery storage or coal-fired backup capacity, with implications for electricity prices, long-run GDP, energy security, and the potential obsolescence of coal power infrastructure."
-  },
-  {
-    "id": "fmi-10-5089-9798229060196-001",
-    "titre": "Jurisdictional Capital and AI Regulation",
-    "url": "https://doi.org/10.5089/9798229060196.001",
-    "source": "IMF Working Papers",
-    "type": "papier",
-    "date_publication": "2026-08-01",
-    "resume_fr": "En analysant les réactions boursières à la proposition de règlement européen sur l'intelligence artificielle d'avril 2021, cette étude montre que les entreprises combinant une présence approfondie dans l'UE et des recrutements rapides dans l'IA enregistrent des rendements plus élevés lors de l'annonce. Ce résultat suggère que les marchés valorisent le capital juridictionnel lié à l'expérience réglementaire européenne, ce qui permet à ces entreprises d'accroître leur part de revenus au sein de l'UE face à des concurrents moins implantés, un effet particulièrement fort pour l'IA à haut risque.",
-    "angle_eco": "L'expérience préalable dans l'environnement réglementaire européen constitue un capital juridictionnel qui accroît la valorisation boursière et la part de marché des entreprises développant l'intelligence artificielle en leur facilitant l'adaptation aux nouvelles réglementations du secteur.",
-    "themes": [
-      "politique-publique",
-      "outils-recherche"
-    ],
-    "score": 3,
-    "nb_eco": 3,
-    "nb_ia": 1,
-    "auteurs": "Yi Chen, Zhe Wang, Jing Zhou",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "An event study around the April 2021 European Union Artificial Intelligence Act proposal shows that firms combining a deeper European Union presence with faster artificial intelligence hiring earned higher announcement returns. The findings indicate that markets value jurisdictional capital, which allows embedded firms to increase their European Union revenue share when competing against less embedded peers, particularly in high-risk applications or among firms with prior compliance experience.",
-    "angle_eco_en": "Jurisdictional capital, accumulated through prior compliance experience and deep local presence within a regulatory environment, enables AI-expanding firms to navigate comprehensive new regulations more effectively, yielding higher market valuations and larger local revenue shares relative to less embedded competitors."
   }
 ]

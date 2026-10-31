@@ -1,5 +1,434 @@
 [
   {
+    "id": "arxiv-2610.40650v1",
+    "titre": "When Does Storage Complement Solar? Investment and Cost Recovery under Advanced Net Metering",
+    "url": "https://arxiv.org/abs/2610.40650v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Nathan Engelman Lado, Ahmed Alahmed, Audun Botterud, Saurabh Amin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40582v1",
+    "titre": "Optimal Policy With Noisy Sufficient Statistics",
+    "url": "https://arxiv.org/abs/2610.40582v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "José Luis Montiel Olea, Mikkel Plagborg-Møller, Christian K. Wolf",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40324v1",
+    "titre": "Crowds Believe in You: Online Prediction Markets Overestimate How Often People Achieve Their Own Goals",
+    "url": "https://arxiv.org/abs/2610.40324v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Zihan Chen, Lei Nico Zheng, Di Zhu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40312v1",
+    "titre": "A Proof for Generalized Egalitarianism",
+    "url": "https://arxiv.org/abs/2610.40312v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Wei ShuAng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40047v1",
+    "titre": "Smooth Threshold GARCH: Quasi Maximum Likelihood Estimation and Empirical Evidence",
+    "url": "https://arxiv.org/abs/2610.40047v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Jonas Fiedler Frederiksen, Frederik Vilandt",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.39995v1",
+    "titre": "How Different are Different Differences-in-Differences? A Large-Scale Meta-Analysis",
+    "url": "https://arxiv.org/abs/2610.39995v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Peter Hull",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.39871v1",
+    "titre": "Threshold Regression with a Nearly Integrated Threshold Variable",
+    "url": "https://arxiv.org/abs/2610.39871v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Chaoyi Chen, Thanasis Stengos",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.39844v1",
+    "titre": "When are complements and substitutes dual?",
+    "url": "https://arxiv.org/abs/2610.39844v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Philip R. Neary",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.39843v1",
+    "titre": "Did the energy crisis turn borrowers green? Zonal power prices and green bond choice on Oslo Børs",
+    "url": "https://arxiv.org/abs/2610.39843v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "outils-recherche",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "My Thi Diem Phan, Tuyen Trung Truong, Hoai Phuong Ha, Dat Thanh Nguyen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.39375v1",
+    "titre": "What is Work For? Labor, Politics, and Meaning in the Age of AI",
+    "url": "https://arxiv.org/abs/2610.39375v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 4,
+    "nb_ia": 0,
+    "auteurs": "Julian Jacobs",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.39097v1",
+    "titre": "Measuring Longer-Horizon Leveraged ETF Performance",
+    "url": "https://arxiv.org/abs/2610.39097v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Chris Murray, Marco Sammon",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40655v1",
+    "titre": "Elucidating the Design Space of LM Data Attribution",
+    "url": "https://arxiv.org/abs/2610.40655v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Steven Yu, Sheng-Yu Wang, Kimia Hamidieh, Antonio Torralba, David Bau",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40627v1",
+    "titre": "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender",
+    "url": "https://arxiv.org/abs/2610.40627v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Qiyao Ma, Xiaodong Liu, Weiwei Yang, Mingqian Feng, Chengquan Guo, Jialin Song, Carolyn Buractaon, Zhe Zhao, Junshan Zhang, Sandeep Atluri, Christopher White, Jianfeng Gao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40574v1",
+    "titre": "Every Token Needs Its Own Teacher: Multi-teacher Adaptive On-policy Self-distillation",
+    "url": "https://arxiv.org/abs/2610.40574v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Yifu Luo, Chuang Ma, Zeyu Chen, Enkelejda Kasneci, Qi Chen, Gjergji Kasneci",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40565v1",
+    "titre": "Gym-Anything for Robotics: Scaling physical simulations with digital agents",
+    "url": "https://arxiv.org/abs/2610.40565v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "outils-recherche",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Pranjal Aggarwal, Sean Welleck",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40564v1",
+    "titre": "Training Foundation Models with a Single Algorithm",
+    "url": "https://arxiv.org/abs/2610.40564v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Yuda Song, Alvin Zhang, Fahim Tajwar, Daman Arora, Jeff Schneider, Daniel Khashabi, Ruslan Salakhutdinov, J. Andrew Bagnell, Aarti Singh, Andrea Zanette",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40544v1",
+    "titre": "Machine Learning-Based Detection of Mobile Money Scan Messages in Ghana: A Comparative Evaluation of Naive Bayes, Support Vector Machine, and Randon Forest Classifiers",
+    "url": "https://arxiv.org/abs/2610.40544v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "inference-causale",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Ibrahim Salifu, Muhaisin Tiyumba Nantogmah",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40492v1",
+    "titre": "Agentic University: Collaborative Agents for Personalized Learning",
+    "url": "https://arxiv.org/abs/2610.40492v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Jingru Fan, Tianle Zhou, Yunjie Zhou, Zihao He, Yixuan Zhou, Kezhao Wu, Xinyu Zheng, Xiyuan Wang, Yuheng Wang, Zhi Li, Songhua Liu, Weinan E, Chen Qian",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40415v1",
+    "titre": "OCCAMS: A Multi-Task Learning-Based Investigation of the CMB Power Spectra",
+    "url": "https://arxiv.org/abs/2610.40415v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Ankit Mandal, Rahul Shah, Md. Wali Hossain, Somasri Sen, Anjan A Sen, Supratik Pal",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40407v1",
+    "titre": "SCARL: Sequence Confidence-Aligned Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2610.40407v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Zhenghong Ke, Jingbo Zhou, Hua Wu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.38997v1",
+    "titre": "Capital growth since the 19th century",
+    "url": "https://arxiv.org/abs/2610.38997v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-28",
+    "themes": [
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Gordon Getty, Nikita Tkachenko",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.38965v1",
+    "titre": "Orthogonal Inference for Conditional Z-Estimation without Cross-Fitting: A Distributional Nearest-Neighbor Approach",
+    "url": "https://arxiv.org/abs/2610.38965v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-28",
+    "themes": [
+      "prevision",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Jakob R. Juergens",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.38896v1",
+    "titre": "The Hidden Value of Soft Infrastructure for Urban Flood Adaptation",
+    "url": "https://arxiv.org/abs/2610.38896v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-28",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Lidia Cano Pecharroman, ChangHoon Hahn",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.38665v1",
+    "titre": "Quantile Methods in Large Panels with Fixed Effects",
+    "url": "https://arxiv.org/abs/2610.38665v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-28",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Manuel Arellano, Ayden Higgins, Martin Weidner",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.38529v1",
+    "titre": "Debiasing Functionals of Conditional Distributions",
+    "url": "https://arxiv.org/abs/2610.38529v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-28",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Juan Carlos Escanciano, Gabriele Gazzei",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.38365v1",
+    "titre": "Pawnshops and Property-Related Crime: Lessons from Interwar Tokyo",
+    "url": "https://arxiv.org/abs/2610.38365v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-28",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Tatsuki Inoue",
+    "signal": false
+  },
+  {
     "id": "arxiv-2610.37487v1",
     "titre": "Contemporaneous Transmission Networks and Systemic Risk in European Banking",
     "url": "https://arxiv.org/abs/2610.37487v1",
@@ -369,6 +798,39 @@
     "nb_eco": 1,
     "nb_ia": 0,
     "auteurs": "Hao Chen, Jian Sun, Chuan Shi, Hongying Zhang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.37883v1",
+    "titre": "fastC-GC and fastC-GC*: Efficient RCCP-Guided Graph Estimation for Time Series",
+    "url": "https://arxiv.org/abs/2610.37883v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-27",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "S. A. Adedayo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.37049v2",
+    "titre": "Identifying and disentangling direct and spillover effects using multiple pre-treatment periods",
+    "url": "https://arxiv.org/abs/2610.37049v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-27",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Martin Huber",
     "signal": false
   },
   {
@@ -6515,6 +6977,23 @@
     "nb_eco": 1,
     "nb_ia": 1,
     "auteurs": "Andres Aradillas Fernandez, Victor Chernozhukov, Carlos Cinelli, Sven Klaassen, Whitney Newey, Martin Spindler, Jan Teichert-Kluge, Suhas Vijaykumar",
+    "signal": false
+  },
+  {
+    "id": "fmi-10-5089-9798229063340-001",
+    "titre": "The Macroeconomic Impact of AI Access Disruptions",
+    "url": "https://doi.org/10.5089/9798229063340.001",
+    "source": "IMF Working Papers",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "themes": [
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Gonzalo Huertas",
     "signal": false
   }
 ]

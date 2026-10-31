@@ -6082,5 +6082,133 @@
   "nber-https-www-nber-org-papers-w35947-fromrss": {
     "score": 3,
     "traite": true
+  },
+  "arxiv-2610.40650v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.40582v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.40324v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.40312v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.40047v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.39995v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.39871v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.39844v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.39843v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.39375v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.39097v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.38997v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.38965v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.38896v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2610.38883v1": {
+    "score": 4,
+    "traite": true
+  },
+  "arxiv-2610.38665v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.38529v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.38365v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.37883v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.37049v2": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.40655v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2610.40627v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2610.40574v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2610.40565v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2610.40564v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2610.40544v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2610.40492v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2610.40415v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2610.40407v1": {
+    "score": 0,
+    "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35949-fromrss": {
+    "score": 3,
+    "traite": true
+  },
+  "nber-https-www-nber-org-papers-w35950-fromrss": {
+    "score": 3,
+    "traite": true
+  },
+  "fmi-10-5089-9798229063340-001": {
+    "score": 0,
+    "traite": true
   }
 }
