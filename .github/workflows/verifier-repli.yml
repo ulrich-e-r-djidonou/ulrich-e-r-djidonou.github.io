@@ -17,6 +17,11 @@ on:
     - cron: "0 9 1 * *"
   workflow_dispatch: {}
 
+# Lecture seule : ce controle ne pousse rien. Explicite pour ne pas
+# dependre du reglage par defaut du depot.
+permissions:
+  contents: read
+
 jobs:
   verifier:
     runs-on: ubuntu-latest

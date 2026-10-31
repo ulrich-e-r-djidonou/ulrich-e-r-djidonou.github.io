@@ -24,6 +24,11 @@ on:
       - ".github/workflows/tests.yml"
   workflow_dispatch: {}
 
+# Lecture seule : ce controle ne pousse rien. Explicite pour ne pas
+# dependre du reglage par defaut du depot.
+permissions:
+  contents: read
+
 jobs:
   unittest:
     runs-on: ubuntu-latest
@@ -64,6 +69,7 @@ jobs:
             pipeline.test_rendre_pdf_carrousel \
             pipeline.test_rendre_notification_publication \
             pipeline.test_migrer_etiquettes_types \
+            pipeline.test_collecter_abstracts_manquants \
             pipeline.benchmark.test_benchmark \
             --verbose
 

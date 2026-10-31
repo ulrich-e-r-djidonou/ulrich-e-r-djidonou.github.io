@@ -22,6 +22,7 @@ import re
 import sys
 import time
 from pathlib import Path
+from urllib.parse import urlparse
 from xml.etree import ElementTree
 
 import requests
@@ -166,17 +167,28 @@ def abstract_fed(url):
     return texte[debut + len("Abstract:"):].split("Accessible version")[0].strip()[:2500]
 
 
+def _domaine(url, domaine):
+    """Vrai si l'hote de l'URL est `domaine` ou l'un de ses sous-domaines.
+
+    Un test par sous-chaine (`"arxiv.org" in url`) aiguillait aussi
+    `https://exemple.com/?arxiv.org` ou `https://arxiv.org.exemple.com/`
+    vers la recolte arXiv (alertes CodeQL py/incomplete-url-substring-sanitization).
+    """
+    hote = (urlparse(url).hostname or "").lower()
+    return hote == domaine or hote.endswith("." + domaine)
+
+
 def recuperer(url):
-    if "arxiv.org" in url:
+    if _domaine(url, "arxiv.org"):
         return abstract_arxiv(url)
-    if "nber.org" in url:
+    if _domaine(url, "nber.org"):
         return abstract_nber(url)
-    if "cepr.org" in url:
+    if _domaine(url, "cepr.org"):
         return abstract_cepr(url)
-    if "federalreserve.gov" in url:
+    if _domaine(url, "federalreserve.gov"):
         return abstract_fed(url)
-    if "doi.org" in url:
-        return abstract_openalex(url.split("doi.org/", 1)[-1]) or abstract_meta(url)
+    if _domaine(url, "doi.org"):
+        return abstract_openalex(urlparse(url).path.lstrip("/")) or abstract_meta(url)
     return abstract_meta(url)
 
 
