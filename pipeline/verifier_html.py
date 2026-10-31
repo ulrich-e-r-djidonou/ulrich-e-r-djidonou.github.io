@@ -31,7 +31,13 @@ BALISES_ORPHELINES = {
 }
 
 # Contenu opaque : on n'y cherche pas de balises HTML.
-MOTIF_OPAQUE = re.compile(r"<!--.*?-->|<script\b.*?</script>|<style\b.*?</style>", re.DOTALL)
+# Insensible a la casse et tolerant aux fermetures `</script >` ou `--!>` :
+# un <SCRIPT> en majuscules echappait sinon a la neutralisation (alerte
+# CodeQL py/bad-tag-filter).
+MOTIF_OPAQUE = re.compile(
+    r"<!--.*?--!?>|<script\b.*?</script\b[^>]*>|<style\b.*?</style\b[^>]*>",
+    re.DOTALL | re.IGNORECASE,
+)
 MOTIF_BALISE = re.compile(r"<(/?)([a-zA-Z][a-zA-Z0-9]*)([^>]*?)(/?)>")
 MOTIF_ENTITE = re.compile(r"&(#[0-9]+|#x[0-9a-fA-F]+|[a-zA-Z][a-zA-Z0-9]*);")
 

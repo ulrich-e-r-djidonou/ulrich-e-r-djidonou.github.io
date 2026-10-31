@@ -38,6 +38,15 @@ class BalisesTests(unittest.TestCase):
     def test_imbrication_croisee(self):
         self.assertTrue(anomalies("<div><section></div></section>"))
 
+    def test_script_en_majuscules_reste_opaque(self):
+        # Alerte CodeQL py/bad-tag-filter (31 oct. 2026) : le motif ne
+        # reconnaissait que <script> en minuscules. Le <div> d'une chaine JS
+        # passait alors pour une balise HTML non fermee.
+        self.assertEqual(anomalies('<div><SCRIPT>var s = "<div>";</SCRIPT></div>'), [])
+
+    def test_fermeture_script_avec_espace_reste_opaque(self):
+        self.assertEqual(anomalies('<div><script>var s = "<p>";</script ></div>'), [])
+
     def test_balises_orphelines_ignorees(self):
         self.assertEqual(anomalies("<p><br><hr><input name='a'></p>"), [])
 

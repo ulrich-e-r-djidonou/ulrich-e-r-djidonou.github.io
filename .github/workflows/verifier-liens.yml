@@ -20,6 +20,11 @@ on:
       - ".github/workflows/verifier-liens.yml"
   workflow_dispatch: {}
 
+# Lecture seule : ce controle ne pousse rien. Explicite pour ne pas
+# dependre du reglage par defaut du depot.
+permissions:
+  contents: read
+
 jobs:
   liens:
     runs-on: ubuntu-latest

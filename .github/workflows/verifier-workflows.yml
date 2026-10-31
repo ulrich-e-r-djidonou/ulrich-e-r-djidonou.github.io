@@ -16,6 +16,13 @@ on:
       - ".github/workflows/verifier-workflows.yml"
   workflow_dispatch: {}
 
+# Lecture seule : ce controle ne pousse rien. Explicite pour ne pas
+# dependre du reglage par defaut du depot. actions: read couvre la lecture
+# des executions quand le secret JETON_SANTE_DEPOTS est absent.
+permissions:
+  contents: read
+  actions: read
+
 jobs:
   workflows:
     runs-on: ubuntu-latest
