@@ -190,9 +190,14 @@ nav a:focus-visible,
   width: 220px;
 }
 
+/* height: auto est indispensable : les attributs width/height de la balise
+   (ajoutes contre le decalage de mise en page) imposent sinon une hauteur
+   fixe de 472px qui ecrase l'aspect-ratio. Le portrait sortait en bande
+   etroite de 220x472 (150x472 sur mobile) au lieu du 272/472 voulu. */
 .hero-portrait img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 272 / 472;
   object-fit: cover;
   object-position: center 12%;
@@ -335,8 +340,10 @@ h1 {
   letter-spacing: 0;
 }
 
+/* 65ch, comme les notes de demarche et la FAQ : a 55rem le paragraphe
+   courait sur environ 105 caracteres par ligne en bureau. */
 .positioning p {
-  max-width: 55rem;
+  max-width: 65ch;
   color: var(--muted);
   font-size: var(--fs-base);
 }
@@ -905,6 +912,16 @@ h1 {
 
 .contact h2 {
   margin-bottom: 1.5rem;
+}
+
+.contact p {
+  max-width: 65ch;
+}
+
+/* Sans flex-shrink: 0, le paragraphe voisin ecrasait le bouton, dont le
+   libelle « Me contacter » passait sur deux lignes en bureau. */
+.contact-actions {
+  flex-shrink: 0;
 }
 
 .contact-profile {

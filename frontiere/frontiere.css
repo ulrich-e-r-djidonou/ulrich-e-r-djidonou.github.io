@@ -81,6 +81,7 @@
 
 .frontiere-signal {
   position: relative;
+  max-width: 46rem;
   margin: 0 4rem 2rem;
   padding: 1.5rem 1.75rem;
   overflow: hidden;
@@ -107,6 +108,13 @@
 }
 
 .frontiere-signal a {
+  color: var(--soft-heading);
+}
+
+/* Le kicker herite de --teal, qui s'eclaircit en sombre (#4fc7bd) : pose sur
+   le fond clair fixe --soft-bg, il tombait a 1.8:1. Famille soft, comme le
+   titre et la legende de l'encadre. */
+.frontiere-signal .section-kicker {
   color: var(--soft-heading);
 }
 
@@ -174,6 +182,12 @@
   font-size: var(--fs-sm);
 }
 
+/* Gris par defaut du navigateur (#757575) : 3.5:1 sur la surface sombre. */
+.frontiere-recherche::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
 .frontiere-chips {
   display: flex;
   flex-wrap: wrap;
@@ -202,9 +216,11 @@
   padding: 0 4rem 2rem;
 }
 
+/* --heading et non --teal-dark : --teal-dark reste fixe (#073f3d) entre les
+   themes, et ces reperes de semaine tombaient a 1.4:1 en mode sombre. */
 .semaine-titre {
   margin: 1.75rem 0 0.75rem;
-  color: var(--teal-dark);
+  color: var(--heading);
   font-family: "Trebuchet MS", Verdana, sans-serif;
   font-size: var(--fs-xs);
   font-weight: 700;
@@ -227,7 +243,11 @@
   margin-bottom: 1rem;
 }
 
+/* Colonne de lecture de 46rem, la largeur du bloc « Comment cette veille est
+   produite » : la carte epouse la mesure de son resume au lieu de laisser
+   un vide a droite du texte sur grand ecran. */
 .carte-entree {
+  max-width: 46rem;
   padding: 1.1rem 1.3rem;
   margin-bottom: 0.9rem;
   background: var(--white);
@@ -268,7 +288,10 @@
   text-underline-offset: 3px;
 }
 
+/* Mesure de lecture : sans plafond, les resumes couraient sur 160 caracteres
+   par ligne en bureau, la carte occupant toute la largeur du flux. */
 .carte-entree p {
+  max-width: 72ch;
   margin: 0 0 0.5rem;
   color: var(--muted);
   font-size: var(--fs-sm);
@@ -359,6 +382,13 @@
     margin-right: 1.25rem;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  /* L'encadre du signal a un fond et une bordure : sans retrait interieur,
+     son texte touchait les bords sur mobile. */
+  .frontiere-signal {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .barre-theme {
