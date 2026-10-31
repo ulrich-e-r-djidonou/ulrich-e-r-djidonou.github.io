@@ -47,7 +47,7 @@
    de flottaison. <details> natif, donc l'ouverture ne depend pas du JS. */
 .frontiere-methode {
   margin-top: 1.5rem;
-  max-width: 46rem;
+  max-width: 40rem;
 }
 
 .frontiere-methode-titre {
@@ -81,7 +81,7 @@
 
 .frontiere-signal {
   position: relative;
-  max-width: 46rem;
+  max-width: 40rem;
   margin: 0 4rem 2rem;
   padding: 1.5rem 1.75rem;
   overflow: hidden;
@@ -111,14 +111,19 @@
   color: var(--soft-heading);
 }
 
-/* Le kicker herite de --teal, qui s'eclaircit en sombre (#4fc7bd) : pose sur
-   le fond clair fixe --soft-bg, il tombait a 1.8:1. Famille soft, comme le
-   titre et la legende de l'encadre. */
-.frontiere-signal .section-kicker {
+/* Titre de l'article retenu, rempli par frontiere.js sous le titre de
+   section « Signal de la semaine ». Avant le 31 oct. 2026, l'article etait
+   lui-meme le h2 et la section n'etait nommee que par un kicker. */
+.frontiere-signal-titre {
+  margin: 0.6rem 0 0;
   color: var(--soft-heading);
+  font-size: var(--fs-base);
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .frontiere-signal-legende {
+  max-width: var(--mesure);
   margin: 0.5rem 0 0;
   color: var(--soft-heading);
   opacity: 0.75;
@@ -243,11 +248,11 @@
   margin-bottom: 1rem;
 }
 
-/* Colonne de lecture de 46rem, la largeur du bloc « Comment cette veille est
-   produite » : la carte epouse la mesure de son resume au lieu de laisser
-   un vide a droite du texte sur grand ecran. */
+/* Colonne de lecture de 40rem, partagee avec le bloc « Comment cette veille
+   est produite » et l'encadre du signal : la carte epouse la mesure de son
+   resume au lieu de laisser un vide a droite du texte sur grand ecran. */
 .carte-entree {
-  max-width: 46rem;
+  max-width: 40rem;
   padding: 1.1rem 1.3rem;
   margin-bottom: 0.9rem;
   background: var(--white);
@@ -288,10 +293,10 @@
   text-underline-offset: 3px;
 }
 
-/* Mesure de lecture : sans plafond, les resumes couraient sur 160 caracteres
-   par ligne en bureau, la carte occupant toute la largeur du flux. */
+/* Mesure de lecture commune (--mesure, styles.css) : sans plafond, les
+   resumes couraient sur 160 caracteres par ligne en bureau. */
 .carte-entree p {
-  max-width: 72ch;
+  max-width: var(--mesure);
   margin: 0 0 0.5rem;
   color: var(--muted);
   font-size: var(--fs-sm);

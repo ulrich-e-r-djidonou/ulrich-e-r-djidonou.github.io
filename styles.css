@@ -63,6 +63,13 @@
      existant. */
   --fs-h1-frontiere: 3.4rem;
   --fs-h1-frontiere-sm: 2.4rem;
+
+  /* Mesure de lecture du texte courant. En Georgia, 1ch (largeur du zero)
+     vaut environ 1.3 caractere moyen : 65ch donnait 82 a 85 caracteres par
+     ligne. 58ch en donne environ 75, sous le seuil de 80 (audit du
+     31 oct. 2026). Le ch se resout sur l'element qui utilise la variable,
+     donc la mesure suit sa taille de police. */
+  --mesure: 58ch;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -340,10 +347,10 @@ h1 {
   letter-spacing: 0;
 }
 
-/* 65ch, comme les notes de demarche et la FAQ : a 55rem le paragraphe
-   courait sur environ 105 caracteres par ligne en bureau. */
+/* Mesure commune (--mesure) : a 55rem le paragraphe courait sur environ
+   105 caracteres par ligne en bureau. */
 .positioning p {
-  max-width: 65ch;
+  max-width: var(--mesure);
   color: var(--muted);
   font-size: var(--fs-base);
 }
@@ -438,6 +445,14 @@ h1 {
 
 .experience-item li {
   margin-bottom: 0.5rem;
+}
+
+/* Les puces de poste couraient sur toute la largeur (environ 110 caracteres
+   par ligne en bureau). */
+.experience-item ul,
+.experience-item .role-context,
+.publication-item p {
+  max-width: var(--mesure);
 }
 
 .publication-list {
@@ -785,7 +800,7 @@ h1 {
 }
 
 .project-note {
-  max-width: 65ch;
+  max-width: var(--mesure);
   padding: 2rem 0;
   border-top: 1px solid var(--line);
 }
@@ -814,7 +829,7 @@ h1 {
 }
 
 .project-notes > p {
-  max-width: 65ch;
+  max-width: var(--mesure);
 }
 
 /* Lien d'action d'une note : meme voix que les liens de carte projet. */
@@ -915,7 +930,7 @@ h1 {
 }
 
 .contact p {
-  max-width: 65ch;
+  max-width: var(--mesure);
 }
 
 /* Sans flex-shrink: 0, le paragraphe voisin ecrasait le bouton, dont le
@@ -1343,7 +1358,7 @@ h1 {
 
 /* FAQ (accueil) */
 .faq-list {
-  max-width: 62ch;
+  max-width: var(--mesure);
   margin-top: 1.5rem;
   border-top: 1px solid var(--line);
 }
@@ -1373,7 +1388,7 @@ h1 {
    cette marge il se colle au filet de la derniere ligne et se lit comme une
    reponse orpheline. */
 .faq .faq-list + p {
-  max-width: 62ch;
+  max-width: var(--mesure);
   margin-top: 1.5rem;
   color: var(--muted);
 }
