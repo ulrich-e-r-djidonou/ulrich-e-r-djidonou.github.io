@@ -103,7 +103,7 @@ Le système est theme-aware (clair et sombre via `prefers-color-scheme`), avec u
 Palette de carnet : neutres papier et encre, un teal institutionnel dominant, vert et ambre en appuis rares.
 
 ### Primary
-- **Teal frontière** (#0b5c5a): accent principal; boutons primaires, liens de carte, pastilles de timeline, kickers de La Frontière. En sombre il s'éclaircit (#4fc7bd).
+- **Teal frontière** (#0b5c5a): accent principal; boutons primaires, liens de carte, pastilles de timeline, étiquettes de La Frontière. En sombre il s'éclaircit (#4fc7bd).
 - **Teal profond** (#073f3d): titres (`--heading` en clair) et fond du bloc Méthode. Reste fixe entre thèmes quand il sert de fond.
 
 ### Secondary
@@ -139,8 +139,8 @@ Palette de carnet : neutres papier et encre, un teal institutionnel dominant, ve
 - **Display** (4.25rem / 0.98, `--fs-h1`): titre du hero uniquement; 2.65rem sur mobile. Pages intérieures : 2.9rem (`--fs-h1-page`).
 - **Headline** (2.35rem / 1.12, `--fs-h2`): titres de section.
 - **Title** (1.45rem, `--fs-title`): titres de carte projet; 1.35rem pour les entrées de parcours.
-- **Body** (1.16rem / 1.55, `--fs-base`): texte courant, gris terrain, largeurs max 55-62ch. Chapeau (lead) : 1.28rem.
-- **Label** (0.8rem, 700, 0.08em, uppercase, `--fs-2xs`): étiquettes et kickers de La Frontière; navigation à 0.88rem sans uppercase.
+- **Body** (1.16rem / 1.55, `--fs-base`): texte courant, gris terrain, mesure commune `--mesure` (58ch, environ 75 caractères par ligne en Georgia, où 1ch vaut à peu près 1,3 caractère moyen). Chapeau (lead) : 1.28rem.
+- **Label** (0.8rem, 700, 0.08em, uppercase, `--fs-2xs`): étiquettes (type de projet, répartition thématique de La Frontière); navigation à 0.88rem sans uppercase.
 
 ### Named Rules
 **La règle des steps.** Quinze tailles littérales ont été regroupées en steps nommés; ne jamais réintroduire une taille littérale dans une règle.
@@ -188,7 +188,7 @@ Coins discrets : 4px (boutons, encadrés), 6px (cartes), 14px (portrait), 999px 
 - **Règle de citation:** titre, description et légende sont repris mot pour mot de la source institutionnelle; la photo est hébergée localement pour survivre au retrait de la page d'origine.
 
 ### Notes de démarche
-- **Page projets** (`#demarches`, `#approaches` en anglais) : une colonne de 65ch, un filet 1px entre les notes, titre au step `--fs-title`, nom du projet en Trebuchet teal.
+- **Page projets** (`#demarches`, `#approaches` en anglais) : une colonne à `--mesure`, un filet 1px entre les notes, titre au step `--fs-title`, nom du projet en Trebuchet teal.
 - **Structure** : liste de définitions Question, Démarche, Limites de lecture ; `dt` en encre de titre 700, `dd` en gris terrain.
 - **Lien d'action** : même voix que les liens de carte (Trebuchet 700, teal, `--fs-sm`).
 - **Depuis l'accueil** : chaque carte ajoute sous son lien principal un lien secondaire vers sa note (`.project-note-link`, `--fs-xs`, graisse 400, gris terrain ; `--soft-muted` dans les cartes vedettes, qui ne s'inversent pas).
@@ -197,7 +197,7 @@ Coins discrets : 4px (boutons, encadrés), 6px (cartes), 14px (portrait), 999px 
 - **Style:** Trebuchet 0.88rem, gris terrain; page active en heading 700 avec soulignement liseré 2px. Header sticky, fond translucide flouté, filet bas 1px.
 
 ### Le liseré (signature)
-Filet dégradé teal-vert-ambre décliné en : signature-line du hero (4.5rem x 3px), tiret des kickers de La Frontière (1.6rem x 3px), soulignement de nav active, border-image du portrait et du pied de page, top de carte au survol.
+Filet dégradé teal-vert-ambre décliné en : signature-line du hero (4.5rem x 3px), tiret des étiquettes de section (1.6rem x 3px), soulignement de nav active, border-image du portrait et du pied de page, top de carte au survol.
 
 ## Do's and Don'ts
 
@@ -208,7 +208,7 @@ Filet dégradé teal-vert-ambre décliné en : signature-line du hero (4.5rem x 
 - **Do** garder le focus ambre 3px sur tout élément interactif ajouté.
 
 ### Don't:
-- **Don't** poser de petite étiquette majuscule (kicker) au-dessus d'un titre : le titre porte son propre poids, et si l'étiquette dit quelque chose, cela passe dans le titre ou le texte. Seule exception : La Frontière, où le pipeline remplit certains titres par JavaScript et où le kicker reste le seul libellé statique.
+- **Don't** poser de petite étiquette majuscule (kicker) au-dessus d'un titre : le titre porte son propre poids, et si l'étiquette dit quelque chose, cela passe dans le titre ou le texte. Plus d'exception depuis le 31 octobre 2026 : sur La Frontière, l'encadré du signal porte un vrai titre statique (« Signal de la semaine ») et l'article que le pipeline y injecte passe dessous. Le seul libellé en capitales restant, « Répartition thématique », nomme une section sans titre et ne surmonte aucun titre.
 - **Don't** introduire de bordure latérale épaisse comme accent (l'ancienne timeline 3px a été retirée exprès).
 - **Don't** utiliser le dégradé en fond de bloc ou en texte (`background-clip: text` interdit).
 - **Don't** ajouter d'autre famille de police ni de taille littérale hors échelle.
