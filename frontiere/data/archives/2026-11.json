@@ -1,0 +1,18 @@
+[
+  {
+    "id": "nber-https-www-nber-org-papers-w35974-fromrss",
+    "titre": "How Different are Different Differences-in-Differences? A Large-Scale Meta-Analysis",
+    "url": "https://www.nber.org/papers/w35974#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-11-02",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Peter Hull",
+    "signal": false
+  }
+]

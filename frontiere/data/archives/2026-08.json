@@ -5189,6 +5189,69 @@
     "signal": false
   },
   {
+    "id": "arxiv-2608.02909v1",
+    "titre": "When Predictions Become Regressors: A Split-Sample Correction for Biases in Downstream Inference",
+    "url": "https://arxiv.org/abs/2608.02909v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-03",
+    "resume_fr": "Pour corriger le biais d'estimation causé par l'usage de prédictions d'apprentissage automatique comme variables explicatives dans des régressions, les auteurs proposent une méthode de variables instrumentales construites sur des découpages indépendants des données. Des simulations indiquent que cette approche permet de retrouver des valeurs proches de la réalité même sur de petits échantillons, une efficacité illustrée par deux applications portant sur le Parlement allemand et la lutte contre la pauvreté en Chine.",
+    "angle_eco": "L'utilisation de mesures prédites par l'apprentissage automatique comme variables explicatives dans des régressions génère des biais d'estimation dus aux erreurs de mesure, qu'il est possible de corriger au moyen de variables instrumentales construites sur des découpages indépendants des données initiales sans apport de nouvelles données.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "prevision"
+    ],
+    "score": 3,
+    "auteurs": "Nathan Canen, Ted Enamorado",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Prediction-generated measures from machine learning techniques are frequently used as explanatory variables in regression models despite being measured with error, which leads to biased estimates. A proposed solution constructs instrumental variables from multiple measures created on independent splits of the original data to recover estimates close to the true values even in small samples.",
+    "angle_eco_en": "Measurement errors introduced by machine learning predictions used as regressors can be corrected through data splitting and instrumental variables, improving the validity of downstream causal inference in applied econometrics."
+  },
+  {
+    "id": "arxiv-2608.02102v1",
+    "titre": "Navigating the skill diversity frontier: How skill complexity explains worker resilience",
+    "url": "https://arxiv.org/abs/2608.02102v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-03",
+    "resume_fr": "À partir de données longitudinales de LinkedIn portant sur 2,4 millions de travailleurs américains et 16 753 compétences distinctes, cette étude développe un cadre d'analyse réseau afin de mesurer la spécialisation, la diversité et la frontière de diversité des compétences. Si la spécialisation est principalement associée à des professions aux salaires plus élevés, les travailleurs les plus proches de la frontière de diversité ont une probabilité accrue d'acquérir de nouvelles compétences, de recevoir des promotions et de s'orienter vers des emplois moins exposés à l'automatisation.",
+    "angle_eco": "La modélisation en réseau de la complexité des compétences permet de distinguer le capital productif du capital adaptatif en montrant que si la spécialisation favorise des salaires plus élevés, la diversité des compétences et la proximité avec une frontière de diversité optimale déterminent l'acquisition de nouvelles aptitudes, la mobilité professionnelle et la résilience face à l'automatisation.",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 8,
+    "auteurs": "Mar Carpanelli, Jedrzej Duszynski, Fabian Stephany",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "deja_signal": true,
+    "resume_en": "An agnostic network framework uses longitudinal data on 2.4 million United States workers and 16,753 distinct skills from LinkedIn to reconstruct the hierarchy and diversity of skills from observed patterns of skill co-occurrence. Analysis reveals that workers closest to the highest attainable diversity frontier are significantly more likely to acquire new skills, receive promotions, and transition into occupations with lower exposure to automation compared to highly specialized workers with narrower skill portfolios.",
+    "angle_eco_en": "The structural complexity of a worker skill portfolio, measured through specialization and diversity, disentangles productive capital from adaptive capital to explain resilience to technological automation in the labor market."
+  },
+  {
+    "id": "arxiv-2608.01607v1",
+    "titre": "AI Financial Advice: Supply, Demand, and Life Cycle Implications",
+    "url": "https://arxiv.org/abs/2608.01607v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-03",
+    "resume_fr": "En simulant l'impact sur l'ensemble du cycle de vie des conseils financiers de GPT-5.2 sollicités par un échantillon représentatif, une étude montre que ces recommandations orientent les individus vers la théorie du cycle de vie, avec une participation élargie aux fonds d'actions diversifiés, une part d'actions décroissante avec l'âge et des réserves d'épargne plus élevées. Ces conseils varient selon la culture financière, l'expérience préalable de l'IA et le genre, deux tiers des divergences d'allocation en actions entre hommes et femmes découlant de la rédaction de requêtes différentes et un tiers provenant d'étiquettes de genre rattachées à des requêtes identiques.",
+    "angle_eco": "La simulation des effets sur l'ensemble du cycle de vie des conseils financiers issus des modèles de langage montre que leur suivi oriente les choix d'épargne et d'investissement vers les prédictions de la théorie du cycle de vie, tout en révélant des variations de recommandation liées à l'offre et à la demande selon le genre, l'expérience en intelligence artificielle et la culture financière.",
+    "themes": [
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 4,
+    "auteurs": "Taha Choukhmane, Tim de Silva, Weidong Lin, Matthew Akuzawa",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A representative sample wrote prompts seeking spending and investing advice to simulate the lifetime effects of following GPT-5.2 recommendations under realistic asset and labor market conditions. Following this advice would move respondents toward life cycle theory through broader participation in diversified equity funds, age-declining equity shares, and larger savings buffers, although recommendations vary systematically by gender and financial literacy.",
+    "angle_eco_en": "Artificial intelligence financial advice shifts individual portfolio choices toward life cycle theory optimization, though systematic biases in both user prompting and model responses can generate new inequalities in wealth accumulation."
+  },
+  {
     "id": "arxiv-2608.01544v1",
     "titre": "Measuring Product Quality Using Images: The CLIP Q-Score and an Application to Real Estate",
     "url": "https://arxiv.org/abs/2608.01544v1",
@@ -5248,6 +5311,27 @@
     "score": 0,
     "auteurs": "Weihua An, Pablo Estrada, Juan Estrada, David Jacho-Chavez",
     "signal": false
+  },
+  {
+    "id": "arxiv-2608.01432v2",
+    "titre": "A New Theory of Value for Post-AGI Economics",
+    "url": "https://arxiv.org/abs/2608.01432v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-02",
+    "resume_fr": "Face à la divergence potentielle entre les prix du marché et le bien-être sociétal causée par l'automatisation du travail cognitif par l'intelligence artificielle générale, cet article introduit la théorie de la valeur de l'épanouissement. Cette théorie redéfinit la valeur comme la contribution aux capacités durables des personnes et des communautés à s'épanouir sous contraintes planétaires, et propose une architecture de gouvernance fondée sur le rendement de l'épanouissement.",
+    "angle_eco": "L'automatisation du travail cognitif par l'intelligence artificielle générale risquant de séparer les indicateurs marchands traditionnels comme le PIB du bien-être réel, l'analyse économique doit redéfinir la valeur à partir de la contribution multidimensionnelle d'un système aux capacités durables d'épanouissement des personnes et des collectivités sous contraintes sociales et écologiques.",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 5,
+    "auteurs": "Keyun Ruan",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A new framework called Flourishing Value Theory is developed to define value as the distribution-sensitive contribution of an entity to the durable capabilities of persons and communities within planetary constraints. This approach treats societal value as multidimensional and non-compensatory at critical thresholds, retaining traditional metrics like price, profit, productivity, and gross domestic product only as partial signals of progress rather than final measures.",
+    "angle_eco_en": "The potential for widely automatable cognitive work weakens traditional labor and expertise scarcities, requiring a fundamental shift in economic valuation from market-based pricing to multidimensional capability enhancement and governed abundance."
   },
   {
     "id": "fmi-10-5089-9798229054348-001",

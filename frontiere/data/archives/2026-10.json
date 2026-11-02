@@ -1,5 +1,410 @@
 [
   {
+    "id": "arxiv-2610.42052v1",
+    "titre": "Valid GMM Inference with Non-parametrically Generated Discrete Type",
+    "url": "https://arxiv.org/abs/2610.42052v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Taegyu Yang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41963v1",
+    "titre": "Zero Crossings on the Accuracy-Smoothness Frontier: Maximal Monotone and Minimal Inflection Non Stationary Predictors",
+    "url": "https://arxiv.org/abs/2610.41963v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Marc Wildi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41881v1",
+    "titre": "Evaluating Maternity Leave Reforms When RD Fails",
+    "url": "https://arxiv.org/abs/2610.41881v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "inference-causale",
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Clara von Bismarck-Osten, Andrei Zeleneev",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41722v1",
+    "titre": "Covariance Identification from Regression Residuals",
+    "url": "https://arxiv.org/abs/2610.41722v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Yanping Chen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41447v1",
+    "titre": "Why delivered costs understate prices in an integrated global hydrogen market",
+    "url": "https://arxiv.org/abs/2610.41447v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Bastian Weißenburger, Martin Wietschel, Patrick Plötz, Russell McKenna",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41428v1",
+    "titre": "xtlp: A new Stata command for panel local projection",
+    "url": "https://arxiv.org/abs/2610.41428v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Shu Shen, Ziwei Mei, Liugang Sheng, Zhentao Shi",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41361v1",
+    "titre": "Identification through Heteroskedasticity in One Lemma: Partial Identification, an Eigenvalue Construction, and a Caution on Rank Tests",
+    "url": "https://arxiv.org/abs/2610.41361v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "George Milunovich",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41294v1",
+    "titre": "The Double Diagonal Estimator: Reducing Bias in Two-Sided Marketplace Experiments",
+    "url": "https://arxiv.org/abs/2610.41294v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Saanvi Chawla, Vasilis Syrgkanis",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41171v1",
+    "titre": "Convolution Skew-$t$ Distributions",
+    "url": "https://arxiv.org/abs/2610.41171v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Xinxian Chen, Peter Reinhard Hansen, Chen Tong",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41103v1",
+    "titre": "Optimal climate policy in incomplete electricity markets",
+    "url": "https://arxiv.org/abs/2610.41103v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Emil Dimanchev, Steven A. Gabriel, Stein-Erik Fleten, Filippo Pecci, Magnus Korpas",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.42139v1",
+    "titre": "Counting on Dummies: Privacy Amplification with Observable Counts and Truncated Batches",
+    "url": "https://arxiv.org/abs/2610.42139v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Vitaly Feldman, Audra McMillan, Kunal Talwar",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.42128v1",
+    "titre": "DecisionRank: On-Policy Distillation for Decision-Model Rerankers",
+    "url": "https://arxiv.org/abs/2610.42128v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Yanran Wu, Dian Yu, Chongyang Bai, Jieyi Zhang, Rui Liu, Tianyi Chen, Shike Mei, Hang Cui, Frank Shyu, Sandeep Pandey, Luke Simon, Chunwei Liu, Xi Liu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.42096v1",
+    "titre": "CausalWAM: Learning the Causes of Actions in World Action Models",
+    "url": "https://arxiv.org/abs/2610.42096v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Juntao Cheng, Jinzhou Tang, Fan Feng, Henrik I. Christensen, Yujia Zheng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.42085v1",
+    "titre": "Cost-Aware Stopping for Freeze-Thaw Bayesian Optimization: When Does One-Step Lookahead Suffice?",
+    "url": "https://arxiv.org/abs/2610.42085v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Long Vu, Jongseong Brad Choi, Binoy Ravindran, Zhoulai Fu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.42066v1",
+    "titre": "The Knowledge Layer Model (KLM): Evidence-Visible AI Output, Routing Diagnostics, and Negative Results",
+    "url": "https://arxiv.org/abs/2610.42066v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Omer Asim Ozturk, Cihan Aydiner",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.42054v1",
+    "titre": "CRoS: Causality Reward on Scrambled CoTs Improves Accuracy and Reasoning Faithfulness",
+    "url": "https://arxiv.org/abs/2610.42054v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Xiao Yu, Justin Chih-Yao Chen, Zaid Khan, Hyunji Lee, Mohit Bansal",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.42040v1",
+    "titre": "Near-Optimal Second-Order Convex Finite-Sum Optimization under Individual Smoothness",
+    "url": "https://arxiv.org/abs/2610.42040v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Xinliang Zhang, Lesi Chen, Zonghan Li, Jingzhao Zhang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.42028v1",
+    "titre": "CausalXRL: Explainable Reinforcement Learning through Causal Graph Reasoning",
+    "url": "https://arxiv.org/abs/2610.42028v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yanming Zhang, Eric Papenhausen, Klaus Mueller",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.42013v1",
+    "titre": "When Does Jacobian Fine-Tuning Stabilize Neural PDE Emulators?",
+    "url": "https://arxiv.org/abs/2610.42013v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "prevision",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Shreeyam Bangera, Manya Gupta",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41956v1",
+    "titre": "Chronos-2: A foundation model for multivariate time series forecasting",
+    "url": "https://arxiv.org/abs/2610.41956v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "prevision",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Abdul Fatir Ansari, Oleksandr Shchur, Jaris Küken, Andreas Auer, Boran Han, Pedro Mercado, Syama Sundar Rangapuram, Huibin Shen, Lorenzo Stella, Xiyuan Zhang, Mononito Goswami, Shubham Kapoor, Danielle C. Maddix, Pablo Guerron, Florian Saupe, Markus Reichstein, Tony Hu, Junming Yin, Nick Erickson, Prateek Mutalik Desai, Hao Wang, Huzefa Rangwala, George Karypis, Yuyang Wang, Michael Bohlke-Schneider",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41949v1",
+    "titre": "Optimizing Stochastic Policy Geometry for Few-Step Flow Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2610.41949v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Zhuguanyu Wu, Congjia Chen, Ruihao Gong, Yang Yong, Shiqiao Gu, Yi Xu, Xianglong Liu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41939v1",
+    "titre": "Observable-Specific Validity Tests for Scientific AI: Controlled Approximations and Intervention Response",
+    "url": "https://arxiv.org/abs/2610.41939v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Xiaoshn Nee, Haobo Zhong, Xiaomin Ni",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41933v1",
+    "titre": "Binary Sparse Codes: Where are we on Energy Efficient Representations?",
+    "url": "https://arxiv.org/abs/2610.41933v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Jose Miguel Ramos, Luis SaCouto, Andreas Wichert",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41903v1",
+    "titre": "Statistical Foundations of Reinforcement Learning: A Non-Asymptotic Perspective",
+    "url": "https://arxiv.org/abs/2610.41903v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Yuxin Chen, Yuejie Chi, Jianqing Fan, Gen Li, Yuting Wei, Yuling Yan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.41888v1",
+    "titre": "On-Chain Behavioral Signatures for Classifying Centralized Exchange Addresses on Ethereum Using Proof-of-Reserves",
+    "url": "https://arxiv.org/abs/2610.41888v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-10-30",
+    "themes": [
+      "outils-recherche",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Seongchan Park, Hyunho Jeon, Byungsoo Kang, Gaeun Kim, Minseob So, Seongyong Kim",
+    "signal": false
+  },
+  {
     "id": "arxiv-2610.40650v1",
     "titre": "When Does Storage Complement Solar? Investment and Cost Recovery under Advanced Net Metering",
     "url": "https://arxiv.org/abs/2610.40650v1",
@@ -326,6 +731,23 @@
     "nb_eco": 1,
     "nb_ia": 0,
     "auteurs": "Zhenghong Ke, Jingbo Zhou, Hua Wu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.40719v1",
+    "titre": "Weak Identification in Bunching Designs: Rare Events and Counterfactual Uncertainty",
+    "url": "https://arxiv.org/abs/2610.40719v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-29",
+    "themes": [
+      "inference-causale",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Kun Huang",
     "signal": false
   },
   {
@@ -831,6 +1253,22 @@
     "nb_eco": 0,
     "nb_ia": 1,
     "auteurs": "Martin Huber",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2610.37269v2",
+    "titre": "Personal preference or system role? Battery swapping among UK electric vehicle users",
+    "url": "https://arxiv.org/abs/2610.37269v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-10-27",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Janak Parmar, Huseyin Ayan, Dilum Dissanayake, Margaret Bell",
     "signal": false
   },
   {
