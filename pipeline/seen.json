@@ -6334,5 +6334,237 @@
   "nber-https-www-nber-org-papers-w35982-fromrss": {
     "score": 3,
     "traite": true
+  },
+  "arxiv-2611.06888v1": {
+    "score": 3,
+    "traite": true
+  },
+  "arxiv-2611.06855v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06696v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.06629v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06557v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06266v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06067v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.05778v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.05767v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.05714v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.05644v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.05640v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.05608v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.05584v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.05553v1": {
+    "score": 6,
+    "traite": true
+  },
+  "arxiv-2611.05456v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.05342v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.05227v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.04366v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.04272v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.04266v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.04040v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.04000v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.03938v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.03550v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.03391v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.03345v2": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.03079v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.03075v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.02960v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.02959v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.02716v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.02647v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.02623v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.02592v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.02533v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.02443v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.02302v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.02061v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.02048v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06912v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06908v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06905v1": {
+    "score": 2,
+    "traite": true
+  },
+  "arxiv-2611.06876v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.06859v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06843v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.06835v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06819v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06802v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06728v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06711v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.06706v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06704v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06655v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.06653v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06633v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.06610v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.06606v1": {
+    "score": 1,
+    "traite": true
   }
 }

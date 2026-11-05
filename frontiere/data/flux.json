@@ -1,5 +1,50 @@
 [
   {
+    "id": "arxiv-2611.06888v1",
+    "titre": "Dull, Dirty, Dangerous? Working Conditions and the Limits of Occupational AI Exposure",
+    "url": "https://arxiv.org/abs/2611.06888v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-04",
+    "resume_fr": "L'étude analyse la relation entre les conditions de travail fastidieuses, salissantes ou dangereuses et l'exposition professionnelle à l'intelligence artificielle à partir de 754 professions aux États-Unis. Les résultats montrent qu'une exposition accrue à l'IA est associée à des scores de pénibilité plus faibles, bien que cette relation s'atténue ou s'annule après ajustement pour les exigences physiques, le niveau de formation et les salaires.",
+    "angle_eco": "L'association entre l'exposition des professions à l'intelligence artificielle et la pénibilité des tâches dépend étroitement du regroupement des indicateurs et des caractéristiques professionnelles contrôlées, ce qui implique que mesurer le soulagement effectif apporté par l'automatisation exige d'analyser les préférences des travailleurs et des interventions spécifiques.",
+    "themes": [
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 3,
+    "nb_eco": 1,
+    "nb_ia": 3,
+    "auteurs": "Siyi Yu",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "angle_eco_en": "The association between occupational AI exposure and working conditions characterized as dull, dirty, and dangerous becomes statistically indistinguishable from zero or substantially weakens when accounting for physical demands, education requirements, training, experience, and wages."
+  },
+  {
+    "id": "arxiv-2611.05553v1",
+    "titre": "Decision Models as Scalable Economic Surrogates that Capture Human Variation",
+    "url": "https://arxiv.org/abs/2611.05553v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-03",
+    "resume_fr": "Les modèles de décision, une nouvelle classe de modèles d'intelligence artificielle qui fournissent des réponses rapides et retournent une distribution de probabilité sur un ensemble fixe d'options, constituent des candidats prometteurs pour remplacer les humains dans les simulations économiques et les enquêtes, face aux modèles de langage de grande taille qui sont coûteux à grande échelle et sous-représentent la variation du comportement humain. Une évaluation comparant dix modèles de décision avec huit modèles de langage de grande taille dans trois contextes économiques montre que les modèles de décision les plus performants reproduisent mieux la variation des réponses humaines que les modèles de langage de grande taille, tout en étant environ dix fois plus rapides et potentiellement plus de cent fois moins chers.",
+    "angle_eco": "Les modèles de décision, en reproduisant plus fidèlement la variation des réponses humaines que les grands modèles de langage tout en étant nettement plus rapides et moins coûteux, offrent une alternative scalable pour simuler le comportement hétérogène des agents économiques.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 6,
+    "nb_eco": 3,
+    "nb_ia": 2,
+    "auteurs": "Maxime Saxena, Fabio Caccioli, R. Maria del Rio-Chanona",
+    "signal": true,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "Decision Models outperform Large Language Models at capturing variation in human behavior across three economic settings: a household spending survey, classic economic games, and a labour-market field experiment. Frontier Decision Models are approximately ten times faster and over a hundred times cheaper than the fastest Large Language Model while reproducing the distribution of human responses more closely in all three settings.",
+    "angle_eco_en": "Scalable economic simulations require human surrogates that both reproduce the heterogeneity of individual decision-making and remain computationally efficient, a challenge that Large Language Models address imperfectly due to their high cost and limited capture of behavioral variation.",
+    "deja_signal": true
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w35964-fromrss",
     "titre": "Saving for the Machines",
     "url": "https://www.nber.org/papers/w35964#fromrss",
@@ -2086,105 +2131,5 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "A training-free framework addresses the challenge of automatically designing effective visual token reduction algorithms for multimodal large language models. The framework introduces a domain-specific language comprising 131 reusable atoms for budget control, token scoring, selection constraints, and token reassembly.",
     "angle_eco_en": "The automated design of token reduction policies lowers the computational inference costs associated with deploying large multimodal models at scale."
-  },
-  {
-    "id": "nber-https-www-nber-org-papers-w35546-fromrss",
-    "titre": "Time Travel on Professional Profiles",
-    "url": "https://www.nber.org/papers/w35546#fromrss",
-    "source": "NBER, nouveaux working papers",
-    "type": "papier",
-    "date_publication": "2026-08-05",
-    "resume_fr": "En analysant les données de Revelio Labs de 2020 à 2026, l'étude révèle que 19,7 % des utilisateurs américains établis de LinkedIn modifient rétroactivement l'intitulé ou la description d'un emploi déjà quitté, un comportement fortement associé aux changements d'employeur. Ces modifications rétroactives montrent une nette augmentation des termes liés à l'intelligence artificielle après 2022, un recul des mentions du travail à distance ou de la diversité, ainsi qu'une hausse de la rédaction assistée par de grands modèles de langage après l'arrivée de ChatGPT, en particulier chez les actifs moins diplômés et les titulaires de MBA issus de programmes moins bien classés.",
-    "angle_eco": "La révision rétroactive des profils professionnels en ligne par les travailleurs introduit des biais dans la mesure historique des compétences tout en révélant la perception qu'ont les actifs des compétences recherchées sur le marché du travail.",
-    "themes": [
-      "llm",
-      "travail-emploi",
-      "donnees"
-    ],
-    "score": 6,
-    "auteurs": "Nicholas Bloom, Gideon Moore, Lisa K. Simon, Caelan Wilkie-Rogers",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "Monthly data from Revelio Labs between 2020 and 2026 reveals that 19.7 percent of established United States LinkedIn users retroactively edit their previous job titles or descriptions. These retroactive edits show sharp increases in artificial intelligence language after 2022 and are strongly associated with workers changing employers.",
-    "angle_eco_en": "The retroactive mutability of professional profiles introduces biases in historical measures of skill supply while simultaneously revealing dynamic worker beliefs about in-demand skills in the labor market."
-  },
-  {
-    "id": "nber-https-www-nber-org-papers-w35540-fromrss",
-    "titre": "Predictive Risk Scores in the Public Sector: Experimental Evidence from Child-Protection Investigations",
-    "url": "https://www.nber.org/papers/w35540#fromrss",
-    "source": "NBER, nouveaux working papers",
-    "type": "papier",
-    "date_publication": "2026-08-05",
-    "resume_fr": "Une évaluation aléatoire portant sur 4 752 signalements d'enfants dans le comté de Northampton montre que l'accès des superviseurs de la protection de l'enfance à un score algorithmique de risque a augmenté les placements en famille d'accueil et les services destinés aux enfants au risque prédit le plus élevé. Cette intervention a réduit les signalements ultérieurs pour maltraitance sans accentuer les disparités raciales dans les décisions ou les résultats, ce qui montre que les algorithmes peuvent améliorer le ciblage tout en préservant le pouvoir d'appréciation humain.",
-    "angle_eco": "L'intégration d'évaluations algorithmiques du risque dans l'allocation d'une attention publique limitée sous incertitude permet d'orienter efficacement les interventions de protection vers les enfants les plus exposés et de réduire les signalements ultérieurs de maltraitance, tout en préservant le pouvoir d'appréciation humain sans accentuer les disparités raciales.",
-    "themes": [
-      "politique-publique"
-    ],
-    "score": 3,
-    "auteurs": "E. Jason Baron, Arkadev Ghosh, Richard Lombardo",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "A randomized evaluation of 4,752 child referrals over 14 months in Northampton County assessed providing algorithmic risk scores to supervisors alongside standard case records. Access to the score increased foster-care placements for children at the highest predicted risk and reduced subsequent maltreatment referrals without widening racial disparities.",
-    "angle_eco_en": "Algorithmic risk assessments optimize the allocation of scarce attention in public sector decisions by improving the targeting of high-risk cases while preserving human discretion."
-  },
-  {
-    "id": "nber-https-www-nber-org-papers-w35545-fromrss",
-    "titre": "Detecting Critical Junctures as They Unfold: Foundations, Measurement, and Applications from 120 Years of Reporting",
-    "url": "https://www.nber.org/papers/w35545#fromrss",
-    "source": "NBER, nouveaux working papers",
-    "type": "papier",
-    "date_publication": "2026-08-05",
-    "resume_fr": "Pour éviter d'étudier les jonctions critiques uniquement de manière rétrospective, cette recherche développe une approche fondée sur un grand modèle de langage afin d'identifier l'incertitude institutionnelle directement dans le discours contemporain. Appliquée à l'archive du Times de Londres contenant 11,95 millions d'articles publiés entre 1800 et 2019, cette méthode permet de construire la première mesure textuelle à long terme de l'incertitude institutionnelle, ancrée dans l'analyse de 120 ans de reportages allant de 1900 à 2019.",
-    "angle_eco": "L'analyse automatisée de la presse historique permet de mesurer l'incertitude institutionnelle pour détecter les conjonctures critiques au moment où elles se produisent, évitant ainsi le biais rétrospectif dans la compréhension des trajectoires de développement économique.",
-    "themes": [
-      "llm"
-    ],
-    "score": 3,
-    "auteurs": "Michael Callen, Gregory Levy, Saipremnath Muthukumaran, Jonathan L. Weigel, Noam Yuchtman",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "A large language model classifier was trained and applied to 11.95 million articles from the Times of London archive spanning 1800 to 2019 to detect moments of institutional uncertainty in contemporaneous discourse. This approach produces a long-run text-based measure of institutional uncertainty grounded in the concept of critical junctures to identify when institutions are in flux.",
-    "angle_eco_en": "Detecting institutional uncertainty as it unfolds in real time provides a new text-based measurement strategy for analyzing the timing and mechanisms of institutional change that shape long-run economic growth."
-  },
-  {
-    "id": "nber-https-www-nber-org-papers-w35559-fromrss",
-    "titre": "Replaceable but Employed: Automation and the Meaning of Work",
-    "url": "https://www.nber.org/papers/w35559#fromrss",
-    "source": "NBER, nouveaux working papers",
-    "type": "papier",
-    "date_publication": "2026-08-05",
-    "resume_fr": "Une alternative automatisée crédible peut réduire le sens que les travailleurs attribuent à leur contribution, ce qui augmente la compensation salariale exigée ou leur impose une perte de bien-être lorsqu'ils conservent leur emploi. La démonstration publique d'une telle technologie permet aux développeurs de stimuler la demande en dépréciant le travail humain, réduisant ainsi la valeur de l'emploi avant même sa suppression.",
-    "angle_eco": "La simple présence d'une alternative automatisée crédible détériore le sens du travail en affaiblissant le sentiment de contribution individuelle du salarié, ce qui altère la rémunération et peut rendre l'automatisation socialement préjudiciable avant même la suppression effective des emplois.",
-    "themes": [
-      "travail-emploi",
-      "politique-publique"
-    ],
-    "score": 3,
-    "auteurs": "Joshua S. Gans",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "A theoretical model examines jobs where workers value knowing that the output depends on their personal contribution rather than just producing useful results. The presence of a credible machine alternative weakens this source of meaning for retained workers, which raises compensation if wages adjust fully or forces workers to bear the loss if wages adjust only partly.",
-    "angle_eco_en": "A meaning externality arises when the public demonstration of a machine lowers the value of the human alternative, reducing the intrinsic value of work even before actual job replacement occurs."
-  },
-  {
-    "id": "voxeu-epr-org-voxeu-columns-automation-does-not-lower-labour-share",
-    "titre": "Automation does not lower the labour share",
-    "url": "https://cepr.org/voxeu/columns/automation-does-not-lower-labour-share",
-    "source": "VoxEU / CEPR",
-    "type": "article",
-    "date_publication": "2026-08-04",
-    "resume_fr": "À partir de données couvrant la quasi-totalité des entreprises françaises entre 1994 et 2019, cette étude examine la relation entre l'automatisation et la part du revenu revenant au travail au niveau de l'entreprise. Les résultats montrent que bien que l'automatisation ait profondément transformé les emplois et la production, elle n'a pas nécessairement déplacé les revenus du travail vers le capital.",
-    "angle_eco": "L'automatisation à l'échelle des entreprises peut restructurer profondément les emplois et la production sans pour autant déplacer nécessairement les revenus du travail vers le capital.",
-    "themes": [
-      "llm",
-      "travail-emploi",
-      "donnees"
-    ],
-    "score": 6,
-    "auteurs": "Zsofia Barany, Aseem Patel, Christian Siegel",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "Data covering nearly the universe of French firms between 1994 and 2019 is used to analyze the relationship between automation and the firm-level labor share of income. The evidence indicates that while extensive automation took place during this period, it profoundly reshaped jobs and production without inevitably shifting income from labor to capital.",
-    "angle_eco_en": "The relationship between firm-level automation and the labor share of income demonstrates that technological adoption can restructure production and employment without necessarily extracting income away from workers."
   }
 ]

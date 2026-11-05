@@ -6,6 +6,20 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>Dull, Dirty, Dangerous? Working Conditions and the Limits of Occupational AI Exposure</title>
+      <link>https://arxiv.org/abs/2611.06888v1</link>
+      <guid isPermaLink="false">arxiv-2611.06888v1</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <description>L'étude analyse la relation entre les conditions de travail fastidieuses, salissantes ou dangereuses et l'exposition professionnelle à l'intelligence artificielle à partir de 754 professions aux États-Unis. Les résultats montrent qu'une exposition accrue à l'IA est associée à des scores de pénibilité plus faibles, bien que cette relation s'atténue ou s'annule après ajustement pour les exigences physiques, le niveau de formation et les salaires.</description>
+    </item>
+    <item>
+      <title>Decision Models as Scalable Economic Surrogates that Capture Human Variation</title>
+      <link>https://arxiv.org/abs/2611.05553v1</link>
+      <guid isPermaLink="false">arxiv-2611.05553v1</guid>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Les modèles de décision, une nouvelle classe de modèles d'intelligence artificielle qui fournissent des réponses rapides et retournent une distribution de probabilité sur un ensemble fixe d'options, constituent des candidats prometteurs pour remplacer les humains dans les simulations économiques et les enquêtes, face aux modèles de langage de grande taille qui sont coûteux à grande échelle et sous-représentent la variation du comportement humain. Une évaluation comparant dix modèles de décision avec huit modèles de langage de grande taille dans trois contextes économiques montre que les modèles de décision les plus performants reproduisent mieux la variation des réponses humaines que les modèles de langage de grande taille, tout en étant environ dix fois plus rapides et potentiellement plus de cent fois moins chers.</description>
+    </item>
+    <item>
       <title>Saving for the Machines</title>
       <link>https://www.nber.org/papers/w35964#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35964-fromrss</guid>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35793-fromrss</guid>
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <description>Les auteurs mesurent l'impact de l'intelligence artificielle sur l'économie à travers ses effets sur la productivité de l'ingénierie logicielle, en utilisant les informations des marchés financiers pour développer un indicateur prospectif disponible en temps réel. Entre novembre 2022 et décembre 2025, l'IA aurait augmenté la valeur présente attendue par le marché de la productivité de l'ingénierie logicielle de l'équivalent d'une augmentation permanente de 32,6%, ce qui correspondrait à un effet sur le PIB de 3,6% en scénario de base et de 6,5% si la productivité accrue de l'ingénierie logicielle stimule également la productivité de la recherche et développement.</description>
-    </item>
-    <item>
-      <title>Deep Learning as a Projection Method for Solving Economic Models</title>
-      <link>https://www.nber.org/papers/w35806#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35806-fromrss</guid>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Les auteurs montrent que les solveurs de réseaux de neurones présentés comme un nouveau paradigme en économie sont en réalité des méthodes de projection par moindres carrés avec une paramétrisation non linéaire adaptative, ce qui remet en question la dichotomie entre apprentissage profond et méthodes classiques. Ils proposent une approche unifiée où le choix entre diverses méthodes d'approximation, critères résiduels et designs d'évaluation dépend des caractéristiques du modèle, les méthodes linéaires et sur grilles creuses s'avérant souvent supérieures en dimensions faibles à modérées tandis qu'un choix approprié de l'espace de fonctions peut éviter la malédiction de la dimensionnalité en dimensions élevées.</description>
-    </item>
-    <item>
-      <title>Do Workfare Programs Live Up to Their Promises? Experimental Evidence from Côte d'Ivoire</title>
-      <link>https://doi.org/10.1257/app.20240586</link>
-      <guid isPermaLink="false">aea-10-1257-app-20240586</guid>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Les auteurs étudient les effets d'un programme de travaux publics en Côte d'Ivoire offrant sept mois d'emploi aux jeunes urbains au salaire minimum formel avec formation complémentaire en entrepreneuriat ou recherche d'emploi, et constatent que pendant le programme le taux d'emploi n'augmente que légèrement mais qu'il y a un déplacement vers les emplois salariés, des gains de revenus et d'épargne ainsi que des améliorations dans les habitudes de travail et le bien-être. Après la fin du programme, les auteurs ne trouvent aucun effet durable sur l'emploi ou les comportements, avec seulement des gains limités en revenus provenant d'activités indépendantes, et montrent par apprentissage automatique que des approches de ciblage alternatives pourraient améliorer substantiellement le bien-être.</description>
     </item>
   </channel>
 </rss>
