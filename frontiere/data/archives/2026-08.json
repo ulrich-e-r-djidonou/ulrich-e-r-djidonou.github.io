@@ -4331,6 +4331,48 @@
     "signal": false
   },
   {
+    "id": "arxiv-2608.07418v1",
+    "titre": "ResidencyRL: Reinforcement Learning in Simulated Clinical Environments",
+    "url": "https://arxiv.org/abs/2608.07418v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "resume_fr": "La méthode ResidencyRL utilise l'apprentissage par renforcement pour entraîner des agents d'intelligence artificielle clinique au travers de simulations de consultations médicales interactives. Lors des évaluations, cet entraînement améliore la précision diagnostique de 7,0 % en conditions adverses, réduit de 31 % le taux de signaux d'alerte manqués et obtient la préférence des cliniciens experts dans 87,6 % des comparaisons à l'aveugle.",
+    "angle_eco": "L'apprentissage par renforcement appliqué à des simulations d'interactions cliniques complexes permet d'optimiser la prise de décision médicale séquentielle sous incertitude, améliorant ainsi la précision diagnostique et la sécurité des soins.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "auteurs": "Valentin Liévin, Samuel Schmidgall, Tim Strother, Alex Bijamov, Akshay Goel, Anil Palepu, Chunjong Park, Vahid Balazadeh, Min Woo Sun, Marius Guerard, Justin Chen, Dave Steiner, Vikram Dhillon, Ibrahim Azar, Akhil Mehta, Nicholas Spetsieris, Shilpan Shah, Maen Abdelrahim, Amit Dahiya, Yun Liu, Katherine Chou, Yossi Matias, Avinatan Hassidim, Dale R. Webster, Quoc V. Le, Raia Hadsell, Joelle Barral, Carey Radebaugh, Aleksandra Faust, Shekoofeh Azizi, Mike Schaekermann, Po-Hsuan Cameron Chen, Tao Tu, David Racz, Lin Yang",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A reinforcement learning method trains clinical artificial intelligence agents through simulated multi-turn encounters against a structured reward aligned to diagnostic accuracy and management quality. On held-out evaluations, the trained agent improves diagnostic accuracy by 7.0% under adversarial conditions and reduces missed red flag rates by 31%.",
+    "angle_eco_en": "The use of simulated reinforcement environments for training specialized agents reduces the costly reliance on human-generated feedback in high-stakes professional service domains."
+  },
+  {
+    "id": "arxiv-2608.07193v1",
+    "titre": "An AI4AI Framework for Visual Token Pruning",
+    "url": "https://arxiv.org/abs/2608.07193v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-07",
+    "resume_fr": "Afin de réduire le coût d'inférence des grands modèles de langage multimodaux, cette étude présente AutoPrune, un cadre sans entraînement qui permet aux modèles de langage de concevoir automatiquement des règles d'élagage de jetons visuels. Ce système s'appuie sur un langage spécifique composé de 131 atomes réutilisables représentant chaque état de recherche comme une modification résiduelle d'une politique de base performante.",
+    "angle_eco": "L'automatisation de la conception des politiques d'élagage de jetons visuels par des modèles de langage permet de réduire les coûts d'inférence des grands modèles multimodaux en remplaçant le tâtonnement manuel coûteux par un langage structuré qui restreint l'espace de recherche.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "auteurs": "Zhen Liu, Wenli Huang, Wei Song, Yuhan Liu, Zhiqin Yang, Jingwen Fu",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A training-free framework addresses the challenge of automatically designing effective visual token reduction algorithms for multimodal large language models. The framework introduces a domain-specific language comprising 131 reusable atoms for budget control, token scoring, selection constraints, and token reassembly.",
+    "angle_eco_en": "The automated design of token reduction policies lowers the computational inference costs associated with deploying large multimodal models at scale."
+  },
+  {
     "id": "arxiv-2608.06584v1",
     "titre": "Two Types of Tertiarization: Household Demand, Production Networks, and the Rise of Services",
     "url": "https://arxiv.org/abs/2608.06584v1",

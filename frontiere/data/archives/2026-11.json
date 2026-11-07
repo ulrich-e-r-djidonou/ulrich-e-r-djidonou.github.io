@@ -1,5 +1,535 @@
 [
   {
+    "id": "voxeu-https-cepr-org-voxeu-columns-concentration-ai-spending",
+    "titre": "The concentration of AI spending",
+    "url": "https://cepr.org/voxeu/columns/concentration-ai-spending",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-11-07",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Ivan Yotzov, Jose Maria Barrero, Nicholas Bloom, Philip Bunn, Steven Davis, Kevin Foster, Aaron Jalca, Brent Meyer, Paul Mizen, Michael Navarrete, Gregory Thwaites",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-045fb8fbe3",
+    "titre": "Mise a jour de la liste awesome : Add AI Index, AIOE, Working with AI, and American Stories",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/045fb8fbe34ea19a83a0f2c31e8d4fab1a1d35eb",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-11-07",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Lu Han",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-3af4354edd",
+    "titre": "Mise a jour de la liste awesome : Add did, HonestDiD, and CausalImpact beside their listed derivatives",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/3af4354edd9fdeaefaa60410c63394ccf9bd3172",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-11-07",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Lu Han",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-622b958caa",
+    "titre": "Mise a jour de la liste awesome : Add foundational surveys and field experiments to Key Papers",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/622b958caaf4b877fed9edcbcebd07ae95986c7d",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-11-07",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Lu Han",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-53c6ffd3e2",
+    "titre": "Mise a jour de la liste awesome : Remove Thesify and Alpha Vantage MCP under the access and MCP rules",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/53c6ffd3e2fd143e5614f23f0a8a2ea33f603dbc",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-11-07",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Lu Han",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-6ffc965ea8",
+    "titre": "Mise a jour de la liste awesome : Correct stale and inaccurate entry descriptions",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/6ffc965ea82f3637c442d884b6b56c14aabc9ff9",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-11-07",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Lu Han",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-209d5f9c30",
+    "titre": "Mise a jour de la liste awesome : Rename LinkedIn Economic Graph to LinkedIn Pulse and update its link",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/209d5f9c308d82b1667422a19c52465d2be46d84",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-11-07",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Lu Han",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-046b937735",
+    "titre": "Mise a jour de la liste awesome : Update Suppr link to its current official site (from #32 by @A-G0D)",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/046b937735c9682f74e8a0deb0df95c5ca3acde6",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-11-07",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Lu Han",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-455c7a268a",
+    "titre": "Mise a jour de la liste awesome : Link Firecrawl's homepage without tracking parameters",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/455c7a268a941089625a033c328793781314eb45",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-11-07",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Lu Han",
+    "signal": false
+  },
+  {
+    "id": "voxeu-https-cepr-org-multimedia-how-well-do-bug-bounties-work",
+    "titre": "How Well do Bug Bounties Work?",
+    "url": "https://cepr.org/multimedia/how-well-do-bug-bounties-work",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08430v1",
+    "titre": "Cross-Border Ownership and Input Access: Evidence from the Lithium Supply Chain",
+    "url": "https://arxiv.org/abs/2611.08430v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Kei Irizawa",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08160v1",
+    "titre": "Patch Attention Wisely: Understanding Patch Length in Attention-Based Forecasting",
+    "url": "https://arxiv.org/abs/2611.08160v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "prevision",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Junyu Chen, Likai Chen, Weining Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08031v1",
+    "titre": "Economies of scale and the equity-efficiency trade-off: Evidence from a piped water network in rural Bangladesh",
+    "url": "https://arxiv.org/abs/2611.08031v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Md. Ahasan Habib, Anna Tompsett",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.07787v1",
+    "titre": "Discrete Choice under Congestion: Equilibrium and Welfare",
+    "url": "https://arxiv.org/abs/2611.07787v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Debopam Bhattacharya, Matias Makiranta",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.07774v1",
+    "titre": "Unobserved Consideration and Consumer Welfare",
+    "url": "https://arxiv.org/abs/2611.07774v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Debopam Bhattacharya, Ryan J. Martin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.07699v1",
+    "titre": "Stay, Reposition, or Recharge: Battery-Aware Operation of Robotaxi Fleets",
+    "url": "https://arxiv.org/abs/2611.07699v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Philipp Afèche, Saif Benjaafar,  Jiayu,  Zhao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.07698v1",
+    "titre": "Willingness-to-pay space and preference space: a unified treatment of equivalence, heterogeneity and interpretation",
+    "url": "https://arxiv.org/abs/2611.07698v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Stephane Hess",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08469v1",
+    "titre": "Same Behavior, Different Mechanism: What Finite Experiments Can Certify About Integrated Information",
+    "url": "https://arxiv.org/abs/2611.08469v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Linqian Wu, Diaoxuan He",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08453v1",
+    "titre": "Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO",
+    "url": "https://arxiv.org/abs/2611.08453v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Zeyu Leo Liu, Yang Li, Bo Pang, Emre Can Acikgoz, Xuan-Phi Nguyen, Anurag Koul, Srijan Bansal, Erik Nijkamp, Shafiq Joty, Semih Yavuz",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08438v1",
+    "titre": "Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety",
+    "url": "https://arxiv.org/abs/2611.08438v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Fazl Barez, Tung-Yu Wu, Hunar Batra, Gabriele Dominici, Florent Draye, Yanai Elazar, Damiano Fornasiere, Antía García, Abir Harrasse, Riley Harris, Sara Hooker, Michael Lan, Belinda Z. Li, Aaron Maiwald, Narmeen Fatimah Oozeer, Naomi Saphra, Or David Shafran, Adi Simhi, Robert Trager, Shriyash Kaustubh Upadhyay, Ziyu Yao, Yu Zhao, Shay B. Cohen, Mor Geva, Yoshua Bengio, Stella Biderman, Hassan Sajjad",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08407v1",
+    "titre": "Social Humanoid: Socially Responsive Human-Humanoid Interaction",
+    "url": "https://arxiv.org/abs/2611.08407v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Vongani H. Maluleke, James Ni, Kie Horiuchi, Lea Wilken, Jiahui Lei, Evonne Ng, Roei Herzig, Jitendra Malik, Trevor Darrell, Angjoo Kanazawa",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08364v1",
+    "titre": "SHORE: Stability-Hybrid On-Policy Reinforcement Learning for Online Bin Packing",
+    "url": "https://arxiv.org/abs/2611.08364v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Chang Shi, Ann Majewicz Fey",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08363v1",
+    "titre": "StrataFlux: Memory-Hierarchy-Native Low-Bit LLM Inference",
+    "url": "https://arxiv.org/abs/2611.08363v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "llm",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Jake Hyun, Ziyu Zhao, Jae-sun Seo, Mohamed S. Abdelfattah",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08335v1",
+    "titre": "Discovering Learning Rules that Shape Others",
+    "url": "https://arxiv.org/abs/2611.08335v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Hong Jun Lee, Ziyan Wang, Jun Wang, Stefanos Leonardos, Yali Du",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08308v1",
+    "titre": "RM-VLM: From Natural-Language Task Descriptions to Vision-Grounded Reward Machines",
+    "url": "https://arxiv.org/abs/2611.08308v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Roko Parac, Christos Ziakas, Leo Ardon, Alessandra Russo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08273v1",
+    "titre": "Accelerating Safe Reinforcement Learning with Massive Parallelism",
+    "url": "https://arxiv.org/abs/2611.08273v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Joonyoung Lim, Younghwan Yoo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08252v1",
+    "titre": "Series-wise Cross-validation for Global Time Series Forecasting",
+    "url": "https://arxiv.org/abs/2611.08252v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "prevision",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Vitor Cerqueira, Mariana Oliveira, Luis Roque",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08240v1",
+    "titre": "FewStepRL: Fine-tuning Few-step Diffusion Models with Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2611.08240v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Haitao Lin, Minsi Ren, Yang Li, Xingtong Ge, Zheyuan Hu, Peiyan Hu, Tailin Wu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08219v1",
+    "titre": "Agent-R$^2$: Scaling Agents for Realistic Productivity Work via Real-Source Data Synthesis",
+    "url": "https://arxiv.org/abs/2611.08219v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "llm",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Teng Pan, Zixuan Wang, Yuchen Yan, Qifei Wu, Yao Chen, Yingqi Qu, Ruiqing Zhang, Yongliang Shen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08182v1",
+    "titre": "BUMP: Brief Unexpected Mid-Interpolation Peak",
+    "url": "https://arxiv.org/abs/2611.08182v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "prevision",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Melinda Flóra Kiss, Márton Muntag, Adrián Csiszárik, Dániel Varga",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08179v1",
+    "titre": "Knowing When to Teach: Learning from Teachable Prefixes in Multilingual Reasoning Distillation",
+    "url": "https://arxiv.org/abs/2611.08179v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jaewon Cho, Minseo Yoon, Jinyoung Park, Jinwoo Seo, Jaewon Chu, Alice Oh, Hyunwoo J. Kim",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08173v1",
+    "titre": "Regret Bounds for Profit Maximization in Bilateral Trade: Learning the Best Posted-Price Mechanism",
+    "url": "https://arxiv.org/abs/2611.08173v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-05",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Johannes Brüstle, Simone Di Gregorio, Federico Fusco, Stefano Leonardi",
+    "signal": false
+  },
+  {
+    "id": "awesome-ai-economists-9069e74948",
+    "titre": "Mise a jour de la liste awesome : Update Firecrawl description to mention its MCP server and agent skills",
+    "url": "https://github.com/hanlulong/awesome-ai-for-economists/commit/9069e7494882846b14590f5604723155ce7e188f",
+    "source": "Commits sur awesome-ai-for-economists",
+    "type": "annonce",
+    "date_publication": "2026-11-05",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "JuampiHernandez",
+    "signal": false
+  },
+  {
     "id": "arxiv-2611.06855v1",
     "titre": "Regression with Many Generated Controls",
     "url": "https://arxiv.org/abs/2611.06855v1",
@@ -426,6 +956,40 @@
     "nb_eco": 1,
     "nb_ia": 1,
     "auteurs": "Ekaterina Fadeeva, Xueyan Li, Mrinmaya Sachan, Maxim Panov",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.07249v1",
+    "titre": "Double Machine Learning for Panel Data: Identification, Specification, and a Bank Regulation Effect",
+    "url": "https://arxiv.org/abs/2611.07249v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-04",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Ali Habibnia, Esfandiar Maasoumi, Gaurav Shah",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.07240v1",
+    "titre": "Nonparametric Subgraph Regression",
+    "url": "https://arxiv.org/abs/2611.07240v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-04",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Wenxuan Ding",
     "signal": false
   },
   {

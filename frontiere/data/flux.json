@@ -38,7 +38,7 @@
     "nb_eco": 3,
     "nb_ia": 2,
     "auteurs": "Maxime Saxena, Fabio Caccioli, R. Maria del Rio-Chanona",
-    "signal": true,
+    "signal": false,
     "llm": "claude-haiku-4-5",
     "resume_en": "Decision Models outperform Large Language Models at capturing variation in human behavior across three economic settings: a household spending survey, classic economic games, and a labour-market field experiment. Frontier Decision Models are approximately ten times faster and over a hundred times cheaper than the fastest Large Language Model while reproducing the distribution of human responses more closely in all three settings.",
     "angle_eco_en": "Scalable economic simulations require human surrogates that both reproduce the heterogeneity of individual decision-making and remain computationally efficient, a challenge that Large Language Models address imperfectly due to their high cost and limited capture of behavioral variation.",
@@ -109,6 +109,50 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "Using Large Language Models as synthetic survey respondents for 480 retail and 60 institutional investors, this study finds that institutional investors hold greener portfolios than retail investors despite reporting weaker green tastes due to outside pressure. Although green tastes vary little over time and depend primarily on political affiliation for retail investors and on type and geography for institutions, beliefs about green portfolio returns become more pessimistic after 2020.",
     "angle_eco_en": "A greener portfolio tilt does not necessarily indicate a stronger underlying taste for greenness because institutional investors adopt greener asset allocations under outside pressure despite expressing weaker green preferences than retail investors."
+  },
+  {
+    "id": "aea-10-1257-aer-20250081",
+    "titre": "The Causal Effects of Global Supply Chain Disruptions on Macroeconomic Outcomes: Evidence and Theory",
+    "url": "https://doi.org/10.1257/aer.20250081",
+    "source": "American Economic Review",
+    "type": "article",
+    "date_publication": "2026-11-01",
+    "resume_fr": "Les auteurs évaluent les effets des perturbations des chaînes d'approvisionnement mondiales en combinant un nouvel indice de congestion portuaire basé sur le suivi des navires porte-conteneurs et un modèle théorique à frictions de recherche entre producteurs et détaillants. Selon les résultats, les chocs de demande et d'offre ont provoqué la désinflation aux États-Unis en 2020, tandis que la poussée d'inflation de 2021 a été principalement entraînée par les chocs sur les chaînes d'approvisionnement.",
+    "angle_eco": "La modélisation des frictions de recherche entre producteurs et détaillants permet de relier les capacités de production inutilisées en amont aux pénuries d'offre en aval pour expliquer comment les chocs sur la chaîne d'approvisionnement ont été le principal moteur de la poussée d'inflation américaine en 2021.",
+    "themes": [
+      "inference-causale",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Xiwen Bai, Jesús Fernández-Villaverde, Yiliang Li, Francesco Zanetti",
+    "signal": false,
+    "llm": "gemini-3.6-flash"
+  },
+  {
+    "id": "fmi-10-5089-9798229065016-001",
+    "titre": "From Calibration to Estimation",
+    "url": "https://doi.org/10.5089/9798229065016.001",
+    "source": "IMF Working Papers",
+    "type": "papier",
+    "date_publication": "2026-11-01",
+    "resume_fr": "Pour permettre l'estimation bayésienne complète des modèles trimestriels de projection utilisés par les banques centrales, une nouvelle méthodologie combine un algorithme de doublage préservant la structure, la différenciation automatique, l'échantillonneur NUTS et un lissage par algorithme EM. Appliquée à un modèle d'économie ouverte pour le Brésil sur la période 2004Q1-2025Q2, cette démarche situe l'écart de production dans l'enveloppe publiée par la Banque centrale du Brésil pour environ 84 % de l'échantillon et surpasse un VAR bayésien sur la prévision du taux directeur.",
+    "angle_eco": "L'estimation bayésienne complète des modèles trimestriels de projection des banques centrales, rendue possible par l'association de la différentiation automatique et de l'échantillonneur NUTS, permet de réduire l'incertitude autour des réponses aux chocs de politique monétaire et d'améliorer la prévision du taux directeur.",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Andrés González Gómez, Juan David Prada Sarmiento",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The authors develop a Bayesian estimation workflow for Quarterly Projection Models that combines the structure-preserving doubling algorithm, automatic differentiation, and the No-U-Turn Sampler with a signal-to-noise-ratio prior calibration refined by a Koopman disturbance-smoother expectation-maximization step. Applied to an open-economy model for Brazil from 2004Q1 to 2025Q2, this workflow yields stable posterior inference, places the output gap inside Banco Central do Brasil's published envelope in about 84% of the sample, and delivers its clearest forecasting edge over a Bayesian VAR on the policy rate.",
+    "angle_eco_en": "Gradient-based Bayesian estimation of central bank Quarterly Projection Models is hindered by rational-expectations solvers and shock-variance priors, but combining a structure-preserving doubling algorithm, automatic differentiation, and the No-U-Turn Sampler with refined signal-to-noise-ratio priors enables stable posterior inference and accurate policy-rate forecasts."
   },
   {
     "id": "nber-https-www-nber-org-papers-w35949-fromrss",
@@ -796,6 +840,30 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "Analyzing over 700 million online job postings across 110 economies, the paper finds that labor demand declined by nearly 10 percent in occupations more exposed to artificial intelligence, although this drop stabilized even as AI capabilities advanced. Concurrently, demand for emerging AI skills grew rapidly, and firms seeking these skills experienced faster growth in job postings even within highly exposed occupations.",
     "angle_eco_en": "Generative artificial intelligence reshapes labor markets by simultaneously reducing hiring in highly exposed occupations and expanding opportunities for workers who possess specialized AI skills."
+  },
+  {
+    "id": "fmi-10-5089-9798229064040-001",
+    "titre": "Global Pension Reform Database 1952 – 2025",
+    "url": "https://doi.org/10.5089/9798229064040.001",
+    "source": "IMF Working Papers",
+    "type": "papier",
+    "date_publication": "2026-10-01",
+    "resume_fr": "La base de données mondiale sur les réformes des retraites (GPRD) utilise un modèle de langage pour recenser et classifier plus de 4 000 réformes menées dans 142 économies entre 1952 et 2025. L'étude montre que la réforme des retraites est devenue un outil mondial fréquemment mobilisé lors des crises et que sa mise en œuvre dans les économies non avancées s'accompagne d'une baisse significative et durable du ratio de la dette publique sur le PIB.",
+    "angle_eco": "L'utilisation des réformes des retraites comme levier de politique économique, particulièrement récurrente lors de crises macroéconomiques, s'accompagne d'une baisse significative et durable du ratio de la dette publique sur le PIB dans les économies non avancées, favorisant ainsi la consolidation budgétaire.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 9,
+    "nb_eco": 3,
+    "nb_ia": 3,
+    "auteurs": "Yudong Rao, Boele Bonthuis",
+    "signal": true,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "This paper introduces the Global Pension Reform Database, which uses a large language model to extract and classify over 4,000 pension reform episodes across 142 economies from 1952 to 2025. The study shows that pension reforms frequently cluster around macroeconomic crises, and implemented reforms in non-advanced economies are associated with statistically significant and persistent declines in the public debt-to-GDP ratio.",
+    "angle_eco_en": "Implemented pension reforms in non-advanced economies facilitate sustained fiscal consolidation by producing persistent declines in public debt-to-GDP ratios, particularly as such reforms have expanded globally into recurring policy tools clustered around macroeconomic crises.",
+    "deja_signal": true
   },
   {
     "id": "nber-https-www-nber-org-papers-w35782-fromrss",
@@ -2089,47 +2157,5 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "A framework analyzes how new feedback loops from frontier models developing subsequent models may transform the economy. The potential for explosive growth depends on the labour share, the returns to research effort, and the share of automated tasks in each sector.",
     "angle_eco_en": "The automation of research and development tasks introduces recursive feedback loops that can theoretically trigger explosive economic growth trajectories depending on specific sector labor shares."
-  },
-  {
-    "id": "arxiv-2608.07418v1",
-    "titre": "ResidencyRL: Reinforcement Learning in Simulated Clinical Environments",
-    "url": "https://arxiv.org/abs/2608.07418v1",
-    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
-    "type": "papier",
-    "date_publication": "2026-08-07",
-    "resume_fr": "La méthode ResidencyRL utilise l'apprentissage par renforcement pour entraîner des agents d'intelligence artificielle clinique au travers de simulations de consultations médicales interactives. Lors des évaluations, cet entraînement améliore la précision diagnostique de 7,0 % en conditions adverses, réduit de 31 % le taux de signaux d'alerte manqués et obtient la préférence des cliniciens experts dans 87,6 % des comparaisons à l'aveugle.",
-    "angle_eco": "L'apprentissage par renforcement appliqué à des simulations d'interactions cliniques complexes permet d'optimiser la prise de décision médicale séquentielle sous incertitude, améliorant ainsi la précision diagnostique et la sécurité des soins.",
-    "themes": [
-      "llm",
-      "politique-publique",
-      "outils-recherche"
-    ],
-    "score": 3,
-    "auteurs": "Valentin Liévin, Samuel Schmidgall, Tim Strother, Alex Bijamov, Akshay Goel, Anil Palepu, Chunjong Park, Vahid Balazadeh, Min Woo Sun, Marius Guerard, Justin Chen, Dave Steiner, Vikram Dhillon, Ibrahim Azar, Akhil Mehta, Nicholas Spetsieris, Shilpan Shah, Maen Abdelrahim, Amit Dahiya, Yun Liu, Katherine Chou, Yossi Matias, Avinatan Hassidim, Dale R. Webster, Quoc V. Le, Raia Hadsell, Joelle Barral, Carey Radebaugh, Aleksandra Faust, Shekoofeh Azizi, Mike Schaekermann, Po-Hsuan Cameron Chen, Tao Tu, David Racz, Lin Yang",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "A reinforcement learning method trains clinical artificial intelligence agents through simulated multi-turn encounters against a structured reward aligned to diagnostic accuracy and management quality. On held-out evaluations, the trained agent improves diagnostic accuracy by 7.0% under adversarial conditions and reduces missed red flag rates by 31%.",
-    "angle_eco_en": "The use of simulated reinforcement environments for training specialized agents reduces the costly reliance on human-generated feedback in high-stakes professional service domains."
-  },
-  {
-    "id": "arxiv-2608.07193v1",
-    "titre": "An AI4AI Framework for Visual Token Pruning",
-    "url": "https://arxiv.org/abs/2608.07193v1",
-    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
-    "type": "papier",
-    "date_publication": "2026-08-07",
-    "resume_fr": "Afin de réduire le coût d'inférence des grands modèles de langage multimodaux, cette étude présente AutoPrune, un cadre sans entraînement qui permet aux modèles de langage de concevoir automatiquement des règles d'élagage de jetons visuels. Ce système s'appuie sur un langage spécifique composé de 131 atomes réutilisables représentant chaque état de recherche comme une modification résiduelle d'une politique de base performante.",
-    "angle_eco": "L'automatisation de la conception des politiques d'élagage de jetons visuels par des modèles de langage permet de réduire les coûts d'inférence des grands modèles multimodaux en remplaçant le tâtonnement manuel coûteux par un langage structuré qui restreint l'espace de recherche.",
-    "themes": [
-      "llm",
-      "politique-publique",
-      "outils-recherche"
-    ],
-    "score": 3,
-    "auteurs": "Zhen Liu, Wenli Huang, Wei Song, Yuhan Liu, Zhiqin Yang, Jingwen Fu",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "A training-free framework addresses the challenge of automatically designing effective visual token reduction algorithms for multimodal large language models. The framework introduces a domain-specific language comprising 131 reusable atoms for budget control, token scoring, selection constraints, and token reassembly.",
-    "angle_eco_en": "The automated design of token reduction policies lowers the computational inference costs associated with deploying large multimodal models at scale."
   }
 ]

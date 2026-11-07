@@ -41,6 +41,20 @@
       <description>En utilisant des modèles de langage pour simuler 480 identités d'investisseurs particuliers et 60 d'investisseurs institutionnels, l'étude montre que les institutions détiennent des portefeuilles plus verts que les particuliers malgré des préférences écologiques plus faibles, en raison de pressions extérieures. Si ces préférences écologiques varient peu entre 2014 et 2025, les croyances concernant les rendements des portefeuilles verts deviennent plus pessimistes après 2020.</description>
     </item>
     <item>
+      <title>The Causal Effects of Global Supply Chain Disruptions on Macroeconomic Outcomes: Evidence and Theory</title>
+      <link>https://doi.org/10.1257/aer.20250081</link>
+      <guid isPermaLink="false">aea-10-1257-aer-20250081</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Les auteurs évaluent les effets des perturbations des chaînes d'approvisionnement mondiales en combinant un nouvel indice de congestion portuaire basé sur le suivi des navires porte-conteneurs et un modèle théorique à frictions de recherche entre producteurs et détaillants. Selon les résultats, les chocs de demande et d'offre ont provoqué la désinflation aux États-Unis en 2020, tandis que la poussée d'inflation de 2021 a été principalement entraînée par les chocs sur les chaînes d'approvisionnement.</description>
+    </item>
+    <item>
+      <title>From Calibration to Estimation</title>
+      <link>https://doi.org/10.5089/9798229065016.001</link>
+      <guid isPermaLink="false">fmi-10-5089-9798229065016-001</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Pour permettre l'estimation bayésienne complète des modèles trimestriels de projection utilisés par les banques centrales, une nouvelle méthodologie combine un algorithme de doublage préservant la structure, la différenciation automatique, l'échantillonneur NUTS et un lissage par algorithme EM. Appliquée à un modèle d'économie ouverte pour le Brésil sur la période 2004Q1-2025Q2, cette démarche situe l'écart de production dans l'enveloppe publiée par la Banque centrale du Brésil pour environ 84 % de l'échantillon et surpasse un VAR bayésien sur la prévision du taux directeur.</description>
+    </item>
+    <item>
       <title>Generative AI, Managerial Expectations, and Economic Activity</title>
       <link>https://www.nber.org/papers/w35949#fromrss</link>
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35949-fromrss</guid>
@@ -200,20 +214,6 @@
       <guid isPermaLink="false">arxiv-2610.03480v1</guid>
       <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
       <description>La composition de politiques au moment du décodage permet d'ajuster les compromis entre différentes récompenses dans les grands modèles de langage sans réentraînement coûteux, bien que l'association standard des probabilités par jeton introduise un biais d'échantillonnage. Cette étude démontre qu'une correction iterative fondée sur l'algorithme de Metropolis-Hastings produit, pour tout budget de simulation, une distribution au moins aussi proche de la cible que le rééchantillonnage par importance selon toute f-divergence convexe, tout en caractérisant les erreurs d'échantillonnage dans plusieurs régimes asymptotiques.</description>
-    </item>
-    <item>
-      <title>(How) Do We Teach Emotions?</title>
-      <link>https://www.nber.org/papers/w35789#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35789-fromrss</guid>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Les auteurs examinent le contenu émotionnel des manuels scolaires et de la littérature jeunesse à l'aide d'outils d'apprentissage automatique et d'intelligence artificielle générative, révélant un décalage marqué : les textes exposent les enfants à une large gamme d'émotions tandis que les images dépeignent de manière écrasante le bonheur et le calme, indépendamment des émotions décrites dans le texte de la même page. Les achats de ménages et les inventaires de bibliothèques suggèrent que ce contenu pourrait être façonné par la demande des consommateurs favorisant une imagerie de couverture « positive », ce qui implique que les forces du marché réduisent le paysage émotionnel auquel les enfants sont exposés.</description>
-    </item>
-    <item>
-      <title>The Macroeconomic Effect of AI: Sizing the Software Engineering Channel</title>
-      <link>https://www.nber.org/papers/w35793#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35793-fromrss</guid>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Les auteurs mesurent l'impact de l'intelligence artificielle sur l'économie à travers ses effets sur la productivité de l'ingénierie logicielle, en utilisant les informations des marchés financiers pour développer un indicateur prospectif disponible en temps réel. Entre novembre 2022 et décembre 2025, l'IA aurait augmenté la valeur présente attendue par le marché de la productivité de l'ingénierie logicielle de l'équivalent d'une augmentation permanente de 32,6%, ce qui correspondrait à un effet sur le PIB de 3,6% en scénario de base et de 6,5% si la productivité accrue de l'ingénierie logicielle stimule également la productivité de la recherche et développement.</description>
     </item>
   </channel>
 </rss>
