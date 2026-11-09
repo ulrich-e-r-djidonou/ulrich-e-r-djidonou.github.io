@@ -1,5 +1,23 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w35987-fromrss",
+    "titre": "TaskNet: Building Occupational Task Inventories from Worker Interviews at Scale",
+    "url": "https://www.nber.org/papers/w35987#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-11-09",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Jennifer Wang, Andreas Haupt, Isaac Robinson, Phil Lewis, Erik Brynjolfsson, Diyi Yang",
+    "signal": false
+  },
+  {
     "id": "voxeu-https-cepr-org-voxeu-columns-concentration-ai-spending",
     "titre": "The concentration of AI spending",
     "url": "https://cepr.org/voxeu/columns/concentration-ai-spending",
@@ -145,6 +163,285 @@
     "nb_eco": 3,
     "nb_ia": 0,
     "auteurs": "",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09792v1",
+    "titre": "Knowing When to Intervene: Causal Evaluation of AI Agents",
+    "url": "https://arxiv.org/abs/2611.09792v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Ayush Sawarni, Wenqian Xing, Tijana Zrnic, Ramesh Johari, Vasilis Syrgkanis",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09790v1",
+    "titre": "Box-Cox Transformations of Correlation Matrices",
+    "url": "https://arxiv.org/abs/2611.09790v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Ilya Archakov, Peter Reinhard Hansen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09337v1",
+    "titre": "Sanctions, Evasion, and Deterrence: Evidence from Speeding Enforcement",
+    "url": "https://arxiv.org/abs/2611.09337v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "inference-causale",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Romain Gauriot, Maria Wisniewska",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09208v1",
+    "titre": "The Network Adaptive Market Hypothesis: Detection, Attribution, and Network-Mediated Efficiency",
+    "url": "https://arxiv.org/abs/2611.09208v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Hitesh Kumar Sahu, Avishek Bhandari, Ipsita Parida",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09023v1",
+    "titre": "Constrained Nested-Logit Pricing: An Exact Reformulation and Global Optimization Method",
+    "url": "https://arxiv.org/abs/2611.09023v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Hoang Giang Pham, Tien Mai",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08859v1",
+    "titre": "Instant Payments After a Betting Ban: Evidence from Brazil",
+    "url": "https://arxiv.org/abs/2611.08859v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Rafael Voigtel, Guilherme Vianna",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09864v1",
+    "titre": "Grasp-TAGS: Task-Aware Grasp Selection via Critic Distillation for Prehensile Loco-Manipulation",
+    "url": "https://arxiv.org/abs/2611.09864v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Xun Tu, Minghao Zou, Karthik Desingh",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09767v1",
+    "titre": "From PAC bounds on the generalization error to PAC bounds on the parameter estimation error",
+    "url": "https://arxiv.org/abs/2611.09767v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Mihaly Petreczky, John Leth, Emma Lukacs, Balint Daroczy",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09715v1",
+    "titre": "Intent-Aware Caching for Efficient LLM Serving",
+    "url": "https://arxiv.org/abs/2611.09715v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "llm",
+      "politique-publique"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Kazi Hasan Ibn Arif, JinYi Yoon, Dimitrios S. Nikolopoulos, Hans Vandierendonck, Deepu John, Bo Ji",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09679v1",
+    "titre": "Autonomous Particle Image Velocimetry Using Zero-Shot Sim-to-Real Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2611.09679v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Chang Rajani, Luke Sebastien Marsden, Stephan Kunz, Claudio Mucignat, Ivan Lunati",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09670v1",
+    "titre": "Goodhart in the Planner: Sampling-Based Control Exploits Rewards Learned from Human Preferences",
+    "url": "https://arxiv.org/abs/2611.09670v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Soovadeep Bakshi, Apurba Bose",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09665v1",
+    "titre": "Online Causal Configuration for Networked Systems via Doubly Robust Steady-State Learning",
+    "url": "https://arxiv.org/abs/2611.09665v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "inference-causale",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Yuli Liu, Zhiheng Zhang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09650v1",
+    "titre": "TensorMutation: Learning Weight-Space Mutations of Deep Learning Models on Neural Graphs",
+    "url": "https://arxiv.org/abs/2611.09650v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Zaheed Ahmed, Philip Makedonski, Jens Grabowski",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09634v1",
+    "titre": "Steerable Multi-Objective Group-Relative Preference Optimization with Jointly Trained Low-Rank Adapters",
+    "url": "https://arxiv.org/abs/2611.09634v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Constantinos Karouzos, Nikolaos Aletras",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09615v1",
+    "titre": "Contextual Search and Bilateral Trade with a Trace-Square-Root Potential",
+    "url": "https://arxiv.org/abs/2611.09615v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "prevision",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Romain Cosson, Federico Fusco, Anupam Gupta, Stefano Leonardi, Renato Paes Leme, Matteo Russo",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09597v1",
+    "titre": "RuACT: Recovering Inactive Rubrics as Adaptive Critics and Teachers",
+    "url": "https://arxiv.org/abs/2611.09597v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yijun Li, Zhengxi Lu, Zhipiao Liu, Jinzheng Yu, Xutao Weng, Jian Shao, Yongliang Shen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.09560v1",
+    "titre": "Solver-Free Decision-Focused Learning via Neural Optimization Layers for Edge Selection",
+    "url": "https://arxiv.org/abs/2611.09560v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-06",
+    "themes": [
+      "prevision",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Xinda Zheng, Frits de Nijs, Edward Lam",
     "signal": false
   },
   {
@@ -990,6 +1287,20 @@
     "nb_eco": 0,
     "nb_ia": 0,
     "auteurs": "Wenxuan Ding",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.08528v1",
+    "titre": "Price-Volume Correlations Are Always Zero",
+    "url": "https://arxiv.org/abs/2611.08528v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-04",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Victor Olkhov",
     "signal": false
   },
   {
