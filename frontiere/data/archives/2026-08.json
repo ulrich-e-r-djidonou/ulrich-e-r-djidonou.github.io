@@ -3355,6 +3355,28 @@
     "signal": false
   },
   {
+    "id": "voxeu-https-cepr-org-voxeu-columns-europes-regulatory-double-bind",
+    "titre": "Europe's regulatory double bind",
+    "url": "https://cepr.org/voxeu/columns/europes-regulatory-double-bind",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-08-13",
+    "resume_fr": "Bien que le volet de transparence du règlement sur l'intelligence artificielle de l'Union européenne soit désormais en vigueur pour obliger les fournisseurs à informer les utilisateurs, l'application de son régime encadrant les systèmes à haut risque, qui devait prendre pleinement effet le 2 août 2026, a été retardée. Cette situation crée une double contrainte dans laquelle l'Europe perd sa souveraineté réglementaire, qu'elle choisisse d'appliquer ses propres règles ou d'y renoncer.",
+    "angle_eco": "Le retard dans la mise en œuvre du régime encadrant les intelligences artificielles à haut risque, combiné à l'application des seules obligations de transparence, place l'Europe dans une double impasse où l'exécution tout comme le renoncement à ses propres règles entraînent une perte de sa souveraineté réglementaire.",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Marco Perugini",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "The transparency layer of the artificial intelligence regulatory framework has come into effect, obliging providers to inform individuals when they interact with an automated system. However, the high-risk regime covering areas like biometric identification and credit scoring has been delayed, creating a regulatory double bind.",
+    "angle_eco_en": "The partial enforcement and delay of comprehensive technology regulations generate strategic uncertainty that can undermine regional regulatory sovereignty and market competitiveness."
+  },
+  {
     "id": "arxiv-2608.12281v1",
     "titre": "Oil price shocks reveal unequal capacities for mobility adaptation",
     "url": "https://arxiv.org/abs/2608.12281v1",
@@ -3680,6 +3702,27 @@
     "score": 0,
     "auteurs": "Ulrich Hounyo, Zhendong Li",
     "signal": false
+  },
+  {
+    "id": "arxiv-2608.11626v1",
+    "titre": "Organizational Technology Ladders: Remote Work and Generative AI Adoption",
+    "url": "https://arxiv.org/abs/2608.11626v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-12",
+    "resume_fr": "À partir de données d'offres d'emploi américaines, cette étude estime qu'une hausse de 10 points de pourcentage des recrutements en télétravail en 2021-2022 augmente la part des offres mentionnant l'intelligence artificielle générative en 2023-2024 de 0,4 point de pourcentage entre les entreprises et de 0,7 point entre les professions au sein d'une même entreprise. Ce résultat illustre l'existence d'une échelle technologique organisationnelle, l'adoption du télétravail réorientant l'embauche vers des compétences techniques et managériales qui accélèrent l'adoption ultérieure de l'IA générative.",
+    "angle_eco": "L'existence d'une échelle de technologies organisationnelles implique que l'adoption du travail à distance réoriente le recrutement vers des compétences techniques et managériales, ce qui réduit le coût d'adoption ultérieure de l'intelligence artificielle générative.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 3,
+    "auteurs": "Gregor Schubert",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "An analysis of job-posting data indicates that adopting one technology builds organizational capital that changes the cost of adopting subsequent technologies. A 10 percentage point increase in remote hiring between 2021 and 2022 increases the share of job postings mentioning generative artificial intelligence between 2023 and 2024 by 0.4 percentage points across firms.",
+    "angle_eco_en": "The sequential adoption of technologies reveals an organizational friction mechanism where early investments in specific work arrangements lower the implementation costs for subsequent innovations."
   },
   {
     "id": "arxiv-2608.11464v1",

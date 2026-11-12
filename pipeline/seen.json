@@ -6806,5 +6806,213 @@
   "fmi-10-5089-9798229064903-001": {
     "score": 3,
     "traite": true
+  },
+  "arxiv-2611.14434v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.14385v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.14146v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.13882v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.13866v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.13715v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.13616v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.13313v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.13259v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.13230v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.13212v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.13194v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.13169v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.12690v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.12565v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.12459v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.12368v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.12347v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.12255v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.12117v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.11783v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.11490v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.12987v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.11183v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.11112v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.11003v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.10928v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.10925v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.10863v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.10791v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.10731v2": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.10447v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.10383v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.10372v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.10155v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.09792v2": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.14511v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.14491v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.14468v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.14467v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.14465v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.14445v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.14432v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.14407v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.14397v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.14387v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.14325v1": {
+    "score": 0,
+    "traite": true
+  },
+  "arxiv-2611.14317v1": {
+    "score": 1,
+    "traite": true
+  },
+  "arxiv-2611.14272v1": {
+    "score": 0,
+    "traite": true
+  },
+  "voxeu-ander-lessons-graduate-student-projects-and-need-ai-enriched": {
+    "score": 3,
+    "traite": true
+  },
+  "voxeu-g-voxeu-columns-reading-economy-earnings-calls-generative-ai": {
+    "score": 3,
+    "traite": true
+  },
+  "voxeu-columns-trust-beyond-face-face-contact-ai-and-future-finance": {
+    "score": 3,
+    "traite": true
   }
 }
