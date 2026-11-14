@@ -2923,6 +2923,51 @@
     "signal": false
   },
   {
+    "id": "voxeu-ce-meets-ai-evaluating-alignment-between-llms-and-economists",
+    "titre": "Macrofinance meets AI: Evaluating alignment between LLMs and economists",
+    "url": "https://cepr.org/voxeu/columns/macrofinance-meets-ai-evaluating-alignment-between-llms-and-economists",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-08-15",
+    "resume_fr": "En comparant plusieurs modèles GPT aux évaluations d'économistes du FMI sur des rapports au titre de l'Article IV, cette étude évalue les tâches d'analyse pouvant être déléguées à l'intelligence artificielle. Les résultats montrent que les meilleurs modèles actuels réussissent les tâches factuelles et structurées, mais restent moins fiables pour les évaluations nuancées exigeant le jugement d'experts humains.",
+    "angle_eco": "L'utilisation des modèles d'intelligence artificielle dans l'analyse économique permet de traiter efficacement les tâches factuelles et structurées, mais demeure moins fiable que le jugement humain pour répondre à des questions d'évaluation nuancées.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 6,
+    "auteurs": "Paola Ganum, Tohid Atashbar",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "deja_signal": true,
+    "resume_en": "An evaluation compares several generative pre-trained transformer models with assessments made by economists regarding Article IV staff reports. Current models perform well on structured and factual tasks but remain less reliable on nuanced rating questions where human judgement is required.",
+    "angle_eco_en": "The comparative advantage of machines in processing structured factual tasks shifts the boundaries of labor delegation in macroeconomic policy analysis and surveillance."
+  },
+  {
+    "id": "arxiv-2608.15339v1",
+    "titre": "Learning Sequential Mobility Choice: A Review of Route and Activity Choice through Inverse Reinforcement and Imitation Learning",
+    "url": "https://arxiv.org/abs/2608.15339v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-08-15",
+    "resume_fr": "Cette revue de littérature établit un cadre unifié reliant la modélisation comportementale des choix d'itinéraires et d'activités à l'apprentissage par renforcement inverse et à l'apprentissage par imitation. Elle montre que l'intégration des techniques d'apprentissage automatique dans une structure comportementale disciplinée améliore la prédictibilité et le passage à l'échelle sans sacrifier l'identification comportementale ni la pertinence pour les politiques publiques.",
+    "angle_eco": "L'intégration de l'apprentissage par renforcement inverse et par imitation dans la modélisation des choix séquentiels de mobilité permet d'améliorer la prédictibilité et le passage à l'échelle des modèles tout en préservant l'identification comportementale nécessaire à l'évaluation des politiques publiques.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "prevision"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Tien Mai",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "This review develops a unified framework connecting transportation choice modeling with inverse reinforcement learning and imitation learning, demonstrating that recursive logit, logit dynamic discrete choice, and maximum-entropy models share a soft Bellman representation. It concludes that integrating machine learning techniques within behaviorally disciplined choice frameworks improves scalability and predictive power without sacrificing behavioral identification or policy relevance.",
+    "angle_eco_en": "Integrating inverse reinforcement and imitation learning into sequential mobility choice modeling requires embedding data-driven algorithms within behaviorally disciplined frameworks to enhance scalability and predictive power without sacrificing structural identification, counterfactual policy evaluation, or interpretable behavioral trade-offs."
+  },
+  {
     "id": "arxiv-2608.14528v1",
     "titre": "Handover of In-Context Learning State Across Session Boundaries",
     "url": "https://arxiv.org/abs/2608.14528v1",
@@ -3271,6 +3316,70 @@
     "nb_ia": 0,
     "auteurs": "Johan Fourie",
     "signal": false
+  },
+  {
+    "id": "arxiv-2608.14399v1",
+    "titre": "Whose doctor does the AI recommend? An algorithm audit of reputation and demographic signals in large language model-assisted physician choice",
+    "url": "https://arxiv.org/abs/2608.14399v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "resume_fr": "Un audit algorithmique mesurant les recommandations de médecins par sept grands modèles de langage montre que la réputation domine les choix, une hausse de note de 3,9 à 4,7 augmentant la probabilité de sélection de 31,4 points de pourcentage et une hausse du tarif de 90 à 190 dollars la réduisant de 20,0 points. L'analyse révèle également de légers biais favorisant les noms à consonance féminine (+2,5 points) et issus de minorités (+1,3 à +2,9 points), des effets qui demeurent totalement invisibles dans les auto-explications fournies par ces modèles.",
+    "angle_eco": "L'intermédiation algorithmique des choix de santé par les modèles de langage réattribue la visibilité des médecins principalement en fonction de leur réputation et de leurs tarifs, tout en générant des biais démographiques et de positionnement que les auto-explications de l'intelligence artificielle ne permettent pas de détecter.",
+    "themes": [
+      "inference-causale",
+      "llm"
+    ],
+    "score": 4,
+    "auteurs": "Syeda Anshrah Gillani, Mirza Samad Ahmed Baig",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A randomized algorithm audit across seven models analyzed 40,068 scored responses to determine what causally drives automated physician recommendations. Raising a physician rating from 3.9 to 4.7 increases choice probability by 31.4 pp, while raising the fee from $90 to $190 lowers it by 20.0 pp.",
+    "angle_eco_en": "The unobservable biases and demographic tilts in algorithmic recommendation systems create hidden mechanisms that direct consumer choices and alter market competition among service providers."
+  },
+  {
+    "id": "arxiv-2608.14377v1",
+    "titre": "A Survey of Large Models in Sports",
+    "url": "https://arxiv.org/abs/2608.14377v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "resume_fr": "Cet article présente un panorama complet de l'application des grands modèles de langage multimodaux dans le domaine du sport, en détaillant les tâches, les applications, les jeux de données et les bancs d'essai existants. Les auteurs y abordent également les défis actuels et les orientations futures afin d'établir les bases de l'intelligence sportive guidée par ces modèles, tout en mettant à disposition un répertoire open-source.",
+    "angle_eco": "L'intégration des grands modèles de langage multimodaux dans le secteur sportif transforme la compréhension, l'analyse et l'interaction au sein de cette industrie tout en soutenant son potentiel de croissance économique à travers la structuration des applications, des jeux de données et des défis technologiques de l'intelligence sportive.",
+    "themes": [
+      "llm",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 4,
+    "auteurs": "Yichen Xu, Jianzhe Ma, Chuhan Wang, Zhonghao Cao, Liangyu Chen, Wenxuan Wang, Qin Jin",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A comprehensive survey examines the tasks and applications of large models across different participant groups in the sports domain. The analysis details sports-related datasets and benchmarks while discussing current challenges and future directions for developing sports intelligence.",
+    "angle_eco_en": "The deployment of large multimodal models in sports analytics transforms human capital evaluation and strategic decision-making within a rapidly expanding economic sector."
+  },
+  {
+    "id": "fed-complementarity-and-the-evolution-of-u-s-wage-inequality-htm",
+    "titre": "IFDP Paper: Occupational Complexity, Capital-Skill Complementarity, and the Evolution of U.S. Wage Inequality: A Quantitative Analysis",
+    "url": "https://www.federalreserve.gov/econres/ifdp/occupational-complexity-capital-skill-complementarity-and-the-evolution-of-u-s-wage-inequality.htm",
+    "source": "Reserve federale americaine (Fed), working papers",
+    "type": "papier",
+    "date_publication": "2026-08-14",
+    "resume_fr": "Cette étude met en évidence une forte relation positive aux États-Unis entre la complexité de la résolution de problèmes dans une profession et sa croissance salariale depuis 1980, alors que les réallocations d'emplois vers les professions les plus complexes sont restées modestes. Au moyen d'un modèle d'équilibre général estimé quantitativement, l'analyse montre que l'augmentation de la prime de complexité s'expliquait par la complémentarité capital-compétence et le recul des prix du capital équipement jusqu'en 2000, avant d'être portée par une plus grande efficacité des professions à exploiter les compétences des travailleurs après 2000.",
+    "angle_eco": "L'appariement sélectif des compétences individuelles aux exigences de résolution de problèmes des professions, combiné à la complémentarité entre capital et qualifications, explique la dynamique des inégalités salariales américaines sur les quatre dernières décennies tout en unifiant l'approche par les tâches et le progrès technique biaisé en faveur des compétences.",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Colin Caines, Florian Hoffmann, Gueorgui Kambourov",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A strong positive relationship exists between occupational problem complexity and occupational wage growth since 1980, while employment shifts toward more complex occupations have remained modest. A quantitative general equilibrium model shows that rising complexity premia until around 2000 were driven by capital-skill complementarity and declining equipment capital prices.",
+    "angle_eco_en": "The dynamic interaction between capital-skill complementarity and supply-side technological change explains the long-term evolution of occupational wage structures and inequality."
   },
   {
     "id": "arxiv-2608.13822v1",
