@@ -1,5 +1,55 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w36021-fromrss",
+    "titre": "Impacts of AI in Higher Education: A Panel Survey of Undergraduates",
+    "url": "https://www.nber.org/papers/w36021#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-11-16",
+    "themes": [
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Bruce Sacerdote, Mason Parris-Bacon",
+    "signal": false
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w36032-fromrss",
+    "titre": "Clouds of Credit: Mapping the Financial Web Behind AI Compute",
+    "url": "https://www.nber.org/papers/w36032#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-11-16",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Stijn Van Nieuwerburgh, Zijin Su",
+    "signal": false
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w36035-fromrss",
+    "titre": "Will AI Growth Reach the Developing World?",
+    "url": "https://www.nber.org/papers/w36035#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-11-16",
+    "themes": [
+      "travail-emploi",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 7,
+    "nb_ia": 0,
+    "auteurs": "Daniel Björkegren, David Lagakos, Mitchell VanVuren",
+    "signal": false
+  },
+  {
     "id": "voxeu-oxeu-columns-ai-and-geography-expert-work-evidence-radiology",
     "titre": "AI and the geography of expert work: Evidence from radiology",
     "url": "https://cepr.org/voxeu/columns/ai-and-geography-expert-work-evidence-radiology",
@@ -15,6 +65,300 @@
     "nb_eco": 3,
     "nb_ia": 0,
     "auteurs": "Marco Francesconi, Xiaoyu Xia",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18479v1",
+    "titre": "Estimating a Rational Inattention Discrete Choice Model: A Semiparametric Approach",
+    "url": "https://arxiv.org/abs/2611.18479v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "inference-causale",
+      "travail-emploi",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Hanqi Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18444v1",
+    "titre": "Constrained Stochastic Policy Targeting under Heterogeneous Partial Interference",
+    "url": "https://arxiv.org/abs/2611.18444v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Elena Dal Torrione, Chan Park, Laura Forastiere",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18411v1",
+    "titre": "Making Experiment Results Comparable through Sitewide Impact Estimation",
+    "url": "https://arxiv.org/abs/2611.18411v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "outils-recherche",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Xiaochen Zhang, Wenjing Zheng, Xingye Kang, Vamsi Manthena",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18227v1",
+    "titre": "Broken Adaptive Ridge in High-Dimensional Vector Autoregressions",
+    "url": "https://arxiv.org/abs/2611.18227v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "prevision",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Gianluca Cubadda, Luca Margaritella, Orest Prifti",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18116v1",
+    "titre": "Positive Weights Do Not Certify TWFE Inference: A Design Diagnostic under Treatment-Effect Heterogeneity",
+    "url": "https://arxiv.org/abs/2611.18116v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "prevision",
+      "travail-emploi"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Stanisław M. S. Halkiewicz",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.17984v1",
+    "titre": "Menu Design Meets Market Design: Strategic Simplicity vs. Choice Complexity",
+    "url": "https://arxiv.org/abs/2611.17984v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "travail-emploi"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Gian Caspari, Paul Ergün Hild, Michael Hilweg-Waldeck, Manshu Khanna, Vincent Meisner",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.17692v1",
+    "titre": "Random Utility Models in the Consumption-Budget Setting: Vertex and Network-Flow Characterizations",
+    "url": "https://arxiv.org/abs/2611.17692v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Haoge Chang, Kota Saito, Mingxi Zhu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18538v1",
+    "titre": "Why Finite Intelligence Works in an Infinite World: A Mathematical Theory",
+    "url": "https://arxiv.org/abs/2611.18538v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Mojtaba Soltanalian",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18527v1",
+    "titre": "WaferTetris: Efficient Freeform Mapping on Wafer-Scale Accelerators",
+    "url": "https://arxiv.org/abs/2611.18527v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "llm"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Dayou Du, Congjie He, Andrew Boutros, Luo Mai, Vaughn Betz, Jianyi Cheng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18507v1",
+    "titre": "Asymptotic Margins and Feature Confinement in Conic Classification Heads under Softmax Cross-Entropy",
+    "url": "https://arxiv.org/abs/2611.18507v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Omer Nezih Gerek",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18467v1",
+    "titre": "Score-based neural ordinary differential equations for reaction-diffusions",
+    "url": "https://arxiv.org/abs/2611.18467v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Jianguo Hou, Wuchen Li",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18462v1",
+    "titre": "Sample-efficient prediction of high-entropy alloy strength through outcome-aware robust sequential learning",
+    "url": "https://arxiv.org/abs/2611.18462v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Ahmed Shoyeb Raihan, Md Habibor Rahman, Ashish Nimbarte, Imtiaz Ahmed",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18417v1",
+    "titre": "CoPre-MoE: Consolidating and Preserving MoE for Multimodal Continual Instruction Tuning",
+    "url": "https://arxiv.org/abs/2611.18417v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "llm",
+      "macro-finance"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Tao Hu, Ling-Xiang Zhang, Da-Wei Zhou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18397v1",
+    "titre": "Gamer: A Generalist Vision-Language-Action Foundation Model for Long-Horizon Real-Time Game Agent",
+    "url": "https://arxiv.org/abs/2611.18397v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "politique-publique",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Run Luo, Kuan Zhang, Qi Deng, Yukun Chen, Zhihao Yang, Yufei Zhang, Renrong Hu, Yi Zhang, Guiyu Ma, Tianyu Fan, Longze Chen, Hao Sun, Jiaming Li, Jiaming Yang, Xiaohao Liu, Tao Tan, Minzheng Wang, Hangtian Jia, Shuai Yuan, Lvdi Wang, Xiao Liu, Chao Ma, Yuting Zou, Yinhe Zheng, Xiaobo Xia, Dawei Jiang, Shaoqing Ren",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18359v1",
+    "titre": "Envisioning Agentic Robotics: A New Era of Robotic Systems",
+    "url": "https://arxiv.org/abs/2611.18359v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Grid Robotics,  :, Qingfeng Lan, Duo Li, Siyao Li, Yiheng Lyu, Shijian Lu, Zhenghao Qi, Shizun Wang, Xinchao Wang, Ming Yang, Zhiqin Yang, Zuhao Yang, Tao Yu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18279v1",
+    "titre": "GT-FENG: General Theory of Factual Evaluation and Normative Grounding in Language Models *Author(s)",
+    "url": "https://arxiv.org/abs/2611.18279v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jiayu Feng",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18264v1",
+    "titre": "MamaReason: Unfinished Reasoning and Answer Recovery in Clinical Language Models",
+    "url": "https://arxiv.org/abs/2611.18264v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Thanni Adewuyi, Adepoju Jeremiah Moyondafoluwa, Dorcas Amapu, Dieko Whenu, Sylvia Essessien, Sandra Oko-Oba, Pelumi Onafadeji, Lily Aimas-Love, Samuel Omolaiye, Abiodun Adereni",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.18252v1",
+    "titre": "ParetoM$^3$: Learning on the Pareto Set under Preference Guidance via Min-Max-Min Optimization",
+    "url": "https://arxiv.org/abs/2611.18252v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "themes": [],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Pei Tang, Songtao Lu",
     "signal": false
   },
   {
@@ -464,6 +808,54 @@
     "signal": false
   },
   {
+    "id": "arxiv-2611.17578v1",
+    "titre": "Orthogonal Scores and Double/Debiased Machine Learning for Possibly Misspecified GMM",
+    "url": "https://arxiv.org/abs/2611.17578v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-12",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Byunghoon Kang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.17530v1",
+    "titre": "AI and the Two Margins of Work: Why Job Losses Show Up Before Job Creation",
+    "url": "https://arxiv.org/abs/2611.17530v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-12",
+    "themes": [
+      "travail-emploi"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Mark Esposito, Liu Zhang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.17515v1",
+    "titre": "A Push Down the Mountain: Framing Effects and Internal State Interventions on Collusive Behavior in a Long-Horizon LLM Agent",
+    "url": "https://arxiv.org/abs/2611.17515v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-12",
+    "themes": [
+      "llm"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Harrison C. Margolin",
+    "signal": false
+  },
+  {
     "id": "arxiv-2611.16095v1",
     "titre": "Data-center growth impacts household electricity costs more through wholesale prices than through grid reinforcement",
     "url": "https://arxiv.org/abs/2611.16095v1",
@@ -606,6 +998,20 @@
     "nb_eco": 1,
     "nb_ia": 0,
     "auteurs": "Pan Li, Alexander Tuzhilin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.15747v2",
+    "titre": "Huge If True: Learning from the Size of the Surprise",
+    "url": "https://arxiv.org/abs/2611.15747v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-11",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Thomas Graeber, Christopher Roth, Marco Sammon, Constantin Schesch",
     "signal": false
   },
   {

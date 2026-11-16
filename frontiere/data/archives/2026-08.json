@@ -2872,6 +2872,108 @@
     "signal": false
   },
   {
+    "id": "nber-https-www-nber-org-papers-w35604-fromrss",
+    "titre": "Algorithm-Driven SVARs: Navigating the Wilderness of Big Data",
+    "url": "https://www.nber.org/papers/w35604#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-17",
+    "resume_fr": "Cette étude développe une méthodologie bayésienne pour sélectionner automatiquement les ensembles de variables dans les modèles SVAR à l'aide d'un critère hors échantillon, en retenant le plus grand système admissible. Les résultats montrent que la production réagit à la construction résidentielle plutôt qu'au seul crédit aux ménages, et que l'ajout de l'écart de taux d'entreprise sélectionné identifie le risque de défaut attendu comme un canal majeur de transmission de la politique monétaire.",
+    "angle_eco": "La sélection algorithmique des variables des modèles SVAR reposant sur un critère bayésien hors échantillon permet d'optimiser la construction des ensembles d'information et de mieux identifier les canaux de transmission macroéconomiques comme l'écart de crédit et le risque de défaut anticipé.",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 3,
+    "auteurs": "Yucheng Yang, Tao Zha",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A Bayesian methodology constructs information sets, uses an out-of-sample criterion, and retains the largest system it admits. A core system augmented with the selected corporate spread identifies expected default risk as a potent transmission margin.",
+    "angle_eco_en": "The selection of variables and information sets in structural vector autoregressions shapes the identified transmission margins of macroeconomic shocks."
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35618-fromrss",
+    "titre": "The Global Transition – The Impact of Demographics and AI on Economic Power",
+    "url": "https://www.nber.org/papers/w35618#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-17",
+    "resume_fr": "Cette étude s'appuie sur un modèle d'équilibre général dynamique couvrant 17 régions pour évaluer l'impact des évolutions démographiques mondiales au cours du XXIe siècle. Selon les simulations basées sur les dernières projections de l'ONU, le vieillissement démographique entraînera une surabondance de capital comprimant les rendements réels, une baisse de 10 % du PIB mondial en 2100, une nette hausse des cotisations sociales et une réorganisation majeure de l'hégémonie économique.",
+    "angle_eco": "La simulation des tendances démographiques et de l'adoption de l'automatisation à l'échelle mondiale met en lumière la façon dont le vieillissement de la population entraîne une baisse des rendements du capital, une hausse des cotisations retraites et un basculement de la puissance économique internationale au cours du siècle.",
+    "themes": [
+      "prevision",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 5,
+    "auteurs": "Seth G. Benzell, Laurence J. Kotlikoff, Victor Yifan Ye",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A dynamic life-cycle general equilibrium model covering more than 150 countries examines how demographic change shapes global development through 2100. A pessimistic 2024 demographic forecast reduces projected 2100 global GDP by 10% and drops China's projected share of world GDP from 25.6% to 14.9%.",
+    "angle_eco_en": "The interaction between changing demographic structures and technological adoption drives international capital flows and shifts in global economic power."
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35620-fromrss",
+    "titre": "One Click Away: AI Tutoring with Khanmigo in a Two-Year School Experiment",
+    "url": "https://www.nber.org/papers/w35620#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-17",
+    "resume_fr": "Un essai contrôlé randomisé mené pendant deux ans dans dix-huit collèges du Tennessee montre que l'accès au tuteur d'intelligence artificielle Khanmigo augmente les résultats en mathématiques des élèves de 0,06 à 0,08 écart-type sur une année scolaire. Cependant, ce progrès reste similaire à celui obtenu sans intelligence artificielle en raison d'une utilisation peu fréquente et superficielle par les élèves, ce qui indique que l'engagement réel des utilisateurs constitue la contrainte majeure.",
+    "angle_eco": "La contrainte limitant l'impact éducatif de l'intelligence artificielle en mathématiques réside dans le faible engagement des élèves, dont l'utilisation rare et superficielle du tuteur virtuel restreint les progrès scolaires à des niveaux comparables à ceux d'un entraînement classique sans assistance.",
+    "themes": [
+      "llm"
+    ],
+    "score": 3,
+    "auteurs": "Philip Oreopoulos, Nina Low",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A two-year cluster randomized trial in 18 Tennessee middle schools evaluated the impact of an artificial intelligence tutor configured to coach rather than give answers. Assignment raised math achievement by 1.3 national percentile ranks per term, but the median student messaged the tutor on only a third of the days they practiced.",
+    "angle_eco_en": "The gap between the availability of educational technology and actual student engagement limits the potential productivity gains from automated tutoring systems."
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35621-fromrss",
+    "titre": "Making AI Tutoring Productive: Evidence from a Mastery-Based Math Practice Experiment",
+    "url": "https://www.nber.org/papers/w35621#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-17",
+    "resume_fr": "Une expérience aléatoire menée auprès de plus de 6 000 collégiens montre que l'utilisation d'un tuteur fondé sur l'intelligence artificielle ralentit la progression globale des élèves tout en améliorant la précision de leurs réponses après une erreur. Les évaluations différées révèlent que l'intégration de l'intelligence artificielle dans un parcours fondé sur la maîtrise engendre des gains sur le contenu révisé, confirmant que l'efficacité du tutorat automatique repose sur un encadrement structuré des erreurs.",
+    "angle_eco": "L'efficacité du tutorat basé sur les grands modèles de langage repose sur un accompagnement structuré qui transforme les erreurs des élèves en moments d'apprentissage productifs, particulièrement lorsque ce soutien est combiné à un parcours axé sur la maîtrise des notions.",
+    "themes": [
+      "llm"
+    ],
+    "score": 6,
+    "auteurs": "Philip Oreopoulos, Michael Liut, Alp Sungu, Nina Low",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "deja_signal": true,
+    "resume_en": "A randomized field experiment involving middle-school students evaluated artificial intelligence support and mastery progression in a computer-assisted learning platform. The artificial intelligence support improved next-attempt correctness after mistakes and reduced the number of attempts needed to return to a correct answer.",
+    "angle_eco_en": "The integration of automated assistance into structured learning workflows alters the efficiency of human capital formation by transforming mistakes into productive learning moments."
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w35632-fromrss",
+    "titre": "Taxpayer Behavior in the Age of AI: A Field Experiment on Property Tax Appeals",
+    "url": "https://www.nber.org/papers/w35632#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-17",
+    "resume_fr": "Une expérience de terrain menée auprès de 645 ménages du comté de Dallas montre que l'accès à un agent conversationnel d'intelligence artificielle augmente de 9,1 points de pourcentage la probabilité de contester son impôt foncier sans agent humain, la faisant passer de 41,4 % à 50,5 %. Bien que 78 % des ménages y ayant accès aient engagé une conversation avec l'outil, l'augmentation des contestations s'est avérée plus faible chez les foyers les moins favorisés, ce qui suggère un risque d'accroissement des disparités existantes.",
+    "angle_eco": "L'accès à un agent conversationnel d'intelligence artificielle aide les contribuables à évaluer les informations fiscales et augmente ainsi leurs contestations autonomes de taxe foncière sans intermédiaire humain, tout en risquant d'accroître les disparités socio-économiques car les ménages plus défavorisés en tirent un bénéfice moindre.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "outils-recherche"
+    ],
+    "score": 3,
+    "auteurs": "Justin E. Holz, Ricardo Perez-Truglia, Andrew Simon, Alejandro Zentner",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A field experiment involving 645 households evaluated the impact of an artificial intelligence chatbot on property tax appeals. Access to the chatbot increased the probability of filing an appeal without a human agent by 9.1 pp, rising from 41.4% to 50.5%.",
+    "angle_eco_en": "The uneven utilization of automated guidance tools among different demographic groups can widen existing disparities in accessing public institutions and tax benefits."
+  },
+  {
     "id": "arxiv-2608.15876v1",
     "titre": "The Yeoman's Portfolio: Measuring Historical Risk Preferences Using Crop Choice",
     "url": "https://arxiv.org/abs/2608.15876v1",
