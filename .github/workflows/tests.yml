@@ -34,6 +34,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          # maj_sitemap --verifier lit l'historique de chaque page : un clone
+          # superficiel ne verrait qu'un commit.
+          fetch-depth: 0
 
       - uses: actions/setup-python@v6
         with:
@@ -69,9 +73,13 @@ jobs:
             pipeline.test_rendre_pdf_carrousel \
             pipeline.test_rendre_notification_publication \
             pipeline.test_migrer_etiquettes_types \
+            pipeline.test_maj_sitemap \
             pipeline.test_collecter_abstracts_manquants \
             pipeline.benchmark.test_benchmark \
             --verbose
+
+      - name: Verifier les dates du sitemap
+        run: python -m pipeline.maj_sitemap --verifier
 
       - name: Mesurer le taux de rejet sur le flux publie
         # Informatif seulement. Le flux contient encore des textes rediges
