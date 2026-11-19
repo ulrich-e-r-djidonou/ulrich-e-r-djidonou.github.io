@@ -1,5 +1,27 @@
 [
   {
+    "id": "arxiv-2611.23354v1",
+    "titre": "AI, Specialization, and the Organization of Knowledge Work: Evidence from Legal Services",
+    "url": "https://arxiv.org/abs/2611.23354v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-17",
+    "resume_fr": "Une analyse en doubles différences menée sur 89 districts fédéraux américains montre une hausse de 6,6 points de pourcentage de l'autoreprésentation non carcérale d'ici l'exercice 2025, sans réallocation nette de l'emploi d'avocats vers les entreprises clientes. En parallèle, les plus grands cabinets ont affiché une croissance de leurs revenus de 13 % en 2025 malgré des heures facturables quasi stables, tandis que la croissance de la demande et l'intégration de l'intelligence artificielle sont plus marquées chez les prestataires aux tarifs plus bas.",
+    "angle_eco": "La réduction du coût d'utilisation des connaissances spécialisées grâce à l'intelligence artificielle modifie la répartition du travail entre prestataires externes et permet aux cabinets haut de gamme d'augmenter leurs marges sur les prestations les moins sensibles aux prix sans entraîner de réinternalisation massive par les clients.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Liu Zhang, Mark Esposito, Isabel Yang",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "angle_eco_en": "Reductions in the cost of specialized knowledge through artificial intelligence prompt clients to reallocate work across service providers, enabling premium firms to raise markups on remaining, less price-sensitive tasks while lower-priced alternatives absorb price-sensitive demand."
+  },
+  {
     "id": "arxiv-2611.18370v1",
     "titre": "f-Divergence Self-Play for Tabular Anomaly Detection via Large Language Models",
     "url": "https://arxiv.org/abs/2611.18370v1",
@@ -21,6 +43,29 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "Researchers introduced DiSPaT, a self-play fine-tuning framework based on f-divergence minimization, to improve tabular anomaly detection in heterogeneous datasets using large language models. By using an alternating optimization between a policy generating synthetic pseudo-anomalies and a critic discriminator, DiSPaT consistently outperforms prior classical, deep learning, and language-model-based anomaly detectors across diverse benchmarks.",
     "angle_eco_en": "Self-play fine-tuning based on f-divergence minimization addresses the difficulty of characterizing normality in heterogeneous tabular data by using synthetic pseudo-anomalies and a discriminator to progressively align generated distributions with true normal data."
+  },
+  {
+    "id": "arxiv-2611.18872v1",
+    "titre": "The opposing informational effects of AI trading",
+    "url": "https://arxiv.org/abs/2611.18872v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-13",
+    "resume_fr": "L'utilisation d'algorithmes d'intelligence artificielle plus performants améliore les prévisions individuelles tout en réduisant l'information privée agrégée dans les prix, car ces outils substituent l'analyse de données publiques à l'observation privée. Bien que ces transactions transmettent des analyses complexes aux investisseurs disposant de capacités limitées, une adoption plus large de cette technologie diminue la valeur prédictive des prix pour les observateurs avancés et réduit de 44 % le bénéfice d'une mise à niveau de leurs modèles.",
+    "angle_eco": "L'adoption d'algorithmes de trading plus performants peut réduire la quantité d'information privée agrégée dans les prix en incitant à substituer l'analyse de données publiques à la collecte d'observations privées, tout en rendant paradoxalement les cours du marché plus informatifs pour les investisseurs disposant de capacités de calcul limitées.",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Hajime Shimao",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Advanced artificial intelligence trading can improve individual forecasts by substituting public-data analysis for private observations, which reduces the private information aggregated into market prices. Neural-market experiments demonstrate that wider adoption of such algorithms increases the predictive value of prices for limited observers, reduces it for advanced observers, and lowers the benefit of upgrading by 44 percent.",
+    "angle_eco_en": "Advanced AI trading algorithms substitute the analysis of public records for private observations, thereby reducing the private information aggregated into market prices while simultaneously transmitting sophisticated public-data insights to less capable investors."
   },
   {
     "id": "voxeu-ander-lessons-graduate-student-projects-and-need-ai-enriched",
@@ -83,7 +128,7 @@
     "nb_eco": 5,
     "nb_ia": 2,
     "auteurs": "Nick Carollo, Leland D. Crane, Daniel Garcia Molina, and Joseph Nichols",
-    "signal": true,
+    "signal": false,
     "llm": "gemini-3.6-flash",
     "angle_eco_en": "The surge in capital investment for data centers and semiconductor chips driven by artificial intelligence demand has pushed up prices for direct inputs like memory chips, even as the technology's measurable impacts on overall labor markets and aggregate productivity growth remain limited so far.",
     "deja_signal": true
@@ -265,6 +310,30 @@
     "llm": "gemini-3.6-flash",
     "resume_en": "Using Large Language Models as synthetic survey respondents for 480 retail and 60 institutional investors, this study finds that institutional investors hold greener portfolios than retail investors despite reporting weaker green tastes due to outside pressure. Although green tastes vary little over time and depend primarily on political affiliation for retail investors and on type and geography for institutions, beliefs about green portfolio returns become more pessimistic after 2020.",
     "angle_eco_en": "A greener portfolio tilt does not necessarily indicate a stronger underlying taste for greenness because institutional investors adopt greener asset allocations under outside pressure despite expressing weaker green preferences than retail investors."
+  },
+  {
+    "id": "bce-ww-ecb-europa-eu-pub-pdf-scpwps-ecb-wp3304-9082a5f181-en-pdf",
+    "titre": "ECB perception of non-banks: a machine learning-based approach",
+    "url": "https://www.ecb.europa.eu//pub/pdf/scpwps/ecb.wp3304~9082a5f181.en.pdf",
+    "source": "Banque centrale europeenne (BCE), working papers",
+    "type": "papier",
+    "date_publication": "2026-11-02",
+    "resume_fr": "Cette étude analyse la perception de la Banque centrale européenne à l'égard des intermédiaires financiers non bancaires entre 1998 et 2025 grâce à un indice élaboré par traitement automatique de ses discours publics. L'indice révèle une perception majoritairement négative et déclinante au fil du temps, particulièrement depuis la crise financière mondiale en raison d'inquiétudes liées à la stabilité financière et aux besoins de réglementation, malgré la reconnaissance de leur contribution à l'innovation financière et au fonctionnement des marchés.",
+    "angle_eco": "L'analyse par apprentissage automatique des discours de la Banque centrale européenne prononcés entre 1998 et 2025 met en évidence une détérioration progressive du sentiment à l'égard des intermédiaires financiers non bancaires, principalement nourrie par des préoccupation relatives à la stabilité financière et aux besoins de régulation.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 6,
+    "nb_eco": 3,
+    "nb_ia": 2,
+    "auteurs": "",
+    "signal": true,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "This study constructs a perception index of non-bank financial intermediaries by applying a fine-tuned large language model to European Central Bank speeches from 1998 to 2025. The index reveals a predominantly negative and declining central bank perception over time, driven primarily by financial stability concerns and regulatory needs, whereas positive sentiment reflects the role of non-banks in fostering financial innovation and market functioning.",
+    "angle_eco_en": "European Central Bank public communication regarding non-bank financial intermediaries exhibits an increasingly negative perception over time driven by concerns over financial stability and regulatory needs, alongside positive sentiment associated with their role in fostering financial innovation and market functioning.",
+    "deja_signal": true
   },
   {
     "id": "aea-10-1257-aer-20250081",

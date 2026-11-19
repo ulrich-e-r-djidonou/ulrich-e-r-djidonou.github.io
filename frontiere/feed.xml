@@ -6,11 +6,25 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>AI, Specialization, and the Organization of Knowledge Work: Evidence from Legal Services</title>
+      <link>https://arxiv.org/abs/2611.23354v1</link>
+      <guid isPermaLink="false">arxiv-2611.23354v1</guid>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Une analyse en doubles différences menée sur 89 districts fédéraux américains montre une hausse de 6,6 points de pourcentage de l'autoreprésentation non carcérale d'ici l'exercice 2025, sans réallocation nette de l'emploi d'avocats vers les entreprises clientes. En parallèle, les plus grands cabinets ont affiché une croissance de leurs revenus de 13 % en 2025 malgré des heures facturables quasi stables, tandis que la croissance de la demande et l'intégration de l'intelligence artificielle sont plus marquées chez les prestataires aux tarifs plus bas.</description>
+    </item>
+    <item>
       <title>f-Divergence Self-Play for Tabular Anomaly Detection via Large Language Models</title>
       <link>https://arxiv.org/abs/2611.18370v1</link>
       <guid isPermaLink="false">arxiv-2611.18370v1</guid>
       <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
       <description>Le cadre d'apprentissage DiSPaT améliore la détection d'anomalies dans les données tabulaires hétérogènes en s'appuyant sur l'auto-apprentissage et la minimisation de la f-divergence pour aligner la distribution du modèle sur celle des données normales réelles. Grâce à une optimisation alternée entre un générateur de pseudo-anomalies synthétiques et un discriminateur critique, cette méthode surpasse systématiquement les modèles de langage existants, les méthodes d'apprentissage profond et les détecteurs non supervisés classiques.</description>
+    </item>
+    <item>
+      <title>The opposing informational effects of AI trading</title>
+      <link>https://arxiv.org/abs/2611.18872v1</link>
+      <guid isPermaLink="false">arxiv-2611.18872v1</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+      <description>L'utilisation d'algorithmes d'intelligence artificielle plus performants améliore les prévisions individuelles tout en réduisant l'information privée agrégée dans les prix, car ces outils substituent l'analyse de données publiques à l'observation privée. Bien que ces transactions transmettent des analyses complexes aux investisseurs disposant de capacités limitées, une adoption plus large de cette technologie diminue la valeur prédictive des prix pour les observateurs avancés et réduit de 44 % le bénéfice d'une mise à niveau de leurs modèles.</description>
     </item>
     <item>
       <title>AI – Master and Commander: Lessons from graduate student projects and the need for an AI-enriched contract</title>
@@ -88,6 +102,13 @@
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35982-fromrss</guid>
       <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
       <description>En utilisant des modèles de langage pour simuler 480 identités d'investisseurs particuliers et 60 d'investisseurs institutionnels, l'étude montre que les institutions détiennent des portefeuilles plus verts que les particuliers malgré des préférences écologiques plus faibles, en raison de pressions extérieures. Si ces préférences écologiques varient peu entre 2014 et 2025, les croyances concernant les rendements des portefeuilles verts deviennent plus pessimistes après 2020.</description>
+    </item>
+    <item>
+      <title>ECB perception of non-banks: a machine learning-based approach</title>
+      <link>https://www.ecb.europa.eu//pub/pdf/scpwps/ecb.wp3304~9082a5f181.en.pdf</link>
+      <guid isPermaLink="false">bce-ww-ecb-europa-eu-pub-pdf-scpwps-ecb-wp3304-9082a5f181-en-pdf</guid>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Cette étude analyse la perception de la Banque centrale européenne à l'égard des intermédiaires financiers non bancaires entre 1998 et 2025 grâce à un indice élaboré par traitement automatique de ses discours publics. L'indice révèle une perception majoritairement négative et déclinante au fil du temps, particulièrement depuis la crise financière mondiale en raison d'inquiétudes liées à la stabilité financière et aux besoins de réglementation, malgré la reconnaissance de leur contribution à l'innovation financière et au fonctionnement des marchés.</description>
     </item>
     <item>
       <title>The Causal Effects of Global Supply Chain Disruptions on Macroeconomic Outcomes: Evidence and Theory</title>
@@ -193,27 +214,6 @@
       <guid isPermaLink="false">nber-https-www-nber-org-papers-w35924-fromrss</guid>
       <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
       <description>Le marché carbone chinois lancé en 2021 repose sur une intensité d'émissions plutôt qu'un plafond absolu, ce qui a incité les centrales électriques à haut rendement à augmenter leur production d'électricité et leurs émissions de CO2 d'environ 5% par rapport aux centrales à faible rendement. Cette augmentation des émissions des centrales efficaces a dépassé la réduction provenant du déplacement vers les centrales moins efficaces, dégradant la qualité de l'air dans les régions relativement propres de Chine et suggérant que le système actuel devrait être renforcé pour atteindre l'objectif de réduction des émissions de carbone.</description>
-    </item>
-    <item>
-      <title>Canadian Survey of Consumer Expectations—Third Quarter of 2026</title>
-      <link>https://www.bankofcanada.ca/2026/10/canadian-survey-of-consumer-expectations-third-quarter-of-2026/</link>
-      <guid isPermaLink="false">banque-canada-adian-survey-of-consumer-expectations-third-quarter-of-2026-</guid>
-      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Au troisième trimestre 2026, les anticipations d'inflation à long terme des consommateurs canadiens ont augmenté pour rejoindre le niveau élevé des attentes à court terme, alimentées par la rupture des négociations commerciales avec les États-Unis et par les prix de l'énergie. Malgré une amélioration préalable de la santé financière perçue liée à la hausse des actifs et à la confiance dans l'emploi, les intentions de dépense des ménages se sont détériorées sous le poids de l'incertitude économique et des prix élevés, tandis que les perceptions du marché du travail se sont dégradées dans les secteurs exposés au risque de l'intelligence artificielle.</description>
-    </item>
-    <item>
-      <title>PresenceBench: An Exploratory Evaluation of Large Language Model Adaptation to User State</title>
-      <link>https://arxiv.org/abs/2610.23625v1</link>
-      <guid isPermaLink="false">arxiv-2610.23625v1</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Le cadre d'évaluation PresenceBench a été conçu pour mesurer la capacité des grands modèles de langage à adapter leurs réponses à l'état fonctionnel de l'utilisateur, comme sa disponibilité ou sa stabilité. L'évaluation de quatre modèles montre que la fourniture d'un état utilisateur améliore les estimations de préférence humaine au-dessus de 0,5 pour chacun d'eux, bien que la spécificité de cette amélioration par rapport à une instruction générique ne soit pas encore établie.</description>
-    </item>
-    <item>
-      <title>Locally Robust Inference with Outcomes Predicted by Machine Learning</title>
-      <link>https://arxiv.org/abs/2610.21756v1</link>
-      <guid isPermaLink="false">arxiv-2610.21756v1</guid>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Ce papier développe un cadre de méthode des moments généralisés localement robuste en trois étapes afin de garantir la validité de l'inférence économétrique lorsque la variable dépendante est générée par l'apprentissage automatique. En augmentant la condition de moment identifiante avec des fonctions d'influence pour neutraliser les biais de régularisation et de sélection de modèle, les auteurs établissent la consistance et la normalité asymptotique de l'estimateur, puis appliquent cette approche aux données hypothécaires américaines.</description>
     </item>
   </channel>
 </rss>
