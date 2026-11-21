@@ -1,5 +1,420 @@
 [
   {
+    "id": "voxeu-https-cepr-org-multimedia-growth-prices",
+    "titre": "Growth Up, Prices Up",
+    "url": "https://cepr.org/multimedia/growth-prices",
+    "source": "VoxEU / CEPR",
+    "type": "article",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "prevision",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26410v1",
+    "titre": "Statistical Inference with Ill-Conditioned Random Weight Neural Network Sieves",
+    "url": "https://arxiv.org/abs/2611.26410v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Giovanni Ballarin, Lukas Gonon, Lyudmila Grigoryeva",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26365v1",
+    "titre": "Interpreting the Morbidity Gap",
+    "url": "https://arxiv.org/abs/2611.26365v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Alec Morton",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26338v1",
+    "titre": "Structural economic change under the digital transformation",
+    "url": "https://arxiv.org/abs/2611.26338v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "travail-emploi",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 4,
+    "nb_ia": 0,
+    "auteurs": "Marco Dueñas, Antoine Mandel",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26197v1",
+    "titre": "Equity and Aggregate Ambiguity",
+    "url": "https://arxiv.org/abs/2611.26197v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Jose Blanchet, Yang Liu, Tiantian Mao, Ruodu Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26168v1",
+    "titre": "Globally promoting legumes by production or use subsidies",
+    "url": "https://arxiv.org/abs/2611.26168v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Pablo de la Vega, Wolfgang Britz",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.25951v1",
+    "titre": "Measuring climate credibility? Talk, emissions, and corporate debt composition",
+    "url": "https://arxiv.org/abs/2611.25951v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "inference-causale",
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Georgios Chortareas, Fangyuan Kou, Alexia Ventouri",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.25869v1",
+    "titre": "Persistence and Change in National Production Networks",
+    "url": "https://arxiv.org/abs/2611.25869v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Haojie Liu, Zihan Lin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.25702v1",
+    "titre": "The Statistical Cost of Second-Order Orthogonality",
+    "url": "https://arxiv.org/abs/2611.25702v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "inference-causale",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Juan Carlos Escanciano, Joël R. Terschuur",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.25420v1",
+    "titre": "Structural Fine-Tuning under Economic Restrictions",
+    "url": "https://arxiv.org/abs/2611.25420v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Yi Niu, Yuecheng Su, Ethan Yang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26627v1",
+    "titre": "RL Post-Training in Diffusion Transformers Is Activation Steering",
+    "url": "https://arxiv.org/abs/2611.26627v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Tuna Han Salih Meral, Kaan Oktay, Alec Helbling, Atakan Kara, Duen Horng Chau, Pinar Yanardag",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26617v1",
+    "titre": "One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning",
+    "url": "https://arxiv.org/abs/2611.26617v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "inference-causale",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yuxin Jiang, Wenqiang Sun, Jiaqi Li, Yuchao Gu, Lvmin Zhang, Ivor Tsang, Mike Zheng Shou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26613v1",
+    "titre": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+    "url": "https://arxiv.org/abs/2611.26613v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Yiyang Du, Yuxuan Kuang, Qitao Zhao, Yixuan Wang, Zhanqiu Guo, Yi Xu, Xin Li, Wenbin He, Liu Ren, Chenyan Xiong",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26603v1",
+    "titre": "Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth",
+    "url": "https://arxiv.org/abs/2611.26603v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Peiyun Hu, Marko Mihajlovic, Lyndon Duong, Lahav Lipson, Wei Dong, Amaël Delaunoy, Stephan R. Richter, Vladlen Koltun",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26598v1",
+    "titre": "Active Feature Acquisition by Distilling an Oracle Teacher",
+    "url": "https://arxiv.org/abs/2611.26598v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "politique-publique",
+      "macro-finance"
+    ],
+    "score": 2,
+    "nb_eco": 2,
+    "nb_ia": 1,
+    "auteurs": "Yang Meng, Zixin Ding, Robert L. Grossman, Yuxin Chen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26592v1",
+    "titre": "Realized versus Population Reliability: Anytime-Valid Self-Consistency Certification under Correlated Reasoning",
+    "url": "https://arxiv.org/abs/2611.26592v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Terence D. Agbeyegbe, Toneukarin G. Agbeyegbe",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26510v1",
+    "titre": "AutoMaster: Autonomous Post-Training by Making the Same Model a Better Teacher",
+    "url": "https://arxiv.org/abs/2611.26510v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "llm",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Guoxin Chen, Shuang Sun, Fanzhe Meng, Xinyu Tang, Ruihua Song, Wayne Xin Zhao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26509v1",
+    "titre": "GLiDE: A Fast, Calibrated Decision Model Distilled from Reasoning Teachers",
+    "url": "https://arxiv.org/abs/2611.26509v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Sahibzada Allahyar, Julia White, Dhruv Atreja, George Hurn-Maloney, Urchade Zaratiana",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26504v1",
+    "titre": "Grid Cells as Spectral Successor Features: A Reusable Basis for Continual Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2611.26504v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "inference-causale",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Élodie Côté-Gauthier, Doina Precup, Isabeau Prémont-Schwarz",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26447v1",
+    "titre": "Scaling classical hardware for accurate real-time quantum error correction",
+    "url": "https://arxiv.org/abs/2611.26447v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Chenyang Jin, Susanne F. Yelin, Andi Gu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26413v1",
+    "titre": "Sequential Anytime Valid Tests for Efficient Inference-Time Alignment",
+    "url": "https://arxiv.org/abs/2611.26413v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Vishesh Kumar Singh, Sayak Ray Chowdhury",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26383v1",
+    "titre": "Evidence from a Multi-Regime Causal Discovery Benchmark: UCMT Algorithms, Comparative Performance, and Controlled Ablation Studies",
+    "url": "https://arxiv.org/abs/2611.26383v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "inference-causale",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Mahyar Eslami",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26333v1",
+    "titre": "OceanCoder: A Verification-Guided Large Language Model for Automated Simulation Modelling in Ocean Engineering",
+    "url": "https://arxiv.org/abs/2611.26333v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Can Xue, Changhong He, Ziyi Sun, Anliang Ge, Shimin Yu, Bingchen Liang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26275v1",
+    "titre": "dLoop: Looped Diffusion Language Models via Recurrent Latent Refinement",
+    "url": "https://arxiv.org/abs/2611.26275v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Handa Li, Pengxiang Li, Mingyu Cao, Xilu Wang, Li Shen, Da Li, Lu Yin",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26255v1",
+    "titre": "STAGE: Spatio-Temporal Augmented Graph Expansion for Weakly Supervised Cross-Tweet Event Causality Discovery",
+    "url": "https://arxiv.org/abs/2611.26255v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Hieu Minh Duong, Todd Gary, Eugene Levin, Long Nguyen",
+    "signal": false
+  },
+  {
     "id": "arxiv-2611.24714v1",
     "titre": "The Structural Number of Parties: An Electoral-Outcome-Independent Baseline for Comparing Party-System Scale",
     "url": "https://arxiv.org/abs/2611.24714v1",
@@ -333,6 +748,72 @@
     "nb_eco": 1,
     "nb_ia": 2,
     "auteurs": "Firas Spanioli, Yaniv David",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.25253v1",
+    "titre": "Informative Local Average Treatment Effects Using Propensity Scores",
+    "url": "https://arxiv.org/abs/2611.25253v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-18",
+    "themes": [
+      "inference-causale",
+      "travail-emploi"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Martin Huber, Ying-Ying Lee",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.25238v1",
+    "titre": "Stability Bands for Feature Attribution: The Core, the Nucleolus and the Bargaining Set of Explained-Variance Games",
+    "url": "https://arxiv.org/abs/2611.25238v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-18",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Fernando Delbianco, Fernando Tohmé",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.25222v1",
+    "titre": "Network-Adaptive Instrumental Variables",
+    "url": "https://arxiv.org/abs/2611.25222v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-18",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Yi Niu, Zhengyan Xu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.25218v1",
+    "titre": "The American Medical Directory Panel: Comparing AI-Assisted and LLM Transcription with Manual Data Entry at Scale",
+    "url": "https://arxiv.org/abs/2611.25218v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-18",
+    "themes": [
+      "llm",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 1,
+    "auteurs": "Christian M. Dahl, Sophie Li, Rasmus Emil Nyholm, Maja U. Pedersen, Anthony Wray",
     "signal": false
   },
   {
