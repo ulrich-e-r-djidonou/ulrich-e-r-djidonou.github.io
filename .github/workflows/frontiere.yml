@@ -152,9 +152,33 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # L'etiquette permet de refermer ces notifications sans toucher aux
+          # autres issues du depot. --force rend la commande idempotente.
+          gh label create frontiere --repo "$GITHUB_REPOSITORY" \
+            --color 1f6f6f --description "Notification de publication" --force
           gh issue create \
             --repo "$GITHUB_REPOSITORY" \
             --title "$(cat pipeline/_publication_du_jour_titre.txt)" \
             --body-file pipeline/_publication_du_jour.md \
-            --assignee ulrich-e-r-djidonou
+            --assignee ulrich-e-r-djidonou \
+            --label frontiere
+
+      - name: Fermer les notifications de plus de 14 jours
+        # Une issue par passage du cron (trois par semaine) : sans menage,
+        # elles s'accumulent et noient les issues qui demandent une action.
+        # Seules les issues portant l'etiquette frontiere sont visees.
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Etiquette recreee ici aussi : l'etape precedente est sautee les
+          # jours sans publication, et gh issue list echoue sur une etiquette
+          # inexistante.
+          gh label create frontiere --repo "$GITHUB_REPOSITORY" \
+            --color 1f6f6f --description "Notification de publication" --force
+          limite=$(date -u -d '14 days ago' +%F)
+          gh issue list --repo "$GITHUB_REPOSITORY" --label frontiere --state open \
+            --search "created:<$limite" --json number --jq '.[].number' \
+            | xargs -r -n1 gh issue close --repo "$GITHUB_REPOSITORY" \
+                --comment "Fermeture automatique : notification de plus de 14 jours."
 
