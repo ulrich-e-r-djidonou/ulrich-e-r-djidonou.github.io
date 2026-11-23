@@ -1,5 +1,47 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w36045-fromrss",
+    "titre": "How AI Impacts the Quest for Knowledge: Evidence from AlphaFold2",
+    "url": "https://www.nber.org/papers/w36045#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-11-23",
+    "resume_fr": "En analysant les expériences menées sur 530 471 protéines entre 2017 et 2025, cette étude montre que le modèle d'intelligence artificielle AlphaFold2 incite la recherche en biologie structurale à approfondir les connaissances existantes plutôt qu'à explorer de nouvelles structures. Lorsque les prédictions sont très fiables, l'outil remplace les expériences établissant la première structure de protéines éloignées des familles connues et réduit le coût des travaux ultérieurs sur les protéines déjà identifiées.",
+    "angle_eco": "La substitution des expériences de découverte de structures par des prédictions d'intelligence artificielle réduit le coût des recherches ultérieures, réorientant l'effort scientifique vers l'approfondissement des connaissances existantes au détriment de l'extension de la frontière du savoir.",
+    "themes": [
+      "prevision"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Myra Mohnen, Joshua S. Gans",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "Using data on 530,471 proteins examined between 2017 and 2025, the paper shows that highly confident AlphaFold2 predictions led to fewer first-structure experiments on novel proteins and more follow-up experiments on proteins with known structures. A model of experimental choice demonstrates that AlphaFold2 deepens existing knowledge rather than extending it because predictions replace initial structure-establishing experiments while lowering the cost of follow-up research.",
+    "angle_eco_en": "High-confidence artificial intelligence predictions redirect scientific research from extending the knowledge frontier to deepening existing knowledge by substituting for initial exploratory experiments and lowering the cost of follow-up studies."
+  },
+  {
+    "id": "nber-https-www-nber-org-papers-w36050-fromrss",
+    "titre": "Past Automation and Future AI: How Weak Links Tame the Growth Explosion",
+    "url": "https://www.nber.org/papers/w36050#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-11-23",
+    "resume_fr": "Une comptabilité de la croissance basée sur les tâches montre que la productivité des tâches réalisées par le capital a crû environ 5 points de pourcentage par an plus rapidement que celle du travail aux États-Unis, le gain principal résidant dans l'utilisation de machines s'améliorant rapidement à la place d'humains aux progrès plus lents. À partir de ces mesures, l'étalonnage d'un modèle dans lequel la production de biens et d'idées s'automatise de manière endogène montre que la croissance s'accélère et peut exploser, tout en étant freinée par des maillons faibles représentant les tâches toujours exécutées par la main-d'œuvre.",
+    "angle_eco": "L'automatisation endogène de la production de biens et d'idées peut entraîner une explosion de la croissance économique, mais cette accélération est freinée par des maillons faibles que constituent les tâches toujours exécutées par le travail humain.",
+    "themes": [
+      "travail-emploi",
+      "macro-finance"
+    ],
+    "score": 4,
+    "nb_eco": 4,
+    "nb_ia": 1,
+    "auteurs": "Charles I. Jones, Christopher Tonetti",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "angle_eco_en": "Endogenous automation of the production of goods and ideas can drive explosive economic growth, but tasks that remain performed by labor act as weak links that slow this acceleration."
+  },
+  {
     "id": "arxiv-2611.23354v1",
     "titre": "AI, Specialization, and the Organization of Knowledge Work: Evidence from Legal Services",
     "url": "https://arxiv.org/abs/2611.23354v1",
@@ -20,6 +62,29 @@
     "signal": false,
     "llm": "gemini-3.6-flash",
     "angle_eco_en": "Reductions in the cost of specialized knowledge through artificial intelligence prompt clients to reallocate work across service providers, enabling premium firms to raise markups on remaining, less price-sensitive tasks while lower-priced alternatives absorb price-sensitive demand."
+  },
+  {
+    "id": "arxiv-2611.23354v2",
+    "titre": "AI, Specialization, and the Organization of Knowledge Work: Evidence from Legal Services",
+    "url": "https://arxiv.org/abs/2611.23354v2",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-17",
+    "resume_fr": "Dans les services juridiques américains, l'amélioration de l'intelligence artificielle n'entraîne pas d'internalisation du travail par les clients, mais favorise une réallocation des tâches entre prestataires externes et une hausse de 6,6 points de pourcentage de l'auto-représentation des non-détenus d'ici l'exercice 2025. Tandis que l'intégration de cette technologie est plus forte chez les prestataires ayant un plus faible revenu par avocat, les plus grands cabinets ont enregistré une croissance de leurs revenus de 13 % en 2025 en dépit d'un volume d'heures facturables presque stable.",
+    "angle_eco": "La réduction du coût d'usage des connaissances spécialisées par l'intelligence artificielle conduit à une réallocation des tâches entre prestataires externes, ce qui permet aux cabinets haut de gamme d'augmenter leurs marges sur les travaux les moins sensibles aux prix tout en stimulant la demande chez les concurrents moins coûteux.",
+    "themes": [
+      "inference-causale",
+      "llm",
+      "travail-emploi"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Liu Zhang, Mark Esposito, Isabel Yang",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "resume_en": "A difference-in-differences analysis of United States legal services finds a 6.6-percentage-point increase in non-prisoner self-representation relative to prisoner petitions by fiscal 2025, whereas lawyer employment showed no post-2022 shift toward client firms. In addition, the largest law firms generated 13 percent revenue growth in 2025 despite nearly flat billable hours, while lower-priced firms experienced stronger demand growth and higher reported artificial intelligence integration.",
+    "angle_eco_en": "As artificial intelligence reduces the cost of specialized knowledge, clients reallocate tasks across self-provision and external providers rather than bringing work in-house, enabling premium professional-service firms to raise markups on price-insensitive work while lower-priced competitors capture higher volume."
   },
   {
     "id": "arxiv-2611.18370v1",
@@ -2065,28 +2130,5 @@
     "resume_en": "Dynamic discrete choice in structural econometrics and inverse reinforcement learning in machine learning both aim to infer individual preferences from observed sequential behavior within Markov decision process frameworks. The survey demonstrates that soft Q-learning in machine learning shares core mathematical formulations with econometric choice models under additive extreme value shocks, noting that combining model-free temporal difference estimators with econometric two-step methods offers a promising bridge between the disciplines.",
     "angle_eco_en": "Inferring decision-maker preferences from sequential behavior in high-dimensional state spaces can be scaled by combining structural dynamic discrete choice models from econometrics with model-free inverse reinforcement learning techniques from machine learning.",
     "deja_signal": true
-  },
-  {
-    "id": "nber-https-www-nber-org-papers-w35637-fromrss",
-    "titre": "Political Entrepreneurs",
-    "url": "https://www.nber.org/papers/w35637#fromrss",
-    "source": "NBER, nouveaux working papers",
-    "type": "papier",
-    "date_publication": "2026-08-24",
-    "resume_fr": "Une analyse menée dans 26 États américains entre 2009 et 2023 montre que les propriétaires gérant activement une entreprise représentent plus de 40 % des parlementaires locaux et initient une proportion plus importante de projets de loi en tant que premiers ou uniques auteurs principaux. Plutôt que de soutenir indistinctement l'ensemble des mesures favorables aux affaires, ces élus promeuvent spécifiquement des législations réduisant les barrières à l'entrée pour les nouvelles entreprises, en se concentrant sur la dérégulation et l'innovation.",
-    "angle_eco": "La présence au pouvoir législatif d'entrepreneurs qui possèdent et gèrent activement leur entreprise oriente spécifiquement la politique publique vers la baisse des barrières à l'entrée au moyen de la déréglementation et de l'innovation, plutôt que vers la promotion d'un soutien généralisé aux entreprises.",
-    "themes": [
-      "llm",
-      "politique-publique",
-      "donnees"
-    ],
-    "score": 3,
-    "nb_eco": 3,
-    "nb_ia": 1,
-    "auteurs": "Aaron Chatterji, Jorge Guzman, Joyce Ma, Ryan C. McDevitt",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "angle_eco_en": "Direct political representation by active business owners serves as an inside policy-making channel through which legislators selectively advance pro-entry legislation targeting deregulation and innovation rather than acting as generic pro-business advocates.",
-    "resume_en": "A novel dataset links state legislators' personal financial disclosures to bill sponsorship records across 26 United States states from 2009 to 2023. Over 40 percent of legislators are entrepreneurs who selectively advance pro-entry legislation related to deregulation and innovation rather than antitrust or access to capital."
   }
 ]

@@ -1,5 +1,19 @@
 [
   {
+    "id": "nber-https-www-nber-org-papers-w36048-fromrss",
+    "titre": "Are Revealed Preferences All You Need for AI Alignment?",
+    "url": "https://www.nber.org/papers/w36048#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-11-23",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 3,
+    "nb_ia": 0,
+    "auteurs": "Joshua S. Gans, Richard T. Holden",
+    "signal": false
+  },
+  {
     "id": "voxeu-https-cepr-org-multimedia-growth-prices",
     "titre": "Growth Up, Prices Up",
     "url": "https://cepr.org/multimedia/growth-prices",
@@ -15,6 +29,290 @@
     "nb_eco": 3,
     "nb_ia": 0,
     "auteurs": "",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27210v1",
+    "titre": "The Rise of Agents and the Human Labor Market",
+    "url": "https://arxiv.org/abs/2611.27210v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 4,
+    "nb_ia": 0,
+    "auteurs": "Nicola Borri, Anton Cheremukhin, Yukun Liu, Aleh Tsyvinski",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27020v1",
+    "titre": "Trust and Lottery-Related Anomalies",
+    "url": "https://arxiv.org/abs/2611.27020v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Reza Bradrania, Ya Gao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27978v1",
+    "titre": "A Methodologically Rigorous Benchmark of Linear Regression,RNN, and LSTM for S&P 500 Forecasting:Identifying Sources of Performance Inflation in Financial DeepLearning",
+    "url": "https://arxiv.org/abs/2611.27978v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "prevision",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Hari Sitaula, Joseph Opitz",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27973v1",
+    "titre": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+    "url": "https://arxiv.org/abs/2611.27973v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "llm",
+      "macro-finance"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Chang Nie, Chaoyou Fu, Songlin Liu, Yiqing Hu, Caifeng Shan",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27951v1",
+    "titre": "Topology Hub Optimal Transport: Eliminating Long Context Dilution at Flash Speed",
+    "url": "https://arxiv.org/abs/2611.27951v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "inference-causale"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Dylan Forde",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27919v1",
+    "titre": "SUAF: Spectral Universal Advantage Features for Zero-Shot Policy Improvement",
+    "url": "https://arxiv.org/abs/2611.27919v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "prevision",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Huaze Tang, Runqing Miao, Tianren Peng, Lam Nguyen, Chao Wang, Jairong Li, Wenbo Ding",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27823v1",
+    "titre": "Mixture of Latent Recursions for Low-Rank Adaptation",
+    "url": "https://arxiv.org/abs/2611.27823v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "politique-publique",
+      "outils-recherche"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Weixun Luo, Ye Mao, Ranran Huang, Junpeng Jing, Krystian Mikolajczyk",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27815v1",
+    "titre": "Autonomous quantum machine learning via Riemannian gradient-based optimization",
+    "url": "https://arxiv.org/abs/2611.27815v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "outils-recherche",
+      "donnees",
+      "macro-finance"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Kasidit Srimahajariyapong, Thiparat Chotibut, Suwannachad Suwannajitt, Tithivich Paka, Ricard Puig, Yudai Suzuki, Marek Gluza, Zoë Holmes, Supanut Thanasilp",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27762v1",
+    "titre": "From Novel Combinations to Informative Absence: Structural permission, communicative opportunity, and form choice in language learning",
+    "url": "https://arxiv.org/abs/2611.27762v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "prevision"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Yanzhe Zhao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27754v1",
+    "titre": "An Asymptotic One-Sample Surrogate for Non-Gaussian ERM with General Convex Regularization",
+    "url": "https://arxiv.org/abs/2611.27754v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "prevision",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Tianjian Zhang, Cosme Louart, Malik Tiomoko, Zhenyu Liao",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27714v1",
+    "titre": "Efficient inference for fairness-constrained sequential decision policies",
+    "url": "https://arxiv.org/abs/2611.27714v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Yi-Hui Zhou",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27686v1",
+    "titre": "Learning in Symbiosis: Heterogeneous Federated Learning with ANNs and SNNs",
+    "url": "https://arxiv.org/abs/2611.27686v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche"
+    ],
+    "score": 2,
+    "nb_eco": 1,
+    "nb_ia": 2,
+    "auteurs": "Manh V. Nguyen, Liang Zhao, Bobin Deng, Xinyue Zhang, Shaoen Wu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27666v1",
+    "titre": "Can pretrained Transformers deliver semiparametrically efficient inference?",
+    "url": "https://arxiv.org/abs/2611.27666v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "inference-causale",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Han Yan, Jin Zhu, Chengchun Shi, Tengyao Wang",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27652v1",
+    "titre": "Auditing Post-Training Unlearning in Diffusion Language Models using Sparse Autoencoders",
+    "url": "https://arxiv.org/abs/2611.27652v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "llm",
+      "donnees"
+    ],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Yunha Seo, Changhoon Kim",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27645v1",
+    "titre": "Efficient VLA Reinforcement Learning via Subchunk Rollouts in Latent World Models",
+    "url": "https://arxiv.org/abs/2611.27645v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [
+      "inference-causale",
+      "prevision",
+      "politique-publique"
+    ],
+    "score": 0,
+    "nb_eco": 2,
+    "nb_ia": 0,
+    "auteurs": "Nan Tang, Han-Tao Zhang, Jing-Cheng Pang, Hao-Nan Wang, Hao-Xiang Ren, Yi-Fei Sheng, Jun-Yin Ye, Tian Xu, Fan-Ming Luo, Hao-Xin Lin, Yang Yu",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27641v1",
+    "titre": "Beyond Resolution: Inference-Time Parameterized Temporal Consistency in Generative Regional Climate Downscaling",
+    "url": "https://arxiv.org/abs/2611.27641v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 1,
+    "nb_ia": 0,
+    "auteurs": "Luca Glawion, Julius Polz, Harald Kunstmann, Benjamin Fersch, Patrick Ludwig, Antonio Sánchez-Benítez, Christian Chwala",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.27610v1",
+    "titre": "Circular Predictive Coding Unlocks Effective Depth",
+    "url": "https://arxiv.org/abs/2611.27610v1",
+    "source": "arXiv cs.LG / cs.CL / stat.ML (filtre economie)",
+    "type": "papier",
+    "date_publication": "2026-11-20",
+    "themes": [],
+    "score": 1,
+    "nb_eco": 1,
+    "nb_ia": 1,
+    "auteurs": "Tommaso Salvatori, Matteo Forasassi",
     "signal": false
   },
   {
@@ -412,6 +710,20 @@
     "nb_eco": 1,
     "nb_ia": 0,
     "auteurs": "Hieu Minh Duong, Todd Gary, Eugene Levin, Long Nguyen",
+    "signal": false
+  },
+  {
+    "id": "arxiv-2611.26882v1",
+    "titre": "The Rural Margin of Territorial Peace: Within-Municipality Evidence from Colombia",
+    "url": "https://arxiv.org/abs/2611.26882v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-19",
+    "themes": [],
+    "score": 0,
+    "nb_eco": 0,
+    "nb_ia": 0,
+    "auteurs": "Hector Galindo-Silva",
     "signal": false
   },
   {

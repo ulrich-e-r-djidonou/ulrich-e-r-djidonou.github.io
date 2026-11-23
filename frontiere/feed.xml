@@ -6,11 +6,32 @@
     <description>Veille automatisee IA, economie et machine learning, selon des criteres thematiques definis par un economiste.</description>
     <language>fr-ca</language>
     <item>
+      <title>How AI Impacts the Quest for Knowledge: Evidence from AlphaFold2</title>
+      <link>https://www.nber.org/papers/w36045#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w36045-fromrss</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+      <description>En analysant les expériences menées sur 530 471 protéines entre 2017 et 2025, cette étude montre que le modèle d'intelligence artificielle AlphaFold2 incite la recherche en biologie structurale à approfondir les connaissances existantes plutôt qu'à explorer de nouvelles structures. Lorsque les prédictions sont très fiables, l'outil remplace les expériences établissant la première structure de protéines éloignées des familles connues et réduit le coût des travaux ultérieurs sur les protéines déjà identifiées.</description>
+    </item>
+    <item>
+      <title>Past Automation and Future AI: How Weak Links Tame the Growth Explosion</title>
+      <link>https://www.nber.org/papers/w36050#fromrss</link>
+      <guid isPermaLink="false">nber-https-www-nber-org-papers-w36050-fromrss</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Une comptabilité de la croissance basée sur les tâches montre que la productivité des tâches réalisées par le capital a crû environ 5 points de pourcentage par an plus rapidement que celle du travail aux États-Unis, le gain principal résidant dans l'utilisation de machines s'améliorant rapidement à la place d'humains aux progrès plus lents. À partir de ces mesures, l'étalonnage d'un modèle dans lequel la production de biens et d'idées s'automatise de manière endogène montre que la croissance s'accélère et peut exploser, tout en étant freinée par des maillons faibles représentant les tâches toujours exécutées par la main-d'œuvre.</description>
+    </item>
+    <item>
       <title>AI, Specialization, and the Organization of Knowledge Work: Evidence from Legal Services</title>
       <link>https://arxiv.org/abs/2611.23354v1</link>
       <guid isPermaLink="false">arxiv-2611.23354v1</guid>
       <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
       <description>Une analyse en doubles différences menée sur 89 districts fédéraux américains montre une hausse de 6,6 points de pourcentage de l'autoreprésentation non carcérale d'ici l'exercice 2025, sans réallocation nette de l'emploi d'avocats vers les entreprises clientes. En parallèle, les plus grands cabinets ont affiché une croissance de leurs revenus de 13 % en 2025 malgré des heures facturables quasi stables, tandis que la croissance de la demande et l'intégration de l'intelligence artificielle sont plus marquées chez les prestataires aux tarifs plus bas.</description>
+    </item>
+    <item>
+      <title>AI, Specialization, and the Organization of Knowledge Work: Evidence from Legal Services</title>
+      <link>https://arxiv.org/abs/2611.23354v2</link>
+      <guid isPermaLink="false">arxiv-2611.23354v2</guid>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Dans les services juridiques américains, l'amélioration de l'intelligence artificielle n'entraîne pas d'internalisation du travail par les clients, mais favorise une réallocation des tâches entre prestataires externes et une hausse de 6,6 points de pourcentage de l'auto-représentation des non-détenus d'ici l'exercice 2025. Tandis que l'intégration de cette technologie est plus forte chez les prestataires ayant un plus faible revenu par avocat, les plus grands cabinets ont enregistré une croissance de leurs revenus de 13 % en 2025 en dépit d'un volume d'heures facturables presque stable.</description>
     </item>
     <item>
       <title>f-Divergence Self-Play for Tabular Anomaly Detection via Large Language Models</title>
@@ -193,27 +214,6 @@
       <guid isPermaLink="false">arxiv-2610.31657v1</guid>
       <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
       <description>Cette étude évalue une stratégie d'abstention basée sur les coûts pour la classification automatique de tickets informatiques, démontrant qu'une régression logistique à seuil calibré réduit le coût de test de 38,1 % et fait chuter les erreurs d'orientation de 15,3 % à 3,5 %. Les politiques sélectionnées par calibration surpassent le routage ou le transfert systématiques dans 14 des 16 configurations analysées, tandis que les modèles affinés comme DistilBERT s'avèrent nettement plus performants que les grands modèles de langage guidés par des invites.</description>
-    </item>
-    <item>
-      <title>Quant-Arena: Benchmarking LLM Agents for Quantitative Trading Research</title>
-      <link>https://arxiv.org/abs/2610.30113v1</link>
-      <guid isPermaLink="false">arxiv-2610.30113v1</guid>
-      <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Les chercheurs présentent Quant-Arena, un banc d'essai mesurant la capacité des grands modèles de langage à mener de bout en bout une recherche quantitative sur des données réelles du marché chinois des actions A. Parmi les neuf modèles de pointe évalués, GPT-6 Astra obtient le score le plus élevé, mais aucun ne parvient à surpasser le marché équipondéré sur l'année de test 2024.</description>
-    </item>
-    <item>
-      <title>TIDE: Tree-Induced Fine-Grained Diagnostic Evaluation from Model Behaviors</title>
-      <link>https://arxiv.org/abs/2610.29985v1</link>
-      <guid isPermaLink="false">arxiv-2610.29985v1</guid>
-      <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Les auteurs proposent TIDE, une méthode de diagnostic fin des capacités des grands modèles de langage qui construit récursivement un arbre hiérarchique de compétences à partir des échantillons de test et des scores des modèles, en utilisant un gain d'information basé sur les comportements pour sélectionner les divisions optimales. L'application de TIDE à cinq modèles sur quatre benchmarks révèle des contrastes de capacités invisibles au niveau agrégé, comme Claude Opus 4.6 qui atteint 100% en raisonnement microéconomique là où GPT-5.4 obtient 83,3%, mais obtient 77,8% en raisonnement contractuel contre 88,9% pour GPT-5.4.</description>
-    </item>
-    <item>
-      <title>Too Little too Late? Nationwide Carbon Trading in China</title>
-      <link>https://www.nber.org/papers/w35924#fromrss</link>
-      <guid isPermaLink="false">nber-https-www-nber-org-papers-w35924-fromrss</guid>
-      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Le marché carbone chinois lancé en 2021 repose sur une intensité d'émissions plutôt qu'un plafond absolu, ce qui a incité les centrales électriques à haut rendement à augmenter leur production d'électricité et leurs émissions de CO2 d'environ 5% par rapport aux centrales à faible rendement. Cette augmentation des émissions des centrales efficaces a dépassé la réduction provenant du déplacement vers les centrales moins efficaces, dégradant la qualité de l'air dans les régions relativement propres de Chine et suggérant que le système actuel devrait être renforcé pour atteindre l'objectif de réduction des émissions de carbone.</description>
     </item>
   </channel>
 </rss>

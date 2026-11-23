@@ -1625,6 +1625,29 @@
     "signal": false
   },
   {
+    "id": "nber-https-www-nber-org-papers-w35637-fromrss",
+    "titre": "Political Entrepreneurs",
+    "url": "https://www.nber.org/papers/w35637#fromrss",
+    "source": "NBER, nouveaux working papers",
+    "type": "papier",
+    "date_publication": "2026-08-24",
+    "resume_fr": "Une analyse menée dans 26 États américains entre 2009 et 2023 montre que les propriétaires gérant activement une entreprise représentent plus de 40 % des parlementaires locaux et initient une proportion plus importante de projets de loi en tant que premiers ou uniques auteurs principaux. Plutôt que de soutenir indistinctement l'ensemble des mesures favorables aux affaires, ces élus promeuvent spécifiquement des législations réduisant les barrières à l'entrée pour les nouvelles entreprises, en se concentrant sur la dérégulation et l'innovation.",
+    "angle_eco": "La présence au pouvoir législatif d'entrepreneurs qui possèdent et gèrent activement leur entreprise oriente spécifiquement la politique publique vers la baisse des barrières à l'entrée au moyen de la déréglementation et de l'innovation, plutôt que vers la promotion d'un soutien généralisé aux entreprises.",
+    "themes": [
+      "llm",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 3,
+    "nb_eco": 3,
+    "nb_ia": 1,
+    "auteurs": "Aaron Chatterji, Jorge Guzman, Joyce Ma, Ryan C. McDevitt",
+    "signal": false,
+    "llm": "gemini-3.6-flash",
+    "angle_eco_en": "Direct political representation by active business owners serves as an inside policy-making channel through which legislators selectively advance pro-entry legislation targeting deregulation and innovation rather than acting as generic pro-business advocates.",
+    "resume_en": "A novel dataset links state legislators' personal financial disclosures to bill sponsorship records across 26 United States states from 2009 to 2023. Over 40 percent of legislators are entrepreneurs who selectively advance pro-entry legislation related to deregulation and innovation rather than antitrust or access to capital."
+  },
+  {
     "id": "arxiv-2608.22608v1",
     "titre": "Estimating Pathway Treatment Effects in the Presence of Intermediate Events with Multi-State Data",
     "url": "https://arxiv.org/abs/2608.22608v1",
