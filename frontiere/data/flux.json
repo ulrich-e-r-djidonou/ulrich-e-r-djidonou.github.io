@@ -1,5 +1,74 @@
 [
   {
+    "id": "arxiv-2611.34234v1",
+    "titre": "AI, Automation, and Fiscal Pressure",
+    "url": "https://arxiv.org/abs/2611.34234v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-25",
+    "resume_fr": "Les auteurs étudient comment l'automatisation affecte les finances publiques dans les pays qui taxent le travail plus fortement que le capital et financent les services publics par les impôts plutôt que par des frais d'utilisation, en utilisant un modèle d'équilibre général calibré sur les données de l'Union européenne. Dans leur scénario de référence pour l'UE-27, où l'automatisation progresse plus rapidement dans le secteur marchand, le déficit budgétaire s'accroît d'près d'un point de pourcentage de la valeur ajoutée tandis que l'économie croît de douze pour cent du fait de l'automatisation.",
+    "angle_eco": "L'automatisation déplace les revenus vers le capital, moins imposé que le travail, ce qui aggrave le déficit budgétaire des pays européens qui financent les services publics par l'impôt plutôt que par des frais d'utilisation, même lorsque l'automatisation progresse aussi rapidement dans le secteur public que dans le secteur privé.",
+    "themes": [
+      "travail-emploi",
+      "politique-publique",
+      "donnees"
+    ],
+    "score": 5,
+    "nb_eco": 5,
+    "nb_ia": 1,
+    "auteurs": "Spencer Bastani, Georg Graetz, Bernat Pla, Oskar N. Skans",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The authors develop a general equilibrium model calibrated to EU countries to examine how automation affects public finances when labor is taxed more heavily than capital and public services are funded through taxation. In their benchmark scenario for EU-27, automation that proceeds faster in the market sector than in public services causes the budget deficit to rise by nearly one percentage point of value added as the economy expands by twelve percent.",
+    "angle_eco_en": "Automation that shifts income toward capital creates fiscal pressure in countries with progressive labor taxation and publicly funded services because the tax base erodes faster than the demand for public services grows."
+  },
+  {
+    "id": "arxiv-2611.34099v1",
+    "titre": "Will AI Replace Juniors? How Task Complexity Reduces Automation Risk",
+    "url": "https://arxiv.org/abs/2611.34099v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-25",
+    "resume_fr": "Une expérience de sondage menée auprès de 1 435 entreprises allemandes montre que la complexité des tâches réduit la volonté des dirigeants de remplacer les employés juniors par l'intelligence artificielle, avec une diminution de 0,54 point sur une échelle de cinq points pour les tâches complexes par rapport aux tâches standardisées. Les managers considèrent également que la disponibilité d'applications d'intelligence artificielle réduirait l'embauche de travailleurs juniors plus fortement que celle de travailleurs expérimentés.",
+    "angle_eco": "La complexité des tâches diminue la propension des entreprises à substituer l'intelligence artificielle au recrutement d'employés débutants, car les gestionnaires accordent davantage d'importance à la supervision humaine lorsque les tâches exigent du jugement professionnel, des connaissances contextuelles et une résolution autonome de problèmes.",
+    "themes": [
+      "travail-emploi",
+      "outils-recherche",
+      "donnees"
+    ],
+    "score": 4,
+    "nb_eco": 2,
+    "nb_ia": 2,
+    "auteurs": "Vincent Rost, Fabian Stephany",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "A pre-registered survey experiment with 1,435 German firm managers found that complex tasks requiring professional judgment reduce firms' willingness to substitute entry-level workers with AI by 0.54 points on a five-point scale compared to standardized tasks, while increasing the perceived importance of human oversight by 0.15 points. Managers expect AI availability to reduce hiring of both entry-level and experienced workers, though the reduction is significantly larger for entry-level positions.",
+    "angle_eco_en": "Firms' propensity to substitute entry-level workers with AI tools decreases when tasks require professional judgement, contextual knowledge, and independent problem-solving rather than being well-structured and standardised."
+  },
+  {
+    "id": "arxiv-2611.33050v1",
+    "titre": "Worth the Wait? How Response Time and Streaming Shape Judgments of Generative AI Answers and Chatbot Engagement",
+    "url": "https://arxiv.org/abs/2611.33050v1",
+    "source": "arXiv econ.EM / econ.GN",
+    "type": "papier",
+    "date_publication": "2026-11-24",
+    "resume_fr": "Les auteurs montrent que la présentation progressive d'une réponse d'IA, au fur et à mesure de sa rédaction, améliore significativement les jugements des utilisateurs par rapport à la même réponse affichée instantanément, avec une réduction de 25,8 points de pourcentage de la probabilité de victoire lors d'un vote à l'aveugle lorsque la réponse est rejouée. Cependant, le ralentissement des réponses en raison de la congestion du serveur n'améliore pas les votes mais réduit la probabilité que les utilisateurs posent des questions de suivi ou poursuivent la conversation.",
+    "angle_eco": "La présentation progressive d'une réponse au fur et à mesure de sa génération améliore significativement les jugements des utilisateurs sur la qualité du texte par rapport à l'affichage instantané de la même réponse, tandis que la lenteur de la livraison réduit l'engagement sans améliorer les votes de préférence.",
+    "themes": [
+      "llm",
+      "travail-emploi",
+      "politique-publique"
+    ],
+    "score": 5,
+    "nb_eco": 1,
+    "nb_ia": 5,
+    "auteurs": "Zihan Chen, Di Zhu, Lei Nico Zheng",
+    "signal": false,
+    "llm": "claude-haiku-4-5",
+    "resume_en": "The study finds that identical text from generative AI chatbots receives substantially higher ratings in blind preference votes when streamed as it appears rather than displayed instantly, with the same stored answer winning 57% of decisive votes when streamed compared to 29% when shown at once. Slower response times due to provider congestion do not improve blind voting outcomes but reduce user engagement, as visitors and users become less likely to continue conversations following delayed initial exchanges.",
+    "angle_eco_en": "The presentation format of generative AI responses, whether streamed as text unfolds or displayed instantaneously, significantly influences user preferences and engagement independent of the underlying text quality."
+  },
+  {
     "id": "nber-https-www-nber-org-papers-w36045-fromrss",
     "titre": "How AI Impacts the Quest for Knowledge: Evidence from AlphaFold2",
     "url": "https://www.nber.org/papers/w36045#fromrss",
@@ -2062,73 +2131,5 @@
     "llm": "claude-haiku-4-5",
     "resume_en": "Predictions of artificial intelligence's workplace impact typically rely on occupational exposure to the technology, but analysis of German worker data demonstrates that adoption decisions also depend on the relative cost-effectiveness of AI compared to human labour. Comparative advantage proves to be a substantially stronger predictor of AI adoption than absolute advantage measured by exposure alone.",
     "angle_eco_en": "Comparative advantage in the relative productivity of artificial intelligence versus human labour predicts occupational adoption of AI technology better than exposure measures based solely on what the technology can accomplish."
-  },
-  {
-    "id": "arxiv-2608.25720v1",
-    "titre": "Endogenous Selection and Spillovers: Bayesian Inference for Policy-Relevant Causal Effects",
-    "url": "https://arxiv.org/abs/2608.25720v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-08-26",
-    "resume_fr": "Ce papier développe un cadre économétrique bayésien fondé sur un modèle de Roy avec effets de débordement afin d'identifier et d'estimer les effets causaux directs, indirects et totaux en présence de sélection endogène au traitement et d'interférences spatiales. Appliquée au programme américain des Opportunity Zones, l'étude révèle des effets directs positifs sur le développement du logement mais des bénéfices de débordement limités, ainsi que des rendements décroissants lors d'une expansion de cette politique.",
-    "angle_eco": "La modélisation conjointe de la sélection endogène et des effets de débordement au moyen de l'inférence bayésienne permet de décomposer l'effet causal des politiques publiques en composantes directe et indirecte afin d'évaluer précisément l'impact de leur extension.",
-    "themes": [
-      "inference-causale",
-      "politique-publique",
-      "outils-recherche"
-    ],
-    "score": 4,
-    "nb_eco": 4,
-    "nb_ia": 1,
-    "auteurs": "Duong Trinh",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "angle_eco_en": "Endogenous selection into treatment combined with spatial or network spillovers invalidates conventional causal inference methods, requiring joint modeling of latent treatment resistance and neighborhood exposure to decompose overall policy impacts into direct participation and spillover components."
-  },
-  {
-    "id": "arxiv-2608.24670v1",
-    "titre": "AI worsens climate change, integrated assessment shows",
-    "url": "https://arxiv.org/abs/2608.24670v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-08-25",
-    "resume_fr": "En intégrant les impacts de l'intelligence artificielle sur les émissions, la production et les dommages climatiques au modèle DICE, cette étude montre que son développement accroît le réchauffement mondial de 0,1 °C à 0,8 °C d'ici 2100 dans un scénario de faible atténuation. Les coûts climatiques associés annulent environ un cinquième à un quart des gains économiques de cette technologie, bien que le respect de l'objectif de 2 °C s'avère complémentaire à son développement.",
-    "angle_eco": "L'intégration des impacts de l'intelligence artificielle sur la production, les émissions et les dommages climatiques dans le modèle DICE montre que les coûts climatiques imputables à l'IA amputent d'un cinquième à un quart ses gains économiques et que l'arbitrage d'investissement entre IA et réduction des émissions dépend principalement des perspectives économiques de l'IA plutôt que de son empreinte carbone.",
-    "themes": [
-      "politique-publique",
-      "outils-recherche"
-    ],
-    "score": 3,
-    "nb_eco": 3,
-    "nb_ia": 1,
-    "auteurs": "Huiying Ye, Richard S. J. Tol, Fangzhi Wang",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "Integrating artificial intelligence into the DICE model reveals that AI development is net polluting, with ICT-like and Industrial Revolution-like AI adding 0.1°C and 0.8°C to warming by 2100 under low abatement, offsetting roughly one-fifth and one-quarter of their economic gains, respectively. Meeting the 2°C warming target raises optimal 2100 AI investment rates from 3.3% to 3.7% for ICT-like AI and from 5.1% to 12.7% for IR-like AI, demonstrating that climate mitigation complements AI growth and that investment trade-offs are driven primarily by AI's economic prospects rather than its emissions footprint.",
-    "angle_eco_en": "The expansion of artificial intelligence generates net emissions and climate damages that offset roughly one-fifth to one-quarter of its economic gains, creating an investment trade-off with climate policy that is driven primarily by AI's economic prospects rather than its emissions footprint."
-  },
-  {
-    "id": "arxiv-2608.24362v1",
-    "titre": "Dynamic Discrete Choice and Inverse Reinforcement Learning: Inferring Preferences and Beliefs From Human Behavior",
-    "url": "https://arxiv.org/abs/2608.24362v1",
-    "source": "arXiv econ.EM / econ.GN",
-    "type": "papier",
-    "date_publication": "2026-08-25",
-    "resume_fr": "Cet article compare le choix discret dynamique en économétrie structurelle et l'apprentissage par renforcement inverse en apprentissage automatique, deux domaines qui cherchent à inférer les préférences des décideurs à partir de leurs comportements séquentiels observés. Après avoir démontré la proximité mathématique entre le cadre du soft Q-learning et les modèles économétriques à chocs de valeur extrême, cette étude souligne que la combinaison des méthodes de différence temporelle et des estimateurs classiques en deux étapes constitue une voie prometteuse.",
-    "angle_eco": "L'inférence des préférences décisionnelles à partir de comportements séquentiels repose sur la convergence mathématique entre les modèles d'économétrie structurelle à choix discrets dynamiques et l'apprentissage par renforcement inverse, ce qui permet de passer à l'échelle dans des espaces d'états de grande dimension.",
-    "themes": [
-      "inference-causale",
-      "politique-publique",
-      "outils-recherche"
-    ],
-    "score": 6,
-    "nb_eco": 3,
-    "nb_ia": 2,
-    "auteurs": "Pranjal Rawat, John Rust",
-    "signal": false,
-    "llm": "gemini-3.6-flash",
-    "resume_en": "Dynamic discrete choice in structural econometrics and inverse reinforcement learning in machine learning both aim to infer individual preferences from observed sequential behavior within Markov decision process frameworks. The survey demonstrates that soft Q-learning in machine learning shares core mathematical formulations with econometric choice models under additive extreme value shocks, noting that combining model-free temporal difference estimators with econometric two-step methods offers a promising bridge between the disciplines.",
-    "angle_eco_en": "Inferring decision-maker preferences from sequential behavior in high-dimensional state spaces can be scaled by combining structural dynamic discrete choice models from econometrics with model-free inverse reinforcement learning techniques from machine learning.",
-    "deja_signal": true
   }
 ]
